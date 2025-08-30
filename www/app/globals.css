@@ -271,3 +271,70 @@ p{ line-height: 1.55; }
 @media (prefers-reduced-motion: reduce){
   .btn, .smiley-btn, .progress > div{ transition: none; }
 }
+
+/* ---- TimeSelect ---- */
+.time-select { display: grid; gap: 10px; }
+.time-label { font-weight: 600; }
+.time-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+.time-col { border: 1px solid var(--border); border-radius: 12px; padding: 10px; background:#fff; }
+.time-col-title { font-size: .85rem; color: var(--muted); margin-bottom: 8px; }
+.time-buttons { display: grid; grid-template-columns: repeat(6, 1fr); gap: 6px; }
+.chip {
+  border:1px solid var(--border); background:#fff; padding: 8px 0; border-radius: 10px;
+  transition: transform .06s ease, background .15s, border-color .15s;
+}
+.chip:hover { transform: translateY(-1px); }
+.chip--active { border-color: var(--primary); background: var(--primary-weak); }
+.time-preview { text-align: center; color: var(--muted); }
+
+/* ---- SleepHoursSlider ---- */
+.slider-wrap { display:grid; gap:8px; }
+.slider-row { position: relative; padding-top: 18px; }
+.slider {
+  width: 100%;
+  -webkit-appearance: none; appearance: none; height: 6px; border-radius: 999px;
+  background: linear-gradient(90deg, #e9f7ff, #e5ffe9);
+  outline: none;
+}
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none; appearance: none;
+  width: 22px; height: 22px; border-radius: 999px; background: var(--primary); border: 3px solid #fff;
+  box-shadow: var(--shadow);
+}
+.slider::-moz-range-thumb {
+  width: 22px; height: 22px; border: none; border-radius: 999px; background: var(--primary);
+}
+.bubble {
+  position: absolute; top: 0; transform: translateX(-50%);
+  background: #111827; color:#fff; font-size: .8rem; padding: 2px 8px; border-radius: 999px;
+  pointer-events: none;
+}
+.slider-scale { display:flex; justify-content:space-between; color: var(--muted); font-size:.85rem; }
+
+/* ---- ThumbLikert ---- */
+.thumb-group { display:flex; gap:10px; justify-content:center; }
+.thumb {
+  font-size: 28px; line-height: 1; padding: 12px; border-radius: 12px;
+  border:1px solid var(--border); background:#fff; transition: transform .06s, background .15s, border-color .15s;
+}
+.thumb:hover { transform: translateY(-1px); }
+.thumb--active { border-color: var(--primary); background: var(--primary-weak); }
+
+/* ---- Home quick cards ---- */
+.quick-card { transition: transform .08s ease; }
+.quick-card:hover { transform: translateY(-2px); }
+
+/* ---- Duse fargeskalaer på kategorikort (allerede i bruk – litt mykere) ---- */
+.pill[data-color="green"]{ border-color: #84e1bc66; background: #ecfdf5; color:#065f46; }
+.pill[data-color="yellow"]{ border-color: #f2c66a66; background: #fff7ed; color:#7c2d12; }
+.pill[data-color="red"]{ border-color: #f4a3a366; background: #fef2f2; color:#7f1d1d; }
+
+.cat-card[data-color="green"]{ border-color: #84e1bc66; background: #f5fffb; }
+.cat-card[data-color="yellow"]{ border-color: #f2c66a66; background: #fffaf2; }
+.cat-card[data-color="red"]{ border-color: #f4a3a366; background: #fff5f5; }
+
+/* ---- Responsiv justering ---- */
+@media (max-width: 640px){
+  .time-grid{ grid-template-columns: 1fr; }
+  .time-buttons{ grid-template-columns: repeat(6, 1fr); }
+}
