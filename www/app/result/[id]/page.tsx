@@ -1,61 +1,133 @@
 // app/result/[id]/page.tsx
-import React from "react";
+"use client";
+
+import React, { useEffect, useMemo, useState } from "react";
+import SiteHeader from "@/components/SiteHeader";
+import SiteFooter from "@/components/SiteFooter";
+import { useI18n } from "@/app/providers/I18nProvider";
+import { t } from "@/lib/i18n";
+import { bucketColor } from "@/lib/scoring";
+import { CategoryId } from "@/lib/types";
 
 type ResultDoc = {
   id: string;
   sleepScore: number;
-  categoryScores?: Record<string, number>;
+  totalRaw: number;
+  categoryScores: Record<string, number>;
   flags?: { osaSignal?: boolean; excessiveSleepiness?: boolean };
+  suggestedTips?: Record<string, string[]>;
 };
 
-export default async function ResultPage({ params }: { params: { id: string } }) {
-  const base = process.env.NEXT_PUBLIC_BASE_URL || "";
-  const res = await fetch(`${base}/api/result/${params.id}`, { cache: "no-store" });
-  const data = (await res.json()) as ResultDoc | { error: string };
+export default function ResultPage({ params }: { params: { id: string } }) {
+  const { dict } = useI18n();
+  const [data, setData] = useState<ResultDoc | null>(null);
+  const [notFound, setNotFound] = useState(false);
 
-  if ("error" in data) {
+  useEffect(() => {
+    (async () => {
+      try {
+        const res = await fetch(`/api/result/${params.id}`, { cache: "no-store" });
+        if (!res.ok) { setNotFound(true); return; }
+        const json = await res.json();
+        setData(json);
+      } catch {
+        setNotFound(true);
+      }
+    })();
+  }, [params.id]);
+
+  const entries = useMemo(
+    () => Object.entries((data?.categoryScores || {}) as Record<string, number>) as Array<[CategoryId, number]>,
+    [data]
+  );
+
+  if (notFound) {
     return (
-      <div className="max-w-3xl mx-auto p-6">
-        Fant ikke rapport med ID: <code className="px-1 py-0.5 bg-gray-100 rounded">{params.id}</code>
-      </div>
+      <>
+        <SiteHeader />
+        <main className="container">
+          <div className="card">
+            <h1 className="mb-2">{t(dict, "ui.result.title", "Resultat")}</h1>
+            <p className="muted">Not found.</p>
+          </div>
+        </main>
+        <SiteFooter />
+      </>
     );
   }
 
-  const entries: Array<[string, number]> = Object.entries(data.categoryScores || {}) as Array<[string, number]>;
-
   return (
-    <div className="max-w-3xl mx-auto p-6 space-y-4">
-      <h1 className="text-2xl font-semibold">Rapport</h1>
+    <>
+      <SiteHeader />
+      <main className="container">
+        {!data ? (
+          <div className="card"><p className="muted">Loading…</p></div>
+        ) : (
+          <>
+            {/* Hero */}
+            <section className="card score-hero">
+              <div className="score-hero__left">
+                <h1 className="mb-2">{t(dict, "ui.result.title", "Resultat")}</h1>
+                <div className="row" style={{gap:8, alignItems:"center"}}>
+                  <code className="px-1 py-0.5" style={{background:"#f3f4f6", borderRadius:6}}>
+                    {data.id}
+                  </code>
+                  <button
+                    className="btn"
+                    onClick={() => navigator.clipboard.writeText(data.id)}
+                    title={t(dict, "ui.result.copy_id", "Kopier ID")}
+                  >
+                    {t(dict, "ui.result.copy_id", "Kopier ID")}
+                  </button>
+                </div>
+              </div>
+              <div className="score-hero__right">
+                <div className="score-ring" aria-label={t(dict, "ui.result.sleep_score", "Søvn-score")}>
+                  <div className="score-ring__value">{Number(data.sleepScore)}</div>
+                  <div className="score-ring__label">{t(dict, "ui.result.sleep_score", "Søvn-score")}</div>
+                </div>
+              </div>
+            </section>
 
-      <p>
-        <strong>ID:</strong>{" "}
-        <code className="px-1 py-0.5 bg-gray-100 rounded">{data.id}</code>
-      </p>
+            {/* Kategorier */}
+            <section className="grid-cards mt-6">
+              {entries.map(([cat, val]) => {
+                const color = bucketColor(Number(val));
+                return (
+                  <article key={cat} className="cat-card" data-color={color}>
+                    <div className="cat-card__head">
+                      <span className="pill" data-color={color}>
+                        {t(dict, `category.${cat}.name`, String(cat))}
+                      </span>
+                      <strong className="cat-card__score">{Number(val)}</strong>
+                    </div>
+                    <p className="muted">{t(dict, `category.${cat}.desc`, "")}</p>
+                    <ul className="stack-2 mt-6">
+                      {(data.suggestedTips?.[cat] || []).map((tipKey) => (
+                        <li key={`${cat}-${tipKey}`}>• {t(dict, tipKey, tipKey)}</li>
+                      ))}
+                    </ul>
+                  </article>
+                );
+              })}
+            </section>
 
-      <p>
-        <strong>Søvn-score:</strong> {Number(data.sleepScore)} / 100
-      </p>
-
-      {entries.length > 0 && (
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
-          {entries.map(([k, v]) => (
-            <div key={k} className="text-sm border rounded p-2">
-              <strong>{String(k)}</strong>: {Number(v)}
-            </div>
-          ))}
-        </div>
-      )}
-
-      {data.flags?.osaSignal && (
-        <p className="text-red-600 text-sm">
-          Mulige tegn på søvnapné – vurder å snakke med fastlege.
-        </p>
-      )}
-      {data.flags?.excessiveSleepiness && (
-        <p className="text-orange-600 text-sm">
-          Uttalt søvnighet på dagtid – vær ekstra oppmerksom.
-        </p>
-      )}
-    </div>
+            {/* Varsler */}
+            {(data.flags?.osaSignal || data.flags?.excessiveSleepiness) && (
+              <section className="card mt-6">
+                <h2 className="mb-2">⚠️</h2>
+                {data.flags?.osaSignal && (
+                  <p style={{color:"var(--bad)"}}>{t(dict, "flags.osa_signal")}</p>
+                )}
+                {data.flags?.excessiveSleepiness && (
+                  <p style={{color:"#f59e0b"}}>{t(dict, "flags.excessive_sleepiness")}</p>
+                )}
+              </section>
+            )}
+          </>
+        )}
+      </main>
+      <SiteFooter />
+    </>
   );
 }

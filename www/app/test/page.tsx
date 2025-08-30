@@ -2,204 +2,224 @@
 "use client";
 
 import React, { useMemo, useState } from "react";
+import SiteHeader from "@/components/SiteHeader";
+import SiteFooter from "@/components/SiteFooter";
+import SmileyLikert from "@/components/SmileyLikert";
+
 import { useI18n } from "@/app/providers/I18nProvider";
 import { t } from "@/lib/i18n";
 import { QUESTION_BANK } from "@/data/questions";
-import { AnswerMap, FieldMap, LikertValue, CategoryId } from "@/lib/types";
-import { LIKERT_LABEL_KEYS } from "@/lib/scoring";
+import { AnswerMap, FieldMap, LikertValue, CategoryId, Question } from "@/lib/types";
+
+/** Er dette spørsmålet besvart? */
+function isAnswered(q: Question, answers: AnswerMap, fields: FieldMap) {
+  if (q.kind === "likert") return !!answers[q.id];
+  const val = (fields as any)[q.field.key];
+  return val !== undefined && val !== null && val !== "";
+}
 
 export default function TestPage() {
-  const { lang, setLang, dict } = useI18n();
+  const { dict } = useI18n();
 
+  // Rekkefølge: slik spørsmålene står i QUESTION_BANK
+  const ordered = useMemo(() => QUESTION_BANK.slice(), []);
+  const total = ordered.length;
+
+  const [idx, setIdx] = useState(0);
   const [answers, setAnswers] = useState<AnswerMap>({});
   const [fields, setFields] = useState<FieldMap>({});
   const [loading, setLoading] = useState(false);
   const [result, setResult] = useState<any>(null);
 
-  // Likert-etiketter fra språkfilen
-  const likertLabels = useMemo(
-    () => [1, 2, 3, 4, 5].map((n) => t(dict, LIKERT_LABEL_KEYS[n as 1], "")),
-    [dict]
-  );
+  const q = ordered[idx];
+  const answeredCount = ordered.reduce((n, q) => n + (isAnswered(q, answers, fields) ? 1 : 0), 0);
+  const progressPct = Math.round((answeredCount / total) * 100);
 
-  const handleLikert = (id: string, v: LikertValue) =>
-    setAnswers((p) => ({ ...p, [id]: v }));
+  function goNext() { setIdx((i) => Math.min(total - 1, i + 1)); }
+  function goPrev() { setIdx((i) => Math.max(0, i - 1)); }
 
-  const handleField = (key: keyof FieldMap, v: any) =>
-    setFields((p) => ({ ...p, [key]: v }));
+  function onLikert(v: LikertValue) {
+    setAnswers((p) => ({ ...p, [q.id]: v }));
+    // auto-avanser og fokus på neste
+    setTimeout(() => {
+      if (idx < total - 1) {
+        goNext();
+        const nextFirst = document.querySelector<HTMLButtonElement>('[role="radiogroup"] [role="radio"]');
+        nextFirst?.focus();
+      }
+    }, 120);
+  }
 
-  async function onSubmit(e: React.FormEvent) {
-    e.preventDefault();
+  function onFieldChange(val: any) {
+    if (q.kind === "field") setFields((p) => ({ ...p, [q.field.key]: val }));
+    setTimeout(() => {
+      if (idx < total - 1) {
+        goNext();
+        const nextFirst = document.querySelector<HTMLButtonElement>('[role="radiogroup"] [role="radio"]');
+        nextFirst?.focus();
+      }
+    }, 100);
+  }
+
+  async function onSubmit() {
     setLoading(true);
     try {
       const res = await fetch("/api/submit", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ answers, fields, lang }),
+        body: JSON.stringify({ answers, fields, lang: "nb" })
       });
       const json = await res.json();
       setResult(json);
+      if (json?.id) localStorage.setItem("lastResultId", json.id);
     } finally {
       setLoading(false);
     }
   }
 
-  // Gruppe spørsmål per kategori for naturlig rekkefølge
-  const groups: Record<CategoryId, typeof QUESTION_BANK> = {
-    pattern: [],
-    insomnia: [],
-    quality: [],
-    daytime: [],
-    hygiene: [],
-    environment: [],
-    breathing: [],
-  } as any;
-  QUESTION_BANK.forEach((q) => groups[q.category].push(q));
+  // Kategori-navn
+  function catName(cat: CategoryId) { return t(dict, `category.${cat}.name`, String(cat)); }
 
   return (
-    <div className="max-w-3xl mx-auto p-6">
-      <div className="flex justify-between items-center mb-4">
-        <h1 className="text-2xl font-semibold">
-          {t(dict, "ui.test.title", "Søvntest")}
-        </h1>
-        <select
-          value={lang}
-          onChange={(e) => setLang(e.target.value as any)}
-          className="border rounded px-2 py-1"
-        >
-          <option value="nb">Norsk</option>
-          <option value="en">English</option>
-        </select>
-      </div>
+    <>
+      <SiteHeader />
 
-      <form onSubmit={onSubmit} className="space-y-8">
-        {Object.entries(groups).map(([cat, items]) => (
-          <section key={cat} className="space-y-4">
-            <h2 className="text-xl font-medium">
-              {t(dict, `category.${cat}.name`, "")}
-            </h2>
-            <p className="text-sm text-gray-600">
-              {t(dict, `category.${cat}.desc`, "")}
-            </p>
+      <main className="container stage">
+        {/* Fremdrift */}
+        <div className="stage-head">
+          <div className="row mb-2" aria-live="polite">
+            <div style={{minWidth:80}}>{String(progressPct).padStart(2,"0")}%</div>
+            <div className="progress" aria-label={t(dict, "ui.test.progress", "Fremdrift")}>
+              <div style={{ width: `${progressPct}%` }} />
+            </div>
+            <div style={{minWidth:72, textAlign:"right"}}>{idx+1}/{total}</div>
+          </div>
+        </div>
 
-            {items.map((q) => (
-              <div key={q.id} className="border rounded-xl p-4">
-                {q.kind === "likert" ? (
-                  <div>
-                    <p className="mb-2">{t(dict, q.textKey, "")}</p>
-                    <div className="flex flex-wrap items-center gap-3">
-                      {[1, 2, 3, 4, 5].map((n) => (
-                        <label key={n} className="flex items-center gap-1">
-                          <input
-                            type="radio"
-                            name={q.id}
-                            value={n}
-                            checked={answers[q.id] === n}
-                            onChange={() => handleLikert(q.id, n as LikertValue)}
-                          />
-                          <span className="text-sm">{likertLabels[n - 1]}</span>
-                        </label>
-                      ))}
-                    </div>
-                  </div>
-                ) : (
-                  <div className="space-y-2">
-                    <p>{t(dict, q.textKey, "")}</p>
+        {/* Spørsmål */}
+        <div className="center-wrap">
+          <article className="card q-card">
+            <p className="muted" style={{margin:0}}>{catName(q.category)}</p>
+            <h1 className="mb-2">{t(dict, q.textKey, "")}</h1>
 
-                    {q.field.subtype === "time" && (
-                      <input
-                        className="border rounded px-3 py-2"
-                        type="time"
-                        onChange={(e) =>
-                          handleField(q.field.key as keyof FieldMap, e.target.value)
-                        }
-                      />
-                    )}
-
-                    {q.field.subtype === "number" && (
-                      <input
-                        className="border rounded px-3 py-2"
-                        type="number"
-                        step="0.1"
-                        onChange={(e) =>
-                          handleField(
-                            q.field.key as keyof FieldMap,
-                            Number(e.target.value)
-                          )
-                        }
-                      />
-                    )}
-
-                    {q.field.subtype === "select" && (
-                      <select
-                        className="border rounded px-3 py-2"
-                        onChange={(e) =>
-                          handleField(
-                            q.field.key as keyof FieldMap,
-                            e.target.value as any
-                          )
-                        }
-                      >
-                        {Object.entries(
-                          t<Record<string, string>>(dict, q.field.optionsKey!, {})
-                        ).map(([v, label]) => (
-                          <option key={v} value={v}>
-                            {label}
-                          </option>
-                        ))}
-                      </select>
-                    )}
-                  </div>
+            {q.kind === "likert" ? (
+              <SmileyLikert
+                name={q.id}
+                value={answers[q.id]}
+                onChange={onLikert}
+                dict={dict}
+              />
+            ) : (
+              <div className="stack-2">
+                {q.field.subtype === "time" && (
+                  <input className="btn" type="time" onChange={(e) => onFieldChange(e.target.value)} />
                 )}
+                {q.field.subtype === "number" && (
+                  <input className="btn" type="number" step="0.1" onChange={(e) => onFieldChange(Number(e.target.value))} />
+                )}
+                {q.field.subtype === "select" && (
+                  <select className="btn" onChange={(e) => onFieldChange(e.target.value)}>
+                    {Object.entries(t<Record<string, string>>(dict, q.field.optionsKey!, {})).map(([v, label]) => (
+                      <option key={v} value={v}>{label}</option>
+                    ))}
+                  </select>
+                )}
+                {q.infoKey && <p className="muted">{t(dict, q.infoKey, "")}</p>}
               </div>
-            ))}
-          </section>
-        ))}
+            )}
+          </article>
+        </div>
 
-        <button
-          disabled={loading}
-          className="bg-black text-white px-4 py-2 rounded-lg"
-        >
-          {loading
-            ? t(dict, "ui.common.sending", "Sender…")
-            : t(dict, "ui.test.submit", "Send inn")}
-        </button>
-      </form>
+        {/* Navigasjon / Innsending */}
+        <div className="stage-controls">
+          <button className="btn" onClick={goPrev} disabled={idx === 0 || loading}>
+            {t(dict, "ui.common.back", "Tilbake")}
+          </button>
 
-      {result && (
-        <div className="mt-10 border rounded-xl p-4">
-          <h3 className="text-lg font-semibold mb-2">
-            {t(dict, "ui.result.title", "Resultat")}
-          </h3>
-
-          <p>
-            <strong>{t(dict, "ui.result.sleep_score", "Søvn-score")}:</strong>{" "}
-            {Number(result.sleepScore)} / 100
-          </p>
-
-          {/* 👇 trygt typet entries + string-fallback */}
-          <ul className="mt-2 grid grid-cols-1 sm:grid-cols-2 gap-2">
-            {(Object.entries(
-              (result.categoryScores || {}) as Record<string, number>
-            ) as Array<[string, number]>).map(([k, v]) => (
-              <li key={k} className="text-sm">
-                {t(dict, `category.${k}.name`, String(k))}: {Number(v)}
-              </li>
-            ))}
-          </ul>
-
-          {result.flags?.osaSignal && (
-            <p className="mt-3 text-red-600 text-sm">
-              {t(dict, "flags.osa_signal", "Mulige tegn på søvnapné – vurder å snakke med fastlege.")}
-            </p>
-          )}
-          {result.flags?.excessiveSleepiness && (
-            <p className="text-orange-600 text-sm">
-              {t(dict, "flags.excessive_sleepiness", "Uttalt søvnighet på dagtid – vær ekstra oppmerksom.")}
-            </p>
+          {idx < total - 1 ? (
+            <button
+              className="btn primary"
+              onClick={goNext}
+              disabled={!isAnswered(q, answers, fields) || loading}
+            >
+              {t(dict, "ui.common.next", "Neste")}
+            </button>
+          ) : (
+            <button className="btn primary" onClick={onSubmit} disabled={loading || answeredCount === 0}>
+              {loading ? t(dict, "ui.common.sending", "Sender…") : t(dict, "ui.test.submit", "Send inn")}
+            </button>
           )}
         </div>
-      )}
-    </div>
+
+        {/* Resultat */}
+        {result && (
+          <div className="card mt-6 q-card" role="region" aria-live="polite">
+            <h3>{t(dict, "ui.result.title", "Resultat")}</h3>
+
+            <div className="row" style={{justifyContent:"space-between", alignItems:"center"}}>
+              <p>
+                <strong>{t(dict, "ui.result.sleep_score", "Søvn-score")}:</strong>{" "}
+                {Number(result.sleepScore)} / 100
+              </p>
+
+              {result.id && (
+                <div className="row" style={{gap:8}}>
+                  <code className="px-1 py-0.5" style={{background:"#f3f4f6", borderRadius:6}}>
+                    {result.id}
+                  </code>
+                  <button
+                    type="button"
+                    className="btn"
+                    onClick={() => navigator.clipboard.writeText(result.id)}
+                    aria-label={t(dict, "ui.result.copy_id", "Kopier ID")}
+                    title={t(dict, "ui.result.copy_id", "Kopier ID")}
+                  >
+                    {t(dict, "ui.result.copy_id", "Kopier ID")}
+                  </button>
+                  <a className="btn" href={`/result/${result.id}`}>
+                    {t(dict, "ui.result.open_report", "Åpne rapport")}
+                  </a>
+                </div>
+              )}
+            </div>
+
+            {/* Kategori-sammendrag */}
+            <ul className="stack-2">
+              {(Object.entries((result.categoryScores || {}) as Record<string, number>) as Array<[string, number]>).map(([k,v]) => (
+                <li key={k}>• {t(dict, `category.${k}.name`, String(k))}: {Number(v)}</li>
+              ))}
+            </ul>
+
+            {/* Tips per kategori */}
+            {result.suggestedTips && (
+              <div className="mt-6">
+                <h4 className="mb-2">{t(dict, "ui.result.tips_title", "Forslag til tiltak")}</h4>
+                <ul className="stack-2">
+                  {Object.entries(result.suggestedTips as Record<string, string[]>).flatMap(([cat, tips]) =>
+                    tips.map((tipKey) => (
+                      <li key={`${cat}-${tipKey}`}>• {t(dict, tipKey, tipKey)}</li>
+                    ))
+                  )}
+                </ul>
+              </div>
+            )}
+
+            {/* Varsler */}
+            {result.flags?.osaSignal && (
+              <p style={{color:"var(--bad)"}} className="mt-6">
+                {t(dict, "flags.osa_signal")}
+              </p>
+            )}
+            {result.flags?.excessiveSleepiness && (
+              <p style={{color:"#f59e0b"}}>
+                {t(dict, "flags.excessive_sleepiness")}
+              </p>
+            )}
+          </div>
+        )}
+      </main>
+
+      <SiteFooter />
+    </>
   );
 }
