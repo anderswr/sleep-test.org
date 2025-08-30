@@ -3,11 +3,35 @@
     "home": {
       "title": "DMZ Sleep Test",
       "subtitle": "Start testen for å få en personlig rapport.",
-      "cta": "Start test"
+      "cta": "Start test",
+      "language_label": "Språk"
     },
-    "test": { "title": "Søvntest", "submit": "Send inn" },
-    "result": { "title": "Resultat", "sleep_score": "Søvn-score" },
-    "common": { "sending": "Sender…" }
+    "nav": {
+      "result": "Resultat",
+      "compare": "Sammenlign",
+      "articles": "Artikler"
+    },
+    "test": {
+      "title": "Søvntest",
+      "submit": "Send inn",
+      "progress": "Fremdrift"
+    },
+    "result": {
+      "title": "Resultat",
+      "sleep_score": "Søvn-score",
+      "tips_title": "Forslag til tiltak",
+      "open_report": "Åpne rapport",
+      "copy_id": "Kopier ID",
+      "compare_with_prev": "Sammenlign med forrige"
+    },
+    "compare": {
+      "no_prev": "Ingen tidligere ID lagret enda."
+    },
+    "common": {
+      "sending": "Sender…",
+      "back": "Tilbake",
+      "next": "Neste"
+    }
   },
   "likert": {
     "1": "Aldri / Ikke i det hele tatt",
