@@ -202,6 +202,57 @@ p{ line-height: 1.55; }
 }
 .footer-nav{ display:flex; gap:16px; color: var(--muted); font-size: .9rem; }
 
+/* =======================================================================
+   RESULT PAGE STYLES
+   ======================================================================= */
+
+.score-hero{
+  display:flex; align-items:center; justify-content:space-between;
+  gap: 24px;
+}
+.score-hero__left{ flex: 1; }
+.score-hero__right{ width: 180px; display:flex; justify-content:center; }
+
+.score-ring{
+  width: 160px; height: 160px; border-radius: 999px;
+  border: 10px solid var(--primary-weak);
+  display:flex; flex-direction:column; align-items:center; justify-content:center;
+}
+.score-ring__value{ font-size: 42px; font-weight: 700; line-height: 1; }
+.score-ring__label{ font-size: .9rem; color: var(--muted); margin-top: 6px; }
+
+.grid-cards{
+  display:grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 12px;
+}
+.cat-card{
+  border: 1px solid var(--border);
+  background: var(--card);
+  border-radius: var(--radius);
+  padding: 14px;
+  box-shadow: var(--shadow);
+}
+.cat-card__head{
+  display:flex; align-items:center; justify-content:space-between; gap: 8px;
+  margin-bottom: 6px;
+}
+.cat-card__score{ font-size: 1.2rem; }
+
+.pill{
+  display:inline-flex; align-items:center; gap:6px;
+  padding: 6px 10px; border-radius: 999px; font-size: .85rem;
+  border: 1px solid var(--border);
+  background: #f9fafb;
+}
+.pill[data-color="green"]{ border-color: #34d39955; background: #ecfdf5; color:#065f46; }
+.pill[data-color="yellow"]{ border-color: #f59e0b55; background: #fff7ed; color:#7c2d12; }
+.pill[data-color="red"]{ border-color: #ef444455; background: #fef2f2; color:#7f1d1d; }
+
+.cat-card[data-color="green"]{ border-color: #34d39955; background: #ecfdf5; }
+.cat-card[data-color="yellow"]{ border-color: #f59e0b55; background: #fff7ed; }
+.cat-card[data-color="red"]{ border-color: #ef444455; background: #fef2f2; }
+
 /* ---- Responsive tweaks ---- */
 @media (max-width: 640px){
   .container{ padding: 18px; }
@@ -211,6 +262,9 @@ p{ line-height: 1.55; }
   .smiley-btn{ min-width: 92px; padding: 12px 10px; border-radius: 14px; }
   .smiley-emoji{ font-size: 28px; }
   .smiley-caption{ font-size: .85rem; }
+
+  .score-hero{ flex-direction: column; align-items: flex-start; }
+  .score-hero__right{ width: 100%; justify-content: flex-start; }
 }
 
 /* ---- Motion preferences ---- */
