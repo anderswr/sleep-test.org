@@ -27,26 +27,17 @@ export default function ComparePage() {
   const [err, setErr] = useState<string | null>(null);
 
   async function run() {
-    setLoading(true);
-    setErr(null);
-    setAR(null); setBR(null);
+    setLoading(true); setErr(null); setAR(null); setBR(null);
     try {
       const [ra, rb] = await Promise.all([
         fetch(`/api/result/${a}`, { cache: "no-store" }),
         fetch(`/api/result/${b}`, { cache: "no-store" })
       ]);
-      if (!ra.ok || !rb.ok) {
-        setErr("Fant ikke en eller begge ID-ene.");
-        return;
-      }
-      const ja = await ra.json();
-      const jb = await rb.json();
+      if (!ra.ok || !rb.ok) { setErr("Fant ikke en eller begge ID-ene."); return; }
+      const ja = await ra.json(); const jb = await rb.json();
       setAR(ja); setBR(jb);
-    } catch {
-      setErr("Noe gikk galt. Prøv igjen.");
-    } finally {
-      setLoading(false);
-    }
+    } catch { setErr("Noe gikk galt. Prøv igjen."); }
+    finally { setLoading(false); }
   }
 
   return (
@@ -67,7 +58,7 @@ export default function ComparePage() {
 
         {(A && B) && (
           <>
-            {/* Score-hero to kolonner */}
+            {/* Hero: side ved side */}
             <section className="grid-cards mt-6" style={{ gridTemplateColumns: "1fr 1fr" }}>
               {[A, B].map((R, i) => (
                 <article key={i} className="card score-hero" style={{ alignItems: "center" }}>
@@ -85,25 +76,17 @@ export default function ComparePage() {
               ))}
             </section>
 
-            {/* Kategorier side-ved-side */}
+            {/* Hele A til venstre, hele B til høyre */}
             <section className="grid-cards mt-6" style={{ gridTemplateColumns: "1fr 1fr" }}>
-              {Object.keys(A.categoryScores).map((cat) => {
-                const va = Number(A.categoryScores[cat]);
-                const vb = Number(B.categoryScores[cat]);
-                const colorA = bucketColor(va);
-                const colorB = bucketColor(vb);
-                const diff = vb - va; // B - A (forbedring hvis negativ)
-                const trend = diff === 0 ? "•" : diff > 0 ? "▲" : "▼";
-                const trendColor = diff === 0 ? "#6b7280" : diff > 0 ? "#b91c1c" : "#065f46";
-
-                return (
-                  <div key={cat} className="card" style={{ padding: 0 }}>
-                    <div className="cat-card" data-color={colorA} style={{ border: "none", borderBottom: "1px solid var(--border)", borderTopLeftRadius: "var(--radius)", borderTopRightRadius: "var(--radius)" }}>
+              {/* Kolonne A */}
+              <div className="stack-4">
+                {Object.entries(A.categoryScores as Record<string, number>).map(([cat, val]) => {
+                  const color = bucketColor(Number(val));
+                  return (
+                    <article key={`A-${cat}`} className="cat-card" data-color={color}>
                       <div className="cat-card__head">
-                        <span className="pill" data-color={colorA}>
-                          {t(dict, `category.${cat}.name`, String(cat))}
-                        </span>
-                        <strong className="cat-card__score">{va}</strong>
+                        <span className="pill" data-color={color}>{t(dict, `category.${cat}.name`, String(cat))}</span>
+                        <strong className="cat-card__score">{Number(val)}</strong>
                       </div>
                       <p className="muted">{t(dict, `category.${cat}.desc`, "")}</p>
                       {(A.suggestedTips?.[cat] || []).length > 0 && (
@@ -116,21 +99,33 @@ export default function ComparePage() {
                           </ul>
                         </>
                       )}
-                    </div>
+                    </article>
+                  );
+                })}
+              </div>
 
-                    <div className="cat-card" data-color={colorB} style={{ border: "none", borderTop: "1px solid var(--border)", borderBottomLeftRadius: "var(--radius)", borderBottomRightRadius: "var(--radius)" }}>
+              {/* Kolonne B (med diff vs A) */}
+              <div className="stack-4">
+                {Object.entries(B.categoryScores as Record<string, number>).map(([cat, vb]) => {
+                  const va = Number(A.categoryScores[cat]);
+                  const diff = Number(vb) - va; // + = verre, - = bedre
+                  const color = bucketColor(Number(vb));
+                  const trend = diff === 0 ? "•" : diff > 0 ? "▲" : "▼";
+                  const trendColor = diff === 0 ? "#6b7280" : diff > 0 ? "#b91c1c" : "#065f46";
+                  return (
+                    <article key={`B-${cat}`} className="cat-card" data-color={color}>
                       <div className="cat-card__head">
-                        <span className="pill" data-color={colorB}>
-                          {t(dict, `category.${cat}.name`, String(cat))} — B
+                        <span className="pill" data-color={color}>
+                          {t(dict, `category.${cat}.name`, String(cat))}
                         </span>
-                        <strong className="cat-card__score">{vb}</strong>
+                        <div style={{ display: "flex", alignItems: "center", gap: 10 }}>
+                          <span style={{ color: trendColor, fontWeight: 600 }} title={`Diff (B - A): ${diff}`}>
+                            {trend} {diff === 0 ? "0" : Math.abs(diff)}
+                          </span>
+                          <strong className="cat-card__score">{Number(vb)}</strong>
+                        </div>
                       </div>
-                      <div className="row" style={{ justifyContent: "space-between" }}>
-                        <p className="muted">{t(dict, `category.${cat}.desc`, "")}</p>
-                        <span style={{ color: trendColor, fontWeight: 600 }} title={`Diff (B - A): ${diff}`}>
-                          {trend} {diff === 0 ? "0" : Math.abs(diff)}
-                        </span>
-                      </div>
+                      <p className="muted">{t(dict, `category.${cat}.desc`, "")}</p>
                       {(B.suggestedTips?.[cat] || []).length > 0 && (
                         <>
                           <h4 className="mb-2 mt-6">{t(dict, "ui.result.how_to_improve", "Hvordan forbedre dette:")}</h4>
@@ -141,10 +136,10 @@ export default function ComparePage() {
                           </ul>
                         </>
                       )}
-                    </div>
-                  </div>
-                );
-              })}
+                    </article>
+                  );
+                })}
+              </div>
             </section>
           </>
         )}
