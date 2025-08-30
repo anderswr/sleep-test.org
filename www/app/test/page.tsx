@@ -5,10 +5,9 @@ import React, { useMemo, useState } from "react";
 import SiteHeader from "@/components/SiteHeader";
 import SiteFooter from "@/components/SiteFooter";
 import SmileyLikert from "@/components/SmileyLikert";
-import TimeSelect from "@/components/TimeSelect";
-import SleepHoursSlider from "@/components/SleepHoursSlider";
+import SleepRange from "@/components/SleepRange";
+import SleepHoursBand from "@/components/SleepHoursBand";
 import ThumbLikert from "@/components/ThumbLikert";
-import SleepTimeline from "@/components/SleepTimeline";
 
 import { useI18n } from "@/app/providers/I18nProvider";
 import { t } from "@/lib/i18n";
@@ -19,6 +18,7 @@ import { useRouter } from "next/navigation";
 /** Er dette spørsmålet besvart? */
 function isAnswered(q: Question, answers: AnswerMap, fields: FieldMap) {
   if (q.kind === "likert") return !!answers[q.id];
+  if (q.id === "f1") return !!fields.bedtime && !!fields.waketime; // begge må være satt
   const val = (fields as any)[q.field.key];
   return val !== undefined && val !== null && val !== "";
 }
@@ -40,33 +40,32 @@ export default function TestPage() {
   const answeredCount = ordered.reduce((n, q) => n + (isAnswered(q, answers, fields) ? 1 : 0), 0);
   const progressPct = Math.round((answeredCount / total) * 100);
 
-  function goNext() { setIdx((i) => Math.min(total - 1, i + 1)); }
-  function goPrev() { setIdx((i) => Math.max(0, i - 1)); }
-  function focusNextLikert() {
-    const nextFirst = document.querySelector<HTMLButtonElement>('[role="radiogroup"] [role="radio"]');
-    nextFirst?.focus();
+  function nextIndex(i: number) {
+    // hopp forbi f2 (waketime – håndteres i f1)
+    let ni = Math.min(total - 1, i + 1);
+    if (ordered[ni]?.id === "f2") ni = Math.min(total - 1, ni + 1);
+    return ni;
   }
+  function prevIndex(i: number) {
+    let pi = Math.max(0, i - 1);
+    if (ordered[pi]?.id === "f2") pi = Math.max(0, pi - 1);
+    return pi;
+  }
+
+  function goNext() { setIdx((i) => nextIndex(i)); }
+  function goPrev() { setIdx((i) => prevIndex(i)); }
+
   function animateAndGoNext() {
     if (idx >= total - 1) return;
     setAnimOut(true);
     setTimeout(() => {
       setAnimOut(false);
       goNext();
-      setTimeout(focusNextLikert, 40);
     }, 140);
   }
 
-  function onLikert(v: LikertValue) {
-    setAnswers((p) => ({ ...p, [q.id]: v }));
-    animateAndGoNext();
-  }
-
-  function onFieldChange(val: any) {
-    if (q.kind === "field") setFields((p) => ({ ...p, [q.field.key]: val }));
-    animateAndGoNext();
-  }
-
-  async function onSubmit() {
+  async function submitNow() {
+    if (loading) return;
     setLoading(true);
     try {
       const res = await fetch("/api/submit", {
@@ -77,13 +76,28 @@ export default function TestPage() {
       const json = await res.json();
       if (json?.id) {
         localStorage.setItem("lastResultId", json.id);
-        router.push(`/result/${json.id}`); // direkte til rapport
+        router.push(`/result/${json.id}`);
         return;
       }
       alert("Kunne ikke åpne rapport. Prøv igjen.");
     } finally {
       setLoading(false);
     }
+  }
+
+  function onLikert(v: LikertValue) {
+    setAnswers((p) => ({ ...p, [q.id]: v }));
+    animateAndGoNext();
+  }
+
+  function onHypertensionChange(val: "yes" | "no" | "unknown") {
+    setFields((p) => ({ ...p, hypertensionDx: val }));
+    // Siste spørsmål – autosubmit
+    setAnimOut(true);
+    setTimeout(() => {
+      setAnimOut(false);
+      submitNow();
+    }, 120);
   }
 
   function catName(cat: CategoryId) { return t(dict, `category.${cat}.name`, String(cat)); }
@@ -105,63 +119,46 @@ export default function TestPage() {
 
         {/* Spørsmål */}
         <div className="center-wrap">
-          <article
-            key={idx}
-            className={`card q-card ${animOut ? "q-animate-out" : "q-animate-in"}`}
-          >
+          <article key={idx} className={`card q-card ${animOut ? "q-animate-out" : "q-animate-in"}`}>
             <p className="muted" style={{margin:0}}>{catName(q.category)}</p>
             <h1 className="mb-2">{t(dict, q.textKey, "")}</h1>
 
-            {/* --- SPECIAL: bedtime + waketime på samme side via SleepTimeline --- */}
-            {q.kind === "field" && q.id === "f1" ? (
-              <SleepTimeline
+            {/* f1 = bedtime + waketime, i ett kort */}
+            {q.kind === "field" && q.id === "f1" && (
+              <SleepRange
                 bedtime={fields.bedtime}
                 waketime={fields.waketime}
                 onChange={(bed, wake) => {
                   setFields((p) => ({ ...p, bedtime: bed, waketime: wake }));
-                  // auto-avanser forbi f2
-                  const f2Index = ordered.findIndex(qq => qq.id === "f2");
-                  const nextAfter = Math.max(idx + 1, f2Index + 1);
+                  // Hopp videre (forbi f2 som skjules)
                   setAnimOut(true);
-                  setTimeout(() => {
-                    setAnimOut(false);
-                    setIdx(Math.min(nextAfter, total - 1));
-                  }, 140);
+                  setTimeout(() => { setAnimOut(false); setIdx((i) => nextIndex(i)); }, 140);
                 }}
               />
-            ) : q.kind === "likert" ? (
-              <SmileyLikert
-                name={q.id}
-                value={answers[q.id]}
-                onChange={onLikert}
-                dict={dict}
-              />
-            ) : (
+            )}
+
+            {/* Likert-spørsmål */}
+            {q.kind === "likert" && (
+              <SmileyLikert name={q.id} value={answers[q.id]} onChange={onLikert} dict={dict} />
+            )}
+
+            {/* Øvrige felt */}
+            {q.kind === "field" && q.id !== "f1" && (
               <div className="stack-2">
-                {q.field.subtype === "time" && (
-                  <TimeSelect
-                    value={(fields as any)[q.field.key] as string | undefined}
-                    onChange={(val) => onFieldChange(val)}
-                    label={t(dict, q.textKey, "")}
-                  />
-                )}
-                {q.field.subtype === "number" && q.field.key === "sleepHours" && (
-                  <SleepHoursSlider
+                {q.field.key === "sleepHours" && (
+                  <SleepHoursBand
                     value={(fields.sleepHours ?? 7) as number}
-                    onChange={(val) => onFieldChange(val)}
+                    onChange={(val) => {
+                      setFields((p) => ({ ...p, sleepHours: val }));
+                      animateAndGoNext();
+                    }}
                   />
                 )}
-                {q.field.subtype === "select" && q.field.key === "hypertensionDx" && (
+
+                {q.field.key === "hypertensionDx" && (
                   <ThumbLikert
                     value={(fields.hypertensionDx as any) || "unknown"}
-                    onChange={(val) => onFieldChange(val)}
-                  />
-                )}
-                {q.field.subtype === "number" && q.field.key !== "sleepHours" && (
-                  <input
-                    className="btn"
-                    type="number" step="0.5"
-                    onChange={(e) => onFieldChange(Number(e.target.value))}
+                    onChange={onHypertensionChange}
                   />
                 )}
               </div>
@@ -173,26 +170,20 @@ export default function TestPage() {
         <div className="stage-controls">
           <button
             className="btn"
-            onClick={() => {
-              setAnimOut(true);
-              setTimeout(() => { setAnimOut(false); goPrev(); }, 120);
-            }}
+            onClick={() => { setAnimOut(true); setTimeout(() => { setAnimOut(false); goPrev(); }, 120); }}
             disabled={idx === 0 || loading}
           >
             {t(dict, "ui.common.back", "Tilbake")}
           </button>
 
-          {idx < total - 1 ? (
+          {/* Skjuler Next på siste – men siste autosubmitter uansett */}
+          {idx < total - 1 && (
             <button
               className="btn primary"
               onClick={animateAndGoNext}
               disabled={!isAnswered(q, answers, fields) || loading}
             >
               {t(dict, "ui.common.next", "Neste")}
-            </button>
-          ) : (
-            <button className="btn primary" onClick={onSubmit} disabled={loading || answeredCount === 0}>
-              {loading ? t(dict, "ui.common.sending", "Sender…") : t(dict, "ui.test.submit", "Send inn")}
             </button>
           )}
         </div>
