@@ -15,10 +15,9 @@ import { QUESTION_BANK } from "@/data/questions";
 import { AnswerMap, FieldMap, LikertValue, CategoryId, Question } from "@/lib/types";
 import { useRouter } from "next/navigation";
 
-/** Er dette spørsmålet besvart? */
 function isAnswered(q: Question, answers: AnswerMap, fields: FieldMap) {
   if (q.kind === "likert") return !!answers[q.id];
-  if (q.id === "f1") return !!fields.bedtime && !!fields.waketime; // begge må være satt
+  if (q.id === "f1") return !!fields.bedtime && !!fields.waketime; // begge satt
   const val = (fields as any)[q.field.key];
   return val !== undefined && val !== null && val !== "";
 }
@@ -35,6 +34,7 @@ export default function TestPage() {
   const [fields, setFields] = useState<FieldMap>({});
   const [loading, setLoading] = useState(false);
   const [animOut, setAnimOut] = useState(false);
+  const [submitted, setSubmitted] = useState(false);
 
   const q = ordered[idx];
   const answeredCount = ordered.reduce((n, q) => n + (isAnswered(q, answers, fields) ? 1 : 0), 0);
@@ -58,15 +58,13 @@ export default function TestPage() {
   function animateAndGoNext() {
     if (idx >= total - 1) return;
     setAnimOut(true);
-    setTimeout(() => {
-      setAnimOut(false);
-      goNext();
-    }, 140);
+    setTimeout(() => { setAnimOut(false); goNext(); }, 140);
   }
 
   async function submitNow() {
-    if (loading) return;
+    if (loading || submitted) return;
     setLoading(true);
+    setSubmitted(true);
     try {
       const res = await fetch("/api/submit", {
         method: "POST",
@@ -91,13 +89,10 @@ export default function TestPage() {
   }
 
   function onHypertensionChange(val: "yes" | "no" | "unknown") {
+    // Vis én gang og autosubmit
     setFields((p) => ({ ...p, hypertensionDx: val }));
-    // Siste spørsmål – autosubmit
     setAnimOut(true);
-    setTimeout(() => {
-      setAnimOut(false);
-      submitNow();
-    }, 120);
+    setTimeout(() => { setAnimOut(false); submitNow(); }, 120);
   }
 
   function catName(cat: CategoryId) { return t(dict, `category.${cat}.name`, String(cat)); }
@@ -123,21 +118,17 @@ export default function TestPage() {
             <p className="muted" style={{margin:0}}>{catName(q.category)}</p>
             <h1 className="mb-2">{t(dict, q.textKey, "")}</h1>
 
-            {/* f1 = bedtime + waketime, i ett kort */}
+            {/* f1 = bedtime + waketime, i ett kort – hopper videre først når begge er satt */}
             {q.kind === "field" && q.id === "f1" && (
               <SleepRange
                 bedtime={fields.bedtime}
                 waketime={fields.waketime}
-                onChange={(bed, wake) => {
-                  setFields((p) => ({ ...p, bedtime: bed, waketime: wake }));
-                  // Hopp videre (forbi f2 som skjules)
-                  setAnimOut(true);
-                  setTimeout(() => { setAnimOut(false); setIdx((i) => nextIndex(i)); }, 140);
-                }}
+                onChange={(bed, wake) => setFields((p) => ({ ...p, bedtime: bed, waketime: wake }))}
+                onBothSet={() => animateAndGoNext()}
               />
             )}
 
-            {/* Likert-spørsmål */}
+            {/* Likert */}
             {q.kind === "likert" && (
               <SmileyLikert name={q.id} value={answers[q.id]} onChange={onLikert} dict={dict} />
             )}
@@ -148,41 +139,27 @@ export default function TestPage() {
                 {q.field.key === "sleepHours" && (
                   <SleepHoursBand
                     value={(fields.sleepHours ?? 7) as number}
-                    onChange={(val) => {
-                      setFields((p) => ({ ...p, sleepHours: val }));
-                      animateAndGoNext();
-                    }}
+                    onChange={(val) => { setFields((p) => ({ ...p, sleepHours: val })); animateAndGoNext(); }}
                   />
                 )}
 
                 {q.field.key === "hypertensionDx" && (
-                  <ThumbLikert
-                    value={(fields.hypertensionDx as any) || "unknown"}
-                    onChange={onHypertensionChange}
-                  />
+                  <ThumbLikert value={(fields.hypertensionDx as any) || "unknown"} onChange={onHypertensionChange} />
                 )}
               </div>
             )}
           </article>
         </div>
 
-        {/* Navigasjon / Innsending */}
+        {/* Navigasjon */}
         <div className="stage-controls">
-          <button
-            className="btn"
-            onClick={() => { setAnimOut(true); setTimeout(() => { setAnimOut(false); goPrev(); }, 120); }}
-            disabled={idx === 0 || loading}
-          >
+          <button className="btn" onClick={() => { setAnimOut(true); setTimeout(() => { setAnimOut(false); goPrev(); }, 120); }} disabled={idx === 0 || loading}>
             {t(dict, "ui.common.back", "Tilbake")}
           </button>
 
-          {/* Skjuler Next på siste – men siste autosubmitter uansett */}
+          {/* Ingen manuell “Send inn” – siste autosubmitter */}
           {idx < total - 1 && (
-            <button
-              className="btn primary"
-              onClick={animateAndGoNext}
-              disabled={!isAnswered(q, answers, fields) || loading}
-            >
+            <button className="btn primary" onClick={animateAndGoNext} disabled={!isAnswered(q, answers, fields) || loading}>
               {t(dict, "ui.common.next", "Neste")}
             </button>
           )}
