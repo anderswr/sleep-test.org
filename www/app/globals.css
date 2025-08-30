@@ -245,13 +245,97 @@ p{ line-height: 1.55; }
   border: 1px solid var(--border);
   background: #f9fafb;
 }
-.pill[data-color="green"]{ border-color: #34d39955; background: #ecfdf5; color:#065f46; }
-.pill[data-color="yellow"]{ border-color: #f59e0b55; background: #fff7ed; color:#7c2d12; }
-.pill[data-color="red"]{ border-color: #ef444455; background: #fef2f2; color:#7f1d1d; }
+.pill[data-color="green"]{ border-color: #84e1bc66; background: #ecfdf5; color:#065f46; }
+.pill[data-color="yellow"]{ border-color: #f2c66a66; background: #fff7ed; color:#7c2d12; }
+.pill[data-color="red"]{ border-color: #f4a3a366; background: #fef2f2; color:#7f1d1d; }
 
-.cat-card[data-color="green"]{ border-color: #34d39955; background: #ecfdf5; }
-.cat-card[data-color="yellow"]{ border-color: #f59e0b55; background: #fff7ed; }
-.cat-card[data-color="red"]{ border-color: #ef444455; background: #fef2f2; }
+.cat-card[data-color="green"]{ border-color: #84e1bc66; background: #f5fffb; }
+.cat-card[data-color="yellow"]{ border-color: #f2c66a66; background: #fffaf2; }
+.cat-card[data-color="red"]{ border-color: #f4a3a366; background: #fff5f5; }
+
+/* =======================================================================
+   SleepTimeline (bedtime + waketime i ett)
+   ======================================================================= */
+
+.sleep-timeline{ display:grid; gap:10px; }
+.sleep-head{ display:flex; align-items:center; justify-content:space-between; gap:10px; }
+.sleep-time{ font-size: 1rem; }
+.sleep-chip{
+  display:inline-flex; align-items:center; justify-content:center;
+  padding: 6px 10px; border-radius: 10px; background:#fff; border:1px solid var(--border);
+  box-shadow: var(--shadow);
+}
+.sleep-chip.sep{ background: transparent; border-color: transparent; box-shadow: none; padding-inline:6px; }
+
+.btn.tiny{ padding:.35rem .6rem; border-radius:10px; font-size:.85rem; }
+.btn.tiny.active{ background: var(--primary); color:#fff; border-color: var(--primary); }
+
+.sleep-track{
+  position: relative; height: 46px; border-radius: 999px;
+  background: linear-gradient(90deg, #f7fafc, #f7fafc);
+  border: 1px solid var(--border); box-shadow: var(--shadow);
+  overflow: hidden;
+}
+.sleep-segment{
+  position:absolute; top:2px; height: calc(100% - 4px); border-radius: 999px;
+  background: linear-gradient(90deg, #e0f2fe, #dcfce7);
+}
+.sleep-segment.wrap{
+  --mask-start: 30%;
+  --mask-end: 70%;
+  -webkit-mask: radial-gradient(circle at left, #0000 0, #0000 calc(var(--mask-start) - 1%), #000 var(--mask-start)),
+                 radial-gradient(circle at right, #000  var(--mask-end), #0000 calc(var(--mask-end) + 1%));
+  mask: radial-gradient(circle at left, #0000 0, #0000 calc(var(--mask-start) - 1%), #000 var(--mask-start)),
+        radial-gradient(circle at right, #000  var(--mask-end), #0000 calc(var(--mask-end) + 1%));
+}
+.sleep-ticks{
+  position:absolute; inset:0; display:grid; grid-template-columns: repeat(48, 1fr);
+}
+.tick{ width:1px; height: 10px; background:#e5e7eb; margin:auto 0; }
+.tick-lg{ height: 16px; background:#d1d5db; }
+.tick-sm{ height: 10px; }
+
+.sleep-handle{
+  position:absolute; top: -6px; width: 20px; height: 58px; border-radius: 10px;
+  border: 1px solid var(--border); background:#fff; box-shadow: var(--shadow);
+  touch-action: none;
+}
+.sleep-handle:focus-visible{ outline:2px solid var(--primary); }
+
+.sleep-scale{
+  display:flex; justify-content:space-between; font-size:.85rem; color: var(--muted);
+}
+
+/* =======================================================================
+   Tips list w/ star
+   ======================================================================= */
+.tips-list{
+  list-style: none; padding: 0; margin: 0; display:grid; gap: 6px;
+}
+.tips-list li{ display:flex; gap:8px; align-items:flex-start; }
+.tips-list .star{
+  display:inline-block; width: 1ch; color:#6b7280;
+}
+
+/* =======================================================================
+   Question transitions
+   ======================================================================= */
+.q-animate-in{
+  animation: dropIn .24s ease-out both;
+}
+.q-animate-out{
+  animation: dropOut .18s ease-in forwards;
+  position: relative;
+  z-index: 1;
+}
+@keyframes dropIn{
+  from{ opacity: 0; transform: translateY(-10px) scale(.995); }
+  to  { opacity: 1; transform: translateY(0) scale(1); }
+}
+@keyframes dropOut{
+  from{ opacity: 1; transform: translateY(0) scale(1); }
+  to  { opacity: 0; transform: translateY(12px) scale(.995); }
+}
 
 /* ---- Responsive tweaks ---- */
 @media (max-width: 640px){
@@ -265,99 +349,12 @@ p{ line-height: 1.55; }
 
   .score-hero{ flex-direction: column; align-items: flex-start; }
   .score-hero__right{ width: 100%; justify-content: flex-start; }
+
+  .sleep-scale{ font-size: .8rem; }
 }
 
 /* ---- Motion preferences ---- */
 @media (prefers-reduced-motion: reduce){
-  .btn, .smiley-btn, .progress > div{ transition: none; }
-}
-
-/* ---- TimeSelect ---- */
-.time-select { display: grid; gap: 10px; }
-.time-label { font-weight: 600; }
-.time-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
-.time-col { border: 1px solid var(--border); border-radius: 12px; padding: 10px; background:#fff; }
-.time-col-title { font-size: .85rem; color: var(--muted); margin-bottom: 8px; }
-.time-buttons { display: grid; grid-template-columns: repeat(6, 1fr); gap: 6px; }
-.chip {
-  border:1px solid var(--border); background:#fff; padding: 8px 0; border-radius: 10px;
-  transition: transform .06s ease, background .15s, border-color .15s;
-}
-.chip:hover { transform: translateY(-1px); }
-.chip--active { border-color: var(--primary); background: var(--primary-weak); }
-.time-preview { text-align: center; color: var(--muted); }
-
-/* ---- SleepHoursSlider ---- */
-.slider-wrap { display:grid; gap:8px; }
-.slider-row { position: relative; padding-top: 18px; }
-.slider {
-  width: 100%;
-  -webkit-appearance: none; appearance: none; height: 6px; border-radius: 999px;
-  background: linear-gradient(90deg, #e9f7ff, #e5ffe9);
-  outline: none;
-}
-.slider::-webkit-slider-thumb {
-  -webkit-appearance: none; appearance: none;
-  width: 22px; height: 22px; border-radius: 999px; background: var(--primary); border: 3px solid #fff;
-  box-shadow: var(--shadow);
-}
-.slider::-moz-range-thumb {
-  width: 22px; height: 22px; border: none; border-radius: 999px; background: var(--primary);
-}
-.bubble {
-  position: absolute; top: 0; transform: translateX(-50%);
-  background: #111827; color:#fff; font-size: .8rem; padding: 2px 8px; border-radius: 999px;
-  pointer-events: none;
-}
-.slider-scale { display:flex; justify-content:space-between; color: var(--muted); font-size:.85rem; }
-
-/* ---- ThumbLikert ---- */
-.thumb-group { display:flex; gap:10px; justify-content:center; }
-.thumb {
-  font-size: 28px; line-height: 1; padding: 12px; border-radius: 12px;
-  border:1px solid var(--border); background:#fff; transition: transform .06s, background .15s, border-color .15s;
-}
-.thumb:hover { transform: translateY(-1px); }
-.thumb--active { border-color: var(--primary); background: var(--primary-weak); }
-
-/* ---- Home quick cards ---- */
-.quick-card { transition: transform .08s ease; }
-.quick-card:hover { transform: translateY(-2px); }
-
-/* ---- Duse fargeskalaer på kategorikort (allerede i bruk – litt mykere) ---- */
-.pill[data-color="green"]{ border-color: #84e1bc66; background: #ecfdf5; color:#065f46; }
-.pill[data-color="yellow"]{ border-color: #f2c66a66; background: #fff7ed; color:#7c2d12; }
-.pill[data-color="red"]{ border-color: #f4a3a366; background: #fef2f2; color:#7f1d1d; }
-
-.cat-card[data-color="green"]{ border-color: #84e1bc66; background: #f5fffb; }
-.cat-card[data-color="yellow"]{ border-color: #f2c66a66; background: #fffaf2; }
-.cat-card[data-color="red"]{ border-color: #f4a3a366; background: #fff5f5; }
-
-/* ---- Responsiv justering ---- */
-@media (max-width: 640px){
-  .time-grid{ grid-template-columns: 1fr; }
-  .time-buttons{ grid-template-columns: repeat(6, 1fr); }
-}
-/* ==== Question transitions ==== */
-.q-animate-in{
-  animation: dropIn .24s ease-out both;
-}
-.q-animate-out{
-  animation: dropOut .18s ease-in forwards;
-  position: relative;
-  z-index: 1;
-}
-
-@keyframes dropIn{
-  from{ opacity: 0; transform: translateY(-10px) scale(.995); }
-  to  { opacity: 1; transform: translateY(0) scale(1); }
-}
-@keyframes dropOut{
-  from{ opacity: 1; transform: translateY(0) scale(1); }
-  to  { opacity: 0; transform: translateY(12px) scale(.995); }
-}
-
-/* Respektér redusert bevegelse */
-@media (prefers-reduced-motion: reduce){
-  .q-animate-in, .q-animate-out{ animation: none !important; }
+  .btn, .smiley-btn, .progress > div, .q-animate-in, .q-animate-out{ transition: none; animation: none; }
+  .sleep-handle{ transition: none; }
 }
