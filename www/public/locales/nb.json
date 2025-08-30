@@ -32,7 +32,8 @@
       "tips_title": "Forslag til tiltak",
       "open_report": "Åpne rapport",
       "copy_id": "Kopier ID",
-      "compare_with_prev": "Sammenlign med forrige"
+      "compare_with_prev": "Sammenlign med forrige",
+      "how_to_improve": "Hvordan forbedre dette:"
     },
     "compare": {
       "no_prev": "Ingen tidligere ID lagret enda."
