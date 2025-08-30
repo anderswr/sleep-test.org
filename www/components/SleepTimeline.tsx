@@ -72,16 +72,15 @@ export default function SleepTimeline({ bedtime, waketime, onChange }: Props) {
     onChange(idxToTime(start), idxToTime(end));
   }
 
-  // Tegn segment uansett om det krysser midnatt
-  function segmentStyles() {
-    if (!trackRef.current) return {};
+  // Segment-stil (håndterer wrap over midnatt)
+  function segmentStyles(): React.CSSProperties {
     if (end >= start) {
       const left = (start / 47) * 100;
       const width = ((end - start) / 47) * 100;
       return { left: `${left}%`, width: `${width}%` };
     } else {
-      // wrap: tegn hele, men vi bruker to segments via :before? For enkelhet: full bredde + gradient mask
-      return { left: 0, width: "100%", "--mask-start": `${(end / 47) * 100}%`, "--mask-end": `${(start / 47) * 100}%` } as React.CSSProperties;
+      // wrap: tegn full bredde og mask bort midtpartiet
+      return { left: 0, width: "100%", ["--mask-start" as any]: `${(end / 47) * 100}%`, ["--mask-end" as any]: `${(start / 47) * 100}%` };
     }
   }
 
@@ -147,11 +146,20 @@ export default function SleepTimeline({ bedtime, waketime, onChange }: Props) {
       </div>
 
       <div className="sleep-scale">
-        {/* 00 03 06 09 12 15 18 21 */}
+        {/* grove etiketter for 24h visning (eller 12h-konvertert) */}
         {[0, 6, 12, 18].map((h) => (
-          <span key={h}>{mode24 ? `${String(h).padStart(2, "0")}:00` : `${h === 0 ? "12:00 AM" : h === 12 ? "12:00 PM" : (h > 12 ? String(h - 12).padStart(2,"0")+":00 PM" : String(h).padStart(2,"0")+":00 AM")}`}</span>
+          <span key={h}>
+            {mode24
+              ? `${String(h).padStart(2, "0")}:00`
+              : h === 0
+                ? "12:00 AM"
+                : h === 12
+                  ? "12:00 PM"
+                  : h > 12
+                    ? `${String(h - 12).padStart(2, "0")}:00 PM`
+                    : `${String(h).padStart(2, "0")}:00 AM`}
+          </span>
         ))}
-        {[].map(()=>null)}
       </div>
     </div>
   );
