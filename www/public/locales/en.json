@@ -3,11 +3,35 @@
     "home": {
       "title": "DMZ Sleep Test",
       "subtitle": "Start the test to get a personal report.",
-      "cta": "Start test"
+      "cta": "Start test",
+      "language_label": "Language"
     },
-    "test": { "title": "Sleep test", "submit": "Submit" },
-    "result": { "title": "Result", "sleep_score": "Sleep score" },
-    "common": { "sending": "Sending…" }
+    "nav": {
+      "result": "Result",
+      "compare": "Compare",
+      "articles": "Articles"
+    },
+    "test": {
+      "title": "Sleep test",
+      "submit": "Submit",
+      "progress": "Progress"
+    },
+    "result": {
+      "title": "Result",
+      "sleep_score": "Sleep score",
+      "tips_title": "Suggested actions",
+      "open_report": "Open report",
+      "copy_id": "Copy ID",
+      "compare_with_prev": "Compare with previous"
+    },
+    "compare": {
+      "no_prev": "No previous ID saved yet."
+    },
+    "common": {
+      "sending": "Sending…",
+      "back": "Back",
+      "next": "Next"
+    }
   },
   "likert": {
     "1": "Never / Not at all",
