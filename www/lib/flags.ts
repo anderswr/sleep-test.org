@@ -1,4 +1,5 @@
-import { AnswerMap, FieldMap } from "@/lib/types";
+// lib/flags.ts
+import { AnswerMap, FieldMap, LikertValue } from "@/lib/types";
 import { avg, likertTo100 } from "@/lib/scoring";
 
 /**
@@ -16,11 +17,10 @@ export function computeFlags(answers: AnswerMap, fields: FieldMap) {
   const osaSignal = snoring >= 4 || apneas >= 3 || tiredDespite >= 4 || htn === "yes";
 
   // Dagtretthet (fra Daytime-kategorien): q12, q13, q14
-  const daytimeAvg = avg(
-    [answers["q12"], answers["q13"], answers["q14"]]
-      .filter((v): v is number => typeof v === "number")
-      .map((v) => likertTo100(v as any))
-  );
+  const daytimeRaw = [answers["q12"], answers["q13"], answers["q14"]]
+    .filter((v): v is LikertValue => v !== undefined) as LikertValue[];
+
+  const daytimeAvg = avg(daytimeRaw.map((v) => likertTo100(v)));
 
   const excessiveSleepiness = daytimeAvg >= 60;
 
