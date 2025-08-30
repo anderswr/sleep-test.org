@@ -1,36 +1,32 @@
 "use client";
 import React, { createContext, useContext, useEffect, useState } from "react";
 
-// Supported languages
-export type Lang = "nb" | "en";
+type Lang = "nb" | "en";
+type Theme = "light" | "dark";
 
-interface I18nContextShape {
-  lang: Lang;
-  dict: any; // current dictionary json
-  setLang: (l: Lang) => void;
-}
-
-const I18nCtx = createContext<I18nContextShape>({ lang: "nb", dict: {}, setLang: () => {} });
+interface Ctx { lang: Lang; dict: any; setLang: (l: Lang) => void; theme: Theme; setTheme:(t:Theme)=>void }
+const I18nCtx = createContext<Ctx>({ lang: "nb", dict: {}, setLang: () => {}, theme:"light", setTheme: ()=>{} });
 
 async function fetchDict(lang: Lang) {
   const res = await fetch(`/locales/${lang}.json`, { cache: "no-store" });
-  if (!res.ok) throw new Error("Failed to load locale: " + lang);
   return res.json();
 }
 
 export function I18nProvider({ children }: { children: React.ReactNode }) {
-  const [lang, setLang] = useState<Lang>("nb");
+  const [lang, setLangState] = useState<Lang>((localStorage.getItem("lang") as Lang) || "nb");
   const [dict, setDict] = useState<any>({});
+  const [theme, setThemeState] = useState<Theme>((localStorage.getItem("theme") as Theme) || "light");
 
+  useEffect(() => { fetchDict(lang).then(setDict); localStorage.setItem("lang", lang); }, [lang]);
   useEffect(() => {
-    fetchDict(lang).then(setDict).catch(() => setDict({}));
-  }, [lang]);
+    localStorage.setItem("theme", theme);
+    document.documentElement.setAttribute("data-theme", theme);
+  }, [theme]);
 
-  return (
-    <I18nCtx.Provider value={{ lang, dict, setLang }}>
-      {children}
-    </I18nCtx.Provider>
-  );
+  const setLang = (l: Lang) => setLangState(l);
+  const setTheme = (t: Theme) => setThemeState(t);
+
+  return <I18nCtx.Provider value={{ lang, dict, setLang, theme, setTheme }}>{children}</I18nCtx.Provider>;
 }
 
 export const useI18n = () => useContext(I18nCtx);
