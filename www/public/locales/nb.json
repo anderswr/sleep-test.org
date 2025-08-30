@@ -1,0 +1,150 @@
+{
+  "ui": {
+    "home": {
+      "title": "DMZ Sleep Test",
+      "subtitle": "Start testen for å få en personlig rapport.",
+      "cta": "Start test",
+      "language_label": "Språk"
+    },
+    "nav": {
+      "result": "Resultat",
+      "compare": "Sammenlign",
+      "articles": "Artikler"
+    },
+    "test": {
+      "title": "Søvntest",
+      "submit": "Send inn",
+      "progress": "Fremdrift"
+    },
+    "result": {
+      "title": "Resultat",
+      "sleep_score": "Søvn-score",
+      "tips_title": "Forslag til tiltak",
+      "open_report": "Åpne rapport",
+      "copy_id": "Kopier ID",
+      "compare_with_prev": "Sammenlign med forrige"
+    },
+    "compare": {
+      "no_prev": "Ingen tidligere ID lagret enda."
+    },
+    "common": {
+      "sending": "Sender…",
+      "back": "Tilbake",
+      "next": "Neste"
+    }
+  },
+  "likert": {
+    "1": "Aldri / Ikke i det hele tatt",
+    "2": "Sjelden",
+    "3": "Av og til",
+    "4": "Ofte",
+    "5": "Svært ofte"
+  },
+  "category": {
+    "pattern": { "name": "Søvnmønster & varighet", "desc": "Lengde og regelmessighet." },
+    "insomnia": { "name": "Innsovning & natt", "desc": "Sovning, oppvåkninger, tidlig oppvåkning." },
+    "quality": { "name": "Søvnkvalitet", "desc": "Opplevd kvalitet og fornøydhet." },
+    "daytime": { "name": "Dagtid & søvnighet", "desc": "Døsighet og funksjon på dagtid." },
+    "hygiene": { "name": "Søvnhygiene & rutiner", "desc": "Vaner og timing (skjermer, koffein)." },
+    "environment": { "name": "Søvnmiljø", "desc": "Lys, støy, temperatur, seng." },
+    "breathing": { "name": "Snorking & pustesignal", "desc": "Mulige tegn på søvnapné." }
+  },
+  "q": {
+    "pattern": {
+      "too_short": "Jeg sover mindre enn jeg trenger de fleste netter.",
+      "irregular_times": "Søvntidene mine varierer mye fra dag til dag.",
+      "late_long_naps": "Jeg tar lange eller sene dagslurer som forstyrrer natten."
+    },
+    "insomnia": {
+      "long_sleep_onset": "Det tar lenge å sovne etter at jeg legger meg.",
+      "frequent_awakenings": "Jeg våkner flere ganger i løpet av natten.",
+      "early_morning_awakenings": "Jeg våkner for tidlig og får ikke sove igjen.",
+      "unrefreshed_mornings": "Jeg føler meg ikke uthvilt når jeg står opp.",
+      "daytime_impact": "Søvnvanskene påvirker meg på dagtid (humør, konsentrasjon, energi)."
+    },
+    "quality": {
+      "overall_poor": "Min helhetsopplevelse av søvnen er dårlig.",
+      "dissatisfied": "Jeg er misfornøyd med søvnen min.",
+      "restless_nights": "Søvnen min er ofte urolig (mareritt, rastløshet, smerter)."
+    },
+    "daytime": {
+      "doze_easily": "Jeg døser lett i rolige situasjoner (TV, lesing, passasjer i bil).",
+      "struggle_stay_awake": "Jeg sliter med å holde meg våken når jeg må være konsentrert.",
+      "tired_most_day": "Jeg kjemper mot tretthet store deler av dagen."
+    },
+    "hygiene": {
+      "screens_before_bed": "Jeg bruker mobil/PC-skjermer rett før leggetid.",
+      "late_caffeine": "Jeg drikker kaffe/energidrikk sent på dagen.",
+      "alcohol_near_bed": "Jeg drikker alkohol nær leggetid.",
+      "big_meal_late": "Jeg spiser store måltid sent på kvelden.",
+      "hard_exercise_late": "Jeg trener hardt rett før leggetid."
+    },
+    "env": {
+      "too_light_noise_temp": "Soverommet er ofte for lyst, støyende eller feil temperatur.",
+      "uncomfortable_bed": "Sengen eller puta er ukomfortabel.",
+      "bad_associations": "Jeg jobber/ser på TV i senga og får dårlige sove-assosiasjoner."
+    },
+    "breathing": {
+      "loud_snoring": "Jeg snorker høyt.",
+      "observed_apneas": "Andre har observert pustestopp når jeg sover.",
+      "daytime_tired_despite": "Jeg er kraftig trett på dagtid selv etter en normal natt."
+    }
+  },
+  "f": {
+    "bedtime": "Vanlig leggetid (hh:mm)",
+    "waketime": "Vanlig opp-tid (hh:mm)",
+    "sleep_hours": "Søvntimer per natt (snitt siste uke)",
+    "hypertension_dx": "Har du diagnostisert høyt blodtrykk?",
+    "hypertension_dx.options": { "yes": "Ja", "no": "Nei", "unknown": "Vet ikke" }
+  },
+  "flags": {
+    "osa_signal": "Mulige tegn på søvnapné – vurder å snakke med fastlege.",
+    "excessive_sleepiness": "Uttalt søvnighet på dagtid – vær ekstra oppmerksom."
+  },
+  "tips": {
+    "pattern": {
+      "keep_routine": "Hold faste tider for legging og oppvåkning (±30 min).",
+      "short_naps": "Unngå sene/lange dagslurer; hold dem korte før kl 15.",
+      "consistent_bed_wake": "Vær konsekvent med leggetid og opp-tid daglig.",
+      "plan_winddown": "Lag en rolig nedtrapping 30–60 min før leggetid.",
+      "protect_7h": "Sikt på minst 7 timer søvn hver natt.",
+      "cut_late_naps": "Kutt ut sene lurene."
+    },
+    "insomnia": {
+      "maintain": "Fortsett med vaner som fungerer for deg.",
+      "rule_20min": "Sovner du ikke innen ~20 min? Stå opp og gjør noe rolig.",
+      "fixed_wake": "Hold en fast opp-tid, også i helger.",
+      "stimulus_control": "Bruk senga kun til søvn/sex, ikke TV/mobil/jobb.",
+      "consider_cbti": "Vurder CBT-I hos fagperson hvis plagene vedvarer."
+    },
+    "quality": {
+      "track_triggers": "Noter hva som påvirker netter positivt/negativt.",
+      "address_disruptors": "Reduser ting som forstyrrer søvnen (støy, smerter).",
+      "consult_if_pain": "Snakk med helsepersonell ved vedvarende smerter."
+    },
+    "daytime": {
+      "morning_light": "Få dagslys tidlig – 20–30 min for døgnrytmen.",
+      "activity_breaks": "Korte pauser og bevegelse gjennom dagen.",
+      "consider_medical": "Vurder medisinsk vurdering ved uttalt søvnighet."
+    },
+    "hygiene": {
+      "keep_it_up": "Bra! Fortsett med gode rutiner.",
+      "screens_off_60": "Skru av skjermer siste 60 min før leggetid.",
+      "limit_caffeine": "Unngå koffein etter kl. 14–16.",
+      "no_alcohol_late": "Unngå alkohol nær leggetid – gir urolig søvn.",
+      "no_big_meals_late": "Unngå store måltid sent på kvelden."
+    },
+    "env": {
+      "keep_cool_dark": "Hold rommet kjølig (17–19 °C) og mørkt.",
+      "test_blackout": "Prøv blackout-gardiner/mørklegging.",
+      "noise_control": "Dempe støy (øredobber/hvit støy).",
+      "try_new_pillow": "Vurder ny pute/madrass ved ukomfortabel seng.",
+      "cooler_temp": "Forsøk litt lavere temperatur."
+    },
+    "breathing": {
+      "side_sleep": "Prøv å sove på siden.",
+      "reduce_evening_alcohol": "Kutt alkohol på kvelden.",
+      "consider_gp_check": "Vurder sjekk hos fastlege hvis symptomer vedvarer."
+    }
+  }
+}
