@@ -93,7 +93,7 @@
   "flags": {
     "osa_signal": "Possible signs of sleep apnea – consider talking to your doctor.",
     "excessive_sleepiness": "Marked daytime sleepiness – be extra careful."
-    ,
+  },
   "articles": {
     "fall_asleep": { "title": "Trouble falling asleep?", "desc": "Simple steps to start." },
     "screen_time": { "title": "Phone in bed", "desc": "Reduce screen impact on sleep." }
