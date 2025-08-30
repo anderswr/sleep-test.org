@@ -1,56 +1,38 @@
 {
   "ui": {
-    "home": {
-      "title": "DMZ Sleep Test",
-      "subtitle": "Start testen for å få en personlig rapport.",
-      "cta": "Start test",
-      "language_label": "Språk",
-      "cards": {
-        "start": "Start test",
-        "start_desc": "Svar på 5–10 min, få konkret rapport.",
-        "results": "Resultater",
-        "results_desc": "Se eksempel på rapport.",
-        "compare": "Sammenlign",
-        "compare_desc": "Sammenlign to ID-er over tid.",
-        "articles": "Artikler",
-        "articles_desc": "Lær mer om søvn og vaner."
-      }
-    },
     "nav": {
       "result": "Resultat",
       "compare": "Sammenlign",
-      "articles": "Artikler"
+      "articles": "Artikler",
+      "legal": "Personvern & vilkår"
     },
-    "test": {
-      "title": "Søvntest",
-      "submit": "Send inn",
-      "progress": "Fremdrift"
+    "home": {
+      "pitch": "Svar på 30 spørsmål, ca 5 minutter og få en grundig rapport med forklaringer og tiltak.",
+      "cta": "Start testen",
+      "example": "Se eksempel på rapport",
+      "box_privacy": { "title": "Personvern først", "text": "Ingen pålogging, registrering eller mulighet for misbruk. GDPR-vennlig." },
+      "box_compare": { "title": "Sammenlign senere", "text": "Du får en ID etter testen. Ta testen igjen og sammenlign endringer." },
+      "box_articles": { "title": "Lær mer", "text": "Korte artikler om søvn, med kilder." }
     },
-    "result": {
-      "title": "Resultat",
-      "sleep_score": "Søvn-score",
-      "tips_title": "Forslag til tiltak",
-      "open_report": "Åpne rapport",
-      "copy_id": "Kopier ID",
-      "compare_with_prev": "Sammenlign med forrige",
-      "how_to_improve": "Hvordan forbedre dette:"
-    },
+    "test": { "title": "Søvntest", "submit": "Send inn", "progress": "Fremdrift" },
+    "result": { "title": "Resultat", "sleep_score": "Søvn-score", "how_to_improve": "Hvordan forbedre dette:" },
+    "common": { "sending": "Sender…", "back": "Tilbake", "next": "Neste", "read": "Les" },
     "compare": {
-      "no_prev": "Ingen tidligere ID lagret enda."
+      "help": "Har du ID-en din fra sist gang? Skriv den inn sammen med ny ID for å se om du har gjort fremskritt – og hvor.",
+      "notfound": "Fant ikke en eller begge ID-ene.",
+      "error": "Noe gikk galt. Prøv igjen."
     },
-    "common": {
-      "sending": "Sender…",
-      "back": "Tilbake",
-      "next": "Neste"
+    "legal": {
+      "title": "Personvern, vilkår og kontakt",
+      "privacy": "Personvern",
+      "privacy_text": "Vi lagrer kun svar og en teknisk ID. Ingen personopplysninger. Data kan slettes ved forespørsel (oppgi ID).",
+      "terms": "Vilkår",
+      "terms_text": "Tjenesten er veiledende og erstatter ikke helsehjelp. Ved bekymring: kontakt fastlege.",
+      "contact": "Kontakt",
+      "contact_text": "E-post: support@sleep-test.example"
     }
   },
-  "likert": {
-    "1": "Aldri / Ikke i det hele tatt",
-    "2": "Sjelden",
-    "3": "Av og til",
-    "4": "Ofte",
-    "5": "Svært ofte"
-  },
+  "likert": { "1": "Aldri / Ikke i det hele tatt", "2": "Sjelden", "3": "Av og til", "4": "Ofte", "5": "Svært ofte" },
   "category": {
     "pattern": { "name": "Søvnmønster & varighet", "desc": "Lengde og regelmessighet." },
     "insomnia": { "name": "Innsovning & natt", "desc": "Sovning, oppvåkninger, tidlig oppvåkning." },
@@ -112,50 +94,8 @@
     "osa_signal": "Mulige tegn på søvnapné – vurder å snakke med fastlege.",
     "excessive_sleepiness": "Uttalt søvnighet på dagtid – vær ekstra oppmerksom."
   },
-  "tips": {
-    "pattern": {
-      "keep_routine": "Hold faste tider for legging og oppvåkning (±30 min).",
-      "short_naps": "Unngå sene/lange dagslurer; hold dem korte før kl 15.",
-      "consistent_bed_wake": "Vær konsekvent med leggetid og opp-tid daglig.",
-      "plan_winddown": "Lag en rolig nedtrapping 30–60 min før leggetid.",
-      "protect_7h": "Sikt på minst 7 timer søvn hver natt.",
-      "cut_late_naps": "Kutt ut sene lurene."
-    },
-    "insomnia": {
-      "maintain": "Fortsett med vaner som fungerer for deg.",
-      "rule_20min": "Sovner du ikke innen ~20 min? Stå opp og gjør noe rolig.",
-      "fixed_wake": "Hold en fast opp-tid, også i helger.",
-      "stimulus_control": "Bruk senga kun til søvn/sex, ikke TV/mobil/jobb.",
-      "consider_cbti": "Vurder CBT-I hos fagperson hvis plagene vedvarer."
-    },
-    "quality": {
-      "track_triggers": "Noter hva som påvirker netter positivt/negativt.",
-      "address_disruptors": "Reduser ting som forstyrrer søvnen (støy, smerter).",
-      "consult_if_pain": "Snakk med helsepersonell ved vedvarende smerter."
-    },
-    "daytime": {
-      "morning_light": "Få dagslys tidlig – 20–30 min for døgnrytmen.",
-      "activity_breaks": "Korte pauser og bevegelse gjennom dagen.",
-      "consider_medical": "Vurder medisinsk vurdering ved uttalt søvnighet."
-    },
-    "hygiene": {
-      "keep_it_up": "Bra! Fortsett med gode rutiner.",
-      "screens_off_60": "Skru av skjermer siste 60 min før leggetid.",
-      "limit_caffeine": "Unngå koffein etter kl. 14–16.",
-      "no_alcohol_late": "Unngå alkohol nær leggetid – gir urolig søvn.",
-      "no_big_meals_late": "Unngå store måltid sent på kvelden."
-    },
-    "env": {
-      "keep_cool_dark": "Hold rommet kjølig (17–19 °C) og mørkt.",
-      "test_blackout": "Prøv blackout-gardiner/mørklegging.",
-      "noise_control": "Dempe støy (øredobber/hvit støy).",
-      "try_new_pillow": "Vurder ny pute/madrass ved ukomfortabel seng.",
-      "cooler_temp": "Forsøk litt lavere temperatur."
-    },
-    "breathing": {
-      "side_sleep": "Prøv å sove på siden.",
-      "reduce_evening_alcohol": "Kutt alkohol på kvelden.",
-      "consider_gp_check": "Vurder sjekk hos fastlege hvis symptomer vedvarer."
-    }
+  "articles": {
+    "fall_asleep": { "title": "Vanskelig å sovne?", "desc": "Enkle startgrep som hjelper." },
+    "screen_time": { "title": "Mobil i senga", "desc": "Slik demper du skjermens effekt på søvn." }
   }
 }
