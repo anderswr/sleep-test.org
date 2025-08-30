@@ -21,7 +21,7 @@ function isAnswered(q: Question, answers: AnswerMap, fields: FieldMap) {
 export default function TestPage() {
   const { dict } = useI18n();
 
-  // Fast rekkefølge: slik spørsmålene står i QUESTION_BANK
+  // Rekkefølge: slik spørsmålene står i QUESTION_BANK
   const ordered = useMemo(() => QUESTION_BANK.slice(), []);
   const total = ordered.length;
 
@@ -77,7 +77,7 @@ export default function TestPage() {
     }
   }
 
-  // Kategori-navn/tekst
+  // Kategori-navn
   function catName(cat: CategoryId) { return t(dict, `category.${cat}.name`, String(cat)); }
 
   return (
