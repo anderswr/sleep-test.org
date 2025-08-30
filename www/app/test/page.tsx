@@ -18,7 +18,7 @@ export default function TestPage() {
 
   // Likert-etiketter fra språkfilen
   const likertLabels = useMemo(
-    () => [1, 2, 3, 4, 5].map((n) => t(dict, LIKERT_LABEL_KEYS[n as 1])),
+    () => [1, 2, 3, 4, 5].map((n) => t(dict, LIKERT_LABEL_KEYS[n as 1], "")),
     [dict]
   );
 
@@ -76,17 +76,17 @@ export default function TestPage() {
         {Object.entries(groups).map(([cat, items]) => (
           <section key={cat} className="space-y-4">
             <h2 className="text-xl font-medium">
-              {t(dict, `category.${cat}.name`)}
+              {t(dict, `category.${cat}.name`, "")}
             </h2>
             <p className="text-sm text-gray-600">
-              {t(dict, `category.${cat}.desc`)}
+              {t(dict, `category.${cat}.desc`, "")}
             </p>
 
             {items.map((q) => (
               <div key={q.id} className="border rounded-xl p-4">
                 {q.kind === "likert" ? (
                   <div>
-                    <p className="mb-2">{t(dict, q.textKey)}</p>
+                    <p className="mb-2">{t(dict, q.textKey, "")}</p>
                     <div className="flex flex-wrap items-center gap-3">
                       {[1, 2, 3, 4, 5].map((n) => (
                         <label key={n} className="flex items-center gap-1">
@@ -104,7 +104,7 @@ export default function TestPage() {
                   </div>
                 ) : (
                   <div className="space-y-2">
-                    <p>{t(dict, q.textKey)}</p>
+                    <p>{t(dict, q.textKey, "")}</p>
 
                     {q.field.subtype === "time" && (
                       <input
@@ -174,25 +174,28 @@ export default function TestPage() {
 
           <p>
             <strong>{t(dict, "ui.result.sleep_score", "Søvn-score")}:</strong>{" "}
-            {result.sleepScore} / 100
+            {Number(result.sleepScore)} / 100
           </p>
 
+          {/* 👇 trygt typet entries + string-fallback */}
           <ul className="mt-2 grid grid-cols-1 sm:grid-cols-2 gap-2">
-            {Object.entries(result.categoryScores || {}).map(([k, v]) => (
+            {(Object.entries(
+              (result.categoryScores || {}) as Record<string, number>
+            ) as Array<[string, number]>).map(([k, v]) => (
               <li key={k} className="text-sm">
-                {t(dict, `category.${k}.name`)}: {v}
+                {t(dict, `category.${k}.name`, String(k))}: {Number(v)}
               </li>
             ))}
           </ul>
 
           {result.flags?.osaSignal && (
             <p className="mt-3 text-red-600 text-sm">
-              {t(dict, "flags.osa_signal")}
+              {t(dict, "flags.osa_signal", "Mulige tegn på søvnapné – vurder å snakke med fastlege.")}
             </p>
           )}
           {result.flags?.excessiveSleepiness && (
             <p className="text-orange-600 text-sm">
-              {t(dict, "flags.excessive_sleepiness")}
+              {t(dict, "flags.excessive_sleepiness", "Uttalt søvnighet på dagtid – vær ekstra oppmerksom.")}
             </p>
           )}
         </div>
