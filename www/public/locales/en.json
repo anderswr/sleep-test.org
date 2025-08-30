@@ -32,7 +32,8 @@
       "tips_title": "Suggested actions",
       "open_report": "Open report",
       "copy_id": "Copy ID",
-      "compare_with_prev": "Compare with previous"
+      "compare_with_prev": "Compare with previous",
+      "how_to_improve": "How to improve this:"
     },
     "compare": {
       "no_prev": "No previous ID saved yet."
