@@ -26,7 +26,6 @@ export default function TestPage() {
   const { dict } = useI18n();
   const router = useRouter();
 
-  // Rekkefølge: slik spørsmålene står i QUESTION_BANK
   const ordered = useMemo(() => QUESTION_BANK.slice(), []);
   const total = ordered.length;
 
@@ -35,6 +34,9 @@ export default function TestPage() {
   const [fields, setFields] = useState<FieldMap>({});
   const [loading, setLoading] = useState(false);
 
+  // animasjon
+  const [animOut, setAnimOut] = useState(false);
+
   const q = ordered[idx];
   const answeredCount = ordered.reduce((n, q) => n + (isAnswered(q, answers, fields) ? 1 : 0), 0);
   const progressPct = Math.round((answeredCount / total) * 100);
@@ -42,26 +44,31 @@ export default function TestPage() {
   function goNext() { setIdx((i) => Math.min(total - 1, i + 1)); }
   function goPrev() { setIdx((i) => Math.max(0, i - 1)); }
 
+  function focusNextLikert() {
+    // forsøk å fokusere første “radio” i neste spørsmålsgruppe
+    const nextFirst = document.querySelector<HTMLButtonElement>('[role="radiogroup"] [role="radio"]');
+    nextFirst?.focus();
+  }
+
+  function animateAndGoNext() {
+    if (idx >= total - 1) return;
+    setAnimOut(true);
+    setTimeout(() => {
+      setAnimOut(false);
+      goNext();
+      // liten delay for at neste DOM skal finnes før fokus
+      setTimeout(focusNextLikert, 40);
+    }, 140);
+  }
+
   function onLikert(v: LikertValue) {
     setAnswers((p) => ({ ...p, [q.id]: v }));
-    setTimeout(() => {
-      if (idx < total - 1) {
-        goNext();
-        const nextFirst = document.querySelector<HTMLButtonElement>('[role="radiogroup"] [role="radio"]');
-        nextFirst?.focus();
-      }
-    }, 120);
+    animateAndGoNext();
   }
 
   function onFieldChange(val: any) {
     if (q.kind === "field") setFields((p) => ({ ...p, [q.field.key]: val }));
-    setTimeout(() => {
-      if (idx < total - 1) {
-        goNext();
-        const nextFirst = document.querySelector<HTMLButtonElement>('[role="radiogroup"] [role="radio"]');
-        nextFirst?.focus();
-      }
-    }, 120);
+    animateAndGoNext();
   }
 
   async function onSubmit() {
@@ -75,17 +82,15 @@ export default function TestPage() {
       const json = await res.json();
       if (json?.id) {
         localStorage.setItem("lastResultId", json.id);
-        router.push(`/result/${json.id}`); // Gå direkte til rapport
+        router.push(`/result/${json.id}`); // direkte til rapport
         return;
       }
-      // fallback: bli på sida om ID mangler
       alert("Kunne ikke åpne rapport. Prøv igjen.");
     } finally {
       setLoading(false);
     }
   }
 
-  // Kategori-navn
   function catName(cat: CategoryId) { return t(dict, `category.${cat}.name`, String(cat)); }
 
   return (
@@ -105,7 +110,10 @@ export default function TestPage() {
 
         {/* Spørsmål */}
         <div className="center-wrap">
-          <article className="card q-card">
+          <article
+            key={idx}
+            className={`card q-card ${animOut ? "q-animate-out" : "q-animate-in"}`}
+          >
             <p className="muted" style={{margin:0}}>{catName(q.category)}</p>
             <h1 className="mb-2">{t(dict, q.textKey, "")}</h1>
 
@@ -118,7 +126,6 @@ export default function TestPage() {
               />
             ) : (
               <div className="stack-2">
-                {/* Custom felter per key */}
                 {q.field.subtype === "time" && (
                   <TimeSelect
                     value={(fields as any)[q.field.key] as string | undefined}
@@ -141,7 +148,7 @@ export default function TestPage() {
                   />
                 )}
 
-                {/* Fallback (skulle ikke brukes nå) */}
+                {/* Fallback hvis andre fields dukker opp senere */}
                 {q.field.subtype === "number" && q.field.key !== "sleepHours" && (
                   <input
                     className="btn"
@@ -156,14 +163,21 @@ export default function TestPage() {
 
         {/* Navigasjon / Innsending */}
         <div className="stage-controls">
-          <button className="btn" onClick={goPrev} disabled={idx === 0 || loading}>
+          <button
+            className="btn"
+            onClick={() => {
+              setAnimOut(true);
+              setTimeout(() => { setAnimOut(false); goPrev(); }, 120);
+            }}
+            disabled={idx === 0 || loading}
+          >
             {t(dict, "ui.common.back", "Tilbake")}
           </button>
 
           {idx < total - 1 ? (
             <button
               className="btn primary"
-              onClick={goNext}
+              onClick={animateAndGoNext}
               disabled={!isAnswered(q, answers, fields) || loading}
             >
               {t(dict, "ui.common.next", "Neste")}
