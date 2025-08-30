@@ -108,3 +108,47 @@ label[data-tone="2"] .face{ color: #fb923c }   /* orange-400 */
 label[data-tone="3"] .face{ color: var(--warn) }
 label[data-tone="4"] .face{ color: #10b981 }   /* emerald-500 */
 label[data-tone="5"] .face{ color: var(--ok) }
+
+/* --- Stage for single-question layout --- */
+.stage {
+  min-height: calc(100dvh - 120px); /* header+footer avsatt */
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+}
+
+/* Tittel + fremdrift seksjon */
+.stage-head { margin-bottom: 16px; }
+
+.center-wrap{
+  display: grid;
+  place-items: start center; /* toppstilt, men sentrert horisontalt */
+}
+
+.q-card{
+  width: min(880px, 100%);
+  margin: 0 auto;
+}
+
+/* Sticky kontrollrad */
+.stage-controls{
+  position: sticky;
+  bottom: 0;
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  padding: 12px 0;
+  background: var(--bg);
+  border-top: 1px solid var(--border);
+}
+
+/* Footer */
+.site-footer{
+  border-top: 1px solid var(--border);
+  background: #fafafa;
+  margin-top: 24px;
+}
+.footer-inner{
+  display:flex; align-items:center; justify-content:space-between;
+  padding: 18px 0;
+}
+.footer-nav{ display:flex; gap:16px; color: var(--muted); font-size: .9rem; }
