@@ -4,7 +4,17 @@
       "title": "DMZ Sleep Test",
       "subtitle": "Start the test to get a personal report.",
       "cta": "Start test",
-      "language_label": "Language"
+      "language_label": "Language",
+      "cards": {
+        "start": "Start test",
+        "start_desc": "Answer in 5–10 min, get an actionable report.",
+        "results": "Results",
+        "results_desc": "See a sample report.",
+        "compare": "Compare",
+        "compare_desc": "Compare two IDs over time.",
+        "articles": "Articles",
+        "articles_desc": "Learn more about sleep and habits."
+      }
     },
     "nav": {
       "result": "Result",
