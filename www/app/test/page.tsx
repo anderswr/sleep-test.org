@@ -8,6 +8,7 @@ import SmileyLikert from "@/components/SmileyLikert";
 import TimeSelect from "@/components/TimeSelect";
 import SleepHoursSlider from "@/components/SleepHoursSlider";
 import ThumbLikert from "@/components/ThumbLikert";
+import SleepTimeline from "@/components/SleepTimeline";
 
 import { useI18n } from "@/app/providers/I18nProvider";
 import { t } from "@/lib/i18n";
@@ -33,8 +34,6 @@ export default function TestPage() {
   const [answers, setAnswers] = useState<AnswerMap>({});
   const [fields, setFields] = useState<FieldMap>({});
   const [loading, setLoading] = useState(false);
-
-  // animasjon
   const [animOut, setAnimOut] = useState(false);
 
   const q = ordered[idx];
@@ -43,20 +42,16 @@ export default function TestPage() {
 
   function goNext() { setIdx((i) => Math.min(total - 1, i + 1)); }
   function goPrev() { setIdx((i) => Math.max(0, i - 1)); }
-
   function focusNextLikert() {
-    // forsøk å fokusere første “radio” i neste spørsmålsgruppe
     const nextFirst = document.querySelector<HTMLButtonElement>('[role="radiogroup"] [role="radio"]');
     nextFirst?.focus();
   }
-
   function animateAndGoNext() {
     if (idx >= total - 1) return;
     setAnimOut(true);
     setTimeout(() => {
       setAnimOut(false);
       goNext();
-      // liten delay for at neste DOM skal finnes før fokus
       setTimeout(focusNextLikert, 40);
     }, 140);
   }
@@ -117,7 +112,24 @@ export default function TestPage() {
             <p className="muted" style={{margin:0}}>{catName(q.category)}</p>
             <h1 className="mb-2">{t(dict, q.textKey, "")}</h1>
 
-            {q.kind === "likert" ? (
+            {/* --- SPECIAL: bedtime + waketime på samme side via SleepTimeline --- */}
+            {q.kind === "field" && q.id === "f1" ? (
+              <SleepTimeline
+                bedtime={fields.bedtime}
+                waketime={fields.waketime}
+                onChange={(bed, wake) => {
+                  setFields((p) => ({ ...p, bedtime: bed, waketime: wake }));
+                  // auto-avanser forbi f2
+                  const f2Index = ordered.findIndex(qq => qq.id === "f2");
+                  const nextAfter = Math.max(idx + 1, f2Index + 1);
+                  setAnimOut(true);
+                  setTimeout(() => {
+                    setAnimOut(false);
+                    setIdx(Math.min(nextAfter, total - 1));
+                  }, 140);
+                }}
+              />
+            ) : q.kind === "likert" ? (
               <SmileyLikert
                 name={q.id}
                 value={answers[q.id]}
@@ -133,22 +145,18 @@ export default function TestPage() {
                     label={t(dict, q.textKey, "")}
                   />
                 )}
-
                 {q.field.subtype === "number" && q.field.key === "sleepHours" && (
                   <SleepHoursSlider
                     value={(fields.sleepHours ?? 7) as number}
                     onChange={(val) => onFieldChange(val)}
                   />
                 )}
-
                 {q.field.subtype === "select" && q.field.key === "hypertensionDx" && (
                   <ThumbLikert
                     value={(fields.hypertensionDx as any) || "unknown"}
                     onChange={(val) => onFieldChange(val)}
                   />
                 )}
-
-                {/* Fallback hvis andre fields dukker opp senere */}
                 {q.field.subtype === "number" && q.field.key !== "sleepHours" && (
                   <input
                     className="btn"
