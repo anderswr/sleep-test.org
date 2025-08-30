@@ -5,11 +5,15 @@ import React, { useMemo, useState } from "react";
 import SiteHeader from "@/components/SiteHeader";
 import SiteFooter from "@/components/SiteFooter";
 import SmileyLikert from "@/components/SmileyLikert";
+import TimeSelect from "@/components/TimeSelect";
+import SleepHoursSlider from "@/components/SleepHoursSlider";
+import ThumbLikert from "@/components/ThumbLikert";
 
 import { useI18n } from "@/app/providers/I18nProvider";
 import { t } from "@/lib/i18n";
 import { QUESTION_BANK } from "@/data/questions";
 import { AnswerMap, FieldMap, LikertValue, CategoryId, Question } from "@/lib/types";
+import { useRouter } from "next/navigation";
 
 /** Er dette spørsmålet besvart? */
 function isAnswered(q: Question, answers: AnswerMap, fields: FieldMap) {
@@ -20,6 +24,7 @@ function isAnswered(q: Question, answers: AnswerMap, fields: FieldMap) {
 
 export default function TestPage() {
   const { dict } = useI18n();
+  const router = useRouter();
 
   // Rekkefølge: slik spørsmålene står i QUESTION_BANK
   const ordered = useMemo(() => QUESTION_BANK.slice(), []);
@@ -29,7 +34,6 @@ export default function TestPage() {
   const [answers, setAnswers] = useState<AnswerMap>({});
   const [fields, setFields] = useState<FieldMap>({});
   const [loading, setLoading] = useState(false);
-  const [result, setResult] = useState<any>(null);
 
   const q = ordered[idx];
   const answeredCount = ordered.reduce((n, q) => n + (isAnswered(q, answers, fields) ? 1 : 0), 0);
@@ -40,7 +44,6 @@ export default function TestPage() {
 
   function onLikert(v: LikertValue) {
     setAnswers((p) => ({ ...p, [q.id]: v }));
-    // auto-avanser og fokus på neste
     setTimeout(() => {
       if (idx < total - 1) {
         goNext();
@@ -58,7 +61,7 @@ export default function TestPage() {
         const nextFirst = document.querySelector<HTMLButtonElement>('[role="radiogroup"] [role="radio"]');
         nextFirst?.focus();
       }
-    }, 100);
+    }, 120);
   }
 
   async function onSubmit() {
@@ -70,8 +73,13 @@ export default function TestPage() {
         body: JSON.stringify({ answers, fields, lang: "nb" })
       });
       const json = await res.json();
-      setResult(json);
-      if (json?.id) localStorage.setItem("lastResultId", json.id);
+      if (json?.id) {
+        localStorage.setItem("lastResultId", json.id);
+        router.push(`/result/${json.id}`); // Gå direkte til rapport
+        return;
+      }
+      // fallback: bli på sida om ID mangler
+      alert("Kunne ikke åpne rapport. Prøv igjen.");
     } finally {
       setLoading(false);
     }
@@ -83,7 +91,6 @@ export default function TestPage() {
   return (
     <>
       <SiteHeader />
-
       <main className="container stage">
         {/* Fremdrift */}
         <div className="stage-head">
@@ -111,20 +118,37 @@ export default function TestPage() {
               />
             ) : (
               <div className="stack-2">
+                {/* Custom felter per key */}
                 {q.field.subtype === "time" && (
-                  <input className="btn" type="time" onChange={(e) => onFieldChange(e.target.value)} />
+                  <TimeSelect
+                    value={(fields as any)[q.field.key] as string | undefined}
+                    onChange={(val) => onFieldChange(val)}
+                    label={t(dict, q.textKey, "")}
+                  />
                 )}
-                {q.field.subtype === "number" && (
-                  <input className="btn" type="number" step="0.1" onChange={(e) => onFieldChange(Number(e.target.value))} />
+
+                {q.field.subtype === "number" && q.field.key === "sleepHours" && (
+                  <SleepHoursSlider
+                    value={(fields.sleepHours ?? 7) as number}
+                    onChange={(val) => onFieldChange(val)}
+                  />
                 )}
-                {q.field.subtype === "select" && (
-                  <select className="btn" onChange={(e) => onFieldChange(e.target.value)}>
-                    {Object.entries(t<Record<string, string>>(dict, q.field.optionsKey!, {})).map(([v, label]) => (
-                      <option key={v} value={v}>{label}</option>
-                    ))}
-                  </select>
+
+                {q.field.subtype === "select" && q.field.key === "hypertensionDx" && (
+                  <ThumbLikert
+                    value={(fields.hypertensionDx as any) || "unknown"}
+                    onChange={(val) => onFieldChange(val)}
+                  />
                 )}
-                {q.infoKey && <p className="muted">{t(dict, q.infoKey, "")}</p>}
+
+                {/* Fallback (skulle ikke brukes nå) */}
+                {q.field.subtype === "number" && q.field.key !== "sleepHours" && (
+                  <input
+                    className="btn"
+                    type="number" step="0.5"
+                    onChange={(e) => onFieldChange(Number(e.target.value))}
+                  />
+                )}
               </div>
             )}
           </article>
@@ -150,75 +174,7 @@ export default function TestPage() {
             </button>
           )}
         </div>
-
-        {/* Resultat */}
-        {result && (
-          <div className="card mt-6 q-card" role="region" aria-live="polite">
-            <h3>{t(dict, "ui.result.title", "Resultat")}</h3>
-
-            <div className="row" style={{justifyContent:"space-between", alignItems:"center"}}>
-              <p>
-                <strong>{t(dict, "ui.result.sleep_score", "Søvn-score")}:</strong>{" "}
-                {Number(result.sleepScore)} / 100
-              </p>
-
-              {result.id && (
-                <div className="row" style={{gap:8}}>
-                  <code className="px-1 py-0.5" style={{background:"#f3f4f6", borderRadius:6}}>
-                    {result.id}
-                  </code>
-                  <button
-                    type="button"
-                    className="btn"
-                    onClick={() => navigator.clipboard.writeText(result.id)}
-                    aria-label={t(dict, "ui.result.copy_id", "Kopier ID")}
-                    title={t(dict, "ui.result.copy_id", "Kopier ID")}
-                  >
-                    {t(dict, "ui.result.copy_id", "Kopier ID")}
-                  </button>
-                  <a className="btn" href={`/result/${result.id}`}>
-                    {t(dict, "ui.result.open_report", "Åpne rapport")}
-                  </a>
-                </div>
-              )}
-            </div>
-
-            {/* Kategori-sammendrag */}
-            <ul className="stack-2">
-              {(Object.entries((result.categoryScores || {}) as Record<string, number>) as Array<[string, number]>).map(([k,v]) => (
-                <li key={k}>• {t(dict, `category.${k}.name`, String(k))}: {Number(v)}</li>
-              ))}
-            </ul>
-
-            {/* Tips per kategori */}
-            {result.suggestedTips && (
-              <div className="mt-6">
-                <h4 className="mb-2">{t(dict, "ui.result.tips_title", "Forslag til tiltak")}</h4>
-                <ul className="stack-2">
-                  {Object.entries(result.suggestedTips as Record<string, string[]>).flatMap(([cat, tips]) =>
-                    tips.map((tipKey) => (
-                      <li key={`${cat}-${tipKey}`}>• {t(dict, tipKey, tipKey)}</li>
-                    ))
-                  )}
-                </ul>
-              </div>
-            )}
-
-            {/* Varsler */}
-            {result.flags?.osaSignal && (
-              <p style={{color:"var(--bad)"}} className="mt-6">
-                {t(dict, "flags.osa_signal")}
-              </p>
-            )}
-            {result.flags?.excessiveSleepiness && (
-              <p style={{color:"#f59e0b"}}>
-                {t(dict, "flags.excessive_sleepiness")}
-              </p>
-            )}
-          </div>
-        )}
       </main>
-
       <SiteFooter />
     </>
   );
