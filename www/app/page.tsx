@@ -1,11 +1,9 @@
-// app/page.tsx
 "use client";
-
 import Link from "next/link";
-import SiteHeader from "@/components/SiteHeader";
-import SiteFooter from "@/components/SiteFooter";
 import { useI18n } from "./providers/I18nProvider";
 import { t } from "@/lib/i18n";
+import SiteHeader from "@/components/SiteHeader";
+import SiteFooter from "@/components/SiteFooter";
 
 export default function Home() {
   const { dict } = useI18n();
@@ -14,38 +12,32 @@ export default function Home() {
     <>
       <SiteHeader />
       <main className="container">
-        {/* Hero */}
-        <section className="card" style={{ padding: "28px" }}>
-          <h1 className="mb-2">{t(dict, "ui.home.title", "DMZ Sleep Test")}</h1>
-          <p className="muted">{t(dict, "ui.home.subtitle", "Start testen for å få en personlig rapport.")}</p>
-          <div className="row mt-6" style={{ gap: 10 }}>
-            <Link className="btn primary" href="/test">
-              {t(dict, "ui.home.cta", "Start test")}
-            </Link>
-            <Link className="btn" href="/compare">
-              {t(dict, "ui.nav.compare", "Sammenlign")}
-            </Link>
+        <section className="hero card">
+          <h1>Sleep Test</h1>
+          <p className="lead">
+            {t(dict,"ui.home.pitch","Svar på 30 spørsmål, ca 5 minutter og få en grundig rapport med forklaringer og tiltak.")}
+          </p>
+          <div className="row" style={{ gap:12, flexWrap:"wrap" }}>
+            <Link href="/test" className="btn primary lg">{t(dict,"ui.home.cta","Start testen")}</Link>
+            <Link href="/result/demo" className="btn lg">{t(dict,"ui.home.example","Se eksempel på rapport")}</Link>
           </div>
         </section>
 
-        {/* Hurtigvalg-kort */}
         <section className="grid-cards mt-6">
-          <Link href="/test" className="card quick-card">
-            <h3>🛌 {t(dict, "ui.home.cards.start", "Start test")}</h3>
-            <p className="muted">{t(dict, "ui.home.cards.start_desc", "Svare på 5–10 min, få konkret rapport.")}</p>
-          </Link>
-          <Link href="/result/demo" className="card quick-card">
-            <h3>📊 {t(dict, "ui.home.cards.results", "Resultater")}</h3>
-            <p className="muted">{t(dict, "ui.home.cards.results_desc", "Se eksempel på rapport.")}</p>
-          </Link>
-          <Link href="/compare" className="card quick-card">
-            <h3>🔁 {t(dict, "ui.home.cards.compare", "Sammenlign")}</h3>
-            <p className="muted">{t(dict, "ui.home.cards.compare_desc", "Sammenlign to ID-er over tid.")}</p>
-          </Link>
-          <Link href="#articles" className="card quick-card">
-            <h3>📰 {t(dict, "ui.home.cards.articles", "Artikler")}</h3>
-            <p className="muted">{t(dict, "ui.home.cards.articles_desc", "Lær mer om søvn og vaner.")}</p>
-          </Link>
+          <article className="card">
+            <h3>{t(dict,"ui.home.box_privacy.title","Personvern først")}</h3>
+            <p className="muted">{t(dict,"ui.home.box_privacy.text","Ingen pålogging, registrering eller mulighet for misbruk. GDPR-vennlig.")}</p>
+          </article>
+          <article className="card">
+            <h3>{t(dict,"ui.home.box_compare.title","Sammenlign senere")}</h3>
+            <p className="muted">{t(dict,"ui.home.box_compare.text","Du får en ID etter testen. Ta testen igjen og sammenlign endringer.")}</p>
+            <Link href="/compare" className="btn">{t(dict,"ui.nav.compare","Sammenlign")}</Link>
+          </article>
+          <article className="card">
+            <h3>{t(dict,"ui.home.box_articles.title","Lær mer")}</h3>
+            <p className="muted">{t(dict,"ui.home.box_articles.text","Korte artikler om søvn, med kilder.")}</p>
+            <Link href="/articles" className="btn">{t(dict,"ui.nav.articles","Artikler")}</Link>
+          </article>
         </section>
       </main>
       <SiteFooter />
