@@ -102,11 +102,20 @@ export default function ResultPage({ params }: { params: { id: string } }) {
                       <strong className="cat-card__score">{Number(val)}</strong>
                     </div>
                     <p className="muted">{t(dict, `category.${cat}.desc`, "")}</p>
-                    <ul className="stack-2 mt-6">
-                      {(data.suggestedTips?.[cat] || []).map((tipKey) => (
-                        <li key={`${cat}-${tipKey}`}>• {t(dict, tipKey, tipKey)}</li>
-                      ))}
-                    </ul>
+
+                    {/* Tips */}
+                    {(data.suggestedTips?.[cat] || []).length > 0 && (
+                      <>
+                        <h4 className="mb-2 mt-6">{t(dict, "ui.result.how_to_improve", "Hvordan forbedre dette:")}</h4>
+                        <ul className="tips-list">
+                          {(data.suggestedTips?.[cat] || []).map((tipKey) => (
+                            <li key={`${cat}-${tipKey}`}>
+                              <span className="star">*</span> {t(dict, tipKey, tipKey)}
+                            </li>
+                          ))}
+                        </ul>
+                      </>
+                    )}
                   </article>
                 );
               })}
