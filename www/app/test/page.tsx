@@ -5,8 +5,9 @@ import React, { useMemo, useState } from "react";
 import { useI18n } from "@/app/providers/I18nProvider";
 import { t } from "@/lib/i18n";
 import { QUESTION_BANK } from "@/data/questions";
-import { AnswerMap, FieldMap, LikertValue, CategoryId } from "@/lib/types";
+import { AnswerMap, FieldMap, LikertValue, CategoryId, ALL_CATEGORIES } from "@/lib/types";
 import { LIKERT_LABEL_KEYS } from "@/lib/scoring";
+import SmileyLikert from "@/components/SmileyLikert";
 
 export default function TestPage() {
   const { lang, setLang, dict } = useI18n();
@@ -15,21 +16,31 @@ export default function TestPage() {
   const [fields, setFields] = useState<FieldMap>({});
   const [loading, setLoading] = useState(false);
   const [result, setResult] = useState<any>(null);
+  const [step, setStep] = useState(0); // kategori-index
 
-  // Likert-etiketter fra språkfilen
-  const likertLabels = useMemo(
-    () => [1, 2, 3, 4, 5].map((n) => t(dict, LIKERT_LABEL_KEYS[n as 1], "")),
-    [dict]
+  const groups = useMemo(() => {
+    const g: Record<CategoryId, typeof QUESTION_BANK> = {
+      pattern: [], insomnia: [], quality: [], daytime: [], hygiene: [], environment: [], breathing: [],
+    } as any;
+    QUESTION_BANK.forEach((q) => g[q.category].push(q));
+    return g;
+  }, []);
+
+  const allLikertIds = useMemo(
+    () => QUESTION_BANK.filter(q => q.kind === "likert").map(q => q.id),
+    []
   );
+  const answeredCount = useMemo(
+    () => allLikertIds.reduce((acc, id) => acc + (answers[id] ? 1 : 0), 0),
+    [answers, allLikertIds]
+  );
+  const progressPct = Math.round((answeredCount / allLikertIds.length) * 100);
 
-  const handleLikert = (id: string, v: LikertValue) =>
-    setAnswers((p) => ({ ...p, [id]: v }));
+  const handleLikert = (id: string, v: LikertValue) => setAnswers((p) => ({ ...p, [id]: v }));
+  const handleField  = (key: keyof FieldMap, v: any)  => setFields((p) => ({ ...p, [key]: v }));
 
-  const handleField = (key: keyof FieldMap, v: any) =>
-    setFields((p) => ({ ...p, [key]: v }));
-
-  async function onSubmit(e: React.FormEvent) {
-    e.preventDefault();
+  async function onSubmit(e?: React.FormEvent) {
+    e?.preventDefault();
     setLoading(true);
     try {
       const res = await fetch("/api/submit", {
@@ -39,167 +50,141 @@ export default function TestPage() {
       });
       const json = await res.json();
       setResult(json);
+      // Husk siste ID for enkel sammenligning senere
+      localStorage.setItem("lastResultId", json.id);
     } finally {
       setLoading(false);
     }
   }
 
-  // Gruppe spørsmål per kategori for naturlig rekkefølge
-  const groups: Record<CategoryId, typeof QUESTION_BANK> = {
-    pattern: [],
-    insomnia: [],
-    quality: [],
-    daytime: [],
-    hygiene: [],
-    environment: [],
-    breathing: [],
-  } as any;
-  QUESTION_BANK.forEach((q) => groups[q.category].push(q));
+  const currentCat = ALL_CATEGORIES[step];
+  const items = groups[currentCat];
 
   return (
-    <div className="max-w-3xl mx-auto p-6">
-      <div className="flex justify-between items-center mb-4">
-        <h1 className="text-2xl font-semibold">
-          {t(dict, "ui.test.title", "Søvntest")}
-        </h1>
-        <select
-          value={lang}
-          onChange={(e) => setLang(e.target.value as any)}
-          className="border rounded px-2 py-1"
-        >
-          <option value="nb">Norsk</option>
-          <option value="en">English</option>
-        </select>
+    <>
+      <div className="topbar">
+        <div className="nav">
+          <a href="/" className="active">DMZ Sleep</a>
+          <a href="/result/placeholder">{t(dict, "ui.nav.result", "Resultat")}</a>
+          <a href="/compare">{t(dict, "ui.nav.compare", "Sammenlign")}</a>
+          <a href="#articles">{t(dict, "ui.nav.articles", "Artikler")}</a>
+        </div>
+        <div className="row">
+          <label className="sr-only" htmlFor="lang">{t(dict, "ui.home.language_label", "Language")}</label>
+          <select id="lang" value={lang} onChange={(e) => setLang(e.target.value as any)} className="btn">
+            <option value="nb">Norsk</option>
+            <option value="en">English</option>
+          </select>
+        </div>
       </div>
 
-      <form onSubmit={onSubmit} className="space-y-8">
-        {Object.entries(groups).map(([cat, items]) => (
-          <section key={cat} className="space-y-4">
-            <h2 className="text-xl font-medium">
-              {t(dict, `category.${cat}.name`, "")}
-            </h2>
-            <p className="text-sm text-gray-600">
-              {t(dict, `category.${cat}.desc`, "")}
-            </p>
+      <main className="container">
+        {/* Fremdrift */}
+        <div className="row mb-2" aria-live="polite">
+          <div style={{minWidth:80}}>{String(progressPct).padStart(2,"0")}%</div>
+          <div className="progress" aria-label={t(dict, "ui.test.progress", "Fremdrift")}>
+            <div style={{width: `${progressPct}%`}} />
+          </div>
+        </div>
 
-            {items.map((q) => (
-              <div key={q.id} className="border rounded-xl p-4">
-                {q.kind === "likert" ? (
-                  <div>
-                    <p className="mb-2">{t(dict, q.textKey, "")}</p>
-                    <div className="flex flex-wrap items-center gap-3">
-                      {[1, 2, 3, 4, 5].map((n) => (
-                        <label key={n} className="flex items-center gap-1">
-                          <input
-                            type="radio"
-                            name={q.id}
-                            value={n}
-                            checked={answers[q.id] === n}
-                            onChange={() => handleLikert(q.id, n as LikertValue)}
-                          />
-                          <span className="text-sm">{likertLabels[n - 1]}</span>
-                        </label>
-                      ))}
-                    </div>
-                  </div>
-                ) : (
-                  <div className="space-y-2">
-                    <p>{t(dict, q.textKey, "")}</p>
+        <h1 className="mb-2">{t(dict, `category.${currentCat}.name`, "")}</h1>
+        <p className="mb-6" style={{color:"var(--muted)"}}>{t(dict, `category.${currentCat}.desc`, "")}</p>
 
+        <form className="stack-4" onSubmit={onSubmit}>
+          {/* Render kort for alle spørsmål i denne kategorien */}
+          {items.map((q) => (
+            <div key={q.id} className="card">
+              {q.kind === "likert" ? (
+                <>
+                  <h3 id={`${q.id}-legend`}>{t(dict, q.textKey, "")}</h3>
+                  <SmileyLikert
+                    name={q.id}
+                    value={answers[q.id]}
+                    onChange={(v) => handleLikert(q.id, v)}
+                    dict={dict}
+                  />
+                </>
+              ) : (
+                <>
+                  <h3>{t(dict, q.textKey, "")}</h3>
+                  <div className="stack-2">
                     {q.field.subtype === "time" && (
                       <input
-                        className="border rounded px-3 py-2"
+                        className="btn"
                         type="time"
-                        onChange={(e) =>
-                          handleField(q.field.key as keyof FieldMap, e.target.value)
-                        }
+                        onChange={(e) => handleField(q.field.key as keyof FieldMap, e.target.value)}
                       />
                     )}
-
                     {q.field.subtype === "number" && (
                       <input
-                        className="border rounded px-3 py-2"
+                        className="btn"
                         type="number"
                         step="0.1"
-                        onChange={(e) =>
-                          handleField(
-                            q.field.key as keyof FieldMap,
-                            Number(e.target.value)
-                          )
-                        }
+                        onChange={(e) => handleField(q.field.key as keyof FieldMap, Number(e.target.value))}
                       />
                     )}
-
                     {q.field.subtype === "select" && (
                       <select
-                        className="border rounded px-3 py-2"
-                        onChange={(e) =>
-                          handleField(
-                            q.field.key as keyof FieldMap,
-                            e.target.value as any
-                          )
-                        }
+                        className="btn"
+                        onChange={(e) => handleField(q.field.key as keyof FieldMap, e.target.value as any)}
                       >
                         {Object.entries(
-                          t<Record<string, string>>(dict, q.field.optionsKey!, {})
+                          (t<Record<string, string>>(dict, q.field.optionsKey!, {}))
                         ).map(([v, label]) => (
-                          <option key={v} value={v}>
-                            {label}
-                          </option>
+                          <option key={v} value={v}>{label}</option>
                         ))}
                       </select>
                     )}
+                    <p className="muted">{t(dict, q.infoKey || "", "")}</p>
                   </div>
-                )}
-              </div>
-            ))}
-          </section>
-        ))}
+                </>
+              )}
+            </div>
+          ))}
 
-        <button
-          disabled={loading}
-          className="bg-black text-white px-4 py-2 rounded-lg"
-        >
-          {loading
-            ? t(dict, "ui.common.sending", "Sender…")
-            : t(dict, "ui.test.submit", "Send inn")}
-        </button>
-      </form>
+          {/* Sticky navigasjon nederst */}
+          <div className="sticky-controls">
+            <button
+              type="button"
+              className="btn"
+              onClick={() => setStep((s) => Math.max(0, s - 1))}
+              disabled={step === 0 || loading}
+            >
+              {t(dict, "ui.common.back", "Tilbake")}
+            </button>
 
-      {result && (
-        <div className="mt-10 border rounded-xl p-4">
-          <h3 className="text-lg font-semibold mb-2">
-            {t(dict, "ui.result.title", "Resultat")}
-          </h3>
+            {step < ALL_CATEGORIES.length - 1 ? (
+              <button
+                type="button"
+                className="btn primary"
+                onClick={() => setStep((s) => Math.min(ALL_CATEGORIES.length - 1, s + 1))}
+                disabled={loading}
+              >
+                {t(dict, "ui.common.next", "Neste")}
+              </button>
+            ) : (
+              <button type="submit" className="btn primary" disabled={loading}>
+                {loading ? t(dict, "ui.common.sending", "Sender…") : t(dict, "ui.test.submit", "Send inn")}
+              </button>
+            )}
+          </div>
+        </form>
 
-          <p>
-            <strong>{t(dict, "ui.result.sleep_score", "Søvn-score")}:</strong>{" "}
-            {Number(result.sleepScore)} / 100
-          </p>
-
-          {/* 👇 trygt typet entries + string-fallback */}
-          <ul className="mt-2 grid grid-cols-1 sm:grid-cols-2 gap-2">
-            {(Object.entries(
-              (result.categoryScores || {}) as Record<string, number>
-            ) as Array<[string, number]>).map(([k, v]) => (
-              <li key={k} className="text-sm">
-                {t(dict, `category.${k}.name`, String(k))}: {Number(v)}
-              </li>
-            ))}
-          </ul>
-
-          {result.flags?.osaSignal && (
-            <p className="mt-3 text-red-600 text-sm">
-              {t(dict, "flags.osa_signal", "Mulige tegn på søvnapné – vurder å snakke med fastlege.")}
-            </p>
-          )}
-          {result.flags?.excessiveSleepiness && (
-            <p className="text-orange-600 text-sm">
-              {t(dict, "flags.excessive_sleepiness", "Uttalt søvnighet på dagtid – vær ekstra oppmerksom.")}
-            </p>
-          )}
-        </div>
-      )}
-    </div>
+        {/* Resultat (enkelt) */}
+        {result && (
+          <div className="card mt-6">
+            <h3>{t(dict, "ui.result.title", "Resultat")}</h3>
+            <p><strong>{t(dict, "ui.result.sleep_score", "Søvn-score")}:</strong> {Number(result.sleepScore)} / 100</p>
+            <ul className="stack-2">
+              {(Object.entries((result.categoryScores || {}) as Record<string, number>) as Array<[string, number]>).map(([k,v]) => (
+                <li key={k}>• {t(dict, `category.${k}.name`, String(k))}: {Number(v)}</li>
+              ))}
+            </ul>
+            {result.flags?.osaSignal && (<p style={{color:"var(--bad)"}} className="mt-6">{t(dict, "flags.osa_signal")}</p>)}
+            {result.flags?.excessiveSleepiness && (<p style={{color:"#f59e0b"}}>{t(dict, "flags.excessive_sleepiness")}</p>)}
+          </div>
+        )}
+      </main>
+    </>
   );
 }
