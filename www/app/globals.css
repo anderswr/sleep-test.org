@@ -10,10 +10,10 @@
   --shadow: 0 1px 2px rgba(0,0,0,.06), 0 1px 3px rgba(0,0,0,.1);
 
   --primary: #0ea5e9;        /* cyan-500 */
-  --primary-weak: #e0f2fe;    /* cyan-100 */
-  --ok: #22c55e;              /* green-500 */
-  --warn: #f59e0b;            /* amber-500 */
-  --bad: #ef4444;             /* red-500 */
+  --primary-weak: #e0f2fe;   /* cyan-100 */
+  --ok: #22c55e;             /* green-500 */
+  --warn: #f59e0b;           /* amber-500 */
+  --bad: #ef4444;            /* red-500 */
 
   --radius: 16px;
 }
@@ -42,7 +42,7 @@ img{ max-width: 100%; display: block; }
   clip:rect(0,0,0,0); white-space:nowrap; border:0;
 }
 
-/* ---- Typography helpers ---- */
+/* ---- Typography ---- */
 h1{ font-size: clamp(1.4rem, 1.1rem + 1.2vw, 1.9rem); margin: 0 0 .25rem 0; }
 h2{ font-size: clamp(1.2rem, 1rem + .8vw, 1.4rem); margin: 0 0 .25rem 0; }
 p{ line-height: 1.55; }
@@ -117,33 +117,46 @@ p{ line-height: 1.55; }
   display:flex; gap:10px; justify-content:flex-end;
 }
 
-/* ---- Likert (smileys as radio) ---- */
-.likert{ display:flex; gap:.5rem; flex-wrap:wrap; justify-content:center; }
-.likert input{ display:none; }
-.likert label{
+/* =======================================================================
+   BUTTON-BASED SMILEY LIKERT
+   ======================================================================= */
+
+.smiley-group{
+  display:flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+}
+
+.smiley-btn{
   display:flex; flex-direction:column; align-items:center; justify-content:center;
-  min-width: 96px; padding: 12px 10px;
-  border:1px solid var(--border); border-radius: 14px; background:#fff;
+  min-width: 120px; padding: 14px 12px;
+  border:1px solid var(--border); border-radius: 16px; background:#fff;
   box-shadow: var(--shadow);
-  transition: transform .06s ease, border-color .15s, box-shadow .15s, background .15s;
+  transition: transform .08s ease, border-color .15s, box-shadow .15s, background .15s;
   user-select:none;
 }
-.likert label:hover{ transform: translateY(-1px); }
-.likert .face{ font-size: 30px; line-height: 1; }
-.likert .caption{ font-size: .85rem; color: var(--muted); text-align:center; margin-top: 6px; }
-
-.likert input:checked + label{
+.smiley-btn:hover{ transform: translateY(-1px); }
+.smiley-btn:active{ transform: translateY(0); }
+.smiley-btn.is-selected{
   border-color: var(--primary);
   background: var(--primary-weak);
   box-shadow: inset 0 0 0 2px var(--primary-weak), var(--shadow);
 }
 
-/* color hints per option (purely visual) */
-label[data-tone="1"] .face{ color: var(--bad) }
-label[data-tone="2"] .face{ color: #fb923c }   /* orange-400 */
-label[data-tone="3"] .face{ color: var(--warn) }
-label[data-tone="4"] .face{ color: #10b981 }   /* emerald-500 */
-label[data-tone="5"] .face{ color: var(--ok) }
+.smiley-emoji{
+  font-size: 34px; line-height: 1;
+}
+.smiley-caption{
+  font-size: .9rem; color: var(--muted); margin-top: 6px; text-align:center;
+}
+
+/* fargehint per valg (emoji) */
+.smiley-btn[data-tone="1"] .smiley-emoji{ color: var(--bad); }
+.smiley-btn[data-tone="2"] .smiley-emoji{ color: #fb923c; }   /* orange-400 */
+.smiley-btn[data-tone="3"] .smiley-emoji{ color: var(--warn); }
+.smiley-btn[data-tone="4"] .smiley-emoji{ color: #10b981; }   /* emerald-500 */
+.smiley-btn[data-tone="5"] .smiley-emoji{ color: var(--ok); }
 
 /* --- Stage for single-question layout --- */
 .stage {
@@ -193,13 +206,14 @@ label[data-tone="5"] .face{ color: var(--ok) }
 @media (max-width: 640px){
   .container{ padding: 18px; }
   .topbar{ padding: 12px 18px; }
-  .likert label{ min-width: 72px; padding: 10px 8px; }
-  .likert .face{ font-size: 26px; }
-  .likert .caption{ font-size: .8rem; }
   .q-card{ border-radius: 12px; }
+
+  .smiley-btn{ min-width: 92px; padding: 12px 10px; border-radius: 14px; }
+  .smiley-emoji{ font-size: 28px; }
+  .smiley-caption{ font-size: .85rem; }
 }
 
 /* ---- Motion preferences ---- */
 @media (prefers-reduced-motion: reduce){
-  .btn, .likert label, .progress > div{ transition: none; }
+  .btn, .smiley-btn, .progress > div{ transition: none; }
 }
