@@ -10,12 +10,25 @@
       "pitch": "Answer 30 questions in about 5 minutes and get a clear report with explanations and actions.",
       "cta": "Start test",
       "example": "See sample report",
-      "box_privacy": { "title": "Privacy first", "text": "No login, no registration, no misuse. GDPR-friendly." },
-      "box_compare": { "title": "Compare later", "text": "You get an ID after the test. Take it again and compare changes." },
-      "box_articles": { "title": "Learn more", "text": "Short sleep articles with sources." }
+      "box_privacy": {
+        "title": "Privacy first",
+        "text": "No login, no registration, no misuse. GDPR-friendly."
+      },
+      "box_compare": {
+        "title": "Compare later",
+        "text": "You get an ID after the test. Take it again and compare changes."
+      },
+      "box_articles": {
+        "title": "Learn more",
+        "text": "Short sleep articles with sources."
+      }
     },
     "test": { "title": "Sleep test", "submit": "Submit", "progress": "Progress" },
-    "result": { "title": "Result", "sleep_score": "Sleep score", "how_to_improve": "How to improve:" },
+    "result": {
+      "title": "Result",
+      "sleep_score": "Sleep score",
+      "how_to_improve": "How to improve:"
+    },
     "common": { "sending": "Sending…", "back": "Back", "next": "Next", "read": "Read" },
     "compare": {
       "help": "Have your previous ID? Enter it with your new ID to see progress — and where.",
@@ -32,7 +45,13 @@
       "contact_text": "Email: support@sleep-test.example"
     }
   },
-  "likert": { "1": "Never / Not at all", "2": "Rarely", "3": "Sometimes", "4": "Often", "5": "Very often" },
+  "likert": {
+    "1": "Never / Not at all",
+    "2": "Rarely",
+    "3": "Sometimes",
+    "4": "Often",
+    "5": "Very often"
+  },
   "category": {
     "pattern": { "name": "Sleep pattern & duration", "desc": "Length and regularity." },
     "insomnia": { "name": "Falling asleep & night", "desc": "Sleep onset, awakenings, early morning." },
