@@ -1,56 +1,38 @@
 {
   "ui": {
-    "home": {
-      "title": "DMZ Sleep Test",
-      "subtitle": "Start the test to get a personal report.",
-      "cta": "Start test",
-      "language_label": "Language",
-      "cards": {
-        "start": "Start test",
-        "start_desc": "Answer in 5–10 min, get an actionable report.",
-        "results": "Results",
-        "results_desc": "See a sample report.",
-        "compare": "Compare",
-        "compare_desc": "Compare two IDs over time.",
-        "articles": "Articles",
-        "articles_desc": "Learn more about sleep and habits."
-      }
-    },
     "nav": {
       "result": "Result",
       "compare": "Compare",
-      "articles": "Articles"
+      "articles": "Articles",
+      "legal": "Privacy & Terms"
     },
-    "test": {
-      "title": "Sleep test",
-      "submit": "Submit",
-      "progress": "Progress"
+    "home": {
+      "pitch": "Answer 30 questions in about 5 minutes and get a clear report with explanations and actions.",
+      "cta": "Start test",
+      "example": "See sample report",
+      "box_privacy": { "title": "Privacy first", "text": "No login, no registration, no misuse. GDPR-friendly." },
+      "box_compare": { "title": "Compare later", "text": "You get an ID after the test. Take it again and compare changes." },
+      "box_articles": { "title": "Learn more", "text": "Short sleep articles with sources." }
     },
-    "result": {
-      "title": "Result",
-      "sleep_score": "Sleep score",
-      "tips_title": "Suggested actions",
-      "open_report": "Open report",
-      "copy_id": "Copy ID",
-      "compare_with_prev": "Compare with previous",
-      "how_to_improve": "How to improve this:"
-    },
+    "test": { "title": "Sleep test", "submit": "Submit", "progress": "Progress" },
+    "result": { "title": "Result", "sleep_score": "Sleep score", "how_to_improve": "How to improve:" },
+    "common": { "sending": "Sending…", "back": "Back", "next": "Next", "read": "Read" },
     "compare": {
-      "no_prev": "No previous ID saved yet."
+      "help": "Have your previous ID? Enter it with your new ID to see progress — and where.",
+      "notfound": "Could not find one or both IDs.",
+      "error": "Something went wrong. Please try again."
     },
-    "common": {
-      "sending": "Sending…",
-      "back": "Back",
-      "next": "Next"
+    "legal": {
+      "title": "Privacy, terms and contact",
+      "privacy": "Privacy",
+      "privacy_text": "We store only answers and a technical ID. No personal data. You can request deletion with your ID.",
+      "terms": "Terms",
+      "terms_text": "This tool is for guidance only and does not replace medical care. If concerned, talk to your doctor.",
+      "contact": "Contact",
+      "contact_text": "Email: support@sleep-test.example"
     }
   },
-  "likert": {
-    "1": "Never / Not at all",
-    "2": "Rarely",
-    "3": "Sometimes",
-    "4": "Often",
-    "5": "Very often"
-  },
+  "likert": { "1": "Never / Not at all", "2": "Rarely", "3": "Sometimes", "4": "Often", "5": "Very often" },
   "category": {
     "pattern": { "name": "Sleep pattern & duration", "desc": "Length and regularity." },
     "insomnia": { "name": "Falling asleep & night", "desc": "Sleep onset, awakenings, early morning." },
@@ -63,99 +45,57 @@
   "q": {
     "pattern": {
       "too_short": "I sleep less than I need most nights.",
-      "irregular_times": "My bed/wake times vary a lot from day to day.",
-      "late_long_naps": "I take long or late naps that disrupt my night sleep."
+      "irregular_times": "My sleep times vary a lot from day to day.",
+      "late_long_naps": "I take long or late naps that disturb the night."
     },
     "insomnia": {
-      "long_sleep_onset": "It takes a long time to fall asleep after going to bed.",
+      "long_sleep_onset": "It takes me a long time to fall asleep after going to bed.",
       "frequent_awakenings": "I wake up several times during the night.",
-      "early_morning_awakenings": "I wake up too early and can’t fall back asleep.",
-      "unrefreshed_mornings": "I don’t feel refreshed when I get up.",
-      "daytime_impact": "My sleep problems affect me during the day (mood, focus, energy)."
+      "early_morning_awakenings": "I wake too early and can’t get back to sleep.",
+      "unrefreshed_mornings": "I don’t feel refreshed in the morning.",
+      "daytime_impact": "My sleep problems affect my daytime functioning (mood, focus, energy)."
     },
     "quality": {
       "overall_poor": "My overall experience of sleep is poor.",
       "dissatisfied": "I am dissatisfied with my sleep.",
-      "restless_nights": "My sleep is often restless (nightmares, restlessness, pain)."
+      "restless_nights": "My nights are often restless (nightmares, restlessness, pain)."
     },
     "daytime": {
-      "doze_easily": "I nod off easily in quiet situations (TV, reading, passenger in a car).",
-      "struggle_stay_awake": "I struggle to stay awake when I need to focus.",
+      "doze_easily": "I doze easily in calm situations (TV, reading, passenger).",
+      "struggle_stay_awake": "I struggle to stay awake when I must concentrate.",
       "tired_most_day": "I fight tiredness for large parts of the day."
     },
     "hygiene": {
-      "screens_before_bed": "I use phone/computer screens right before bedtime.",
+      "screens_before_bed": "I use screens right before bedtime.",
       "late_caffeine": "I drink coffee/energy drinks late in the day.",
-      "alcohol_near_bed": "I drink alcohol close to bedtime.",
+      "alcohol_near_bed": "I drink alcohol near bedtime.",
       "big_meal_late": "I eat large meals late in the evening.",
       "hard_exercise_late": "I exercise hard right before bedtime."
     },
     "env": {
-      "too_light_noise_temp": "The bedroom is often too bright, noisy, or the wrong temperature.",
+      "too_light_noise_temp": "The bedroom is often too bright, noisy or the wrong temperature.",
       "uncomfortable_bed": "The bed or pillow is uncomfortable.",
       "bad_associations": "I work/watch TV in bed and get poor sleep associations."
     },
     "breathing": {
       "loud_snoring": "I snore loudly.",
       "observed_apneas": "Others have observed breathing pauses when I sleep.",
-      "daytime_tired_despite": "I’m very sleepy during the day even after a “normal” night."
+      "daytime_tired_despite": "I’m very sleepy in the daytime even after a normal night."
     }
   },
   "f": {
     "bedtime": "Usual bedtime (hh:mm)",
     "waketime": "Usual wake time (hh:mm)",
-    "sleep_hours": "Hours of sleep per night (last week avg)",
+    "sleep_hours": "Sleep hours per night (last week average)",
     "hypertension_dx": "Diagnosed high blood pressure?",
     "hypertension_dx.options": { "yes": "Yes", "no": "No", "unknown": "Don’t know" }
   },
   "flags": {
-    "osa_signal": "Possible signs of sleep apnea — consider talking to your GP.",
-    "excessive_sleepiness": "Pronounced daytime sleepiness — be extra cautious."
-  },
-  "tips": {
-    "pattern": {
-      "keep_routine": "Keep regular bed/wake times (±30 min).",
-      "short_naps": "Avoid late/long naps; keep them short before 3 pm.",
-      "consistent_bed_wake": "Be consistent daily.",
-      "plan_winddown": "Create a 30–60 min wind-down routine.",
-      "protect_7h": "Aim for at least 7h sleep nightly.",
-      "cut_late_naps": "Remove late naps."
-    },
-    "insomnia": {
-      "maintain": "Keep doing what works.",
-      "rule_20min": "If not asleep in ~20 min: get up, do something calm.",
-      "fixed_wake": "Fixed wake time, even weekends.",
-      "stimulus_control": "Bed only for sleep/sex, not TV/phone/work.",
-      "consider_cbti": "Consider CBT-I if symptoms persist."
-    },
-    "quality": {
-      "track_triggers": "Track what helps/hurts sleep.",
-      "address_disruptors": "Reduce disruptors (noise, pain).",
-      "consult_if_pain": "Consult a clinician for persistent pain."
-    },
-    "daytime": {
-      "morning_light": "Get morning light 20–30 min.",
-      "activity_breaks": "Move and take short breaks.",
-      "consider_medical": "Consider medical evaluation if severe."
-    },
-    "hygiene": {
-      "keep_it_up": "Great! Keep it up.",
-      "screens_off_60": "No screens in the last 60 min.",
-      "limit_caffeine": "Avoid caffeine after 2–4 pm.",
-      "no_alcohol_late": "Avoid alcohol near bedtime.",
-      "no_big_meals_late": "Avoid large late meals."
-    },
-    "env": {
-      "keep_cool_dark": "Keep bedroom cool (17–19 °C) and dark.",
-      "test_blackout": "Try blackout curtains.",
-      "noise_control": "Reduce noise (earplugs/white noise).",
-      "try_new_pillow": "Consider a new pillow/mattress.",
-      "cooler_temp": "Try slightly cooler temperature."
-    },
-    "breathing": {
-      "side_sleep": "Try side-sleeping.",
-      "reduce_evening_alcohol": "Cut evening alcohol.",
-      "consider_gp_check": "Consider a GP check if persistent."
-    }
+    "osa_signal": "Possible signs of sleep apnea – consider talking to your doctor.",
+    "excessive_sleepiness": "Marked daytime sleepiness – be extra careful."
+    ,
+  "articles": {
+    "fall_asleep": { "title": "Trouble falling asleep?", "desc": "Simple steps to start." },
+    "screen_time": { "title": "Phone in bed", "desc": "Reduce screen impact on sleep." }
   }
 }
