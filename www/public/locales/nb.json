@@ -4,7 +4,17 @@
       "title": "DMZ Sleep Test",
       "subtitle": "Start testen for å få en personlig rapport.",
       "cta": "Start test",
-      "language_label": "Språk"
+      "language_label": "Språk",
+      "cards": {
+        "start": "Start test",
+        "start_desc": "Svar på 5–10 min, få konkret rapport.",
+        "results": "Resultater",
+        "results_desc": "Se eksempel på rapport.",
+        "compare": "Sammenlign",
+        "compare_desc": "Sammenlign to ID-er over tid.",
+        "articles": "Artikler",
+        "articles_desc": "Lær mer om søvn og vaner."
+      }
     },
     "nav": {
       "result": "Resultat",
