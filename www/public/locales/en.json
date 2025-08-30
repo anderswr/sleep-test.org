@@ -1,0 +1,80 @@
+{
+  "ui": {
+    "home": {
+      "title": "DMZ Sleep Test",
+      "subtitle": "Start the test to get a personal report.",
+      "cta": "Start test"
+    },
+    "test": { "title": "Sleep test", "submit": "Submit" },
+    "result": { "title": "Result", "sleep_score": "Sleep score" },
+    "common": { "sending": "Sending…" }
+  },
+  "likert": {
+    "1": "Never / Not at all",
+    "2": "Rarely",
+    "3": "Sometimes",
+    "4": "Often",
+    "5": "Very often"
+  },
+  "category": {
+    "pattern": { "name": "Sleep pattern & duration", "desc": "Length and regularity." },
+    "insomnia": { "name": "Falling asleep & night", "desc": "Sleep onset, awakenings, early morning." },
+    "quality": { "name": "Sleep quality", "desc": "Perceived quality and satisfaction." },
+    "daytime": { "name": "Daytime & sleepiness", "desc": "Sleepiness and daytime function." },
+    "hygiene": { "name": "Sleep hygiene & routines", "desc": "Habits and timing (screens, caffeine)." },
+    "environment": { "name": "Sleep environment", "desc": "Light, noise, temperature, bed." },
+    "breathing": { "name": "Snoring & breathing signals", "desc": "Possible signs of sleep apnea." }
+  },
+  "q": {
+    "pattern": {
+      "too_short": "I sleep less than I need most nights.",
+      "irregular_times": "My bed/wake times vary a lot from day to day.",
+      "late_long_naps": "I take long or late naps that disrupt my night sleep."
+    },
+    "insomnia": {
+      "long_sleep_onset": "It takes a long time to fall asleep after going to bed.",
+      "frequent_awakenings": "I wake up several times during the night.",
+      "early_morning_awakenings": "I wake up too early and can’t fall back asleep.",
+      "unrefreshed_mornings": "I don’t feel refreshed when I get up.",
+      "daytime_impact": "My sleep problems affect me during the day (mood, focus, energy)."
+    },
+    "quality": {
+      "overall_poor": "My overall experience of sleep is poor.",
+      "dissatisfied": "I am dissatisfied with my sleep.",
+      "restless_nights": "My sleep is often restless (nightmares, restlessness, pain)."
+    },
+    "daytime": {
+      "doze_easily": "I nod off easily in quiet situations (TV, reading, passenger in a car).",
+      "struggle_stay_awake": "I struggle to stay awake when I need to focus.",
+      "tired_most_day": "I fight tiredness for large parts of the day."
+    },
+    "hygiene": {
+      "screens_before_bed": "I use phone/computer screens right before bedtime.",
+      "late_caffeine": "I drink coffee/energy drinks late in the day.",
+      "alcohol_near_bed": "I drink alcohol close to bedtime.",
+      "big_meal_late": "I eat large meals late in the evening.",
+      "hard_exercise_late": "I exercise hard right before bedtime."
+    },
+    "env": {
+      "too_light_noise_temp": "The bedroom is often too bright, noisy, or the wrong temperature.",
+      "uncomfortable_bed": "The bed or pillow is uncomfortable.",
+      "bad_associations": "I work/watch TV in bed and get poor sleep associations."
+    },
+    "breathing": {
+      "loud_snoring": "I snore loudly.",
+      "observed_apneas": "Others have observed breathing pauses when I sleep.",
+      "daytime_tired_despite": "I’m very sleepy during the day even after a “normal” night."
+    }
+  },
+  "f": {
+    "bedtime": "Usual bedtime (hh:mm)",
+    "waketime": "Usual wake time (hh:mm)",
+    "sleep_hours": "Hours of sleep per night (last week avg)",
+    "hypertension_dx": "Diagnosed high blood pressure?",
+    "hypertension_dx.options": { "yes": "Yes", "no": "No", "unknown": "Don’t know" }
+  },
+  "flags": {
+    "osa_signal": "Possible signs of sleep apnea — consider talking to your GP.",
+    "excessive_sleepiness": "Pronounced daytime sleepiness — be extra cautious."
+  }
+}
