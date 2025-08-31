@@ -1,16 +1,15 @@
-// app/layout.tsx
 import "./globals.css";
 import { I18nProvider } from "./providers/I18nProvider";
 
 export const metadata = {
-  title: "DMZ Sleep Test",
-  description: "Enkel, forskningsnær søvntest med flerspråk.",
+  title: "Sleep Test",
+  description: "Answer 30 questions and get a practical sleep report.",
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="nb">
-      <body>
+      <body className="app-shell">
         <I18nProvider>{children}</I18nProvider>
       </body>
     </html>
