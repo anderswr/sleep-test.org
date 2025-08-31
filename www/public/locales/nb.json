@@ -9,7 +9,7 @@
     },
     "home": {
       "title": "Sleep Test",
-      "pitch": "Svar på 30 spørsmål, ca. 5 minutter – få en grundig rapport med forklaringer og konkrete tiltak.",
+      "pitch": "Svar på 30 spørsmål, 5-10 minutter – få en gratis grundig rapport med forklaringer og konkrete tiltak.",
       "cta": "Start test",
       "example": "Se eksempel på rapport",
       "box_privacy": {
@@ -17,7 +17,7 @@
         "text": "Ingen pålogging, ingen registrering – helt personvern/GDPR-vennlig."
       },
       "box_compare": {
-        "title": "Sammenlign senere",
+        "title": "Sammenlign",
         "text": "Du får en ID etter testen. Ta testen igjen senere og se hva som har endret seg."
       },
       "box_articles": {
