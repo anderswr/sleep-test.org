@@ -27,11 +27,11 @@ export default function SiteHeader() {
           {t(dict, "ui.home.title", "Sleep Test-fallback")}
         </Link>
         <nav className="nav">
-          <NavItem href="/" k="ui.menu.home" />
-          <NavItem href="/result" k="ui.menu.result" />
-          <NavItem href="/compare" k="ui.menu.compare" />
-          <NavItem href="/articles" k="ui.menu.articles" />
-          <NavItem href="/about" k="ui.menu.about" />
+          <NavItem href="/" k="ui.nav.home" />
+          <NavItem href="/result" k="ui.nav.result" />
+          <NavItem href="/compare" k="ui.nav.compare" />
+          <NavItem href="/articles" k="ui.nav.articles" />
+          <NavItem href="/about" k="ui.nav.about" />
         </nav>
       </div>
 

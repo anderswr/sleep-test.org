@@ -6,13 +6,15 @@
       "compare": "Compare",
       "articles": "Articles",
       "about": "About"
-    },
+      },
     "home": {
       "title": "Sleep Test",
       "pitch": "Answer 30 questions in 5–10 minutes — get a free, clear report with explanations and practical actions.",
       "cta": "Start test",
       "example": "See sample report",
-      "box_privacy": {
+       },
+     "privacy": {
+        "card": {
         "title": "Anonymous and 100% free",
         "text": "We take GDPR personally: no registration, no logging, no cost — all anonymous."
       }
@@ -21,7 +23,7 @@
       "card": {
         "title": "Compare",
         "text": "You get an ID after the test. Take it again later and compare what changed."
-      },
+        },
       "help": "Have your previous ID? Enter both to see progress — and where.",
       "notfound": "Could not find one or both IDs.",
       "error": "Something went wrong. Please try again."
@@ -46,8 +48,14 @@
         "li1": "The page does not collect, store, or share any personal data. You are 100% anonymous; only a unique ID is stored with a summary of the results in a database.",
         "li2": "",
         "li3": ""
-      }
-    },
+        }
+       },
+      "articles": {
+        "title": "Articles on sleep",
+        "intro": "More info is...",
+        "p1": "Comming soon"
+        }
+       },
     "test": {
       "title": "Sleep test",
       "submit": "Submit",
