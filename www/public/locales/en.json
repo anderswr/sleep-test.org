@@ -9,7 +9,7 @@
     },
     "home": {
       "title": "Sleep Test",
-      "pitch": "Answer 30 questions in about 5 minutes — get a clear report with explanations and practical actions.",
+      "pitch": "Answer 30 questions in 5-10 minutes — get a free clear report with explanations and practical actions.",
       "cta": "Start test",
       "example": "See sample report",
       "box_privacy": {
@@ -17,7 +17,7 @@
         "text": "No login, no registration — GDPR-friendly."
       },
       "box_compare": {
-        "title": "Compare later",
+        "title": "Compare",
         "text": "You get an ID after the test. Take it again later and see what changed."
       },
       "box_articles": {
