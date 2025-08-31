@@ -8,9 +8,9 @@ export default function SiteFooter() {
       <div className="container footer-inner" style={{ padding: "12px 0" }}>
         <div>© 2025 DMZ DATA AS</div>
         <nav className="footer-nav" style={{ gap: 20 }}>
-          <Link href="/privacy">Privacy</Link>
-          <Link href="/terms">Terms</Link>
-          <Link href="/contact">Contact</Link>
+          <Link href="/about#privacy">Privacy</Link>
+          <Link href="/about#terms">Terms</Link>
+          <Link href="/about#contact">Contact</Link>
         </nav>
       </div>
     </footer>
