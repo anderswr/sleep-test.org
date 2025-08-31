@@ -1,11 +1,10 @@
-// app/page.tsx
 "use client";
 
 import Link from "next/link";
-import SiteHeader from "@/components/SiteHeader";
-import SiteFooter from "@/components/SiteFooter";
 import { useI18n } from "./providers/I18nProvider";
 import { t } from "@/lib/i18n";
+import SiteHeader from "@/components/SiteHeader";
+import SiteFooter from "@/components/SiteFooter";
 
 export default function Home() {
   const { dict } = useI18n();
@@ -15,37 +14,33 @@ export default function Home() {
       <SiteHeader />
       <main className="container">
         {/* Hero */}
-        <section className="card" style={{ padding: "28px" }}>
-          <h1 className="mb-2">{t(dict, "ui.home.title", "DMZ Sleep Test")}</h1>
-          <p className="muted">{t(dict, "ui.home.subtitle", "Start testen for å få en personlig rapport.")}</p>
-          <div className="row mt-6" style={{ gap: 10 }}>
-            <Link className="btn primary" href="/test">
-              {t(dict, "ui.home.cta", "Start test")}
-            </Link>
-            <Link className="btn" href="/compare">
-              {t(dict, "ui.nav.compare", "Sammenlign")}
+        <section className="card" style={{ padding: 24 }}>
+          <h1 style={{ margin: 0, fontSize: "1.8rem" }}>{t(dict, "ui.home.title", "Sleep Test")}</h1>
+          <p className="muted" style={{ marginTop: 6 }}>
+            {t(dict, "ui.home.pitch")}
+          </p>
+          <div style={{ marginTop: 16 }}>
+            <Link href="/test" className="btn primary">{t(dict, "ui.home.cta", "Start test")}</Link>
+            <Link href="/result/example" className="btn" style={{ marginLeft: 8 }}>
+              {t(dict, "ui.home.example", "See sample report")}
             </Link>
           </div>
         </section>
 
-        {/* Hurtigvalg-kort */}
-        <section className="grid-cards mt-6">
-          <Link href="/test" className="card quick-card">
-            <h3>🛌 {t(dict, "ui.home.cards.start", "Start test")}</h3>
-            <p className="muted">{t(dict, "ui.home.cards.start_desc", "Svare på 5–10 min, få konkret rapport.")}</p>
-          </Link>
-          <Link href="/result/demo" className="card quick-card">
-            <h3>📊 {t(dict, "ui.home.cards.results", "Resultater")}</h3>
-            <p className="muted">{t(dict, "ui.home.cards.results_desc", "Se eksempel på rapport.")}</p>
-          </Link>
-          <Link href="/compare" className="card quick-card">
-            <h3>🔁 {t(dict, "ui.home.cards.compare", "Sammenlign")}</h3>
-            <p className="muted">{t(dict, "ui.home.cards.compare_desc", "Sammenlign to ID-er over tid.")}</p>
-          </Link>
-          <Link href="#articles" className="card quick-card">
-            <h3>📰 {t(dict, "ui.home.cards.articles", "Artikler")}</h3>
-            <p className="muted">{t(dict, "ui.home.cards.articles_desc", "Lær mer om søvn og vaner.")}</p>
-          </Link>
+        {/* Tre infokort */}
+        <section className="stack-4" style={{ marginTop: 16 }}>
+          <div className="card">
+            <h3 style={{ marginTop: 0 }}>{t(dict, "ui.home.box_privacy.title")}</h3>
+            <p className="muted">{t(dict, "ui.home.box_privacy.text")}</p>
+          </div>
+          <div className="card">
+            <h3 style={{ marginTop: 0 }}>{t(dict, "ui.home.box_compare.title")}</h3>
+            <p className="muted">{t(dict, "ui.home.box_compare.text")}</p>
+          </div>
+          <div className="card">
+            <h3 style={{ marginTop: 0 }}>{t(dict, "ui.home.box_articles.title")}</h3>
+            <p className="muted">{t(dict, "ui.home.box_articles.text")}</p>
+          </div>
         </section>
       </main>
       <SiteFooter />
