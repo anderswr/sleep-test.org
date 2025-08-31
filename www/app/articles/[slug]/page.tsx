@@ -24,8 +24,23 @@ export default function ArticlePage({ params }: { params: { slug: string } }) {
     );
   }
 
-  const title = t(dict, `ui.articles.${slug}.title`);
-  const body: string[] = t(dict, `ui.articles.${slug}.body`) || [];
+  const title = String(t(dict, `ui.articles.${slug}.title`));
+
+  // Normalize body to string[]
+  const bodyRaw = t(dict, `ui.articles.${slug}.body`);
+  const body: string[] = Array.isArray(bodyRaw)
+    ? (bodyRaw as string[])
+    : bodyRaw
+    ? [String(bodyRaw)]
+    : [];
+
+  // Normalize sources to string[]
+  const sourcesRaw = t(dict, `ui.articles.${slug}.sources`);
+  const sources: string[] = Array.isArray(sourcesRaw)
+    ? (sourcesRaw as string[])
+    : sourcesRaw
+    ? [String(sourcesRaw)]
+    : [];
 
   return (
     <>
@@ -33,13 +48,27 @@ export default function ArticlePage({ params }: { params: { slug: string } }) {
       <main className="container" style={{ flex: "1 1 auto" }}>
         <article className="card prose" style={{ padding: 24 }}>
           <h1 style={{ marginTop: 0 }}>{title}</h1>
-          {Array.isArray(body) ? body.map((p, i) => <p key={i}>{p}</p>) : <p>{String(body)}</p>}
-          <h3 style={{ marginTop: 24 }}>{t(dict, "ui.articles.sources")}</h3>
-          <ul>
-            {(t(dict, `ui.articles.${slug}.sources`) || []).map((s: string, i: number) => (
-              <li key={i}><a href={s} target="_blank" rel="noreferrer">{s}</a></li>
-            ))}
-          </ul>
+
+          {body.length > 0 ? (
+            body.map((p, i) => <p key={i}>{p}</p>)
+          ) : (
+            <p>…</p>
+          )}
+
+          {sources.length > 0 && (
+            <>
+              <h3 style={{ marginTop: 24 }}>{t(dict, "ui.articles.sources")}</h3>
+              <ul>
+                {sources.map((s, i) => (
+                  <li key={i}>
+                    <a href={s} target="_blank" rel="noreferrer">
+                      {s}
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            </>
+          )}
         </article>
       </main>
       <SiteFooter />
