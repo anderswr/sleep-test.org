@@ -103,3 +103,60 @@
     "excessive_sleepiness": "Uttalt søvnighet på dagtid – vær ekstra oppmerksom."
   }
 }
+{
+  "ui": {
+    "about": {
+      "title": "Om Sleep Test",
+      "intro": "Sleep Test eies, utvikles og driftes av DMZ DATA AS. Tjenesten er reklamefri i startfasen.",
+      "privacy": {
+        "title": "Personvern",
+        "p1": "Vi lagrer ingen personopplysninger. Dine svar lagres med en anonym ID.",
+        "li1": "Ingen pålogging eller registrering.",
+        "li2": "Ingen informasjonskapsler for sporing.",
+        "li3": "Du kan dele ID-en din hvis du ønsker å se rapporten senere."
+      },
+      "terms": {
+        "title": "Vilkår",
+        "p1": "Tjenesten er kun for informasjon og erstatter ikke medisinsk vurdering."
+      },
+      "contact": {
+        "title": "Kontakt",
+        "p1": "Kontakt oss ved spørsmål eller forslag:",
+        "p2": "post@dmz.no"
+      }
+    },
+    "result": {
+      "lookup_hint": "Lim inn ID-en din for å åpne rapporten.",
+      "id_placeholder": "Din ID"
+    },
+    "articles": {
+      "sources": "Kilder",
+      "fall-asleep": {
+        "title": "Sovne lettere: praktiske grep",
+        "excerpt": "Sliter du med å sovne? Her er tiltak som ofte hjelper.",
+        "body": [
+          "Hold en fast oppvåkningstid, også i helger. Rytme styrker søvntrykket.",
+          "Gjør en rolig nedtrapping 30–60 min før leggetid (lys ned, skjermfri).",
+          "Ligg ikke våken lenge i sengen. Stå opp etter ~20 min og gjør noe rolig til du blir søvnig."
+        ],
+        "sources": [
+          "https://aasm.org/clinical-resources/practice-standards",
+          "https://www.nice.org.uk/guidance/ng193"
+        ]
+      },
+      "screen-time": {
+        "title": "Skjermbruk i sengen",
+        "excerpt": "Skjerm før leggetid kan dra ut innsovning. Slik kan du redusere effekten.",
+        "body": [
+          "Unngå sterk skjermbruk siste timen før leggetid.",
+          "Bruk nattmodus/varmt lys om du må se på skjerm.",
+          "Flytt underholdning ut av sengen for å styrke koblingen seng = søvn."
+        ],
+        "sources": [
+          "https://sleepfoundation.org/sleep-hygiene",
+          "https://www.cochranelibrary.com/"
+        ]
+      }
+    }
+  }
+}
