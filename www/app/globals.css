@@ -358,3 +358,16 @@ p{ line-height: 1.55; }
   .btn, .smiley-btn, .progress > div, .q-animate-in, .q-animate-out{ transition: none; animation: none; }
   .sleep-handle{ transition: none; }
 }
+
+/* App flex shell so footer sticks to bottom */
+.app-shell {
+  min-height: 100dvh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Slightly larger header nav spacing on small screens */
+@media (max-width: 720px) {
+  .topbar { flex-wrap: wrap; gap: 10px; }
+  .nav { flex-wrap: wrap; }
+}
