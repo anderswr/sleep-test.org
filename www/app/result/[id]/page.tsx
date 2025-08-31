@@ -1,142 +1,72 @@
-// app/result/[id]/page.tsx
-"use client";
-
-import React, { useEffect, useMemo, useState } from "react";
 import SiteHeader from "@/components/SiteHeader";
 import SiteFooter from "@/components/SiteFooter";
-import { useI18n } from "@/app/providers/I18nProvider";
+import { COLOR_THRESHOLDS, bucketColor } from "@/lib/scoring";
 import { t } from "@/lib/i18n";
-import { bucketColor } from "@/lib/scoring";
-import { CategoryId } from "@/lib/types";
+import { useI18n } from "@/app/providers/I18nProvider";
 
-type ResultDoc = {
-  id: string;
-  sleepScore: number;
-  totalRaw: number;
-  categoryScores: Record<string, number>;
-  flags?: { osaSignal?: boolean; excessiveSleepiness?: boolean };
-  suggestedTips?: Record<string, string[]>;
-};
+async function fetchResult(id: string) {
+  const base = process.env.NEXT_PUBLIC_BASE_URL || "";
+  const res = await fetch(`${base}/api/result/${id}`, { cache: "no-store" });
+  if (!res.ok) return null;
+  return res.json();
+}
 
-export default function ResultPage({ params }: { params: { id: string } }) {
-  const { dict } = useI18n();
-  const [data, setData] = useState<ResultDoc | null>(null);
-  const [notFound, setNotFound] = useState(false);
-
-  useEffect(() => {
-    (async () => {
-      try {
-        const res = await fetch(`/api/result/${params.id}`, { cache: "no-store" });
-        if (!res.ok) { setNotFound(true); return; }
-        const json = await res.json();
-        setData(json);
-      } catch {
-        setNotFound(true);
-      }
-    })();
-  }, [params.id]);
-
-  const entries = useMemo(
-    () => Object.entries((data?.categoryScores || {}) as Record<string, number>) as Array<[CategoryId, number]>,
-    [data]
-  );
-
-  if (notFound) {
-    return (
-      <>
-        <SiteHeader />
-        <main className="container">
-          <div className="card">
-            <h1 className="mb-2">{t(dict, "ui.result.title", "Resultat")}</h1>
-            <p className="muted">Not found.</p>
-          </div>
-        </main>
-        <SiteFooter />
-      </>
-    );
-  }
+export default async function ResultPage({ params }: { params: { id: string } }) {
+  const data = await fetchResult(params.id);
 
   return (
     <>
       <SiteHeader />
-      <main className="container">
+      <main className="container" style={{ flex: "1 1 auto" }}>
         {!data ? (
-          <div className="card"><p className="muted">Loading…</p></div>
+          <div className="card" style={{ padding: 24 }}>Not found.</div>
         ) : (
-          <>
-            {/* Hero */}
-            <section className="card score-hero">
-              <div className="score-hero__left">
-                <h1 className="mb-2">{t(dict, "ui.result.title", "Resultat")}</h1>
-                <div className="row" style={{gap:8, alignItems:"center"}}>
-                  <code className="px-1 py-0.5" style={{background:"#f3f4f6", borderRadius:6}}>
-                    {data.id}
-                  </code>
-                  <button
-                    className="btn"
-                    onClick={() => navigator.clipboard.writeText(data.id)}
-                    title={t(dict, "ui.result.copy_id", "Kopier ID")}
-                  >
-                    {t(dict, "ui.result.copy_id", "Kopier ID")}
-                  </button>
-                </div>
-              </div>
-              <div className="score-hero__right">
-                <div className="score-ring" aria-label={t(dict, "ui.result.sleep_score", "Søvn-score")}>
-                  <div className="score-ring__value">{Number(data.sleepScore)}</div>
-                  <div className="score-ring__label">{t(dict, "ui.result.sleep_score", "Søvn-score")}</div>
-                </div>
-              </div>
-            </section>
-
-            {/* Kategorier */}
-            <section className="grid-cards mt-6">
-              {entries.map(([cat, val]) => {
-                const color = bucketColor(Number(val));
-                return (
-                  <article key={cat} className="cat-card" data-color={color}>
-                    <div className="cat-card__head">
-                      <span className="pill" data-color={color}>
-                        {t(dict, `category.${cat}.name`, String(cat))}
-                      </span>
-                      <strong className="cat-card__score">{Number(val)}</strong>
-                    </div>
-                    <p className="muted">{t(dict, `category.${cat}.desc`, "")}</p>
-
-                    {/* Tips */}
-                    {(data.suggestedTips?.[cat] || []).length > 0 && (
-                      <>
-                        <h4 className="mb-2 mt-6">{t(dict, "ui.result.how_to_improve", "Hvordan forbedre dette:")}</h4>
-                        <ul className="tips-list">
-                          {(data.suggestedTips?.[cat] || []).map((tipKey) => (
-                            <li key={`${cat}-${tipKey}`}>
-                              <span className="star">*</span> {t(dict, tipKey, tipKey)}
-                            </li>
-                          ))}
-                        </ul>
-                      </>
-                    )}
-                  </article>
-                );
-              })}
-            </section>
-
-            {/* Varsler */}
-            {(data.flags?.osaSignal || data.flags?.excessiveSleepiness) && (
-              <section className="card mt-6">
-                <h2 className="mb-2">⚠️</h2>
-                {data.flags?.osaSignal && (
-                  <p style={{color:"var(--bad)"}}>{t(dict, "flags.osa_signal")}</p>
-                )}
-                {data.flags?.excessiveSleepiness && (
-                  <p style={{color:"#f59e0b"}}>{t(dict, "flags.excessive_sleepiness")}</p>
-                )}
-              </section>
-            )}
-          </>
+          <ResultCard data={data} />
         )}
       </main>
       <SiteFooter />
     </>
+  );
+}
+
+// Client-ish formatting but in a server component (no hooks needed)
+function ResultCard({ data }: { data: any }) {
+  const dictCtx = require("@/app/providers/I18nProvider");
+  const { t } = require("@/lib/i18n");
+  // useI18n is client-only; for simplicity just render raw keys if SSR-only.
+  return (
+    <div className="card" style={{ padding: 24 }}>
+      <h1 style={{ marginTop: 0 }}>Rapport</h1>
+      <p className="muted" style={{ marginTop: 0 }}>ID: {data.id}</p>
+      <div className="row" style={{ gap: 16, alignItems: "center" }}>
+        <div className="card" style={{ padding: 16 }}>
+          <div style={{ fontSize: 12, color: "var(--muted)" }}>Søvn-score</div>
+          <div style={{ fontSize: 28, fontWeight: 700 }}>{data.sleepScore} / 100</div>
+        </div>
+      </div>
+
+      <div style={{ display: "grid", gridTemplateColumns: "repeat(2, minmax(0,1fr))", gap: 12, marginTop: 16 }}>
+        {Object.entries(data.categoryScores || {}).map(([k, v]) => {
+          const color = bucketColor(Number(v));
+          const bg =
+            color === "green" ? "#ecfdf5" : color === "yellow" ? "#fffbeb" : "#fef2f2";
+          const border =
+            color === "green" ? "#d1fae5" : color === "yellow" ? "#fde68a" : "#fecaca";
+          return (
+            <div key={k} className="card" style={{ background: bg, borderColor: border, padding: 16 }}>
+              <div style={{ fontSize: 12, color: "var(--muted)" }}>{k}</div>
+              <div style={{ fontSize: 18, fontWeight: 600 }}>{v}</div>
+            </div>
+          );
+        })}
+      </div>
+
+      {data.flags?.osaSignal && (
+        <p style={{ color: "#b91c1c", marginTop: 16 }}>Mulige tegn på søvnapné – vurder å snakke med fastlege.</p>
+      )}
+      {data.flags?.excessiveSleepiness && (
+        <p style={{ color: "#b45309" }}>Uttalt søvnighet på dagtid – vær ekstra oppmerksom.</p>
+      )}
+    </div>
   );
 }
