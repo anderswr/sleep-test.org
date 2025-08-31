@@ -30,16 +30,16 @@ export default function Home() {
         {/* Three info cards in one row */}
         <section className="cards-row">
           <div className="card">
-            <h3 style={{ marginTop: 0 }}>{t(dict, "ui.home.box_privacy.title")}</h3>
-            <p className="muted">{t(dict, "ui.home.box_privacy.text")}</p>
+            <h3 style={{ marginTop: 0 }}>{t(dict, "ui.privacy.card.title")}</h3>
+            <p className="muted">{t(dict, "ui.privacy.card.text")}</p>
           </div>
           <div className="card">
-            <h3 style={{ marginTop: 0 }}>{t(dict, "ui.home.box_compare.title")}</h3>
-            <p className="muted">{t(dict, "ui.home.box_compare.text")}</p>
+            <h3 style={{ marginTop: 0 }}>{t(dict, "ui.compare.card.title")}</h3>
+            <p className="muted">{t(dict, "ui.compare.card.text")}</p>
           </div>
           <div className="card">
-            <h3 style={{ marginTop: 0 }}>{t(dict, "ui.home.box_articles.title")}</h3>
-            <p className="muted">{t(dict, "ui.home.box_articles.text")}</p>
+            <h3 style={{ marginTop: 0 }}>{t(dict, "ui.articles.card.title")}</h3>
+            <p className="muted">{t(dict, "ui.articles.card.text")}</p>
           </div>
         </section>
 
