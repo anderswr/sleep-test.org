@@ -9,22 +9,41 @@
     },
     "home": {
       "title": "Sleep Test",
-      "pitch": "Answer 30 questions in about 5 minutes — get a clear report with explanations and practical actions.",
+      "pitch": "Answer 30 questions in 5-10 minutes — get a free clear report with explanations and practical actions.",
       "cta": "Start test",
       "example": "See sample report",
-      "box_privacy": {
-        "title": "Privacy first",
-        "text": "No login, no registration — GDPR-friendly."
       },
-      "box_compare": {
-        "title": "Compare later",
-        "text": "You get an ID after the test. Take it again later and see what changed."
+      "privacy": { "card": {
+        "title": "Anonymous and 100% free",
+        "text": "We take GDPR personally, no registration, no loging, no cost, all anonymous."
       },
-      "box_articles": {
+      "compare": { "card": {
+        "title": "Compare",
+        "text": "You get an ID after the test. Take it again later and compare what changed."
+      },
+      "articles": { "card": {
         "title": "Learn more",
-        "text": "Short sleep articles for everyone."
+        "text": "Short articles about sleep, for everyone."
       }
     },
+    "about": {
+      "title": "Created by the slamps at DMZ DATA AS",
+      "intro": "More information late",
+       "contact": {
+         "title": "",
+         "p1": "",
+         "p2": ""
+         },
+      "privacy": {
+        "title": "Privacy policy",
+        "p1": "",
+        "li1": "The page does not collect, store, or share any personal data. You are 100% anonymous, only a unique ID is stored with summary of the results in a database.",
+        "li2": "",
+        "li3": ""
+       },
+
+
+      
     "test": { "title": "Sleep test", "submit": "Submit", "progress": "Progress" },
     "result": { "title": "Result", "sleep_score": "Sleep score", "how_to_improve": "How to improve:" },
     "common": { "sending": "Sending…", "back": "Back", "next": "Next", "read": "Read" },
