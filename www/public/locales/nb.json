@@ -12,18 +12,37 @@
       "pitch": "Svar på 30 spørsmål, 5-10 minutter – få en gratis grundig rapport med forklaringer og konkrete tiltak.",
       "cta": "Start test",
       "example": "Se eksempel på rapport",
-      "box_privacy": {
-        "title": "Personvern først",
+      },
+      "privacy": { "card": {
+        "title": "Helt anonym og 100% gratis",
         "text": "Ingen pålogging, ingen registrering – helt personvern/GDPR-vennlig."
       },
-      "box_compare": {
+      "compare": { "card": {
         "title": "Sammenlign",
-        "text": "Du får en ID etter testen. Ta testen igjen senere og se hva som har endret seg."
+      "text": "Du får en ID etter testen. Ta testen igjen senere og se hva som har endret seg."
       },
-      "box_articles": {
+      "articles": { "card": {
         "title": "Lær mer",
         "text": "Korte artikler om søvn – skrevet for folk flest."
       }
+          "about": {
+      "title": "Laget av slampene i DMZ DATA AS",
+      "intro": "Kommer mer info senere",
+       "contact": {
+         "title": "",
+         "p1": "",
+         "p2": ""
+         },
+      "privacy": {
+        "title": "Personvernerklæring",
+        "p1": "",
+        "li1": "Nettsiden samler ikke inn, lagrer eller deler noen personlige data. Du er 100 % anonym, kun en unik ID lagres sammen med en oppsummering av resultatene i en database.",
+        "li2": "",
+        "li3": ""
+      }
+       },
+
+
     },
     "test": { "title": "Søvntest", "submit": "Send inn", "progress": "Fremdrift" },
     "result": { "title": "Resultat", "sleep_score": "Søvn-score", "how_to_improve": "Hvordan forbedre dette:" },
