@@ -17,13 +17,13 @@
         "card": {
         "title": "Anonymous and 100% free",
         "text": "We take GDPR personally: no registration, no logging, no cost — all anonymous."
-      }
-    },
+        }
+       },
     "compare": {
       "card": {
         "title": "Compare",
         "text": "You get an ID after the test. Take it again later and compare what changed."
-        },
+       },
       "help": "Have your previous ID? Enter both to see progress — and where.",
       "notfound": "Could not find one or both IDs.",
       "error": "Something went wrong. Please try again."
@@ -146,5 +146,5 @@
   "flags": {
     "osa_signal": "Possible signs of sleep apnea – consider talking to your doctor.",
     "excessive_sleepiness": "Marked daytime sleepiness – be extra careful."
-  }
+  },
 }
