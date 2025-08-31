@@ -11,19 +11,19 @@
       "title": "Sleep Test",
       "pitch": "Answer 30 questions in 5–10 minutes — get a free, clear report with explanations and practical actions.",
       "cta": "Start test",
-      "example": "See sample report",
+      "example": "See sample report"
        },
      "privacy": {
         "card": {
         "title": "Anonymous and 100% free",
         "text": "We take GDPR personally: no registration, no logging, no cost — all anonymous."
-      }
-    },
+        }
+       },
     "compare": {
       "card": {
         "title": "Compare",
         "text": "You get an ID after the test. Take it again later and compare what changed."
-        },
+       },
       "help": "Have your previous ID? Enter both to see progress — and where.",
       "notfound": "Could not find one or both IDs.",
       "error": "Something went wrong. Please try again."
