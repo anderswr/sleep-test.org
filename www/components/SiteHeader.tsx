@@ -1,25 +1,32 @@
-// components/SiteHeader.tsx
 "use client";
+
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { useI18n } from "@/app/providers/I18nProvider";
 import { t } from "@/lib/i18n";
 
 export default function SiteHeader() {
-  const { lang, setLang, dict } = useI18n();
+  const { dict } = useI18n();
+  const pathname = usePathname();
+
+  const item = (href: string, key: string) => (
+    <Link href={href} className={pathname === href || pathname.startsWith(href + "/") ? "active" : ""}>
+      {t(dict, key)}
+    </Link>
+  );
+
   return (
     <header className="topbar">
+      <Link href="/" className="font-bold text-lg">
+        {t(dict, "ui.home.title", "Sleep Test")}
+      </Link>
       <nav className="nav">
-        <Link href="/" className="active">DMZ Sleep</Link>
-        <Link href="/compare">{t(dict, "ui.nav.compare", "Sammenlign")}</Link>
-        <Link href="#articles">{t(dict, "ui.nav.articles", "Artikler")}</Link>
+        {item("/", "ui.menu.home")}
+        {item("/result", "ui.menu.result")}
+        {item("/compare", "ui.menu.compare")}
+        {item("/articles", "ui.menu.articles")}
+        {item("/about", "ui.menu.about")}
       </nav>
-      <div>
-        <label className="sr-only" htmlFor="lang">{t(dict, "ui.home.language_label", "Språk")}</label>
-        <select id="lang" className="btn" value={lang} onChange={(e)=>setLang(e.target.value as any)}>
-          <option value="nb">Norsk</option>
-          <option value="en">English</option>
-        </select>
-      </div>
     </header>
   );
 }
