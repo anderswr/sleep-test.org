@@ -50,6 +50,12 @@
         "li3": ""
         }
       },
+      "articles": {
+        "title": "Articles on sleep",
+        "intro": "More info is...",
+        "p1": "Comming soon"
+        }
+       },
     "test": {
       "title": "Søvntest",
       "submit": "Send inn",
