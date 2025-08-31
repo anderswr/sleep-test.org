@@ -103,3 +103,60 @@
     "excessive_sleepiness": "Marked daytime sleepiness – be extra careful."
   }
 }
+{
+  "ui": {
+    "about": {
+      "title": "About Sleep Test",
+      "intro": "Sleep Test is owned, developed and operated by DMZ DATA AS. The service is ad-free in the initial phase.",
+      "privacy": {
+        "title": "Privacy",
+        "p1": "We store no personal data. Your answers are saved with an anonymous ID.",
+        "li1": "No login or registration.",
+        "li2": "No tracking cookies.",
+        "li3": "You may share your ID if you wish to revisit your report."
+      },
+      "terms": {
+        "title": "Terms",
+        "p1": "This service is informational and does not replace medical care."
+      },
+      "contact": {
+        "title": "Contact",
+        "p1": "Get in touch with questions or suggestions:",
+        "p2": "post@dmz.no"
+      }
+    },
+    "result": {
+      "lookup_hint": "Paste your ID to open the report.",
+      "id_placeholder": "Your ID"
+    },
+    "articles": {
+      "sources": "Sources",
+      "fall-asleep": {
+        "title": "Fall asleep easier: practical steps",
+        "excerpt": "Having trouble falling asleep? These steps often help.",
+        "body": [
+          "Keep a fixed wake time, even on weekends. Rhythm strengthens sleep drive.",
+          "Wind down 30–60 minutes before bed (dim lights, screen-free).",
+          "Don’t lie awake for long. Get up after ~20 min and do something calm until sleepy."
+        ],
+        "sources": [
+          "https://aasm.org/clinical-resources/practice-standards",
+          "https://www.nice.org.uk/guidance/ng193"
+        ]
+      },
+      "screen-time": {
+        "title": "Screens in bed",
+        "excerpt": "Screen use near bedtime can delay sleep. Here’s how to reduce the impact.",
+        "body": [
+          "Avoid intense screen use in the last hour before bed.",
+          "Use night mode/warmer light if you must use a screen.",
+          "Move entertainment out of the bed to strengthen the bed = sleep association."
+        ],
+        "sources": [
+          "https://sleepfoundation.org/sleep-hygiene",
+          "https://www.cochranelibrary.com/"
+        ]
+      }
+    }
+  }
+}
