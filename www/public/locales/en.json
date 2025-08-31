@@ -1,6 +1,6 @@
 {
   "ui": {
-    "menu": {
+    "nav": {
       "home": "Home",
       "result": "Result",
       "compare": "Compare",
@@ -9,48 +9,60 @@
     },
     "home": {
       "title": "Sleep Test",
-      "pitch": "Answer 30 questions in 5-10 minutes — get a free clear report with explanations and practical actions.",
+      "pitch": "Answer 30 questions in 5–10 minutes — get a free, clear report with explanations and practical actions.",
       "cta": "Start test",
       "example": "See sample report",
-      },
-      "privacy": { "card": {
+      "box_privacy": {
         "title": "Anonymous and 100% free",
-        "text": "We take GDPR personally, no registration, no loging, no cost, all anonymous."
-      },
-      "compare": { "card": {
+        "text": "We take GDPR personally: no registration, no logging, no cost — all anonymous."
+      }
+    },
+    "compare": {
+      "card": {
         "title": "Compare",
         "text": "You get an ID after the test. Take it again later and compare what changed."
       },
-      "articles": { "card": {
+      "help": "Have your previous ID? Enter both to see progress — and where.",
+      "notfound": "Could not find one or both IDs.",
+      "error": "Something went wrong. Please try again."
+    },
+    "articles": {
+      "card": {
         "title": "Learn more",
         "text": "Short articles about sleep, for everyone."
       }
     },
     "about": {
-      "title": "Created by the slamps at DMZ DATA AS",
-      "intro": "More information late",
-       "contact": {
-         "title": "",
-         "p1": "",
-         "p2": ""
-         },
+      "title": "Created by the team at DMZ DATA AS",
+      "intro": "More information later",
+      "contact": {
+        "title": "",
+        "p1": "",
+        "p2": ""
+      },
       "privacy": {
         "title": "Privacy policy",
         "p1": "",
-        "li1": "The page does not collect, store, or share any personal data. You are 100% anonymous, only a unique ID is stored with summary of the results in a database.",
+        "li1": "The page does not collect, store, or share any personal data. You are 100% anonymous; only a unique ID is stored with a summary of the results in a database.",
         "li2": "",
         "li3": ""
-       },
-
-
-      
-    "test": { "title": "Sleep test", "submit": "Submit", "progress": "Progress" },
-    "result": { "title": "Result", "sleep_score": "Sleep score", "how_to_improve": "How to improve:" },
-    "common": { "sending": "Sending…", "back": "Back", "next": "Next", "read": "Read" },
-    "compare": {
-      "help": "Have your previous ID? Enter both to see progress — and where.",
-      "notfound": "Could not find one or both IDs.",
-      "error": "Something went wrong. Please try again."
+      }
+    },
+    "test": {
+      "title": "Sleep test",
+      "submit": "Submit",
+      "progress": "Progress"
+    },
+    "result": {
+      "title": "Result",
+      "sleep_score": "Sleep score",
+      "how_to_improve": "How to improve:"
+    },
+    "common": {
+      "sending": "Sending…",
+      "back": "Back",
+      "next": "Next",
+      "read": "Read"
     }
   },
   "likert": {
@@ -114,8 +126,14 @@
     "bedtime": "Usual bedtime (hh:mm)",
     "waketime": "Usual wake time (hh:mm)",
     "sleep_hours": "Sleep hours per night (last week average)",
-    "hypertension_dx": "Diagnosed high blood pressure?",
-    "hypertension_dx.options": { "yes": "Yes", "no": "No", "unknown": "Don’t know" }
+    "hypertension_dx": {
+      "label": "Diagnosed high blood pressure?",
+      "options": {
+        "yes": "Yes",
+        "no": "No",
+        "unknown": "Don’t know"
+      }
+    }
   },
   "flags": {
     "osa_signal": "Possible signs of sleep apnea – consider talking to your doctor.",

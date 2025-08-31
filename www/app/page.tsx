@@ -15,14 +15,14 @@ export default function Home() {
       <main className="container" style={{ flex: "1 1 auto" }}>
         {/* Hero */}
         <section className="card" style={{ padding: 24 }}>
-          <h1 style={{ margin: 0, fontSize: "1.8rem" }}>{t(dict, "ui.home.title", "Sleep Test")}</h1>
+          <h1 style={{ margin: 0, fontSize: "1.8rem" }}>{t(dict, "ui.home.title", "Sleep Test-fallback")}</h1>
           <p className="muted" style={{ marginTop: 6 }}>
             {t(dict, "ui.home.pitch")}
           </p>
           <div style={{ marginTop: 16 }}>
-            <Link href="/test" className="btn primary">{t(dict, "ui.home.cta", "Start test")}</Link>
+            <Link href="/test" className="btn primary">{t(dict, "ui.home.cta", "Start test-fallback")}</Link>
             <Link href="/result/example" className="btn" style={{ marginLeft: 8 }}>
-              {t(dict, "ui.home.example", "See sample report")}
+              {t(dict, "ui.home.example", "See sample report-fallback")}
             </Link>
           </div>
         </section>

@@ -1,6 +1,6 @@
 {
   "ui": {
-    "menu": {
+    "nav": {
       "home": "Hjem",
       "result": "Resultat",
       "compare": "Sammenlign",
@@ -8,49 +8,61 @@
       "about": "Om"
     },
     "home": {
-      "title": "Sleep Test",
-      "pitch": "Svar på 30 spørsmål, 5-10 minutter – få en gratis grundig rapport med forklaringer og konkrete tiltak.",
+      "title": "Søvntest",
+      "pitch": "Svar på 30 spørsmål, 5–10 minutter – få en gratis, grundig rapport med forklaringer og konkrete tiltak.",
       "cta": "Start test",
       "example": "Se eksempel på rapport",
-      },
-      "privacy": { "card": {
+      "box_privacy": {
         "title": "Helt anonym og 100% gratis",
-        "text": "Ingen pålogging, ingen registrering – helt personvern/GDPR-vennlig."
-      },
-      "compare": { "card": {
-        "title": "Sammenlign",
-      "text": "Du får en ID etter testen. Ta testen igjen senere og se hva som har endret seg."
-      },
-      "articles": { "card": {
-        "title": "Lær mer",
-        "text": "Korte artikler om søvn – skrevet for folk flest."
+        "text": "Ingen pålogging, ingen registrering – helt personvern-/GDPR-vennlig."
       }
-          "about": {
-      "title": "Laget av slampene i DMZ DATA AS",
-      "intro": "Kommer mer info senere",
-       "contact": {
-         "title": "",
-         "p1": "",
-         "p2": ""
-         },
-      "privacy": {
-        "title": "Personvernerklæring",
-        "p1": "",
-        "li1": "Nettsiden samler ikke inn, lagrer eller deler noen personlige data. Du er 100 % anonym, kun en unik ID lagres sammen med en oppsummering av resultatene i en database.",
-        "li2": "",
-        "li3": ""
-      }
-       },
-
-
     },
-    "test": { "title": "Søvntest", "submit": "Send inn", "progress": "Fremdrift" },
-    "result": { "title": "Resultat", "sleep_score": "Søvn-score", "how_to_improve": "Hvordan forbedre dette:" },
-    "common": { "sending": "Sender…", "back": "Tilbake", "next": "Neste", "read": "Les" },
     "compare": {
+      "card": {
+        "title": "Sammenlign",
+        "text": "Du får en ID etter testen. Ta testen igjen senere og se hva som har endret seg."
+      },
       "help": "Har du ID-en din fra sist? Skriv inn begge for å se fremgang – og hvor.",
       "notfound": "Finner ikke én eller begge ID-ene.",
       "error": "Noe gikk galt. Prøv igjen."
+    },
+    "articles": {
+      "card": {
+        "title": "Lær mer",
+        "text": "Korte artikler om søvn – skrevet for folk flest."
+      }
+    },
+    "about": {
+      "title": "Laget av teamet i DMZ DATA AS",
+      "intro": "Kommer mer info senere",
+      "contact": {
+        "title": "",
+        "p1": "",
+        "p2": ""
+      },
+      "privacy": {
+        "title": "Personvernerklæring",
+        "p1": "",
+        "li1": "Nettsiden samler ikke inn, lagrer eller deler noen personlige data. Du er 100 % anonym; kun en unik ID lagres sammen med en oppsummering av resultatene i en database.",
+        "li2": "",
+        "li3": ""
+      }
+    },
+    "test": {
+      "title": "Søvntest",
+      "submit": "Send inn",
+      "progress": "Fremdrift"
+    },
+    "result": {
+      "title": "Resultat",
+      "sleep_score": "Søvn-score",
+      "how_to_improve": "Hvordan forbedre dette:"
+    },
+    "common": {
+      "sending": "Sender…",
+      "back": "Tilbake",
+      "next": "Neste",
+      "read": "Les"
     }
   },
   "likert": {
@@ -112,10 +124,16 @@
   },
   "f": {
     "bedtime": "Vanlig leggetid (hh:mm)",
-    "waketime": "Vanlig opp-tid (hh:mm)",
+    "waketime": "Vanlig oppvåkningstid (hh:mm)",
     "sleep_hours": "Søvntimer per natt (snitt siste uke)",
-    "hypertension_dx": "Har du diagnostisert høyt blodtrykk?",
-    "hypertension_dx.options": { "yes": "Ja", "no": "Nei", "unknown": "Vet ikke" }
+    "hypertension_dx": {
+      "label": "Har du diagnostisert høyt blodtrykk?",
+      "options": {
+        "yes": "Ja",
+        "no": "Nei",
+        "unknown": "Vet ikke"
+      }
+    }
   },
   "flags": {
     "osa_signal": "Mulige tegn på søvnapné – vurder å snakke med fastlege.",
