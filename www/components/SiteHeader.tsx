@@ -24,7 +24,7 @@ export default function SiteHeader() {
       {/* Left: brand + nav */}
       <div className="row" style={{ gap: 24 }}>
         <Link href="/" className="font-bold text-lg">
-          {t(dict, "ui.home.title", "Sleep Test")}
+          {t(dict, "ui.home.title", "Sleep Test-fallback")}
         </Link>
         <nav className="nav">
           <NavItem href="/" k="ui.menu.home" />
