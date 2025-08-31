@@ -11,7 +11,7 @@
       "title": "Sleep Test",
       "pitch": "Answer 30 questions in 5–10 minutes — get a free, clear report with explanations and practical actions.",
       "cta": "Start test",
-      "example": "See sample report",
+      "example": "See sample report"
        },
      "privacy": {
         "card": {
@@ -146,5 +146,5 @@
   "flags": {
     "osa_signal": "Possible signs of sleep apnea – consider talking to your doctor.",
     "excessive_sleepiness": "Marked daytime sleepiness – be extra careful."
-  },
+  }
 }
