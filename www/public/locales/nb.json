@@ -50,12 +50,6 @@
         "li3": ""
         }
       },
-      "articles": {
-        "title": "Articles on sleep",
-        "intro": "More info is...",
-        "p1": "Comming soon"
-        }
-       },
     "test": {
       "title": "Søvntest",
       "submit": "Send inn",
@@ -119,7 +113,7 @@
       "big_meal_late": "Jeg spiser store måltid sent på kvelden.",
       "hard_exercise_late": "Jeg trener hardt rett før leggetid."
     },
-    "env": {
+    "environment": {
       "too_light_noise_temp": "Soverommet er ofte for lyst, støyende eller feil temperatur.",
       "uncomfortable_bed": "Sengen eller puta er ukomfortabel.",
       "bad_associations": "Jeg jobber/ser på TV i senga og får dårlige sove-assosiasjoner."
