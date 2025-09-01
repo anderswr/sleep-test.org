@@ -50,12 +50,7 @@
         "li3": ""
         }
        },
-      "articles": {
-        "title": "Articles on sleep",
-        "intro": "More info is...",
-        "p1": "Comming soon"
-        }
-       },
+
     "test": {
       "title": "Sleep test",
       "submit": "Submit",
@@ -119,7 +114,7 @@
       "big_meal_late": "I eat large meals late in the evening.",
       "hard_exercise_late": "I exercise hard right before bedtime."
     },
-    "env": {
+    "environment": {
       "too_light_noise_temp": "The bedroom is often too bright, noisy or the wrong temperature.",
       "uncomfortable_bed": "The bed or pillow is uncomfortable.",
       "bad_associations": "I work/watch TV in bed and get poor sleep associations."
