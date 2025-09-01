@@ -128,7 +128,7 @@
   "f": {
     "bedtime": "Usual bedtime (hh:mm)",
     "waketime": "Usual wake time (hh:mm)",
-    "sleep_hours": "Sleep hours per night (last week average)",
+    "sleep_hours": "Average sleep hours per night (last week)",
     "hypertension_dx": {
       "label": "Diagnosed high blood pressure?",
       "options": {
