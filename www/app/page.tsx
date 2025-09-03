@@ -21,7 +21,7 @@ export default function Home() {
           </p>
           <div style={{ marginTop: 16 }}>
             <Link href="/test" className="btn primary">{t(dict, "ui.home.cta", "Start test-fallback")}</Link>
-            <Link href="/result/example" className="btn" style={{ marginLeft: 8 }}>
+            <Link href="/result/GEBJHC-s1SB" className="btn" style={{ marginLeft: 8 }}>
               {t(dict, "ui.home.example", "See sample report-fallback")}
             </Link>
           </div>
