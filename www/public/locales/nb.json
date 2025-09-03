@@ -124,16 +124,53 @@
       "daytime_tired_despite": "Jeg er kraftig trett på dagtid selv etter en normal natt."
     }
   },
-  "f": {
-    "bedtime": "Vanlig leggetid (hh:mm)",
-    "waketime": "Vanlig oppvåkningstid (hh:mm)",
-    "sleep_hours": "Søvntimer per natt (snitt siste uke)",
-    "hypertension_dx": {
-      "label": "Har du diagnostisert høyt blodtrykk?",
+"f": {
+    "wake_work": {
+      "title": "Når står du vanligvis opp på arbeids-/skole­dager?",
+      "no_fixed": "Varierer / vet ikke"
+    },
+    "sleep_bucket": {
+      "title": "Hvor mange timer sover du vanligvis per natt (arbeids-/skoledager)?",
       "options": {
-        "yes": "Ja",
-        "no": "Nei",
-        "unknown": "Vet ikke"
+        "<6": "<6 t",
+        "6-7": "6–7 t",
+        "7-8": "7–8 t",
+        "8-9": "8–9 t",
+        "9-10": "9–10 t",
+        ">10": ">10 t",
+        "unknown": "Usikker / varierer"
+      }
+    },
+    "weekend_shift": {
+      "title": "Hvor mye senere står du opp i helgen sammenlignet med hverdager?",
+      "options": {
+        "0": "Ingen endring",
+        "1.5": "≈ 1,5 t senere",
+        "3": "≈ 3 t senere",
+        "4.5": "≈ 4,5 t senere",
+        "6": "≈ 6 t senere"
+      }
+    },
+    "wake_usual": {
+      "title": "Når står du vanligvis opp (typisk tid)?"
+    },
+    "shift_work": {
+      "title": "Jobber du skift?",
+      "options": {
+        "none": "Nei",
+        "early": "Tidligskift",
+        "late": "Sen / kveld",
+        "night": "Natt",
+        "rotating": "Roterende"
+      }
+    },
+    "nap_freq": {
+      "title": "Tar du dagslurer?",
+      "options": {
+        "never": "Aldri",
+        "weekly": "Ukentlig",
+        "few_week": "Noen ganger i uka",
+        "daily": "Daglig"
       }
     }
   },
