@@ -20,7 +20,7 @@
 
 /* ---- Reset / base ---- */
 *{ box-sizing: border-box }
-html,body{ margin:0; padding:0; background:var(--bg); color:var(--text); }
+html,body{ margin:0; padding:0; background:var(--bg); color:var(--text); overflow-x: hidden; }
 body{
   font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial, "Apple Color Emoji","Segoe UI Emoji";
   -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale;
@@ -67,6 +67,31 @@ p{ line-height: 1.55; }
 .nav a{ color:var(--muted) }
 .nav a.active{ color:var(--text); font-weight:600 }
 
+/* Optional modern select (use className="select") */
+.select{
+  appearance: none;
+  border: 1px solid var(--border);
+  background: #fff;
+  border-radius: 12px;
+  padding: 10px 38px 10px 12px;
+  font: inherit;
+  position: relative;
+  box-shadow: var(--shadow);
+  background-image:
+    linear-gradient(45deg, transparent 50%, #9ca3af 50%),
+    linear-gradient(135deg, #9ca3af 50%, transparent 50%),
+    linear-gradient(to right, transparent, transparent);
+  background-position:
+    calc(100% - 22px) calc(50% - 4px),
+    calc(100% - 14px) calc(50% - 4px),
+    calc(100% - 2.2rem) 0;
+  background-size:
+    8px 8px,
+    8px 8px,
+    2.2rem 100%;
+  background-repeat: no-repeat;
+}
+
 /* ---- Cards ---- */
 .card{
   background: var(--card);
@@ -74,6 +99,7 @@ p{ line-height: 1.55; }
   border-radius: var(--radius);
   box-shadow: var(--shadow);
   padding: 16px;
+  max-width: 100%;
 }
 .card h3{ margin:0 0 .25rem 0; font-size: 1.05rem; }
 .card .muted{ color: var(--muted); font-size: .95rem }
@@ -120,14 +146,12 @@ p{ line-height: 1.55; }
 /* =======================================================================
    BUTTON-BASED SMILEY LIKERT
    ======================================================================= */
-
 .smiley-group{
   display:flex;
   flex-wrap: wrap;
   gap: 10px;
   justify-content: center;
 }
-
 .smiley-btn{
   display:flex; flex-direction:column; align-items:center; justify-content:center;
   min-width: 120px; padding: 14px 12px;
@@ -143,13 +167,8 @@ p{ line-height: 1.55; }
   background: var(--primary-weak);
   box-shadow: inset 0 0 0 2px var(--primary-weak), var(--shadow);
 }
-
-.smiley-emoji{
-  font-size: 34px; line-height: 1;
-}
-.smiley-caption{
-  font-size: .9rem; color: var(--muted); margin-top: 6px; text-align:center;
-}
+.smiley-emoji{ font-size: 34px; line-height: 1; }
+.smiley-caption{ font-size: .9rem; color: var(--muted); margin-top: 6px; text-align:center; }
 
 /* fargehint per valg (emoji) */
 .smiley-btn[data-tone="1"] .smiley-emoji{ color: var(--bad); }
@@ -164,15 +183,12 @@ p{ line-height: 1.55; }
   display: grid;
   grid-template-rows: auto 1fr auto;
 }
-
-/* Tittel + fremdrift seksjon */
 .stage-head { margin-bottom: 16px; }
-
 .center-wrap{
   display: grid;
   place-items: start center; /* toppstilt, men sentrert horisontalt */
+  width: 100%;
 }
-
 .q-card{
   width: min(880px, 100%);
   margin: 0 auto;
@@ -205,7 +221,6 @@ p{ line-height: 1.55; }
 /* =======================================================================
    RESULT PAGE STYLES
    ======================================================================= */
-
 .score-hero{
   display:flex; align-items:center; justify-content:space-between;
   gap: 24px;
@@ -254,9 +269,8 @@ p{ line-height: 1.55; }
 .cat-card[data-color="red"]{ border-color: #f4a3a366; background: #fff5f5; }
 
 /* =======================================================================
-   SleepTimeline (bedtime + waketime i ett)
+   SleepTimeline (legacy hooks kept if needed)
    ======================================================================= */
-
 .sleep-timeline{ display:grid; gap:10px; }
 .sleep-head{ display:flex; align-items:center; justify-content:space-between; gap:10px; }
 .sleep-time{ font-size: 1rem; }
@@ -288,9 +302,7 @@ p{ line-height: 1.55; }
   mask: radial-gradient(circle at left, #0000 0, #0000 calc(var(--mask-start) - 1%), #000 var(--mask-start)),
         radial-gradient(circle at right, #000  var(--mask-end), #0000 calc(var(--mask-end) + 1%));
 }
-.sleep-ticks{
-  position:absolute; inset:0; display:grid; grid-template-columns: repeat(48, 1fr);
-}
+.sleep-ticks{ position:absolute; inset:0; display:grid; grid-template-columns: repeat(48, 1fr); }
 .tick{ width:1px; height: 10px; background:#e5e7eb; margin:auto 0; }
 .tick-lg{ height: 16px; background:#d1d5db; }
 .tick-sm{ height: 10px; }
@@ -313,21 +325,13 @@ p{ line-height: 1.55; }
   list-style: none; padding: 0; margin: 0; display:grid; gap: 6px;
 }
 .tips-list li{ display:flex; gap:8px; align-items:flex-start; }
-.tips-list .star{
-  display:inline-block; width: 1ch; color:#6b7280;
-}
+.tips-list .star{ display:inline-block; width: 1ch; color:#6b7280; }
 
 /* =======================================================================
    Question transitions
    ======================================================================= */
-.q-animate-in{
-  animation: dropIn .24s ease-out both;
-}
-.q-animate-out{
-  animation: dropOut .18s ease-in forwards;
-  position: relative;
-  z-index: 1;
-}
+.q-animate-in{ animation: dropIn .24s ease-out both; }
+.q-animate-out{ animation: dropOut .18s ease-in forwards; position: relative; z-index: 1; }
 @keyframes dropIn{
   from{ opacity: 0; transform: translateY(-10px) scale(.995); }
   to  { opacity: 1; transform: translateY(0) scale(1); }
@@ -360,11 +364,7 @@ p{ line-height: 1.55; }
 }
 
 /* App flex shell so footer sticks to bottom */
-.app-shell {
-  min-height: 100dvh;
-  display: flex;
-  flex-direction: column;
-}
+.app-shell { min-height: 100dvh; display: flex; flex-direction: column; }
 
 /* Slightly larger header nav spacing on small screens */
 @media (max-width: 720px) {

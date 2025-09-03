@@ -30,6 +30,7 @@ import { useRouter } from "next/navigation";
 // Hjelper: er spørsmålet besvart?
 // NB: vi tillater null som "gyldig" (f.eks. "Varierer / vet ikke")
 function isAnswered(q: Question, answers: AnswerMap, fields: FieldMap) {
+  if (!q) return false;
   if (q.kind === "likert") return !!answers[q.id];
   const key = q.kind === "field" ? q.field.key : undefined;
   if (!key) return false;
@@ -53,8 +54,9 @@ export default function TestPage() {
   const router = useRouter();
 
   // Fast rekkefølge fra spørsmålbanken
-  const ordered = useMemo(() => QUESTION_BANK.slice(), []);
+  const ordered = useMemo(() => (Array.isArray(QUESTION_BANK) ? QUESTION_BANK.slice() : []), []);
   const total = ordered.length;
+  const hasQuestions = total > 0;
 
   const [idx, setIdx] = useState(0);
   const [answers, setAnswers] = useState<AnswerMap>({});
@@ -63,21 +65,21 @@ export default function TestPage() {
   const [animOut, setAnimOut] = useState(false);
   const [submitted, setSubmitted] = useState(false);
 
-  const q = ordered[idx];
+  const q = hasQuestions ? ordered[idx] : undefined;
 
-  // Fremdrift
-  const answeredCount = ordered.reduce(
-    (n, q) => n + (isAnswered(q, answers, fields) ? 1 : 0),
-    0
-  );
-  const progressPct = Math.round((answeredCount / total) * 100);
+  // Fremdrift – vær robust mot total===0
+  const answeredCount = hasQuestions
+    ? ordered.reduce((n, q) => n + (isAnswered(q, answers, fields) ? 1 : 0), 0)
+    : 0;
+  const progressPct = hasQuestions ? Math.round((answeredCount / total) * 100) : 0;
 
-  const nextIndex = (i: number) => Math.min(total - 1, i + 1);
-  const prevIndex = (i: number) => Math.max(0, i - 1);
+  const nextIndex = (i: number) => (hasQuestions ? Math.min(total - 1, i + 1) : 0);
+  const prevIndex = (i: number) => (hasQuestions ? Math.max(0, i - 1) : 0);
   const goNext = () => setIdx((i) => nextIndex(i));
   const goPrev = () => setIdx((i) => prevIndex(i));
 
   function animateAndGoNext() {
+    if (!hasQuestions) return;
     if (idx >= total - 1) return;
     setAnimOut(true);
     setTimeout(() => {
@@ -112,6 +114,7 @@ export default function TestPage() {
 
   // Likert: auto-neste
   function onLikert(v: LikertValue) {
+    if (!q) return;
     setAnswers((p) => ({ ...p, [q.id]: v }));
     animateAndGoNext();
   }
@@ -133,27 +136,14 @@ export default function TestPage() {
   const halfHourOptions = useMemo(() => timesToOptions(makeHalfHourTimes()), []);
 
   const sleepBucketOptions = useMemo<ChipOption[]>(() => {
-    // fra i18n: f.sleep_bucket.options
     const base = optionsFromDict(dict, "f.sleep_bucket.options");
-    // ønsket rekkefølge hvis tilgjengelig:
-    const order: SleepHoursBucket[] = [
-      "<6",
-      "6-7",
-      "7-8",
-      "8-9",
-      "9-10",
-      ">10",
-      "unknown",
-    ];
+    const order: SleepHoursBucket[] = ["<6", "6-7", "7-8", "8-9", "9-10", ">10", "unknown"];
     const byVal = new Map(base.map((o) => [o.value, o]));
-    const arranged = order
-      .map((v) => byVal.get(v))
-      .filter(Boolean) as ChipOption[];
+    const arranged = order.map((v) => byVal.get(v)).filter(Boolean) as ChipOption[];
     return arranged.length ? arranged : base;
   }, [dict]);
 
   const weekendShiftOptions = useMemo<ChipOption[]>(() => {
-    // fra i18n: f.weekend_shift.options (keys: "0","1.5","3",...)
     return optionsFromDict(dict, "f.weekend_shift.options");
   }, [dict]);
 
@@ -167,16 +157,14 @@ export default function TestPage() {
 
   // Render-hjelper for feltspørsmål (w1–w6 + f4)
   function renderField() {
-    if (q.kind !== "field") return null;
+    if (!q || q.kind !== "field") return null;
     const key = q.field.key;
 
-    // w1: wakeTimeWorkday (halvtimers chips + "ingen fast tid")
     if (key === "wakeTimeWorkday") {
       return (
         <ChipSelect
           value={fields.wakeTimeWorkday ?? undefined}
           onChange={(v) => {
-            // v kan være string eller null (hvis "varierer")
             setFields((p) => ({ ...p, wakeTimeWorkday: (v as string) ?? null }));
             animateAndGoNext();
           }}
@@ -188,7 +176,6 @@ export default function TestPage() {
       );
     }
 
-    // w2: sleepHoursBucketWorkday
     if (key === "sleepHoursBucketWorkday") {
       return (
         <ChipSelect
@@ -207,15 +194,10 @@ export default function TestPage() {
       );
     }
 
-    // w3: weekendWakeShift (number timer – vi lagrer som number)
     if (key === "weekendWakeShift") {
       return (
         <ChipSelect
-          value={
-            typeof fields.weekendWakeShift === "number"
-              ? String(fields.weekendWakeShift)
-              : undefined
-          }
+          value={typeof fields.weekendWakeShift === "number" ? String(fields.weekendWakeShift) : undefined}
           onChange={(v) => {
             const num = v == null ? null : Number(v);
             setFields((p) => ({ ...p, weekendWakeShift: num as any }));
@@ -228,7 +210,6 @@ export default function TestPage() {
       );
     }
 
-    // w4: wakeTimeUsual (halvtimers chips, ingen null-chip)
     if (key === "wakeTimeUsual") {
       return (
         <ChipSelect
@@ -244,7 +225,6 @@ export default function TestPage() {
       );
     }
 
-    // w5: shiftWork (enum)
     if (key === "shiftWork") {
       return (
         <ChipSelect
@@ -260,7 +240,6 @@ export default function TestPage() {
       );
     }
 
-    // w6: napFreq
     if (key === "napFreq") {
       return (
         <ChipSelect
@@ -276,7 +255,6 @@ export default function TestPage() {
       );
     }
 
-    // f4: hypertensionDx (tomler, autosubmit)
     if (key === "hypertensionDx") {
       return (
         <ThumbLikert
@@ -286,7 +264,6 @@ export default function TestPage() {
       );
     }
 
-    // Ukjent felt-key (fallback)
     return null;
   }
 
@@ -300,43 +277,55 @@ export default function TestPage() {
             <div style={{ minWidth: 80 }}>
               {String(progressPct).padStart(2, "0")}%
             </div>
-            <div
-              className="progress"
-              aria-label={t(dict, "ui.test.progress", "Fremdrift")}
-            >
+            <div className="progress" aria-label={t(dict, "ui.test.progress", "Fremdrift")}>
               <div style={{ width: `${progressPct}%` }} />
             </div>
             <div style={{ minWidth: 72, textAlign: "right" }}>
-              {idx + 1}/{total}
+              {hasQuestions ? `${idx + 1}/${total}` : "0/0"}
             </div>
           </div>
         </div>
 
+        {/* Mangler spørsmål – vis hjelpetekst */}
+        {!hasQuestions && (
+          <div className="card q-card">
+            <h2>Ingen spørsmål tilgjengelig</h2>
+            <p>Sjekk følgende:</p>
+            <ul>
+              <li><code>/data/questions.ts</code> eksporterer <code>QUESTION_BANK</code> med innhold.</li>
+              <li>Bygget er oppdatert (push/commit gjort) og Vercel bruker siste commit.</li>
+              <li>Ingen runtime-feil i konsollen som stopper render.</li>
+            </ul>
+          </div>
+        )}
+
         {/* Spørsmålskort */}
-        <div className="center-wrap">
-          <article
-            key={idx}
-            className={`card q-card ${animOut ? "q-animate-out" : "q-animate-in"}`}
-          >
-            <p className="muted" style={{ margin: 0 }}>
-              {catName(q.category)}
-            </p>
-            <h1 className="mb-2">{t(dict, q.textKey, "")}</h1>
+        {hasQuestions && q && (
+          <div className="center-wrap">
+            <article
+              key={idx}
+              className={`card q-card ${animOut ? "q-animate-out" : "q-animate-in"}`}
+            >
+              <p className="muted" style={{ margin: 0 }}>
+                {catName(q.category as CategoryId)}
+              </p>
+              <h1 className="mb-2">{t(dict, q.textKey, "")}</h1>
 
-            {/* Likert 1–5 */}
-            {q.kind === "likert" && (
-              <SmileyLikert
-                name={q.id}
-                value={answers[q.id]}
-                onChange={onLikert}
-                dict={dict}
-              />
-            )}
+              {/* Likert 1–5 */}
+              {q.kind === "likert" && (
+                <SmileyLikert
+                  name={q.id}
+                  value={answers[q.id]}
+                  onChange={onLikert}
+                  dict={dict}
+                />
+              )}
 
-            {/* Feltspørsmål (chips / tomler) */}
-            {q.kind === "field" && <div className="stack-2">{renderField()}</div>}
-          </article>
-        </div>
+              {/* Feltspørsmål (chips / tomler) */}
+              {q.kind === "field" && <div className="stack-2">{renderField()}</div>}
+            </article>
+          </div>
+        )}
 
         {/* Navigasjon */}
         <div className="stage-controls">
@@ -349,17 +338,17 @@ export default function TestPage() {
                 goPrev();
               }, 120);
             }}
-            disabled={idx === 0 || loading}
+            disabled={!hasQuestions || idx === 0 || loading}
           >
             {t(dict, "ui.common.back", "Tilbake")}
           </button>
 
           {/* Ingen manuell “Send inn” – siste (hypertension) autosubmitter */}
-          {idx < total - 1 && (
+          {hasQuestions && idx < total - 1 && (
             <button
               className="btn primary"
               onClick={animateAndGoNext}
-              disabled={!isAnswered(q, answers, fields) || loading}
+              disabled={!isAnswered(q!, answers, fields) || loading}
             >
               {t(dict, "ui.common.next", "Neste")}
             </button>
