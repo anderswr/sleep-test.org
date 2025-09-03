@@ -88,33 +88,35 @@ export default function ChipSelect({
         );
       })}
 
-      <style jsx>{`
-        .chipselect {
-          display: grid;
-          grid-auto-flow: column;
-          grid-auto-columns: max-content;
-          overflow-x: auto;
-          gap: 8px;
-          padding: 6px 0;
-        }
-        .chip {
-          border: 1px solid var(--border);
-          background: #fff;
-          border-radius: 999px;
-          padding: 8px 12px;
-          font-size: 14px;
-          box-shadow: var(--shadow);
-          white-space: nowrap;
-          transition: background .15s, border-color .15s, transform .05s ease;
-        }
-        .chip:hover:not(:disabled) { transform: translateY(-1px); }
-        .chip.active {
-          background: var(--primary-weak);
-          border-color: var(--primary);
-        }
-        .chip.lg { padding: 10px 14px; font-size: 15px; }
-        .chip:disabled { opacity: .6; cursor: not-allowed; }
-      `}</style>
+<style jsx>{`
+  .chipselect {
+    display: flex;              /* <- endret fra grid */
+    flex-wrap: wrap;            /* pakk inn i flere rader på små skjermer */
+    gap: 8px;
+    padding: 6px 0;
+    max-width: 100%;            /* aldri bredere enn container */
+    min-width: 0;               /* tillat krymping */
+    justify-content: center;    /* hold det på midten */
+  }
+  .chip {
+    border: 1px solid var(--border);
+    background: #fff;
+    border-radius: 999px;
+    padding: 8px 12px;
+    font-size: 14px;
+    box-shadow: var(--shadow);
+    white-space: nowrap;
+    transition: background .15s, border-color .15s, transform .05s ease;
+    flex: 0 0 auto;             /* ikke strekk chips */
+  }
+  .chip:hover:not(:disabled) { transform: translateY(-1px); }
+  .chip.active {
+    background: var(--primary-weak);
+    border-color: var(--primary);
+  }
+  .chip.lg { padding: 10px 14px; font-size: 15px; }
+  .chip:disabled { opacity: .6; cursor: not-allowed; }
+`}</style>
     </div>
   );
 }
