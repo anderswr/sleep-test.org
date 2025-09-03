@@ -18,22 +18,18 @@ export default function ThumbLikert({
   ariaLabel = "Blood pressure diagnosed",
   disabled = false,
 }: Props) {
-  // intern liste for enkel navigasjon
   const opts: { val: ThumbVal; label: string; emoji: string }[] = [
     { val: "no",  label: "Nei", emoji: "👎" },
     { val: "yes", label: "Ja",  emoji: "👍" },
   ];
 
   function commit(v: ThumbVal) {
-    if (!disabled && v !== value) onChange(v);
+    if (!disabled) onChange(v); // <-- alltid fyr, ingen likhetsvakt
   }
 
   function onKeyDown(e: React.KeyboardEvent<HTMLDivElement>) {
     if (disabled) return;
-    const idx = Math.max(
-      0,
-      opts.findIndex((o) => o.val === value)
-    );
+    const idx = Math.max(0, opts.findIndex((o) => o.val === value));
     if (e.key === "ArrowRight" || e.key === "ArrowLeft") {
       e.preventDefault();
       const dir = e.key === "ArrowRight" ? 1 : -1;
@@ -65,7 +61,6 @@ export default function ThumbLikert({
             <span className="smiley-emoji" aria-hidden>
               {o.emoji}
             </span>
-            {/* Skjermleser-tekst – vi viser ikke “Ja/Nei” visuelt slik du ønsket */}
             <span className="sr-only">{o.label}</span>
           </button>
         );
