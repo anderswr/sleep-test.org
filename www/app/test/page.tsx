@@ -88,29 +88,36 @@ export default function TestPage() {
     }, 140);
   }
 
-  async function submitNow() {
-    if (loading || submitted) return;
-    setLoading(true);
-    setSubmitted(true);
-    try {
-      const res = await fetch("/api/submit", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ answers, fields, lang }),
-      });
-      const json = await res.json();
-      if (json?.id) {
-        if (typeof window !== "undefined") {
-          localStorage.setItem("lastResultId", json.id);
-        }
-        router.push(`/result/${json.id}`);
-        return;
+// Innsending – versjon som kan ta med "overstyrte" fields
+async function submitNowWith(fieldsOverride?: FieldMap) {
+  if (loading || submitted) return;
+  setLoading(true);
+  setSubmitted(true);
+  try {
+    const payload = {
+      answers,
+      fields: fieldsOverride ?? fields,
+      lang,
+    };
+    const res = await fetch("/api/submit", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(payload),
+    });
+    const json = await res.json();
+    if (json?.id) {
+      if (typeof window !== "undefined") {
+        localStorage.setItem("lastResultId", json.id);
       }
-      alert("Kunne ikke åpne rapport. Prøv igjen.");
-    } finally {
-      setLoading(false);
+      router.push(`/result/${json.id}`);
+      return;
     }
+    alert("Kunne ikke åpne rapport. Prøv igjen.");
+  } finally {
+    setLoading(false);
   }
+}
+
 
   // Likert: auto-neste
   function onLikert(v: LikertValue) {
@@ -120,14 +127,13 @@ export default function TestPage() {
   }
 
   // Blodtrykk: auto-submit
-  function onHypertensionChange(val: "yes" | "no" | "unknown") {
-    setFields((p) => ({ ...p, hypertensionDx: val }));
-    setAnimOut(true);
-    setTimeout(() => {
-      setAnimOut(false);
-      submitNow();
-    }, 120);
-  }
+// Blodtrykk: ett klikk => oppdater state + send inn umiddelbart
+function onHypertensionChange(val: "yes" | "no" | "unknown") {
+  const next = { ...fields, hypertensionDx: val };
+  setFields(next);
+  // Ingen animasjon, ingen delay – send inn med en gang med de nye feltene
+  submitNowWith(next);
+}
 
   const catName = (cat: CategoryId) =>
     t(dict, `category.${cat}.name`, String(cat));
