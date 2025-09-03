@@ -34,21 +34,6 @@ type Props = {
   className?: string;
 };
 
-/**
- * Gjenbrukbar chips-rad for enkel single-select.
- * Bruk:
- *  <ChipSelect
- *    value={fields.sleepHoursBucketWorkday}
- *    onChange={(v) => setFields(p => ({...p, sleepHoursBucketWorkday: v as any }))}
- *    options={[
- *      { value: "<6", label: "<6 t" },
- *      { value: "6-7", label: "6–7 t" },
- *      ...
- *    ]}
- *    nullLabel="Vet ikke"
- *    ariaLabel="Søvnlengde"
- *  />
- */
 export default function ChipSelect({
   value,
   onChange,
@@ -66,7 +51,8 @@ export default function ChipSelect({
     return options;
   }, [options, nullLabel]);
 
-  function handleKey(e: React.KeyboardEvent<HTMLDivElement>, idx: number) {
+  // <- Endret til HTMLElement, så funker både på div og button
+  function handleKey(e: React.KeyboardEvent<HTMLElement>, idx: number) {
     if (disabled) return;
     if (e.key !== "ArrowRight" && e.key !== "ArrowLeft") return;
     e.preventDefault();
