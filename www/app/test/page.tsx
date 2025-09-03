@@ -28,23 +28,21 @@ import {
 import { useRouter } from "next/navigation";
 
 // Hjelper: er spørsmålet besvart?
+// NB: vi tillater null som "gyldig" (f.eks. "Varierer / vet ikke")
 function isAnswered(q: Question, answers: AnswerMap, fields: FieldMap) {
   if (q.kind === "likert") return !!answers[q.id];
   const key = q.kind === "field" ? q.field.key : undefined;
   if (!key) return false;
   const val = (fields as any)[key];
-  return val !== undefined && val !== null && val !== "";
+  return val !== undefined && val !== ""; // null er lov
 }
 
 // Hent opsjoner fra i18n-objekt (object -> [{value,label}])
-function optionsFromDict<T extends string | number>(
-  dict: any,
-  baseKey: string
-): ChipOption<T>[] {
+function optionsFromDict(dict: any, baseKey: string): ChipOption[] {
   const obj = t(dict, baseKey) as Record<string, string> | undefined;
   if (!obj || typeof obj !== "object") return [];
   return Object.entries(obj).map(([value, label]) => ({
-    value: value as unknown as T,
+    value,
     label: String(label),
   }));
 }
@@ -99,7 +97,6 @@ export default function TestPage() {
       });
       const json = await res.json();
       if (json?.id) {
-        // kun i klient
         if (typeof window !== "undefined") {
           localStorage.setItem("lastResultId", json.id);
         }
@@ -132,17 +129,12 @@ export default function TestPage() {
     t(dict, `category.${cat}.name`, String(cat));
 
   // ---- Opsjoner til chips-feltene ----
-  const halfHourOptions = useMemo(
-    () => timesToOptions(makeHalfHourTimes()),
-    []
-  );
+  const halfHourOptions = useMemo(() => timesToOptions(makeHalfHourTimes()), []);
 
-  const sleepBucketOptions = useMemo<ChipOption<SleepHoursBucket>[]>(() => {
+  const sleepBucketOptions = useMemo<ChipOption[]>(() => {
     // fra i18n: f.sleep_bucket.options
-    const base =
-      optionsFromDict<SleepHoursBucket>(dict, "f.sleep_bucket.options") ||
-      ([] as ChipOption<SleepHoursBucket>[]);
-    // sørg for en konsistent rekkefølge hvis nøkler finnes:
+    const base = optionsFromDict(dict, "f.sleep_bucket.options");
+    // prøv å rendrere i ønsket rekkefølge hvis eksisterer:
     const order: SleepHoursBucket[] = [
       "<6",
       "6-7",
@@ -153,29 +145,26 @@ export default function TestPage() {
       "unknown",
     ];
     const byVal = new Map(base.map((o) => [o.value, o]));
-    return order.map((v) => byVal.get(v)!).filter(Boolean);
+    const ordered = order
+      .map((v) => byVal.get(v))
+      .filter(Boolean) as ChipOption[];
+    // hvis i18n ikke hadde alt, fall tilbake til base
+    return ordered.length ? ordered : base;
   }, [dict]);
 
-  const weekendShiftOptions = useMemo<ChipOption<number>[]>(() => {
-    // fra i18n: f.weekend_shift.options (keys som "0", "1.5", "3", ...)
-    const raw = optionsFromDict<string>(dict, "f.weekend_shift.options");
-    // map til number
-    return raw
-      .map((o) => ({ value: Number(o.value), label: o.label }))
-      .filter((o) => !Number.isNaN(o.value));
+  const weekendShiftOptions = useMemo<ChipOption[]>(() => {
+    // fra i18n: f.weekend_shift.options (keys: "0","1.5","3",...)
+    const raw = optionsFromDict(dict, "f.weekend_shift.options");
+    // behold som string-values; vi caster til number ved setFields
+    return raw;
   }, [dict]);
 
-  const shiftWorkOptions = useMemo<ChipOption<ShiftWork>[]>(() => {
-    return optionsFromDict<ShiftWork>(dict, "f.shift_work.options");
+  const shiftWorkOptions = useMemo<ChipOption[]>(() => {
+    return optionsFromDict(dict, "f.shift_work.options");
   }, [dict]);
 
-  const napFreqOptions = useMemo<
-    ChipOption<"never" | "sometimes" | "often">[]
-  >(() => {
-    return optionsFromDict<"never" | "sometimes" | "often">(
-      dict,
-      "f.nap_freq.options"
-    );
+  const napFreqOptions = useMemo<ChipOption[]>(() => {
+    return optionsFromDict(dict, "f.nap_freq.options");
   }, [dict]);
 
   // Render-hjelper for feltspørsmål (w1–w6 + f4)
@@ -189,7 +178,8 @@ export default function TestPage() {
         <ChipSelect
           value={fields.wakeTimeWorkday ?? undefined}
           onChange={(v) => {
-            setFields((p) => ({ ...p, wakeTimeWorkday: v as string | null }));
+            // v kan være string eller null (hvis "varierer")
+            setFields((p) => ({ ...p, wakeTimeWorkday: (v as string) ?? null }));
             animateAndGoNext();
           }}
           options={halfHourOptions}
@@ -203,7 +193,7 @@ export default function TestPage() {
     // w2: sleepHoursBucketWorkday
     if (key === "sleepHoursBucketWorkday") {
       return (
-        <ChipSelect<SleepHoursBucket>
+        <ChipSelect
           value={fields.sleepHoursBucketWorkday}
           onChange={(v) => {
             setFields((p) => ({
@@ -222,14 +212,15 @@ export default function TestPage() {
     // w3: weekendWakeShift (number timer)
     if (key === "weekendWakeShift") {
       return (
-        <ChipSelect<number>
+        <ChipSelect
           value={
             typeof fields.weekendWakeShift === "number"
-              ? fields.weekendWakeShift
+              ? String(fields.weekendWakeShift)
               : undefined
           }
           onChange={(v) => {
-            setFields((p) => ({ ...p, weekendWakeShift: v as number }));
+            const num = v == null ? null : Number(v);
+            setFields((p) => ({ ...p, weekendWakeShift: num as any }));
             animateAndGoNext();
           }}
           options={weekendShiftOptions}
@@ -245,7 +236,7 @@ export default function TestPage() {
         <ChipSelect
           value={fields.wakeTimeUsual ?? undefined}
           onChange={(v) => {
-            setFields((p) => ({ ...p, wakeTimeUsual: v as string | null }));
+            setFields((p) => ({ ...p, wakeTimeUsual: (v as string) ?? null }));
             animateAndGoNext();
           }}
           options={halfHourOptions}
@@ -258,10 +249,10 @@ export default function TestPage() {
     // w5: shiftWork (enum)
     if (key === "shiftWork") {
       return (
-        <ChipSelect<ShiftWork>
+        <ChipSelect
           value={fields.shiftWork ?? undefined}
           onChange={(v) => {
-            setFields((p) => ({ ...p, shiftWork: v as ShiftWork }));
+            setFields((p) => ({ ...p, shiftWork: (v as ShiftWork) ?? "none" }));
             animateAndGoNext();
           }}
           options={shiftWorkOptions}
@@ -274,10 +265,10 @@ export default function TestPage() {
     // w6: napFreq
     if (key === "napFreq") {
       return (
-        <ChipSelect<"never" | "sometimes" | "often">
+        <ChipSelect
           value={fields.napFreq ?? undefined}
           onChange={(v) => {
-            setFields((p) => ({ ...p, napFreq: v as any }));
+            setFields((p) => ({ ...p, napFreq: (v as any) ?? "never" }));
             animateAndGoNext();
           }}
           options={napFreqOptions}
