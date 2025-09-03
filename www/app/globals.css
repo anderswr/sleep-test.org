@@ -371,3 +371,15 @@ p{ line-height: 1.55; }
   .topbar { flex-wrap: wrap; gap: 10px; }
   .nav { flex-wrap: wrap; }
 }
+/* --- Fix flex overflow on the progress row --- */
+.stage-head .row { max-width: 100%; }
+
+.stage-head .progress {
+  flex: 1 1 0%;
+  min-width: 0;        /* allow shrinking inside flex row */
+  max-width: 100%;
+}
+
+/* Belt-and-suspenders: prevent any chip/grids from expanding layout */
+.center-wrap, .q-card { max-width: 100%; }
+.chipselect { max-width: 100%; overflow-x: auto; }
