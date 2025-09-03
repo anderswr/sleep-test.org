@@ -212,7 +212,7 @@
     "no_alcohol_late": "Skip alcohol close to bedtime – it fragments sleep.",
     "no_big_meals_late": "Avoid large, heavy meals right before bed; choose a light snack if needed."
   },
-  "env": {
+  "environment": {
     "keep_cool_dark": "Keep the bedroom cool, dark, and uncluttered – make the bed a sleep cue.",
     "test_blackout": "Try blackout shades/eye mask and dim evening lighting.",
     "noise_control": "Tame noise (earplugs, white noise, steady background sound) if needed.",
