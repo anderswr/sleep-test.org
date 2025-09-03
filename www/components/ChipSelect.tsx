@@ -2,18 +2,21 @@
 
 import * as React from "react";
 
-export type ChipOption<T = any> = {
-  value: T;              // kan være string | number | null
-  label: string;         // visningstekst
-  title?: string;        // valgfri tooltip
+/** Enkelt option-format som funker for string/number/null. */
+export type ChipValue = string | number | null | undefined;
+
+export type ChipOption = {
+  value: ChipValue;     // string | number | null
+  label: string;        // visningstekst
+  title?: string;       // valgfri tooltip
 };
 
-type Props<T = any> = {
-  value?: T;
-  onChange: (v: T) => void;
+type Props = {
+  value?: ChipValue;
+  onChange: (v: ChipValue) => void;
 
   /** Liste over valg (rekkefølgen brukes som er). */
-  options: ChipOption<T>[];
+  options: ChipOption[];
 
   /** Hvis satt, rendrer en ekstra chip først med value=null og denne labelen. */
   nullLabel?: string;
@@ -36,7 +39,7 @@ type Props<T = any> = {
  * Bruk:
  *  <ChipSelect
  *    value={fields.sleepHoursBucketWorkday}
- *    onChange={(v) => setFields(p => ({...p, sleepHoursBucketWorkday: v }))}
+ *    onChange={(v) => setFields(p => ({...p, sleepHoursBucketWorkday: v as any }))}
  *    options={[
  *      { value: "<6", label: "<6 t" },
  *      { value: "6-7", label: "6–7 t" },
@@ -46,7 +49,7 @@ type Props<T = any> = {
  *    ariaLabel="Søvnlengde"
  *  />
  */
-export default function ChipSelect<T = any>({
+export default function ChipSelect({
   value,
   onChange,
   options,
@@ -55,10 +58,10 @@ export default function ChipSelect<T = any>({
   size = "md",
   disabled = false,
   className,
-}: Props<T>) {
-  const merged: ChipOption<T>[] = React.useMemo(() => {
+}: Props) {
+  const merged: ChipOption[] = React.useMemo(() => {
     if (typeof nullLabel === "string") {
-      return [{ value: null as any as T, label: nullLabel }, ...options];
+      return [{ value: null, label: nullLabel }, ...options];
     }
     return options;
   }, [options, nullLabel]);
@@ -144,6 +147,6 @@ export function pad(n: number) { return n < 10 ? `0${n}` : `${n}`; }
 export function timesToOptions(
   times: string[],
   titlePrefix?: string
-): ChipOption<string>[] {
+): ChipOption[] {
   return times.map((t) => ({ value: t, label: t, title: titlePrefix ? `${titlePrefix} ${t}` : t }));
 }
