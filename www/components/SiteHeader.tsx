@@ -4,6 +4,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useI18n } from "@/app/providers/I18nProvider";
 import { t } from "@/lib/i18n";
+import Image from "next/image";
 import * as React from "react";
 
 export default function SiteHeader() {
@@ -21,10 +22,17 @@ export default function SiteHeader() {
 
   return (
     <header className="topbar" style={{ gap: 16 }}>
-      {/* Left: brand + nav */}
+      {/* Left: logo + nav */}
       <div className="row" style={{ gap: 24 }}>
-        <Link href="/" className="font-bold text-lg">
-          {t(dict, "ui.home.title", "Sleep Test-fallback")}
+        <Link href="/" className="row" style={{ gap: 8, alignItems: "center" }}>
+          <Image
+            src="/favicon.ico"
+            alt="Sleep Test"
+            width={28}
+            height={28}
+            style={{ borderRadius: 6 }}
+          />
+          <span className="sr-only">{t(dict, "ui.home.title", "Sleep Test")}</span>
         </Link>
         <nav className="nav">
           <NavItem href="/" k="ui.nav.home" />
@@ -35,7 +43,7 @@ export default function SiteHeader() {
         </nav>
       </div>
 
-      {/* Right: modern-ish language select */}
+      {/* Right: language select */}
       <div>
         <label className="visually-hidden" htmlFor="langselect">
           Language
@@ -57,12 +65,14 @@ export default function SiteHeader() {
             <option value="nb">Norsk</option>
             <option value="en">English</option>
           </select>
-          <span className="select-caret" aria-hidden>▾</span>
+          <span className="select-caret" aria-hidden>
+            ▾
+          </span>
         </div>
       </div>
 
       <style jsx>{`
-        .visually-hidden {
+        .sr-only {
           position: absolute;
           width: 1px;
           height: 1px;
