@@ -48,9 +48,9 @@ export const QUESTION_BANK: Question[] = [
   { id: "q19", kind: "likert", category: CategoryId.Hygiene,  textKey: "q.hygiene.hard_exercise_late" },
 
   // 6) Søvnmiljø (Environment)
-  { id: "q20", kind: "likert", category: CategoryId.Environment, textKey: "q.env.too_light_noise_temp" },
-  { id: "q21", kind: "likert", category: CategoryId.Environment, textKey: "q.env.uncomfortable_bed" },
-  { id: "q22", kind: "likert", category: CategoryId.Environment, textKey: "q.env.bad_associations" },
+  { id: "q20", kind: "likert", category: CategoryId.Environment, textKey: "q.enviroment.too_light_noise_temp" },
+  { id: "q21", kind: "likert", category: CategoryId.Environment, textKey: "q.enviroment.uncomfortable_bed" },
+  { id: "q22", kind: "likert", category: CategoryId.Environment, textKey: "q.envviroment.bad_associations" },
 
   // 7) Snorking & pustesignal (Breathing)
   { id: "q23", kind: "likert", category: CategoryId.Breathing, textKey: "q.breathing.loud_snoring" },
