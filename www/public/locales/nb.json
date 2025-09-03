@@ -211,7 +211,7 @@
     "no_alcohol_late": "Styr unna alkohol nær leggetid – det kan gi lett, oppstykket søvn.",
     "no_big_meals_late": "Unngå store, tunge måltid rett før leggetid; velg lett kveldsmat."
   },
-  "env": {
+  "environment": {
     "keep_cool_dark": "Hold soverommet kjølig, mørkt og ryddig – gjør senga til et sove-signal.",
     "test_blackout": "Prøv mørklegging/øyemaske og dempet belysning på kvelden.",
     "noise_control": "Dempe støy (ørepropper, hvit støy, jevn bakgrunnslyd) om nødvendig.",
