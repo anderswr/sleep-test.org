@@ -16,7 +16,7 @@ const RESULT_TIP_KEYS = {
   quality: { green: ["tips.quality.track_triggers"], yellow: ["tips.quality.address_disruptors"], red: ["tips.quality.consult_if_pain"] },
   daytime: { green: ["tips.daytime.morning_light"], yellow: ["tips.daytime.activity_breaks"], red: ["tips.daytime.consider_medical"] },
   hygiene: { green: ["tips.hygiene.keep_it_up"], yellow: ["tips.hygiene.screens_off_60", "tips.hygiene.limit_caffeine"], red: ["tips.hygiene.no_alcohol_late", "tips.hygiene.no_big_meals_late"] },
-  environment: { green: ["tips.env.keep_cool_dark"], yellow: ["tips.env.test_blackout", "tips.env.noise_control"], red: ["tips.env.try_new_pillow", "tips.env.cooler_temp"] },
+  environment: { green: ["tips.environment.keep_cool_dark"], yellow: ["tips.environment.test_blackout", "tips.environment.noise_control"], red: ["tips.environment.try_new_pillow", "tips.environment.cooler_temp"] },
   breathing: { green: ["tips.breathing.side_sleep"], yellow: ["tips.breathing.reduce_evening_alcohol"], red: ["tips.breathing.consider_gp_check"] },
 } as const;
 
