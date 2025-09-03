@@ -2,10 +2,49 @@ import { CategoryId, Question } from "@/lib/types";
 
 // Kun nøkler – all tekst kommer fra /locales/*.json
 export const QUESTION_BANK: Question[] = [
-  // 1) Søvnmønster & varighet (Pattern)
-  { id: "q1", kind: "likert", category: CategoryId.Pattern,   textKey: "q.pattern.too_short" },
-  { id: "q2", kind: "likert", category: CategoryId.Pattern,   textKey: "q.pattern.irregular_times" },
-  { id: "q3", kind: "likert", category: CategoryId.Pattern,   textKey: "q.pattern.late_long_naps" },
+  // 1) Søvnmønster & varighet (Pattern) – nå med enklere chips
+  {
+    id: "w1",
+    kind: "field",
+    category: CategoryId.Pattern,
+    textKey: "f.wake_work.title",
+    field: { subtype: "select", key: "wakeTimeWorkday" },
+  },
+  {
+    id: "w2",
+    kind: "field",
+    category: CategoryId.Pattern,
+    textKey: "f.sleep_bucket.title",
+    field: { subtype: "select", key: "sleepHoursBucketWorkday", optionsKey: "f.sleep_bucket.options" },
+  },
+  {
+    id: "w3",
+    kind: "field",
+    category: CategoryId.Pattern,
+    textKey: "f.weekend_shift.title",
+    field: { subtype: "select", key: "weekendWakeShift", optionsKey: "f.weekend_shift.options" },
+  },
+  {
+    id: "w4",
+    kind: "field",
+    category: CategoryId.Pattern,
+    textKey: "f.wake_usual.title",
+    field: { subtype: "select", key: "wakeTimeUsual" },
+  },
+  {
+    id: "w5",
+    kind: "field",
+    category: CategoryId.Pattern,
+    textKey: "f.shift_work.title",
+    field: { subtype: "select", key: "shiftWork", optionsKey: "f.shift_work.options" },
+  },
+  {
+    id: "w6",
+    kind: "field",
+    category: CategoryId.Pattern,
+    textKey: "f.nap_freq.title",
+    field: { subtype: "select", key: "napFreq", optionsKey: "f.nap_freq.options" },
+  },
 
   // 2) Innsovning & natt (Insomnia)
   { id: "q4", kind: "likert", category: CategoryId.Insomnia,  textKey: "q.insomnia.long_sleep_onset" },
@@ -41,9 +80,12 @@ export const QUESTION_BANK: Question[] = [
   { id: "q24", kind: "likert", category: CategoryId.Breathing, textKey: "q.breathing.observed_apneas" },
   { id: "q25", kind: "likert", category: CategoryId.Breathing, textKey: "q.breathing.daytime_tired_despite" },
 
-  // Konkrete felt (frivillig, påvirker ikke skår direkte)
-  { id: "f1", kind: "field", category: CategoryId.Pattern,   textKey: "f.bedtime",         field: { subtype: "time",   key: "bedtime" } },
-  { id: "f2", kind: "field", category: CategoryId.Pattern,   textKey: "f.waketime",        field: { subtype: "time",   key: "waketime" } },
-  { id: "f3", kind: "field", category: CategoryId.Pattern,   textKey: "f.sleep_hours",     field: { subtype: "number", key: "sleepHours" } },
-  { id: "f4", kind: "field", category: CategoryId.Breathing, textKey: "f.hypertension_dx", field: { subtype: "select", key: "hypertensionDx", optionsKey: "f.hypertension_dx.options" } },
+  // Blodtrykk (siste – autosubmit)
+  {
+    id: "f4",
+    kind: "field",
+    category: CategoryId.Breathing,
+    textKey: "f.hypertension_dx",
+    field: { subtype: "select", key: "hypertensionDx", optionsKey: "f.hypertension_dx.options" },
+  },
 ];
