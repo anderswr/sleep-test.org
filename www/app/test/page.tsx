@@ -37,10 +37,11 @@ function isAnswered(q: Question, answers: AnswerMap, fields: FieldMap) {
   return val !== undefined && val !== ""; // null er lov
 }
 
-// Hent opsjoner fra i18n-objekt (object -> [{value,label}])
+// Hent opsjoner fra i18n-objekt (object -> [{value,label}]) – typesikkert
 function optionsFromDict(dict: any, baseKey: string): ChipOption[] {
-  const obj = t(dict, baseKey) as Record<string, string> | undefined;
-  if (!obj || typeof obj !== "object") return [];
+  const anyVal = t(dict, baseKey);
+  if (!anyVal || typeof anyVal !== "object") return [];
+  const obj = anyVal as Record<string, unknown>;
   return Object.entries(obj).map(([value, label]) => ({
     value,
     label: String(label),
@@ -134,7 +135,7 @@ export default function TestPage() {
   const sleepBucketOptions = useMemo<ChipOption[]>(() => {
     // fra i18n: f.sleep_bucket.options
     const base = optionsFromDict(dict, "f.sleep_bucket.options");
-    // prøv å rendrere i ønsket rekkefølge hvis eksisterer:
+    // ønsket rekkefølge hvis tilgjengelig:
     const order: SleepHoursBucket[] = [
       "<6",
       "6-7",
@@ -145,18 +146,15 @@ export default function TestPage() {
       "unknown",
     ];
     const byVal = new Map(base.map((o) => [o.value, o]));
-    const ordered = order
+    const arranged = order
       .map((v) => byVal.get(v))
       .filter(Boolean) as ChipOption[];
-    // hvis i18n ikke hadde alt, fall tilbake til base
-    return ordered.length ? ordered : base;
+    return arranged.length ? arranged : base;
   }, [dict]);
 
   const weekendShiftOptions = useMemo<ChipOption[]>(() => {
     // fra i18n: f.weekend_shift.options (keys: "0","1.5","3",...)
-    const raw = optionsFromDict(dict, "f.weekend_shift.options");
-    // behold som string-values; vi caster til number ved setFields
-    return raw;
+    return optionsFromDict(dict, "f.weekend_shift.options");
   }, [dict]);
 
   const shiftWorkOptions = useMemo<ChipOption[]>(() => {
@@ -209,7 +207,7 @@ export default function TestPage() {
       );
     }
 
-    // w3: weekendWakeShift (number timer)
+    // w3: weekendWakeShift (number timer – vi lagrer som number)
     if (key === "weekendWakeShift") {
       return (
         <ChipSelect
