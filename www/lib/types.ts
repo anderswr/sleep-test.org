@@ -1,4 +1,4 @@
-export const BANK_VERSION = "1.0.0" as const;
+export const BANK_VERSION = "1.1.0" as const;
 
 export enum CategoryId {
   Pattern = "pattern",
@@ -43,10 +43,36 @@ export type Question = LikertQuestion | FieldQuestion;
 
 export type AnswerMap = Record<string, LikertValue>;
 
+/**
+ * Nye hjelpetyp­er for forenklet mønsterkartlegging
+ * (chips i stedet for tidslinjer/slider).
+ */
+export type SleepHoursBucket =
+  | "<6" | "6-7" | "7-8" | "8-9" | "9-10" | ">10" | "unknown";
+
+export type ShiftWork =
+  | "none" | "rotating" | "night" | "evening_morning";
+
+/**
+ * Felt som lagres sammen med svarene.
+ * Vi beholder legacy-feltene (bedtime/waketime/sleepHours)
+ * for bakoverkompatibilitet, men bruker primært de nye.
+ */
 export type FieldMap = {
+  // Legacy (kan fortsatt komme fra eldre klienter)
   bedtime?: string;            // "23:15"
   waketime?: string;           // "07:00"
   sleepHours?: number;         // 7.2
+
+  // Nye, enklere felter
+  wakeTimeWorkday?: string | null;          // "HH:MM" eller null (varierer)
+  sleepHoursBucketWorkday?: SleepHoursBucket;
+  weekendWakeShift?: number | null;         // i timer (1.5, 2.5, …) eller null (ikke relevant)
+  wakeTimeUsual?: string | null;            // fallback hvis ikke fast/arbeidsdag
+  shiftWork?: ShiftWork;
+  napFreq?: "never" | "sometimes" | "often";
+
+  // Øvrige
   hypertensionDx?: "yes" | "no" | "unknown";
 };
 
