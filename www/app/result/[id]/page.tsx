@@ -11,12 +11,17 @@ import { CategoryId } from "@/lib/types";
 
 type ResultDoc = {
   id: string;
-  sleepScore: number; // 0–100 (høyere = bedre)
-  totalRaw: number;   // 0–100 (høyere = verre)
-  categoryScores: Record<string, number>; // 0–100 (høyere = verre)
+  sleepScore: number;
+  totalRaw: number;
+  categoryScores: Record<string, number>;
   flags?: { osaSignal?: boolean; excessiveSleepiness?: boolean };
   suggestedTips?: Record<string, string[]>;
 };
+
+function decapitalize(s: string) {
+  if (!s) return s;
+  return s.charAt(0).toLowerCase() + s.slice(1);
+}
 
 export default function ResultPage({ params }: { params: { id: string } }) {
   const { dict } = useI18n();
@@ -37,10 +42,7 @@ export default function ResultPage({ params }: { params: { id: string } }) {
   }, [params.id]);
 
   const entries = useMemo(
-    () =>
-      Object.entries((data?.categoryScores || {}) as Record<string, number>) as Array<
-        [CategoryId, number]
-      >,
+    () => Object.entries((data?.categoryScores || {}) as Record<string, number>) as Array<[CategoryId, number]>,
     [data]
   );
 
@@ -58,6 +60,8 @@ export default function ResultPage({ params }: { params: { id: string } }) {
       </>
     );
   }
+
+  const ringColor = data ? bucketColor(data.totalRaw) : "green";
 
   return (
     <>
@@ -87,6 +91,7 @@ export default function ResultPage({ params }: { params: { id: string } }) {
               <div className="score-hero__right">
                 <div
                   className="score-ring"
+                  data-color={ringColor}
                   aria-label={t(dict, "ui.result.sleep_score", "Søvn-score")}
                   title={t(dict, "ui.result.sleep_score", "Søvn-score")}
                 >
@@ -98,12 +103,15 @@ export default function ResultPage({ params }: { params: { id: string } }) {
               </div>
             </section>
 
-            {/* Kategorier – vises som høyere = bedre */}
+            {/* Kategorier */}
             <section className="grid-cards mt-6">
               {entries.map(([cat, rawVal]) => {
-                const raw = Number(rawVal);             // 0–100 (høyere = verre)
-                const display = 100 - raw;              // 0–100 (høyere = bedre)
-                const color = bucketColor(raw);         // farger basert på rå (dårlig = rød)
+                const raw = Number(rawVal);
+                const display = 100 - raw;
+                const color = bucketColor(raw).replace("yellow", "orange"); // normalize
+                const desc = t(dict, `category.${cat}.desc`, "");
+                const lead = t(dict, `ui.result.lead.${color}`, "");
+
                 return (
                   <article key={cat} className="cat-card" data-color={color}>
                     <div className="cat-card__head">
@@ -112,14 +120,12 @@ export default function ResultPage({ params }: { params: { id: string } }) {
                       </span>
                       <div style={{ display: "flex", alignItems: "baseline", gap: 8 }}>
                         <strong className="cat-card__score">{display}</strong>
-                        <span className="muted" style={{ fontSize: ".85rem" }}>
-                          / 100
-                        </span>
+                        <span className="muted" style={{ fontSize: ".85rem" }}>/ 100</span>
                       </div>
                     </div>
 
                     <p className="muted">
-                      {t(dict, `category.${cat}.desc`, "")}
+                      <strong>{lead}</strong> {decapitalize(desc)}
                     </p>
 
                     {(data.suggestedTips?.[cat] || []).length > 0 && (
@@ -153,6 +159,22 @@ export default function ResultPage({ params }: { params: { id: string } }) {
                 )}
               </section>
             )}
+
+            {/* Farger for ringen */}
+            <style jsx>{`
+              .score-ring[data-color="green"] {
+                border-color: #86efac;
+                background: #f0fdf4;
+              }
+              .score-ring[data-color="orange"] {
+                border-color: #fdba74;
+                background: #fff7ed;
+              }
+              .score-ring[data-color="red"] {
+                border-color: #fecaca;
+                background: #fef2f2;
+              }
+            `}</style>
           </>
         )}
       </main>
