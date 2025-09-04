@@ -11,9 +11,9 @@ import { CategoryId } from "@/lib/types";
 
 type ResultDoc = {
   id: string;
-  sleepScore: number;
-  totalRaw: number;
-  categoryScores: Record<string, number>;
+  sleepScore: number; // 0–100 (høyere = bedre)
+  totalRaw: number;   // 0–100 (høyere = verre)
+  categoryScores: Record<string, number>; // 0–100 (høyere = verre)
   flags?: { osaSignal?: boolean; excessiveSleepiness?: boolean };
   suggestedTips?: Record<string, string[]>;
 };
@@ -37,7 +37,10 @@ export default function ResultPage({ params }: { params: { id: string } }) {
   }, [params.id]);
 
   const entries = useMemo(
-    () => Object.entries((data?.categoryScores || {}) as Record<string, number>) as Array<[CategoryId, number]>,
+    () =>
+      Object.entries((data?.categoryScores || {}) as Record<string, number>) as Array<
+        [CategoryId, number]
+      >,
     [data]
   );
 
@@ -68,8 +71,8 @@ export default function ResultPage({ params }: { params: { id: string } }) {
             <section className="card score-hero">
               <div className="score-hero__left">
                 <h1 className="mb-2">{t(dict, "ui.result.title", "Resultat")}</h1>
-                <div className="row" style={{gap:8, alignItems:"center"}}>
-                  <code className="px-1 py-0.5" style={{background:"#f3f4f6", borderRadius:6}}>
+                <div className="row" style={{ gap: 8, alignItems: "center" }}>
+                  <code className="px-1 py-0.5" style={{ background: "#f3f4f6", borderRadius: 6 }}>
                     {data.id}
                   </code>
                   <button
@@ -82,31 +85,48 @@ export default function ResultPage({ params }: { params: { id: string } }) {
                 </div>
               </div>
               <div className="score-hero__right">
-                <div className="score-ring" aria-label={t(dict, "ui.result.sleep_score", "Søvn-score")}>
+                <div
+                  className="score-ring"
+                  aria-label={t(dict, "ui.result.sleep_score", "Søvn-score")}
+                  title={t(dict, "ui.result.sleep_score", "Søvn-score")}
+                >
                   <div className="score-ring__value">{Number(data.sleepScore)}</div>
-                  <div className="score-ring__label">{t(dict, "ui.result.sleep_score", "Søvn-score")}</div>
+                  <div className="score-ring__label">
+                    {t(dict, "ui.result.sleep_score", "Søvn-score")}
+                  </div>
                 </div>
               </div>
             </section>
 
-            {/* Kategorier */}
+            {/* Kategorier – vises som høyere = bedre */}
             <section className="grid-cards mt-6">
-              {entries.map(([cat, val]) => {
-                const color = bucketColor(Number(val));
+              {entries.map(([cat, rawVal]) => {
+                const raw = Number(rawVal);             // 0–100 (høyere = verre)
+                const display = 100 - raw;              // 0–100 (høyere = bedre)
+                const color = bucketColor(raw);         // farger basert på rå (dårlig = rød)
                 return (
                   <article key={cat} className="cat-card" data-color={color}>
                     <div className="cat-card__head">
                       <span className="pill" data-color={color}>
                         {t(dict, `category.${cat}.name`, String(cat))}
                       </span>
-                      <strong className="cat-card__score">{Number(val)}</strong>
+                      <div style={{ display: "flex", alignItems: "baseline", gap: 8 }}>
+                        <strong className="cat-card__score">{display}</strong>
+                        <span className="muted" style={{ fontSize: ".85rem" }}>
+                          / 100
+                        </span>
+                      </div>
                     </div>
-                    <p className="muted">{t(dict, `category.${cat}.desc`, "")}</p>
 
-                    {/* Tips */}
+                    <p className="muted">
+                      {t(dict, `category.${cat}.desc`, "")}
+                    </p>
+
                     {(data.suggestedTips?.[cat] || []).length > 0 && (
                       <>
-                        <h4 className="mb-2 mt-6">{t(dict, "ui.result.how_to_improve", "Hvordan forbedre dette:")}</h4>
+                        <h4 className="mb-2 mt-6">
+                          {t(dict, "ui.result.how_to_improve", "Hvordan forbedre dette:")}
+                        </h4>
                         <ul className="tips-list">
                           {(data.suggestedTips?.[cat] || []).map((tipKey) => (
                             <li key={`${cat}-${tipKey}`}>
@@ -126,10 +146,10 @@ export default function ResultPage({ params }: { params: { id: string } }) {
               <section className="card mt-6">
                 <h2 className="mb-2">⚠️</h2>
                 {data.flags?.osaSignal && (
-                  <p style={{color:"var(--bad)"}}>{t(dict, "flags.osa_signal")}</p>
+                  <p style={{ color: "var(--bad)" }}>{t(dict, "flags.osa_signal")}</p>
                 )}
                 {data.flags?.excessiveSleepiness && (
-                  <p style={{color:"#f59e0b"}}>{t(dict, "flags.excessive_sleepiness")}</p>
+                  <p style={{ color: "#f59e0b" }}>{t(dict, "flags.excessive_sleepiness")}</p>
                 )}
               </section>
             )}
