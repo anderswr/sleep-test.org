@@ -1,76 +1,111 @@
 "use client";
 
 import * as React from "react";
-import Link from "next/link";
+import SiteHeader from "@/components/SiteHeader";
+import SiteFooter from "@/components/SiteFooter";
 import { useI18n } from "@/app/providers/I18nProvider";
 import { t } from "@/lib/i18n";
-import { marked } from "marked";
 
-type ArticleItem = { slug: string; title: string; summary: string };
-
-async function fetchIndex(lang: string): Promise<ArticleItem[]> {
-  const r = await fetch(`/articles/${lang}/index.json`, { cache: "no-store" });
-  if (!r.ok) throw new Error("index");
-  return r.json();
+// If "marked" is missing, the try/catch gives a graceful fallback.
+let markedParse: ((md: string) => string) | null = null;
+async function ensureMarked() {
+  if (markedParse) return markedParse;
+  try {
+    const { marked } = await import("marked");
+    markedParse = (md: string) => String(marked.parse(md));
+  } catch {
+    // ultra-basic fallback: wrap paragraphs and preserve line breaks
+    markedParse = (md: string) =>
+      md
+        .split(/\n{2,}/)
+        .map((p) => `<p>${p.replace(/\n/g, "<br/>")}</p>`)
+        .join("\n");
+  }
+  return markedParse;
 }
 
-async function fetchMd(lang: string, slug: string): Promise<string> {
-  const r = await fetch(`/articles/${lang}/${slug}.md`, { cache: "no-store" });
-  if (!r.ok) throw new Error("md");
-  return r.text();
-}
+const VALID = new Set<string>([
+  "pattern",
+  "insomnia",
+  "quality",
+  "daytime",
+  "hygiene",
+  "environment",
+  "breathing",
+  // plus any other slugs you add
+]);
 
 export default function ArticlePage({ params }: { params: { slug: string } }) {
-  const { lang } = useI18n();
-  const [html, setHtml] = React.useState<string>(""); 
+  const { slug } = params;
+  const { dict, lang } = useI18n();
+  const [html, setHtml] = React.useState<string>("");
   const [title, setTitle] = React.useState<string>("");
-  const [fellBack, setFellBack] = React.useState<boolean>(false);
+  const [loading, setLoading] = React.useState<boolean>(true);
 
   React.useEffect(() => {
     let cancelled = false;
 
-    async function load() {
-      async function tryLoad(l: string) {
-        const [index, md] = await Promise.all([
-          fetchIndex(l),
-          fetchMd(l, params.slug),
-        ]);
-        const item = index.find(i => i.slug === params.slug);
-        return { md, title: item?.title ?? params.slug };
-      }
-
+    (async () => {
+      setLoading(true);
       try {
-        const { md, title } = await tryLoad(lang);
-        if (!cancelled) { setTitle(title); setHtml(String(marked.parse(md))); setFellBack(false); }
-      } catch {
-        try {
-          const { md, title } = await tryLoad("en");
-          if (!cancelled) { setTitle(title); setHtml(String(marked.parse(md))); setFellBack(true); }
-        } catch {
+        if (!VALID.has(slug)) {
           if (!cancelled) {
             setTitle("Not found");
-            setHtml(String(marked.parse("# Not found")));
-            setFellBack(false);
+            setHtml("<p>Not found</p>");
           }
+          return;
         }
-      }
-    }
 
-    load();
-    return () => { cancelled = true; };
-  }, [lang, params.slug]);
+        // load and parse markdown (lang -> fallback en)
+        const parse = await ensureMarked();
+
+        async function fetchMD(l: string) {
+          const res = await fetch(`/articles/${l}/${slug}.md`, { cache: "no-store" });
+          return res.ok ? res.text() : null;
+        }
+
+        let md = await fetchMD(lang);
+        if (!md) md = await fetchMD("en");
+        if (!md) {
+          if (!cancelled) {
+            setTitle("Not found");
+            setHtml("<p>Not found</p>");
+          }
+          return;
+        }
+
+        // optional: extract first heading as title (lines starting with "# ")
+        const firstH1 = md.match(/^\s*#\s+(.+)$/m);
+        const derivedTitle = firstH1?.[1]?.trim() ?? slug;
+
+        if (!cancelled) {
+          setTitle(derivedTitle);
+          setHtml(parse(md));
+        }
+      } finally {
+        if (!cancelled) setLoading(false);
+      }
+    })();
+
+    return () => {
+      cancelled = true;
+    };
+  }, [slug, lang]);
 
   return (
-    <main className="container">
-      <nav className="mb-4">
-        <Link className="btn" href="/articles">← Back</Link>
-      </nav>
-      <article className="card prose max-w-none" dangerouslySetInnerHTML={{ __html: html || "" }} />
-      {fellBack && (
-        <p className="muted mt-6">
-          (Showing English version because the article is not available in the selected language.)
-        </p>
-      )}
-    </main>
+    <>
+      <SiteHeader />
+      <main className="container">
+        <article className="card prose max-w-none">
+          <h1 className="mb-2">{title || t(dict, "ui.articles.card.title", "Article")}</h1>
+          {loading ? (
+            <p className="muted">Loading…</p>
+          ) : (
+            <div dangerouslySetInnerHTML={{ __html: html }} />
+          )}
+        </article>
+      </main>
+      <SiteFooter />
+    </>
   );
 }
