@@ -64,6 +64,7 @@
         "green": "You are doing well on ",
         "orange": "You have room for improvement in ",
         "red": "You should change your habits for "
+       }
     },
     "common": {
       "sending": "Sending…",
