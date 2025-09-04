@@ -1,76 +1,76 @@
 "use client";
 
 import * as React from "react";
-import SiteHeader from "@/components/SiteHeader";
-import SiteFooter from "@/components/SiteFooter";
+import Link from "next/link";
 import { useI18n } from "@/app/providers/I18nProvider";
+import { t } from "@/lib/i18n";
 import { marked } from "marked";
 
-export default function ArticlePage({ params }: { params: { slug: string } }) {
-  const { slug } = params;
-  const { lang } = useI18n();
+type ArticleItem = { slug: string; title: string; summary: string };
 
-  const [html, setHtml] = React.useState<string>("");
-  const [notFound, setNotFound] = React.useState(false);
-  const [usedLang, setUsedLang] = React.useState(lang);
+async function fetchIndex(lang: string): Promise<ArticleItem[]> {
+  const r = await fetch(`/articles/${lang}/index.json`, { cache: "no-store" });
+  if (!r.ok) throw new Error("index");
+  return r.json();
+}
+
+async function fetchMd(lang: string, slug: string): Promise<string> {
+  const r = await fetch(`/articles/${lang}/${slug}.md`, { cache: "no-store" });
+  if (!r.ok) throw new Error("md");
+  return r.text();
+}
+
+export default function ArticlePage({ params }: { params: { slug: string } }) {
+  const { lang } = useI18n();
+  const [html, setHtml] = React.useState<string>(""); 
+  const [title, setTitle] = React.useState<string>("");
+  const [fellBack, setFellBack] = React.useState<boolean>(false);
 
   React.useEffect(() => {
-    let alive = true;
-    setNotFound(false);
+    let cancelled = false;
 
-    async function fetchMd(l: string) {
-      const res = await fetch(`/articles/${l}/${slug}.md`, { cache: "no-store" });
-      if (!res.ok) return null;
-      return res.text();
+    async function load() {
+      async function tryLoad(l: string) {
+        const [index, md] = await Promise.all([
+          fetchIndex(l),
+          fetchMd(l, params.slug),
+        ]);
+        const item = index.find(i => i.slug === params.slug);
+        return { md, title: item?.title ?? params.slug };
+      }
+
+      try {
+        const { md, title } = await tryLoad(lang);
+        if (!cancelled) { setTitle(title); setHtml(String(marked.parse(md))); setFellBack(false); }
+      } catch {
+        try {
+          const { md, title } = await tryLoad("en");
+          if (!cancelled) { setTitle(title); setHtml(String(marked.parse(md))); setFellBack(true); }
+        } catch {
+          if (!cancelled) {
+            setTitle("Not found");
+            setHtml(String(marked.parse("# Not found")));
+            setFellBack(false);
+          }
+        }
+      }
     }
 
-    (async () => {
-      let md = await fetchMd(lang);
-      let actualLang = lang;
-
-      if (!md) {
-        md = await fetchMd("en");
-        actualLang = "en";
-      }
-
-      if (!alive) return;
-
-      if (!md) {
-        setNotFound(true);
-        setHtml("# Not found\nThis article is not available.");
-      } else {
-        setUsedLang(actualLang);
-        setHtml(String(marked.parse(md)));
-      }
-    })();
-
-    return () => { alive = false; };
-  }, [slug, lang]);
+    load();
+    return () => { cancelled = true; };
+  }, [lang, params.slug]);
 
   return (
-    <>
-      <SiteHeader />
-      <main className="container">
-        {notFound ? (
-          <div className="card">
-            <h1>Not found</h1>
-            <p className="muted">This article isn’t available in any language.</p>
-          </div>
-        ) : (
-          <>
-            <article
-              className="card prose max-w-none"
-              dangerouslySetInnerHTML={{ __html: html }}
-            />
-            {usedLang !== lang && (
-              <p className="muted" style={{ marginTop: 12 }}>
-                (Showing English version – not yet available in your language)
-              </p>
-            )}
-          </>
-        )}
-      </main>
-      <SiteFooter />
-    </>
+    <main className="container">
+      <nav className="mb-4">
+        <Link className="btn" href="/articles">← Back</Link>
+      </nav>
+      <article className="card prose max-w-none" dangerouslySetInnerHTML={{ __html: html || "" }} />
+      {fellBack && (
+        <p className="muted mt-6">
+          (Showing English version because the article is not available in the selected language.)
+        </p>
+      )}
+    </main>
   );
 }
