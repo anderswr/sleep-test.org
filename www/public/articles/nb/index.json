@@ -1,0 +1,9 @@
+[
+  { "slug": "pattern",   "title": "Søvnmønster & varighet", "summary": "Hvordan faste tider og søvnlengde påvirker søvnkvalitet – og enkle grep som virker." },
+  { "slug": "insomnia",  "title": "Innsovning & natt",      "summary": "Råd for inn- og gjennom­soving, og hva du gjør når du ligger våken." },
+  { "slug": "quality",   "title": "Søvnkvalitet",           "summary": "Hva som forstyrrer søvnen – og hvordan du gjør nettene roligere." },
+  { "slug": "daytime",   "title": "Dagtid & søvnighet",     "summary": "Lys, bevegelse og mikropauser – slik blir du mindre søvnig på dagtid." },
+  { "slug": "hygiene",   "title": "Søvnhygiene & rutiner",  "summary": "Skjerm, koffein, alkohol og kveldsrutine – gode vaner som gir bedre søvn." },
+  { "slug": "environment","title": "Søvnmiljø",             "summary": "Lys, støy, temperatur og seng – lag et rom som faktisk hjelper søvnen." },
+  { "slug": "breathing", "title": "Snorking & pustesignal", "summary": "Når snorking kan være et faresignal, og hva du kan gjøre med det." }
+]
