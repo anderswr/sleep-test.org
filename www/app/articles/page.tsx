@@ -1,27 +1,79 @@
 "use client";
 
-import SiteHeader from "@/components/SiteHeader";
-import SiteFooter from "@/components/SiteFooter";
+import Link from "next/link";
+import * as React from "react";
 import { useI18n } from "@/app/providers/I18nProvider";
 import { t } from "@/lib/i18n";
 
-export default function AboutPage() {
-  const { dict } = useI18n();
+type ArticleItem = {
+  slug: string;
+  title: string;
+  summary: string;
+};
+
+export default function ArticlesPage() {
+  const { dict, lang } = useI18n();
+  const [items, setItems] = React.useState<ArticleItem[] | null>(null);
+  const [loadedLang, setLoadedLang] = React.useState<string>("");
+
+  React.useEffect(() => {
+    let cancelled = false;
+
+    async function load() {
+      async function fetchIndex(l: string) {
+        const res = await fetch(`/articles/${l}/index.json`, { cache: "no-store" });
+        if (!res.ok) throw new Error("no index");
+        return (await res.json()) as ArticleItem[];
+      }
+
+      try {
+        const data = await fetchIndex(lang);
+        if (!cancelled) { setItems(data); setLoadedLang(lang); }
+      } catch {
+        // fallback til engelsk
+        try {
+          const data = await fetchIndex("en");
+          if (!cancelled) { setItems(data); setLoadedLang("en"); }
+        } catch {
+          if (!cancelled) setItems([]);
+        }
+      }
+    }
+
+    load();
+    return () => { cancelled = true; };
+  }, [lang]);
 
   return (
     <>
-      <SiteHeader />
-      <main className="container" style={{ flex: "1 1 auto" }}>
-        <article className="card" style={{ padding: 24 }}>
-          <h1 style={{ marginTop: 0 }}>{t(dict, "ui.articles.title", "About")}</h1>
-          <p className="muted">{t(dict, "ui.articles.intro")}</p>
-          <section id="privacy" style={{ marginTop: 28 }}>
-            <h2>{t(dict, "ui.about.privacy.title")}</h2>
-            <p>{t(dict, "ui.about.privacy.p1")}</p>
+      <main className="container">
+        <div className="card">
+          <h1 className="mb-2">{t(dict, "ui.articles.card.title", "Lær mer")}</h1>
+          <p className="muted">{t(dict, "ui.articles.card.text", "Korte artikler om søvn – skrevet for folk flest.")}</p>
+        </div>
+
+        {!items ? (
+          <div className="card"><p className="muted">Loading…</p></div>
+        ) : (
+          <section className="grid-cards mt-6">
+            {items.map(a => (
+              <article key={a.slug} className="cat-card">
+                <h3 style={{marginTop:0}}>{a.title}</h3>
+                <p className="muted" style={{marginBottom:12}}>{a.summary}</p>
+                <Link className="btn primary" href={`/articles/${a.slug}`}>
+                  {t(dict, "ui.common.read", "Les")}
+                </Link>
+              </article>
+            ))}
           </section>
-        </article>
+        )}
+
+        {items && loadedLang !== lang && (
+          <p className="muted mt-6">
+            (Denne listen vises på engelsk fordi vi ikke fant artikler på valgt språk.)
+          </p>
+        )}
       </main>
-      <SiteFooter />
     </>
   );
 }
