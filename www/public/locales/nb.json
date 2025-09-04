@@ -63,6 +63,7 @@
         "green": "Du svarer godt på ",
         "orange": "Du har forbedringspotensiale for ",
         "red": "Du bør endre vanene dine for "
+       }
     },
     "common": {
       "sending": "Sender…",
