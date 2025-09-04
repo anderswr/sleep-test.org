@@ -59,7 +59,11 @@
     "result": {
       "title": "Result",
       "sleep_score": "Sleep score",
-      "how_to_improve": "How to improve:"
+      "how_to_improve": "How to improve:",
+     "lead": {
+        "green": "You are doing well on ",
+        "orange": "You have room for improvement in ",
+        "red": "You should change your habits for "
     },
     "common": {
       "sending": "Sending…",

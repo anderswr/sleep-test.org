@@ -236,6 +236,11 @@ p{ line-height: 1.55; }
 .score-ring__value{ font-size: 42px; font-weight: 700; line-height: 1; }
 .score-ring__label{ font-size: .9rem; color: var(--muted); margin-top: 6px; }
 
+/* Ring-farger (dus grøn/oransje/rød) */
+.score-ring[data-color="green"]{ border-color:#86efac; background:#f0fdf4; }
+.score-ring[data-color="orange"]{ border-color:#fdba74; background:#fff7ed; }
+.score-ring[data-color="red"]{ border-color:#fecaca; background:#fef2f2; }
+
 .grid-cards{
   display:grid;
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
@@ -260,13 +265,15 @@ p{ line-height: 1.55; }
   border: 1px solid var(--border);
   background: #f9fafb;
 }
-.pill[data-color="green"]{ border-color: #84e1bc66; background: #ecfdf5; color:#065f46; }
-.pill[data-color="yellow"]{ border-color: #f2c66a66; background: #fff7ed; color:#7c2d12; }
-.pill[data-color="red"]{ border-color: #f4a3a366; background: #fef2f2; color:#7f1d1d; }
+/* GREEN / ORANGE / RED pills */
+.pill[data-color="green"]{ border-color:#84e1bc66; background:#ecfdf5; color:#065f46; }
+.pill[data-color="orange"]{ border-color:#fdba7466; background:#fff7ed; color:#7c2d12; }
+.pill[data-color="red"]{ border-color:#f4a3a366; background:#fef2f2; color:#7f1d1d; }
 
-.cat-card[data-color="green"]{ border-color: #84e1bc66; background: #f5fffb; }
-.cat-card[data-color="yellow"]{ border-color: #f2c66a66; background: #fffaf2; }
-.cat-card[data-color="red"]{ border-color: #f4a3a366; background: #fff5f5; }
+/* Card-bakgrunner i samme fargeskala */
+.cat-card[data-color="green"]{ border-color:#84e1bc66; background:#f5fffb; }
+.cat-card[data-color="orange"]{ border-color:#fdba7466; background:#fffaf2; }
+.cat-card[data-color="red"]{ border-color:#f4a3a366; background:#fff5f5; }
 
 /* =======================================================================
    SleepTimeline (legacy hooks kept if needed)
@@ -373,13 +380,11 @@ p{ line-height: 1.55; }
 }
 /* --- Fix flex overflow on the progress row --- */
 .stage-head .row { max-width: 100%; }
-
 .stage-head .progress {
   flex: 1 1 0%;
   min-width: 0;        /* allow shrinking inside flex row */
   max-width: 100%;
 }
-
 /* Belt-and-suspenders: prevent any chip/grids from expanding layout */
 .center-wrap, .q-card { max-width: 100%; }
 .chipselect { max-width: 100%; overflow-x: auto; }

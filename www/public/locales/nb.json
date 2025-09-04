@@ -58,7 +58,11 @@
     "result": {
       "title": "Resultat",
       "sleep_score": "Søvn-score",
-      "how_to_improve": "Hvordan forbedre dette:"
+      "how_to_improve": "Hvordan forbedre dette:",
+     "lead": {
+        "green": "Du svarer godt på ",
+        "orange": "Du har forbedringspotensiale for ",
+        "red": "Du bør endre vanene dine for "
     },
     "common": {
       "sending": "Sender…",
@@ -179,49 +183,49 @@
     "excessive_sleepiness": "Uttalt søvnighet på dagtid – vær ekstra oppmerksom."
   },
   "tips": {
-  "pattern": {
-    "keep_routine": "Fortsett å holde en fast døgnrytme – samme legge- og stå-opp-tid flesteparten av dagene.",
-    "short_naps": "Bruk korte powernaps (20–30 min) tidlig på dagen om du må hvile.",
-    "consistent_bed_wake": "Legg deg og stå opp til omtrent samme tid hver dag (±30–60 min).",
-    "plan_winddown": "Lag en enkel nedroingsrutine 30–60 min før leggetid (lys ned, skjermfri, rolig aktivitet).",
-    "protect_7h": "Beskytt minst 7 timer søvnvindu hver natt over tid.",
-    "cut_late_naps": "Unngå lange/lange sene lurer etter kl. 15–16 — de kan skyve på nattesøvnen."
-  },
-  "insomnia": {
-    "maintain": "Hold fast ved vanene som fungerer – små, stabile grep gir best effekt over tid.",
-    "rule_20min": "Ligg ikke våken mer enn ~20 min: stå opp, gjør noe rolig i dempet lys og prøv igjen.",
-    "fixed_wake": "Stå opp til fast tid uansett – det hjelper kroppsklokken å stabilisere seg.",
-    "stimulus_control": "Bruk sengen kun til søvn og intimitet – ikke TV, mobil eller jobb.",
-    "consider_cbti": "Ved vedvarende plager: vurder kognitiv atferdsterapi for insomni (CBT-I) via lege/psykolog."
-  },
-  "quality": {
-    "track_triggers": "Notér hva som påvirker søvnen (koffein, treningstid, stress) for å se mønstre.",
-    "address_disruptors": "Reduser faktorer som ofte forstyrrer (støy, lys, ubehag, sen mobilbruk).",
-    "consult_if_pain": "Ved smerter, uro eller mareritt som varer: ta det opp med fastlege for tiltak."
-  },
-  "daytime": {
-    "morning_light": "Få dagslys tidlig (10–30 min) – det gjør deg mer våken og styrker døgnrytmen.",
-    "activity_breaks": "Ta korte bevegelsespauser gjennom dagen og legg lett aktivitet tidligere på kvelden.",
-    "consider_medical": "Ved uttalt søvnighet dagtid: vurder å snakke med fastlege (f.eks. søvnapné, andre årsaker)."
-  },
-  "hygiene": {
-    "keep_it_up": "Fortsett med gode vaner som hjelper søvnen (rolig kveldsrutine, jevne tider).",
-    "screens_off_60": "Skjermfri siste 60 min før leggetid, eller bruk sterk demping/nattfilter.",
-    "limit_caffeine": "Unngå koffein etter kl. 14–16 (senest 6–8 t før leggetid).",
-    "no_alcohol_late": "Styr unna alkohol nær leggetid – det kan gi lett, oppstykket søvn.",
-    "no_big_meals_late": "Unngå store, tunge måltid rett før leggetid; velg lett kveldsmat."
-  },
-  "environment": {
-    "keep_cool_dark": "Hold soverommet kjølig, mørkt og ryddig – gjør senga til et sove-signal.",
-    "test_blackout": "Prøv mørklegging/øyemaske og dempet belysning på kvelden.",
-    "noise_control": "Dempe støy (ørepropper, hvit støy, jevn bakgrunnslyd) om nødvendig.",
-    "try_new_pillow": "Sjekk pute/madrass – bytt ved ubehag, vond nakke eller hofter.",
-    "cooler_temp": "Senk temp eller lette på dyne hvis du blir varm om natta."
-  },
-  "breathing": {
-    "side_sleep": "Prøv sidesoving (pute i ryggen) – kan dempe snorking og pustestopp hos noen.",
-    "reduce_evening_alcohol": "Kutt alkohol sent – det kan forverre snorking/pusteplager.",
-    "consider_gp_check": "Mistenker du søvnapné (høy snorking, pustestopp, dagtrøtthet)? Snakk med fastlege."
-  }
+    "pattern": {
+      "keep_routine": "Fortsett å holde en fast døgnrytme – samme legge- og stå-opp-tid flesteparten av dagene.",
+      "short_naps": "Bruk korte powernaps (20–30 min) tidlig på dagen om du må hvile.",
+      "consistent_bed_wake": "Legg deg og stå opp til omtrent samme tid hver dag (±30–60 min).",
+      "plan_winddown": "Lag en enkel nedroingsrutine 30–60 min før leggetid (lys ned, skjermfri, rolig aktivitet).",
+      "protect_7h": "Beskytt minst 7 timer søvnvindu hver natt over tid.",
+      "cut_late_naps": "Unngå lange/lange sene lurer etter kl. 15–16 — de kan skyve på nattesøvnen."
+    },
+    "insomnia": {
+      "maintain": "Hold fast ved vanene som fungerer – små, stabile grep gir best effekt over tid.",
+      "rule_20min": "Ligg ikke våken mer enn ~20 min: stå opp, gjør noe rolig i dempet lys og prøv igjen.",
+      "fixed_wake": "Stå opp til fast tid uansett – det hjelper kroppsklokken å stabilisere seg.",
+      "stimulus_control": "Bruk sengen kun til søvn og intimitet – ikke TV, mobil eller jobb.",
+      "consider_cbti": "Ved vedvarende plager: vurder kognitiv atferdsterapi for insomni (CBT-I) via lege/psykolog."
+    },
+    "quality": {
+      "track_triggers": "Notér hva som påvirker søvnen (koffein, treningstid, stress) for å se mønstre.",
+      "address_disruptors": "Reduser faktorer som ofte forstyrrer (støy, lys, ubehag, sen mobilbruk).",
+      "consult_if_pain": "Ved smerter, uro eller mareritt som varer: ta det opp med fastlege for tiltak."
+    },
+    "daytime": {
+      "morning_light": "Få dagslys tidlig (10–30 min) – det gjør deg mer våken og styrker døgnrytmen.",
+      "activity_breaks": "Ta korte bevegelsespauser gjennom dagen og legg lett aktivitet tidligere på kvelden.",
+      "consider_medical": "Ved uttalt søvnighet dagtid: vurder å snakke med fastlege (f.eks. søvnapné, andre årsaker)."
+    },
+    "hygiene": {
+      "keep_it_up": "Fortsett med gode vaner som hjelper søvnen (rolig kveldsrutine, jevne tider).",
+      "screens_off_60": "Skjermfri siste 60 min før leggetid, eller bruk sterk demping/nattfilter.",
+      "limit_caffeine": "Unngå koffein etter kl. 14–16 (senest 6–8 t før leggetid).",
+      "no_alcohol_late": "Styr unna alkohol nær leggetid – det kan gi lett, oppstykket søvn.",
+      "no_big_meals_late": "Unngå store, tunge måltid rett før leggetid; velg lett kveldsmat."
+    },
+    "environment": {
+      "keep_cool_dark": "Hold soverommet kjølig, mørkt og ryddig – gjør senga til et sove-signal.",
+      "test_blackout": "Prøv mørklegging/øyemaske og dempet belysning på kvelden.",
+      "noise_control": "Dempe støy (ørepropper, hvit støy, jevn bakgrunnslyd) om nødvendig.",
+      "try_new_pillow": "Sjekk pute/madrass – bytt ved ubehag, vond nakke eller hofter.",
+      "cooler_temp": "Senk temp eller lette på dyne hvis du blir varm om natta."
+    },
+    "breathing": {
+      "side_sleep": "Prøv sidesoving (pute i ryggen) – kan dempe snorking og pustestopp hos noen.",
+      "reduce_evening_alcohol": "Kutt alkohol sent – det kan forverre snorking/pusteplager.",
+      "consider_gp_check": "Mistenker du søvnapné (høy snorking, pustestopp, dagtrøtthet)? Snakk med fastlege."
+    }
 }
 }
