@@ -6,24 +6,24 @@
       "compare": "Compare",
       "articles": "Articles",
       "about": "About"
-      },
+    },
     "home": {
       "title": "Sleep Test",
       "pitch": "Answer 30 questions in 5–10 minutes — get a free, clear report with explanations and practical actions.",
       "cta": "Start the test",
       "example": "See sample report"
-       },
-     "privacy": {
-        "card": {
+    },
+    "privacy": {
+      "card": {
         "title": "Anonymous and 100% free",
         "text": "We take GDPR personally: no registration, no logging, no cost — all anonymous."
-        }
-       },
+      }
+    },
     "compare": {
       "card": {
         "title": "Compare",
         "text": "You get an ID after the test. Take it again later and compare what changed."
-       },
+      },
       "help": "Do you have your previous ID? Enter both to see progress — and where.",
       "notfound": "Could not find one or both IDs.",
       "error": "Something went wrong. Please try again."
@@ -48,9 +48,8 @@
         "li1": "The page does not collect, store, or share any personal data. You are 100% anonymous; only a unique ID is stored with a summary of the results in a database.",
         "li2": "",
         "li3": ""
-        }
-       },
-
+      }
+    },
     "test": {
       "title": "Sleep test",
       "submit": "Submit",
@@ -59,12 +58,13 @@
     "result": {
       "title": "Result",
       "sleep_score": "Sleep score",
+      "copy_id": "Copy ID",
       "how_to_improve": "How to improve:",
-     "lead": {
+      "lead": {
         "green": "You are doing well on ",
         "orange": "You have room for improvement in ",
         "red": "You should change your habits for "
-       }
+      }
     },
     "common": {
       "sending": "Sending…",
@@ -130,7 +130,7 @@
       "daytime_tired_despite": "I’m very sleepy in the daytime even after a normal night."
     }
   },
-   "f": {
+  "f": {
     "wake_work": {
       "title": "When do you usually wake up on work/school days?",
       "no_fixed": "Varies / not sure"
@@ -185,49 +185,49 @@
     "excessive_sleepiness": "Marked daytime sleepiness – be extra careful."
   },
   "tips": {
-  "pattern": {
-    "keep_routine": "Keep a stable sleep routine – similar bed and wake times most days.",
-    "short_naps": "If you need a nap, keep it short (20–30 min) and earlier in the day.",
-    "consistent_bed_wake": "Aim for consistent bed and wake times (±30–60 min).",
-    "plan_winddown": "Create a simple wind-down routine 30–60 min before bed (dim lights, low-stim activities).",
-    "protect_7h": "Protect a sleep window of at least 7 hours most nights.",
-    "cut_late_naps": "Avoid long or late naps after ~3–4 pm – they can delay night sleep."
-  },
-  "insomnia": {
-    "maintain": "Maintain what already works – small, steady habits add up.",
-    "rule_20min": "If awake ~20 min in bed: get up, do something calm in low light, and try again.",
-    "fixed_wake": "Keep a fixed wake time regardless – it trains your body clock.",
-    "stimulus_control": "Reserve bed for sleep and intimacy only – not TV, phone, or work.",
-    "consider_cbti": "If problems persist: consider CBT-I (cognitive behavioral therapy for insomnia)."
-  },
-  "quality": {
-    "track_triggers": "Track potential triggers (caffeine, workout timing, stress) to spot patterns.",
-    "address_disruptors": "Reduce common disruptors (noise, light, discomfort, late screen time).",
-    "consult_if_pain": "Persistent pain, restlessness, or nightmares? Consult a clinician."
-  },
-  "daytime": {
-    "morning_light": "Get morning light (10–30 min) to boost alertness and anchor your circadian rhythm.",
-    "activity_breaks": "Take brief movement breaks across the day; schedule light activity earlier in the evening.",
-    "consider_medical": "Marked daytime sleepiness? Consider a medical check (e.g., sleep apnea or other causes)."
-  },
-  "hygiene": {
-    "keep_it_up": "Keep up the sleep-supportive habits that already help.",
-    "screens_off_60": "Go screen-light or screen-free for the last 60 minutes before bed.",
-    "limit_caffeine": "Avoid caffeine after ~2–4 pm (6–8 hours before bedtime).",
-    "no_alcohol_late": "Skip alcohol close to bedtime – it fragments sleep.",
-    "no_big_meals_late": "Avoid large, heavy meals right before bed; choose a light snack if needed."
-  },
-  "environment": {
-    "keep_cool_dark": "Keep the bedroom cool, dark, and uncluttered – make the bed a sleep cue.",
-    "test_blackout": "Try blackout shades/eye mask and dim evening lighting.",
-    "noise_control": "Tame noise (earplugs, white noise, steady background sound) if needed.",
-    "try_new_pillow": "Evaluate pillow/mattress – replace if you wake with discomfort.",
-    "cooler_temp": "Lower temperature or use lighter bedding if you overheat at night."
-  },
-  "breathing": {
-    "side_sleep": "Try side-sleeping (use a pillow behind your back) – may reduce snoring/apneas for some.",
-    "reduce_evening_alcohol": "Avoid evening alcohol – it can worsen snoring/breathing issues.",
-    "consider_gp_check": "Suspect sleep apnea (loud snoring, witnessed pauses, daytime tiredness)? See your doctor."
+    "pattern": {
+      "keep_routine": "Keep a stable sleep routine – similar bed and wake times most days.",
+      "short_naps": "If you need a nap, keep it short (20–30 min) and earlier in the day.",
+      "consistent_bed_wake": "Aim for consistent bed and wake times (±30–60 min).",
+      "plan_winddown": "Create a simple wind-down routine 30–60 min before bed (dim lights, low-stim activities).",
+      "protect_7h": "Protect a sleep window of at least 7 hours most nights.",
+      "cut_late_naps": "Avoid long or late naps after ~3–4 pm – they can delay night sleep."
+    },
+    "insomnia": {
+      "maintain": "Maintain what already works – small, steady habits add up.",
+      "rule_20min": "If awake ~20 min in bed: get up, do something calm in low light, and try again.",
+      "fixed_wake": "Keep a fixed wake time regardless – it trains your body clock.",
+      "stimulus_control": "Reserve bed for sleep and intimacy only – not TV, phone, or work.",
+      "consider_cbti": "If problems persist: consider CBT-I (cognitive behavioral therapy for insomnia)."
+    },
+    "quality": {
+      "track_triggers": "Track potential triggers (caffeine, workout timing, stress) to spot patterns.",
+      "address_disruptors": "Reduce common disruptors (noise, light, discomfort, late screen time).",
+      "consult_if_pain": "Persistent pain, restlessness, or nightmares? Consult a clinician."
+    },
+    "daytime": {
+      "morning_light": "Get morning light (10–30 min) to boost alertness and anchor your circadian rhythm.",
+      "activity_breaks": "Take brief movement breaks across the day; schedule light activity earlier in the evening.",
+      "consider_medical": "Marked daytime sleepiness? Consider a medical check (e.g., sleep apnea or other causes)."
+    },
+    "hygiene": {
+      "keep_it_up": "Keep up the sleep-supportive habits that already help.",
+      "screens_off_60": "Go screen-light or screen-free for the last 60 minutes before bed.",
+      "limit_caffeine": "Avoid caffeine after ~2–4 pm (6–8 hours before bedtime).",
+      "no_alcohol_late": "Skip alcohol close to bedtime – it fragments sleep.",
+      "no_big_meals_late": "Avoid large, heavy meals right before bed; choose a light snack if needed."
+    },
+    "environment": {
+      "keep_cool_dark": "Keep the bedroom cool, dark, and uncluttered – make the bed a sleep cue.",
+      "test_blackout": "Try blackout shades/eye mask and dim evening lighting.",
+      "noise_control": "Tame noise (earplugs, white noise, steady background sound) if needed.",
+      "try_new_pillow": "Evaluate pillow/mattress – replace if you wake with discomfort.",
+      "cooler_temp": "Lower temperature or use lighter bedding if you overheat at night."
+    },
+    "breathing": {
+      "side_sleep": "Try side-sleeping (use a pillow behind your back) – may reduce snoring/apneas for some.",
+      "reduce_evening_alcohol": "Avoid evening alcohol – it can worsen snoring/breathing issues.",
+      "consider_gp_check": "Suspect sleep apnea (loud snoring, witnessed pauses, daytime tiredness)? See your doctor."
+    }
   }
-}
 }
