@@ -29,10 +29,40 @@
       "error": "Noe gikk galt. Prøv igjen."
     },
     "articles": {
-      "card": {
-        "title": "Lær mer",
-        "text": "Korte artikler om søvn – skrevet for folk flest."
-      }
+  "card": {
+    "title": "Lær mer",
+    "text": "Korte artikler om søvn – skrevet for folk flest."
+  },
+  "index": {
+    "pattern": {
+      "title": "Søvnmønster og varighet: rytme som faktisk funker",
+      "teaser": "Hvordan lange nok netter og jevne tider gjør alt annet enklere – med enkle grep du kan starte med i kveld."
+    },
+    "insomnia": {
+      "title": "Vansker med å sovne eller sove gjennom natten",
+      "teaser": "CBT-I-prinsipper for folk flest: 20-minuttersregelen, stimuluskontroll og hvorfor fast opp-tid hjelper."
+    },
+    "quality": {
+      "title": "Søvnkvalitet: fra «greit nok» til god",
+      "teaser": "Hva menes med kvalitet, hvilke faktorer drar ned, og hvordan løfter du helheten steg for steg."
+    },
+    "daytime": {
+      "title": "Dagtid og søvnighet: mer våkenhet i hverdagen",
+      "teaser": "Morgendagslys, små bevegelsespauser og smart timing – oppskriften på mindre døs og mer fokus."
+    },
+    "hygiene": {
+      "title": "Søvnhygiene og rutiner som faktisk hjelper",
+      "teaser": "Skjermfri siste timen, koffein-klokke og enkel kveldsrutine – uten moralpreken."
+    },
+    "environment": {
+      "title": "Søvnmiljø: lys, støy, temperatur og seng",
+      "teaser": "Billige og enkle grep i rommet som gir roligere netter – mørklegging, lyd og riktig pute."
+    },
+    "breathing": {
+      "title": "Snorking og pustesignal: når bør du sjekke det?",
+      "teaser": "Når snorking er ufarlig, og når det kan være søvnapné – og hva du gjør med det."
+    }
+  }
     },
     "about": {
       "title": "Laget av teamet i DMZ DATA AS",
