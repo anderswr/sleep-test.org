@@ -89,22 +89,22 @@ export default function ArticlePage({ params }: { params: { slug: string } }) {
     return () => { cancelled = true; };
   }, [slug, lang]);
 
-  return (
-    <div className="app-shell">
-      <SiteHeader />
-      <main className="container page-main">
-        <div className="content-narrow">
-          <article className="panel head">
-            <h1 className="mb-2">{title || t(dict, "ui.articles.card.title", "Article")}</h1>
-            {loading ? (
-              <p className="muted">Loading…</p>
-            ) : (
-              <div dangerouslySetInnerHTML={{ __html: html }} />
-            )}
-          </article>
-        </div>
-      </main>
-      <SiteFooter />
-    </div>
-  );
+return (
+  <div className="app-shell">
+    <SiteHeader />
+    <main className="container" style={{ flex: "1 1 auto" }}>
+      <article className="card" style={{ padding: 24 }}>
+        <h1 style={{ marginTop: 0 }}>
+          {title || t(dict, "ui.articles.card.title", "Article")}
+        </h1>
+        {loading ? (
+          <p className="muted">Loading…</p>
+        ) : (
+          <div dangerouslySetInnerHTML={{ __html: html }} />
+        )}
+      </article>
+    </main>
+    <SiteFooter />
+  </div>
+);
 }
