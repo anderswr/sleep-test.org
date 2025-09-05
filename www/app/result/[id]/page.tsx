@@ -11,8 +11,8 @@ import { CategoryId } from "@/lib/types";
 
 type ResultDoc = {
   id: string;
-  sleepScore: number;
-  totalRaw: number;
+  sleepScore: number;                    // 0–100 (høyere = bedre)
+  totalRaw: number;                      // 0–100 (høyere = verre)
   categoryScores: Record<string, number>;
   flags?: { osaSignal?: boolean; excessiveSleepiness?: boolean };
   suggestedTips?: Record<string, string[]>;
@@ -42,7 +42,10 @@ export default function ResultPage({ params }: { params: { id: string } }) {
   }, [params.id]);
 
   const entries = useMemo(
-    () => Object.entries((data?.categoryScores || {}) as Record<string, number>) as Array<[CategoryId, number]>,
+    () =>
+      Object.entries((data?.categoryScores || {}) as Record<string, number>) as Array<
+        [CategoryId, number]
+      >,
     [data]
   );
 
@@ -51,9 +54,11 @@ export default function ResultPage({ params }: { params: { id: string } }) {
       <>
         <SiteHeader />
         <main className="container">
-          <div className="card">
-            <h1 className="mb-2">{t(dict, "ui.result.title", "Resultat")}</h1>
-            <p className="muted">Not found.</p>
+          <div className="content-narrow">
+            <div className="card">
+              <h1 className="mb-2">{t(dict, "ui.result.title", "Resultat")}</h1>
+              <p className="muted">Not found.</p>
+            </div>
           </div>
         </main>
         <SiteFooter />
@@ -61,54 +66,60 @@ export default function ResultPage({ params }: { params: { id: string } }) {
     );
   }
 
-  const ringColor = data ? bucketColor(data.totalRaw) : "green";
+  // Farge på ringen: høy sleepScore (bra) -> grønn
+  const ringColor =
+    data ? bucketColor(100 - Number(data.sleepScore)).replace("yellow", "orange") : "green";
 
   return (
     <>
       <SiteHeader />
       <main className="container">
         {!data ? (
-          <div className="card"><p className="muted">Loading…</p></div>
+          <div className="content-narrow">
+            <div className="card"><p className="muted">Loading…</p></div>
+          </div>
         ) : (
           <>
-            {/* Hero */}
-            <section className="card score-hero">
-              <div className="score-hero__left">
-                <h1 className="mb-2">{t(dict, "ui.result.title", "Resultat")}</h1>
-                <div className="row" style={{ gap: 8, alignItems: "center" }}>
-                  <code className="px-1 py-0.5" style={{ background: "#f3f4f6", borderRadius: 6 }}>
-                    {data.id}
-                  </code>
-                  <button
-                    className="btn"
-                    onClick={() => navigator.clipboard.writeText(data.id)}
-                    title={t(dict, "ui.result.copy_id", "Kopier ID")}
-                  >
-                    {t(dict, "ui.result.copy_id", "Kopier ID")}
-                  </button>
-                </div>
-              </div>
-              <div className="score-hero__right">
-                <div
-                  className="score-ring"
-                  data-color={ringColor}
-                  aria-label={t(dict, "ui.result.sleep_score", "Søvn-score")}
-                  title={t(dict, "ui.result.sleep_score", "Søvn-score")}
-                >
-                  <div className="score-ring__value">{Number(data.sleepScore)}</div>
-                  <div className="score-ring__label">
-                    {t(dict, "ui.result.sleep_score", "Søvn-score")}
+            {/* Hero (smal bredde) */}
+            <div className="content-narrow">
+              <section className="card score-hero">
+                <div className="score-hero__left">
+                  <h1 className="mb-2">{t(dict, "ui.result.title", "Resultat")}</h1>
+                  <div className="row" style={{ gap: 8, alignItems: "center" }}>
+                    <code className="px-1 py-0.5" style={{ background: "#f3f4f6", borderRadius: 6 }}>
+                      {data.id}
+                    </code>
+                    <button
+                      className="btn"
+                      onClick={() => navigator.clipboard.writeText(data.id)}
+                      title={t(dict, "ui.result.copy_id", "Kopier ID")}
+                    >
+                      {t(dict, "ui.result.copy_id", "Kopier ID")}
+                    </button>
                   </div>
                 </div>
-              </div>
-            </section>
+                <div className="score-hero__right">
+                  <div
+                    className="score-ring"
+                    data-color={ringColor}
+                    aria-label={t(dict, "ui.result.sleep_score", "Søvn-score")}
+                    title={t(dict, "ui.result.sleep_score", "Søvn-score")}
+                  >
+                    <div className="score-ring__value">{Number(data.sleepScore)}</div>
+                    <div className="score-ring__label">
+                      {t(dict, "ui.result.sleep_score", "Søvn-score")}
+                    </div>
+                  </div>
+                </div>
+              </section>
+            </div>
 
-            {/* Kategorier */}
+            {/* Kategorier (full bredde grid) */}
             <section className="grid-cards mt-6">
               {entries.map(([cat, rawVal]) => {
-                const raw = Number(rawVal);
-                const display = 100 - raw;
-                const color = bucketColor(raw).replace("yellow", "orange"); // normalize
+                const raw = Number(rawVal);           // 0–100 (høyere = verre)
+                const display = 100 - raw;            // vis "høyere = bedre"
+                const color = bucketColor(raw).replace("yellow", "orange");
                 const desc = t(dict, `category.${cat}.desc`, "");
                 const lead = t(dict, `ui.result.lead.${color}`, "");
 
@@ -147,7 +158,7 @@ export default function ResultPage({ params }: { params: { id: string } }) {
               })}
             </section>
 
-            {/* Varsler */}
+            {/* Varsler (kan stå i full bredde) */}
             {(data.flags?.osaSignal || data.flags?.excessiveSleepiness) && (
               <section className="card mt-6">
                 <h2 className="mb-2">⚠️</h2>
@@ -160,20 +171,11 @@ export default function ResultPage({ params }: { params: { id: string } }) {
               </section>
             )}
 
-            {/* Farger for ringen */}
+            {/* Lokale ringfarger (dus grønn/oransje/rød) – kan evt. ligge i globals.css */}
             <style jsx>{`
-              .score-ring[data-color="green"] {
-                border-color: #86efac;
-                background: #f0fdf4;
-              }
-              .score-ring[data-color="orange"] {
-                border-color: #fdba74;
-                background: #fff7ed;
-              }
-              .score-ring[data-color="red"] {
-                border-color: #fecaca;
-                background: #fef2f2;
-              }
+              .score-ring[data-color="green"] { border-color: #86efac; background: #f0fdf4; }
+              .score-ring[data-color="orange"] { border-color: #fdba74; background: #fff7ed; }
+              .score-ring[data-color="red"] { border-color: #fecaca; background: #fef2f2; }
             `}</style>
           </>
         )}
