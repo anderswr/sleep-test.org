@@ -420,3 +420,37 @@ p{ line-height: 1.55; }
 /* Belt-and-suspenders: prevent any chip/grids from expanding layout */
 .center-wrap, .q-card { max-width: 100%; }
 .chipselect { max-width: 100%; overflow-x: auto; }
+/* ==== Centered narrow content column (same across pages) ==== */
+.content-narrow {
+  width: 100%;
+  max-width: 760px;   /* match Home/About look */
+  margin: 0 auto;
+}
+
+/* ==== Modern, light panel (less boxy than .card) ==== */
+.panel {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 18px;
+}
+
+/* Optional tiny gradient accent at top for subtle separation */
+.panel.head {
+  position: relative;
+  overflow: hidden;
+}
+.panel.head::before {
+  content: "";
+  position: absolute;
+  inset: 0 0 auto 0;
+  height: 3px;
+  background: linear-gradient(90deg, var(--primary), transparent 60%);
+  opacity: .25;
+}
+
+/* Make sure pages can push footer to bottom */
+.page-main {
+  flex: 1 1 auto;
+  display: block;
+}
