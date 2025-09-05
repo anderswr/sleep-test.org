@@ -1,3 +1,4 @@
+// app/articles/page.tsx
 "use client";
 
 import * as React from "react";
@@ -27,19 +28,20 @@ export default function ArticlesPage() {
       setError(null);
       setItems(null);
 
-      // 1) Try current language
-      const tryUrl = (l: string) => `/articles/${l}/index.json`;
-      const res1 = await fetch(tryUrl(lang), { cache: "no-store" });
-      if (res1.ok) {
-        const json = (await res1.json()) as ArticleMeta[];
+      const urlFor = (l: string) => `/articles/${l}/index.json`;
+
+      // 1) forsøk valgt språk
+      const r1 = await fetch(urlFor(lang), { cache: "no-store" });
+      if (r1.ok) {
+        const json = (await r1.json()) as ArticleMeta[];
         if (!cancelled) setItems(json);
         return;
       }
 
-      // 2) Fallback to English
-      const res2 = await fetch(tryUrl("en"), { cache: "no-store" });
-      if (res2.ok) {
-        const json = (await res2.json()) as ArticleMeta[];
+      // 2) fallback til engelsk
+      const r2 = await fetch(urlFor("en"), { cache: "no-store" });
+      if (r2.ok) {
+        const json = (await r2.json()) as ArticleMeta[];
         if (!cancelled) setItems(json);
         return;
       }
@@ -57,10 +59,13 @@ export default function ArticlesPage() {
     <>
       <SiteHeader />
       <main className="container">
-        <section className="card">
-          <h1 className="mb-2">{t(dict, "ui.articles.card.title", "Learn more")}</h1>
-          <p className="muted">{t(dict, "ui.articles.card.text", "")}</p>
-        </section>
+        {/* Smal hero-seksjon med samme breddeopplevelse som Home/About */}
+        <div className="content-narrow">
+          <section className="card">
+            <h1 className="mb-2">{t(dict, "ui.articles.card.title", "Learn more")}</h1>
+            <p className="muted">{t(dict, "ui.articles.card.text", "")}</p>
+          </section>
+        </div>
 
         {!items && !error && (
           <section className="card mt-6">
@@ -80,10 +85,23 @@ export default function ArticlesPage() {
               <article key={a.slug} className="cat-card">
                 <div className="cat-card__head">
                   <span className="pill">{a.minutes ? `${a.minutes} min` : " "}</span>
-                  {/* optional tag pill on the right */}
+                  {/* Tags til høyre hvis de finnes */}
+                  <div className="row" style={{ gap: 6 }}>
+                    {(a.tags || []).slice(0, 3).map((tag) => (
+                      <span key={tag} className="pill" aria-label={`tag-${tag}`}>
+                        {tag}
+                      </span>
+                    ))}
+                  </div>
                 </div>
+
                 <h3 style={{ marginTop: 0 }}>{a.title}</h3>
-                {a.summary && <p className="muted" style={{ marginTop: 6 }}>{a.summary}</p>}
+                {a.summary && (
+                  <p className="muted" style={{ marginTop: 6 }}>
+                    {a.summary}
+                  </p>
+                )}
+
                 <div className="mt-6">
                   <Link href={`/articles/${a.slug}`} className="btn">
                     {t(dict, "ui.common.read", "Read")}
