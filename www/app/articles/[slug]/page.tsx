@@ -6,7 +6,7 @@ import SiteFooter from "@/components/SiteFooter";
 import { useI18n } from "@/app/providers/I18nProvider";
 import { t } from "@/lib/i18n";
 
-// If "marked" is missing, the try/catch gives a graceful fallback.
+// Lazy import av marked, med enkel fallback hvis pakken mangler
 let markedParse: ((md: string) => string) | null = null;
 async function ensureMarked() {
   if (markedParse) return markedParse;
@@ -14,7 +14,6 @@ async function ensureMarked() {
     const { marked } = await import("marked");
     markedParse = (md: string) => String(marked.parse(md));
   } catch {
-    // ultra-basic fallback: wrap paragraphs and preserve line breaks
     markedParse = (md: string) =>
       md
         .split(/\n{2,}/)
@@ -32,7 +31,6 @@ const VALID = new Set<string>([
   "hygiene",
   "environment",
   "breathing",
-  // plus any other slugs you add
 ]);
 
 export default function ArticlePage({ params }: { params: { slug: string } }) {
@@ -56,7 +54,6 @@ export default function ArticlePage({ params }: { params: { slug: string } }) {
           return;
         }
 
-        // load and parse markdown (lang -> fallback en)
         const parse = await ensureMarked();
 
         async function fetchMD(l: string) {
@@ -74,13 +71,15 @@ export default function ArticlePage({ params }: { params: { slug: string } }) {
           return;
         }
 
-        // optional: extract first heading as title (lines starting with "# ")
-        const firstH1 = md.match(/^\s*#\s+(.+)$/m);
-        const derivedTitle = firstH1?.[1]?.trim() ?? slug;
+        // Finn første H1 (# Overskrift) og bruk den som tittel.
+        // Fjern samtidig denne linjen fra markdown før parsing for å unngå dobbel visning.
+        const h1Match = md.match(/^\s*#\s+(.+)\s*$/m);
+        const derivedTitle = h1Match?.[1]?.trim() ?? slug;
+        const mdWithoutFirstH1 = h1Match ? md.replace(h1Match[0], "").trimStart() : md;
 
         if (!cancelled) {
           setTitle(derivedTitle);
-          setHtml(parse(md));
+          setHtml(parse(mdWithoutFirstH1));
         }
       } finally {
         if (!cancelled) setLoading(false);
@@ -97,7 +96,9 @@ export default function ArticlePage({ params }: { params: { slug: string } }) {
       <SiteHeader />
       <main className="container">
         <article className="card prose max-w-none">
+          {/* Kun én tittel: hentet fra første H1 i markdown */}
           <h1 className="mb-2">{title || t(dict, "ui.articles.card.title", "Article")}</h1>
+
           {loading ? (
             <p className="muted">Loading…</p>
           ) : (
