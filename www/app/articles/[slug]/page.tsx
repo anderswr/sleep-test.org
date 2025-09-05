@@ -2,7 +2,6 @@
 "use client";
 
 import * as React from "react";
-import Link from "next/link";
 import SiteHeader from "@/components/SiteHeader";
 import SiteFooter from "@/components/SiteFooter";
 import { useI18n } from "@/app/providers/I18nProvider";
@@ -16,7 +15,6 @@ async function ensureMarked() {
     const { marked } = await import("marked");
     markedParse = (md: string) => String(marked.parse(md));
   } catch {
-    // veldig enkel fallback-renderer
     markedParse = (md: string) =>
       md
         .split(/\n{2,}/)
@@ -74,7 +72,7 @@ export default function ArticlePage({ params }: { params: { slug: string } }) {
           return;
         }
 
-        // Plukk ut første H1 som tittel og fjern den fra brødtekst for å unngå dobbel visning
+        // Ta første H1 som tittel og fjern den fra selve innholdet
         const h1Match = md.match(/^\s*#\s+(.+)\s*$/m);
         const derivedTitle = h1Match?.[1]?.trim() ?? slug;
         const mdWithoutFirstH1 = h1Match ? md.replace(h1Match[0], "").trimStart() : md;
@@ -88,35 +86,16 @@ export default function ArticlePage({ params }: { params: { slug: string } }) {
       }
     })();
 
-    return () => {
-      cancelled = true;
-    };
+    return () => { cancelled = true; };
   }, [slug, lang]);
 
   return (
-    <>
+    <div className="app-shell">
       <SiteHeader />
-      <main className="container">
+      <main className="container page-main">
         <div className="content-narrow">
-          <nav className="mb-4">
-            <Link href="/articles" className="btn ghost">
-              ← {t(dict, "ui.nav.articles", "Articles")}
-            </Link>
-          </nav>
-
-          {/* Hero-lignende tittel (smal bredde) */}
-          <section className="hero mb-6">
-            <h1 className="hero-title">
-              {title || t(dict, "ui.articles.card.title", "Article")}
-            </h1>
-            <p className="hero-text">
-              {/* valgfritt: kort ingress kan ligge i toppen av markdownen etter #, 
-                  men vi lar den stå tom hvis ikke nødvendig */}
-            </p>
-          </section>
-
-          {/* Selve artikkelinnholdet */}
-          <article className="card prose max-w-none">
+          <article className="panel head">
+            <h1 className="mb-2">{title || t(dict, "ui.articles.card.title", "Article")}</h1>
             {loading ? (
               <p className="muted">Loading…</p>
             ) : (
@@ -126,6 +105,6 @@ export default function ArticlePage({ params }: { params: { slug: string } }) {
         </div>
       </main>
       <SiteFooter />
-    </>
+    </div>
   );
 }
