@@ -101,7 +101,7 @@
         "orange": "You have room for improvement in ",
         "red": "You should change your habits for "
       },
-    "lookup_hint": "Paste your ID to open your report.",
+    "lookup_hint": "When you complete a test you receive an ID. It is anonymous, and you can open your report anytime. Paste your ID to view the report.",   
     "id_placeholder": "Your ID",
     "copy_id": "Copy ID"
     },
