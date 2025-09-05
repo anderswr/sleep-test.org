@@ -102,7 +102,7 @@
         "orange": "Du har forbedringspotensiale for ",
         "red": "Du bør endre vanene dine for "
       },
-    "lookup_hint": "Lim inn ID-en din for å åpne rapporten.",
+    "lookup_hint": "Når du har gjennomført en test får du en ID, den er anonym og du kan åpne rapporten når du vil. Lim inn ID-en din for å åpne rapporten.",
     "id_placeholder": "Din ID",
     "copy_id": "Kopier ID"
     },
