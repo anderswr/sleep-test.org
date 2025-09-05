@@ -95,6 +95,9 @@
         "orange": "You have room for improvement in ",
         "red": "You should change your habits for "
       }
+    "lookup_hint": "Paste your ID to open your report.",
+    "id_placeholder": "Your ID",
+    "copy_id": "Copy ID"
     },
     "common": {
       "sending": "Sending…",
