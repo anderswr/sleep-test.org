@@ -434,3 +434,20 @@ p{ line-height: 1.55; }
 
 /* ---- Page main region should grow to push footer down ---- */
 .page-main { flex: 1 1 auto; display: block; }
+
+/* ==== Side-layout: jevn midtbredde og sticky footer ==== */
+.app-shell {
+  min-height: 100dvh;
+  display: flex;
+  flex-direction: column;
+}
+
+.page-main {
+  flex: 1 1 auto; /* gjør at main fyller høyden slik at footer kan "klistres" i bunn */
+}
+
+.page-inner {
+  width: 100%;
+  max-width: 760px; /* samme følelse som Home/About-boksen */
+  margin: 0 auto;
+}

@@ -58,7 +58,9 @@ export default function ArticlePage({ params }: { params: { slug: string } }) {
         const parse = await ensureMarked();
 
         async function fetchMD(l: string) {
-          const res = await fetch(`/articles/${l}/${slug}.md`, { cache: "no-store" });
+          const res = await fetch(`/articles/${l}/${slug}.md`, {
+            cache: "no-store",
+          });
           return res.ok ? res.text() : null;
         }
 
@@ -72,10 +74,12 @@ export default function ArticlePage({ params }: { params: { slug: string } }) {
           return;
         }
 
-        // Ta første H1 som tittel og fjern den fra selve innholdet
+        // Finn første H1 og bruk som tittel. Fjern linjen fra markdown før parse.
         const h1Match = md.match(/^\s*#\s+(.+)\s*$/m);
         const derivedTitle = h1Match?.[1]?.trim() ?? slug;
-        const mdWithoutFirstH1 = h1Match ? md.replace(h1Match[0], "").trimStart() : md;
+        const mdWithoutFirstH1 = h1Match
+          ? md.replace(h1Match[0], "").trimStart()
+          : md;
 
         if (!cancelled) {
           setTitle(derivedTitle);
@@ -86,25 +90,30 @@ export default function ArticlePage({ params }: { params: { slug: string } }) {
       }
     })();
 
-    return () => { cancelled = true; };
+    return () => {
+      cancelled = true;
+    };
   }, [slug, lang]);
 
-return (
-  <div className="app-shell">
-    <SiteHeader />
-    <main className="container" style={{ flex: "1 1 auto" }}>
-      <article className="card" style={{ padding: 24 }}>
-        <h1 style={{ marginTop: 0 }}>
-          {title || t(dict, "ui.articles.card.title", "Article")}
-        </h1>
-        {loading ? (
-          <p className="muted">Loading…</p>
-        ) : (
-          <div dangerouslySetInnerHTML={{ __html: html }} />
-        )}
-      </article>
-    </main>
-    <SiteFooter />
-  </div>
-);
+  return (
+    <div className="app-shell">
+      <SiteHeader />
+      <main className="container" style={{ flex: "1 1 auto" }}>
+        <article className="card" style={{ padding: 24 }}>
+          {/* Tittel øverst */}
+          <h1 className="mb-2">
+            {title || t(dict, "ui.articles.card.title", "Article")}
+          </h1>
+
+          {/* Innhold */}
+          {loading ? (
+            <p className="muted">Loading…</p>
+          ) : (
+            <div dangerouslySetInnerHTML={{ __html: html }} />
+          )}
+        </article>
+      </main>
+      <SiteFooter />
+    </div>
+  );
 }
