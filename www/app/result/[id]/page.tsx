@@ -42,7 +42,10 @@ export default function ResultPage({ params }: { params: { id: string } }) {
   }, [params.id]);
 
   const entries = useMemo(
-    () => Object.entries((data?.categoryScores || {}) as Record<string, number>) as Array<[CategoryId, number]>,
+    () =>
+      Object.entries((data?.categoryScores || {}) as Record<string, number>) as Array<
+        [CategoryId, number]
+      >,
     [data]
   );
 
@@ -50,32 +53,31 @@ export default function ResultPage({ params }: { params: { id: string } }) {
     return (
       <div className="app-shell">
         <SiteHeader />
-        <main className="container page-main">
-            <section className="panel">
-              <h1 className="mb-2">{t(dict, "ui.result.title", "Resultat")}</h1>
-              <p className="muted">Not found.</p>
-            </section>
+        <main className="container" style={{ flex: "1 1 auto" }}>
+          <article className="card" style={{ padding: 24 }}>
+            <h1 className="mb-2">{t(dict, "ui.result.title", "Resultat")}</h1>
+            <p className="muted">Not found.</p>
+          </article>
         </main>
         <SiteFooter />
       </div>
     );
   }
 
-  const ringColor = data ? bucketColor(data.totalRaw) : "green";
+  const ringColor = data ? bucketColor(data.totalRaw).replace("yellow", "orange") : "green";
 
- return (
-  <div className="app-shell">
-    <SiteHeader />
-    <main className="container page-main">
-    
+  return (
+    <div className="app-shell">
+      <SiteHeader />
+      <main className="container" style={{ flex: "1 1 auto" }}>
         {!data ? (
-          <section className="panel">
+          <article className="card" style={{ padding: 24 }}>
             <p className="muted">Loading…</p>
-          </section>
+          </article>
         ) : (
           <>
-            {/* Hero */}
-            <section className="panel head score-hero">
+            {/* TOP: Én bred card – samme breddeopplevelse som About */}
+            <article className="card score-hero" style={{ padding: 24 }}>
               <div className="score-hero__left">
                 <h1 className="mb-2">{t(dict, "ui.result.title", "Resultat")}</h1>
                 <div className="row" style={{ gap: 8, alignItems: "center" }}>
@@ -101,43 +103,32 @@ export default function ResultPage({ params }: { params: { id: string } }) {
                   aria-label={t(dict, "ui.result.sleep_score", "Søvn-score")}
                   title={t(dict, "ui.result.sleep_score", "Søvn-score")}
                 >
-                  <div className="score-ring__value">
-                    {Number(data.sleepScore)}
-                  </div>
+                  <div className="score-ring__value">{Number(data.sleepScore)}</div>
                   <div className="score-ring__label">
                     {t(dict, "ui.result.sleep_score", "Søvn-score")}
                   </div>
                 </div>
               </div>
-            </section>
+            </article>
 
-            {/* Kategorier */}
-            <section className="stack-4 mt-6">
+            {/* Kategorier – kort i grid under, samme totalbredde (container) */}
+            <section className="grid-cards mt-6">
               {entries.map(([cat, rawVal]) => {
                 const raw = Number(rawVal);
-                const display = 100 - raw;
+                const display = 100 - raw; // høyere = bedre, vises som 0–100
                 const color = bucketColor(raw).replace("yellow", "orange");
                 const desc = t(dict, `category.${cat}.desc`, "");
                 const lead = t(dict, `ui.result.lead.${color}`, "");
 
                 return (
-                  <article key={cat} className="panel" data-color={color}>
+                  <article key={cat} className="cat-card" data-color={color}>
                     <div className="cat-card__head">
                       <span className="pill" data-color={color}>
                         {t(dict, `category.${cat}.name`, String(cat))}
                       </span>
-                      <div
-                        style={{
-                          display: "flex",
-                          alignItems: "baseline",
-                          gap: 8,
-                        }}
-                      >
+                      <div style={{ display: "flex", alignItems: "baseline", gap: 8 }}>
                         <strong className="cat-card__score">{display}</strong>
-                        <span
-                          className="muted"
-                          style={{ fontSize: ".85rem" }}
-                        >
+                        <span className="muted" style={{ fontSize: ".85rem" }}>
                           / 100
                         </span>
                       </div>
@@ -150,17 +141,12 @@ export default function ResultPage({ params }: { params: { id: string } }) {
                     {(data.suggestedTips?.[cat] || []).length > 0 && (
                       <>
                         <h4 className="mb-2 mt-6">
-                          {t(
-                            dict,
-                            "ui.result.how_to_improve",
-                            "Hvordan forbedre dette:"
-                          )}
+                          {t(dict, "ui.result.how_to_improve", "Hvordan forbedre dette:")}
                         </h4>
                         <ul className="tips-list">
                           {(data.suggestedTips?.[cat] || []).map((tipKey) => (
                             <li key={`${cat}-${tipKey}`}>
-                              <span className="star">*</span>{" "}
-                              {t(dict, tipKey, tipKey)}
+                              <span className="star">*</span> {t(dict, tipKey, tipKey)}
                             </li>
                           ))}
                         </ul>
@@ -173,25 +159,20 @@ export default function ResultPage({ params }: { params: { id: string } }) {
 
             {/* Varsler */}
             {(data.flags?.osaSignal || data.flags?.excessiveSleepiness) && (
-              <section className="panel mt-6">
+              <section className="card mt-6" style={{ padding: 24 }}>
                 <h2 className="mb-2">⚠️</h2>
                 {data.flags?.osaSignal && (
-                  <p style={{ color: "var(--bad)" }}>
-                    {t(dict, "flags.osa_signal")}
-                  </p>
+                  <p style={{ color: "var(--bad)" }}>{t(dict, "flags.osa_signal")}</p>
                 )}
                 {data.flags?.excessiveSleepiness && (
-                  <p style={{ color: "#f59e0b" }}>
-                    {t(dict, "flags.excessive_sleepiness")}
-                  </p>
+                  <p style={{ color: "#f59e0b" }}>{t(dict, "flags.excessive_sleepiness")}</p>
                 )}
               </section>
             )}
           </>
         )}
-     
-    </main>
-    <SiteFooter />
-  </div>
-);
+      </main>
+      <SiteFooter />
+    </div>
+  );
 }
