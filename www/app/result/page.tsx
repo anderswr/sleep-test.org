@@ -1,3 +1,4 @@
+// app/result/page.tsx
 "use client";
 
 import * as React from "react";
@@ -15,21 +16,38 @@ export default function ResultIndex() {
   return (
     <>
       <SiteHeader />
-      <main className="container" style={{ flex: "1 1 auto" }}>
-        <div className="card" style={{ padding: 24 }}>
-          <h1 style={{ marginTop: 0 }}>{t(dict, "ui.result.title", "Result")}</h1>
-          <p className="muted">{t(dict, "ui.result.lookup_hint", "Paste your ID to open your report.")}</p>
-          <div className="row" style={{ gap: 8 }}>
-            <input
-              className="border rounded px-3 py-2"
-              style={{ flex: 1, border: "1px solid var(--border)", borderRadius: 12 }}
-              placeholder={t(dict, "ui.result.id_placeholder", "Your ID")}
-              value={id}
-              onChange={(e) => setId(e.target.value)}
-            />
-            <button className="btn primary" onClick={() => id && router.push(`/result/${id}`)}>
-              {t(dict, "ui.common.read", "Read")}
-            </button>
+      <main className="container">
+        <div className="content-narrow">
+          <div className="card" style={{ padding: 24 }}>
+            <h1 style={{ marginTop: 0 }}>
+              {t(dict, "ui.result.title", "Result")}
+            </h1>
+            <p className="muted">
+              {t(
+                dict,
+                "ui.result.lookup_hint",
+                "Paste your ID to open your report."
+              )}
+            </p>
+            <div className="row" style={{ gap: 8 }}>
+              <input
+                className="border rounded px-3 py-2"
+                style={{
+                  flex: 1,
+                  border: "1px solid var(--border)",
+                  borderRadius: 12,
+                }}
+                placeholder={t(dict, "ui.result.id_placeholder", "Your ID")}
+                value={id}
+                onChange={(e) => setId(e.target.value)}
+              />
+              <button
+                className="btn primary"
+                onClick={() => id && router.push(`/result/${id}`)}
+              >
+                {t(dict, "ui.common.read", "Read")}
+              </button>
+            </div>
           </div>
         </div>
       </main>
