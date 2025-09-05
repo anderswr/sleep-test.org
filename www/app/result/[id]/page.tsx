@@ -65,108 +65,135 @@ export default function ResultPage({ params }: { params: { id: string } }) {
 
   const ringColor = data ? bucketColor(data.totalRaw) : "green";
 
-  return (
-    <div className="app-shell">
-      <SiteHeader />
-      <main className="container page-main">
-        <div className="content-narrow">
-          {!data ? (
-            <section className="panel"><p className="muted">Loading…</p></section>
-          ) : (
-            <>
-              {/* Hero */}
-              <section className="panel head score-hero">
-                <div className="score-hero__left">
-                  <h1 className="mb-2">{t(dict, "ui.result.title", "Resultat")}</h1>
-                  <div className="row" style={{ gap: 8, alignItems: "center" }}>
-                    <code className="px-1 py-0.5" style={{ background: "#f3f4f6", borderRadius: 6 }}>
-                      {data.id}
-                    </code>
-                    <button
-                      className="btn"
-                      onClick={() => navigator.clipboard.writeText(data.id)}
-                      title={t(dict, "ui.result.copy_id", "Kopier ID")}
-                    >
-                      {t(dict, "ui.result.copy_id", "Kopier ID")}
-                    </button>
-                  </div>
-                </div>
-                <div className="score-hero__right">
-                  <div
-                    className="score-ring"
-                    data-color={ringColor}
-                    aria-label={t(dict, "ui.result.sleep_score", "Søvn-score")}
-                    title={t(dict, "ui.result.sleep_score", "Søvn-score")}
+ return (
+  <div className="app-shell">
+    <SiteHeader />
+    <main className="container page-main">
+      <div className="content-narrow">
+        {!data ? (
+          <section className="panel">
+            <p className="muted">Loading…</p>
+          </section>
+        ) : (
+          <>
+            {/* Hero */}
+            <section className="panel head score-hero">
+              <div className="score-hero__left">
+                <h1 className="mb-2">{t(dict, "ui.result.title", "Resultat")}</h1>
+                <div className="row" style={{ gap: 8, alignItems: "center" }}>
+                  <code
+                    className="px-1 py-0.5"
+                    style={{ background: "#f3f4f6", borderRadius: 6 }}
                   >
-                    <div className="score-ring__value">{Number(data.sleepScore)}</div>
-                    <div className="score-ring__label">
-                      {t(dict, "ui.result.sleep_score", "Søvn-score")}
-                    </div>
+                    {data.id}
+                  </code>
+                  <button
+                    className="btn"
+                    onClick={() => navigator.clipboard.writeText(data.id)}
+                    title={t(dict, "ui.result.copy_id", "Kopier ID")}
+                  >
+                    {t(dict, "ui.result.copy_id", "Kopier ID")}
+                  </button>
+                </div>
+              </div>
+              <div className="score-hero__right">
+                <div
+                  className="score-ring"
+                  data-color={ringColor}
+                  aria-label={t(dict, "ui.result.sleep_score", "Søvn-score")}
+                  title={t(dict, "ui.result.sleep_score", "Søvn-score")}
+                >
+                  <div className="score-ring__value">
+                    {Number(data.sleepScore)}
+                  </div>
+                  <div className="score-ring__label">
+                    {t(dict, "ui.result.sleep_score", "Søvn-score")}
                   </div>
                 </div>
-              </section>
+              </div>
+            </section>
 
-              {/* Kategorier */}
-              <section className="stack-4 mt-6">
-                {entries.map(([cat, rawVal]) => {
-                  const raw = Number(rawVal);
-                  const display = 100 - raw;
-                  const color = bucketColor(raw).replace("yellow", "orange");
-                  const desc = t(dict, `category.${cat}.desc`, "");
-                  const lead = t(dict, `ui.result.lead.${color}`, "");
+            {/* Kategorier */}
+            <section className="stack-4 mt-6">
+              {entries.map(([cat, rawVal]) => {
+                const raw = Number(rawVal);
+                const display = 100 - raw;
+                const color = bucketColor(raw).replace("yellow", "orange");
+                const desc = t(dict, `category.${cat}.desc`, "");
+                const lead = t(dict, `ui.result.lead.${color}`, "");
 
-                  return (
-                    <article key={cat} className="panel" data-color={color}>
-                      <div className="cat-card__head">
-                        <span className="pill" data-color={color}>
-                          {t(dict, `category.${cat}.name`, String(cat))}
+                return (
+                  <article key={cat} className="panel" data-color={color}>
+                    <div className="cat-card__head">
+                      <span className="pill" data-color={color}>
+                        {t(dict, `category.${cat}.name`, String(cat))}
+                      </span>
+                      <div
+                        style={{
+                          display: "flex",
+                          alignItems: "baseline",
+                          gap: 8,
+                        }}
+                      >
+                        <strong className="cat-card__score">{display}</strong>
+                        <span
+                          className="muted"
+                          style={{ fontSize: ".85rem" }}
+                        >
+                          / 100
                         </span>
-                        <div style={{ display: "flex", alignItems: "baseline", gap: 8 }}>
-                          <strong className="cat-card__score">{display}</strong>
-                          <span className="muted" style={{ fontSize: ".85rem" }}>/ 100</span>
-                        </div>
                       </div>
+                    </div>
 
-                      <p className="muted" style={{ marginTop: 6 }}>
-                        <strong>{lead}</strong> {decapitalize(desc)}
-                      </p>
+                    <p className="muted" style={{ marginTop: 6 }}>
+                      <strong>{lead}</strong> {decapitalize(desc)}
+                    </p>
 
-                      {(data.suggestedTips?.[cat] || []).length > 0 && (
-                        <>
-                          <h4 className="mb-2 mt-6">
-                            {t(dict, "ui.result.how_to_improve", "Hvordan forbedre dette:")}
-                          </h4>
-                          <ul className="tips-list">
-                            {(data.suggestedTips?.[cat] || []).map((tipKey) => (
-                              <li key={`${cat}-${tipKey}`}>
-                                <span className="star">*</span> {t(dict, tipKey, tipKey)}
-                              </li>
-                            ))}
-                          </ul>
-                        </>
-                      )}
-                    </article>
-                  );
-                })}
+                    {(data.suggestedTips?.[cat] || []).length > 0 && (
+                      <>
+                        <h4 className="mb-2 mt-6">
+                          {t(
+                            dict,
+                            "ui.result.how_to_improve",
+                            "Hvordan forbedre dette:"
+                          )}
+                        </h4>
+                        <ul className="tips-list">
+                          {(data.suggestedTips?.[cat] || []).map((tipKey) => (
+                            <li key={`${cat}-${tipKey}`}>
+                              <span className="star">*</span>{" "}
+                              {t(dict, tipKey, tipKey)}
+                            </li>
+                          ))}
+                        </ul>
+                      </>
+                    )}
+                  </article>
+                );
+              })}
+            </section>
+
+            {/* Varsler */}
+            {(data.flags?.osaSignal || data.flags?.excessiveSleepiness) && (
+              <section className="panel mt-6">
+                <h2 className="mb-2">⚠️</h2>
+                {data.flags?.osaSignal && (
+                  <p style={{ color: "var(--bad)" }}>
+                    {t(dict, "flags.osa_signal")}
+                  </p>
+                )}
+                {data.flags?.excessiveSleepiness && (
+                  <p style={{ color: "#f59e0b" }}>
+                    {t(dict, "flags.excessive_sleepiness")}
+                  </p>
+                )}
               </section>
-
-              {/* Varsler */}
-              {(data.flags?.osaSignal || data.flags?.excessiveSleepiness) && (
-                <section className="panel mt-6">
-                  <h2 className="mb-2">⚠️</h2>
-                  {data.flags?.osaSignal && (
-                    <p style={{ color: "var(--bad)" }}>{t(dict, "flags.osa_signal")}</p>
-                  )}
-                  {data.flags?.excessiveSleepiness && (
-                    <p style={{ color: "#f59e0b" }}>{t(dict, "flags.excessive_sleepiness")}</p>
-                  )}
-                </section>
-              )}
-            </>
-          )}
-        </div>
-      </main>
-      <SiteFooter />
-    </div>
-  );
+            )}
+          </>
+        )}
+      </div>
+    </main>
+    <SiteFooter />
+  </div>
+);
 }
