@@ -51,12 +51,10 @@ export default function ResultPage({ params }: { params: { id: string } }) {
       <div className="app-shell">
         <SiteHeader />
         <main className="container page-main">
-          <div className="content-narrow">
             <section className="panel">
               <h1 className="mb-2">{t(dict, "ui.result.title", "Resultat")}</h1>
               <p className="muted">Not found.</p>
             </section>
-          </div>
         </main>
         <SiteFooter />
       </div>
@@ -69,7 +67,7 @@ export default function ResultPage({ params }: { params: { id: string } }) {
   <div className="app-shell">
     <SiteHeader />
     <main className="container page-main">
-      <div className="content-narrow">
+    
         {!data ? (
           <section className="panel">
             <p className="muted">Loading…</p>
@@ -191,7 +189,7 @@ export default function ResultPage({ params }: { params: { id: string } }) {
             )}
           </>
         )}
-      </div>
+     
     </main>
     <SiteFooter />
   </div>

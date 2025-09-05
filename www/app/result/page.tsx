@@ -17,7 +17,6 @@ return (
   <div className="app-shell">
     <SiteHeader />
     <main className="container page-main">
-      <div className="content-narrow">
         <section className="panel head">
           <h1 style={{ marginTop: 0 }}>
             {t(dict, "ui.result.title", "Result")}
@@ -46,7 +45,6 @@ return (
             </button>
           </div>
         </section>
-      </div>
     </main>
     <SiteFooter />
   </div>
