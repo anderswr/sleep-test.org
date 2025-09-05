@@ -26,12 +26,19 @@
       },
       "help": "Har du ID-en din fra sist? Skriv inn begge for å se fremgang – og hvor.",
       "notfound": "Finner ikke én eller begge ID-ene.",
+      "error": "Noe gikk galt. Prøv igjen.",
+      "explainer": "Sammenlign to rapporter for å se om tiltakene dine virker. Vi anbefaler å ta testen med 4–8 ukers mellomrom, slik at du tydelig ser utviklingen over tid.",
+      "id_a": "ID A",
+      "id_b": "ID B",
+      "label_a": "ID A",
+      "label_b": "ID B",
+      "notfound": "Fant ikke en eller begge ID-ene.",
       "error": "Noe gikk galt. Prøv igjen."
     },
     "articles": {
   "card": {
     "title": "Lær mer",
-    "text": "Korte artikler om søvn – skrevet for folk flest."
+    "text": "Selv om søvn er individuelt, er det gjort mye research og forskning på tema. Her er noen artikler om søvn – skrevet for folk flest, basert på troverdige kilder på nett."
   },
   "index": {
     "pattern": {
@@ -94,7 +101,10 @@
         "green": "Du svarer godt på ",
         "orange": "Du har forbedringspotensiale for ",
         "red": "Du bør endre vanene dine for "
-      }
+      },
+    "lookup_hint": "Lim inn ID-en din for å åpne rapporten.",
+    "id_placeholder": "Din ID",
+    "copy_id": "Kopier ID"
     },
     "common": {
       "sending": "Sender…",

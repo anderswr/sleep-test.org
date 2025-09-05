@@ -7,13 +7,12 @@ import SiteFooter from "@/components/SiteFooter";
 import { useI18n } from "@/app/providers/I18nProvider";
 import { t } from "@/lib/i18n";
 import { bucketColor } from "@/lib/scoring";
-import { CategoryId } from "@/lib/types";
 
 type ResultDoc = {
   id: string;
   sleepScore: number;                 // 0–100 (høyere er bedre)
-  totalRaw: number;                   // kan være fraværende i eldre resultater; fallback håndteres
-  categoryScores: Record<string, number>; // rå 0–100 (lavere er bedre her)
+  totalRaw: number;                   // kan mangle i eldre resultater
+  categoryScores: Record<string, number>; // rå 0–100 (lavere er bedre)
   suggestedTips?: Record<string, string[]>;
 };
 
@@ -34,7 +33,7 @@ export default function ComparePage() {
     try {
       const [ra, rb] = await Promise.all([
         fetch(`/api/result/${a}`, { cache: "no-store" }),
-        fetch(`/api/result/${b}`, { cache: "no-store" }),
+        fetch(`/api/result/${b}`, { cache: "no-store" })
       ]);
       if (!ra.ok || !rb.ok) {
         setErr(t(dict, "ui.compare.notfound", "Fant ikke en eller begge ID-ene."));
@@ -51,8 +50,7 @@ export default function ComparePage() {
     }
   }
 
-  // Hjelper for ringfarge (samme logikk som i Result): bruker totalRaw hvis tilgjengelig,
-  // ellers kalkulerer vi 100 - sleepScore.
+  // Samme ringfargelogikk som Result-siden
   function ringColorFrom(doc: ResultDoc): "green" | "orange" | "red" {
     const raw = typeof doc.totalRaw === "number" ? doc.totalRaw : Math.max(0, 100 - Number(doc.sleepScore));
     return bucketColor(raw).replace("yellow", "orange") as any;
@@ -65,20 +63,32 @@ export default function ComparePage() {
         {/* Toppkort – samme breddeopplevelse som About/Home */}
         <article className="card" style={{ padding: 24 }}>
           <h1 className="mb-2">{t(dict, "ui.nav.compare", "Sammenlign")}</h1>
-          <div className="row" style={{ gap: 8, alignItems: "stretch", flexWrap: "wrap" }}>
+
+          {/* NY forklaringstekst */}
+          <p className="muted" style={{ marginTop: 6 }}>
+            {t(
+              dict,
+              "ui.compare.explainer",
+              "Sammenlign to rapporter for å se om tiltakene dine virker. Vi anbefaler å ta testen med 4–8 ukers mellomrom, så du ser tydelig retning over tid."
+            )}
+          </p>
+
+          <div className="row" style={{ gap: 8, alignItems: "stretch", flexWrap: "wrap", marginTop: 12 }}>
             <input
               className="border rounded px-3 py-2"
               style={{ flex: 1, border: "1px solid var(--border)", borderRadius: 12 }}
-              placeholder="ID A"
+              placeholder={t(dict, "ui.compare.id_a", "ID A")}
               value={a}
               onChange={(e) => setA(e.target.value.trim())}
+              aria-label={t(dict, "ui.compare.id_a", "ID A")}
             />
             <input
               className="border rounded px-3 py-2"
               style={{ flex: 1, border: "1px solid var(--border)", borderRadius: 12 }}
-              placeholder="ID B"
+              placeholder={t(dict, "ui.compare.id_b", "ID B")}
               value={b}
               onChange={(e) => setB(e.target.value.trim())}
+              aria-label={t(dict, "ui.compare.id_b", "ID B")}
             />
             <button className="btn primary" onClick={run} disabled={!a || !b || loading}>
               {loading ? t(dict, "ui.common.sending", "Sender…") : t(dict, "ui.nav.compare", "Sammenlign")}
@@ -90,7 +100,7 @@ export default function ComparePage() {
         {/* Resultatblokker */}
         {A && B && (
           <>
-            {/* To “hero”-kort under hverandre – fortsatt inni samme container-bredde */}
+            {/* To “hero”-kort under hverandre */}
             <section className="stack-4 mt-6">
               {[A, B].map((R, i) => {
                 const ringColor = ringColorFrom(R);
@@ -102,7 +112,7 @@ export default function ComparePage() {
                   >
                     <div className="score-hero__left">
                       <h2 className="mb-2" style={{ margin: 0 }}>
-                        {i === 0 ? "ID A" : "ID B"}
+                        {i === 0 ? t(dict, "ui.compare.label_a", "ID A") : t(dict, "ui.compare.label_b", "ID B")}
                       </h2>
                       <code
                         className="px-1 py-0.5"
