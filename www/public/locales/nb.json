@@ -94,7 +94,10 @@
         "green": "Du svarer godt på ",
         "orange": "Du har forbedringspotensiale for ",
         "red": "Du bør endre vanene dine for "
-      }
+      },
+    "lookup_hint": "Lim inn ID-en din for å åpne rapporten.",
+    "id_placeholder": "Din ID",
+    "copy_id": "Kopier ID"
     },
     "common": {
       "sending": "Sender…",
