@@ -1,12 +1,14 @@
+// app/articles/[slug]/page.tsx
 "use client";
 
 import * as React from "react";
+import Link from "next/link";
 import SiteHeader from "@/components/SiteHeader";
 import SiteFooter from "@/components/SiteFooter";
 import { useI18n } from "@/app/providers/I18nProvider";
 import { t } from "@/lib/i18n";
 
-// If "marked" is missing, the try/catch gives a graceful fallback.
+// Lazy import av marked, med enkel fallback hvis pakken mangler
 let markedParse: ((md: string) => string) | null = null;
 async function ensureMarked() {
   if (markedParse) return markedParse;
@@ -14,7 +16,7 @@ async function ensureMarked() {
     const { marked } = await import("marked");
     markedParse = (md: string) => String(marked.parse(md));
   } catch {
-    // ultra-basic fallback: wrap paragraphs and preserve line breaks
+    // veldig enkel fallback-renderer
     markedParse = (md: string) =>
       md
         .split(/\n{2,}/)
@@ -32,7 +34,6 @@ const VALID = new Set<string>([
   "hygiene",
   "environment",
   "breathing",
-  // plus any other slugs you add
 ]);
 
 export default function ArticlePage({ params }: { params: { slug: string } }) {
@@ -56,7 +57,6 @@ export default function ArticlePage({ params }: { params: { slug: string } }) {
           return;
         }
 
-        // load and parse markdown (lang -> fallback en)
         const parse = await ensureMarked();
 
         async function fetchMD(l: string) {
@@ -74,13 +74,14 @@ export default function ArticlePage({ params }: { params: { slug: string } }) {
           return;
         }
 
-        // optional: extract first heading as title (lines starting with "# ")
-        const firstH1 = md.match(/^\s*#\s+(.+)$/m);
-        const derivedTitle = firstH1?.[1]?.trim() ?? slug;
+        // Plukk ut første H1 som tittel og fjern den fra brødtekst for å unngå dobbel visning
+        const h1Match = md.match(/^\s*#\s+(.+)\s*$/m);
+        const derivedTitle = h1Match?.[1]?.trim() ?? slug;
+        const mdWithoutFirstH1 = h1Match ? md.replace(h1Match[0], "").trimStart() : md;
 
         if (!cancelled) {
           setTitle(derivedTitle);
-          setHtml(parse(md));
+          setHtml(parse(mdWithoutFirstH1));
         }
       } finally {
         if (!cancelled) setLoading(false);
@@ -96,14 +97,33 @@ export default function ArticlePage({ params }: { params: { slug: string } }) {
     <>
       <SiteHeader />
       <main className="container">
-        <article className="card prose max-w-none">
-          <h1 className="mb-2">{title || t(dict, "ui.articles.card.title", "Article")}</h1>
-          {loading ? (
-            <p className="muted">Loading…</p>
-          ) : (
-            <div dangerouslySetInnerHTML={{ __html: html }} />
-          )}
-        </article>
+        <div className="content-narrow">
+          <nav className="mb-4">
+            <Link href="/articles" className="btn ghost">
+              ← {t(dict, "ui.nav.articles", "Articles")}
+            </Link>
+          </nav>
+
+          {/* Hero-lignende tittel (smal bredde) */}
+          <section className="hero mb-6">
+            <h1 className="hero-title">
+              {title || t(dict, "ui.articles.card.title", "Article")}
+            </h1>
+            <p className="hero-text">
+              {/* valgfritt: kort ingress kan ligge i toppen av markdownen etter #, 
+                  men vi lar den stå tom hvis ikke nødvendig */}
+            </p>
+          </section>
+
+          {/* Selve artikkelinnholdet */}
+          <article className="card prose max-w-none">
+            {loading ? (
+              <p className="muted">Loading…</p>
+            ) : (
+              <div dangerouslySetInnerHTML={{ __html: html }} />
+            )}
+          </article>
+        </div>
       </main>
       <SiteFooter />
     </>
