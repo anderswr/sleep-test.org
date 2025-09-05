@@ -50,56 +50,54 @@ export default function ArticlesPage() {
     return () => { cancelled = true; };
   }, [lang]);
 
-  return (
- //   <div className="app-shell">
-<SiteHeader />
-<main className="container" style={{ flex: "1 1 auto" }}>
-  {/* Top-boks – identisk med About */}
-  <article className="card" style={{ padding: 24 }}>
-    <h1 style={{ marginTop: 0 }}>
-      {t(dict, "ui.articles.card.title", "Learn more")}
-    </h1>
-    <p className="muted">{t(dict, "ui.articles.card.text", "")}</p>
-  </article>
+return (
+  <>
+    <SiteHeader />
+    <main className="container" style={{ flex: "1 1 auto" }}>
+      {/* Top-boks – identisk med About */}
+      <article className="card" style={{ padding: 24 }}>
+        <h1 style={{ marginTop: 0 }}>
+          {t(dict, "ui.articles.card.title", "Learn more")}
+        </h1>
+        <p className="muted">{t(dict, "ui.articles.card.text", "")}</p>
+      </article>
 
-  {/* Loading / Error i samme bredde */}
-  {!items && !error && (
-    <article className="card mt-6" style={{ padding: 24 }}>
-      <p className="muted">Loading…</p>
-    </article>
-  )}
-
-  {error && (
-    <article className="card mt-6" style={{ padding: 24 }}>
-      <p className="muted">{error}</p>
-    </article>
-  )}
-
-  {/* Små bokser i grid under */}
-  {items && (
-    <section className="grid-cards mt-6">
-      {items.map((a) => (
-        <article key={a.slug} className="card" style={{ padding: 16 }}>
-          <div className="cat-card__head">
-            <span className="pill">{a.minutes ? `${a.minutes} min` : " "}</span>
-          </div>
-          <h3 style={{ marginTop: 0 }}>{a.title}</h3>
-          {a.summary && (
-            <p className="muted" style={{ marginTop: 6 }}>
-              {a.summary}
-            </p>
-          )}
-          <div className="mt-6">
-            <Link href={`/articles/${a.slug}`} className="btn">
-              {t(dict, "ui.common.read", "Read")}
-            </Link>
-          </div>
+      {!items && !error && (
+        <article className="card mt-6" style={{ padding: 24 }}>
+          <p className="muted">Loading…</p>
         </article>
-      ))}
-    </section>
-  )}
-</main>
-<SiteFooter />
-    </div>
-  );
+      )}
+
+      {error && (
+        <article className="card mt-6" style={{ padding: 24 }}>
+          <p className="muted">{error}</p>
+        </article>
+      )}
+
+      {items && (
+        <section className="grid-cards mt-6">
+          {items.map((a) => (
+            <article key={a.slug} className="card" style={{ padding: 16 }}>
+              <div className="cat-card__head">
+                <span className="pill">{a.minutes ? `${a.minutes} min` : " "}</span>
+              </div>
+              <h3 style={{ marginTop: 0 }}>{a.title}</h3>
+              {a.summary && (
+                <p className="muted" style={{ marginTop: 6 }}>
+                  {a.summary}
+                </p>
+              )}
+              <div className="mt-6">
+                <Link href={`/articles/${a.slug}`} className="btn">
+                  {t(dict, "ui.common.read", "Read")}
+                </Link>
+              </div>
+            </article>
+          ))}
+        </section>
+      )}
+    </main>
+    <SiteFooter />
+  </>
+);
 }
