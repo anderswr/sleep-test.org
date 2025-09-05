@@ -14,11 +14,11 @@ export default function ResultIndex() {
   const router = useRouter();
 
   return (
-    <>
+    <div className="app-shell">
       <SiteHeader />
-      <main className="container">
+      <main className="container page-main">
         <div className="content-narrow">
-          <div className="card" style={{ padding: 24 }}>
+          <section className="panel head">
             <h1 style={{ marginTop: 0 }}>
               {t(dict, "ui.result.title", "Result")}
             </h1>
@@ -29,6 +29,7 @@ export default function ResultIndex() {
                 "Paste your ID to open your report."
               )}
             </p>
+
             <div className="row" style={{ gap: 8 }}>
               <input
                 className="border rounded px-3 py-2"
@@ -48,10 +49,10 @@ export default function ResultIndex() {
                 {t(dict, "ui.common.read", "Read")}
               </button>
             </div>
-          </div>
+          </section>
         </div>
       </main>
       <SiteFooter />
-    </>
+    </div>
   );
 }

@@ -28,91 +28,71 @@ export default function ArticlesPage() {
       setError(null);
       setItems(null);
 
-      const urlFor = (l: string) => `/articles/${l}/index.json`;
+      const url = (l: string) => `/articles/${l}/index.json`;
 
-      // 1) forsøk valgt språk
-      const r1 = await fetch(urlFor(lang), { cache: "no-store" });
-      if (r1.ok) {
-        const json = (await r1.json()) as ArticleMeta[];
+      // try current language, fallback to EN
+      const res1 = await fetch(url(lang), { cache: "no-store" });
+      if (res1.ok) {
+        const json = (await res1.json()) as ArticleMeta[];
         if (!cancelled) setItems(json);
         return;
       }
-
-      // 2) fallback til engelsk
-      const r2 = await fetch(urlFor("en"), { cache: "no-store" });
-      if (r2.ok) {
-        const json = (await r2.json()) as ArticleMeta[];
+      const res2 = await fetch(url("en"), { cache: "no-store" });
+      if (res2.ok) {
+        const json = (await res2.json()) as ArticleMeta[];
         if (!cancelled) setItems(json);
         return;
       }
-
       if (!cancelled) setError("Could not load articles.");
     }
 
     load();
-    return () => {
-      cancelled = true;
-    };
+    return () => { cancelled = true; };
   }, [lang]);
 
   return (
-    <>
+    <div className="app-shell">
       <SiteHeader />
-      <main className="container">
-        {/* Smal hero-seksjon med samme breddeopplevelse som Home/About */}
+      <main className="container page-main">
         <div className="content-narrow">
-          <section className="card">
+          <section className="panel head">
             <h1 className="mb-2">{t(dict, "ui.articles.card.title", "Learn more")}</h1>
             <p className="muted">{t(dict, "ui.articles.card.text", "")}</p>
           </section>
-        </div>
 
-        {!items && !error && (
-          <section className="card mt-6">
-            <p className="muted">Loading…</p>
-          </section>
-        )}
+          {!items && !error && (
+            <section className="panel mt-6">
+              <p className="muted">Loading…</p>
+            </section>
+          )}
 
-        {error && (
-          <section className="card mt-6">
-            <p className="muted">{error}</p>
-          </section>
-        )}
+          {error && (
+            <section className="panel mt-6">
+              <p className="muted">{error}</p>
+            </section>
+          )}
 
-        {items && (
-          <section className="grid-cards mt-6">
-            {items.map((a) => (
-              <article key={a.slug} className="cat-card">
-                <div className="cat-card__head">
-                  <span className="pill">{a.minutes ? `${a.minutes} min` : " "}</span>
-                  {/* Tags til høyre hvis de finnes */}
-                  <div className="row" style={{ gap: 6 }}>
-                    {(a.tags || []).slice(0, 3).map((tag) => (
-                      <span key={tag} className="pill" aria-label={`tag-${tag}`}>
-                        {tag}
-                      </span>
-                    ))}
+          {items && (
+            <section className="grid-cards mt-6">
+              {items.map((a) => (
+                <article key={a.slug} className="panel">
+                  <div className="cat-card__head">
+                    <span className="pill">{a.minutes ? `${a.minutes} min` : " "}</span>
                   </div>
-                </div>
-
-                <h3 style={{ marginTop: 0 }}>{a.title}</h3>
-                {a.summary && (
-                  <p className="muted" style={{ marginTop: 6 }}>
-                    {a.summary}
-                  </p>
-                )}
-
-                <div className="mt-6">
-                  <Link href={`/articles/${a.slug}`} className="btn">
-                    {t(dict, "ui.common.read", "Read")}
-                  </Link>
-                </div>
-              </article>
-            ))}
-          </section>
-        )}
+                  <h3 style={{ marginTop: 0 }}>{a.title}</h3>
+                  {a.summary && <p className="muted" style={{ marginTop: 6 }}>{a.summary}</p>}
+                  <div className="mt-6">
+                    <Link href={`/articles/${a.slug}`} className="btn">
+                      {t(dict, "ui.common.read", "Read")}
+                    </Link>
+                  </div>
+                </article>
+              ))}
+            </section>
+          )}
+        </div>
       </main>
       <SiteFooter />
-    </>
+    </div>
   );
 }
