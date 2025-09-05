@@ -26,13 +26,19 @@
       },
       "help": "Do you have your previous ID? Enter both to see progress — and where.",
       "notfound": "Could not find one or both IDs.",
+      "error": "Something went wrong. Please try again.",
+      "explainer": "Compare two reports to see if your actions are working. We recommend retesting every 4–8 weeks so you can clearly see the trend over time.",
+      "id_a": "ID A",
+      "id_b": "ID B",
+      "label_a": "ID A",
+      "label_b": "ID B",
+      "notfound": "Could not find one or both IDs.",
       "error": "Something went wrong. Please try again."
     },
     "articles": {
   "card": {
     "title": "Learn more",
-    "text": "Short, practical sleep articles for everyone."
-  },
+"text": "Although sleep is individual, there has been extensive research on the topic. Here are some articles about sleep – written for the general public, based on credible online sources."  },
   "index": {
     "pattern": {
       "title": "Sleep pattern & duration: a routine that works",
