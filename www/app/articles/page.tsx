@@ -68,7 +68,7 @@ export default function ArticlesPage() {
       <SiteHeader />
       <main className="container" style={{ flex: "1 1 auto" }}>
         {/* Toppkort – samme breddeopplevelse som About/Home */}
-        <article className="card" style={{ padding: 24 }}>
+        <article className="panel head" style={{ padding: 24 }}>
           <h1 className="mb-2">{t(dict, "ui.articles.card.title", "Learn more")}</h1>
           <p className="muted">{t(dict, "ui.articles.card.text", "")}</p>
         </article>
@@ -90,7 +90,7 @@ export default function ArticlesPage() {
         {items && (
           <section className="cards-grid mt-6">
             {items.map((a) => (
-              <article key={a.slug} className="card" style={{ padding: 16 }}>
+              <article key={a.slug} className="panel head" style={{ padding: 16 }}>
                 <div
                   className="cat-card__head"
                   style={{ alignItems: "center", marginBottom: 6 }}
