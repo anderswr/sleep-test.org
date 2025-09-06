@@ -11,7 +11,9 @@
       "title": "Sleep Test",
       "pitch": "Svar på 30 spørsmål, 5–10 minutter – få en gratis, grundig rapport med forklaringer og konkrete tiltak.",
       "cta": "Start test",
-      "example": "Se eksempel på rapport"
+      "example": "Se eksempel på rapport",
+      "tests_count_title": "Fullførte søvntester",
+      "tests_count_caption": "Har brukt det gratis, anonyme verktøyet."
     },
     "privacy": {
       "card": {

@@ -61,7 +61,7 @@ export default function ComparePage() {
       <SiteHeader />
       <main className="container" style={{ flex: "1 1 auto" }}>
         {/* Toppkort – samme breddeopplevelse som About/Home */}
-        <article className="card" style={{ padding: 24 }}>
+        <article className="panel head" style={{ padding: 24 }}>
           <h1 className="mb-2">{t(dict, "ui.nav.compare", "Sammenlign")}</h1>
 
           {/* NY forklaringstekst */}

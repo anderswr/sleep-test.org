@@ -11,7 +11,9 @@
       "title": "Sleep Test",
       "pitch": "Answer 30 questions in 5–10 minutes — get a free, clear report with explanations and practical actions.",
       "cta": "Start the test",
-      "example": "See sample report"
+      "example": "See sample report",
+      "tests_count_title": "Completed sleep tests",
+      "tests_count_caption": "People have used this free, anonymous tool."
     },
     "privacy": {
       "card": {

@@ -12,7 +12,7 @@ export default function AboutPage() {
     <>
       <SiteHeader />
       <main className="container" style={{ flex: "1 1 auto" }}>
-        <article className="card" style={{ padding: 24 }}>
+        <article className="panel head" style={{ padding: 24 }}>
           <h1 style={{ marginTop: 0 }}>{t(dict, "ui.about.title", "About")}</h1>
           <p className="muted">{t(dict, "ui.about.intro")}</p>
 
