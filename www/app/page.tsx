@@ -14,47 +14,34 @@ export default function Home() {
   const [targetCount, setTargetCount] = React.useState<number | null>(null);
   const [displayCount, setDisplayCount] = React.useState<number>(0);
 
-  // Hent antall fullførte tester (prøver noen vanlige endepunkt-navn)
-  React.useEffect(() => {
-    let canceled = false;
+// Hent antall fullførte tester
+React.useEffect(() => {
+  let canceled = false;
 
-    async function fetchCount(): Promise<number | null> {
-      const tryEndpoints = [
-        "/api/stats",
-        "/api/result/stats",
-        "/api/result/count",
-      ];
-      for (const url of tryEndpoints) {
-        try {
-          const res = await fetch(url, { cache: "no-store" });
-          if (!res.ok) continue;
-          const json = await res.json();
-          // støtt flere former: { total }, { count }, { totalTests }
-          const n =
-            typeof json.total === "number"
-              ? json.total
-              : typeof json.count === "number"
-              ? json.count
-              : typeof json.totalTests === "number"
-              ? json.totalTests
-              : null;
-          if (typeof n === "number" && n >= 0) return n;
-        } catch {
-          // fortsett neste endpoint
-        }
-      }
+  async function fetchCount(): Promise<number | null> {
+    try {
+      const res = await fetch("/api/stats", { cache: "no-store" });
+      if (!res.ok) return null;
+      const json = await res.json();
+      // forventer { total }, men tåler alternativer
+      return typeof json.total === "number"
+        ? json.total
+        : typeof json.count === "number"
+        ? json.count
+        : typeof json.totalTests === "number"
+        ? json.totalTests
+        : null;
+    } catch {
       return null;
     }
+  }
 
-    fetchCount().then((n) => {
-      if (canceled) return;
-      if (typeof n === "number") setTargetCount(n);
-    });
+  fetchCount().then((n) => {
+    if (!canceled && typeof n === "number") setTargetCount(n);
+  });
 
-    return () => {
-      canceled = true;
-    };
-  }, []);
+  return () => { canceled = true; };
+}, []);
 
   // Myk opptelling 0 -> targetCount på ~0.8s
   React.useEffect(() => {
