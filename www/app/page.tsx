@@ -14,7 +14,7 @@ export default function Home() {
       <SiteHeader />
       <main className="container" style={{ flex: "1 1 auto" }}>
         {/* Hero */}
-        <section className="card" style={{ padding: 24 }}>
+        <section className="panel head" style={{ padding: 24 }}>
           <h1 style={{ margin: 0, fontSize: "1.8rem" }}>{t(dict, "ui.home.title", "Sleep Test-fallback")}</h1>
           <p className="muted" style={{ marginTop: 6 }}>
             {t(dict, "ui.home.pitch")}
