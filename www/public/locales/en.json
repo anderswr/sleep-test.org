@@ -237,7 +237,8 @@
   },
   "flags": {
     "osa_signal": "Possible signs of sleep apnea – consider talking to your doctor.",
-    "excessive_sleepiness": "Marked daytime sleepiness – be extra careful."
+    "excessive_sleepiness": "Marked daytime sleepiness – be extra careful.",
+    "high_bp_risk": "Several lifestyle factors point to an increased risk of high blood pressure. Consider measuring your blood pressure when you have the opportunity, especially if you have type 2 diabetes or close relatives with cardiovascular disease."
   },
   "tips": {
     "pattern": {
