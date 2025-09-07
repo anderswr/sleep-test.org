@@ -2,7 +2,7 @@
 import { NextRequest, NextResponse } from "next/server";
 import { getCollection } from "@/lib/db";
 import { generateId } from "@/lib/id";
-import { BANK_VERSION, AnswerMap, FieldMap } from "@/lib/types";
+import { BANK_VERSION, AnswerMap } from "@/lib/types";
 import { QUESTION_BANK } from "@/data/questions";
 import { computeAllServer } from "./util";
 
@@ -10,16 +10,33 @@ export const runtime = "nodejs";
 
 export async function POST(req: NextRequest) {
   try {
-    const { answers = {}, fields = {}, lang = "nb" } = (await req.json()) as { answers: AnswerMap; fields: FieldMap; lang: string };
+    const { answers = {}, lang = "nb" } = (await req.json()) as {
+      answers: AnswerMap;
+      lang: string;
+    };
 
-    // whitelist: kun kjente likert-id-er
-    const known = new Set(QUESTION_BANK.filter((q) => q.kind === "likert").map((q) => q.id));
-    Object.keys(answers).forEach((k) => { if (!known.has(k)) delete (answers as any)[k]; });
+    // Whitelist: keep only known likert ids
+    const knownLikert = new Set(
+      QUESTION_BANK.filter((q) => q.kind === "likert").map((q) => q.id)
+    );
+    const cleaned: AnswerMap = {};
+    for (const [k, v] of Object.entries(answers || {})) {
+      if (knownLikert.has(k) && typeof v === "number") cleaned[k] = v as any;
+    }
 
-    const computed = await computeAllServer(answers, fields);
+    const computed = await computeAllServer(cleaned);
     const id = generateId(11);
 
-    const doc = { id, createdAt: new Date().toISOString(), v: BANK_VERSION, lang, answers, fields, ...computed };
+    // Persist (answers only; no fields anymore)
+    const doc = {
+      id,
+      createdAt: new Date().toISOString(),
+      v: BANK_VERSION,
+      lang,
+      answers: cleaned,
+      ...computed,
+    };
+
     const col = await getCollection("results");
     await col.insertOne(doc);
 
