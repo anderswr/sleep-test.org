@@ -177,13 +177,12 @@
       "observed_apneas": "Others have observed breathing pauses when I sleep.",
       "daytime_tired_despite": "I’m very sleepy in the daytime even after a normal night."
     },
-    "bp": {
-      "salt_intake": "I often eat foods high in salt (e.g., ready meals, snacks, salty spreads).",
-      "low_fruit_veg": "I rarely eat fruit, vegetables, or high-fiber foods.",
-      "low_activity": "I am not very physically active in daily life.",
-      "high_alcohol": "I drink alcohol more often or in larger amounts than recommended.",
-      "high_stress": "I experience a lot of stress in everyday life.",
-      "weight_concern": "I think or know that I’m in the overweight/obesity range."
+    "bloodpressure": {
+      "diet_salty": "I often eat foods high in salt (e.g., ready meals, snacks, salty spreads).",
+      "activity_low": "I am not very physically active in daily life.",
+      "alcohol_often": "I drink alcohol more often or in larger amounts than recommended.",
+      "stress_high": "I experience a lot of stress in everyday life.",
+      "overweight_self": "I think or know that I’m in the overweigh range."
     }
   },
   "f": {
