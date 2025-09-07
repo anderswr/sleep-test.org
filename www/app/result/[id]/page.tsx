@@ -23,8 +23,8 @@ function decapitalize(s: string) {
   return s.charAt(0).toLowerCase() + s.slice(1);
 }
 
-// Slug pr. kategori -> artikkelside
-const ARTICLE_SLUG: Record<CategoryId, string> = {
+/** Hjelper: map kategori -> artikkel-slug (må finnes i /articles/[lang]/). */
+const ARTICLE_SLUG_BY_CAT: Partial<Record<CategoryId, string>> = {
   [CategoryId.Pattern]: "pattern",
   [CategoryId.Insomnia]: "insomnia",
   [CategoryId.Quality]: "quality",
@@ -32,11 +32,53 @@ const ARTICLE_SLUG: Record<CategoryId, string> = {
   [CategoryId.Hygiene]: "hygiene",
   [CategoryId.Environment]: "environment",
   [CategoryId.Breathing]: "breathing",
-  [CategoryId.BloodPressure]: "bloodpressure",
+  // bloodpressure har ingen artikkel hos deg ennå -> ingen link/ikon
 };
 
+/** Hjelper: velg 2–3 tips-nøkler per kategori basert på bucket-farge. */
+function pickTipKeys(cat: CategoryId, color: "green" | "orange" | "red"): string[] {
+  // NB: bruker bare nøkler som finnes i nb/en under "tips.*"
+  if (cat === CategoryId.Pattern) {
+    if (color === "green") return ["tips.pattern.keep_routine", "tips.pattern.protect_7h"];
+    if (color === "orange") return ["tips.pattern.consistent_bed_wake", "tips.pattern.plan_winddown", "tips.pattern.protect_7h"];
+    return ["tips.pattern.plan_winddown", "tips.pattern.cut_late_naps", "tips.pattern.protect_7h"];
+  }
+  if (cat === CategoryId.Insomnia) {
+    if (color === "green") return ["tips.insomnia.maintain"];
+    if (color === "orange") return ["tips.insomnia.rule_20min", "tips.insomnia.fixed_wake"];
+    return ["tips.insomnia.rule_20min", "tips.insomnia.stimulus_control", "tips.insomnia.consider_cbti"];
+  }
+  if (cat === CategoryId.Quality) {
+    if (color === "green") return ["tips.quality.track_triggers"];
+    if (color === "orange") return ["tips.quality.address_disruptors", "tips.quality.track_triggers"];
+    return ["tips.quality.address_disruptors", "tips.quality.consult_if_pain"];
+  }
+  if (cat === CategoryId.Daytime) {
+    if (color === "green") return ["tips.daytime.morning_light"];
+    if (color === "orange") return ["tips.daytime.morning_light", "tips.daytime.activity_breaks"];
+    return ["tips.daytime.morning_light", "tips.daytime.activity_breaks", "tips.daytime.consider_medical"];
+  }
+  if (cat === CategoryId.Hygiene) {
+    if (color === "green") return ["tips.hygiene.keep_it_up"];
+    if (color === "orange") return ["tips.hygiene.screens_off_60", "tips.hygiene.limit_caffeine"];
+    return ["tips.hygiene.screens_off_60", "tips.hygiene.limit_caffeine", "tips.hygiene.no_alcohol_late"];
+  }
+  if (cat === CategoryId.Environment) {
+    if (color === "green") return ["tips.environment.keep_cool_dark"];
+    if (color === "orange") return ["tips.environment.test_blackout", "tips.environment.noise_control"];
+    return ["tips.environment.keep_cool_dark", "tips.environment.try_new_pillow", "tips.environment.cooler_temp"];
+  }
+  if (cat === CategoryId.Breathing) {
+    if (color === "green") return ["tips.breathing.side_sleep"];
+    if (color === "orange") return ["tips.breathing.side_sleep", "tips.breathing.reduce_evening_alcohol"];
+    return ["tips.breathing.side_sleep", "tips.breathing.reduce_evening_alcohol", "tips.breathing.consider_gp_check"];
+  }
+  // BloodPressure: ingen tips-nøkler i i18n ennå -> tom liste
+  return [];
+}
+
 export default function ResultPage({ params }: { params: { id: string } }) {
-  const { dict, lang } = useI18n();
+  const { dict } = useI18n();
   const [data, setData] = useState<ResultDoc | null>(null);
   const [notFound, setNotFound] = useState(false);
 
@@ -81,7 +123,7 @@ export default function ResultPage({ params }: { params: { id: string } }) {
     data
       ? bucketColor(
           typeof data.totalRaw === "number" ? data.totalRaw : Math.max(0, 100 - Number(data.sleepScore))
-        ).replace("yellow", "orange")
+        ).replace("yellow", "orange") as "green" | "orange" | "red"
       : "green";
 
   return (
@@ -94,7 +136,7 @@ export default function ResultPage({ params }: { params: { id: string } }) {
           </article>
         ) : (
           <>
-            {/* TOPP: bred card – samme breddeopplevelse som About */}
+            {/* TOPP: bredt kort – samme breddeopplevelse som About */}
             <article className="panel head score-hero" style={{ padding: 24 }}>
               <div className="score-hero__left">
                 <h1 className="mb-2">{t(dict, "ui.result.title", "Resultat")}</h1>
@@ -138,7 +180,13 @@ export default function ResultPage({ params }: { params: { id: string } }) {
                 const color = bucketColor(raw).replace("yellow", "orange") as "green" | "orange" | "red";
                 const desc = t(dict, `category.${cat}.desc`, "");
                 const lead = t(dict, `ui.result.lead.${color}`, "");
-                const slug = ARTICLE_SLUG[cat];
+
+                // Velg tips lokalt (i18n keys), og filtrér vekk som ikke finnes i ordlista
+                const tipKeys = pickTipKeys(cat, color).filter((k) => t(dict, k, "") !== "");
+
+                // Artikkel-ikon (kun hvis vi har slug for kategorien)
+                const articleSlug = ARTICLE_SLUG_BY_CAT[cat];
+                const showArticleIcon = !!articleSlug;
 
                 return (
                   <article key={cat} className="cat-card" data-color={color}>
@@ -154,33 +202,34 @@ export default function ResultPage({ params }: { params: { id: string } }) {
                       </div>
                     </div>
 
-                    <p className="muted" style={{ marginTop: 6 }}>
-                      <strong>{lead}</strong> {decapitalize(desc)}
+                    <p className="muted" style={{ marginTop: 6, display: "flex", alignItems: "center", gap: 8 }}>
+                      <span>
+                        <strong>{lead}</strong> {decapitalize(desc)}
+                      </span>
+                      {showArticleIcon && (
+                        <a
+                          href={`/articles/${articleSlug}`}
+                          aria-label={t(dict, "ui.common.read", "Read")}
+                          title={t(dict, "ui.common.read", "Read")}
+                          style={{ display: "inline-flex", alignItems: "center" }}
+                        >
+                          {/* Link-ikon (inline SVG) */}
+                          <svg width="18" height="18" viewBox="0 0 24 24" aria-hidden focusable="false">
+                            <path fill="currentColor" d="M14 3h7v7h-2V6.41l-9.29 9.3-1.42-1.42 9.3-9.29H14V3Zm-4 4v2H5v10h10v-5h2v7H3V7h7Z"/>
+                          </svg>
+                        </a>
+                      )}
                     </p>
 
-                    {/* Les mer-link til artikkel */}
-                    {slug && (
-                      <div style={{ marginTop: 8 }}>
-                        <a
-                          href={`/articles/${slug}`}
-                          className="muted"
-                          style={{ fontSize: ".9rem", textDecoration: "underline", textUnderlineOffset: 2 }}
-                          aria-label={t(dict, "ui.common.read", "Read")}
-                        >
-                          {t(dict, "ui.common.read", "Read more")} →
-                        </a>
-                      </div>
-                    )}
-
-                    {(data.suggestedTips?.[cat] || []).length > 0 && (
+                    {tipKeys.length > 0 && (
                       <>
                         <h4 className="mb-2 mt-6">
                           {t(dict, "ui.result.how_to_improve", "Hvordan forbedre dette:")}
                         </h4>
                         <ul className="tips-list">
-                          {(data.suggestedTips?.[cat] || []).map((tipKey) => (
-                            <li key={`${cat}-${tipKey}`}>
-                              <span className="star">*</span> {t(dict, tipKey, tipKey)}
+                          {tipKeys.map((key) => (
+                            <li key={`${cat}-${key}`}>
+                              <span className="star">*</span> {t(dict, key, key)}
                             </li>
                           ))}
                         </ul>
@@ -191,22 +240,22 @@ export default function ResultPage({ params }: { params: { id: string } }) {
               })}
             </section>
 
-            {/* Varsler */}
+            {/* Flags – nøytral presentasjon uten emoji eller røde farger */}
             {(data.flags?.osaSignal || data.flags?.excessiveSleepiness || data.flags?.highBpRisk) && (
-              <section className="card mt-6" style={{ padding: 24 }}>
-                <h2 className="mb-2">⚠️</h2>
+              <section className="panel mt-6" style={{ padding: 24 }}>
+                <h2 className="mb-2" style={{ marginTop: 0 }}>{t(dict, "ui.result.title", "Resultat")}</h2>
                 {data.flags?.osaSignal && (
-                  <p style={{ color: "var(--bad)" }}>{t(dict, "flags.osa_signal")}</p>
+                  <p>{t(dict, "flags.osa_signal")}</p>
                 )}
                 {data.flags?.excessiveSleepiness && (
-                  <p style={{ color: "#f59e0b" }}>{t(dict, "flags.excessive_sleepiness")}</p>
+                  <p>{t(dict, "flags.excessive_sleepiness")}</p>
                 )}
                 {data.flags?.highBpRisk && (
-                  <p style={{ color: "#b45309" /* amber-600, rolig tone */ }}>
+                  <p>
                     {t(
                       dict,
                       "flags.high_bp_risk",
-                      "Flere livsstilsfaktorer peker mot økt blodtrykksrisiko. Vurder å måle blodtrykket ved anledning, særlig hvis du har type 2-diabetes eller nær familie med hjerte-/karsykdom."
+                      "Several lifestyle factors point to an increased risk of high blood pressure. Consider measuring your blood pressure when you have the opportunity, especially if you have type 2 diabetes or close relatives with cardiovascular disease."
                     )}
                   </p>
                 )}
