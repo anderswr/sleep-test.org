@@ -177,13 +177,12 @@
       "observed_apneas": "Andre har observert pustestopp når jeg sover.",
       "daytime_tired_despite": "Jeg er kraftig trett på dagtid selv etter en normal natt."
     },
-    "bp": {
-      "salt_intake": "Jeg spiser ofte mat med mye salt (f.eks. ferdigmat, snacks, salte pålegg).",
-      "low_fruit_veg": "Jeg spiser sjelden frukt, grønnsaker eller mat med mye fiber.",
-      "low_activity": "Jeg er lite fysisk aktiv i hverdagen.",
-      "high_alcohol": "Jeg drikker alkohol oftere eller mer enn anbefalt.",
-      "high_stress": "Jeg opplever mye stress i hverdagen.",
-      "weight_concern": "Jeg tror eller vet at jeg ligger i overvekt/fedme-området."
+    "bloodpressure": {
+      "diet_salty": "Jeg spiser ofte mat med mye salt (f.eks. ferdigmat, snacks, salte pålegg).",
+      "activity_low": "Jeg er lite fysisk aktiv i hverdagen.",
+      "alcohol_often": "Jeg drikker alkohol oftere eller mer enn anbefalt.",
+      "stress_high": "Jeg opplever mye stress i hverdagen.",
+      "overweight_self": "Jeg tror eller vet at jeg ligger i overvekt-området."
     }
   },
   "f": {
