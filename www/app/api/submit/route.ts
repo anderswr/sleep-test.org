@@ -10,29 +10,34 @@ export const runtime = "nodejs";
 
 export async function POST(req: NextRequest) {
   try {
-    const { answers = {}, lang = "nb" } = (await req.json()) as {
-      answers: AnswerMap;
-      lang: string;
-    };
+    const body = (await req.json()) as { answers?: AnswerMap; lang?: string } | null;
 
-    // Whitelist: keep only known likert ids
+    // Robust henting av lang: godta hvilken som helst string, ellers fallback til "en"
+    const langRaw = body?.lang;
+    const lang = typeof langRaw === "string" && langRaw.trim() ? langRaw.trim() : "en";
+
+    const incomingAnswers = (body?.answers ?? {}) as AnswerMap;
+
+    // Whitelist: behold kun kjente likert-id'er og numeriske verdier
     const knownLikert = new Set(
       QUESTION_BANK.filter((q) => q.kind === "likert").map((q) => q.id)
     );
     const cleaned: AnswerMap = {};
-    for (const [k, v] of Object.entries(answers || {})) {
-      if (knownLikert.has(k) && typeof v === "number") cleaned[k] = v as any;
+    for (const [k, v] of Object.entries(incomingAnswers)) {
+      if (knownLikert.has(k) && typeof v === "number") {
+        cleaned[k] = v as any;
+      }
     }
 
     const computed = await computeAllServer(cleaned);
     const id = generateId(11);
 
-    // Persist (answers only; no fields anymore)
+    // Persistér (kun likert-svar; ingen felt lenger)
     const doc = {
       id,
       createdAt: new Date().toISOString(),
       v: BANK_VERSION,
-      lang,
+      lang,            // lagre det brukeren sendte (eller "en" hvis ikke oppgitt)
       answers: cleaned,
       ...computed,
     };
