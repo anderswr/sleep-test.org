@@ -14,7 +14,7 @@ type ResultDoc = {
   sleepScore: number;                          // 0–100 (høyere = bedre)
   totalRaw?: number;                           // 0–100 (høyere = verre) – kan mangle i eldre resultater
   categoryScores: Record<string, number>;      // 0–100 (høyere = verre)
-  flags?: { osaSignal?: boolean; excessiveSleepiness?: boolean };
+  flags?: { osaSignal?: boolean; excessiveSleepiness?: boolean; highBpRisk?: boolean };
   suggestedTips?: Record<string, string[]>;
 };
 
@@ -23,8 +23,20 @@ function decapitalize(s: string) {
   return s.charAt(0).toLowerCase() + s.slice(1);
 }
 
+// Slug pr. kategori -> artikkelside
+const ARTICLE_SLUG: Record<CategoryId, string> = {
+  [CategoryId.Pattern]: "pattern",
+  [CategoryId.Insomnia]: "insomnia",
+  [CategoryId.Quality]: "quality",
+  [CategoryId.Daytime]: "daytime",
+  [CategoryId.Hygiene]: "hygiene",
+  [CategoryId.Environment]: "environment",
+  [CategoryId.Breathing]: "breathing",
+  [CategoryId.BloodPressure]: "bloodpressure",
+};
+
 export default function ResultPage({ params }: { params: { id: string } }) {
-  const { dict } = useI18n();
+  const { dict, lang } = useI18n();
   const [data, setData] = useState<ResultDoc | null>(null);
   const [notFound, setNotFound] = useState(false);
 
@@ -83,8 +95,8 @@ export default function ResultPage({ params }: { params: { id: string } }) {
         ) : (
           <>
             {/* TOPP: bred card – samme breddeopplevelse som About */}
-            <article className="panel head score-hero" style={{ padding: 24 }}>              
-                <div className="score-hero__left">
+            <article className="panel head score-hero" style={{ padding: 24 }}>
+              <div className="score-hero__left">
                 <h1 className="mb-2">{t(dict, "ui.result.title", "Resultat")}</h1>
                 <div className="row" style={{ gap: 8, alignItems: "center" }}>
                   <code
@@ -126,6 +138,7 @@ export default function ResultPage({ params }: { params: { id: string } }) {
                 const color = bucketColor(raw).replace("yellow", "orange") as "green" | "orange" | "red";
                 const desc = t(dict, `category.${cat}.desc`, "");
                 const lead = t(dict, `ui.result.lead.${color}`, "");
+                const slug = ARTICLE_SLUG[cat];
 
                 return (
                   <article key={cat} className="cat-card" data-color={color}>
@@ -144,6 +157,20 @@ export default function ResultPage({ params }: { params: { id: string } }) {
                     <p className="muted" style={{ marginTop: 6 }}>
                       <strong>{lead}</strong> {decapitalize(desc)}
                     </p>
+
+                    {/* Les mer-link til artikkel */}
+                    {slug && (
+                      <div style={{ marginTop: 8 }}>
+                        <a
+                          href={`/articles/${slug}`}
+                          className="muted"
+                          style={{ fontSize: ".9rem", textDecoration: "underline", textUnderlineOffset: 2 }}
+                          aria-label={t(dict, "ui.common.read", "Read")}
+                        >
+                          {t(dict, "ui.common.read", "Read more")} →
+                        </a>
+                      </div>
+                    )}
 
                     {(data.suggestedTips?.[cat] || []).length > 0 && (
                       <>
@@ -165,7 +192,7 @@ export default function ResultPage({ params }: { params: { id: string } }) {
             </section>
 
             {/* Varsler */}
-            {(data.flags?.osaSignal || data.flags?.excessiveSleepiness) && (
+            {(data.flags?.osaSignal || data.flags?.excessiveSleepiness || data.flags?.highBpRisk) && (
               <section className="card mt-6" style={{ padding: 24 }}>
                 <h2 className="mb-2">⚠️</h2>
                 {data.flags?.osaSignal && (
@@ -173,6 +200,15 @@ export default function ResultPage({ params }: { params: { id: string } }) {
                 )}
                 {data.flags?.excessiveSleepiness && (
                   <p style={{ color: "#f59e0b" }}>{t(dict, "flags.excessive_sleepiness")}</p>
+                )}
+                {data.flags?.highBpRisk && (
+                  <p style={{ color: "#b45309" /* amber-600, rolig tone */ }}>
+                    {t(
+                      dict,
+                      "flags.high_bp_risk",
+                      "Flere livsstilsfaktorer peker mot økt blodtrykksrisiko. Vurder å måle blodtrykket ved anledning, særlig hvis du har type 2-diabetes eller nær familie med hjerte-/karsykdom."
+                    )}
+                  </p>
                 )}
               </section>
             )}

@@ -177,13 +177,12 @@
       "observed_apneas": "Andre har observert pustestopp når jeg sover.",
       "daytime_tired_despite": "Jeg er kraftig trett på dagtid selv etter en normal natt."
     },
-    "bp": {
-      "salt_intake": "Jeg spiser ofte mat med mye salt (f.eks. ferdigmat, snacks, salte pålegg).",
-      "low_fruit_veg": "Jeg spiser sjelden frukt, grønnsaker eller mat med mye fiber.",
-      "low_activity": "Jeg er lite fysisk aktiv i hverdagen.",
-      "high_alcohol": "Jeg drikker alkohol oftere eller mer enn anbefalt.",
-      "high_stress": "Jeg opplever mye stress i hverdagen.",
-      "weight_concern": "Jeg tror eller vet at jeg ligger i overvekt/fedme-området."
+    "bloodpressure": {
+      "diet_salty": "Jeg spiser ofte mat med mye salt (f.eks. ferdigmat, snacks, salte pålegg).",
+      "activity_low": "Jeg er lite fysisk aktiv i hverdagen.",
+      "alcohol_often": "Jeg drikker alkohol oftere eller mer enn anbefalt.",
+      "stress_high": "Jeg opplever mye stress i hverdagen.",
+      "overweight_self": "Jeg tror eller vet at jeg ligger i overvekt-området."
     }
   },
   "f": {
@@ -238,7 +237,8 @@
   },
   "flags": {
     "osa_signal": "Mulige tegn på søvnapné – vurder å snakke med fastlege.",
-    "excessive_sleepiness": "Uttalt søvnighet på dagtid – vær ekstra oppmerksom."
+    "excessive_sleepiness": "Uttalt søvnighet på dagtid – vær ekstra oppmerksom.",
+    "high_bp_risk": "Flere livsstilsfaktorer peker mot økt blodtrykksrisiko. Vurder å måle blodtrykket ved anledning, særlig hvis du har type 2-diabetes eller nær familie med hjerte-/karsykdom."
   },
   "tips": {
     "pattern": {

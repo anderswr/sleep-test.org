@@ -33,5 +33,13 @@ export function computeFlags(answers: AnswerMap) {
   const daytimeAvg = avg(daytimeVals); // 1–5 scale
   const excessiveSleepiness = daytimeAvg >= 4; // Often+
 
-  return { osaSignal, excessiveSleepiness };
+  // NEW: Blood pressure lifestyle risk (q26–q30)
+  // Same 1–5 Likert space; flag when average is Often+ (≥4)
+  const bpVals = ["q26", "q27", "q28", "q29", "q30"]
+    .map((id) => answers[id])
+    .filter((v): v is LikertValue => typeof v === "number");
+  const bpAvg = avg(bpVals); // 1–5
+  const highBpRisk = bpVals.length > 0 && bpAvg >= 4;
+
+  return { osaSignal, excessiveSleepiness, highBpRisk };
 }
