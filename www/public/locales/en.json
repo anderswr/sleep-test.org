@@ -118,7 +118,8 @@
       "sending": "Sending…",
       "back": "Back",
       "next": "Next",
-      "read": "Read"
+      "read": "Read",
+      "error_submit": "Could not submit. Please try again."
     }
   },
   "likert": {
@@ -135,8 +136,9 @@
     "daytime": { "name": "Daytime & sleepiness", "desc": "Sleepiness and daytime function." },
     "hygiene": { "name": "Sleep hygiene & routines", "desc": "Habits and timing (screens, caffeine)." },
     "environment": { "name": "Sleep environment", "desc": "Light, noise, temperature, bed." },
-    "breathing": { "name": "Snoring & breathing signals", "desc": "Possible signs of sleep apnea." }
-  },
+    "breathing": { "name": "Snoring & breathing signals", "desc": "Possible signs of sleep apnea." },
+    "bloodpressure": { "name": "Blood pressure – lifestyle risk", "desc": "Diet, activity, alcohol, stress, and weight." }
+   },
   "q": {
     "pattern": {
       "too_short": "I sleep less than I need most nights.",
