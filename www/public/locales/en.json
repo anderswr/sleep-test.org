@@ -38,14 +38,23 @@
       "error": "Something went wrong. Please try again."
     },
     "articles": {
-  "card": {
-    "title": "Learn more",
-"text": "Although sleep is individual, there has been extensive research on the topic. Here are some articles about sleep – written for the general public, based on credible online sources."  },
-  "index": {
-    "pattern": {
-      "title": "Sleep pattern & duration: a routine that works",
-      "teaser": "Why regular hours and enough time in bed make everything easier—plus simple steps to start tonight."
-    },
+       "minutes": {
+         "pattern": "6 min",
+         "insomnia": "7 min",
+         "quality": "5 min",
+         "daytime": "6 min",
+         "hygiene": "6 min",
+         "environment": "5 min",
+         "breathing": "6 min"
+          }
+      "card": {
+        "title": "Learn more",
+        "text": "Although sleep is individual, there has been extensive research on the topic. Here are some articles about sleep – written for the general public, based on credible online sources."  },
+    "index": {
+     "pattern": {
+       "title": "Sleep pattern & duration: a routine that works",
+       "teaser": "Why regular hours and enough time in bed make everything easier—plus simple steps to start tonight."
+        },
     "insomnia": {
       "title": "Trouble falling or staying asleep",
       "teaser": "CBT-I for real life: the 20-minute rule, stimulus control, and why a fixed wake time matters."
