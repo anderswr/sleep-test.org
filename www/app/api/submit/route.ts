@@ -2,7 +2,7 @@
 import { NextRequest, NextResponse } from "next/server";
 import { getCollection } from "@/lib/db";
 import { generateId } from "@/lib/id";
-import { BANK_VERSION, AnswerMap, FieldMap } from "@/lib/types";
+import { BANK_VERSION, AnswerMap } from "@/lib/types";
 import { QUESTION_BANK } from "@/data/questions";
 import { computeAllServer } from "./util";
 
@@ -10,16 +10,38 @@ export const runtime = "nodejs";
 
 export async function POST(req: NextRequest) {
   try {
-    const { answers = {}, fields = {}, lang = "nb" } = (await req.json()) as { answers: AnswerMap; fields: FieldMap; lang: string };
+    const body = (await req.json()) as { answers?: AnswerMap; lang?: string } | null;
 
-    // whitelist: kun kjente likert-id-er
-    const known = new Set(QUESTION_BANK.filter((q) => q.kind === "likert").map((q) => q.id));
-    Object.keys(answers).forEach((k) => { if (!known.has(k)) delete (answers as any)[k]; });
+    // Robust henting av lang: godta hvilken som helst string, ellers fallback til "en"
+    const langRaw = body?.lang;
+    const lang = typeof langRaw === "string" && langRaw.trim() ? langRaw.trim() : "en";
 
-    const computed = await computeAllServer(answers, fields);
+    const incomingAnswers = (body?.answers ?? {}) as AnswerMap;
+
+    // Whitelist: behold kun kjente likert-id'er og numeriske verdier
+    const knownLikert = new Set(
+      QUESTION_BANK.filter((q) => q.kind === "likert").map((q) => q.id)
+    );
+    const cleaned: AnswerMap = {};
+    for (const [k, v] of Object.entries(incomingAnswers)) {
+      if (knownLikert.has(k) && typeof v === "number") {
+        cleaned[k] = v as any;
+      }
+    }
+
+    const computed = await computeAllServer(cleaned);
     const id = generateId(11);
 
-    const doc = { id, createdAt: new Date().toISOString(), v: BANK_VERSION, lang, answers, fields, ...computed };
+    // Persistér (kun likert-svar; ingen felt lenger)
+    const doc = {
+      id,
+      createdAt: new Date().toISOString(),
+      v: BANK_VERSION,
+      lang,            // lagre det brukeren sendte (eller "en" hvis ikke oppgitt)
+      answers: cleaned,
+      ...computed,
+    };
+
     const col = await getCollection("results");
     await col.insertOne(doc);
 

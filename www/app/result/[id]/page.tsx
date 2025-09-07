@@ -11,9 +11,9 @@ import { CategoryId } from "@/lib/types";
 
 type ResultDoc = {
   id: string;
-  sleepScore: number;
-  totalRaw: number;
-  categoryScores: Record<string, number>;
+  sleepScore: number;                          // 0–100 (høyere = bedre)
+  totalRaw?: number;                           // 0–100 (høyere = verre) – kan mangle i eldre resultater
+  categoryScores: Record<string, number>;      // 0–100 (høyere = verre)
   flags?: { osaSignal?: boolean; excessiveSleepiness?: boolean };
   suggestedTips?: Record<string, string[]>;
 };
@@ -64,7 +64,13 @@ export default function ResultPage({ params }: { params: { id: string } }) {
     );
   }
 
-  const ringColor = data ? bucketColor(data.totalRaw).replace("yellow", "orange") : "green";
+  // Farge til ringen: bruk totalRaw hvis den finnes, ellers 100 - sleepScore (eldre resultater)
+  const ringColor =
+    data
+      ? bucketColor(
+          typeof data.totalRaw === "number" ? data.totalRaw : Math.max(0, 100 - Number(data.sleepScore))
+        ).replace("yellow", "orange")
+      : "green";
 
   return (
     <div className="app-shell">
@@ -76,9 +82,9 @@ export default function ResultPage({ params }: { params: { id: string } }) {
           </article>
         ) : (
           <>
-            {/* TOP: Én bred card – samme breddeopplevelse som About */}
-            <article className="card score-hero" style={{ padding: 24 }}>
-              <div className="score-hero__left">
+            {/* TOPP: bred card – samme breddeopplevelse som About */}
+            <article className="panel head score-hero" style={{ padding: 24 }}>              
+                <div className="score-hero__left">
                 <h1 className="mb-2">{t(dict, "ui.result.title", "Resultat")}</h1>
                 <div className="row" style={{ gap: 8, alignItems: "center" }}>
                   <code
@@ -91,6 +97,7 @@ export default function ResultPage({ params }: { params: { id: string } }) {
                     className="btn"
                     onClick={() => navigator.clipboard.writeText(data.id)}
                     title={t(dict, "ui.result.copy_id", "Kopier ID")}
+                    aria-label={t(dict, "ui.result.copy_id", "Kopier ID")}
                   >
                     {t(dict, "ui.result.copy_id", "Kopier ID")}
                   </button>
@@ -111,12 +118,12 @@ export default function ResultPage({ params }: { params: { id: string } }) {
               </div>
             </article>
 
-            {/* Kategorier – kort i grid under, samme totalbredde (container) */}
+            {/* Kategorier */}
             <section className="grid-cards mt-6">
               {entries.map(([cat, rawVal]) => {
-                const raw = Number(rawVal);
-                const display = 100 - raw; // høyere = bedre, vises som 0–100
-                const color = bucketColor(raw).replace("yellow", "orange");
+                const raw = Number(rawVal);             // 0–100 (høyere = verre)
+                const display = 100 - raw;              // visning 0–100 (høyere = bedre)
+                const color = bucketColor(raw).replace("yellow", "orange") as "green" | "orange" | "red";
                 const desc = t(dict, `category.${cat}.desc`, "");
                 const lead = t(dict, `ui.result.lead.${color}`, "");
 

@@ -82,7 +82,7 @@ React.useEffect(() => {
             <Link href="/test" className="btn primary">
               {t(dict, "ui.home.cta", "Start the test")}
             </Link>
-            <Link href="/result/GEBJHC-s1SB" className="btn">
+            <Link href="/result/WYvIBTnpKTs" className="btn">
               {t(dict, "ui.home.example", "See sample report")}
             </Link>
           </div>

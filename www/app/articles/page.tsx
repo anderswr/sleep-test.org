@@ -12,7 +12,6 @@ type ArticleMeta = {
   slug: string;
   title: string;
   summary?: string;
-  minutes?: number;
   tags?: string[];
 };
 
@@ -30,7 +29,6 @@ export default function ArticlesPage() {
 
       const urlFor = (l: string) => `/articles/${l}/index.json`;
 
-      // 1) Prøv valgt språk
       try {
         const res1 = await fetch(urlFor(lang), { cache: "no-store" });
         if (res1.ok) {
@@ -38,11 +36,8 @@ export default function ArticlesPage() {
           if (!cancelled) setItems(json);
           return;
         }
-      } catch {
-        /* fallthrough */
-      }
+      } catch {}
 
-      // 2) Fallback til engelsk
       try {
         const res2 = await fetch(urlFor("en"), { cache: "no-store" });
         if (res2.ok) {
@@ -50,9 +45,7 @@ export default function ArticlesPage() {
           if (!cancelled) setItems(json);
           return;
         }
-      } catch {
-        /* fallthrough */
-      }
+      } catch {}
 
       if (!cancelled) setError("Could not load articles.");
     }
@@ -67,9 +60,11 @@ export default function ArticlesPage() {
     <div className="app-shell">
       <SiteHeader />
       <main className="container" style={{ flex: "1 1 auto" }}>
-        {/* Toppkort – samme breddeopplevelse som About/Home */}
+        {/* Bred toppboks */}
         <article className="panel head" style={{ padding: 24 }}>
-          <h1 className="mb-2">{t(dict, "ui.articles.card.title", "Learn more")}</h1>
+          <h1 className="mb-2">
+            {t(dict, "ui.articles.card.title", "Learn more")}
+          </h1>
           <p className="muted">{t(dict, "ui.articles.card.text", "")}</p>
         </article>
 
@@ -86,17 +81,11 @@ export default function ArticlesPage() {
           </section>
         )}
 
-        {/* Artikler */}
+        {/* Artikler – 3 per rad */}
         {items && (
-          <section className="cards-grid mt-6">
+          <section className="cards-row mt-6">
             {items.map((a) => (
-              <article key={a.slug} className="panel head" style={{ padding: 16 }}>
-                <div
-                  className="cat-card__head"
-                  style={{ alignItems: "center", marginBottom: 6 }}
-                >
-                  <span className="pill">{a.minutes ? `${a.minutes} min` : " "}</span>
-                </div>
+              <div key={a.slug} className="card" style={{ padding: 16 }}>
                 <h3 style={{ marginTop: 0 }}>{a.title}</h3>
                 {a.summary && (
                   <p className="muted" style={{ marginTop: 6 }}>
@@ -108,10 +97,24 @@ export default function ArticlesPage() {
                     {t(dict, "ui.common.read", "Read")}
                   </Link>
                 </div>
-              </article>
+              </div>
             ))}
           </section>
         )}
+
+        <style jsx>{`
+          .cards-row {
+            margin-top: 16px;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 16px;
+          }
+          @media (max-width: 980px) {
+            .cards-row {
+              grid-template-columns: 1fr;
+            }
+          }
+        `}</style>
       </main>
       <SiteFooter />
     </div>

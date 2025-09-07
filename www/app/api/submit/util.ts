@@ -1,37 +1,57 @@
 // app/api/submit/util.ts
-import { AnswerMap, CategoryId, CategoryScores, ComputedResult, FieldMap } from "@/lib/types";
-import { QUESTION_BANK } from "@/data/questions";
+import {
+  AnswerMap,
+  CategoryId,
+  CategoryScores,
+  ComputedResult,
+  BANK_VERSION,
+} from "@/lib/types";
+import { computeCategoryScores } from "@/lib/scoring";
 import { computeFlags } from "@/lib/flags";
-import { avg, bucketColor, computeCategoryScores } from "@/lib/scoring";
 
-const byCatIds: Record<CategoryId, string[]> = {
-  pattern: [], insomnia: [], quality: [], daytime: [], hygiene: [], environment: [], breathing: [],
-} as any;
+/**
+ * Server-side category mapping (Likert-only ids).
+ * Keep in sync with /data/questions.ts groupings.
+ */
+const BY_CAT: Record<CategoryId, string[]> = {
+  [CategoryId.Pattern]:       ["q1", "q2", "q3"],
+  [CategoryId.Insomnia]:      ["q4", "q5", "q6", "q7", "q8"],
+  [CategoryId.Quality]:       ["q9", "q10", "q11"],
+  [CategoryId.Daytime]:       ["q12", "q13", "q14"],
+  [CategoryId.Hygiene]:       ["q15", "q16", "q17", "q18", "q19"],
+  [CategoryId.Environment]:   ["q20", "q21", "q22"],
+  [CategoryId.Breathing]:     ["q23", "q24", "q25"],
+  // NEW: Blood pressure lifestyle risk (Likert-only)
+  [CategoryId.BloodPressure]: ["q26", "q27", "q28", "q29", "q30"],
+};
 
-QUESTION_BANK.forEach((q) => { if (q.kind === "likert") byCatIds[q.category].push(q.id); });
+/**
+ * Compute the full result doc from answers.
+ * Fields are no longer part of the pipeline.
+ */
+export async function computeAllServer(answers: AnswerMap): Promise<ComputedResult> {
+  const categoryScores: CategoryScores = computeCategoryScores(answers, BY_CAT);
 
-const RESULT_TIP_KEYS = {
-  pattern: { green: ["tips.pattern.keep_routine", "tips.pattern.short_naps"], yellow: ["tips.pattern.consistent_bed_wake", "tips.pattern.plan_winddown"], red: ["tips.pattern.protect_7h", "tips.pattern.cut_late_naps"] },
-  insomnia:{ green: ["tips.insomnia.maintain"], yellow: ["tips.insomnia.rule_20min", "tips.insomnia.fixed_wake"], red: ["tips.insomnia.stimulus_control", "tips.insomnia.consider_cbti"] },
-  quality: { green: ["tips.quality.track_triggers"], yellow: ["tips.quality.address_disruptors"], red: ["tips.quality.consult_if_pain"] },
-  daytime: { green: ["tips.daytime.morning_light"], yellow: ["tips.daytime.activity_breaks"], red: ["tips.daytime.consider_medical"] },
-  hygiene: { green: ["tips.hygiene.keep_it_up"], yellow: ["tips.hygiene.screens_off_60", "tips.hygiene.limit_caffeine"], red: ["tips.hygiene.no_alcohol_late", "tips.hygiene.no_big_meals_late"] },
-  environment: { green: ["tips.environment.keep_cool_dark"], yellow: ["tips.environment.test_blackout", "tips.environment.noise_control"], red: ["tips.environment.try_new_pillow", "tips.environment.cooler_temp"] },
-  breathing: { green: ["tips.breathing.side_sleep"], yellow: ["tips.breathing.reduce_evening_alcohol"], red: ["tips.breathing.consider_gp_check"] },
-} as const;
+  // totalRaw is the average across categories (0–100; higher is worse)
+  const catVals = Object.values(categoryScores);
+  const totalRaw = catVals.length
+    ? Math.round(catVals.reduce((a, b) => a + b, 0) / catVals.length)
+    : 0;
 
-export async function computeAllServer(answers: AnswerMap, fields: FieldMap): Promise<ComputedResult> {
-  const categoryScores: CategoryScores = computeCategoryScores(answers, byCatIds);
-  const totalRaw = Math.round(avg(Object.values(categoryScores)));
-  const sleepScore = 100 - totalRaw;
+  // sleepScore is the “positive” score (higher is better)
+  const sleepScore = Math.max(0, 100 - totalRaw);
 
-  const flags = computeFlags(answers, fields);
+  const flags = computeFlags(answers);
 
-  const suggestedTips: Record<CategoryId, string[]> = { pattern: [], insomnia: [], quality: [], daytime: [], hygiene: [], environment: [], breathing: [], } as any;
-  (Object.keys(categoryScores) as CategoryId[]).forEach((cat) => {
-    const color = bucketColor(categoryScores[cat]);
-    suggestedTips[cat] = (RESULT_TIP_KEYS as any)[cat][color];
-  });
+  // Suggested tips are populated client-side from i18n per category/color.
+  const suggestedTips = {} as ComputedResult["suggestedTips"];
 
-  return { version: "1.0.0", categoryScores, totalRaw, sleepScore, flags, suggestedTips };
+  return {
+    version: BANK_VERSION,
+    categoryScores,
+    totalRaw,
+    sleepScore,
+    flags,
+    suggestedTips,
+  };
 }

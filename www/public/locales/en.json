@@ -33,44 +33,52 @@
       "id_a": "ID A",
       "id_b": "ID B",
       "label_a": "ID A",
-      "label_b": "ID B",
-      "notfound": "Could not find one or both IDs.",
-      "error": "Something went wrong. Please try again."
+      "label_b": "ID B"
     },
     "articles": {
-  "card": {
-    "title": "Learn more",
-"text": "Although sleep is individual, there has been extensive research on the topic. Here are some articles about sleep – written for the general public, based on credible online sources."  },
-  "index": {
-    "pattern": {
-      "title": "Sleep pattern & duration: a routine that works",
-      "teaser": "Why regular hours and enough time in bed make everything easier—plus simple steps to start tonight."
-    },
-    "insomnia": {
-      "title": "Trouble falling or staying asleep",
-      "teaser": "CBT-I for real life: the 20-minute rule, stimulus control, and why a fixed wake time matters."
-    },
-    "quality": {
-      "title": "Sleep quality: lifting the overall feel",
-      "teaser": "What “quality” really means, common drags on it, and how to nudge it upward steadily."
-    },
-    "daytime": {
-      "title": "Daytime & sleepiness: more alert hours",
-      "teaser": "Morning light, micro-movement breaks, and better timing for less dozing and more focus."
-    },
-    "hygiene": {
-      "title": "Sleep hygiene and routines that actually help",
-      "teaser": "Screen-light evenings, a caffeine cut-off, and a simple wind-down—without the guilt."
-    },
-    "environment": {
-      "title": "Sleep environment: light, noise, temperature & bed",
-      "teaser": "Low-cost tweaks for calmer nights—blackout, sound, and a pillow that really fits."
-    },
-    "breathing": {
-      "title": "Snoring & breathing signals: when to check it",
-      "teaser": "When snoring is harmless, when it might be sleep apnea, and what to do next."
-    }
-  }
+      "minutes": {
+        "pattern": "6 min",
+        "insomnia": "7 min",
+        "quality": "5 min",
+        "daytime": "6 min",
+        "hygiene": "6 min",
+        "environment": "5 min",
+        "breathing": "6 min"
+      },
+      "card": {
+        "title": "Learn more",
+        "text": "Although sleep is individual, there has been extensive research on the topic. Here are some articles about sleep – written for the general public, based on credible online sources."
+      },
+      "index": {
+        "pattern": {
+          "title": "Sleep pattern & duration: a routine that works",
+          "teaser": "Why regular hours and enough time in bed make everything easier—plus simple steps to start tonight."
+        },
+        "insomnia": {
+          "title": "Trouble falling or staying asleep",
+          "teaser": "CBT-I for real life: the 20-minute rule, stimulus control, and why a fixed wake time matters."
+        },
+        "quality": {
+          "title": "Sleep quality: lifting the overall feel",
+          "teaser": "What “quality” really means, common drags on it, and how to nudge it upward steadily."
+        },
+        "daytime": {
+          "title": "Daytime & sleepiness: more alert hours",
+          "teaser": "Morning light, micro-movement breaks, and better timing for less dozing and more focus."
+        },
+        "hygiene": {
+          "title": "Sleep hygiene and routines that actually help",
+          "teaser": "Screen-light evenings, a caffeine cut-off, and a simple wind-down—without the guilt."
+        },
+        "environment": {
+          "title": "Sleep environment: light, noise, temperature & bed",
+          "teaser": "Low-cost tweaks for calmer nights—blackout, sound, and a pillow that really fits."
+        },
+        "breathing": {
+          "title": "Snoring & breathing signals: when to check it",
+          "teaser": "When snoring is harmless, when it might be sleep apnea, and what to do next."
+        }
+      }
     },
     "about": {
       "title": "Created by the team at DMZ DATA AS",
@@ -103,9 +111,8 @@
         "orange": "You have room for improvement in ",
         "red": "You should change your habits for "
       },
-    "lookup_hint": "When you complete a test you receive an ID. It is anonymous, and you can open your report anytime. Paste your ID to view the report.",   
-    "id_placeholder": "Your ID",
-    "copy_id": "Copy ID"
+      "lookup_hint": "When you complete a test you receive an ID. It is anonymous, and you can open your report anytime. Paste your ID to view the report.",
+      "id_placeholder": "Your ID"
     },
     "common": {
       "sending": "Sending…",
@@ -169,6 +176,14 @@
       "loud_snoring": "I snore loudly.",
       "observed_apneas": "Others have observed breathing pauses when I sleep.",
       "daytime_tired_despite": "I’m very sleepy in the daytime even after a normal night."
+    },
+    "bp": {
+      "salt_intake": "I often eat foods high in salt (e.g., ready meals, snacks, salty spreads).",
+      "low_fruit_veg": "I rarely eat fruit, vegetables, or high-fiber foods.",
+      "low_activity": "I am not very physically active in daily life.",
+      "high_alcohol": "I drink alcohol more often or in larger amounts than recommended.",
+      "high_stress": "I experience a lot of stress in everyday life.",
+      "weight_concern": "I think or know that I’m in the overweight/obesity range."
     }
   },
   "f": {

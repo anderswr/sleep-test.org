@@ -5,11 +5,19 @@ import * as React from "react";
 import { LikertValue } from "@/lib/types";
 import { t } from "@/lib/i18n";
 
+type Labels = { 1: string; 2: string; 3: string; 4: string; 5: string };
+
 type Props = {
-  name: string;
-  value?: LikertValue;
+  /** Valgfritt navn/id-basert prefix for ARIA; fallback: "likert-group" */
+  name?: string;
+  /** Gjeldende verdi (1–5) eller null/undefined hvis ikke besvart */
+  value?: LikertValue | null;
+  /** Kalles når bruker velger en verdi */
   onChange: (v: LikertValue) => void;
-  dict: any;
+  /** i18n-ordbok; valgfri dersom labels sendes inn */
+  dict?: any;
+  /** Tekster for 1–5. Overstyrer i18n dersom satt. */
+  labels?: Labels;
 };
 
 type Face = {
@@ -27,7 +35,13 @@ const FACES: Face[] = [
   { v: 5, emoji: "😃", tone: 5, labelKey: "likert.5" },
 ];
 
-export default function SmileyLikert({ name, value, onChange, dict }: Props) {
+export default function SmileyLikert({
+  name = "likert-group",
+  value,
+  onChange,
+  dict,
+  labels,
+}: Props) {
   const groupRef = React.useRef<HTMLDivElement>(null);
 
   // Flytt fokus mellom “radio-knappene” med piltaster
@@ -53,7 +67,6 @@ export default function SmileyLikert({ name, value, onChange, dict }: Props) {
       buttons[buttons.length - 1].focus();
       e.preventDefault();
     } else if (e.key === " " || e.key === "Enter") {
-      // Velg aktiv knapp
       const active = buttons[Math.max(0, currentIndex)];
       const val = Number(active?.dataset?.val) as LikertValue;
       if (val >= 1 && val <= 5) onChange(val);
@@ -61,17 +74,25 @@ export default function SmileyLikert({ name, value, onChange, dict }: Props) {
     }
   }
 
+  const groupId = `${name}-legend`;
+
   return (
     <div
       ref={groupRef}
       className="smiley-group"
       role="radiogroup"
-      aria-labelledby={`${name}-legend`}
+      aria-labelledby={groupId}
       onKeyDown={onKeyDown}
     >
       {FACES.map((f) => {
         const selected = value === f.v;
         const id = `${name}-${f.v}`;
+
+        // Velg label: labels-prop > i18n > fallback (tallverdi)
+        const caption =
+          (labels && labels[f.v as 1 | 2 | 3 | 4 | 5]) ??
+          (dict ? t(dict, f.labelKey, String(f.v)) : String(f.v));
+
         return (
           <button
             key={id}
@@ -87,9 +108,7 @@ export default function SmileyLikert({ name, value, onChange, dict }: Props) {
             <span className="smiley-emoji" aria-hidden>
               {f.emoji}
             </span>
-            <span className="smiley-caption">
-              {t(dict, f.labelKey, String(f.v))}
-            </span>
+            <span className="smiley-caption">{caption}</span>
           </button>
         );
       })}

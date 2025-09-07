@@ -33,45 +33,52 @@
       "id_a": "ID A",
       "id_b": "ID B",
       "label_a": "ID A",
-      "label_b": "ID B",
-      "notfound": "Fant ikke en eller begge ID-ene.",
-      "error": "Noe gikk galt. Prøv igjen."
+      "label_b": "ID B"
     },
     "articles": {
-  "card": {
-    "title": "Lær mer",
-    "text": "Selv om søvn er individuelt, er det gjort mye research og forskning på tema. Her er noen artikler om søvn – skrevet for folk flest, basert på troverdige kilder på nett."
-  },
-  "index": {
-    "pattern": {
-      "title": "Søvnmønster og varighet: rytme som faktisk funker",
-      "teaser": "Hvordan lange nok netter og jevne tider gjør alt annet enklere – med enkle grep du kan starte med i kveld."
-    },
-    "insomnia": {
-      "title": "Vansker med å sovne eller sove gjennom natten",
-      "teaser": "CBT-I-prinsipper for folk flest: 20-minuttersregelen, stimuluskontroll og hvorfor fast opp-tid hjelper."
-    },
-    "quality": {
-      "title": "Søvnkvalitet: fra «greit nok» til god",
-      "teaser": "Hva menes med kvalitet, hvilke faktorer drar ned, og hvordan løfter du helheten steg for steg."
-    },
-    "daytime": {
-      "title": "Dagtid og søvnighet: mer våkenhet i hverdagen",
-      "teaser": "Morgendagslys, små bevegelsespauser og smart timing – oppskriften på mindre døs og mer fokus."
-    },
-    "hygiene": {
-      "title": "Søvnhygiene og rutiner som faktisk hjelper",
-      "teaser": "Skjermfri siste timen, koffein-klokke og enkel kveldsrutine – uten moralpreken."
-    },
-    "environment": {
-      "title": "Søvnmiljø: lys, støy, temperatur og seng",
-      "teaser": "Billige og enkle grep i rommet som gir roligere netter – mørklegging, lyd og riktig pute."
-    },
-    "breathing": {
-      "title": "Snorking og pustesignal: når bør du sjekke det?",
-      "teaser": "Når snorking er ufarlig, og når det kan være søvnapné – og hva du gjør med det."
-    }
-  }
+      "minutes": {
+        "pattern": "6 min",
+        "insomnia": "7 min",
+        "quality": "5 min",
+        "daytime": "6 min",
+        "hygiene": "6 min",
+        "environment": "5 min",
+        "breathing": "6 min"
+      },
+      "card": {
+        "title": "Lær mer",
+        "text": "Selv om søvn er individuelt, er det gjort mye research og forskning på tema. Her er noen artikler om søvn – skrevet for folk flest, basert på troverdige kilder på nett."
+      },
+      "index": {
+        "pattern": {
+          "title": "Søvnmønster og varighet: rytme som faktisk funker",
+          "teaser": "Hvordan lange nok netter og jevne tider gjør alt annet enklere – med enkle grep du kan starte med i kveld."
+        },
+        "insomnia": {
+          "title": "Vansker med å sovne eller sove gjennom natten",
+          "teaser": "CBT-I-prinsipper for folk flest: 20-minuttersregelen, stimuluskontroll og hvorfor fast opp-tid hjelper."
+        },
+        "quality": {
+          "title": "Søvnkvalitet: fra «greit nok» til god",
+          "teaser": "Hva menes med kvalitet, hvilke faktorer drar ned, og hvordan løfter du helheten steg for steg."
+        },
+        "daytime": {
+          "title": "Dagtid og søvnighet: mer våkenhet i hverdagen",
+          "teaser": "Morgendagslys, små bevegelsespauser og smart timing – oppskriften på mindre døs og mer fokus."
+        },
+        "hygiene": {
+          "title": "Søvnhygiene og rutiner som faktisk hjelper",
+          "teaser": "Skjermfri siste timen, koffein-klokke og enkel kveldsrutine – uten moralpreken."
+        },
+        "environment": {
+          "title": "Søvnmiljø: lys, støy, temperatur og seng",
+          "teaser": "Billige og enkle grep i rommet som gir roligere netter – mørklegging, lyd og riktig pute."
+        },
+        "breathing": {
+          "title": "Snorking og pustesignal: når bør du sjekke det?",
+          "teaser": "Når snorking er ufarlig, og når det kan være søvnapné – og hva du gjør med det."
+        }
+      }
     },
     "about": {
       "title": "Laget av teamet i DMZ DATA AS",
@@ -104,9 +111,8 @@
         "orange": "Du har forbedringspotensiale for ",
         "red": "Du bør endre vanene dine for "
       },
-    "lookup_hint": "Når du har gjennomført en test får du en ID, den er anonym og du kan åpne rapporten når du vil. Lim inn ID-en din for å åpne rapporten.",
-    "id_placeholder": "Din ID",
-    "copy_id": "Kopier ID"
+      "lookup_hint": "Når du har gjennomført en test får du en ID, den er anonym og du kan åpne rapporten når du vil. Lim inn ID-en din for å åpne rapporten.",
+      "id_placeholder": "Din ID"
     },
     "common": {
       "sending": "Sender…",
@@ -170,6 +176,14 @@
       "loud_snoring": "Jeg snorker høyt.",
       "observed_apneas": "Andre har observert pustestopp når jeg sover.",
       "daytime_tired_despite": "Jeg er kraftig trett på dagtid selv etter en normal natt."
+    },
+    "bp": {
+      "salt_intake": "Jeg spiser ofte mat med mye salt (f.eks. ferdigmat, snacks, salte pålegg).",
+      "low_fruit_veg": "Jeg spiser sjelden frukt, grønnsaker eller mat med mye fiber.",
+      "low_activity": "Jeg er lite fysisk aktiv i hverdagen.",
+      "high_alcohol": "Jeg drikker alkohol oftere eller mer enn anbefalt.",
+      "high_stress": "Jeg opplever mye stress i hverdagen.",
+      "weight_concern": "Jeg tror eller vet at jeg ligger i overvekt/fedme-området."
     }
   },
   "f": {

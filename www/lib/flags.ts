@@ -1,28 +1,37 @@
 // lib/flags.ts
-import { AnswerMap, FieldMap, LikertValue } from "@/lib/types";
-import { avg, likertTo100 } from "@/lib/scoring";
+import { AnswerMap, LikertValue } from "@/lib/types";
 
 /**
- * Enkle varsler basert på svar:
- * - osaSignal: mulige tegn på obstruktiv søvnapné (snorking, pustestopp, sterk tretthet, hypertensjon)
- * - excessiveSleepiness: høy skår på dagtretthet-kategorien (≥60)
+ * Small helpers
  */
-export function computeFlags(answers: AnswerMap, fields: FieldMap) {
-  // Pustesignaler (fra Breathing-kategorien)
-  const snoring = answers["q23"] ?? 1;        // "Jeg snorker høyt."
-  const apneas = answers["q24"] ?? 1;         // "Andre har observert pustestopp..."
-  const tiredDespite = answers["q25"] ?? 1;   // "Kraftig trett på dagtid selv etter normal natt."
-  const htn = fields.hypertensionDx;          // f4: Ja/Nei/Vet ikke
+const get = (answers: AnswerMap, id: string): LikertValue | undefined =>
+  answers[id] as LikertValue | undefined;
 
-  const osaSignal = snoring >= 4 || apneas >= 3 || tiredDespite >= 4 || htn === "yes";
+const gte = (answers: AnswerMap, id: string, n: number) => {
+  const v = get(answers, id);
+  return typeof v === "number" ? v >= n : false;
+};
 
-  // Dagtretthet (fra Daytime-kategorien): q12, q13, q14
-  const daytimeRaw = [answers["q12"], answers["q13"], answers["q14"]]
-    .filter((v): v is LikertValue => v !== undefined) as LikertValue[];
+const avg = (ns: number[]) => (ns.length ? ns.reduce((a, b) => a + b, 0) / ns.length : 0);
 
-  const daytimeAvg = avg(daytimeRaw.map((v) => likertTo100(v)));
+/**
+ * Flags are computed *only* from Likert answers now.
+ * We intentionally do not use any field/metadata here anymore.
+ */
+export function computeFlags(answers: AnswerMap) {
+  // OSA-ish signal from the “Breathing” trio
+  const loudSnoring = gte(answers, "q23", 4);      // loud snoring: Often/Very often
+  const apneas      = gte(answers, "q24", 3);      // witnessed apneas: Sometimes+
+  const verySleepy  = gte(answers, "q25", 4);      // marked daytime sleepiness: Often+
 
-  const excessiveSleepiness = daytimeAvg >= 60;
+  const osaSignal = !!(loudSnoring || apneas || verySleepy);
+
+  // Excessive daytime sleepiness heuristic from Daytime cluster (q12–q14)
+  const daytimeVals = ["q12", "q13", "q14"]
+    .map((id) => answers[id])
+    .filter((v): v is LikertValue => typeof v === "number");
+  const daytimeAvg = avg(daytimeVals); // 1–5 scale
+  const excessiveSleepiness = daytimeAvg >= 4; // Often+
 
   return { osaSignal, excessiveSleepiness };
 }
