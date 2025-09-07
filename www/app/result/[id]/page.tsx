@@ -83,8 +83,8 @@ export default function ResultPage({ params }: { params: { id: string } }) {
         ) : (
           <>
             {/* TOPP: bred card – samme breddeopplevelse som About */}
-            <article className="card score-hero" style={{ padding: 24 }}>
-              <div className="score-hero__left">
+            <article className="panel head score-hero" style={{ padding: 24 }}>              
+                <div className="score-hero__left">
                 <h1 className="mb-2">{t(dict, "ui.result.title", "Resultat")}</h1>
                 <div className="row" style={{ gap: 8, alignItems: "center" }}>
                   <code
