@@ -37,7 +37,16 @@
       "notfound": "Fant ikke en eller begge ID-ene.",
       "error": "Noe gikk galt. Prøv igjen."
     },
-    "articles": {
+   "articles": {
+         "minutes": {
+            "pattern": "6 min",
+            "insomnia": "7 min",
+            "quality": "5 min",
+            "daytime": "6 min",
+            "hygiene": "6 min",
+            "environment": "5 min",
+            "breathing": "6 min"
+            }
   "card": {
     "title": "Lær mer",
     "text": "Selv om søvn er individuelt, er det gjort mye research og forskning på tema. Her er noen artikler om søvn – skrevet for folk flest, basert på troverdige kilder på nett."
