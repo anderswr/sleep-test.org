@@ -118,7 +118,8 @@
       "sending": "Sender…",
       "back": "Tilbake",
       "next": "Neste",
-      "read": "Les"
+      "read": "Les",
+      "error_submit": "Kunne ikke sende inn. Prøv igjen."
     }
   },
   "likert": {
@@ -135,7 +136,9 @@
     "daytime": { "name": "Dagtid & søvnighet", "desc": "Døsighet og funksjon på dagtid." },
     "hygiene": { "name": "Søvnhygiene & rutiner", "desc": "Vaner og timing (skjermer, koffein)." },
     "environment": { "name": "Søvnmiljø", "desc": "Lys, støy, temperatur, seng." },
-    "breathing": { "name": "Snorking & pustesignal", "desc": "Mulige tegn på søvnapné." }
+    "breathing": { "name": "Snorking & pustesignal", "desc": "Mulige tegn på søvnapné." },
+    "bloodpressure": { "name": "Blodtrykk – livsstilsrisiko", "desc": "Kosthold, aktivitet, alkohol, stress og vekt."
+    }
   },
   "q": {
     "pattern": {
