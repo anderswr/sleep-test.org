@@ -8,7 +8,6 @@ import { useI18n } from "@/app/providers/I18nProvider";
 import { t } from "@/lib/i18n";
 import { QUESTION_BANK } from "@/data/questions";
 import { AnswerMap, LikertValue } from "@/lib/types";
-
 import SmileyLikert from "@/components/SmileyLikert";
 
 const LIKERT_QUESTIONS = QUESTION_BANK.filter((q) => q.kind === "likert");
@@ -20,33 +19,32 @@ export default function TestPage() {
   const [answers, setAnswers] = React.useState<AnswerMap>({});
   const [submitting, setSubmitting] = React.useState(false);
   const [error, setError] = React.useState<string | null>(null);
-  const [resultId, setResultId] = React.useState<string | null>(null);
 
   const q = LIKERT_QUESTIONS[idx];
   const isFirst = idx === 0;
   const isLast = idx === LIKERT_QUESTIONS.length - 1;
+  const isAnswered = q ? !!answers[q.id as keyof AnswerMap] : false;
 
-  const isAnswered = !!answers[q?.id as keyof AnswerMap];
+  // Beskytter mot dobbel submit
+  const submittedRef = React.useRef(false);
 
-  function setLikert(v: LikertValue) {
-    const id = q.id;
-    setAnswers((prev) => ({ ...prev, [id]: v }));
-  }
-
-  function prev() {
-    setIdx((i) => Math.max(0, i - 1));
-  }
-
-  function next() {
-    if (!isAnswered) return;
+  const next = React.useCallback(() => {
     setIdx((i) => Math.min(LIKERT_QUESTIONS.length - 1, i + 1));
-  }
+  }, []);
+
+  const prev = React.useCallback(() => {
+    setIdx((i) => Math.max(0, i - 1));
+  }, []);
 
   async function submit() {
-    if (!isAnswered) return;
+    if (submittedRef.current || submitting) return;
+    // Sjekk at siste er besvart
+    const lastQ = LIKERT_QUESTIONS[LIKERT_QUESTIONS.length - 1];
+    if (!answers[lastQ.id as keyof AnswerMap]) return;
+
+    submittedRef.current = true;
     setSubmitting(true);
     setError(null);
-
     try {
       const res = await fetch("/api/submit", {
         method: "POST",
@@ -54,26 +52,38 @@ export default function TestPage() {
         cache: "no-store",
         body: JSON.stringify({ answers, lang }),
       });
-
       if (!res.ok) throw new Error("submit_failed");
       const json = (await res.json()) as { id: string };
-      setResultId(json.id);
-      // redirect
       window.location.assign(`/result/${json.id}`);
-    } catch (e) {
+    } catch {
       setError(t(dict, "ui.common.error_submit", "Kunne ikke sende inn. Prøv igjen."));
+      submittedRef.current = false;
     } finally {
       setSubmitting(false);
+    }
+  }
+
+  // Når man velger et likert-svar: lagre + auto-naviger/auto-submit
+  function setLikert(v: LikertValue) {
+    if (!q) return;
+    const id = q.id;
+    setAnswers((prev) => ({ ...prev, [id]: v }));
+
+    // Liten delay for hyggelig følelse (gir visuell bekreftelse)
+    if (!isLast) {
+      window.setTimeout(next, 160);
+    } else {
+      window.setTimeout(submit, 200);
     }
   }
 
   return (
     <div className="app-shell">
       <SiteHeader />
-      <main className="container">
+      <main className="container" style={{ flex: "1 1 auto" }}>
         <section className="card" style={{ padding: 16 }}>
           <div className="stage">
-            {/* Head */}
+            {/* Topp */}
             <div className="stage-head">
               <div className="row" style={{ justifyContent: "space-between" }}>
                 <h1 style={{ margin: 0 }}>{t(dict, "ui.test.title", "Søvntest")}</h1>
@@ -82,12 +92,13 @@ export default function TestPage() {
                     style={{
                       width: `${Math.round(((idx + 1) / LIKERT_QUESTIONS.length) * 100)}%`,
                     }}
+                    aria-hidden
                   />
                 </div>
               </div>
             </div>
 
-            {/* Question */}
+            {/* Spørsmål */}
             <div className="center-wrap">
               <div className="q-card card">
                 {q ? (
@@ -113,17 +124,23 @@ export default function TestPage() {
               </div>
             </div>
 
-            {/* Controls */}
+            {/* Navigasjon */}
             <div className="stage-controls">
-              <button className="btn" onClick={prev} disabled={isFirst}>
+              <button className="btn" onClick={prev} disabled={isFirst || submitting}>
                 {t(dict, "ui.common.back", "Tilbake")}
               </button>
+
+              {/* “Neste” er tilgjengelig for de som vil trykke; auto-next skjer uansett ved valg */}
               {!isLast ? (
-                <button className="btn primary" onClick={next} disabled={!isAnswered}>
+                <button className="btn primary" onClick={next} disabled={!isAnswered || submitting}>
                   {t(dict, "ui.common.next", "Neste")}
                 </button>
               ) : (
-                <button className="btn primary" onClick={submit} disabled={!isAnswered || submitting}>
+                <button
+                  className="btn primary"
+                  onClick={submit}
+                  disabled={!isAnswered || submitting}
+                >
                   {submitting ? t(dict, "ui.common.sending", "Sender…") : t(dict, "ui.test.submit", "Send inn")}
                 </button>
               )}
