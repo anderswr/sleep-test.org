@@ -13,11 +13,11 @@ export default function ResultIndex() {
   const [id, setId] = React.useState("");
   const router = useRouter();
 
-return (
-  <div className="app-shell">
-    <SiteHeader />
-    <main className="container page-main">
-        <section className="panel head">
+  return (
+    <div className="app-shell">
+      <SiteHeader />
+      <main className="container page-main">
+        <section className="panel head" style={{ padding: 24 }}>
           <h1 style={{ marginTop: 0 }}>
             {t(dict, "ui.result.title", "Result")}
           </h1>
@@ -36,6 +36,7 @@ return (
               placeholder={t(dict, "ui.result.id_placeholder", "Your ID")}
               value={id}
               onChange={(e) => setId(e.target.value.trim())}
+              aria-label={t(dict, "ui.result.id_placeholder", "Your ID")}
             />
             <button
               className="btn primary"
@@ -45,8 +46,8 @@ return (
             </button>
           </div>
         </section>
-    </main>
-    <SiteFooter />
-  </div>
-);
+      </main>
+      <SiteFooter />
+    </div>
+  );
 }
