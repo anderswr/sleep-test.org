@@ -237,7 +237,8 @@
   },
   "flags": {
     "osa_signal": "Mulige tegn på søvnapné – vurder å snakke med fastlege.",
-    "excessive_sleepiness": "Uttalt søvnighet på dagtid – vær ekstra oppmerksom."
+    "excessive_sleepiness": "Uttalt søvnighet på dagtid – vær ekstra oppmerksom.",
+    "high_bp_risk": "Flere livsstilsfaktorer peker mot økt blodtrykksrisiko. Vurder å måle blodtrykket ved anledning, særlig hvis du har type 2-diabetes eller nær familie med hjerte-/karsykdom."
   },
   "tips": {
     "pattern": {
