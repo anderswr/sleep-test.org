@@ -1,4 +1,3 @@
-// app/articles/page.tsx
 "use client";
 
 import * as React from "react";
@@ -60,7 +59,6 @@ export default function ArticlesPage() {
     <div className="app-shell">
       <SiteHeader />
       <main className="container" style={{ flex: "1 1 auto" }}>
-        {/* Head panel */}
         <article className="panel head" style={{ padding: 24 }}>
           <h1 className="mb-2">
             {t(dict, "ui.articles.card.title", "Learn more")}
@@ -68,7 +66,6 @@ export default function ArticlesPage() {
           <p className="muted">{t(dict, "ui.articles.card.text", "")}</p>
         </article>
 
-        {/* States */}
         {!items && !error && (
           <section className="card mt-6" style={{ padding: 16 }}>
             <p className="muted">Loading…</p>
@@ -81,14 +78,13 @@ export default function ArticlesPage() {
           </section>
         )}
 
-        {/* Articles – 3 per row desktop */}
         {items && (
           <section className="cards-row mt-6">
             {items.map((a) => (
               <Link
                 key={a.slug}
                 href={`/articles/${a.slug}`}
-                className="card card-clickable"
+                className="card article-card"
                 aria-label={a.title}
               >
                 <div className="media">
@@ -122,34 +118,36 @@ export default function ArticlesPage() {
             }
           }
 
-          /* Clickable card */
-          .card-clickable {
-            display: block; /* ensures Link is a block element */
-            padding: 0;
-            text-decoration: none;
-            color: inherit;
-            border-radius: 12px;
+          /* Dedicated override so globals.css .card doesn't win */
+          .article-card {
+            display: block;
+            padding: 0 !important;          /* kill global .card padding */
+            border-radius: var(--radius);
             overflow: hidden;
             position: relative;
+            text-decoration: none;
+            color: inherit;
             transition: transform 120ms ease, box-shadow 200ms ease,
-              border-color 200ms ease;
-            cursor: pointer;
+              border-color 200ms ease, filter 200ms ease;
+            border: 1px solid var(--border);
           }
-          .card-clickable:hover,
-          .card-clickable:focus-visible {
+          .article-card:hover,
+          .article-card:focus-visible {
             transform: translateY(-2px);
-            box-shadow: 0 12px 28px rgba(0, 0, 0, 0.12);
+            box-shadow: 0 14px 28px rgba(0, 0, 0, 0.14);
+            border-color: #d7dbe2;
           }
-          .card-clickable:focus-visible {
-            outline: 2px solid rgba(0, 0, 0, 0.25);
+          .article-card:focus-visible {
+            outline: 2px solid var(--primary);
             outline-offset: 2px;
           }
 
-          /* Media area with subtle blend */
+          /* Media area with image blend */
           .media {
             position: relative;
             overflow: hidden;
-            isolation: isolate; /* keeps filters inside card */
+            isolation: isolate;
+            background: #f8fafc;
           }
           .card-image {
             width: 100%;
@@ -157,50 +155,53 @@ export default function ArticlesPage() {
             aspect-ratio: 16 / 9;
             object-fit: cover;
             display: block;
+            transform: scale(1);
             filter: saturate(0.9) contrast(0.98);
-            transform: scale(1); /* anchor for hover zoom */
             transition: transform 300ms ease, filter 300ms ease, opacity 300ms ease;
           }
           .media-gradient {
             position: absolute;
-            inset: auto 0 0 0; /* bottom only */
-            height: 70px;
+            inset: auto 0 0 0;
+            height: 80px;
             content: "";
             display: block;
+            /* soft blend into content */
             background: linear-gradient(
               to bottom,
               rgba(255, 255, 255, 0) 0%,
-              rgba(0, 0, 0, 0.04) 40%,
-              rgba(0, 0, 0, 0.06) 100%
+              rgba(0, 0, 0, 0.04) 45%,
+              rgba(0, 0, 0, 0.07) 100%
             );
             pointer-events: none;
             z-index: 1;
           }
-
-          /* Hover interactions that actually trigger */
-          .card-clickable:hover .card-image,
-          .card-clickable:focus-visible .card-image {
-            transform: scale(1.02);
+          .article-card:hover .card-image,
+          .article-card:focus-visible .card-image {
+            transform: scale(1.025);
             filter: saturate(1) contrast(1);
           }
 
-          /* Content spacing: tighter */
+          /* Content spacing: tighter and no big bottom gap */
           .card-content {
-            padding: 14px 14px 12px; /* reduce bottom space */
+            padding: 14px 14px 12px; /* smaller bottom padding */
           }
           .card-title {
-            margin: 0 0 4px 0; /* tighter */
-            line-height: 1.2;
+            margin: 0 0 4px 0;
+            line-height: 1.25;
+            font-size: 1.05rem;
           }
           .card-summary {
-            margin: 6px 0 0 0; /* no extra bottom margin */
+            margin: 6px 0 0 0;
+            color: var(--muted);
+            font-size: 0.95rem;
+          }
+          /* Remove trailing margin from last child to avoid extra whitespace */
+          .card-content :global(p:last-child) {
+            margin-bottom: 0;
           }
 
-          /* Respect reduced motion */
           @media (prefers-reduced-motion: reduce) {
-            .card-clickable {
-              transition: none;
-            }
+            .article-card,
             .card-image {
               transition: none;
             }

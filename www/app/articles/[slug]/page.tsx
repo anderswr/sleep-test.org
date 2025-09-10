@@ -41,12 +41,14 @@ export default function ArticlePage({ params }: { params: { slug: string } }) {
   const [html, setHtml] = React.useState<string>("");
   const [title, setTitle] = React.useState<string>("");
   const [loading, setLoading] = React.useState<boolean>(true);
+  const [showHero, setShowHero] = React.useState<boolean>(true);
 
   React.useEffect(() => {
     let cancelled = false;
 
     (async () => {
       setLoading(true);
+      setShowHero(true); // reset ved slug/lang endring
       try {
         if (!VALID.has(slug)) {
           if (!cancelled) {
@@ -96,23 +98,59 @@ export default function ArticlePage({ params }: { params: { slug: string } }) {
     };
   }, [slug, lang]);
 
+  const heroSrc = `/images/${slug}.png`;
+
   return (
     <div className="app-shell">
       <SiteHeader />
       <main className="container" style={{ flex: "1 1 auto" }}>
         <article className="panel head" style={{ padding: 24 }}>
-          {/* Tittel øverst */}
+          {/* Tittel */}
           <h1 className="mb-2">
             {title || t(dict, "ui.articles.card.title", "Article")}
           </h1>
+
+          {/* Bilde før markdown-innholdet (skjules dersom mangler) */}
+          {showHero && (
+            <div className="hero-wrap">
+              <img
+                src={heroSrc}
+                alt={title}
+                className="hero-image"
+                onError={() => setShowHero(false)}
+                loading="eager"
+              />
+            </div>
+          )}
 
           {/* Innhold */}
           {loading ? (
             <p className="muted">Loading…</p>
           ) : (
-            <div dangerouslySetInnerHTML={{ __html: html }} />
+            <div
+              className="prose"
+              dangerouslySetInnerHTML={{ __html: html }}
+            />
           )}
         </article>
+
+        <style jsx>{`
+          .hero-wrap {
+            margin: 8px 0 12px 0;         /* litt luft rundt bildet */
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            background: #f8fafc;         /* diskret bakgrunn hvis bildet er lyst */
+          }
+          .hero-image {
+            width: 100%;
+            height: auto;
+            display: block;
+            object-fit: cover;
+            aspect-ratio: 16 / 9;        /* holder en rolig høyde på toppbilder */
+            filter: saturate(0.96) contrast(0.99);
+          }
+        `}</style>
       </main>
       <SiteFooter />
     </div>
