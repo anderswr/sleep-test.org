@@ -32,6 +32,7 @@ const VALID = new Set<string>([
   "hygiene",
   "environment",
   "breathing",
+  "some",
 ]);
 
 export default function ArticlePage({ params }: { params: { slug: string } }) {
