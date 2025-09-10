@@ -22,21 +22,17 @@ export default function ResultIndex() {
             {t(dict, "ui.result.title", "Fallback-Result")}
           </h1>
           <p className="muted">
-            {t(
-              dict,
-              "ui.result.lookup_hint",
-              "Fallback-Paste your ID to open your report."
-            )}
+            {t(dict, "ui.result.lookup_hint", "Fallback-Paste your ID to open your report.")}
           </p>
 
           <div className="row" style={{ gap: 8, marginTop: 12 }}>
             <input
               className="btn"
               style={{ flex: 1, textAlign: "left" }}
-              placeholder={t(dict, "ui.result.id_placeholder", "Your ID")}
+              placeholder={t(dict, "ui.result.id_placeholder", "fallback-Your ID")}
               value={id}
               onChange={(e) => setId(e.target.value.trim())}
-              aria-label={t(dict, "ui.result.id_placeholder", "Your ID")}
+              aria-label={t(dict, "ui.result.id_placeholder", "fallback2-Your ID")}
             />
             <button
               className="btn primary"
