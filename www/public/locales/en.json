@@ -35,6 +35,20 @@
       "label_a": "ID A",
       "label_b": "ID B"
     },
+   "result": {
+      "title": "Result",
+      "sleep_score": "Sleep score",
+      "copy_id": "Copy ID",
+      "disclaimer": "This is not a medical evaluation, but a general guide to help you notice patterns and try practical steps. Sleep habits often change gradually — experiment, be patient, and see what works best for you.",
+      "how_to_improve": "Keep and improve this:",
+      "lead": {
+        "green": "You are doing well on ",
+        "orange": "You have room for improvement in ",
+        "red": "You should change your habits for "
+      },
+      "lookup_hint": "When you complete a test you receive an ID. It is anonymous, and you can open your report anytime. Paste your ID to view the report.",
+      "id_placeholder": "Your ID"
+  },
     "articles": {
       "minutes": {
         "pattern": "6 min",
@@ -108,20 +122,7 @@
     "submit": "Submit",
     "progress": "Progress"
   },
-  "result": {
-    "title": "Result",
-    "sleep_score": "Sleep score",
-    "copy_id": "Copy ID",
-    "disclaimer": "This is not a medical evaluation, but a general guide to help you notice patterns and try practical steps. Sleep habits often change gradually — experiment, be patient, and see what works best for you.",
-    "how_to_improve": "Keep and improve this:",
-    "lead": {
-      "green": "You are doing well on ",
-      "orange": "You have room for improvement in ",
-      "red": "You should change your habits for "
-    },
-    "lookup_hint": "When you complete a test you receive an ID. It is anonymous, and you can open your report anytime. Paste your ID to view the report.",
-    "id_placeholder": "Your ID"
-  },
+
   "common": {
     "sending": "Sending…",
     "back": "Back",
