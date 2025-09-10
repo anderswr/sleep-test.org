@@ -36,21 +36,20 @@ export default function TestPage() {
     setIdx((i) => Math.max(0, i - 1));
   }, []);
 
-  async function submit() {
+  // --- NY: submit med eksplisitt "current" svarobjekt for å unngå stale state
+  async function submitWith(current: AnswerMap) {
     if (submittedRef.current || submitting) return;
-    // Sjekk at siste er besvart
-    const lastQ = LIKERT_QUESTIONS[LIKERT_QUESTIONS.length - 1];
-    if (!answers[lastQ.id as keyof AnswerMap]) return;
 
     submittedRef.current = true;
     setSubmitting(true);
     setError(null);
+
     try {
       const res = await fetch("/api/submit", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         cache: "no-store",
-        body: JSON.stringify({ answers, lang }),
+        body: JSON.stringify({ answers: current, lang }),
       });
       if (!res.ok) throw new Error("submit_failed");
       const json = (await res.json()) as { id: string };
@@ -63,17 +62,26 @@ export default function TestPage() {
     }
   }
 
+  // Beholder API-et: kaller bare submitWith(answers)
+  async function submit() {
+    return submitWith(answers);
+  }
+
   // Når man velger et likert-svar: lagre + auto-naviger/auto-submit
   function setLikert(v: LikertValue) {
     if (!q) return;
     const id = q.id;
-    setAnswers((prev) => ({ ...prev, [id]: v }));
+
+    // Bygg neste svarobjekt synkront (inkluderer dette valget)
+    const nextAnswers = { ...answers, [id]: v } as AnswerMap;
+    setAnswers(nextAnswers);
 
     // Liten delay for hyggelig følelse (gir visuell bekreftelse)
     if (!isLast) {
-      window.setTimeout(next, 160);
+      window.setTimeout(next, 120);
     } else {
-      window.setTimeout(submit, 200);
+      // Viktig: submit med nextAnswers for å ikke miste siste klikk
+      window.setTimeout(() => submitWith(nextAnswers), 160);
     }
   }
 
@@ -87,25 +95,25 @@ export default function TestPage() {
             <div className="stage-head">
               <div className="row" style={{ justifyContent: "space-between" }}>
                 <h1 style={{ margin: 0 }}>{t(dict, "ui.test.title", "Søvntest")}</h1>
-                  <div style={{ display: "flex", alignItems: "center", gap: 8 }}>
+                <div style={{ display: "flex", alignItems: "center", gap: 8 }}>
+                  <div
+                    className="progress"
+                    style={{ width: 180 }}
+                    aria-label={t(dict, "ui.test.progress", "Fremdrift")}
+                  >
                     <div
-                      className="progress"
-                      style={{ width: 180 }}
-                      aria-label={t(dict, "ui.test.progress", "Fremdrift")}
-                    >
-                      <div
-                        style={{
-                          width: `${Math.round(((idx + 1) / LIKERT_QUESTIONS.length) * 100)}%`,
-                        }}
-                      />
-                    </div>
-                    <span
-                      style={{ fontSize: ".9rem", color: "var(--muted)", minWidth: 60, textAlign: "right" }}
-                      aria-live="polite"
-                    >
-                      {idx + 1} / {LIKERT_QUESTIONS.length}
-                    </span>
+                      style={{
+                        width: `${Math.round(((idx + 1) / LIKERT_QUESTIONS.length) * 100)}%`,
+                      }}
+                    />
                   </div>
+                  <span
+                    style={{ fontSize: ".9rem", color: "var(--muted)", minWidth: 60, textAlign: "right" }}
+                    aria-live="polite"
+                  >
+                    {idx + 1} / {LIKERT_QUESTIONS.length}
+                  </span>
+                </div>
               </div>
             </div>
 
@@ -136,7 +144,7 @@ export default function TestPage() {
             </div>
 
             {/* Navigasjon */}
-            <div className="stage-controls">
+            <div className="stage-controls" aria-busy={submitting}>
               <button className="btn" onClick={prev} disabled={isFirst || submitting}>
                 {t(dict, "ui.common.back", "Tilbake")}
               </button>
