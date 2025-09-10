@@ -60,7 +60,7 @@ export default function ArticlesPage() {
     <div className="app-shell">
       <SiteHeader />
       <main className="container" style={{ flex: "1 1 auto" }}>
-        {/* Bred toppboks */}
+        {/* Head panel */}
         <article className="panel head" style={{ padding: 24 }}>
           <h1 className="mb-2">
             {t(dict, "ui.articles.card.title", "Learn more")}
@@ -81,7 +81,7 @@ export default function ArticlesPage() {
           </section>
         )}
 
-        {/* Artikler – 3 per rad */}
+        {/* Articles – 3 per row desktop */}
         {items && (
           <section className="cards-row mt-6">
             {items.map((a) => (
@@ -91,14 +91,18 @@ export default function ArticlesPage() {
                 className="card card-clickable"
                 aria-label={a.title}
               >
-                <img
-                  src={`/images/${a.slug}.png`}
-                  alt={a.title}
-                  className="card-image"
-                />
+                <div className="media">
+                  <img
+                    src={`/images/${a.slug}.png`}
+                    alt={a.title}
+                    className="card-image"
+                    loading="lazy"
+                  />
+                  <span className="media-gradient" aria-hidden />
+                </div>
                 <div className="card-content">
                   <h3 className="card-title">{a.title}</h3>
-                  {a.summary && <p className="muted">{a.summary}</p>}
+                  {a.summary && <p className="card-summary">{a.summary}</p>}
                 </div>
               </Link>
             ))}
@@ -118,43 +122,88 @@ export default function ArticlesPage() {
             }
           }
 
+          /* Clickable card */
           .card-clickable {
-            display: block;
+            display: block; /* ensures Link is a block element */
             padding: 0;
             text-decoration: none;
             color: inherit;
             border-radius: 12px;
             overflow: hidden;
-            transition: transform 0.06s ease, box-shadow 0.2s ease,
-              outline-color 0.2s ease;
+            position: relative;
+            transition: transform 120ms ease, box-shadow 200ms ease,
+              border-color 200ms ease;
             cursor: pointer;
           }
-          .card-clickable:hover {
+          .card-clickable:hover,
+          .card-clickable:focus-visible {
             transform: translateY(-2px);
-            box-shadow: 0 10px 24px rgba(0, 0, 0, 0.12);
+            box-shadow: 0 12px 28px rgba(0, 0, 0, 0.12);
           }
           .card-clickable:focus-visible {
-            outline: 2px solid rgba(0, 0, 0, 0.3);
+            outline: 2px solid rgba(0, 0, 0, 0.25);
             outline-offset: 2px;
-            transform: translateY(-2px);
-            box-shadow: 0 10px 24px rgba(0, 0, 0, 0.12);
           }
 
+          /* Media area with subtle blend */
+          .media {
+            position: relative;
+            overflow: hidden;
+            isolation: isolate; /* keeps filters inside card */
+          }
           .card-image {
             width: 100%;
             height: auto;
             aspect-ratio: 16 / 9;
             object-fit: cover;
             display: block;
+            filter: saturate(0.9) contrast(0.98);
+            transform: scale(1); /* anchor for hover zoom */
+            transition: transform 300ms ease, filter 300ms ease, opacity 300ms ease;
+          }
+          .media-gradient {
+            position: absolute;
+            inset: auto 0 0 0; /* bottom only */
+            height: 70px;
+            content: "";
+            display: block;
+            background: linear-gradient(
+              to bottom,
+              rgba(255, 255, 255, 0) 0%,
+              rgba(0, 0, 0, 0.04) 40%,
+              rgba(0, 0, 0, 0.06) 100%
+            );
+            pointer-events: none;
+            z-index: 1;
           }
 
+          /* Hover interactions that actually trigger */
+          .card-clickable:hover .card-image,
+          .card-clickable:focus-visible .card-image {
+            transform: scale(1.02);
+            filter: saturate(1) contrast(1);
+          }
+
+          /* Content spacing: tighter */
           .card-content {
-            padding: 16px;
+            padding: 14px 14px 12px; /* reduce bottom space */
+          }
+          .card-title {
+            margin: 0 0 4px 0; /* tighter */
+            line-height: 1.2;
+          }
+          .card-summary {
+            margin: 6px 0 0 0; /* no extra bottom margin */
           }
 
-          .card-title {
-            margin-top: 0;
-            margin-bottom: 6px;
+          /* Respect reduced motion */
+          @media (prefers-reduced-motion: reduce) {
+            .card-clickable {
+              transition: none;
+            }
+            .card-image {
+              transition: none;
+            }
           }
         `}</style>
       </main>
