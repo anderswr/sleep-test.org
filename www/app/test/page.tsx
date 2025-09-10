@@ -87,14 +87,25 @@ export default function TestPage() {
             <div className="stage-head">
               <div className="row" style={{ justifyContent: "space-between" }}>
                 <h1 style={{ margin: 0 }}>{t(dict, "ui.test.title", "Søvntest")}</h1>
-                <div className="progress" style={{ width: 180 }}>
-                  <div
-                    style={{
-                      width: `${Math.round(((idx + 1) / LIKERT_QUESTIONS.length) * 100)}%`,
-                    }}
-                    aria-hidden
-                  />
-                </div>
+                  <div style={{ display: "flex", alignItems: "center", gap: 8 }}>
+                    <div
+                      className="progress"
+                      style={{ width: 180 }}
+                      aria-label={t(dict, "ui.test.progress", "Fremdrift")}
+                    >
+                      <div
+                        style={{
+                          width: `${Math.round(((idx + 1) / LIKERT_QUESTIONS.length) * 100)}%`,
+                        }}
+                      />
+                    </div>
+                    <span
+                      style={{ fontSize: ".9rem", color: "var(--muted)", minWidth: 60, textAlign: "right" }}
+                      aria-live="polite"
+                    >
+                      {idx + 1} / {LIKERT_QUESTIONS.length}
+                    </span>
+                  </div>
               </div>
             </div>
 
