@@ -111,7 +111,7 @@
       "title": "Result",
       "sleep_score": "Sleep score",
       "copy_id": "Copy ID",
-      "how_to_improve": "Keep and improve this:",
+      "disclaimer": "This is not a medical evaluation, but a general guide to help you notice patterns and try practical steps. Sleep habits often change gradually – experiment, be patient, and see what works best for you."      "how_to_improve": "Keep and improve this:",
       "lead": {
         "green": "You are doing well on ",
         "orange": "You have room for improvement in ",

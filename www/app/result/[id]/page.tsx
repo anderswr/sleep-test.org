@@ -155,6 +155,11 @@ export default function ResultPage({ params }: { params: { id: string } }) {
                   >
                     {t(dict, "ui.result.copy_id", "Kopier ID")}
                   </button>
+
+                  <p className="muted" style={{ marginTop: 8 }}>
+                     {t( dict, "ui.result.disclaimer", "FallBack: This is not medical advice, but a general guide to help you spot patterns and try practical tips."  )}
+        </p>
+                  
                 </div>
               </div>
               <div className="score-hero__right">

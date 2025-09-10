@@ -1,3 +1,4 @@
+// app/about/page.tsx
 "use client";
 
 import SiteHeader from "@/components/SiteHeader";
@@ -28,31 +29,40 @@ function renderList(dict: any, baseKey: string, max = 20) {
 export default function AboutPage() {
   const { dict } = useI18n();
 
+  // Les nøkler fra rot: "about.*" og "privacy.*"
+  const aboutTitle = t(dict, "about.title", "About");
+  const aboutIntro = t(dict, "about.intro", "");
+  const contactTitle = t(dict, "about.contact.title", "");
+  const contactP1 = t(dict, "about.contact.p1", "");
+  const contactP2 = t(dict, "about.contact.p2", "");
+
+  const privacyTitle = t(dict, "privacy.title", "");
+  const privacyP1 = t(dict, "privacy.p1", "");
+  const privacyList = renderList(dict, "privacy");
+
   return (
     <>
       <SiteHeader />
       <main className="container" style={{ flex: "1 1 auto" }}>
         <article className="panel head" style={{ padding: 24 }}>
-          <h1 style={{ marginTop: 0 }}>{t(dict, "ui.about.title", "About")}</h1>
-          <p className="muted">{t(dict, "ui.about.intro")}</p>
+          <h1 style={{ marginTop: 0 }}>{aboutTitle}</h1>
+          {aboutIntro && <p className="muted">{aboutIntro}</p>}
 
-          <section id="privacy" style={{ marginTop: 28 }}>
-            <h2>{t(dict, "ui.about.privacy.title")}</h2>
-            <p>{t(dict, "ui.about.privacy.p1")}</p>
-            {renderList(dict, "ui.about.privacy")}
-          </section>
+          {(privacyTitle || privacyP1 || privacyList) && (
+            <section id="privacy" style={{ marginTop: 28 }}>
+              {privacyTitle && <h2>{privacyTitle}</h2>}
+              {privacyP1 && <p>{privacyP1}</p>}
+              {privacyList}
+            </section>
+          )}
 
-          <section id="terms" style={{ marginTop: 28 }}>
-            <h2>{t(dict, "ui.about.terms.title")}</h2>
-            <p>{t(dict, "ui.about.terms.p1")}</p>
-            {renderList(dict, "ui.about.terms")}
-          </section>
-
-          <section id="contact" style={{ marginTop: 28 }}>
-            <h2>{t(dict, "ui.about.contact.title")}</h2>
-            <p>{t(dict, "ui.about.contact.p1")}</p>
-            <p className="muted">{t(dict, "ui.about.contact.p2")}</p>
-          </section>
+          {(contactTitle || contactP1 || contactP2) && (
+            <section id="contact" style={{ marginTop: 28 }}>
+              {contactTitle && <h2>{contactTitle}</h2>}
+              {contactP1 && <p>{contactP1}</p>}
+              {contactP2 && <p className="muted">{contactP2}</p>}
+            </section>
+          )}
         </article>
       </main>
       <SiteFooter />
