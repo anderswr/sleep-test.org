@@ -43,7 +43,8 @@
         "daytime": "6 min",
         "hygiene": "6 min",
         "environment": "5 min",
-        "breathing": "6 min"
+        "breathing": "6 min",
+        "some": "7 min"
       },
       "card": {
         "title": "Lær mer",
