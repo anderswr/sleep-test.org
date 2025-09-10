@@ -82,25 +82,39 @@ export default function ArticlesPage() {
         )}
 
         {/* Artikler – 3 per rad */}
-        {items && (
-          <section className="cards-row mt-6">
-            {items.map((a) => (
-              <div key={a.slug} className="card" style={{ padding: 16 }}>
-                <h3 style={{ marginTop: 0 }}>{a.title}</h3>
-                {a.summary && (
-                  <p className="muted" style={{ marginTop: 6 }}>
-                    {a.summary}
-                  </p>
-                )}
-                <div className="mt-6">
-                  <Link href={`/articles/${a.slug}`} className="btn">
-                    {t(dict, "ui.common.read", "Read")}
-                  </Link>
-                </div>
-              </div>
-            ))}
-          </section>
-        )}
+            {items && (
+              <section className="cards-row mt-6">
+                {items.map((a) => (
+                  <div key={a.slug} className="card" style={{ padding: 0 }}>
+                    <img
+                      src={`/images/${a.slug}.png`}
+                      alt={a.title}
+                      style={{
+                        width: "100%",
+                        height: "auto",
+                        aspectRatio: "16 / 9",
+                        objectFit: "cover",
+                        borderTopLeftRadius: "12px",
+                        borderTopRightRadius: "12px",
+                      }}
+                    />
+                    <div style={{ padding: 16 }}>
+                      <h3 style={{ marginTop: 0 }}>{a.title}</h3>
+                      {a.summary && (
+                        <p className="muted" style={{ marginTop: 6 }}>
+                          {a.summary}
+                        </p>
+                      )}
+                      <div className="mt-6">
+                        <Link href={`/articles/${a.slug}`} className="btn">
+                          {t(dict, "ui.common.read", "Read")}
+                        </Link>
+                      </div>
+                    </div>
+                  </div>
+                ))}
+              </section>
+            )}
 
         <style jsx>{`
           .cards-row {
