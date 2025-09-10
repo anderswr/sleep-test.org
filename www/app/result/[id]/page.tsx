@@ -32,12 +32,11 @@ const ARTICLE_SLUG_BY_CAT: Partial<Record<CategoryId, string>> = {
   [CategoryId.Hygiene]: "hygiene",
   [CategoryId.Environment]: "environment",
   [CategoryId.Breathing]: "breathing",
-  // bloodpressure har ingen artikkel hos deg ennå -> ingen link/ikon
+  // bloodpressure har ingen artikkel ennå -> ingen link/ikon
 };
 
 /** Hjelper: velg 2–3 tips-nøkler per kategori basert på bucket-farge. */
 function pickTipKeys(cat: CategoryId, color: "green" | "orange" | "red"): string[] {
-  // NB: bruker bare nøkler som finnes i nb/en under "tips.*"
   if (cat === CategoryId.Pattern) {
     if (color === "green") return ["tips.pattern.keep_routine", "tips.pattern.protect_7h"];
     if (color === "orange") return ["tips.pattern.consistent_bed_wake", "tips.pattern.plan_winddown", "tips.pattern.protect_7h"];
@@ -73,7 +72,6 @@ function pickTipKeys(cat: CategoryId, color: "green" | "orange" | "red"): string
     if (color === "orange") return ["tips.breathing.side_sleep", "tips.breathing.reduce_evening_alcohol"];
     return ["tips.breathing.side_sleep", "tips.breathing.reduce_evening_alcohol", "tips.breathing.consider_gp_check"];
   }
-  // BloodPressure: ingen tips-nøkler i i18n ennå -> tom liste
   return [];
 }
 
@@ -121,9 +119,9 @@ export default function ResultPage({ params }: { params: { id: string } }) {
   // Farge til ringen: bruk totalRaw hvis den finnes, ellers 100 - sleepScore (eldre resultater)
   const ringColor =
     data
-      ? bucketColor(
+      ? (bucketColor(
           typeof data.totalRaw === "number" ? data.totalRaw : Math.max(0, 100 - Number(data.sleepScore))
-        ).replace("yellow", "orange") as "green" | "orange" | "red"
+        ).replace("yellow", "orange") as "green" | "orange" | "red")
       : "green";
 
   return (
@@ -136,17 +134,14 @@ export default function ResultPage({ params }: { params: { id: string } }) {
           </article>
         ) : (
           <>
-            {/* TOPP: bredt kort – samme breddeopplevelse som About */}
+            {/* TOPP: bredt kort */}
             <article className="panel head score-hero" style={{ padding: 24 }}>
               <div className="score-hero__left">
                 <h1 className="mb-2">{t(dict, "ui.result.title", "Resultat")}</h1>
-                <div className="row" style={{ gap: 8, alignItems: "center" }}>
-                  <code
-                    className="px-1 py-0.5"
-                    style={{ background: "#f3f4f6", borderRadius: 6 }}
-                  >
-                    {data.id}
-                  </code>
+
+                {/* ID + Kopier-knapp */}
+                <div className="row" style={{ gap: 8, alignItems: "center", flexWrap: "wrap" }}>
+                  <code className="code-badge">{data.id}</code>
                   <button
                     className="btn"
                     onClick={() => navigator.clipboard.writeText(data.id)}
@@ -155,13 +150,18 @@ export default function ResultPage({ params }: { params: { id: string } }) {
                   >
                     {t(dict, "ui.result.copy_id", "Kopier ID")}
                   </button>
-
-                  <p className="muted" style={{ marginTop: 8 }}>
-                     {t( dict, "ui.result.disclaimer", "FallBack: This is not medical advice, but a general guide to help you spot patterns and try practical tips."  )}
-        </p>
-                  
                 </div>
+
+                {/* Disclaimer – egen linje for god lesbarhet */}
+                <p className="muted" style={{ marginTop: 12 }}>
+                  {t(
+                    dict,
+                    "ui.result.disclaimer",
+                    "This is not a medical evaluation, but a general guide to help you notice patterns and try practical steps."
+                  )}
+                </p>
               </div>
+
               <div className="score-hero__right">
                 <div
                   className="score-ring"
@@ -186,10 +186,8 @@ export default function ResultPage({ params }: { params: { id: string } }) {
                 const desc = t(dict, `category.${cat}.desc`, "");
                 const lead = t(dict, `ui.result.lead.${color}`, "");
 
-                // Velg tips lokalt (i18n keys), og filtrér vekk som ikke finnes i ordlista
                 const tipKeys = pickTipKeys(cat, color).filter((k) => t(dict, k, "") !== "");
 
-                // Artikkel-ikon (kun hvis vi har slug for kategorien)
                 const articleSlug = ARTICLE_SLUG_BY_CAT[cat];
                 const showArticleIcon = !!articleSlug;
 
@@ -201,13 +199,14 @@ export default function ResultPage({ params }: { params: { id: string } }) {
                       </span>
                       <div style={{ display: "flex", alignItems: "baseline", gap: 8 }}>
                         <strong className="cat-card__score">{display}</strong>
-                        <span className="muted" style={{ fontSize: ".85rem" }}>
-                          / 100
-                        </span>
+                        <span className="muted" style={{ fontSize: ".85rem" }}>/ 100</span>
                       </div>
                     </div>
 
-                    <p className="muted" style={{ marginTop: 6, display: "flex", alignItems: "center", gap: 8 }}>
+                    <p
+                      className="muted"
+                      style={{ marginTop: 6, display: "flex", alignItems: "center", gap: 8 }}
+                    >
                       <span>
                         <strong>{lead}</strong> {decapitalize(desc)}
                       </span>
@@ -218,7 +217,6 @@ export default function ResultPage({ params }: { params: { id: string } }) {
                           title={t(dict, "ui.common.read", "Read")}
                           style={{ display: "inline-flex", alignItems: "center" }}
                         >
-                          {/* Link-ikon (inline SVG) */}
                           <svg width="18" height="18" viewBox="0 0 24 24" aria-hidden focusable="false">
                             <path fill="currentColor" d="M14 3h7v7h-2V6.41l-9.29 9.3-1.42-1.42 9.3-9.29H14V3Zm-4 4v2H5v10h10v-5h2v7H3V7h7Z"/>
                           </svg>
@@ -245,22 +243,20 @@ export default function ResultPage({ params }: { params: { id: string } }) {
               })}
             </section>
 
-            {/* Flags – nøytral presentasjon uten emoji eller røde farger */}
+            {/* Flags – nøytral presentasjon */}
             {(data.flags?.osaSignal || data.flags?.excessiveSleepiness || data.flags?.highBpRisk) && (
               <section className="panel mt-6" style={{ padding: 24 }}>
-                <h2 className="mb-2" style={{ marginTop: 0 }}>{t(dict, "ui.result.title", "Resultat")}</h2>
-                {data.flags?.osaSignal && (
-                  <p>{t(dict, "flags.osa_signal")}</p>
-                )}
-                {data.flags?.excessiveSleepiness && (
-                  <p>{t(dict, "flags.excessive_sleepiness")}</p>
-                )}
+                <h2 className="mb-2" style={{ marginTop: 0 }}>
+                  {t(dict, "ui.result.title", "Resultat")}
+                </h2>
+                {data.flags?.osaSignal && <p>{t(dict, "flags.osa_signal")}</p>}
+                {data.flags?.excessiveSleepiness && <p>{t(dict, "flags.excessive_sleepiness")}</p>}
                 {data.flags?.highBpRisk && (
                   <p>
                     {t(
                       dict,
                       "flags.high_bp_risk",
-                      "Several lifestyle factors point to an increased risk of high blood pressure. Consider measuring your blood pressure when you have the opportunity, especially if you have type 2 diabetes or close relatives with cardiovascular disease."
+                      "Several lifestyle factors point to an increased risk of high blood pressure."
                     )}
                   </p>
                 )}
