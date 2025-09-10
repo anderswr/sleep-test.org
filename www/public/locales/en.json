@@ -9,7 +9,7 @@
     },
     "home": {
       "title": "Sleep Test (under development)",
-      "pitch": "Answer 30 questions in 5–10 minutes — no cost, registration og login, get a free, clear report with explanations and practical actions.",
+      "pitch": "Answer 30 questions in 5–10 minutes — no cost, registration, or login — and get a free, clear report with explanations and practical actions.",
       "cta": "Start the test",
       "example": "See sample report",
       "tests_count_title": "Completed sleep tests",
@@ -44,7 +44,7 @@
         "hygiene": "6 min",
         "environment": "5 min",
         "breathing": "6 min",
-        "some": "6 min"
+        "some": "7 min"
       },
       "card": {
         "title": "Learn more",
@@ -80,7 +80,8 @@
           "teaser": "When snoring is harmless, when it might be sleep apnea, and what to do next."
         }
       }
-    },
+    }
+  },
   "about": {
     "title": "Created by DMZ DATA AS",
     "intro": "Started as a small idea – built with common sense, healthtech/sleeptech, and a bit of coding.",
@@ -101,32 +102,32 @@
     "li6": "Cookies: We do not use unnecessary cookies. If we in the future introduce functional cookies (e.g., for language preference), we will update this policy and request consent where required.",
     "li7": "Your rights and contact: If you have questions, wish to access technical information, or request deletion, contact us at post@dmz.no. You can also lodge a complaint with the Norwegian Data Protection Authority (Datatilsynet).",
     "li8": "Changes: We may update this policy when needed. Significant changes will be published here."
+  },
+  "test": {
+    "title": "Sleep test",
+    "submit": "Submit",
+    "progress": "Progress"
+  },
+  "result": {
+    "title": "Result",
+    "sleep_score": "Sleep score",
+    "copy_id": "Copy ID",
+    "disclaimer": "This is not a medical evaluation, but a general guide to help you notice patterns and try practical steps. Sleep habits often change gradually — experiment, be patient, and see what works best for you.",
+    "how_to_improve": "Keep and improve this:",
+    "lead": {
+      "green": "You are doing well on ",
+      "orange": "You have room for improvement in ",
+      "red": "You should change your habits for "
     },
-    "test": {
-      "title": "Sleep test",
-      "submit": "Submit",
-      "progress": "Progress"
-    },
-    "result": {
-      "title": "Result",
-      "sleep_score": "Sleep score",
-      "copy_id": "Copy ID",
-      "disclaimer": "This is not a medical evaluation, but a general guide to help you notice patterns and try practical steps. Sleep habits often change gradually – experiment, be patient, and see what works best for you."      "how_to_improve": "Keep and improve this:",
-      "lead": {
-        "green": "You are doing well on ",
-        "orange": "You have room for improvement in ",
-        "red": "You should change your habits for "
-      },
-      "lookup_hint": "When you complete a test you receive an ID. It is anonymous, and you can open your report anytime. Paste your ID to view the report.",
-      "id_placeholder": "Your ID"
-    },
-    "common": {
-      "sending": "Sending…",
-      "back": "Back",
-      "next": "Next",
-      "read": "Read",
-      "error_submit": "Could not submit. Please try again."
-    }
+    "lookup_hint": "When you complete a test you receive an ID. It is anonymous, and you can open your report anytime. Paste your ID to view the report.",
+    "id_placeholder": "Your ID"
+  },
+  "common": {
+    "sending": "Sending…",
+    "back": "Back",
+    "next": "Next",
+    "read": "Read",
+    "error_submit": "Could not submit. Please try again."
   },
   "likert": {
     "1": "Never / Not at all",
@@ -144,7 +145,7 @@
     "environment": { "name": "Sleep environment", "desc": "Light, noise, temperature, bed." },
     "breathing": { "name": "Snoring & breathing signals", "desc": "Possible signs of sleep apnea." },
     "bloodpressure": { "name": "Blood pressure – lifestyle risk", "desc": "Diet, activity, alcohol, stress, and weight." }
-   },
+  },
   "q": {
     "pattern": {
       "too_short": "I sleep less than I need most nights.",
@@ -190,7 +191,7 @@
       "activity_low": "I am not very physically active in daily life.",
       "alcohol_often": "I drink alcohol more often or in larger amounts than recommended.",
       "stress_high": "I experience a lot of stress in everyday life.",
-      "overweight_self": "I think or know that I’m in the overweigh range."
+      "overweight_self": "I think or know that I’m in the overweight range."
     }
   },
   "f": {
