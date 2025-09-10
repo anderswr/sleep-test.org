@@ -81,21 +81,28 @@
         }
       }
     },
-    "about": {
-      "title": "Created by the team at DMZ DATA AS",
-      "intro": "More information later",
-      "contact": {
-        "title": "",
-        "p1": "",
-        "p2": ""
-      },
-      "privacy": {
-        "title": "Privacy policy",
-        "p1": "",
-        "li1": "The page does not collect, store, or share any personal data. You are 100% anonymous; only a unique ID is stored with a summary of the results in a database.",
-        "li2": "",
-        "li3": ""
-      }
+{
+  "about": {
+    "title": "Created by DMZ DATA AS",
+    "intro": "Started as a small idea – built with common sense, healthtech/sleeptech, and a bit of coding.",
+    "contact": {
+      "title": "Contact",
+      "p1": "The organization responsible for www.sleep-test.org is DMZ DATA AS. Contact point for privacy and general inquiries: post@dmz.no.",
+      "p2": "Read more about us at www.dmz.no."
+    }
+  },
+  "privacy": {
+    "title": "Privacy Policy",
+    "p1": "We take privacy seriously. This policy explains how we handle information when you use www.sleep-test.org. By using the site, you confirm that you have read and accepted these terms. The site is designed so that schools in Norway can use it without providing any personal information.",
+    "li1": "What data we process: We do not collect names, email addresses, or other directly identifiable information. To display and remember results, only a system-generated ID is stored together with a summary of answers. We do not use marketing cookies, third-party tracking scripts, or profiling.",
+    "li2": "Purpose and legal basis: The purpose is to provide the service and improve its quality. The legal basis is legitimate interest (GDPR art. 6(1)(f)) in operating a secure and functional solution without processing personal data. Technical logs may be processed for troubleshooting and security.",
+    "li3": "Storage and deletion: Technical IDs and result summaries are stored only as long as necessary for the stated purpose. If you believe content should be deleted, you can contact us at post@dmz.no.",
+    "li4": "Sharing and transfer: We do not share data with third parties. If we use subcontractors (data processors) for operations, they will be contractually obliged to protect data and not use it for their own purposes.",
+    "li5": "School use and children: The service can be used in schools without providing student data. Teachers and students can read and use the site without registration. No personal data is processed beyond what is strictly necessary for technical operation.",
+    "li6": "Cookies: We do not use unnecessary cookies. If we in the future introduce functional cookies (e.g., for language preference), we will update this policy and request consent where required.",
+    "li7": "Your rights and contact: If you have questions, wish to access technical information, or request deletion, contact us at post@dmz.no. You can also lodge a complaint with the Norwegian Data Protection Authority (Datatilsynet).",
+    "li8": "Changes: We may update this policy when needed. Significant changes will be published here."
+  }
     },
     "test": {
       "title": "Sleep test",
