@@ -82,39 +82,28 @@ export default function ArticlesPage() {
         )}
 
         {/* Artikler – 3 per rad */}
-            {items && (
-              <section className="cards-row mt-6">
-                {items.map((a) => (
-                  <div key={a.slug} className="card" style={{ padding: 0 }}>
-                    <img
-                      src={`/images/${a.slug}.png`}
-                      alt={a.title}
-                      style={{
-                        width: "100%",
-                        height: "auto",
-                        aspectRatio: "16 / 9",
-                        objectFit: "cover",
-                        borderTopLeftRadius: "12px",
-                        borderTopRightRadius: "12px",
-                      }}
-                    />
-                    <div style={{ padding: 16 }}>
-                      <h3 style={{ marginTop: 0 }}>{a.title}</h3>
-                      {a.summary && (
-                        <p className="muted" style={{ marginTop: 6 }}>
-                          {a.summary}
-                        </p>
-                      )}
-                      <div className="mt-6">
-                        <Link href={`/articles/${a.slug}`} className="btn">
-                          {t(dict, "ui.common.read", "Read")}
-                        </Link>
-                      </div>
-                    </div>
-                  </div>
-                ))}
-              </section>
-            )}
+        {items && (
+          <section className="cards-row mt-6">
+            {items.map((a) => (
+              <Link
+                key={a.slug}
+                href={`/articles/${a.slug}`}
+                className="card card-clickable"
+                aria-label={a.title}
+              >
+                <img
+                  src={`/images/${a.slug}.png`}
+                  alt={a.title}
+                  className="card-image"
+                />
+                <div className="card-content">
+                  <h3 className="card-title">{a.title}</h3>
+                  {a.summary && <p className="muted">{a.summary}</p>}
+                </div>
+              </Link>
+            ))}
+          </section>
+        )}
 
         <style jsx>{`
           .cards-row {
@@ -127,6 +116,45 @@ export default function ArticlesPage() {
             .cards-row {
               grid-template-columns: 1fr;
             }
+          }
+
+          .card-clickable {
+            display: block;
+            padding: 0;
+            text-decoration: none;
+            color: inherit;
+            border-radius: 12px;
+            overflow: hidden;
+            transition: transform 0.06s ease, box-shadow 0.2s ease,
+              outline-color 0.2s ease;
+            cursor: pointer;
+          }
+          .card-clickable:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 24px rgba(0, 0, 0, 0.12);
+          }
+          .card-clickable:focus-visible {
+            outline: 2px solid rgba(0, 0, 0, 0.3);
+            outline-offset: 2px;
+            transform: translateY(-2px);
+            box-shadow: 0 10px 24px rgba(0, 0, 0, 0.12);
+          }
+
+          .card-image {
+            width: 100%;
+            height: auto;
+            aspect-ratio: 16 / 9;
+            object-fit: cover;
+            display: block;
+          }
+
+          .card-content {
+            padding: 16px;
+          }
+
+          .card-title {
+            margin-top: 0;
+            margin-bottom: 6px;
           }
         `}</style>
       </main>
