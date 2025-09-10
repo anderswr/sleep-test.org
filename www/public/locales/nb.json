@@ -49,7 +49,6 @@
       "lookup_hint": "Når du har gjennomført en test får du en ID, den er anonym og du kan åpne rapporten når du vil. Lim inn ID-en din for å åpne rapporten.",
       "id_placeholder": "Din ID"
   },
-    },
     "articles": {
       "minutes": {
         "pattern": "6 min",
