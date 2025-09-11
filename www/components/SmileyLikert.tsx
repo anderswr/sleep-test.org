@@ -28,11 +28,11 @@ type Face = {
 };
 
 const FACES: Face[] = [
-  { v: 1, emoji: "😞", tone: 1, labelKey: "likert.1" },
-  { v: 2, emoji: "🙁", tone: 2, labelKey: "likert.2" },
+  { v: 1, emoji: "😃", tone: 1, labelKey: "likert.1" },
+  { v: 2, emoji: "🙂", tone: 2, labelKey: "likert.2" },
   { v: 3, emoji: "😐", tone: 3, labelKey: "likert.3" },
-  { v: 4, emoji: "🙂", tone: 4, labelKey: "likert.4" },
-  { v: 5, emoji: "😃", tone: 5, labelKey: "likert.5" },
+  { v: 4, emoji: "🙁", tone: 4, labelKey: "likert.4" },
+  { v: 5, emoji: "😞", tone: 5, labelKey: "likert.5" },
 ];
 
 export default function SmileyLikert({
