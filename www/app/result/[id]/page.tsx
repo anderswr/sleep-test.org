@@ -12,7 +12,7 @@ import { CategoryId } from "@/lib/types";
 type ResultDoc = {
   id: string;
   sleepScore: number;                          // 0–100 (høyere = bedre)
-  totalRaw?: number;                           // 0–100 (høyere = verre) – kan mangle i eldre resultater
+  totalRaw?: number;                           // 0–100 (høyere = verre)
   categoryScores: Record<string, number>;      // 0–100 (høyere = verre)
   flags?: { osaSignal?: boolean; excessiveSleepiness?: boolean; highBpRisk?: boolean };
   suggestedTips?: Record<string, string[]>;
@@ -23,7 +23,6 @@ function decapitalize(s: string) {
   return s.charAt(0).toLowerCase() + s.slice(1);
 }
 
-/** Hjelper: map kategori -> artikkel-slug (må finnes i /articles/[lang]/). */
 const ARTICLE_SLUG_BY_CAT: Partial<Record<CategoryId, string>> = {
   [CategoryId.Pattern]: "pattern",
   [CategoryId.Insomnia]: "insomnia",
@@ -32,10 +31,8 @@ const ARTICLE_SLUG_BY_CAT: Partial<Record<CategoryId, string>> = {
   [CategoryId.Hygiene]: "hygiene",
   [CategoryId.Environment]: "environment",
   [CategoryId.Breathing]: "breathing",
-  // bloodpressure har ingen artikkel ennå -> ingen link/ikon
 };
 
-/** Hjelper: velg 2–3 tips-nøkler per kategori basert på bucket-farge. */
 function pickTipKeys(cat: CategoryId, color: "green" | "orange" | "red"): string[] {
   if (cat === CategoryId.Pattern) {
     if (color === "green") return ["tips.pattern.keep_routine", "tips.pattern.protect_7h"];
@@ -116,7 +113,6 @@ export default function ResultPage({ params }: { params: { id: string } }) {
     );
   }
 
-  // Farge til ringen: bruk totalRaw hvis den finnes, ellers 100 - sleepScore (eldre resultater)
   const ringColor =
     data
       ? (bucketColor(
@@ -141,7 +137,17 @@ export default function ResultPage({ params }: { params: { id: string } }) {
 
                 {/* ID + Kopier-knapp */}
                 <div className="row" style={{ gap: 8, alignItems: "center", flexWrap: "wrap" }}>
-                  <code className="code-badge">{data.id}</code>
+                  <code
+                    className="code-badge"
+                    style={{
+                      background: "var(--prose-code-bg, #f3f4f6)",
+                      color: "var(--text)",
+                      borderRadius: 8,
+                      padding: "4px 8px",
+                    }}
+                  >
+                    {data.id}
+                  </code>
                   <button
                     className="btn"
                     onClick={() => navigator.clipboard.writeText(data.id)}
@@ -152,8 +158,8 @@ export default function ResultPage({ params }: { params: { id: string } }) {
                   </button>
                 </div>
 
-                {/* Disclaimer – egen linje for god lesbarhet */}
-                <p className="muted" style={{ marginTop: 12 }}>
+                {/* Disclaimer */}
+                <p style={{ marginTop: 12, color: "var(--muted)" }}>
                   {t(
                     dict,
                     "ui.result.disclaimer",
@@ -169,8 +175,11 @@ export default function ResultPage({ params }: { params: { id: string } }) {
                   aria-label={t(dict, "ui.result.sleep_score", "Søvn-score")}
                   title={t(dict, "ui.result.sleep_score", "Søvn-score")}
                 >
-                  <div className="score-ring__value">{Number(data.sleepScore)}</div>
-                  <div className="score-ring__label">
+                  {/* Force white text in the ring */}
+                  <div className="score-ring__value" style={{ color: "#fff" }}>
+                    {Number(data.sleepScore)}
+                  </div>
+                  <div className="score-ring__label" style={{ color: "rgba(255,255,255,.85)" }}>
                     {t(dict, "ui.result.sleep_score", "Søvn-score")}
                   </div>
                 </div>
@@ -180,42 +189,61 @@ export default function ResultPage({ params }: { params: { id: string } }) {
             {/* Kategorier */}
             <section className="grid-cards mt-6">
               {entries.map(([cat, rawVal]) => {
-                const raw = Number(rawVal);             // 0–100 (høyere = verre)
-                const display = 100 - raw;              // visning 0–100 (høyere = bedre)
+                const raw = Number(rawVal);
+                const display = 100 - raw;
                 const color = bucketColor(raw).replace("yellow", "orange") as "green" | "orange" | "red";
                 const desc = t(dict, `category.${cat}.desc`, "");
                 const lead = t(dict, `ui.result.lead.${color}`, "");
-
                 const tipKeys = pickTipKeys(cat, color).filter((k) => t(dict, k, "") !== "");
-
                 const articleSlug = ARTICLE_SLUG_BY_CAT[cat];
                 const showArticleIcon = !!articleSlug;
 
                 return (
-                  <article key={cat} className="cat-card" data-color={color}>
+                  <article
+                    key={cat}
+                    className="cat-card"
+                    data-color={color}
+                    // Force white foreground for everything inside this tinted card
+                    style={{ color: "#fff" }}
+                  >
                     <div className="cat-card__head">
-                      <span className="pill" data-color={color}>
+                      <span
+                        className="pill"
+                        data-color={color}
+                        // ensure pill text is white too
+                        style={{ color: "#fff" }}
+                      >
                         {t(dict, `category.${cat}.name`, String(cat))}
                       </span>
                       <div style={{ display: "flex", alignItems: "baseline", gap: 8 }}>
-                        <strong className="cat-card__score">{display}</strong>
-                        <span className="muted" style={{ fontSize: ".85rem" }}>/ 100</span>
+                        <strong className="cat-card__score" style={{ color: "#fff" }}>
+                          {display}
+                        </strong>
+                        <span style={{ fontSize: ".85rem", color: "rgba(255,255,255,.75)" }}>
+                          / 100
+                        </span>
                       </div>
                     </div>
 
                     <p
-                      className="muted"
-                      style={{ marginTop: 6, display: "flex", alignItems: "center", gap: 8 }}
+                      style={{
+                        marginTop: 6,
+                        display: "flex",
+                        alignItems: "center",
+                        gap: 8,
+                        color: "rgba(255,255,255,.9)",
+                      }}
                     >
                       <span>
-                        <strong>{lead}</strong> {decapitalize(desc)}
+                        <strong style={{ color: "#fff" }}>{lead}</strong>{" "}
+                        {decapitalize(desc)}
                       </span>
                       {showArticleIcon && (
                         <a
                           href={`/articles/${articleSlug}`}
                           aria-label={t(dict, "ui.common.read", "Read")}
                           title={t(dict, "ui.common.read", "Read")}
-                          style={{ display: "inline-flex", alignItems: "center" }}
+                          style={{ display: "inline-flex", alignItems: "center", color: "rgba(255,255,255,.85)" }}
                         >
                           <svg width="18" height="18" viewBox="0 0 24 24" aria-hidden focusable="false">
                             <path fill="currentColor" d="M14 3h7v7h-2V6.41l-9.29 9.3-1.42-1.42 9.3-9.29H14V3Zm-4 4v2H5v10h10v-5h2v7H3V7h7Z"/>
@@ -226,13 +254,14 @@ export default function ResultPage({ params }: { params: { id: string } }) {
 
                     {tipKeys.length > 0 && (
                       <>
-                        <h4 className="mb-2 mt-6">
+                        <h4 className="mb-2 mt-6" style={{ color: "#fff" }}>
                           {t(dict, "ui.result.how_to_improve", "Hvordan forbedre dette:")}
                         </h4>
                         <ul className="tips-list">
                           {tipKeys.map((key) => (
-                            <li key={`${cat}-${key}`}>
-                              <span className="star">*</span> {t(dict, key, key)}
+                            <li key={`${cat}-${key}`} style={{ color: "rgba(255,255,255,.92)" }}>
+                              <span className="star" style={{ color: "rgba(255,255,255,.7)" }}>*</span>{" "}
+                              {t(dict, key, key)}
                             </li>
                           ))}
                         </ul>
@@ -243,7 +272,7 @@ export default function ResultPage({ params }: { params: { id: string } }) {
               })}
             </section>
 
-            {/* Flags – nøytral presentasjon */}
+            {/* Flags */}
             {(data.flags?.osaSignal || data.flags?.excessiveSleepiness || data.flags?.highBpRisk) && (
               <section className="panel mt-6" style={{ padding: 24 }}>
                 <h2 className="mb-2" style={{ marginTop: 0 }}>
