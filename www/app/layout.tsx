@@ -3,10 +3,34 @@ import "./globals.css";
 import { I18nProvider } from "./providers/I18nProvider";
 import { Analytics } from "@vercel/analytics/react";
 import { SpeedInsights } from "@vercel/speed-insights/next";
+import type { Metadata } from "next";
 
-export const metadata = {
-  title: "Sleep Test",
-  description: "Answer 30 questions and get a practical sleep report.",
+export const metadata: Metadata = {
+  metadataBase: new URL("https://sleep-test.org"),
+  title: "Sleep Test – Free 5-Minute Sleep Quality Report",
+  description:
+    "Take a free sleep test in 5–10 minutes. Answer 30 simple questions and get an instant report with sleep score, patterns, and practical tips.",
+  alternates: {
+    canonical: "/", // Forsiden får https://sleep-test.org/ som canonical
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
+  openGraph: {
+    title: "Sleep Test – Free 5-Minute Sleep Quality Report",
+    description:
+      "Take a free sleep test in 5–10 minutes. Answer 30 simple questions and get an instant report with sleep score, patterns, and practical tips.",
+    url: "https://sleep-test.org/",
+    siteName: "Sleep Test",
+    type: "website",
+  },
+  twitter: {
+    card: "summary",
+    title: "Sleep Test – Free 5-Minute Sleep Quality Report",
+    description:
+      "Take a free sleep test in 5–10 minutes. Answer 30 simple questions and get an instant report with sleep score, patterns, and practical tips.",
+  },
 };
 
 // Runs before React mounts: choose theme + language with minimal flash
@@ -40,15 +64,13 @@ const bootScript = `
     var lang = savedLang || (wantsNb ? "nb" : "en");
     document.documentElement.lang = lang;
     document.documentElement.setAttribute("data-lang", lang);
-    // Note: don't write localStorage here unless you want auto-detection to stick.
-    // Leave it to your language switcher to set localStorage.lang = "nb"|"en".
   } catch (e) {}
 })();
 `;
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html suppressHydrationWarning>
+    <html lang="en" suppressHydrationWarning>
       <head>
         <meta name="color-scheme" content="dark light" />
         {/* Set theme & lang before paint */}
@@ -56,7 +78,6 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       </head>
       <body className="app-shell">
         <I18nProvider>{children}</I18nProvider>
-
         <Analytics />
         <SpeedInsights />
       </body>
