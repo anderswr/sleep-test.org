@@ -1,4 +1,2 @@
 User-agent: *
-Disallow: /inweston/
-Disallow: /startsiden/
-Sitemap: https://www.dmz.no/sitemap.xml
+Sitemap: https://sleep-test.org/sitemap.xml
