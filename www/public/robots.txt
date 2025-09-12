@@ -1,0 +1,4 @@
+User-agent: *
+Disallow: /inweston/
+Disallow: /startsiden/
+Sitemap: https://www.dmz.no/sitemap.xml
