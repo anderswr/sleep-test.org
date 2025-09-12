@@ -9,36 +9,29 @@ import { t } from "@/lib/i18n";
 import * as React from "react";
 
 const LANGS = [
-  { code: "nb", label: "Norsk", flag: "🇳🇴" },
+  { code: "nb", label: "Norsk",  flag: "🇳🇴" },
   { code: "en", label: "English", flag: "🇺🇸" },
 ] as const;
 
 type Theme = "light" | "dark";
 
 function getCurrentTheme(): Theme {
-  // 1) Bruk eksplisitt valg hvis finnes
   try {
     const saved = localStorage.getItem("theme");
     if (saved === "light" || saved === "dark") return saved;
   } catch {}
-  // 2) Ellers: les fra <html data-theme> (satt av layout boot-script)
   if (typeof document !== "undefined") {
     const fromHtml = document.documentElement.getAttribute("data-theme");
     if (fromHtml === "light" || fromHtml === "dark") return fromHtml;
   }
-  // 3) Fallback: system
   if (typeof window !== "undefined" && window.matchMedia) {
     return window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
   }
   return "light";
 }
-
 function setTheme(next: Theme) {
-  const el = document.documentElement;
-  el.setAttribute("data-theme", next);
-  try {
-    localStorage.setItem("theme", next);
-  } catch {}
+  document.documentElement.setAttribute("data-theme", next);
+  try { localStorage.setItem("theme", next); } catch {}
 }
 
 export default function SiteHeader() {
@@ -49,18 +42,14 @@ export default function SiteHeader() {
   const [theme, setThemeState] = React.useState<Theme>(() =>
     typeof window === "undefined" ? "light" : getCurrentTheme()
   );
-
   const langRef = React.useRef<HTMLDivElement>(null);
 
-  // Init + hold theme in sync with <html>
   React.useEffect(() => {
     const current = getCurrentTheme();
     setThemeState(current);
-    // sørg for at html attr er riktig (om layout ikke rakk)
     document.documentElement.setAttribute("data-theme", current);
   }, []);
 
-  // Close language menu on outside click / ESC
   React.useEffect(() => {
     function onDoc(e: MouseEvent) {
       if (!langRef.current) return;
@@ -104,27 +93,21 @@ export default function SiteHeader() {
           style={{ gap: 8, alignItems: "center" }}
           aria-label={t(dict, "ui.home.title", "Sleep Test")}
         >
-          <Image
-            src="/favicon.ico"
-            alt=""
-            width={28}
-            height={28}
-            style={{ borderRadius: 6 }}
-          />
+          <Image src="/favicon.ico" alt="" width={28} height={28} style={{ borderRadius: 6 }} />
         </Link>
 
         <nav className="nav">
-          <NavItem href="/" k="ui.nav.home" />
-          <NavItem href="/result" k="ui.nav.result" />
-          <NavItem href="/compare" k="ui.nav.compare" />
+          <NavItem href="/"         k="ui.nav.home" />
+          <NavItem href="/result"   k="ui.nav.result" />
+          <NavItem href="/compare"  k="ui.nav.compare" />
           <NavItem href="/articles" k="ui.nav.articles" />
-          <NavItem href="/about" k="ui.nav.about" />
+          <NavItem href="/about"    k="ui.nav.about" />
         </nav>
       </div>
 
       {/* Right: theme toggle + language */}
       <div className="row" style={{ gap: 10 }}>
-        {/* Theme toggle (ikon-only) */}
+        {/* Theme toggle */}
         <button
           type="button"
           className="theme-toggle"
@@ -133,36 +116,20 @@ export default function SiteHeader() {
           aria-pressed={theme === "dark"}
           onClick={toggleTheme}
         >
-          {/* Skyv «knappen» for å gi en liten switch-følelse */}
           <span className="toggle-track" aria-hidden>
             <span className={`toggle-thumb ${theme === "dark" ? "is-right" : "is-left"}`} />
           </span>
-          {/* Ikoner (flate, svart/hvitt) */}
           <span className="toggle-icons" aria-hidden>
-            {/* Sol */}
-            <svg
-              className={`icon ${theme === "dark" ? "" : "icon-active"}`}
-              width="16"
-              height="16"
-              viewBox="0 0 24 24"
-              fill="currentColor"
-            >
+            <svg className={`icon ${theme === "dark" ? "" : "icon-active"}`} width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
               <path d="M6.76 4.84 5.34 3.42 3.92 4.84l1.42 1.42 1.42-1.42Zm10.48 0 1.42-1.42 1.42 1.42-1.42 1.42-1.42-1.42ZM12 2h0v2h0V2Zm0 18h0v2h0v-2ZM4 12H2v0h2v0Zm18 0h2v0h-2v0ZM6.76 19.16l-1.42 1.42-1.42-1.42 1.42-1.42 1.42 1.42Zm10.48 0 1.42 1.42 1.42-1.42-1.42-1.42-1.42 1.42ZM12 7a5 5 0 1 1 0 10 5 5 0 0 1 0-10Z" />
             </svg>
-            {/* Måne */}
-            <svg
-              className={`icon ${theme === "dark" ? "icon-active" : ""}`}
-              width="16"
-              height="16"
-              viewBox="0 0 24 24"
-              fill="currentColor"
-            >
+            <svg className={`icon ${theme === "dark" ? "icon-active" : ""}`} width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
               <path d="M21 12.79A9 9 0 1 1 11.21 3a7 7 0 1 0 9.79 9.79Z" />
             </svg>
           </span>
         </button>
 
-        {/* Language dropdown */}
+        {/* Language */}
         <div ref={langRef} className="lang-wrap">
           <button
             type="button"
@@ -171,13 +138,9 @@ export default function SiteHeader() {
             aria-expanded={menuOpen}
             onClick={() => setMenuOpen((v) => !v)}
           >
-            <span className="flag" aria-hidden>
-              {current.flag}
-            </span>
+            <span className="flag" aria-hidden>{current.flag}</span>
             <span className="lang-label">{current.label}</span>
-            <span className="caret" aria-hidden>
-              ▾
-            </span>
+            <span className="caret" aria-hidden>▾</span>
           </button>
 
           {menuOpen && (
@@ -189,14 +152,9 @@ export default function SiteHeader() {
                   role="menuitemradio"
                   aria-checked={lang === l.code}
                   className={`lang-item ${lang === l.code ? "active" : ""}`}
-                  onClick={() => {
-                    setLang(l.code as any);
-                    setMenuOpen(false);
-                  }}
+                  onClick={() => { setLang(l.code as any); setMenuOpen(false); }}
                 >
-                  <span className="flag" aria-hidden>
-                    {l.flag}
-                  </span>
+                  <span className="flag" aria-hidden>{l.flag}</span>
                   <span className="lang-label">{l.label}</span>
                 </button>
               ))}
@@ -208,6 +166,7 @@ export default function SiteHeader() {
       <style jsx>{`
         .lang-wrap { position: relative; }
 
+        /* ✅ Fix: sørg for riktig tekstfarge i begge tema */
         .lang-btn {
           display: inline-flex;
           align-items: center;
@@ -218,10 +177,13 @@ export default function SiteHeader() {
           background: var(--card);
           box-shadow: var(--shadow);
           font: inherit;
+          color: var(--text);           /* <- ny */
         }
+        .lang-btn .lang-label { color: var(--text); }  /* <- ny, ekstra sikkerhet */
+        .lang-btn .caret { color: var(--muted); }
+
         .flag { font-size: 1rem; line-height: 1; }
         .lang-label { font-size: 0.95rem; }
-        .caret { margin-left: 2px; color: var(--muted); font-size: 12px; }
 
         .lang-menu {
           position: absolute;
@@ -247,12 +209,16 @@ export default function SiteHeader() {
           background: transparent;
           text-align: left;
           cursor: pointer;
-          color: var(--text);
+          color: var(--text);           /* <- sikrer kontrast i begge tema */
         }
         .lang-item:hover { background: var(--primary-weak); }
-        .lang-item.active { background: var(--primary-weak); outline: 1px solid var(--primary); }
+        .lang-item.active {
+          background: var(--primary-weak);
+          outline: 1px solid var(--primary);
+          color: var(--text);          /* <- behold kontrast når valgt */
+        }
 
-        /* ---- Theme toggle look (matcher språk-knappen, men ikon-only) ---- */
+        /* Theme toggle */
         .theme-toggle {
           display: inline-flex;
           align-items: center;
@@ -272,9 +238,7 @@ export default function SiteHeader() {
           border-radius: 999px;
           border: 1px solid var(--border);
         }
-        [data-theme="dark"] .toggle-track {
-          background: rgba(255,255,255,0.08);
-        }
+        [data-theme="dark"] .toggle-track { background: rgba(255,255,255,0.08); }
         .toggle-thumb {
           position: absolute;
           top: 50%;
@@ -290,16 +254,10 @@ export default function SiteHeader() {
         .toggle-thumb.is-left { left: 3px; }
         .toggle-thumb.is-right { left: 19px; }
 
-        .toggle-icons {
-          display: inline-flex;
-          gap: 8px;
-          align-items: center;
-          color: var(--muted);
-        }
+        .toggle-icons { display: inline-flex; gap: 8px; align-items: center; color: var(--muted); }
         .icon { opacity: .6; }
         .icon-active { opacity: 1; color: var(--text); }
 
-        /* Hover feedback */
         .theme-toggle:hover, .lang-btn:hover {
           transform: translateY(-1px);
           transition: transform .06s ease;

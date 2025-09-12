@@ -1,0 +1,2 @@
+User-agent: *
+Sitemap: https://sleep-test.org/sitemap.xml
