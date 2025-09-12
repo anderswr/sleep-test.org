@@ -1,3 +1,4 @@
+// app/page.tsx
 "use client";
 
 import Link from "next/link";
@@ -14,34 +15,35 @@ export default function Home() {
   const [targetCount, setTargetCount] = React.useState<number | null>(null);
   const [displayCount, setDisplayCount] = React.useState<number>(0);
 
-// Hent antall fullførte tester
-React.useEffect(() => {
-  let canceled = false;
+  // Hent antall fullførte tester
+  React.useEffect(() => {
+    let canceled = false;
 
-  async function fetchCount(): Promise<number | null> {
-    try {
-      const res = await fetch("/api/stats", { cache: "no-store" });
-      if (!res.ok) return null;
-      const json = await res.json();
-      // forventer { total }, men tåler alternativer
-      return typeof json.total === "number"
-        ? json.total
-        : typeof json.count === "number"
-        ? json.count
-        : typeof json.totalTests === "number"
-        ? json.totalTests
-        : null;
-    } catch {
-      return null;
+    async function fetchCount(): Promise<number | null> {
+      try {
+        const res = await fetch("/api/stats", { cache: "no-store" });
+        if (!res.ok) return null;
+        const json = await res.json();
+        return typeof json.total === "number"
+          ? json.total
+          : typeof json.count === "number"
+          ? json.count
+          : typeof json.totalTests === "number"
+          ? json.totalTests
+          : null;
+      } catch {
+        return null;
+      }
     }
-  }
 
-  fetchCount().then((n) => {
-    if (!canceled && typeof n === "number") setTargetCount(n);
-  });
+    fetchCount().then((n) => {
+      if (!canceled && typeof n === "number") setTargetCount(n);
+    });
 
-  return () => { canceled = true; };
-}, []);
+    return () => {
+      canceled = true;
+    };
+  }, []);
 
   // Myk opptelling 0 -> targetCount på ~0.8s
   React.useEffect(() => {
@@ -55,8 +57,7 @@ React.useEffect(() => {
     const tick = (t: number) => {
       if (start == null) start = t;
       const p = Math.min(1, (t - start) / duration);
-      // easeOutCubic
-      const eased = 1 - Math.pow(1 - p, 3);
+      const eased = 1 - Math.pow(1 - p, 3); // easeOutCubic
       const val = Math.floor(from + (to - from) * eased);
       setDisplayCount(val);
       if (p < 1) requestAnimationFrame(tick);
@@ -71,14 +72,21 @@ React.useEffect(() => {
       <SiteHeader />
       <main className="container" style={{ flex: "1 1 auto" }}>
         {/* Hero */}
-        <section className="panel head" style={{ padding: 24 }}>
+        <header className="panel head" style={{ padding: 24 }}>
           <h1 style={{ margin: 0, fontSize: "1.8rem" }}>
             {t(dict, "ui.home.title", "Sleep Test")}
           </h1>
           <p className="muted" style={{ marginTop: 6 }}>
-            {t(dict, "ui.home.pitch")}
+            {t(
+              dict,
+              "ui.home.pitch",
+              "Answer 30 questions in 5–10 minutes — get a free, practical sleep report."
+            )}
           </p>
-          <div style={{ marginTop: 16, display: "flex", gap: 8, flexWrap: "wrap" }}>
+          <div
+            style={{ marginTop: 16, display: "flex", gap: 8, flexWrap: "wrap" }}
+            aria-label="Sleep test call to action"
+          >
             <Link href="/test" className="btn primary">
               {t(dict, "ui.home.cta", "Start the test")}
             </Link>
@@ -86,15 +94,15 @@ React.useEffect(() => {
               {t(dict, "ui.home.example", "See sample report")}
             </Link>
           </div>
-        </section>
+        </header>
 
         {/* Tre informasjonskort */}
-        <section className="cards-row">
+        <section className="cards-row" aria-label="Sleep test features">
           {/* Kort 1: Teller */}
-          <div className="card" style={{ padding: 20 }}>
-            <h3 style={{ marginTop: 0 }}>
+          <article className="card" style={{ padding: 20 }}>
+            <h2 style={{ marginTop: 0 }}>
               {t(dict, "ui.home.tests_count_title", "Completed sleep tests")}
-            </h3>
+            </h2>
             <div style={{ marginTop: 6 }}>
               <div
                 style={{
@@ -104,8 +112,8 @@ React.useEffect(() => {
                   letterSpacing: "0.5px",
                 }}
                 aria-live="polite"
+                aria-label="Total number of completed sleep tests"
               >
-                {/* Vis spinner/prikker til vi har tall */}
                 {targetCount == null ? "…" : displayCount.toLocaleString()}
               </div>
               <p className="muted" style={{ marginTop: 6 }}>
@@ -116,19 +124,41 @@ React.useEffect(() => {
                 )}
               </p>
             </div>
-          </div>
+          </article>
 
-          {/* Kort 2 */}
-          <div className="card">
-            <h3 style={{ marginTop: 0 }}>{t(dict, "ui.compare.card.title")}</h3>
-            <p className="muted">{t(dict, "ui.compare.card.text")}</p>
-          </div>
+          {/* Kort 2: Compare */}
+          <article className="card" style={{ padding: 20 }}>
+            <h2 style={{ marginTop: 0 }}>
+              {t(dict, "ui.compare.card.title", "Compare")}
+            </h2>
+            <p className="muted">
+              {t(
+                dict,
+                "ui.compare.card.text",
+                "You get an ID after the test. Take it again later and compare what changed."
+              )}
+            </p>
+            <Link href="/compare" className="btn" aria-label="Compare sleep test results">
+              {t(dict, "ui.nav.compare", "Compare")}
+            </Link>
+          </article>
 
-          {/* Kort 3 */}
-          <div className="card">
-            <h3 style={{ marginTop: 0 }}>{t(dict, "ui.articles.card.title")}</h3>
-            <p className="muted">{t(dict, "ui.articles.card.text")}</p>
-          </div>
+          {/* Kort 3: Articles */}
+          <article className="card" style={{ padding: 20 }}>
+            <h2 style={{ marginTop: 0 }}>
+              {t(dict, "ui.articles.card.title", "Learn more")}
+            </h2>
+            <p className="muted">
+              {t(
+                dict,
+                "ui.articles.card.text",
+                "Learn about sleep patterns, insomnia, sleep hygiene, environment and more."
+              )}
+            </p>
+            <Link href="/articles" className="btn" aria-label="Read sleep articles and guides">
+              {t(dict, "ui.nav.articles", "Articles")}
+            </Link>
+          </article>
         </section>
 
         <style jsx>{`
