@@ -8,12 +8,12 @@
       "about": "About"
     },
     "home": {
-      "title": "Sleep Test (under development)",
-      "pitch": "Answer 30 questions in 5–10 minutes — no cost, registration, or login — and get a free, clear report with explanations and practical actions.",
+      "title": "Free Sleep Test — get your personalized report",
+      "pitch": "Answer 30 quick questions in 5–10 minutes. No cost, no registration. Get a clear, science-based report with explanations and practical tips.",
       "cta": "Start the test",
-      "example": "See sample report",
+      "example": "View example report",
       "tests_count_title": "Completed sleep tests",
-      "tests_count_caption": "People have used this free, anonymous tool."
+      "tests_count_caption": "people have already tested their sleep with this free, anonymous tool."
     },
     "privacy": {
       "card": {
@@ -23,8 +23,8 @@
     },
     "compare": {
       "card": {
-        "title": "Compare",
-        "text": "You get an ID after the test. Take it again later and compare what changed."
+        "title": "Track your progress",
+        "text": "Take the test again later and compare your results over time."
       },
       "help": "Do you have your previous ID? Enter both to see progress — and where.",
       "notfound": "Could not find one or both IDs.",
@@ -35,7 +35,7 @@
       "label_a": "ID A",
       "label_b": "ID B"
     },
-   "result": {
+    "result": {
       "title": "Result",
       "sleep_score": "Sleep score",
       "copy_id": "Copy ID",
@@ -48,7 +48,7 @@
       },
       "lookup_hint": "When you complete a test you receive an ID. It is anonymous, and you can open your report anytime. Paste your ID to view the report.",
       "id_placeholder": "Your ID"
-  },
+    },
     "articles": {
       "minutes": {
         "pattern": "6 min",
@@ -61,8 +61,8 @@
         "some": "7 min"
       },
       "card": {
-        "title": "Learn more",
-        "text": "Although sleep is individual, there has been extensive research on the topic. Here are some articles about sleep – written for the general public, based on credible online sources."
+        "title": "Sleep tips & knowledge",
+        "text": "Explore practical sleep guides — covering routines, insomnia, sleep hygiene, and more. Written for the general public, based on credible research."
       },
       "index": {
         "pattern": {
