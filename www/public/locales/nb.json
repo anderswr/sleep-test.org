@@ -1,5 +1,12 @@
 {
   "ui": {
+    "nav": {
+      "home": "Hjem",
+      "result": "Resultat",
+      "compare": "Sammenlign",
+      "articles": "Artikler",
+      "about": "Om"
+    },
     "home": {
       "title": "Gratis søvntest — få en personlig rapport",
       "pitch": "Svar på 30 kjappe spørsmål på 5–10 minutter. Ingen kostnad, ingen registrering. Få en tydelig, kunnskapsbasert rapport med forklaringer og konkrete tips.",
@@ -8,11 +15,39 @@
       "tests_count_title": "Fullførte søvntester",
       "tests_count_caption": "personer har allerede testet søvnen sin med dette gratis, anonyme verktøyet."
     },
+    "privacy": {
+      "card": {
+        "title": "Helt anonym og 100% gratis",
+        "text": "Ingen pålogging, ingen registrering – helt personvern-/GDPR-vennlig."
+      }
+    },
     "compare": {
       "card": {
         "title": "Følg utviklingen din",
         "text": "Ta testen igjen senere og sammenlign resultatene over tid."
-      }
+      },
+      "explainer": "Sammenlign to rapporter for å se om tiltakene dine virker. Vi anbefaler å ta testen med 4–8 ukers mellomrom, slik at du tydelig ser utviklingen over tid.",
+      "help": "Har du ID-en din fra sist? Skriv inn begge for å se fremgang – og hvor.",
+      "notfound": "Finner ikke én eller begge ID-ene.",
+      "error": "Noe gikk galt. Prøv igjen.",
+      "id_a": "ID A",
+      "id_b": "ID B",
+      "label_a": "ID A",
+      "label_b": "ID B"
+    },
+    "result": {
+      "title": "Resultat",
+      "sleep_score": "Søvn-score",
+      "copy_id": "Kopier ID",
+      "disclaimer": "Dette er ikke en medisinsk vurdering, men en generell veiledning som kan hjelpe deg å se mønstre og prøve praktiske tiltak. Husk at søvnvaner ofte endres gradvis — prøv deg frem, vær tålmodig, og se hva som fungerer best for deg.",
+      "how_to_improve": "Oppretthold og forbedre dette:",
+      "lead": {
+        "green": "Du svarer godt på ",
+        "orange": "Du har forbedringspotensial for ",
+        "red": "Du bør endre vanene dine for "
+      },
+      "lookup_hint": "Når du har gjennomført en test får du en ID. Den er anonym, og du kan åpne rapporten når du vil. Lim inn ID-en for å åpne rapporten.",
+      "id_placeholder": "Din ID"
     },
     "articles": {
       "card": {
@@ -77,7 +112,6 @@
     "submit": "Send inn",
     "progress": "Fremdrift"
   },
-
   "common": {
     "sending": "Sender…",
     "back": "Tilbake",
@@ -86,7 +120,7 @@
     "error_submit": "Kunne ikke sende inn. Prøv igjen."
   },
   "likert": {
-    "1": "Aldri / Ikke i det hele tatt",
+    "1": "Aldri",
     "2": "Sjelden",
     "3": "Av og til",
     "4": "Ofte",
@@ -100,10 +134,7 @@
     "hygiene": { "name": "Søvnhygiene & rutiner", "desc": "Vaner og timing (skjermer, koffein)." },
     "environment": { "name": "Søvnmiljø", "desc": "Lys, støy, temperatur, seng." },
     "breathing": { "name": "Snorking & pustesignal", "desc": "Mulige tegn på søvnapné." },
-    "bloodpressure": {
-      "name": "Blodtrykk – livsstilsrisiko",
-      "desc": "Kosthold, aktivitet, alkohol, stress og vekt."
-    }
+    "bloodpressure": { "name": "Blodtrykk – livsstilsrisiko", "desc": "Kosthold, aktivitet, alkohol, stress og vekt." }
   },
   "q": {
     "pattern": {
@@ -153,56 +184,6 @@
       "overweight_self": "Jeg tror eller vet at jeg ligger i overvekt-området."
     }
   },
-  "f": {
-    "wake_work": {
-      "title": "Når står du vanligvis opp på arbeids-/skole­dager?",
-      "no_fixed": "Varierer / vet ikke"
-    },
-    "sleep_bucket": {
-      "title": "Hvor mange timer sover du vanligvis per natt (arbeids-/skoledager)?",
-      "options": {
-        "<6": "<6 t",
-        "6-7": "6–7 t",
-        "7-8": "7–8 t",
-        "8-9": "8–9 t",
-        "9-10": "9–10 t",
-        ">10": ">10 t",
-        "unknown": "Usikker / varierer"
-      }
-    },
-    "weekend_shift": {
-      "title": "Hvor mye senere står du opp i helgen sammenlignet med hverdager?",
-      "options": {
-        "0": "Ingen endring",
-        "1.5": "≈ 1,5 t senere",
-        "3": "≈ 3 t senere",
-        "4.5": "≈ 4,5 t senere",
-        "6": "≈ 6 t senere"
-      }
-    },
-    "wake_usual": {
-      "title": "Når står du vanligvis opp (typisk tid)?"
-    },
-    "shift_work": {
-      "title": "Jobber du skift?",
-      "options": {
-        "none": "Nei",
-        "early": "Tidligskift",
-        "late": "Sen / kveld",
-        "night": "Natt",
-        "rotating": "Roterende"
-      }
-    },
-    "nap_freq": {
-      "title": "Tar du dagslurer?",
-      "options": {
-        "never": "Aldri",
-        "weekly": "Ukentlig",
-        "few_week": "Noen ganger i uka",
-        "daily": "Daglig"
-      }
-    }
-  },
   "flags": {
     "osa_signal": "Mulige tegn på søvnapné – vurder å snakke med fastlege.",
     "excessive_sleepiness": "Uttalt søvnighet på dagtid – vær ekstra oppmerksom.",
@@ -215,7 +196,7 @@
       "consistent_bed_wake": "Legg deg og stå opp til omtrent samme tid hver dag (±30–60 min).",
       "plan_winddown": "Lag en enkel nedroingsrutine 30–60 min før leggetid (lys ned, skjermfri, rolig aktivitet).",
       "protect_7h": "Beskytt minst 7 timer søvnvindu hver natt over tid.",
-      "cut_late_naps": "Unngå lange/lange sene lurer etter kl. 15–16 — de kan skyve på nattesøvnen."
+      "cut_late_naps": "Unngå lange eller sene lurer etter kl. 15–16 — de kan skyve på nattesøvnen."
     },
     "insomnia": {
       "maintain": "Hold fast ved vanene som fungerer – små, stabile grep gir best effekt over tid.",
@@ -244,7 +225,7 @@
     "environment": {
       "keep_cool_dark": "Hold soverommet kjølig, mørkt og ryddig – gjør senga til et sove-signal.",
       "test_blackout": "Prøv mørklegging/øyemaske og dempet belysning på kvelden.",
-      "noise_control": "Dempe støy (ørepropper, hvit støy, jevn bakgrunnslyd) om nødvendig.",
+      "noise_control": "Demp støy (ørepropper, hvit støy, jevn bakgrunnslyd) om nødvendig.",
       "try_new_pillow": "Sjekk pute/madrass – bytt ved ubehag, vond nakke eller hofter.",
       "cooler_temp": "Senk temp eller lette på dyne hvis du blir varm om natta."
     },
