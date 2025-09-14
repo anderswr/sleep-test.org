@@ -8,7 +8,7 @@
       "about": "About"
     },
     "home": {
-      "title": "Free Sleep Test — get your personalized report",
+      "title": "Free Sleep Test — get your personalized report (beta)",
       "pitch": "Answer 30 quick questions in 5–10 minutes. No cost, no registration. Get a clear, science-based report with explanations and practical tips.",
       "cta": "Start the test",
       "example": "View example report",
@@ -107,7 +107,7 @@
   },
   "privacy": {
     "title": "Privacy Policy",
-    "p1": "We take privacy seriously. This policy explains how we handle information when you use www.sleep-test.org. By using the site, you confirm that you have read and accepted these terms. The site is designed so that schools in Norway can use it without providing any personal information.",
+    "p1": "We take privacy seriously. This policy explains how we handle information when you use www.sleep-test.org. By using the site, you confirm that you have read and accepted these terms. The site is designed so that schools can use it without providing any personal information.",
     "li1": "What data we process: We do not collect names, email addresses, or other directly identifiable information. To display and remember results, only a system-generated ID is stored together with a summary of answers. We do not use marketing cookies, third-party tracking scripts, or profiling.",
     "li2": "Purpose and legal basis: The purpose is to provide the service and improve its quality. The legal basis is legitimate interest (GDPR art. 6(1)(f)) in operating a secure and functional solution without processing personal data. Technical logs may be processed for troubleshooting and security.",
     "li3": "Storage and deletion: Technical IDs and result summaries are stored only as long as necessary for the stated purpose. If you believe content should be deleted, you can contact us at post@dmz.no.",
