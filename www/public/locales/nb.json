@@ -8,7 +8,7 @@
       "about": "Om"
     },
     "home": {
-      "title": "Gratis søvntest — få en personlig rapport",
+      "title": "Gratis søvntest — få en personlig rapport (beta)",
       "pitch": "Svar på 30 kjappe spørsmål på 5–10 minutter. Ingen kostnad, ingen registrering. Få en tydelig, kunnskapsbasert rapport med forklaringer og konkrete tips.",
       "cta": "Start test",
       "example": "Se eksempel på rapport",
@@ -97,7 +97,7 @@
   },
   "privacy": {
     "title": "Personvernerklæring",
-    "p1": "Vi tar personvern på alvor. Denne erklæringen forklarer hvordan vi behandler opplysninger når du bruker www.sleep-test.org. Ved å bruke nettstedet bekrefter du at du har lest og akseptert disse vilkårene. Nettstedet er designet slik at skoler i Norge kan bruke tjenesten uten å oppgi personopplysninger.",
+    "p1": "Vi tar personvern på alvor. Denne erklæringen forklarer hvordan vi behandler opplysninger når du bruker www.sleep-test.org. Ved å bruke nettstedet bekrefter du at du har lest og akseptert disse vilkårene. Nettstedet er designet slik at skoler kan bruke tjenesten uten å oppgi personopplysninger.",
     "li1": "Hvilke data vi behandler: Vi samler ikke inn navn, e-postadresse eller annen direkte identifiserbar informasjon. For å vise og huske resultater brukes kun en teknisk generert ID lagret sammen med en oppsummering av svarene. Vi bruker ingen markedsførings-cookies, tredjeparts sporingsskript eller profilering.",
     "li2": "Formål og behandlingsgrunnlag: Formålet er å levere tjenesten og forbedre kvaliteten. Behandlingsgrunnlaget er berettiget interesse (GDPR art. 6(1)(f)) i å drive en sikker og velfungerende løsning uten behandling av personopplysninger. Eventuelle tekniske logger kan behandles for feilsøking og sikkerhet.",
     "li3": "Lagring og sletting: Tekniske ID-er og resultatoppsummeringer lagres bare så lenge det er nødvendig for formålet. Dersom du mener innhold bør slettes, kan du kontakte oss på post@dmz.no.",
