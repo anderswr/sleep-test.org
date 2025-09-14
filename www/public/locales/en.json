@@ -131,7 +131,7 @@
     "error_submit": "Could not submit. Please try again."
   },
   "likert": {
-    "1": "Never / Not at all",
+    "1": "Never",
     "2": "Rarely",
     "3": "Sometimes",
     "4": "Often",
@@ -195,57 +195,7 @@
       "overweight_self": "I think or know that I’m in the overweight range."
     }
   },
-  "f": {
-    "wake_work": {
-      "title": "When do you usually wake up on work/school days?",
-      "no_fixed": "Varies / not sure"
-    },
-    "sleep_bucket": {
-      "title": "How many hours do you usually sleep per night (work/school days)?",
-      "options": {
-        "<6": "<6 h",
-        "6-7": "6–7 h",
-        "7-8": "7–8 h",
-        "8-9": "8–9 h",
-        "9-10": "9–10 h",
-        ">10": ">10 h",
-        "unknown": "Unsure / varies"
-      }
-    },
-    "weekend_shift": {
-      "title": "How much later do you wake up on weekends vs weekdays?",
-      "options": {
-        "0": "No change",
-        "1.5": "≈ 1.5 h later",
-        "3": "≈ 3 h later",
-        "4.5": "≈ 4.5 h later",
-        "6": "≈ 6 h later"
-      }
-    },
-    "wake_usual": {
-      "title": "What is your typical wake-up time?"
-    },
-    "shift_work": {
-      "title": "Do you do shift work?",
-      "options": {
-        "none": "No",
-        "early": "Early shift",
-        "late": "Late / evening",
-        "night": "Night",
-        "rotating": "Rotating"
-      }
-    },
-    "nap_freq": {
-      "title": "Do you take daytime naps?",
-      "options": {
-        "never": "Never",
-        "weekly": "Weekly",
-        "few_week": "A few times/week",
-        "daily": "Daily"
-      }
-    }
-  },
-  "flags": {
+ "flags": {
     "osa_signal": "Possible signs of sleep apnea – consider talking to your doctor.",
     "excessive_sleepiness": "Marked daytime sleepiness – be extra careful.",
     "high_bp_risk": "Several lifestyle factors point to an increased risk of high blood pressure. Consider measuring your blood pressure when you have the opportunity, especially if you have type 2 diabetes or close relatives with cardiovascular disease."
