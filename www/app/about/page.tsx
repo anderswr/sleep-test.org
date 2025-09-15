@@ -55,7 +55,14 @@ export default function AboutPage() {
             <section id="contact" style={{ marginTop: 28 }}>
               {contactTitle && <h2>{contactTitle}</h2>}
               {contactP1 && <p>{contactP1}</p>}
-              {contactP2 && <p className="muted">{contactP2}</p>}
+
+              {/* P2 støtter HTML (f.eks. <a href="...">...</a>) via språkfilene */}
+              {contactP2 && (
+                <p
+                  className="muted"
+                  dangerouslySetInnerHTML={{ __html: contactP2 }}
+                />
+              )}
             </section>
           )}
         </article>
