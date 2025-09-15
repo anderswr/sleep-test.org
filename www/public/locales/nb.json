@@ -86,15 +86,15 @@
       }
     }
   },
-  "about": {
-    "title": "Laget av DMZ DATA AS",
-    "intro": "Startet som en knøttliten idé – bygget med sunn fornuft, helsetech/søvntech og litt kodehjelp.",
-    "contact": {
-      "title": "Kontakt",
-      "p1": "Ansvarlig for www.sleep-test.org er DMZ DATA AS. Kontaktpunkt for personvern og generelle henvendelser: post@dmz.no.",
-      "p2": "Les mer om oss på www.dmz.no."
-    }
-  },
+"about": {
+  "title": "Laget av DMZ DATA AS",
+  "intro": "Laget på dugnad i Porsgrunn, helsetech/søvntech og AI.",
+  "contact": {
+    "title": "Kontakt",
+    "p1": "Ansvarlig for www.sleep-test.org er DMZ DATA AS. Kontaktpunkt for personvern og generelle henvendelser: post@dmz.no.",
+    "p2": "Utforsk DMZ DATA-underverker på <a href='https://www.dmz.no' target='_blank' rel='noopener'>www.dmz.no</a>, App for å lære Google web search (<a href='https://apps.apple.com/no/app/toiletlearn-web-search/id6748481089' target='_blank' rel='noopener'>iOS</a>), App for å lære ChatGPT (<a href='https://apps.apple.com/us/app/toiletlearn-web-search/id6748926636?platform=iphone' target='_blank' rel='noopener'>iOS</a>) og gjør Homey smarthuset ditt litt mer gøy med DadJokes (<a href='https://homey.app/no-no/app/com.dmz.dadjokesplus/DadJokes-Plus/test/' target='_blank' rel='noopener'>Homey-app</a>)."
+  }
+},
   "privacy": {
     "title": "Personvernerklæring",
     "p1": "Vi tar personvern på alvor. Denne erklæringen forklarer hvordan vi behandler opplysninger når du bruker www.sleep-test.org. Ved å bruke nettstedet bekrefter du at du har lest og akseptert disse vilkårene. Nettstedet er designet slik at skoler kan bruke tjenesten uten å oppgi personopplysninger.",
