@@ -96,15 +96,15 @@
       }
     }
   },
-  "about": {
-    "title": "Created by DMZ DATA AS",
-    "intro": "Started as a small idea – built with common sense, healthtech/sleeptech, and a bit of coding.",
-    "contact": {
-      "title": "Contact",
-      "p1": "The organization responsible for www.sleep-test.org is DMZ DATA AS. Contact point for privacy and general inquiries: post@dmz.no.",
-      "p2": "Read more about us at www.dmz.no."
-    }
-  },
+"about": {
+  "title": "Created by DMZ DATA AS",
+  "intro": "Built almost without effort in Porsgrunn, combining healthtech/sleeptech and AI.",
+  "contact": {
+    "title": "Contact",
+    "p1": "Responsible for www.sleep-test.org is DMZ DATA AS. Contact point for privacy inquiries and general questions: post@dmz.no.",
+    "p2": "Explore DMZ DATA wonders at <a href='https://www.dmz.no' target='_blank' rel='noopener'>www.dmz.no</a>, an app to learn Google web search (<a href='https://apps.apple.com/no/app/toiletlearn-web-search/id6748481089' target='_blank' rel='noopener'>iOS</a>), an app to learn ChatGPT (<a href='https://apps.apple.com/us/app/toiletlearn-web-search/id6748926636?platform=iphone' target='_blank' rel='noopener'>iOS</a>), and make your Homey smart home a bit more fun with DadJokes (<a href='https://homey.app/no-no/app/com.dmz.dadjokesplus/DadJokes-Plus/test/' target='_blank' rel='noopener'>Homey app</a>)."
+  }
+},
   "privacy": {
     "title": "Privacy Policy",
     "p1": "We take privacy seriously. This policy explains how we handle information when you use www.sleep-test.org. By using the site, you confirm that you have read and accepted these terms. The site is designed so that schools can use it without providing any personal information.",
