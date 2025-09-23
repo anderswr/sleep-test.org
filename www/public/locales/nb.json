@@ -143,14 +143,14 @@
       "late_long_naps": "Jeg tar lange eller sene dagslurer som forstyrrer natten."
     },
     "insomnia": {
-      "long_sleep_onset": "Det tar lenge å sovne etter at jeg legger meg.",
+      "long_sleep_onset": "Det tar lang tid å sovne etter at har lagt meg.",
       "frequent_awakenings": "Jeg våkner flere ganger i løpet av natten.",
       "early_morning_awakenings": "Jeg våkner for tidlig og får ikke sove igjen.",
       "unrefreshed_mornings": "Jeg føler meg ikke uthvilt når jeg står opp.",
       "daytime_impact": "Søvnvanskene påvirker meg på dagtid (humør, konsentrasjon, energi)."
     },
     "quality": {
-      "overall_poor": "Min helhetsopplevelse av søvnen er dårlig.",
+      "overall_poor": "Min helhetsopplevelse av søvnen er ofte dårlig.",
       "dissatisfied": "Jeg er misfornøyd med søvnen min.",
       "restless_nights": "Søvnen min er ofte urolig (mareritt, rastløshet, smerter)."
     },
@@ -178,10 +178,10 @@
     },
     "bloodpressure": {
       "diet_salty": "Jeg spiser ofte mat med mye salt (f.eks. ferdigmat, snacks, salte pålegg).",
-      "activity_low": "Jeg er lite fysisk aktiv i hverdagen.",
-      "alcohol_often": "Jeg drikker alkohol oftere eller mer enn anbefalt.",
+      "activity_low": "Jeg foretrekker å slappe av, i stedet for fysisk aktiv på hverdagene.",
+      "alcohol_often": "Jeg drikker alkohol oftere eller mer mangde enn anbefalt.",
       "stress_high": "Jeg opplever mye stress i hverdagen.",
-      "overweight_self": "Jeg tror eller vet at jeg ligger i overvekt-området."
+      "overweight_self": "Jeg oppfatter meg selv som overvektig."
     }
   },
   "flags": {
