@@ -161,7 +161,7 @@
       "daytime_impact": "My sleep problems affect my daytime functioning (mood, focus, energy)."
     },
     "quality": {
-      "overall_poor": "My overall experience of sleep is poor.",
+      "overall_poor": "My overall experience of sleep is often poor.",
       "dissatisfied": "I am dissatisfied with my sleep.",
       "restless_nights": "My nights are often restless (nightmares, restlessness, pain)."
     },
@@ -192,7 +192,7 @@
       "activity_low": "I am not very physically active in daily life.",
       "alcohol_often": "I drink alcohol more often or in larger amounts than recommended.",
       "stress_high": "I experience a lot of stress in everyday life.",
-      "overweight_self": "I think or know that I’m in the overweight range."
+      "overweight_self": "I consider myself overweight."
     }
   },
  "flags": {
