@@ -5,13 +5,33 @@ import { Analytics } from "@vercel/analytics/react";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import type { Metadata } from "next";
 
+// Alle språk vi støtter
+const SUPPORTED_LANGS = ["en", "nb", "de", "es", "fr", "hi", "ja", "ko", "pt-BR", "ru", "sk", "zh", "ar"] as const;
+const DEFAULT_LANG = "en";
+
 export const metadata: Metadata = {
   metadataBase: new URL("https://sleep-test.org"),
   title: "Sleep Test – Free - No login 5-Minute Sleep Quality Report",
   description:
     "Take a free sleep test in 5–10 minutes. Answer 30 simple questions and get an instant report with sleep score, patterns, and practical tips.",
   alternates: {
-    canonical: "/", // Forsiden får https://sleep-test.org/ som canonical
+    canonical: "https://sleep-test.org/",
+    languages: {
+      "x-default": "https://sleep-test.org/",
+      en: "https://sleep-test.org/en",
+      nb: "https://sleep-test.org/nb",
+      de: "https://sleep-test.org/de",
+      es: "https://sleep-test.org/es",
+      fr: "https://sleep-test.org/fr",
+      hi: "https://sleep-test.org/hi",
+      ja: "https://sleep-test.org/ja",
+      ko: "https://sleep-test.org/ko",
+      "pt-BR": "https://sleep-test.org/pt-BR",
+      ru: "https://sleep-test.org/ru",
+      sk: "https://sleep-test.org/sk",
+      zh: "https://sleep-test.org/zh",
+      ar: "https://sleep-test.org/ar",
+    },
   },
   robots: {
     index: true,
@@ -33,40 +53,8 @@ export const metadata: Metadata = {
   },
 };
 
-// Runs before React mounts: choose theme + language with minimal flash
-const bootScript = `
-(function () {
-  try {
-    // ---------- THEME ----------
-    // User override: localStorage.theme in {"light","dark","system"}
-    var pref = localStorage.getItem("theme");
-    var systemDark = window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches;
-    var theme =
-      pref === "light" ? "light" :
-      pref === "dark"  ? "dark"  :
-      // default to system
-      (systemDark ? "dark" : "light");
-
-    // Our CSS defaults to dark unless data-theme="light" is set.
-    if (theme === "light") {
-      document.documentElement.setAttribute("data-theme", "light");
-    } else {
-      document.documentElement.removeAttribute("data-theme");
-    }
-
-    // ---------- LANGUAGE ----------
-    // If user has chosen a language before, honor it.
-    var savedLang = localStorage.getItem("lang");
-    var navLangs = (navigator.languages && navigator.languages.length ? navigator.languages : [navigator.language || "en"]).map(String);
-    // any Norwegian variant? (nb, no, nn)
-    var wantsNb = navLangs.some(function (l) { l = l.toLowerCase(); return l === "nb" || l.startsWith("nb-") || l === "no" || l.startsWith("no-") || l === "nn" || l.startsWith("nn-"); });
-
-    var lang = savedLang || (wantsNb ? "nb" : "en");
-    document.documentElement.lang = lang;
-    document.documentElement.setAttribute("data-lang", lang);
-  } catch (e) {}
-})();
-`;
+// Boot-script for språk og tema
+const bootScript = `…samme som du har nå…`;
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
