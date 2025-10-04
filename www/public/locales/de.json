@@ -1,0 +1,109 @@
+{
+  "ui": {
+    "nav": {
+      "home": "Startseite",
+      "result": "Ergebnis",
+      "compare": "Vergleichen",
+      "articles": "Artikel",
+      "about": "Über uns"
+    },
+    "home": {
+      "title": "Kostenloser Schlaf-Test — erhalten Sie Ihren persönlichen Bericht (Beta)",
+      "pitch": "Beantworten Sie 30 kurze Fragen in 5–10 Minuten. Keine Kosten, keine Registrierung. Erhalten Sie einen klaren, wissenschaftlich fundierten Bericht mit Erklärungen und praktischen Tipps.",
+      "cta": "Test starten",
+      "example": "Beispielbericht ansehen",
+      "tests_count_title": "Abgeschlossene Schlaf-Tests",
+      "tests_count_caption": "Menschen haben ihren Schlaf bereits mit diesem kostenlosen, anonymen Tool getestet."
+    },
+    "privacy": {
+      "card": {
+        "title": "Anonym und 100% kostenlos",
+        "text": "Wir nehmen DSGVO persönlich: keine Registrierung, keine Protokollierung, keine Kosten — alles anonym."
+      }
+    },
+    "compare": {
+      "card": {
+        "title": "Verfolgen Sie Ihren Fortschritt",
+        "text": "Machen Sie den Test später erneut und vergleichen Sie Ihre Ergebnisse im Zeitverlauf."
+      },
+      "help": "Haben Sie Ihre vorherige ID? Geben Sie beide ein, um den Fortschritt zu sehen — und wo.",
+      "notfound": "Konnte eine oder beide IDs nicht finden.",
+      "error": "Etwas ist schiefgelaufen. Bitte versuchen Sie es erneut.",
+      "explainer": "Vergleichen Sie zwei Berichte, um zu sehen, ob Ihre Maßnahmen wirken. Wir empfehlen, alle 4–8 Wochen erneut zu testen, damit Sie den Trend im Laufe der Zeit klar erkennen können.",
+      "id_a": "ID A",
+      "id_b": "ID B",
+      "label_a": "ID A",
+      "label_b": "ID B"
+    },
+    "result": {
+      "title": "Ergebnis",
+      "sleep_score": "Schlaf-Score",
+      "copy_id": "ID kopieren",
+      "disclaimer": "Dies ist keine medizinische Bewertung, sondern ein allgemeiner Leitfaden, um Ihnen zu helfen, Muster zu erkennen und praktische Schritte auszuprobieren. Schlafgewohnheiten ändern sich oft schrittweise — experimentieren Sie, seien Sie geduldig und finden Sie heraus, was für Sie am besten funktioniert.",
+      "how_to_improve": "Behalten und verbessern Sie dies:",
+      "lead": {
+        "green": "Sie machen es gut bei ",
+        "orange": "Sie haben Verbesserungspotenzial bei ",
+        "red": "Sie sollten Ihre Gewohnheiten ändern bei "
+      },
+      "lookup_hint": "Wenn Sie einen Test abschließen, erhalten Sie eine ID. Sie ist anonym, und Sie können Ihren Bericht jederzeit öffnen. Fügen Sie Ihre ID ein, um den Bericht anzuzeigen.",
+      "id_placeholder": "Ihre ID"
+    },
+    "articles": {
+      "minutes": {
+        "pattern": "6 Min.",
+        "insomnia": "7 Min.",
+        "quality": "5 Min.",
+        "daytime": "6 Min.",
+        "hygiene": "6 Min.",
+        "environment": "5 Min.",
+        "breathing": "6 Min.",
+        "some": "7 Min."
+      },
+      "card": {
+        "title": "Schlaftipps & Wissen",
+        "text": "Entdecken Sie praktische Schlafanleitungen — über Routinen, Schlaflosigkeit, Schlafhygiene und mehr. Geschrieben für die breite Öffentlichkeit, basierend auf glaubwürdiger Forschung."
+      }
+    }
+  },
+  "about": {
+    "title": "Erstellt von DMZ DATA AS",
+    "intro": "Fast mühelos in Porsgrunn gebaut, eine Kombination aus Healthtech/Sleeptech und KI.",
+    "contact": {
+      "title": "Kontakt",
+      "p1": "Verantwortlich für www.sleep-test.org ist DMZ DATA AS. Kontaktstelle für Datenschutzanfragen und allgemeine Fragen: kontor@dmz.no.",
+      "p2": "Entdecken Sie die Wunder von DMZ DATA auf <a href='https://www.dmz.no' target='_blank' rel='noopener'>www.dmz.no</a>, eine App zum Erlernen der Google-Websuche (<a href='https://apps.apple.com/no/app/toiletlearn-web-search/id6748481089' target='_blank' rel='noopener'>LINK</a>), eine App zum Erlernen von ChatGPT (<a href='https://apps.apple.com/us/app/toiletlearn-web-search/id6748926636?platform=iphone' target='_blank' rel='noopener'>LINK</a>), und machen Sie Ihr Homey-Smart-Home mit DadJokes etwas lustiger (<a href='https://homey.app/no-no/app/com.dmz.dadjokesplus/DadJokes-Plus/test/' target='_blank' rel='noopener'>LINK</a>)."
+    }
+  },
+  "privacy": {
+    "title": "Datenschutzrichtlinie",
+    "p1": "Wir nehmen den Datenschutz ernst. Diese Richtlinie erklärt, wie wir Informationen handhaben, wenn Sie www.sleep-test.org nutzen. Durch die Nutzung der Website bestätigen Sie, dass Sie diese Bedingungen gelesen und akzeptiert haben. Die Seite ist so konzipiert, dass Schulen sie nutzen können, ohne persönliche Daten bereitzustellen.",
+    "li1": "Welche Daten wir verarbeiten: Wir erheben keine Namen, E-Mail-Adressen oder andere direkt identifizierbare Informationen. Um Ergebnisse anzuzeigen und zu speichern, wird nur eine systemgenerierte ID zusammen mit einer Zusammenfassung der Antworten gespeichert. Wir verwenden keine Marketing-Cookies, keine Drittanbieter-Tracking-Skripte oder Profiling.",
+    "li2": "Zweck und Rechtsgrundlage: Der Zweck besteht darin, den Dienst bereitzustellen und seine Qualität zu verbessern. Die Rechtsgrundlage ist das berechtigte Interesse (DSGVO Art. 6(1)(f)) an einem sicheren und funktionalen Betrieb ohne Verarbeitung personenbezogener Daten. Technische Protokolle können zur Fehlerbehebung und Sicherheit verarbeitet werden.",
+    "li3": "Speicherung und Löschung: Technische IDs und Ergebniszusammenfassungen werden nur so lange gespeichert, wie es für den angegebenen Zweck erforderlich ist. Wenn Sie der Meinung sind, dass Inhalte gelöscht werden sollten, können Sie uns unter kontor@dmz.no kontaktieren.",
+    "li4": "Weitergabe und Übertragung: Wir geben keine Daten an Dritte weiter. Wenn wir Subunternehmer (Datenverarbeiter) für den Betrieb einsetzen, sind diese vertraglich verpflichtet, Daten zu schützen und nicht für eigene Zwecke zu verwenden.",
+    "li5": "Nutzung in Schulen und durch Kinder: Der Dienst kann in Schulen genutzt werden, ohne dass Schülerdaten bereitgestellt werden. Lehrer und Schüler können die Website ohne Registrierung lesen und nutzen. Es werden keine personenbezogenen Daten über das technisch Notwendige hinaus verarbeitet.",
+    "li6": "Cookies: Wir verwenden keine unnötigen Cookies. Wenn wir in Zukunft funktionale Cookies einführen (z. B. für Spracheinstellungen), werden wir diese Richtlinie aktualisieren und ggf. eine Einwilligung einholen.",
+    "li7": "Ihre Rechte und Kontakt: Wenn Sie Fragen haben, technische Informationen einsehen oder die Löschung beantragen möchten, kontaktieren Sie uns unter kontor@dmz.no. Sie können auch eine Beschwerde bei der norwegischen Datenschutzbehörde (Datatilsynet) einreichen.",
+    "li8": "Änderungen: Wir können diese Richtlinie bei Bedarf aktualisieren. Wesentliche Änderungen werden hier veröffentlicht."
+  },
+  "test": {
+    "title": "Schlaf-Test",
+    "submit": "Absenden",
+    "progress": "Fortschritt"
+  },
+  "common": {
+    "sending": "Senden…",
+    "back": "Zurück",
+    "next": "Weiter",
+    "read": "Lesen",
+    "error_submit": "Konnte nicht gesendet werden. Bitte versuchen Sie es erneut."
+  },
+  "likert": {
+    "1": "Nie",
+    "2": "Selten",
+    "3": "Manchmal",
+    "4": "Oft",
+    "5": "Sehr oft"
+  }
+}
