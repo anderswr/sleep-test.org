@@ -145,9 +145,7 @@
     "environment": { "name": "수면 환경", "desc": "빛, 소음, 온도, 침대." },
     "breathing": { "name": "코골이 & 호흡 신호", "desc": "수면 무호흡 가능성." },
     "bloodpressure": { "name": "혈압 – 생활습관 위험", "desc": "식습관, 활동, 알코올, 스트레스, 체중." }
-  }
-}
-{
+  },
   "q": {
     "pattern": {
       "too_short": "나는 대부분의 밤에 필요한 것보다 적게 잔다.",
