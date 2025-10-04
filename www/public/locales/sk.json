@@ -1,0 +1,248 @@
+{
+  "ui": {
+    "nav": {
+      "home": "Domov",
+      "result": "Výsledok",
+      "compare": "Porovnať",
+      "articles": "Články",
+      "about": "O nás"
+    },
+    "home": {
+      "title": "Bezplatný test spánku — získajte svoj osobný report (beta)",
+      "pitch": "Odpovedzte na 30 rýchlych otázok za 5–10 minút. Bez poplatku, bez registrácie. Získajte jasný, vedecky podložený report s vysvetleniami a praktickými tipmi.",
+      "cta": "Začať test",
+      "example": "Zobraziť ukážkový report",
+      "tests_count_title": "Dokončené testy spánku",
+      "tests_count_caption": "ľudí už otestovalo svoj spánok pomocou tohto bezplatného anonymného nástroja."
+    },
+    "privacy": {
+      "card": {
+        "title": "Anonymné a 100% zadarmo",
+        "text": "GDPR berieme osobne: bez registrácie, bez logovania, bez poplatkov — úplne anonymne."
+      }
+    },
+    "compare": {
+      "card": {
+        "title": "Sledujte svoj pokrok",
+        "text": "Test zopakujte neskôr a porovnajte svoje výsledky v priebehu času."
+      },
+      "help": "Máte svoje predchádzajúce ID? Zadajte obe, aby ste videli pokrok — a kde.",
+      "notfound": "Nepodarilo sa nájsť jedno alebo obe ID.",
+      "error": "Niečo sa pokazilo. Skúste to prosím znova.",
+      "explainer": "Porovnajte dva reporty, aby ste videli, či vaše kroky fungujú. Odporúčame opakovať test každých 4–8 týždňov, aby ste jasne videli trend v čase.",
+      "id_a": "ID A",
+      "id_b": "ID B",
+      "label_a": "ID A",
+      "label_b": "ID B"
+    },
+    "result": {
+      "title": "Výsledok",
+      "sleep_score": "Skóre spánku",
+      "copy_id": "Kopírovať ID",
+      "disclaimer": "Toto nie je lekárske hodnotenie, ale všeobecný návod, ktorý vám pomôže všimnúť si vzorce a vyskúšať praktické kroky. Spánkové návyky sa často menia postupne — experimentujte, buďte trpezliví a zistite, čo funguje najlepšie pre vás.",
+      "how_to_improve": "Zachovajte a zlepšujte toto:",
+      "lead": {
+        "green": "Darí sa vám v oblasti ",
+        "orange": "Máte priestor na zlepšenie v oblasti ",
+        "red": "Mali by ste zmeniť svoje návyky v oblasti "
+      },
+      "lookup_hint": "Po dokončení testu dostanete ID. Je anonymné a svoj report si môžete otvoriť kedykoľvek. Vložte svoje ID na zobrazenie reportu.",
+      "id_placeholder": "Vaše ID"
+    },
+    "articles": {
+      "minutes": {
+        "pattern": "6 min",
+        "insomnia": "7 min",
+        "quality": "5 min",
+        "daytime": "6 min",
+        "hygiene": "6 min",
+        "environment": "5 min",
+        "breathing": "6 min",
+        "some": "7 min"
+      },
+      "card": {
+        "title": "Tipy a poznatky o spánku",
+        "text": "Preskúmajte praktické príručky o spánku — rutiny, nespavosť, spánková hygiena a ďalšie. Napísané pre širokú verejnosť, na základe dôveryhodného výskumu."
+      },
+      "index": {
+        "pattern": {
+          "title": "Vzorce a dĺžka spánku: rutina, ktorá funguje",
+          "teaser": "Prečo pravidelné hodiny a dostatok času v posteli všetko uľahčujú — plus jednoduché kroky, ako začať už dnes večer."
+        },
+        "insomnia": {
+          "title": "Ťažkosti so zaspávaním alebo udržaním spánku",
+          "teaser": "KBT-I v reálnom živote: pravidlo 20 minút, kontrola stimulov a prečo je dôležitý pevný čas budenia."
+        },
+        "quality": {
+          "title": "Kvalita spánku: zlepšenie celkového pocitu",
+          "teaser": "Čo „kvalita“ v skutočnosti znamená, čo ju znižuje a ako ju postupne zlepšovať."
+        },
+        "daytime": {
+          "title": "Deň a ospalosť: viac bdelých hodín",
+          "teaser": "Ranné svetlo, mikro-prestávky na pohyb a lepšie načasovanie pre viac sústredenia a menej driemania."
+        },
+        "hygiene": {
+          "title": "Spánková hygiena a rutiny, ktoré skutočne pomáhajú",
+          "teaser": "Večery so zníženým svetlom obrazoviek, obmedzenie kofeínu a jednoduchá relaxácia — bez pocitu viny."
+        },
+        "environment": {
+          "title": "Prostredie na spánok: svetlo, hluk, teplota a posteľ",
+          "teaser": "Nízkonákladové úpravy pre pokojnejšie noci — zatemnenie, zvuk a skutočne vhodný vankúš."
+        },
+        "breathing": {
+          "title": "Chrápanie a dýchanie: kedy to skontrolovať",
+          "teaser": "Kedy je chrápanie neškodné, kedy to môže byť spánkové apnoe a čo robiť ďalej."
+        }
+      }
+    }
+  },
+  "about": {
+    "title": "Vytvorené spoločnosťou DMZ DATA AS",
+    "intro": "Vytvorené takmer bez námahy v Porsgrunn, kombináciou healthtech/sleeptech a umelej inteligencie.",
+    "contact": {
+      "title": "Kontakt",
+      "p1": "Za www.sleep-test.org je zodpovedná spoločnosť DMZ DATA AS. Kontakt pre otázky týkajúce sa ochrany osobných údajov a všeobecných otázok: kontor@dmz.no.",
+      "p2": "Objavte projekty DMZ DATA na <a href='https://www.dmz.no' target='_blank' rel='noopener'>www.dmz.no</a>, aplikáciu na učenie sa Google vyhľadávania (<a href='https://apps.apple.com/no/app/toiletlearn-web-search/id6748481089' target='_blank' rel='noopener'>ODKAZ</a>), aplikáciu na učenie sa ChatGPT (<a href='https://apps.apple.com/us/app/toiletlearn-web-search/id6748926636?platform=iphone' target='_blank' rel='noopener'>ODKAZ</a>) a spravte svoj inteligentný domov Homey o niečo zábavnejší s DadJokes (<a href='https://homey.app/no-no/app/com.dmz.dadjokesplus/DadJokes-Plus/test/' target='_blank' rel='noopener'>ODKAZ</a>)."
+    }
+  },
+  "privacy": {
+    "title": "Zásady ochrany osobných údajov",
+    "p1": "Ochranu súkromia berieme vážne. Tieto zásady vysvetľujú, ako narábame s informáciami pri používaní www.sleep-test.org. Používaním stránky potvrdzujete, že ste si tieto podmienky prečítali a prijali. Stránka je navrhnutá tak, aby ju mohli používať školy bez poskytovania osobných údajov.",
+    "li1": "Aké údaje spracúvame: Nezbierame mená, e-mailové adresy ani iné priamo identifikovateľné informácie. Na zobrazenie a zapamätanie výsledkov sa ukladá iba systémom generované ID spolu so súhrnom odpovedí. Nepoužívame marketingové cookies, skripty tretích strán ani profilovanie.",
+    "li2": "Účel a právny základ: Účelom je poskytovať službu a zlepšovať jej kvalitu. Právnym základom je oprávnený záujem (GDPR čl. 6(1)(f)) na prevádzkovanie bezpečného a funkčného riešenia bez spracúvania osobných údajov. Technické logy môžu byť spracúvané na riešenie problémov a bezpečnosť.",
+    "li3": "Ukladanie a vymazanie: Technické ID a súhrny výsledkov sa uchovávajú iba tak dlho, ako je to potrebné na stanovený účel. Ak sa domnievate, že obsah má byť vymazaný, kontaktujte nás na kontor@dmz.no.",
+    "li4": "Zdieľanie a prenos: Údaje nezdieľame s tretími stranami. Ak používame subdodávateľov (spracovateľov údajov) na prevádzku, budú zmluvne viazaní chrániť údaje a nepoužívať ich na vlastné účely.",
+    "li5": "Používanie v školách a deťmi: Služba môže byť používaná v školách bez poskytovania údajov študentov. Učitelia a študenti môžu čítať a používať stránku bez registrácie. Osobné údaje sa nespracúvajú nad rámec toho, čo je striktne potrebné na technickú prevádzku.",
+    "li6": "Cookies: Nepoužívame zbytočné cookies. Ak v budúcnosti zavedeme funkčné cookies (napr. na jazykové preferencie), tieto zásady aktualizujeme a vyžiadame si súhlas, ak to bude potrebné.",
+    "li7": "Vaše práva a kontakt: Ak máte otázky, chcete získať prístup k technickým informáciám alebo požadujete vymazanie, kontaktujte nás na kontor@dmz.no. Môžete tiež podať sťažnosť na Nórsky úrad na ochranu osobných údajov (Datatilsynet).",
+    "li8": "Zmeny: Tieto zásady môžeme podľa potreby aktualizovať. Významné zmeny budú zverejnené tu."
+  },
+  "test": {
+    "title": "Test spánku",
+    "submit": "Odoslať",
+    "progress": "Postup"
+  },
+  "common": {
+    "sending": "Odosielanie…",
+    "back": "Späť",
+    "next": "Ďalej",
+    "read": "Čítať",
+    "error_submit": "Nepodarilo sa odoslať. Skúste to prosím znova."
+  },
+  "likert": {
+    "1": "Nikdy",
+    "2": "Zriedka",
+    "3": "Niekedy",
+    "4": "Často",
+    "5": "Veľmi často"
+  },
+  "category": {
+    "pattern": { "name": "Vzorce a dĺžka spánku", "desc": "Dĺžka a pravidelnosť." },
+    "insomnia": { "name": "Zaspávanie a noc", "desc": "Zaspanie, prebúdzanie, skoré ráno." },
+    "quality": { "name": "Kvalita spánku", "desc": "Vnímaná kvalita a spokojnosť." },
+    "daytime": { "name": "Deň a ospalosť", "desc": "Ospalosť a denná funkčnosť." },
+    "hygiene": { "name": "Spánková hygiena a rutiny", "desc": "Návyky a načasovanie (obrazovky, kofeín)." },
+    "environment": { "name": "Prostredie na spánok", "desc": "Svetlo, hluk, teplota, posteľ." },
+    "breathing": { "name": "Chrápanie a dýchanie", "desc": "Možné príznaky spánkového apnoe." },
+    "bloodpressure": { "name": "Krvný tlak – riziko životného štýlu", "desc": "Strava, aktivita, alkohol, stres a hmotnosť." }
+  },
+  "q": {
+    "pattern": {
+      "too_short": "Väčšinu nocí spím menej, ako potrebujem.",
+      "irregular_times": "Moje časy spánku sa veľmi líšia z dňa na deň.",
+      "late_long_naps": "Dávam si dlhé alebo neskoré zdriemnutia, ktoré narušujú nočný spánok."
+    },
+    "insomnia": {
+      "long_sleep_onset": "Trvá mi dlho, kým zaspím po tom, čo si ľahnem do postele.",
+      "frequent_awakenings": "Budím sa niekoľkokrát počas noci.",
+      "early_morning_awakenings": "Zobúdzam sa príliš skoro a nemôžem znovu zaspať.",
+      "unrefreshed_mornings": "Ráno sa necítim oddýchnutý.",
+      "daytime_impact": "Moje problémy so spánkom ovplyvňujú moju dennú funkčnosť (náladu, sústredenie, energiu)."
+    },
+    "quality": {
+      "overall_poor": "Môj celkový zážitok zo spánku je často zlý.",
+      "dissatisfied": "Nie som spokojný so svojím spánkom.",
+      "restless_nights": "Moje noci sú často nepokojné (nočné mory, nepokoj, bolesť)."
+    },
+    "daytime": {
+      "doze_easily": "Ľahko zadriemem v pokojnej situácii (TV, čítanie, cestovanie).",
+      "struggle_stay_awake": "Ťažko zostávam bdelý, keď sa musím sústrediť.",
+      "tired_most_day": "Bojujem s únavou počas veľkej časti dňa."
+    },
+    "hygiene": {
+      "screens_before_bed": "Používam obrazovky tesne pred spaním.",
+      "late_caffeine": "Pijem kávu/energetické nápoje neskoro počas dňa.",
+      "alcohol_near_bed": "Pijem alkohol tesne pred spaním.",
+      "big_meal_late": "Jem veľké jedlá neskoro večer.",
+      "hard_exercise_late": "Cvičím intenzívne tesne pred spaním."
+    },
+    "environment": {
+      "too_light_noise_temp": "Spálňa je často príliš svetlá, hlučná alebo má nesprávnu teplotu.",
+      "uncomfortable_bed": "Posteľ alebo vankúš sú nepohodlné.",
+      "bad_associations": "Pracujem/pozerám TV v posteli a vytváram si zlé asociácie so spánkom."
+    },
+    "breathing": {
+      "loud_snoring": "Hlasno chrápem.",
+      "observed_apneas": "Iní si všimli prestávky v dýchaní, keď spím.",
+      "daytime_tired_despite": "Som veľmi ospalý cez deň, aj po normálnej noci."
+    },
+    "bloodpressure": {
+      "diet_salty": "Často jem potraviny s vysokým obsahom soli (napr. hotové jedlá, snacky, slané nátierky).",
+      "activity_low": "Nie som veľmi fyzicky aktívny v každodennom živote.",
+      "alcohol_often": "Pijem alkohol častejšie alebo vo väčšom množstve, než sa odporúča.",
+      "stress_high": "Zažívam veľa stresu v každodennom živote.",
+      "overweight_self": "Považujem sa za človeka s nadváhou."
+    }
+  },
+ "flags": {
+    "osa_signal": "Možné príznaky spánkového apnoe – zvážte konzultáciu s lekárom.",
+    "excessive_sleepiness": "Výrazná denná ospalosť – buďte mimoriadne opatrný.",
+    "high_bp_risk": "Niekoľko faktorov životného štýlu poukazuje na zvýšené riziko vysokého krvného tlaku. Zvážte meranie krvného tlaku, keď budete mať príležitosť, najmä ak máte cukrovku 2. typu alebo blízkych príbuzných s kardiovaskulárnymi ochoreniami."
+  },
+  "tips": {
+    "pattern": {
+      "keep_routine": "Dodržujte stabilnú spánkovú rutinu – podobné časy spánku a budenia väčšinu dní.",
+      "short_naps": "Ak potrebujete zdriemnuť, udržujte to krátke (20–30 min) a skôr počas dňa.",
+      "consistent_bed_wake": "Snažte sa o konzistentné časy spánku a budenia (±30–60 min).",
+      "plan_winddown": "Vytvorte si jednoduchú rutinu na ukľudnenie 30–60 min pred spaním (stlmené svetlá, nízka stimulácia).",
+      "protect_7h": "Chráňte si spánkové okno aspoň 7 hodín väčšinu nocí.",
+      "cut_late_naps": "Vyhnite sa dlhým alebo neskorým zdriemnutiam po ~15–16 hodine – môžu oddialiť nočný spánok."
+    },
+    "insomnia": {
+      "maintain": "Udržujte to, čo už funguje – malé, stabilné návyky sa sčítajú.",
+      "rule_20min": "Ak ste bdelý ~20 min v posteli: vstaňte, robte niečo pokojné pri slabom svetle a skúste to znova.",
+      "fixed_wake": "Dodržujte pevný čas budenia bez ohľadu na okolnosti – trénuje to vaše biologické hodiny.",
+      "stimulus_control": "Vyhradzujte posteľ iba na spánok a intimitu – nie na TV, telefón alebo prácu.",
+      "consider_cbti": "Ak problémy pretrvávajú: zvážte CBT-I (kognitívno-behaviorálnu terapiu nespavosti)."
+    },
+    "quality": {
+      "track_triggers": "Sledujte možné spúšťače (kofeín, čas cvičenia, stres), aby ste si všimli vzorce.",
+      "address_disruptors": "Znížte bežné rušivé vplyvy (hluk, svetlo, nepohodlie, neskoré obrazovky).",
+      "consult_if_pain": "Pretrvávajúca bolesť, nepokoj alebo nočné mory? Poraďte sa s lekárom."
+    },
+    "daytime": {
+      "morning_light": "Získajte ranné svetlo (10–30 min) na zvýšenie bdelosti a ukotvenie svojho cirkadiánneho rytmu.",
+      "activity_breaks": "Doprajte si krátke pohybové prestávky počas dňa; ľahkú aktivitu plánujte skôr večer.",
+      "consider_medical": "Výrazná denná ospalosť? Zvážte lekársku kontrolu (napr. spánkové apnoe alebo iné príčiny)."
+    },
+    "hygiene": {
+      "keep_it_up": "Pokračujte v spánkových návykoch, ktoré vám už pomáhajú.",
+      "screens_off_60": "Posledných 60 min pred spaním obmedzte alebo vypnite obrazovky.",
+      "limit_caffeine": "Vyhnite sa kofeínu po ~14–16 hodine (6–8 hodín pred spaním).",
+      "no_alcohol_late": "Vynechajte alkohol tesne pred spaním – narúša spánok.",
+      "no_big_meals_late": "Vyhnite sa veľkým, ťažkým jedlám tesne pred spaním; ak treba, dajte si ľahkú desiatu."
+    },
+    "environment": {
+      "keep_cool_dark": "Udržujte spálňu chladnú, tmavú a čistú – posteľ si spojte so spánkom.",
+      "test_blackout": "Skúste zatemňovacie závesy/masku na oči a tlmené večerné osvetlenie.",
+      "noise_control": "Obmedzte hluk (berušky, biely šum, stabilné pozadie), ak treba.",
+      "try_new_pillow": "Zvážte nový vankúš/matrac – vymeňte, ak sa budíte s diskomfortom.",
+      "cooler_temp": "Znížte teplotu alebo použite ľahšie prikrývky, ak sa v noci prehrievate."
+    },
+    "breathing": {
+      "side_sleep": "Skúste spať na boku (s vankúšom za chrbtom) – môže to znížiť chrápanie/apnoe u niektorých.",
+      "reduce_evening_alcohol": "Vyhnite sa alkoholu večer – môže zhoršiť chrápanie/problémy s dýchaním.",
+      "consider_gp_check": "Máte podozrenie na spánkové apnoe (hlasné chrápanie, pozorované prestávky, denná ospalosť)? Navštívte lekára."
+    }
+  }
+}

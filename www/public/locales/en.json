@@ -101,7 +101,7 @@
   "intro": "Built almost without effort in Porsgrunn, combining healthtech/sleeptech and AI.",
   "contact": {
     "title": "Contact",
-    "p1": "Responsible for www.sleep-test.org is DMZ DATA AS. Contact point for privacy inquiries and general questions: post@dmz.no.",
+    "p1": "Responsible for www.sleep-test.org is DMZ DATA AS. Contact point for privacy inquiries and general questions: kontor@dmz.no.",
     "p2": "Explore DMZ DATA wonders at <a href='https://www.dmz.no' target='_blank' rel='noopener'>www.dmz.no</a>, an app to learn Google web search (<a href='https://apps.apple.com/no/app/toiletlearn-web-search/id6748481089' target='_blank' rel='noopener'>LINK</a>), an app to learn ChatGPT (<a href='https://apps.apple.com/us/app/toiletlearn-web-search/id6748926636?platform=iphone' target='_blank' rel='noopener'>LINK</a>), and make your Homey smart home a bit more fun with DadJokes (<a href='https://homey.app/no-no/app/com.dmz.dadjokesplus/DadJokes-Plus/test/' target='_blank' rel='noopener'>LINK</a>)."
   }
 },
@@ -110,11 +110,11 @@
     "p1": "We take privacy seriously. This policy explains how we handle information when you use www.sleep-test.org. By using the site, you confirm that you have read and accepted these terms. The site is designed so that schools can use it without providing any personal information.",
     "li1": "What data we process: We do not collect names, email addresses, or other directly identifiable information. To display and remember results, only a system-generated ID is stored together with a summary of answers. We do not use marketing cookies, third-party tracking scripts, or profiling.",
     "li2": "Purpose and legal basis: The purpose is to provide the service and improve its quality. The legal basis is legitimate interest (GDPR art. 6(1)(f)) in operating a secure and functional solution without processing personal data. Technical logs may be processed for troubleshooting and security.",
-    "li3": "Storage and deletion: Technical IDs and result summaries are stored only as long as necessary for the stated purpose. If you believe content should be deleted, you can contact us at post@dmz.no.",
+    "li3": "Storage and deletion: Technical IDs and result summaries are stored only as long as necessary for the stated purpose. If you believe content should be deleted, you can contact us at kontor@dmz.no.",
     "li4": "Sharing and transfer: We do not share data with third parties. If we use subcontractors (data processors) for operations, they will be contractually obliged to protect data and not use it for their own purposes.",
     "li5": "School use and children: The service can be used in schools without providing student data. Teachers and students can read and use the site without registration. No personal data is processed beyond what is strictly necessary for technical operation.",
     "li6": "Cookies: We do not use unnecessary cookies. If we in the future introduce functional cookies (e.g., for language preference), we will update this policy and request consent where required.",
-    "li7": "Your rights and contact: If you have questions, wish to access technical information, or request deletion, contact us at post@dmz.no. You can also lodge a complaint with the Norwegian Data Protection Authority (Datatilsynet).",
+    "li7": "Your rights and contact: If you have questions, wish to access technical information, or request deletion, contact us at kontor@dmz.no. You can also lodge a complaint with the Norwegian Data Protection Authority (Datatilsynet).",
     "li8": "Changes: We may update this policy when needed. Significant changes will be published here."
   },
   "test": {

@@ -1,0 +1,248 @@
+{
+  "ui": {
+    "nav": {
+      "home": "Início",
+      "result": "Resultado",
+      "compare": "Comparar",
+      "articles": "Artigos",
+      "about": "Sobre"
+    },
+    "home": {
+      "title": "Teste de Sono Gratuito — receba seu relatório personalizado (beta)",
+      "pitch": "Responda 30 perguntas rápidas em 5–10 minutos. Sem custo, sem registro. Receba um relatório claro, baseado em ciência, com explicações e dicas práticas.",
+      "cta": "Iniciar o teste",
+      "example": "Ver exemplo de relatório",
+      "tests_count_title": "Testes de sono concluídos",
+      "tests_count_caption": "pessoas já testaram seu sono com esta ferramenta gratuita e anônima."
+    },
+    "privacy": {
+      "card": {
+        "title": "Anônimo e 100% gratuito",
+        "text": "Levamos o GDPR a sério: sem registro, sem rastreamento, sem custo — totalmente anônimo."
+      }
+    },
+    "compare": {
+      "card": {
+        "title": "Acompanhe seu progresso",
+        "text": "Refaça o teste mais tarde e compare seus resultados ao longo do tempo."
+      },
+      "help": "Você tem seu ID anterior? Insira ambos para ver o progresso — e onde.",
+      "notfound": "Não foi possível encontrar um ou ambos os IDs.",
+      "error": "Algo deu errado. Tente novamente.",
+      "explainer": "Compare dois relatórios para ver se suas ações estão funcionando. Recomendamos repetir o teste a cada 4–8 semanas para visualizar claramente a tendência ao longo do tempo.",
+      "id_a": "ID A",
+      "id_b": "ID B",
+      "label_a": "ID A",
+      "label_b": "ID B"
+    },
+    "result": {
+      "title": "Resultado",
+      "sleep_score": "Pontuação do sono",
+      "copy_id": "Copiar ID",
+      "disclaimer": "Este não é um diagnóstico médico, mas um guia geral para ajudá-lo a perceber padrões e tentar passos práticos. Hábitos de sono geralmente mudam gradualmente — experimente, seja paciente e veja o que funciona melhor para você.",
+      "how_to_improve": "Mantenha e melhore isto:",
+      "lead": {
+        "green": "Você está indo bem em ",
+        "orange": "Você tem espaço para melhorar em ",
+        "red": "Você deve mudar seus hábitos em "
+      },
+      "lookup_hint": "Quando você conclui um teste, recebe um ID. Ele é anônimo e você pode abrir seu relatório a qualquer momento. Cole seu ID para visualizar o relatório.",
+      "id_placeholder": "Seu ID"
+    },
+    "articles": {
+      "minutes": {
+        "pattern": "6 min",
+        "insomnia": "7 min",
+        "quality": "5 min",
+        "daytime": "6 min",
+        "hygiene": "6 min",
+        "environment": "5 min",
+        "breathing": "6 min",
+        "some": "7 min"
+      },
+      "card": {
+        "title": "Dicas e conhecimento sobre o sono",
+        "text": "Explore guias práticos de sono — cobrindo rotinas, insônia, higiene do sono e mais. Escrito para o público em geral, baseado em pesquisas confiáveis."
+      },
+      "index": {
+        "pattern": {
+          "title": "Padrão e duração do sono: uma rotina que funciona",
+          "teaser": "Por que horários regulares e tempo suficiente na cama facilitam tudo — além de passos simples para começar hoje à noite."
+        },
+        "insomnia": {
+          "title": "Dificuldade para adormecer ou manter o sono",
+          "teaser": "CBT-I na vida real: a regra dos 20 minutos, controle de estímulos e por que um horário fixo de despertar é importante."
+        },
+        "quality": {
+          "title": "Qualidade do sono: melhorando a sensação geral",
+          "teaser": "O que 'qualidade' realmente significa, fatores que a atrapalham e como melhorá-la de forma consistente."
+        },
+        "daytime": {
+          "title": "Dia & sonolência: mais horas de alerta",
+          "teaser": "Luz da manhã, pausas com micro-movimentos e melhor programação para menos cochilos e mais foco."
+        },
+        "hygiene": {
+          "title": "Higiene do sono e rotinas que realmente ajudam",
+          "teaser": "Noites com menos telas, corte da cafeína e um simples relaxamento — sem culpa."
+        },
+        "environment": {
+          "title": "Ambiente de sono: luz, ruído, temperatura & cama",
+          "teaser": "Ajustes de baixo custo para noites mais tranquilas — cortinas blackout, controle de som e um travesseiro que realmente funcione."
+        },
+        "breathing": {
+          "title": "Ronco & sinais respiratórios: quando verificar",
+          "teaser": "Quando o ronco é inofensivo, quando pode ser apneia do sono e o que fazer a seguir."
+        }
+      }
+    }
+  },
+  "about": {
+    "title": "Criado por DMZ DATA AS",
+    "intro": "Construído quase sem esforço em Porsgrunn, combinando healthtech/sleeptech e IA.",
+    "contact": {
+      "title": "Contato",
+      "p1": "O responsável por www.sleep-test.org é a DMZ DATA AS. Ponto de contato para questões de privacidade e dúvidas gerais: kontor@dmz.no.",
+      "p2": "Explore as maravilhas da DMZ DATA em <a href='https://www.dmz.no' target='_blank' rel='noopener'>www.dmz.no</a>, um app para aprender busca no Google (<a href='https://apps.apple.com/no/app/toiletlearn-web-search/id6748481089' target='_blank' rel='noopener'>LINK</a>), um app para aprender ChatGPT (<a href='https://apps.apple.com/us/app/toiletlearn-web-search/id6748926636?platform=iphone' target='_blank' rel='noopener'>LINK</a>), e torne sua casa inteligente Homey mais divertida com DadJokes (<a href='https://homey.app/no-no/app/com.dmz.dadjokesplus/DadJokes-Plus/test/' target='_blank' rel='noopener'>LINK</a>)."
+    }
+  },
+  "privacy": {
+    "title": "Política de Privacidade",
+    "p1": "Levamos a privacidade a sério. Esta política explica como tratamos informações quando você usa www.sleep-test.org. Ao usar o site, você confirma que leu e aceitou estes termos. O site foi projetado para que escolas possam usá-lo sem fornecer informações pessoais.",
+    "li1": "Quais dados processamos: Não coletamos nomes, e-mails ou outras informações diretamente identificáveis. Para exibir e lembrar resultados, apenas um ID gerado pelo sistema é armazenado junto com um resumo das respostas. Não usamos cookies de marketing, scripts de rastreamento de terceiros ou criação de perfis.",
+    "li2": "Finalidade e base legal: O objetivo é fornecer o serviço e melhorar sua qualidade. A base legal é interesse legítimo (GDPR art. 6(1)(f)) em operar uma solução segura e funcional sem processar dados pessoais. Logs técnicos podem ser processados para resolução de problemas e segurança.",
+    "li3": "Armazenamento e exclusão: IDs técnicos e resumos de resultados são armazenados apenas pelo tempo necessário para a finalidade declarada. Se acreditar que algum conteúdo deve ser excluído, entre em contato conosco em kontor@dmz.no.",
+    "li4": "Compartilhamento e transferência: Não compartilhamos dados com terceiros. Se usarmos subcontratados (operadores de dados) para operações, eles serão contratualmente obrigados a proteger os dados e não usá-los para seus próprios fins.",
+    "li5": "Uso em escolas e crianças: O serviço pode ser usado em escolas sem fornecer dados dos alunos. Professores e alunos podem ler e usar o site sem registro. Nenhum dado pessoal é processado além do estritamente necessário para a operação técnica.",
+    "li6": "Cookies: Não usamos cookies desnecessários. Se no futuro introduzirmos cookies funcionais (ex.: preferência de idioma), atualizaremos esta política e solicitaremos consentimento, quando necessário.",
+    "li7": "Seus direitos e contato: Se tiver dúvidas, quiser acessar informações técnicas ou solicitar exclusão, entre em contato conosco em kontor@dmz.no. Você também pode registrar uma reclamação junto à Autoridade de Proteção de Dados da Noruega (Datatilsynet).",
+    "li8": "Alterações: Podemos atualizar esta política quando necessário. Alterações significativas serão publicadas aqui."
+  },
+  "test": {
+    "title": "Teste de sono",
+    "submit": "Enviar",
+    "progress": "Progresso"
+  },
+  "common": {
+    "sending": "Enviando…",
+    "back": "Voltar",
+    "next": "Próximo",
+    "read": "Ler",
+    "error_submit": "Não foi possível enviar. Tente novamente."
+  },
+  "likert": {
+    "1": "Nunca",
+    "2": "Raramente",
+    "3": "Às vezes",
+    "4": "Frequentemente",
+    "5": "Muito frequentemente"
+  },
+  "category": {
+    "pattern": { "name": "Padrão e duração do sono", "desc": "Duração e regularidade." },
+    "insomnia": { "name": "Adormecer & noite", "desc": "Início do sono, despertares, manhã precoce." },
+    "quality": { "name": "Qualidade do sono", "desc": "Qualidade percebida e satisfação." },
+    "daytime": { "name": "Dia & sonolência", "desc": "Sonolência e funcionamento diurno." },
+    "hygiene": { "name": "Higiene do sono & rotinas", "desc": "Hábitos e horários (telas, cafeína)." },
+    "environment": { "name": "Ambiente do sono", "desc": "Luz, ruído, temperatura, cama." },
+    "breathing": { "name": "Ronco & sinais respiratórios", "desc": "Possíveis sinais de apneia do sono." },
+    "bloodpressure": { "name": "Pressão arterial – risco de estilo de vida", "desc": "Dieta, atividade, álcool, estresse e peso." }
+  },
+  "q": {
+    "pattern": {
+      "too_short": "Durmo menos do que preciso na maioria das noites.",
+      "irregular_times": "Meus horários de sono variam muito de um dia para outro.",
+      "late_long_naps": "Faço cochilos longos ou tardios que atrapalham meu sono noturno."
+    },
+    "insomnia": {
+      "long_sleep_onset": "Demoro muito para adormecer depois de me deitar.",
+      "frequent_awakenings": "Acordo várias vezes durante a noite.",
+      "early_morning_awakenings": "Acordo muito cedo e não consigo voltar a dormir.",
+      "unrefreshed_mornings": "Não me sinto descansado pela manhã.",
+      "daytime_impact": "Meus problemas de sono afetam meu funcionamento diurno (humor, foco, energia)."
+    },
+    "quality": {
+      "overall_poor": "Minha experiência geral de sono é frequentemente ruim.",
+      "dissatisfied": "Estou insatisfeito com meu sono.",
+      "restless_nights": "Minhas noites são frequentemente agitadas (pesadelos, inquietação, dor)."
+    },
+    "daytime": {
+      "doze_easily": "Adormeço facilmente em situações calmas (TV, leitura, passageiro).",
+      "struggle_stay_awake": "Tenho dificuldade em me manter acordado quando preciso me concentrar.",
+      "tired_most_day": "Luto contra o cansaço durante grande parte do dia."
+    },
+    "hygiene": {
+      "screens_before_bed": "Uso telas imediatamente antes de dormir.",
+      "late_caffeine": "Bebo café/bebidas energéticas tarde do dia.",
+      "alcohol_near_bed": "Bebo álcool perto da hora de dormir.",
+      "big_meal_late": "Faço refeições grandes tarde da noite.",
+      "hard_exercise_late": "Faço exercícios intensos logo antes de dormir."
+    },
+    "environment": {
+      "too_light_noise_temp": "O quarto é frequentemente muito claro, barulhento ou com temperatura inadequada.",
+      "uncomfortable_bed": "A cama ou travesseiro é desconfortável.",
+      "bad_associations": "Trabalho/assisto TV na cama e crio associações ruins com o sono."
+    },
+    "breathing": {
+      "loud_snoring": "Eu ronco alto.",
+      "observed_apneas": "Outras pessoas observaram pausas na minha respiração durante o sono.",
+      "daytime_tired_despite": "Fico muito sonolento durante o dia, mesmo após uma noite normal."
+    },
+    "bloodpressure": {
+      "diet_salty": "Frequentemente como alimentos ricos em sal (ex.: comidas prontas, salgadinhos, molhos salgados).",
+      "activity_low": "Não sou muito ativo fisicamente no dia a dia.",
+      "alcohol_often": "Bebo álcool mais frequentemente ou em maiores quantidades do que o recomendado.",
+      "stress_high": "Experimento muito estresse no dia a dia.",
+      "overweight_self": "Considero-me acima do peso."
+    }
+  },
+  "flags": {
+    "osa_signal": "Possíveis sinais de apneia do sono – considere conversar com seu médico.",
+    "excessive_sleepiness": "Sonolência diurna acentuada – tenha cuidado extra.",
+    "high_bp_risk": "Vários fatores de estilo de vida indicam risco aumentado de pressão alta. Considere medir sua pressão arterial quando possível, especialmente se tiver diabetes tipo 2 ou parentes próximos com doenças cardiovasculares."
+  },
+  "tips": {
+    "pattern": {
+      "keep_routine": "Mantenha uma rotina de sono estável – horários semelhantes para dormir e acordar na maioria dos dias.",
+      "short_naps": "Se precisar cochilar, mantenha curto (20–30 min) e mais cedo no dia.",
+      "consistent_bed_wake": "Tente manter horários consistentes de dormir e acordar (±30–60 min).",
+      "plan_winddown": "Crie uma rotina simples de relaxamento 30–60 min antes de dormir (luzes baixas, atividades leves).",
+      "protect_7h": "Proteja uma janela de sono de pelo menos 7 horas na maioria das noites.",
+      "cut_late_naps": "Evite cochilos longos ou tardios após ~15–16h – eles podem atrasar o sono noturno."
+    },
+    "insomnia": {
+      "maintain": "Mantenha o que já funciona – pequenos hábitos consistentes se acumulam.",
+      "rule_20min": "Se estiver acordado por ~20 min na cama: levante-se, faça algo calmo em luz baixa e tente novamente.",
+      "fixed_wake": "Mantenha um horário fixo de despertar sempre – isso treina seu relógio biológico.",
+      "stimulus_control": "Reserve a cama apenas para sono e intimidade – não para TV, celular ou trabalho.",
+      "consider_cbti": "Se os problemas persistirem: considere TCC-I (terapia cognitivo-comportamental para insônia)."
+    },
+    "quality": {
+      "track_triggers": "Acompanhe possíveis gatilhos (cafeína, horário de exercícios, estresse) para identificar padrões.",
+      "address_disruptors": "Reduza fatores que atrapalham (ruído, luz, desconforto, uso tardio de telas).",
+      "consult_if_pain": "Dor persistente, inquietação ou pesadelos? Consulte um profissional de saúde."
+    },
+    "daytime": {
+      "morning_light": "Pegue luz da manhã (10–30 min) para aumentar a vigília e ancorar seu ritmo circadiano.",
+      "activity_breaks": "Faça pausas curtas de movimento ao longo do dia; agende atividades leves no início da noite.",
+      "consider_medical": "Sonolência diurna acentuada? Considere uma avaliação médica (ex.: apneia do sono ou outras causas)."
+    },
+    "hygiene": {
+      "keep_it_up": "Mantenha os hábitos que já apoiam seu sono.",
+      "screens_off_60": "Evite ou reduza telas nos 60 minutos antes de dormir.",
+      "limit_caffeine": "Evite cafeína após ~14–16h (6–8h antes de dormir).",
+      "no_alcohol_late": "Evite álcool perto da hora de dormir – ele fragmenta o sono.",
+      "no_big_meals_late": "Evite refeições pesadas logo antes de dormir; escolha um lanche leve se necessário."
+    },
+    "environment": {
+      "keep_cool_dark": "Mantenha o quarto fresco, escuro e organizado – faça da cama um sinal de sono.",
+      "test_blackout": "Experimente cortinas blackout/ máscara de olhos e iluminação suave à noite.",
+      "noise_control": "Controle o ruído (tampões de ouvido, ruído branco, som de fundo) se necessário.",
+      "try_new_pillow": "Avalie travesseiro/colchão – troque se acordar desconfortável.",
+      "cooler_temp": "Reduza a temperatura ou use roupas de cama mais leves se sentir calor à noite."
+    },
+    "breathing": {
+      "side_sleep": "Tente dormir de lado (use um travesseiro atrás das costas) – pode reduzir ronco/apneias em alguns casos.",
+      "reduce_evening_alcohol": "Evite álcool à noite – pode piorar ronco/problemas respiratórios.",
+      "consider_gp_check": "Suspeita de apneia do sono (ronco alto, pausas observadas, sonolência diurna)? Procure um médico."
+    }
+  }
+}

@@ -1,0 +1,248 @@
+{
+  "ui": {
+    "nav": {
+      "home": "Startseite",
+      "result": "Ergebnis",
+      "compare": "Vergleichen",
+      "articles": "Artikel",
+      "about": "Über uns"
+    },
+    "home": {
+      "title": "Kostenloser Schlaftest — erhalten Sie Ihren persönlichen Bericht (Beta)",
+      "pitch": "Beantworten Sie 30 kurze Fragen in 5–10 Minuten. Keine Kosten, keine Registrierung. Erhalten Sie einen klaren, wissenschaftlich fundierten Bericht mit Erklärungen und praktischen Tipps.",
+      "cta": "Test starten",
+      "example": "Beispielbericht anzeigen",
+      "tests_count_title": "Abgeschlossene Schlaftests",
+      "tests_count_caption": "Menschen haben bereits ihren Schlaf mit diesem kostenlosen, anonymen Tool getestet."
+    },
+    "privacy": {
+      "card": {
+        "title": "Anonym und 100 % kostenlos",
+        "text": "Wir nehmen die DSGVO persönlich: keine Registrierung, kein Logging, keine Kosten — alles anonym."
+      }
+    },
+    "compare": {
+      "card": {
+        "title": "Verfolgen Sie Ihren Fortschritt",
+        "text": "Machen Sie den Test später erneut und vergleichen Sie Ihre Ergebnisse im Laufe der Zeit."
+      },
+      "help": "Haben Sie Ihre vorherige ID? Geben Sie beide ein, um den Fortschritt zu sehen — und wo.",
+      "notfound": "Konnte eine oder beide IDs nicht finden.",
+      "error": "Etwas ist schiefgelaufen. Bitte versuchen Sie es erneut.",
+      "explainer": "Vergleichen Sie zwei Berichte, um zu sehen, ob Ihre Maßnahmen wirken. Wir empfehlen, alle 4–8 Wochen erneut zu testen, damit Sie den Trend im Laufe der Zeit klar erkennen können.",
+      "id_a": "ID A",
+      "id_b": "ID B",
+      "label_a": "ID A",
+      "label_b": "ID B"
+    },
+    "result": {
+      "title": "Ergebnis",
+      "sleep_score": "Schlafscore",
+      "copy_id": "ID kopieren",
+      "disclaimer": "Dies ist keine medizinische Bewertung, sondern ein allgemeiner Leitfaden, der Ihnen hilft, Muster zu erkennen und praktische Schritte auszuprobieren. Schlafgewohnheiten ändern sich oft schrittweise — experimentieren Sie, haben Sie Geduld und finden Sie heraus, was für Sie am besten funktioniert.",
+      "how_to_improve": "Behalten und verbessern Sie dies:",
+      "lead": {
+        "green": "Sie machen es gut bei ",
+        "orange": "Sie haben Verbesserungsmöglichkeiten bei ",
+        "red": "Sie sollten Ihre Gewohnheiten ändern bei "
+      },
+      "lookup_hint": "Wenn Sie einen Test abschließen, erhalten Sie eine ID. Sie ist anonym, und Sie können Ihren Bericht jederzeit öffnen. Fügen Sie Ihre ID ein, um den Bericht anzuzeigen.",
+      "id_placeholder": "Ihre ID"
+    },
+    "articles": {
+      "minutes": {
+        "pattern": "6 Min",
+        "insomnia": "7 Min",
+        "quality": "5 Min",
+        "daytime": "6 Min",
+        "hygiene": "6 Min",
+        "environment": "5 Min",
+        "breathing": "6 Min",
+        "some": "7 Min"
+      },
+      "card": {
+        "title": "Schlaftipps & Wissen",
+        "text": "Entdecken Sie praktische Schlafleitfäden — zu Routinen, Schlaflosigkeit, Schlafhygiene und mehr. Geschrieben für die Allgemeinheit, basierend auf glaubwürdiger Forschung."
+      },
+      "index": {
+        "pattern": {
+          "title": "Schlafmuster & Dauer: eine Routine, die funktioniert",
+          "teaser": "Warum regelmäßige Zeiten und genügend Zeit im Bett alles erleichtern — plus einfache Schritte, die Sie noch heute beginnen können."
+        },
+        "insomnia": {
+          "title": "Schwierigkeiten beim Einschlafen oder Durchschlafen",
+          "teaser": "CBT-I im Alltag: die 20-Minuten-Regel, Reizkontrolle und warum eine feste Aufwachzeit wichtig ist."
+        },
+        "quality": {
+          "title": "Schlafqualität: das allgemeine Gefühl verbessern",
+          "teaser": "Was „Qualität“ wirklich bedeutet, häufige Störfaktoren und wie man sie stetig verbessert."
+        },
+        "daytime": {
+          "title": "Tag & Schläfrigkeit: mehr wache Stunden",
+          "teaser": "Morgenlicht, kurze Bewegungsunterbrechungen und besseres Timing für weniger Dösen und mehr Fokus."
+        },
+        "hygiene": {
+          "title": "Schlafhygiene und Routinen, die wirklich helfen",
+          "teaser": "Abend ohne Bildschirmlicht, Koffein-Stopp und einfache Entspannung — ohne Schuldgefühle."
+        },
+        "environment": {
+          "title": "Schlafumgebung: Licht, Lärm, Temperatur & Bett",
+          "teaser": "Kostengünstige Anpassungen für ruhigere Nächte — Verdunkelung, Geräuschkontrolle und ein wirklich passendes Kissen."
+        },
+        "breathing": {
+          "title": "Schnarchen & Atmungssignale: wann man es überprüfen sollte",
+          "teaser": "Wann Schnarchen harmlos ist, wann es Schlafapnoe sein könnte und was als Nächstes zu tun ist."
+        }
+      }
+    }
+  },
+  "about": {
+    "title": "Erstellt von DMZ DATA AS",
+    "intro": "Fast mühelos in Porsgrunn erstellt, kombiniert Healthtech/Sleeptech und KI.",
+    "contact": {
+      "title": "Kontakt",
+      "p1": "Verantwortlich für www.sleep-test.org ist DMZ DATA AS. Kontaktstelle für Datenschutzanfragen und allgemeine Fragen: kontor@dmz.no.",
+      "p2": "Entdecken Sie die Projekte von DMZ DATA auf <a href='https://www.dmz.no' target='_blank' rel='noopener'>www.dmz.no</a>, eine App zum Lernen der Google-Websuche (<a href='https://apps.apple.com/no/app/toiletlearn-web-search/id6748481089' target='_blank' rel='noopener'>LINK</a>), eine App zum Lernen von ChatGPT (<a href='https://apps.apple.com/us/app/toiletlearn-web-search/id6748926636?platform=iphone' target='_blank' rel='noopener'>LINK</a>) und machen Sie Ihr Homey Smart Home mit DadJokes ein wenig unterhaltsamer (<a href='https://homey.app/no-no/app/com.dmz.dadjokesplus/DadJokes-Plus/test/' target='_blank' rel='noopener'>LINK</a>)."
+    }
+  },
+  "privacy": {
+    "title": "Datenschutzrichtlinie",
+    "p1": "Wir nehmen Datenschutz ernst. Diese Richtlinie erklärt, wie wir mit Informationen umgehen, wenn Sie www.sleep-test.org nutzen. Durch die Nutzung der Seite bestätigen Sie, dass Sie diese Bedingungen gelesen und akzeptiert haben. Die Seite ist so gestaltet, dass Schulen sie nutzen können, ohne persönliche Daten anzugeben.",
+    "li1": "Welche Daten wir verarbeiten: Wir erfassen keine Namen, E-Mail-Adressen oder andere direkt identifizierbare Informationen. Um Ergebnisse anzuzeigen und zu speichern, wird nur eine systemgenerierte ID zusammen mit einer Zusammenfassung der Antworten gespeichert. Wir verwenden keine Marketing-Cookies, keine Tracking-Skripte von Drittanbietern und kein Profiling.",
+    "li2": "Zweck und Rechtsgrundlage: Der Zweck besteht darin, den Service bereitzustellen und seine Qualität zu verbessern. Die Rechtsgrundlage ist das berechtigte Interesse (DSGVO Art. 6(1)(f)) an einem sicheren und funktionalen Betrieb ohne Verarbeitung personenbezogener Daten. Technische Protokolle können zur Fehlerbehebung und Sicherheit verarbeitet werden.",
+    "li3": "Speicherung und Löschung: Technische IDs und Ergebniszusammenfassungen werden nur so lange gespeichert, wie es für den angegebenen Zweck erforderlich ist. Wenn Sie glauben, dass Inhalte gelöscht werden sollten, können Sie uns unter kontor@dmz.no kontaktieren.",
+    "li4": "Weitergabe und Übertragung: Wir geben keine Daten an Dritte weiter. Wenn wir Subunternehmer (Datenverarbeiter) für den Betrieb einsetzen, sind sie vertraglich verpflichtet, Daten zu schützen und nicht für eigene Zwecke zu verwenden.",
+    "li5": "Schulnutzung und Kinder: Der Dienst kann in Schulen genutzt werden, ohne dass Schülerdaten angegeben werden müssen. Lehrer und Schüler können die Seite ohne Registrierung lesen und nutzen. Es werden keine personenbezogenen Daten verarbeitet, die über das technisch notwendige Maß hinausgehen.",
+    "li6": "Cookies: Wir verwenden keine unnötigen Cookies. Falls wir in Zukunft funktionale Cookies einführen (z. B. für Spracheinstellungen), werden wir diese Richtlinie aktualisieren und ggf. eine Zustimmung einholen.",
+    "li7": "Ihre Rechte und Kontakt: Wenn Sie Fragen haben, technische Informationen einsehen oder die Löschung beantragen möchten, kontaktieren Sie uns unter kontor@dmz.no. Sie können auch eine Beschwerde bei der norwegischen Datenschutzbehörde (Datatilsynet) einreichen.",
+    "li8": "Änderungen: Wir können diese Richtlinie bei Bedarf aktualisieren. Wesentliche Änderungen werden hier veröffentlicht."
+  },
+  "test": {
+    "title": "Schlaftest",
+    "submit": "Absenden",
+    "progress": "Fortschritt"
+  },
+  "common": {
+    "sending": "Senden…",
+    "back": "Zurück",
+    "next": "Weiter",
+    "read": "Lesen",
+    "error_submit": "Konnte nicht gesendet werden. Bitte versuchen Sie es erneut."
+  },
+  "likert": {
+    "1": "Nie",
+    "2": "Selten",
+    "3": "Manchmal",
+    "4": "Oft",
+    "5": "Sehr oft"
+  },
+  "category": {
+    "pattern": { "name": "Schlafmuster & Dauer", "desc": "Länge und Regelmäßigkeit." },
+    "insomnia": { "name": "Einschlafen & Nacht", "desc": "Schlafbeginn, Aufwachen, früher Morgen." },
+    "quality": { "name": "Schlafqualität", "desc": "Wahrgenommene Qualität und Zufriedenheit." },
+    "daytime": { "name": "Tag & Schläfrigkeit", "desc": "Schläfrigkeit und Tagesfunktion." },
+    "hygiene": { "name": "Schlafhygiene & Routinen", "desc": "Gewohnheiten und Timing (Bildschirme, Koffein)." },
+    "environment": { "name": "Schlafumgebung", "desc": "Licht, Lärm, Temperatur, Bett." },
+    "breathing": { "name": "Schnarchen & Atmungssignale", "desc": "Mögliche Anzeichen für Schlafapnoe." },
+    "bloodpressure": { "name": "Blutdruck – Lebensstilrisiko", "desc": "Ernährung, Aktivität, Alkohol, Stress und Gewicht." }
+  },
+  "q": {
+    "pattern": {
+      "too_short": "Ich schlafe die meisten Nächte weniger, als ich brauche.",
+      "irregular_times": "Meine Schlafenszeiten variieren stark von Tag zu Tag.",
+      "late_long_naps": "Ich mache lange oder späte Nickerchen, die den Nachtschlaf stören."
+    },
+    "insomnia": {
+      "long_sleep_onset": "Es dauert lange, bis ich nach dem Zubettgehen einschlafe.",
+      "frequent_awakenings": "Ich wache mehrmals in der Nacht auf.",
+      "early_morning_awakenings": "Ich wache zu früh auf und kann nicht wieder einschlafen.",
+      "unrefreshed_mornings": "Ich fühle mich morgens nicht erholt.",
+      "daytime_impact": "Meine Schlafprobleme beeinträchtigen meine Tagesfunktion (Stimmung, Konzentration, Energie)."
+    },
+    "quality": {
+      "overall_poor": "Meine Gesamterfahrung mit Schlaf ist oft schlecht.",
+      "dissatisfied": "Ich bin mit meinem Schlaf unzufrieden.",
+      "restless_nights": "Meine Nächte sind oft unruhig (Albträume, Unruhe, Schmerzen)."
+    },
+    "daytime": {
+      "doze_easily": "Ich döse in ruhigen Situationen leicht ein (TV, Lesen, Beifahrer).",
+      "struggle_stay_awake": "Ich habe Mühe, wach zu bleiben, wenn ich mich konzentrieren muss.",
+      "tired_most_day": "Ich kämpfe große Teile des Tages mit Müdigkeit."
+    },
+    "hygiene": {
+      "screens_before_bed": "Ich benutze Bildschirme direkt vor dem Schlafengehen.",
+      "late_caffeine": "Ich trinke spät am Tag Kaffee/Energy-Drinks.",
+      "alcohol_near_bed": "Ich trinke Alkohol kurz vor dem Schlafengehen.",
+      "big_meal_late": "Ich esse große Mahlzeiten spät am Abend.",
+      "hard_exercise_late": "Ich mache intensive Übungen direkt vor dem Schlafengehen."
+    },
+    "environment": {
+      "too_light_noise_temp": "Das Schlafzimmer ist oft zu hell, zu laut oder hat die falsche Temperatur.",
+      "uncomfortable_bed": "Das Bett oder Kissen ist unbequem.",
+      "bad_associations": "Ich arbeite/schaue TV im Bett und habe dadurch schlechte Schlafassoziationen."
+    },
+    "breathing": {
+      "loud_snoring": "Ich schnarche laut.",
+      "observed_apneas": "Andere haben Atempausen bei mir im Schlaf bemerkt.",
+      "daytime_tired_despite": "Ich bin tagsüber sehr müde, auch nach einer normalen Nacht."
+    },
+    "bloodpressure": {
+      "diet_salty": "Ich esse oft salzreiche Lebensmittel (z. B. Fertiggerichte, Snacks, salzige Aufstriche).",
+      "activity_low": "Ich bin im Alltag nicht sehr körperlich aktiv.",
+      "alcohol_often": "Ich trinke häufiger oder in größeren Mengen Alkohol als empfohlen.",
+      "stress_high": "Ich habe viel Stress im Alltag.",
+      "overweight_self": "Ich halte mich für übergewichtig."
+    }
+  },
+  "flags": {
+    "osa_signal": "Mögliche Anzeichen für Schlafapnoe – sprechen Sie mit Ihrem Arzt.",
+    "excessive_sleepiness": "Deutliche Tagesschläfrigkeit – seien Sie besonders vorsichtig.",
+    "high_bp_risk": "Mehrere Lebensstilfaktoren deuten auf ein erhöhtes Risiko für Bluthochdruck hin. Erwägen Sie, Ihren Blutdruck zu messen, besonders wenn Sie Typ-2-Diabetes haben oder nahe Verwandte mit Herz-Kreislauf-Erkrankungen."
+  },
+  "tips": {
+    "pattern": {
+      "keep_routine": "Behalten Sie eine stabile Schlafroutine bei – ähnliche Schlaf- und Aufwachzeiten an den meisten Tagen.",
+      "short_naps": "Wenn Sie ein Nickerchen machen, halten Sie es kurz (20–30 Min.) und früher am Tag.",
+      "consistent_bed_wake": "Zielen Sie auf konsistente Schlaf- und Aufwachzeiten (±30–60 Min.).",
+      "plan_winddown": "Erstellen Sie eine einfache Entspannungsroutine 30–60 Min. vor dem Schlafengehen (gedämpftes Licht, ruhige Aktivitäten).",
+      "protect_7h": "Schützen Sie ein Schlafzeitfenster von mindestens 7 Stunden an den meisten Nächten.",
+      "cut_late_naps": "Vermeiden Sie lange oder späte Nickerchen nach ca. 15–16 Uhr – sie können den Nachtschlaf verzögern."
+    },
+    "insomnia": {
+      "maintain": "Behalten Sie bei, was bereits funktioniert – kleine, stetige Gewohnheiten summieren sich.",
+      "rule_20min": "Wenn Sie ca. 20 Min. wach im Bett liegen: stehen Sie auf, machen Sie etwas Ruhiges bei schwachem Licht und versuchen Sie es erneut.",
+      "fixed_wake": "Halten Sie eine feste Aufwachzeit ein – das trainiert Ihre innere Uhr.",
+      "stimulus_control": "Reservieren Sie das Bett nur für Schlaf und Intimität – nicht für TV, Telefon oder Arbeit.",
+      "consider_cbti": "Wenn die Probleme bestehen bleiben: erwägen Sie CBT-I (kognitive Verhaltenstherapie bei Insomnie)."
+    },
+    "quality": {
+      "track_triggers": "Verfolgen Sie mögliche Auslöser (Koffein, Trainingszeit, Stress), um Muster zu erkennen.",
+      "address_disruptors": "Reduzieren Sie häufige Störungen (Lärm, Licht, Unbehagen, späte Bildschirmzeit).",
+      "consult_if_pain": "Anhaltende Schmerzen, Unruhe oder Albträume? Konsultieren Sie einen Arzt."
+    },
+    "daytime": {
+      "morning_light": "Bekommen Sie Morgenlicht (10–30 Min.), um Wachheit zu fördern und Ihren Biorhythmus zu stabilisieren.",
+      "activity_breaks": "Machen Sie kurze Bewegungspausen über den Tag; planen Sie leichte Aktivität früher am Abend.",
+      "consider_medical": "Deutliche Tagesschläfrigkeit? Ziehen Sie eine ärztliche Untersuchung in Betracht (z. B. Schlafapnoe oder andere Ursachen)."
+    },
+    "hygiene": {
+      "keep_it_up": "Behalten Sie die schlaffördernden Gewohnheiten bei, die Ihnen bereits helfen.",
+      "screens_off_60": "Vermeiden Sie Bildschirme in den letzten 60 Min. vor dem Schlafengehen.",
+      "limit_caffeine": "Vermeiden Sie Koffein nach ca. 14–16 Uhr (6–8 Stunden vor dem Schlafengehen).",
+      "no_alcohol_late": "Verzichten Sie auf Alkohol kurz vor dem Schlafengehen – er fragmentiert den Schlaf.",
+      "no_big_meals_late": "Vermeiden Sie große, schwere Mahlzeiten direkt vor dem Schlafengehen; wählen Sie ggf. einen leichten Snack."
+    },
+    "environment": {
+      "keep_cool_dark": "Halten Sie das Schlafzimmer kühl, dunkel und aufgeräumt – machen Sie das Bett zu einem Schlafsignal.",
+      "test_blackout": "Probieren Sie Verdunkelungsvorhänge/Augenmaske und gedämpftes Licht am Abend.",
+      "noise_control": "Reduzieren Sie Lärm (Ohrstöpsel, Weißes Rauschen, gleichmäßige Hintergrundgeräusche), falls nötig.",
+      "try_new_pillow": "Bewerten Sie Kissen/Matratze – ersetzen Sie diese, wenn Sie mit Beschwerden aufwachen.",
+      "cooler_temp": "Senken Sie die Temperatur oder verwenden Sie leichtere Bettwäsche, wenn Sie nachts überhitzen."
+    },
+    "breathing": {
+      "side_sleep": "Versuchen Sie, auf der Seite zu schlafen (verwenden Sie ein Kissen hinter dem Rücken) – kann bei manchen Schnarchen/Apnoen reduzieren.",
+      "reduce_evening_alcohol": "Vermeiden Sie Alkohol am Abend – er kann Schnarchen/Atmungsprobleme verschlimmern.",
+      "consider_gp_check": "Vermutung auf Schlafapnoe (lautes Schnarchen, beobachtete Pausen, Tagesschläfrigkeit)? Sprechen Sie mit Ihrem Arzt."
+    }
+  }
+}

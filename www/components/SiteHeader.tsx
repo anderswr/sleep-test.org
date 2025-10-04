@@ -9,8 +9,19 @@ import { t } from "@/lib/i18n";
 import * as React from "react";
 
 const LANGS = [
-  { code: "nb", label: "Norsk",  flag: "🇳🇴" },
-  { code: "en", label: "English", flag: "🇺🇸" },
+  { code: "en", label: "English", flag: "🇺🇸" },        // Engelsk alltid øverst
+  { code: "ar", label: "العربية", flag: "🇸🇦" },        // Arabisk
+  { code: "de", label: "Deutsch", flag: "🇩🇪" },        // Tysk
+  { code: "es", label: "Español", flag: "🇪🇸" },        // Spansk
+  { code: "fr", label: "Français", flag: "🇫🇷" },       // Fransk
+  { code: "hi", label: "हिन्दी", flag: "🇮🇳" },         // Hindi
+  { code: "ja", label: "日本語", flag: "🇯🇵" },          // Japansk
+  { code: "ko", label: "한국어", flag: "🇰🇷" },          // Koreansk
+  { code: "nb", label: "Norsk", flag: "🇳🇴" },          // Norsk (bokmål)
+  { code: "pt-BR", label: "Português (Brasil)", flag: "🇧🇷" }, // Portugisisk (Brasil)
+  { code: "ru", label: "Русский", flag: "🇷🇺" },        // Russisk
+  { code: "sk", label: "Slovenčina", flag: "🇸🇰" },     // Slovakisk
+  { code: "zh", label: "简体中文", flag: "🇨🇳" }         // Kinesisk (forenklet)
 ] as const;
 
 type Theme = "light" | "dark";
