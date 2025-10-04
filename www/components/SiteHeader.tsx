@@ -9,19 +9,19 @@ import { t } from "@/lib/i18n";
 import * as React from "react";
 
 const LANGS = [
-  { code: "en", label: "English", flag: "🇺🇸" },        // Engelsk alltid øverst
-  { code: "ar", label: "العربية", flag: "🇸🇦" },        // Arabisk
-  { code: "de", label: "Deutsch", flag: "🇩🇪" },        // Tysk
-  { code: "es", label: "Español", flag: "🇪🇸" },        // Spansk
-  { code: "fr", label: "Français", flag: "🇫🇷" },       // Fransk
-  { code: "hi", label: "हिन्दी", flag: "🇮🇳" },         // Hindi
-  { code: "ja", label: "日本語", flag: "🇯🇵" },          // Japansk
-  { code: "ko", label: "한국어", flag: "🇰🇷" },          // Koreansk
-  { code: "nb", label: "Norsk", flag: "🇳🇴" },          // Norsk (bokmål)
-  { code: "pt-BR", label: "Português (Brasil)", flag: "🇧🇷" }, // Portugisisk (Brasil)
-  { code: "ru", label: "Русский", flag: "🇷🇺" },        // Russisk
-  { code: "sk", label: "Slovenčina", flag: "🇸🇰" },     // Slovakisk
-  { code: "zh", label: "简体中文", flag: "🇨🇳" }         // Kinesisk (forenklet)
+  { code: "en", label: "English", flag: "🇺🇸" }, // alltid øverst
+  { code: "ar", label: "العربية", flag: "🇸🇦" },
+  { code: "de", label: "Deutsch", flag: "🇩🇪" },
+  { code: "es", label: "Español", flag: "🇪🇸" },
+  { code: "fr", label: "Français", flag: "🇫🇷" },
+  { code: "hi", label: "हिन्दी", flag: "🇮🇳" },
+  { code: "ja", label: "日本語", flag: "🇯🇵" },
+  { code: "ko", label: "한국어", flag: "🇰🇷" },
+  { code: "nb", label: "Norsk", flag: "🇳🇴" },
+  { code: "pt-BR", label: "Português (BR)", flag: "🇧🇷" },
+  { code: "ru", label: "Русский", flag: "🇷🇺" },
+  { code: "sk", label: "Slovenčina", flag: "🇸🇰" },
+  { code: "zh", label: "中文", flag: "🇨🇳" },
 ] as const;
 
 type Theme = "light" | "dark";
@@ -55,6 +55,12 @@ export default function SiteHeader() {
   );
   const langRef = React.useRef<HTMLDivElement>(null);
 
+  // Prefix helper: alltid språk i URL
+  const pref = React.useCallback((p: string) => {
+    const clean = p.startsWith("/") ? p : `/${p}`;
+    return `/${lang}${clean === "/" ? "" : clean}`;
+  }, [lang]);
+
   React.useEffect(() => {
     const current = getCurrentTheme();
     setThemeState(current);
@@ -79,14 +85,22 @@ export default function SiteHeader() {
 
   const current = LANGS.find((l) => l.code === lang) ?? LANGS[0];
 
-  const NavItem = ({ href, k }: { href: string; k: string }) => (
-    <Link
-      href={href}
-      className={pathname === href || pathname.startsWith(href + "/") ? "active" : ""}
-    >
-      {t(dict, k)}
-    </Link>
-  );
+  const isActive = (href: string) => {
+    // aktive når path matcher eksakt eller ligger under (med trailing /)
+    return pathname === href || pathname.startsWith(href + "/");
+  };
+
+  const NavItem = ({ href, k }: { href: string; k: string }) => {
+    const url = pref(href);
+    return (
+      <Link
+        href={url}
+        className={isActive(url) ? "active" : ""}
+      >
+        {t(dict, k)}
+      </Link>
+    );
+  };
 
   function toggleTheme() {
     const next: Theme = theme === "dark" ? "light" : "dark";
@@ -99,7 +113,7 @@ export default function SiteHeader() {
       {/* Left: logo + nav */}
       <div className="row" style={{ gap: 24 }}>
         <Link
-          href="/"
+          href={pref("/")}
           className="row"
           style={{ gap: 8, alignItems: "center" }}
           aria-label={t(dict, "ui.home.title", "Sleep Test")}
@@ -177,7 +191,6 @@ export default function SiteHeader() {
       <style jsx>{`
         .lang-wrap { position: relative; }
 
-        /* ✅ Fix: sørg for riktig tekstfarge i begge tema */
         .lang-btn {
           display: inline-flex;
           align-items: center;
@@ -188,9 +201,9 @@ export default function SiteHeader() {
           background: var(--card);
           box-shadow: var(--shadow);
           font: inherit;
-          color: var(--text);           /* <- ny */
+          color: var(--text);
         }
-        .lang-btn .lang-label { color: var(--text); }  /* <- ny, ekstra sikkerhet */
+        .lang-btn .lang-label { color: var(--text); }
         .lang-btn .caret { color: var(--muted); }
 
         .flag { font-size: 1rem; line-height: 1; }
@@ -200,7 +213,7 @@ export default function SiteHeader() {
           position: absolute;
           right: 0;
           top: calc(100% + 6px);
-          min-width: 160px;
+          min-width: 180px;
           background: var(--card);
           border: 1px solid var(--border);
           border-radius: 12px;
@@ -220,13 +233,13 @@ export default function SiteHeader() {
           background: transparent;
           text-align: left;
           cursor: pointer;
-          color: var(--text);           /* <- sikrer kontrast i begge tema */
+          color: var(--text);
         }
         .lang-item:hover { background: var(--primary-weak); }
         .lang-item.active {
           background: var(--primary-weak);
           outline: 1px solid var(--primary);
-          color: var(--text);          /* <- behold kontrast når valgt */
+          color: var(--text);
         }
 
         /* Theme toggle */
