@@ -8,28 +8,28 @@
       "about": "À propos"
     },
     "home": {
-      "title": "Test du sommeil gratuit — obtenez votre rapport personnalisé (bêta)",
-      "pitch": "Répondez à 30 questions rapides en 5–10 minutes. Pas de coût, pas d’inscription. Recevez un rapport clair, basé sur la science, avec des explications et des conseils pratiques.",
+      "title": "Test de sommeil gratuit — obtenez votre rapport personnalisé (bêta)",
+      "pitch": "Répondez à 30 questions rapides en 5 à 10 minutes. Sans coût, sans inscription. Obtenez un rapport clair, basé sur la science, avec des explications et des conseils pratiques.",
       "cta": "Commencer le test",
       "example": "Voir un exemple de rapport",
-      "tests_count_title": "Tests du sommeil terminés",
+      "tests_count_title": "Tests de sommeil complétés",
       "tests_count_caption": "personnes ont déjà testé leur sommeil avec cet outil gratuit et anonyme."
     },
     "privacy": {
       "card": {
         "title": "Anonyme et 100% gratuit",
-        "text": "Nous prenons le RGPD au sérieux : pas d’inscription, pas de journalisation, pas de coût — tout est anonyme."
+        "text": "Nous prenons le RGPD personnellement : pas d'inscription, pas de suivi, pas de coût — tout est anonyme."
       }
     },
     "compare": {
       "card": {
         "title": "Suivez vos progrès",
-        "text": "Refaites le test plus tard et comparez vos résultats dans le temps."
+        "text": "Refaites le test plus tard et comparez vos résultats au fil du temps."
       },
-      "help": "Vous avez votre ID précédent ? Entrez les deux pour voir la progression — et où.",
+      "help": "Avez-vous votre ID précédent ? Entrez les deux pour voir les progrès — et où.",
       "notfound": "Impossible de trouver un ou les deux IDs.",
       "error": "Une erreur est survenue. Veuillez réessayer.",
-      "explainer": "Comparez deux rapports pour voir si vos actions fonctionnent. Nous recommandons de refaire le test tous les 4 à 8 semaines afin de suivre clairement la tendance au fil du temps.",
+      "explainer": "Comparez deux rapports pour voir si vos actions fonctionnent. Nous recommandons de refaire le test tous les 4–8 semaines pour voir clairement la tendance au fil du temps.",
       "id_a": "ID A",
       "id_b": "ID B",
       "label_a": "ID A",
@@ -38,13 +38,13 @@
     "result": {
       "title": "Résultat",
       "sleep_score": "Score de sommeil",
-      "copy_id": "Copier l’ID",
-      "disclaimer": "Ce n’est pas une évaluation médicale, mais un guide général pour vous aider à remarquer des schémas et à essayer des étapes pratiques. Les habitudes de sommeil changent souvent progressivement — expérimentez, soyez patient et découvrez ce qui fonctionne le mieux pour vous.",
+      "copy_id": "Copier l'ID",
+      "disclaimer": "Ceci n'est pas une évaluation médicale, mais un guide général pour vous aider à remarquer des tendances et essayer des étapes pratiques. Les habitudes de sommeil changent souvent progressivement — expérimentez, soyez patient et découvrez ce qui fonctionne le mieux pour vous.",
       "how_to_improve": "Conservez et améliorez ceci :",
       "lead": {
-        "green": "Vous vous en sortez bien dans ",
-        "orange": "Vous avez une marge de progression dans ",
-        "red": "Vous devriez changer vos habitudes dans "
+        "green": "Vous vous en sortez bien pour ",
+        "orange": "Vous avez une marge d'amélioration pour ",
+        "red": "Vous devriez changer vos habitudes pour "
       },
       "lookup_hint": "Lorsque vous terminez un test, vous recevez un ID. Il est anonyme et vous pouvez ouvrir votre rapport à tout moment. Collez votre ID pour voir le rapport.",
       "id_placeholder": "Votre ID"
@@ -61,8 +61,38 @@
         "some": "7 min"
       },
       "card": {
-        "title": "Conseils et connaissances sur le sommeil",
+        "title": "Conseils & connaissances sur le sommeil",
         "text": "Découvrez des guides pratiques sur le sommeil — couvrant routines, insomnie, hygiène du sommeil et plus encore. Rédigés pour le grand public, basés sur des recherches fiables."
+      },
+      "index": {
+        "pattern": {
+          "title": "Schéma et durée du sommeil : une routine qui fonctionne",
+          "teaser": "Pourquoi des horaires réguliers et suffisamment de temps au lit facilitent tout — plus des étapes simples à commencer dès ce soir."
+        },
+        "insomnia": {
+          "title": "Difficulté à s'endormir ou à rester endormi",
+          "teaser": "TCC-I pour la vie réelle : la règle des 20 minutes, le contrôle des stimuli et pourquoi une heure de réveil fixe est importante."
+        },
+        "quality": {
+          "title": "Qualité du sommeil : améliorer la sensation globale",
+          "teaser": "Ce que signifie vraiment « qualité », les freins les plus fréquents et comment l'améliorer progressivement."
+        },
+        "daytime": {
+          "title": "Somnolence diurne : plus d'heures d'éveil",
+          "teaser": "Lumière du matin, micro-pauses de mouvement et meilleur timing pour moins somnoler et plus se concentrer."
+        },
+        "hygiene": {
+          "title": "Hygiène du sommeil et routines qui aident réellement",
+          "teaser": "Soirées avec moins d'écrans, arrêt de la caféine et une routine simple de détente — sans culpabilité."
+        },
+        "environment": {
+          "title": "Environnement de sommeil : lumière, bruit, température & lit",
+          "teaser": "Astuces peu coûteuses pour des nuits plus calmes — obscurité, son et un oreiller vraiment adapté."
+        },
+        "breathing": {
+          "title": "Ronflements & signaux respiratoires : quand vérifier",
+          "teaser": "Quand le ronflement est inoffensif, quand il peut s'agir d'apnée du sommeil, et que faire ensuite."
+        }
       }
     }
   },
@@ -72,20 +102,20 @@
     "contact": {
       "title": "Contact",
       "p1": "Le responsable de www.sleep-test.org est DMZ DATA AS. Point de contact pour les questions de confidentialité et générales : kontor@dmz.no.",
-      "p2": "Découvrez les projets de DMZ DATA sur <a href='https://www.dmz.no' target='_blank' rel='noopener'>www.dmz.no</a>, une application pour apprendre la recherche Google (<a href='https://apps.apple.com/no/app/toiletlearn-web-search/id6748481089' target='_blank' rel='noopener'>LIEN</a>), une application pour apprendre ChatGPT (<a href='https://apps.apple.com/us/app/toiletlearn-web-search/id6748926636?platform=iphone' target='_blank' rel='noopener'>LIEN</a>), et rendez votre maison intelligente Homey un peu plus amusante avec DadJokes (<a href='https://homey.app/no-no/app/com.dmz.dadjokesplus/DadJokes-Plus/test/' target='_blank' rel='noopener'>LIEN</a>)."
+      "p2": "Découvrez les projets de DMZ DATA sur <a href='https://www.dmz.no' target='_blank' rel='noopener'>www.dmz.no</a>, une application pour apprendre la recherche Google (<a href='https://apps.apple.com/no/app/toiletlearn-web-search/id6748481089' target='_blank' rel='noopener'>LINK</a>), une application pour apprendre ChatGPT (<a href='https://apps.apple.com/us/app/toiletlearn-web-search/id6748926636?platform=iphone' target='_blank' rel='noopener'>LINK</a>), et rendez votre maison intelligente Homey plus amusante avec DadJokes (<a href='https://homey.app/no-no/app/com.dmz.dadjokesplus/DadJokes-Plus/test/' target='_blank' rel='noopener'>LINK</a>)."
     }
   },
   "privacy": {
     "title": "Politique de confidentialité",
-    "p1": "Nous prenons la confidentialité au sérieux. Cette politique explique comment nous traitons les informations lorsque vous utilisez www.sleep-test.org. En utilisant le site, vous confirmez que vous avez lu et accepté ces conditions. Le site est conçu pour que les écoles puissent l’utiliser sans fournir de données personnelles.",
-    "li1": "Données que nous traitons : nous ne collectons pas de noms, adresses e-mail ou autres informations directement identifiables. Pour afficher et mémoriser les résultats, seul un ID généré par le système est stocké avec un résumé des réponses. Nous n’utilisons pas de cookies marketing, de scripts de suivi tiers ou de profilage.",
-    "li2": "Finalité et base légale : la finalité est de fournir le service et d’améliorer sa qualité. La base légale est l’intérêt légitime (RGPD art. 6(1)(f)) d’exploiter une solution sécurisée et fonctionnelle sans traitement de données personnelles. Les journaux techniques peuvent être traités à des fins de dépannage et de sécurité.",
-    "li3": "Stockage et suppression : les IDs techniques et les résumés des résultats sont stockés uniquement aussi longtemps que nécessaire pour la finalité indiquée. Si vous estimez que du contenu doit être supprimé, vous pouvez nous contacter à kontor@dmz.no.",
-    "li4": "Partage et transfert : nous ne partageons pas de données avec des tiers. Si nous utilisons des sous-traitants (processeurs de données) pour l’exploitation, ils seront contractuellement tenus de protéger les données et de ne pas les utiliser à leurs propres fins.",
-    "li5": "Utilisation scolaire et enfants : le service peut être utilisé dans les écoles sans fournir de données d’élèves. Les enseignants et les élèves peuvent lire et utiliser le site sans inscription. Aucune donnée personnelle n’est traitée au-delà de ce qui est strictement nécessaire au fonctionnement technique.",
-    "li6": "Cookies : nous n’utilisons pas de cookies inutiles. Si à l’avenir nous introduisons des cookies fonctionnels (par exemple, pour les préférences linguistiques), nous mettrons à jour cette politique et demanderons le consentement lorsque cela sera requis.",
-    "li7": "Vos droits et contact : si vous avez des questions, souhaitez accéder à des informations techniques ou demander une suppression, contactez-nous à kontor@dmz.no. Vous pouvez également déposer une plainte auprès de l’Autorité norvégienne de protection des données (Datatilsynet).",
-    "li8": "Modifications : nous pouvons mettre à jour cette politique en cas de besoin. Les modifications importantes seront publiées ici."
+    "p1": "Nous prenons la confidentialité au sérieux. Cette politique explique comment nous gérons les informations lorsque vous utilisez www.sleep-test.org. En utilisant le site, vous confirmez avoir lu et accepté ces conditions. Le site est conçu pour que les écoles puissent l'utiliser sans fournir d'informations personnelles.",
+    "li1": "Données que nous traitons : Nous ne collectons pas de noms, adresses e-mail ou autres informations directement identifiables. Pour afficher et mémoriser les résultats, seul un ID généré par le système est stocké avec un résumé des réponses. Nous n'utilisons pas de cookies marketing, de scripts de suivi tiers ni de profilage.",
+    "li2": "But et base légale : Le but est de fournir le service et d'en améliorer la qualité. La base légale est l'intérêt légitime (RGPD art. 6(1)(f)) d'exploiter une solution sécurisée et fonctionnelle sans traiter de données personnelles. Les journaux techniques peuvent être traités pour le dépannage et la sécurité.",
+    "li3": "Stockage et suppression : Les IDs techniques et résumés de résultats sont stockés uniquement aussi longtemps que nécessaire pour l'objectif indiqué. Si vous estimez qu'un contenu doit être supprimé, vous pouvez nous contacter à kontor@dmz.no.",
+    "li4": "Partage et transfert : Nous ne partageons pas de données avec des tiers. Si nous utilisons des sous-traitants (processeurs de données) pour les opérations, ils seront contractuellement tenus de protéger les données et de ne pas les utiliser à leurs propres fins.",
+    "li5": "Utilisation scolaire et enfants : Le service peut être utilisé dans les écoles sans fournir de données d'élèves. Les enseignants et les élèves peuvent lire et utiliser le site sans inscription. Aucune donnée personnelle n'est traitée au-delà de ce qui est strictement nécessaire pour le fonctionnement technique.",
+    "li6": "Cookies : Nous n'utilisons pas de cookies inutiles. Si nous introduisons à l'avenir des cookies fonctionnels (par ex. pour la préférence de langue), nous mettrons à jour cette politique et demanderons un consentement lorsque requis.",
+    "li7": "Vos droits et contact : Si vous avez des questions, souhaitez accéder à des informations techniques ou demander une suppression, contactez-nous à kontor@dmz.no. Vous pouvez également déposer une plainte auprès de l'Autorité norvégienne de protection des données (Datatilsynet).",
+    "li8": "Modifications : Nous pouvons mettre à jour cette politique en cas de besoin. Les changements importants seront publiés ici."
   },
   "test": {
     "title": "Test de sommeil",
@@ -97,7 +127,7 @@
     "back": "Retour",
     "next": "Suivant",
     "read": "Lire",
-    "error_submit": "Impossible d’envoyer. Veuillez réessayer."
+    "error_submit": "Impossible d'envoyer. Veuillez réessayer."
   },
   "likert": {
     "1": "Jamais",
@@ -105,5 +135,114 @@
     "3": "Parfois",
     "4": "Souvent",
     "5": "Très souvent"
+  },
+  "category": {
+    "pattern": { "name": "Schéma et durée du sommeil", "desc": "Durée et régularité." },
+    "insomnia": { "name": "Endormissement & nuit", "desc": "Début du sommeil, réveils, matinée précoce." },
+    "quality": { "name": "Qualité du sommeil", "desc": "Qualité perçue et satisfaction." },
+    "daytime": { "name": "Somnolence diurne", "desc": "Somnolence et fonctionnement diurne." },
+    "hygiene": { "name": "Hygiène du sommeil & routines", "desc": "Habitudes et horaires (écrans, caféine)." },
+    "environment": { "name": "Environnement de sommeil", "desc": "Lumière, bruit, température, lit." },
+    "breathing": { "name": "Ronflements & signaux respiratoires", "desc": "Signes possibles d'apnée du sommeil." },
+    "bloodpressure": { "name": "Pression artérielle – risque lié au mode de vie", "desc": "Alimentation, activité, alcool, stress et poids." }
+  },
+  "q": {
+    "pattern": {
+      "too_short": "Je dors moins que ce dont j'ai besoin la plupart des nuits.",
+      "irregular_times": "Mes horaires de sommeil varient beaucoup d'un jour à l'autre.",
+      "late_long_naps": "Je fais des siestes longues ou tardives qui perturbent la nuit."
+    },
+    "insomnia": {
+      "long_sleep_onset": "Je mets longtemps à m'endormir après m'être couché.",
+      "frequent_awakenings": "Je me réveille plusieurs fois pendant la nuit.",
+      "early_morning_awakenings": "Je me réveille trop tôt et je ne peux pas me rendormir.",
+      "unrefreshed_mornings": "Je ne me sens pas reposé le matin.",
+      "daytime_impact": "Mes problèmes de sommeil affectent mon fonctionnement diurne (humeur, concentration, énergie)."
+    },
+    "quality": {
+      "overall_poor": "Mon expérience générale du sommeil est souvent mauvaise.",
+      "dissatisfied": "Je suis insatisfait de mon sommeil.",
+      "restless_nights": "Mes nuits sont souvent agitées (cauchemars, agitation, douleur)."
+    },
+    "daytime": {
+      "doze_easily": "Je m'assoupis facilement dans des situations calmes (TV, lecture, passager).",
+      "struggle_stay_awake": "J'ai du mal à rester éveillé quand je dois me concentrer.",
+      "tired_most_day": "Je lutte contre la fatigue pendant une grande partie de la journée."
+    },
+    "hygiene": {
+      "screens_before_bed": "J'utilise des écrans juste avant de me coucher.",
+      "late_caffeine": "Je bois du café/boissons énergétiques tard dans la journée.",
+      "alcohol_near_bed": "Je bois de l'alcool près de l'heure du coucher.",
+      "big_meal_late": "Je mange de gros repas tard le soir.",
+      "hard_exercise_late": "Je fais de l'exercice intense juste avant de me coucher."
+    },
+    "environment": {
+      "too_light_noise_temp": "La chambre est souvent trop lumineuse, bruyante ou à une mauvaise température.",
+      "uncomfortable_bed": "Le lit ou l'oreiller est inconfortable.",
+      "bad_associations": "Je travaille/regarde la TV au lit et j'ai de mauvaises associations avec le sommeil."
+    },
+    "breathing": {
+      "loud_snoring": "Je ronfle bruyamment.",
+      "observed_apneas": "D'autres ont observé des pauses respiratoires pendant mon sommeil.",
+      "daytime_tired_despite": "Je suis très somnolent le jour même après une nuit normale."
+    },
+    "bloodpressure": {
+      "diet_salty": "Je mange souvent des aliments riches en sel (p. ex. plats préparés, snacks, pâtes à tartiner salées).",
+      "activity_low": "Je ne suis pas très actif physiquement au quotidien.",
+      "alcohol_often": "Je bois de l'alcool plus souvent ou en plus grandes quantités que recommandé.",
+      "stress_high": "Je subis beaucoup de stress dans la vie quotidienne.",
+      "overweight_self": "Je me considère en surpoids."
+    }
+  },
+  "flags": {
+    "osa_signal": "Signes possibles d'apnée du sommeil – envisagez de consulter votre médecin.",
+    "excessive_sleepiness": "Somnolence diurne marquée – soyez particulièrement vigilant.",
+    "high_bp_risk": "Plusieurs facteurs de mode de vie indiquent un risque accru d'hypertension. Envisagez de mesurer votre pression artérielle lorsque vous en avez l'occasion, en particulier si vous avez un diabète de type 2 ou des proches atteints de maladies cardiovasculaires."
+  },
+  "tips": {
+    "pattern": {
+      "keep_routine": "Gardez une routine de sommeil stable – heures de coucher et de lever similaires la plupart des jours.",
+      "short_naps": "Si vous avez besoin d'une sieste, gardez-la courte (20–30 min) et plus tôt dans la journée.",
+      "consistent_bed_wake": "Visez des heures de coucher et de lever régulières (±30–60 min).",
+      "plan_winddown": "Créez une routine simple de détente 30–60 min avant de dormir (lumières tamisées, activités calmes).",
+      "protect_7h": "Protégez une période de sommeil d'au moins 7 heures la plupart des nuits.",
+      "cut_late_naps": "Évitez les siestes longues ou tardives après ~15–16 h – elles peuvent retarder le sommeil nocturne."
+    },
+    "insomnia": {
+      "maintain": "Maintenez ce qui fonctionne déjà – de petites habitudes régulières s'additionnent.",
+      "rule_20min": "Si vous restez éveillé ~20 min au lit : levez-vous, faites quelque chose de calme dans une faible lumière, puis réessayez.",
+      "fixed_wake": "Gardez une heure de réveil fixe — elle entraîne votre horloge biologique.",
+      "stimulus_control": "Réservez le lit uniquement pour dormir et l'intimité — pas pour la TV, le téléphone ou le travail.",
+      "consider_cbti": "Si les problèmes persistent : envisagez la TCC-I (thérapie cognitivo-comportementale pour l'insomnie)."
+    },
+    "quality": {
+      "track_triggers": "Suivez les déclencheurs possibles (caféine, horaire d'exercice, stress) pour identifier les schémas.",
+      "address_disruptors": "Réduisez les perturbateurs courants (bruit, lumière, inconfort, écrans tardifs).",
+      "consult_if_pain": "Douleur persistante, agitation ou cauchemars ? Consultez un professionnel."
+    },
+    "daytime": {
+      "morning_light": "Prenez la lumière du matin (10–30 min) pour stimuler la vigilance et ancrer votre rythme circadien.",
+      "activity_breaks": "Faites de courtes pauses de mouvement tout au long de la journée ; prévoyez une activité légère plus tôt dans la soirée.",
+      "consider_medical": "Somnolence diurne marquée ? Envisagez un examen médical (p. ex. apnée du sommeil ou autres causes)."
+    },
+    "hygiene": {
+      "keep_it_up": "Conservez les habitudes qui soutiennent déjà votre sommeil.",
+      "screens_off_60": "Réduisez ou évitez les écrans pendant les 60 dernières minutes avant le coucher.",
+      "limit_caffeine": "Évitez la caféine après ~14–16 h (6–8 heures avant le coucher).",
+      "no_alcohol_late": "Évitez l'alcool près de l'heure du coucher — il fragmente le sommeil.",
+      "no_big_meals_late": "Évitez les gros repas tard le soir ; préférez une collation légère si nécessaire."
+    },
+    "environment": {
+      "keep_cool_dark": "Gardez la chambre fraîche, sombre et ordonnée — faites du lit un signal de sommeil.",
+      "test_blackout": "Essayez des rideaux occultants/masque de nuit et un éclairage tamisé en soirée.",
+      "noise_control": "Réduisez le bruit (bouchons d'oreille, bruit blanc, son constant en arrière-plan) si nécessaire.",
+      "try_new_pillow": "Évaluez l'oreiller/le matelas – remplacez-les si vous vous réveillez avec des inconforts.",
+      "cooler_temp": "Abaissez la température ou utilisez une literie plus légère si vous avez trop chaud la nuit."
+    },
+    "breathing": {
+      "side_sleep": "Essayez de dormir sur le côté (utilisez un oreiller derrière votre dos) – peut réduire le ronflement/apnées pour certains.",
+      "reduce_evening_alcohol": "Évitez l'alcool le soir – il peut aggraver le ronflement/problèmes respiratoires.",
+      "consider_gp_check": "Soupçon d'apnée du sommeil (ronflement fort, pauses observées, somnolence diurne) ? Consultez votre médecin."
+    }
   }
 }
