@@ -1,0 +1,109 @@
+{
+  "ui": {
+    "nav": {
+      "home": "Início",
+      "result": "Resultado",
+      "compare": "Comparar",
+      "articles": "Artigos",
+      "about": "Sobre"
+    },
+    "home": {
+      "title": "Teste de sono gratuito — receba seu relatório personalizado (beta)",
+      "pitch": "Responda 30 perguntas rápidas em 5–10 minutos. Sem custo, sem registro. Receba um relatório claro, baseado em ciência, com explicações e dicas práticas.",
+      "cta": "Iniciar o teste",
+      "example": "Ver relatório de exemplo",
+      "tests_count_title": "Testes de sono concluídos",
+      "tests_count_caption": "pessoas já testaram seu sono com esta ferramenta gratuita e anônima."
+    },
+    "privacy": {
+      "card": {
+        "title": "Anônimo e 100% gratuito",
+        "text": "Levamos o GDPR a sério: sem registro, sem registros de atividade, sem custo — totalmente anônimo."
+      }
+    },
+    "compare": {
+      "card": {
+        "title": "Acompanhe seu progresso",
+        "text": "Faça o teste novamente depois e compare seus resultados ao longo do tempo."
+      },
+      "help": "Você tem seu ID anterior? Insira ambos para ver o progresso — e onde.",
+      "notfound": "Não foi possível encontrar um ou ambos os IDs.",
+      "error": "Algo deu errado. Por favor, tente novamente.",
+      "explainer": "Compare dois relatórios para ver se suas ações estão funcionando. Recomendamos refazer o teste a cada 4–8 semanas para que você veja claramente a tendência ao longo do tempo.",
+      "id_a": "ID A",
+      "id_b": "ID B",
+      "label_a": "ID A",
+      "label_b": "ID B"
+    },
+    "result": {
+      "title": "Resultado",
+      "sleep_score": "Pontuação do sono",
+      "copy_id": "Copiar ID",
+      "disclaimer": "Isto não é uma avaliação médica, mas um guia geral para ajudar você a perceber padrões e tentar passos práticos. Os hábitos de sono geralmente mudam gradualmente — experimente, seja paciente e descubra o que funciona melhor para você.",
+      "how_to_improve": "Mantenha e melhore isto:",
+      "lead": {
+        "green": "Você está indo bem em ",
+        "orange": "Você tem espaço para melhorar em ",
+        "red": "Você deve mudar seus hábitos em "
+      },
+      "lookup_hint": "Ao concluir um teste, você recebe um ID. Ele é anônimo, e você pode abrir seu relatório a qualquer momento. Cole seu ID para ver o relatório.",
+      "id_placeholder": "Seu ID"
+    },
+    "articles": {
+      "minutes": {
+        "pattern": "6 min",
+        "insomnia": "7 min",
+        "quality": "5 min",
+        "daytime": "6 min",
+        "hygiene": "6 min",
+        "environment": "5 min",
+        "breathing": "6 min",
+        "some": "7 min"
+      },
+      "card": {
+        "title": "Dicas e conhecimentos sobre sono",
+        "text": "Explore guias práticos sobre sono — cobrindo rotinas, insônia, higiene do sono e mais. Escritos para o público em geral, baseados em pesquisas confiáveis."
+      }
+    }
+  },
+  "about": {
+    "title": "Criado por DMZ DATA AS",
+    "intro": "Construído quase sem esforço em Porsgrunn, combinando healthtech/sleeptech e IA.",
+    "contact": {
+      "title": "Contato",
+      "p1": "O responsável por www.sleep-test.org é DMZ DATA AS. Ponto de contato para questões de privacidade e dúvidas gerais: kontor@dmz.no.",
+      "p2": "Explore os projetos da DMZ DATA em <a href='https://www.dmz.no' target='_blank' rel='noopener'>www.dmz.no</a>, um aplicativo para aprender a pesquisa no Google (<a href='https://apps.apple.com/no/app/toiletlearn-web-search/id6748481089' target='_blank' rel='noopener'>LINK</a>), um aplicativo para aprender ChatGPT (<a href='https://apps.apple.com/us/app/toiletlearn-web-search/id6748926636?platform=iphone' target='_blank' rel='noopener'>LINK</a>), e deixe sua casa inteligente Homey mais divertida com DadJokes (<a href='https://homey.app/no-no/app/com.dmz.dadjokesplus/DadJokes-Plus/test/' target='_blank' rel='noopener'>LINK</a>)."
+    }
+  },
+  "privacy": {
+    "title": "Política de Privacidade",
+    "p1": "Levamos a privacidade a sério. Esta política explica como lidamos com informações quando você usa www.sleep-test.org. Ao usar o site, você confirma que leu e aceitou estes termos. O site foi projetado para que escolas possam utilizá-lo sem fornecer informações pessoais.",
+    "li1": "Quais dados processamos: Não coletamos nomes, e-mails ou outras informações diretamente identificáveis. Para exibir e lembrar resultados, apenas um ID gerado pelo sistema é armazenado junto com um resumo das respostas. Não usamos cookies de marketing, scripts de rastreamento de terceiros ou criação de perfis.",
+    "li2": "Finalidade e base legal: A finalidade é fornecer o serviço e melhorar sua qualidade. A base legal é o interesse legítimo (GDPR art. 6(1)(f)) em operar uma solução segura e funcional sem processar dados pessoais. Logs técnicos podem ser processados para solução de problemas e segurança.",
+    "li3": "Armazenamento e exclusão: IDs técnicos e resumos de resultados são armazenados apenas pelo tempo necessário para a finalidade declarada. Se você acredita que o conteúdo deve ser excluído, entre em contato conosco em kontor@dmz.no.",
+    "li4": "Compartilhamento e transferência: Não compartilhamos dados com terceiros. Se usarmos subcontratados (processadores de dados) para a operação, eles serão contratualmente obrigados a proteger os dados e não usá-los para seus próprios fins.",
+    "li5": "Uso escolar e infantil: O serviço pode ser utilizado em escolas sem fornecer dados de alunos. Professores e alunos podem ler e usar o site sem registro. Nenhum dado pessoal é processado além do estritamente necessário para a operação técnica.",
+    "li6": "Cookies: Não usamos cookies desnecessários. Se no futuro introduzirmos cookies funcionais (por exemplo, para preferência de idioma), atualizaremos esta política e solicitaremos consentimento quando necessário.",
+    "li7": "Seus direitos e contato: Se você tiver dúvidas, quiser acessar informações técnicas ou solicitar exclusão, entre em contato conosco em kontor@dmz.no. Você também pode apresentar uma reclamação à Autoridade de Proteção de Dados da Noruega (Datatilsynet).",
+    "li8": "Alterações: Podemos atualizar esta política quando necessário. Alterações significativas serão publicadas aqui."
+  },
+  "test": {
+    "title": "Teste de sono",
+    "submit": "Enviar",
+    "progress": "Progresso"
+  },
+  "common": {
+    "sending": "Enviando…",
+    "back": "Voltar",
+    "next": "Próximo",
+    "read": "Ler",
+    "error_submit": "Não foi possível enviar. Tente novamente."
+  },
+  "likert": {
+    "1": "Nunca",
+    "2": "Raramente",
+    "3": "Às vezes",
+    "4": "Frequentemente",
+    "5": "Muito frequentemente"
+  }
+}
