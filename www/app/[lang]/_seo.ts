@@ -6,10 +6,12 @@ export function seoForPath(fullPathname: string) {
   const { languages, xDefault } = buildAlternatesForPath(BASE_URL, fullPathname);
 
   return {
+    title: "Sleep Test – Free multilingual sleep quality report",
+    description:
+      "Answer 30 short questions in your language and get a personalized sleep report — free, science-based, and anonymous.",
     alternates: {
       canonical: languages[DEFAULT_LOCALE],
       languages,
-      types: {},
     },
     other: {
       "hreflang-x-default": xDefault,
