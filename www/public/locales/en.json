@@ -1,53 +1,53 @@
 {
   "ui": {
     "nav": {
-      "home": "Inicio",
-      "result": "Resultado",
-      "compare": "Comparar",
-      "articles": "Artículos",
-      "about": "Acerca de"
+      "home": "Home",
+      "result": "Result",
+      "compare": "Compare",
+      "articles": "Articles",
+      "about": "About"
     },
     "home": {
-      "title": "Prueba de sueño gratuita — obtén tu informe personalizado (beta)",
-      "pitch": "Responde 30 preguntas rápidas en 5–10 minutos. Sin costo, sin registro. Obtén un informe claro, basado en la ciencia, con explicaciones y consejos prácticos.",
-      "cta": "Comenzar la prueba",
-      "example": "Ver informe de ejemplo",
-      "tests_count_title": "Pruebas de sueño completadas",
-      "tests_count_caption": "personas ya han evaluado su sueño con esta herramienta gratuita y anónima."
+      "title": "Free Sleep Test — get your personalized report (beta)",
+      "pitch": "Answer 30 quick questions in 5–10 minutes. No cost, no registration. Get a clear, science-based report with explanations and practical tips.",
+      "cta": "Start the test",
+      "example": "View example report",
+      "tests_count_title": "Completed sleep tests",
+      "tests_count_caption": "people have already tested their sleep with this free, anonymous tool."
     },
     "privacy": {
       "card": {
-        "title": "Anónimo y 100% gratuito",
-        "text": "Tomamos el RGPD en serio: sin registro, sin registros, sin costo — todo anónimo."
+        "title": "Anonymous and 100% free",
+        "text": "We take GDPR personally: no registration, no logging, no cost — all anonymous."
       }
     },
     "compare": {
       "card": {
-        "title": "Sigue tu progreso",
-        "text": "Realiza la prueba nuevamente más tarde y compara tus resultados a lo largo del tiempo."
+        "title": "Track your progress",
+        "text": "Take the test again later and compare your results over time."
       },
-      "help": "¿Tienes tu ID anterior? Ingresa ambos para ver el progreso — y en qué.",
-      "notfound": "No se pudo encontrar una o ambas IDs.",
-      "error": "Algo salió mal. Por favor, inténtalo de nuevo.",
-      "explainer": "Compara dos informes para ver si tus acciones están funcionando. Recomendamos repetir la prueba cada 4–8 semanas para ver claramente la tendencia con el tiempo.",
+      "help": "Do you have your previous ID? Enter both to see progress — and where.",
+      "notfound": "Could not find one or both IDs.",
+      "error": "Something went wrong. Please try again.",
+      "explainer": "Compare two reports to see if your actions are working. We recommend retesting every 4–8 weeks so you can clearly see the trend over time.",
       "id_a": "ID A",
       "id_b": "ID B",
       "label_a": "ID A",
       "label_b": "ID B"
     },
     "result": {
-      "title": "Resultado",
-      "sleep_score": "Puntuación de sueño",
-      "copy_id": "Copiar ID",
-      "disclaimer": "Esto no es una evaluación médica, sino una guía general para ayudarte a notar patrones e intentar pasos prácticos. Los hábitos de sueño suelen cambiar gradualmente — experimenta, ten paciencia y descubre lo que mejor funciona para ti.",
-      "how_to_improve": "Mantén y mejora esto:",
+      "title": "Result",
+      "sleep_score": "Sleep score",
+      "copy_id": "Copy ID",
+      "disclaimer": "This is not a medical evaluation, but a general guide to help you notice patterns and try practical steps. Sleep habits often change gradually — experiment, be patient, and see what works best for you.",
+      "how_to_improve": "Keep and improve this:",
       "lead": {
-        "green": "Lo estás haciendo bien en ",
-        "orange": "Tienes margen de mejora en ",
-        "red": "Deberías cambiar tus hábitos en "
+        "green": "You are doing well on ",
+        "orange": "You have room for improvement in ",
+        "red": "You should change your habits for "
       },
-      "lookup_hint": "Cuando completes una prueba recibirás un ID. Es anónimo y puedes abrir tu informe en cualquier momento. Pega tu ID para ver el informe.",
-      "id_placeholder": "Tu ID"
+      "lookup_hint": "When you complete a test you receive an ID. It is anonymous, and you can open your report anytime. Paste your ID to view the report.",
+      "id_placeholder": "Your ID"
     },
     "articles": {
       "minutes": {
@@ -61,188 +61,189 @@
         "some": "7 min"
       },
       "card": {
-        "title": "Consejos y conocimientos sobre el sueño",
-        "text": "Explora guías prácticas de sueño — que cubren rutinas, insomnio, higiene del sueño y más. Escritas para el público general, basadas en investigaciones confiables."
+        "title": "Sleep tips & knowledge",
+        "text": "Explore practical sleep guides — covering routines, insomnia, sleep hygiene, and more. Written for the general public, based on credible research."
       },
       "index": {
         "pattern": {
-          "title": "Patrón de sueño y duración: una rutina que funciona",
-          "teaser": "Por qué las horas regulares y suficiente tiempo en la cama facilitan todo — más pasos simples para empezar esta noche."
+          "title": "Sleep pattern & duration: a routine that works",
+          "teaser": "Why regular hours and enough time in bed make everything easier—plus simple steps to start tonight."
         },
         "insomnia": {
-          "title": "Problemas para conciliar o mantener el sueño",
-          "teaser": "CBT-I para la vida real: la regla de los 20 minutos, el control de estímulos y por qué un horario fijo de despertar importa."
+          "title": "Trouble falling or staying asleep",
+          "teaser": "CBT-I for real life: the 20-minute rule, stimulus control, and why a fixed wake time matters."
         },
         "quality": {
-          "title": "Calidad del sueño: mejorar la sensación general",
-          "teaser": "Qué significa realmente 'calidad', factores comunes que la reducen y cómo mejorarla poco a poco."
+          "title": "Sleep quality: lifting the overall feel",
+          "teaser": "What “quality” really means, common drags on it, and how to nudge it upward steadily."
         },
         "daytime": {
-          "title": "Somnolencia diurna: más horas de alerta",
-          "teaser": "Luz de la mañana, pausas de micromovimiento y mejor planificación para menos somnolencia y más concentración."
+          "title": "Daytime & sleepiness: more alert hours",
+          "teaser": "Morning light, micro-movement breaks, and better timing for less dozing and more focus."
         },
         "hygiene": {
-          "title": "Higiene del sueño y rutinas que realmente ayudan",
-          "teaser": "Tardes con menos pantallas, corte de cafeína y una rutina sencilla para relajarse — sin culpa."
+          "title": "Sleep hygiene and routines that actually help",
+          "teaser": "Screen-light evenings, a caffeine cut-off, and a simple wind-down—without the guilt."
         },
         "environment": {
-          "title": "Entorno de sueño: luz, ruido, temperatura y cama",
-          "teaser": "Ajustes de bajo costo para noches más tranquilas — oscuridad total, control del sonido y una almohada que realmente se ajuste."
+          "title": "Sleep environment: light, noise, temperature & bed",
+          "teaser": "Low-cost tweaks for calmer nights—blackout, sound, and a pillow that really fits."
         },
         "breathing": {
-          "title": "Ronquidos y señales de respiración: cuándo revisarlo",
-          "teaser": "Cuándo los ronquidos son inofensivos, cuándo podría ser apnea del sueño y qué hacer después."
+          "title": "Snoring & breathing signals: when to check it",
+          "teaser": "When snoring is harmless, when it might be sleep apnea, and what to do next."
         }
       }
     }
   },
-  "about": {
-    "title": "Creado por DMZ DATA AS",
-    "intro": "Construido casi sin esfuerzo en Porsgrunn, combinando healthtech/sleeptech e IA.",
-    "contact": {
-      "title": "Contacto",
-      "p1": "El responsable de www.sleep-test.org es DMZ DATA AS. Punto de contacto para consultas de privacidad y preguntas generales: kontor@dmz.no.",
-      "p2": "Explora los proyectos de DMZ DATA en <a href='https://www.dmz.no' target='_blank' rel='noopener'>www.dmz.no</a>, una app para aprender búsqueda en Google (<a href='https://apps.apple.com/no/app/toiletlearn-web-search/id6748481089' target='_blank' rel='noopener'>LINK</a>), una app para aprender ChatGPT (<a href='https://apps.apple.com/us/app/toiletlearn-web-search/id6748926636?platform=iphone' target='_blank' rel='noopener'>LINK</a>), y haz que tu hogar inteligente Homey sea un poco más divertido con DadJokes (<a href='https://homey.app/no-no/app/com.dmz.dadjokesplus/DadJokes-Plus/test/' target='_blank' rel='noopener'>LINK</a>)."
-    }
-  },
+"about": {
+  "title": "Created by DMZ DATA AS",
+  "intro": "Built almost without effort in Porsgrunn, combining healthtech/sleeptech and AI.",
+  "contact": {
+    "title": "Contact",
+    "p1": "Responsible for www.sleep-test.org is DMZ DATA AS. Contact point for privacy inquiries and general questions: kontor@dmz.no.",
+    "p2": "Explore DMZ DATA wonders at <a href='https://www.dmz.no' target='_blank' rel='noopener'>www.dmz.no</a>, an app to learn Google web search (<a href='https://apps.apple.com/no/app/toiletlearn-web-search/id6748481089' target='_blank' rel='noopener'>LINK</a>), an app to learn ChatGPT (<a href='https://apps.apple.com/us/app/toiletlearn-web-search/id6748926636?platform=iphone' target='_blank' rel='noopener'>LINK</a>), and make your Homey smart home a bit more fun with DadJokes (<a href='https://homey.app/no-no/app/com.dmz.dadjokesplus/DadJokes-Plus/test/' target='_blank' rel='noopener'>LINK</a>)."
+  }
+},
   "privacy": {
-    "title": "Política de privacidad",
-    "p1": "Nos tomamos la privacidad en serio. Esta política explica cómo manejamos la información cuando usas www.sleep-test.org. Al usar el sitio, confirmas que has leído y aceptado estos términos. El sitio está diseñado para que las escuelas lo usen sin proporcionar información personal.",
-    "li1": "Qué datos procesamos: No recopilamos nombres, correos electrónicos u otra información directamente identificable. Para mostrar y recordar resultados, solo se almacena una ID generada por el sistema junto con un resumen de respuestas. No utilizamos cookies de marketing, scripts de seguimiento de terceros ni elaboración de perfiles.",
-    "li2": "Propósito y base legal: El propósito es brindar el servicio y mejorar su calidad. La base legal es el interés legítimo (GDPR art. 6(1)(f)) en operar una solución segura y funcional sin procesar datos personales. Los registros técnicos pueden procesarse para resolución de problemas y seguridad.",
-    "li3": "Almacenamiento y eliminación: Las IDs técnicas y resúmenes de resultados se almacenan solo el tiempo necesario para el propósito declarado. Si crees que algún contenido debe eliminarse, puedes contactarnos en kontor@dmz.no.",
-    "li4": "Compartir y transferir: No compartimos datos con terceros. Si usamos subcontratistas (procesadores de datos) para operaciones, estarán contractualmente obligados a proteger los datos y no utilizarlos para sus propios fines.",
-    "li5": "Uso escolar y niños: El servicio puede usarse en escuelas sin proporcionar datos de estudiantes. Los maestros y estudiantes pueden leer y usar el sitio sin registro. No se procesan datos personales más allá de lo estrictamente necesario para la operación técnica.",
-    "li6": "Cookies: No utilizamos cookies innecesarias. Si en el futuro introducimos cookies funcionales (por ejemplo, para preferencias de idioma), actualizaremos esta política y solicitaremos consentimiento cuando sea necesario.",
-    "li7": "Tus derechos y contacto: Si tienes preguntas, deseas acceder a información técnica o solicitar eliminación, contáctanos en kontor@dmz.no. También puedes presentar una queja ante la Autoridad Noruega de Protección de Datos (Datatilsynet).",
-    "li8": "Cambios: Podemos actualizar esta política cuando sea necesario. Los cambios significativos se publicarán aquí."
+    "title": "Privacy Policy",
+    "p1": "We take privacy seriously. This policy explains how we handle information when you use www.sleep-test.org. By using the site, you confirm that you have read and accepted these terms. The site is designed so that schools can use it without providing any personal information.",
+    "li1": "What data we process: We do not collect names, email addresses, or other directly identifiable information. To display and remember results, only a system-generated ID is stored together with a summary of answers. We do not use marketing cookies, third-party tracking scripts, or profiling.",
+    "li2": "Purpose and legal basis: The purpose is to provide the service and improve its quality. The legal basis is legitimate interest (GDPR art. 6(1)(f)) in operating a secure and functional solution without processing personal data. Technical logs may be processed for troubleshooting and security.",
+    "li3": "Storage and deletion: Technical IDs and result summaries are stored only as long as necessary for the stated purpose. If you believe content should be deleted, you can contact us at kontor@dmz.no.",
+    "li4": "Sharing and transfer: We do not share data with third parties. If we use subcontractors (data processors) for operations, they will be contractually obliged to protect data and not use it for their own purposes.",
+    "li5": "School use and children: The service can be used in schools without providing student data. Teachers and students can read and use the site without registration. No personal data is processed beyond what is strictly necessary for technical operation.",
+    "li6": "Cookies: We do not use unnecessary cookies. If we in the future introduce functional cookies (e.g., for language preference), we will update this policy and request consent where required.",
+    "li7": "Your rights and contact: If you have questions, wish to access technical information, or request deletion, contact us at kontor@dmz.no. You can also lodge a complaint with the Norwegian Data Protection Authority (Datatilsynet).",
+    "li8": "Changes: We may update this policy when needed. Significant changes will be published here."
   },
   "test": {
-    "title": "Prueba de sueño",
-    "submit": "Enviar",
-    "progress": "Progreso"
+    "title": "Sleep test",
+    "submit": "Submit",
+    "progress": "Progress"
   },
+
   "common": {
-    "sending": "Enviando…",
-    "back": "Atrás",
-    "next": "Siguiente",
-    "read": "Leer",
-    "error_submit": "No se pudo enviar. Inténtalo de nuevo."
+    "sending": "Sending…",
+    "back": "Back",
+    "next": "Next",
+    "read": "Read",
+    "error_submit": "Could not submit. Please try again."
   },
   "likert": {
-    "1": "Nunca",
-    "2": "Raramente",
-    "3": "A veces",
-    "4": "A menudo",
-    "5": "Muy a menudo"
+    "1": "Never",
+    "2": "Rarely",
+    "3": "Sometimes",
+    "4": "Often",
+    "5": "Very often"
   },
   "category": {
-    "pattern": { "name": "Patrón de sueño y duración", "desc": "Duración y regularidad." },
-    "insomnia": { "name": "Conciliar el sueño & noche", "desc": "Inicio del sueño, despertares, madrugada." },
-    "quality": { "name": "Calidad del sueño", "desc": "Calidad percibida y satisfacción." },
-    "daytime": { "name": "Somnolencia diurna", "desc": "Somnolencia y funcionamiento diurno." },
-    "hygiene": { "name": "Higiene del sueño & rutinas", "desc": "Hábitos y horarios (pantallas, cafeína)." },
-    "environment": { "name": "Entorno de sueño", "desc": "Luz, ruido, temperatura, cama." },
-    "breathing": { "name": "Ronquidos & señales respiratorias", "desc": "Posibles signos de apnea del sueño." },
-    "bloodpressure": { "name": "Presión arterial – riesgo de estilo de vida", "desc": "Dieta, actividad, alcohol, estrés y peso." }
+    "pattern": { "name": "Sleep pattern & duration", "desc": "Length and regularity." },
+    "insomnia": { "name": "Falling asleep & night", "desc": "Sleep onset, awakenings, early morning." },
+    "quality": { "name": "Sleep quality", "desc": "Perceived quality and satisfaction." },
+    "daytime": { "name": "Daytime & sleepiness", "desc": "Sleepiness and daytime function." },
+    "hygiene": { "name": "Sleep hygiene & routines", "desc": "Habits and timing (screens, caffeine)." },
+    "environment": { "name": "Sleep environment", "desc": "Light, noise, temperature, bed." },
+    "breathing": { "name": "Snoring & breathing signals", "desc": "Possible signs of sleep apnea." },
+    "bloodpressure": { "name": "Blood pressure – lifestyle risk", "desc": "Diet, activity, alcohol, stress, and weight." }
   },
   "q": {
     "pattern": {
-      "too_short": "Duermo menos de lo que necesito la mayoría de las noches.",
-      "irregular_times": "Mis horarios de sueño varían mucho de un día a otro.",
-      "late_long_naps": "Hago siestas largas o tardías que alteran el sueño nocturno."
+      "too_short": "I sleep less than I need most nights.",
+      "irregular_times": "My sleep times vary a lot from day to day.",
+      "late_long_naps": "I take long or late naps that disturb the night."
     },
     "insomnia": {
-      "long_sleep_onset": "Tardo mucho en dormirme después de acostarme.",
-      "frequent_awakenings": "Me despierto varias veces durante la noche.",
-      "early_morning_awakenings": "Me despierto demasiado temprano y no puedo volver a dormir.",
-      "unrefreshed_mornings": "No me siento renovado por la mañana.",
-      "daytime_impact": "Mis problemas de sueño afectan mi funcionamiento diurno (ánimo, concentración, energía)."
+      "long_sleep_onset": "It takes me a long time to fall asleep after going to bed.",
+      "frequent_awakenings": "I wake up several times during the night.",
+      "early_morning_awakenings": "I wake too early and can’t get back to sleep.",
+      "unrefreshed_mornings": "I don’t feel refreshed in the morning.",
+      "daytime_impact": "My sleep problems affect my daytime functioning (mood, focus, energy)."
     },
     "quality": {
-      "overall_poor": "Mi experiencia general de sueño suele ser mala.",
-      "dissatisfied": "Estoy insatisfecho con mi sueño.",
-      "restless_nights": "Mis noches suelen ser inquietas (pesadillas, agitación, dolor)."
+      "overall_poor": "My overall experience of sleep is often poor.",
+      "dissatisfied": "I am dissatisfied with my sleep.",
+      "restless_nights": "My nights are often restless (nightmares, restlessness, pain)."
     },
     "daytime": {
-      "doze_easily": "Me adormezco fácilmente en situaciones tranquilas (TV, lectura, pasajero).",
-      "struggle_stay_awake": "Me cuesta mantenerme despierto cuando debo concentrarme.",
-      "tired_most_day": "Lucho contra el cansancio gran parte del día."
+      "doze_easily": "I doze easily in calm situations (TV, reading, passenger).",
+      "struggle_stay_awake": "I struggle to stay awake when I must concentrate.",
+      "tired_most_day": "I fight tiredness for large parts of the day."
     },
     "hygiene": {
-      "screens_before_bed": "Uso pantallas justo antes de acostarme.",
-      "late_caffeine": "Tomo café/bebidas energéticas tarde en el día.",
-      "alcohol_near_bed": "Bebo alcohol cerca de la hora de dormir.",
-      "big_meal_late": "Ceno comidas pesadas tarde en la noche.",
-      "hard_exercise_late": "Hago ejercicio intenso justo antes de dormir."
+      "screens_before_bed": "I use screens right before bedtime.",
+      "late_caffeine": "I drink coffee/energy drinks late in the day.",
+      "alcohol_near_bed": "I drink alcohol near bedtime.",
+      "big_meal_late": "I eat large meals late in the evening.",
+      "hard_exercise_late": "I exercise hard right before bedtime."
     },
     "environment": {
-      "too_light_noise_temp": "El dormitorio suele ser demasiado luminoso, ruidoso o con mala temperatura.",
-      "uncomfortable_bed": "La cama o la almohada son incómodas.",
-      "bad_associations": "Trabajo/veo TV en la cama y tengo malas asociaciones con el sueño."
+      "too_light_noise_temp": "The bedroom is often too bright, noisy or the wrong temperature.",
+      "uncomfortable_bed": "The bed or pillow is uncomfortable.",
+      "bad_associations": "I work/watch TV in bed and get poor sleep associations."
     },
     "breathing": {
-      "loud_snoring": "Ronco fuertemente.",
-      "observed_apneas": "Otros han observado pausas en mi respiración mientras duermo.",
-      "daytime_tired_despite": "Estoy muy somnoliento durante el día incluso después de una noche normal."
+      "loud_snoring": "I snore loudly.",
+      "observed_apneas": "Others have observed breathing pauses when I sleep.",
+      "daytime_tired_despite": "I’m very sleepy in the daytime even after a normal night."
     },
     "bloodpressure": {
-      "diet_salty": "A menudo consumo alimentos altos en sal (p. ej., comidas preparadas, snacks, untables salados).",
-      "activity_low": "No soy muy activo físicamente en la vida diaria.",
-      "alcohol_often": "Bebo alcohol con más frecuencia o en mayores cantidades de lo recomendado.",
-      "stress_high": "Tengo mucho estrés en la vida cotidiana.",
-      "overweight_self": "Me considero con sobrepeso."
+      "diet_salty": "I often eat foods high in salt (e.g., ready meals, snacks, salty spreads).",
+      "activity_low": "I am not very physically active in daily life.",
+      "alcohol_often": "I drink alcohol more often or in larger amounts than recommended.",
+      "stress_high": "I experience a lot of stress in everyday life.",
+      "overweight_self": "I consider myself overweight."
     }
   },
-  "flags": {
-    "osa_signal": "Posibles signos de apnea del sueño – considera hablar con tu médico.",
-    "excessive_sleepiness": "Somnolencia diurna marcada – ten especial cuidado.",
-    "high_bp_risk": "Varios factores de estilo de vida apuntan a un mayor riesgo de hipertensión. Considera medir tu presión arterial cuando tengas la oportunidad, especialmente si tienes diabetes tipo 2 o familiares cercanos con enfermedades cardiovasculares."
+ "flags": {
+    "osa_signal": "Possible signs of sleep apnea – consider talking to your doctor.",
+    "excessive_sleepiness": "Marked daytime sleepiness – be extra careful.",
+    "high_bp_risk": "Several lifestyle factors point to an increased risk of high blood pressure. Consider measuring your blood pressure when you have the opportunity, especially if you have type 2 diabetes or close relatives with cardiovascular disease."
   },
   "tips": {
     "pattern": {
-      "keep_routine": "Mantén una rutina de sueño estable – horarios similares de acostarse y levantarse la mayoría de los días.",
-      "short_naps": "Si necesitas una siesta, que sea corta (20–30 min) y más temprano en el día.",
-      "consistent_bed_wake": "Apunta a horarios consistentes para dormir y despertar (±30–60 min).",
-      "plan_winddown": "Crea una rutina sencilla de relajación 30–60 min antes de acostarte (luces tenues, actividades tranquilas).",
-      "protect_7h": "Protege una ventana de sueño de al menos 7 horas la mayoría de las noches.",
-      "cut_late_naps": "Evita siestas largas o tardías después de las ~15–16 h – pueden retrasar el sueño nocturno."
+      "keep_routine": "Keep a stable sleep routine – similar bed and wake times most days.",
+      "short_naps": "If you need a nap, keep it short (20–30 min) and earlier in the day.",
+      "consistent_bed_wake": "Aim for consistent bed and wake times (±30–60 min).",
+      "plan_winddown": "Create a simple wind-down routine 30–60 min before bed (dim lights, low-stim activities).",
+      "protect_7h": "Protect a sleep window of at least 7 hours most nights.",
+      "cut_late_naps": "Avoid long or late naps after ~3–4 pm – they can delay night sleep."
     },
     "insomnia": {
-      "maintain": "Mantén lo que ya funciona – pequeños hábitos constantes suman.",
-      "rule_20min": "Si estás despierto ~20 min en la cama: levántate, haz algo tranquilo con poca luz e inténtalo de nuevo.",
-      "fixed_wake": "Mantén una hora fija de despertar — entrena tu reloj biológico.",
-      "stimulus_control": "Reserva la cama solo para dormir e intimidad — no para TV, teléfono o trabajo.",
-      "consider_cbti": "Si los problemas persisten: considera la CBT-I (terapia cognitivo-conductual para el insomnio)."
+      "maintain": "Maintain what already works – small, steady habits add up.",
+      "rule_20min": "If awake ~20 min in bed: get up, do something calm in low light, and try again.",
+      "fixed_wake": "Keep a fixed wake time regardless – it trains your body clock.",
+      "stimulus_control": "Reserve bed for sleep and intimacy only – not TV, phone, or work.",
+      "consider_cbti": "If problems persist: consider CBT-I (cognitive behavioral therapy for insomnia)."
     },
     "quality": {
-      "track_triggers": "Registra posibles desencadenantes (cafeína, horario de ejercicio, estrés) para detectar patrones.",
-      "address_disruptors": "Reduce factores comunes de interrupción (ruido, luz, incomodidad, pantallas tarde).",
-      "consult_if_pain": "¿Dolor persistente, agitación o pesadillas? Consulta a un profesional."
+      "track_triggers": "Track potential triggers (caffeine, workout timing, stress) to spot patterns.",
+      "address_disruptors": "Reduce common disruptors (noise, light, discomfort, late screen time).",
+      "consult_if_pain": "Persistent pain, restlessness, or nightmares? Consult a clinician."
     },
     "daytime": {
-      "morning_light": "Recibe luz matutina (10–30 min) para aumentar la alerta y anclar tu ritmo circadiano.",
-      "activity_breaks": "Haz pausas breves de movimiento durante el día; programa actividad ligera más temprano en la noche.",
-      "consider_medical": "¿Somnolencia diurna marcada? Considera un chequeo médico (ej. apnea del sueño u otras causas)."
+      "morning_light": "Get morning light (10–30 min) to boost alertness and anchor your circadian rhythm.",
+      "activity_breaks": "Take brief movement breaks across the day; schedule light activity earlier in the evening.",
+      "consider_medical": "Marked daytime sleepiness? Consider a medical check (e.g., sleep apnea or other causes)."
     },
     "hygiene": {
-      "keep_it_up": "Mantén los hábitos que ya apoyan tu sueño.",
-      "screens_off_60": "Reduce o evita pantallas durante los últimos 60 minutos antes de acostarte.",
-      "limit_caffeine": "Evita cafeína después de ~14–16 h (6–8 horas antes de dormir).",
-      "no_alcohol_late": "Evita alcohol cerca de la hora de dormir — fragmenta el sueño.",
-      "no_big_meals_late": "Evita comidas grandes y pesadas justo antes de dormir; elige un snack ligero si lo necesitas."
+      "keep_it_up": "Keep up the sleep-supportive habits that already help.",
+      "screens_off_60": "Go screen-light or screen-free for the last 60 minutes before bed.",
+      "limit_caffeine": "Avoid caffeine after ~2–4 pm (6–8 hours before bedtime).",
+      "no_alcohol_late": "Skip alcohol close to bedtime – it fragments sleep.",
+      "no_big_meals_late": "Avoid large, heavy meals right before bed; choose a light snack if needed."
     },
     "environment": {
-      "keep_cool_dark": "Mantén el dormitorio fresco, oscuro y ordenado – haz de la cama una señal de sueño.",
-      "test_blackout": "Prueba cortinas opacas/antifaz y luz tenue por la noche.",
-      "noise_control": "Controla el ruido (tapones, ruido blanco, sonido de fondo constante) si es necesario.",
-      "try_new_pillow": "Evalúa la almohada/colchón – reemplázalos si despiertas con molestias.",
-      "cooler_temp": "Baja la temperatura o usa ropa de cama más ligera si te sobrecalientas de noche."
+      "keep_cool_dark": "Keep the bedroom cool, dark, and uncluttered – make the bed a sleep cue.",
+      "test_blackout": "Try blackout shades/eye mask and dim evening lighting.",
+      "noise_control": "Tame noise (earplugs, white noise, steady background sound) if needed.",
+      "try_new_pillow": "Evaluate pillow/mattress – replace if you wake with discomfort.",
+      "cooler_temp": "Lower temperature or use lighter bedding if you overheat at night."
     },
     "breathing": {
-      "side_sleep": "Prueba dormir de lado (usa una almohada detrás de la espalda) – puede reducir ronquidos/apneas en algunos.",
-      "reduce_evening_alcohol": "Evita el alcohol en la noche – puede empeorar ronquidos/problemas respiratorios.",
-      "consider_gp_check": "¿Sospechas apnea del sueño (ronquidos fuertes, pausas observadas, somnolencia diurna)? Consulta a tu médico."
+      "side_sleep": "Try side-sleeping (use a pillow behind your back) – may reduce snoring/apneas for some.",
+      "reduce_evening_alcohol": "Avoid evening alcohol – it can worsen snoring/breathing issues.",
+      "consider_gp_check": "Suspect sleep apnea (loud snoring, witnessed pauses, daytime tiredness)? See your doctor."
     }
   }
 }
