@@ -1,0 +1,109 @@
+{
+  "ui": {
+    "nav": {
+      "home": "Domov",
+      "result": "Výsledok",
+      "compare": "Porovnať",
+      "articles": "Články",
+      "about": "O nás"
+    },
+    "home": {
+      "title": "Bezplatný test spánku — získajte svoj osobný report (beta)",
+      "pitch": "Odpovedzte na 30 rýchlych otázok za 5–10 minút. Bez poplatkov, bez registrácie. Získajte jasný, na vede založený report s vysvetleniami a praktickými tipmi.",
+      "cta": "Začať test",
+      "example": "Zobraziť ukážkový report",
+      "tests_count_title": "Dokončené testy spánku",
+      "tests_count_caption": "ľudí si už otestovalo spánok pomocou tohto bezplatného anonymného nástroja."
+    },
+    "privacy": {
+      "card": {
+        "title": "Anonymne a 100% zadarmo",
+        "text": "GDPR berieme vážne: žiadna registrácia, žiadne logovanie, žiadne poplatky — všetko anonymne."
+      }
+    },
+    "compare": {
+      "card": {
+        "title": "Sledujte svoj pokrok",
+        "text": "Urobte test znova neskôr a porovnajte výsledky v čase."
+      },
+      "help": "Máte svoje predchádzajúce ID? Zadajte obe a uvidíte pokrok — a kde.",
+      "notfound": "Nepodarilo sa nájsť jedno alebo obe ID.",
+      "error": "Niečo sa pokazilo. Skúste to znova.",
+      "explainer": "Porovnajte dva reporty a zistite, či vaše kroky fungujú. Odporúčame retest každých 4–8 týždňov, aby ste jasne videli trend v čase.",
+      "id_a": "ID A",
+      "id_b": "ID B",
+      "label_a": "ID A",
+      "label_b": "ID B"
+    },
+    "result": {
+      "title": "Výsledok",
+      "sleep_score": "Skóre spánku",
+      "copy_id": "Kopírovať ID",
+      "disclaimer": "Toto nie je lekárske vyšetrenie, ale všeobecný návod, ktorý vám pomôže všimnúť si vzorce a vyskúšať praktické kroky. Spánkové návyky sa často menia postupne — experimentujte, buďte trpezliví a zistite, čo vám funguje najlepšie.",
+      "how_to_improve": "Udržujte a zlepšujte toto:",
+      "lead": {
+        "green": "Darí sa vám dobre v oblasti ",
+        "orange": "Máte priestor na zlepšenie v oblasti ",
+        "red": "Mali by ste zmeniť svoje návyky v oblasti "
+      },
+      "lookup_hint": "Po dokončení testu dostanete ID. Je anonymné a svoj report môžete otvoriť kedykoľvek. Vložte svoje ID na zobrazenie reportu.",
+      "id_placeholder": "Vaše ID"
+    },
+    "articles": {
+      "minutes": {
+        "pattern": "6 min",
+        "insomnia": "7 min",
+        "quality": "5 min",
+        "daytime": "6 min",
+        "hygiene": "6 min",
+        "environment": "5 min",
+        "breathing": "6 min",
+        "some": "7 min"
+      },
+      "card": {
+        "title": "Tipy a poznatky o spánku",
+        "text": "Objavte praktické príručky o spánku — rutiny, nespavosť, spánková hygiena a viac. Napísané pre širokú verejnosť, založené na dôveryhodnom výskume."
+      }
+    }
+  },
+  "about": {
+    "title": "Vytvorila spoločnosť DMZ DATA AS",
+    "intro": "Postavené takmer bez námahy v meste Porsgrunn, spájajúce healthtech/sleeptech a AI.",
+    "contact": {
+      "title": "Kontakt",
+      "p1": "Za www.sleep-test.org je zodpovedná spoločnosť DMZ DATA AS. Kontaktný bod pre otázky o súkromí a všeobecné otázky: kontor@dmz.no.",
+      "p2": "Preskúmajte projekty DMZ DATA na <a href='https://www.dmz.no' target='_blank' rel='noopener'>www.dmz.no</a>, aplikácia na učenie sa Google vyhľadávania (<a href='https://apps.apple.com/no/app/toiletlearn-web-search/id6748481089' target='_blank' rel='noopener'>ODKAZ</a>), aplikácia na učenie sa ChatGPT (<a href='https://apps.apple.com/us/app/toiletlearn-web-search/id6748926636?platform=iphone' target='_blank' rel='noopener'>ODKAZ</a>) a spríjemnite si svoj Homey smart home s DadJokes (<a href='https://homey.app/no-no/app/com.dmz.dadjokesplus/DadJokes-Plus/test/' target='_blank' rel='noopener'>ODKAZ</a>)."
+    }
+  },
+  "privacy": {
+    "title": "Zásady ochrany osobných údajov",
+    "p1": "Súkromie berieme vážne. Tieto zásady vysvetľujú, ako narábame s informáciami pri používaní www.sleep-test.org. Používaním stránky potvrdzujete, že ste si tieto podmienky prečítali a prijali. Stránka je navrhnutá tak, aby ju mohli školy používať bez poskytovania osobných údajov.",
+    "li1": "Aké údaje spracúvame: Nezbierame mená, e-maily ani iné priamo identifikovateľné údaje. Na zobrazenie a zapamätanie výsledkov sa ukladá iba systémom vygenerované ID spolu so zhrnutím odpovedí. Nepoužívame marketingové cookies, skripty tretích strán ani profilovanie.",
+    "li2": "Účel a právny základ: Účelom je poskytovanie služby a zlepšenie jej kvality. Právnym základom je oprávnený záujem (GDPR čl. 6(1)(f)) na bezpečnom a funkčnom riešení bez spracúvania osobných údajov. Technické logy sa môžu spracúvať na riešenie problémov a bezpečnosť.",
+    "li3": "Ukladanie a vymazanie: Technické ID a zhrnutia výsledkov sa uchovávajú iba tak dlho, ako je potrebné na uvedený účel. Ak sa domnievate, že obsah by mal byť vymazaný, kontaktujte nás na kontor@dmz.no.",
+    "li4": "Zdieľanie a prenos: Údaje neposkytujeme tretím stranám. Ak využijeme subdodávateľov (spracovateľov údajov) na prevádzku, budú zmluvne zaviazaní chrániť údaje a nepoužívať ich na vlastné účely.",
+    "li5": "Použitie v školách a deťmi: Službu možno používať v školách bez poskytovania údajov študentov. Učitelia a študenti môžu stránku čítať a používať bez registrácie. Nezhromažďujeme žiadne osobné údaje nad rámec toho, čo je striktne potrebné na technickú prevádzku.",
+    "li6": "Cookies: Nepoužívame zbytočné cookies. Ak v budúcnosti zavedie­me funkčné cookies (napr. na jazykové preferencie), aktualizujeme tieto zásady a požiadame o súhlas, kde to bude potrebné.",
+    "li7": "Vaše práva a kontakt: Ak máte otázky, chcete získať prístup k technickým údajom alebo požiadať o vymazanie, kontaktujte nás na kontor@dmz.no. Môžete sa tiež obrátiť na Úrad na ochranu osobných údajov (Datatilsynet).",
+    "li8": "Zmeny: Tieto zásady môžeme podľa potreby aktualizovať. Podstatné zmeny budú zverejnené tu."
+  },
+  "test": {
+    "title": "Test spánku",
+    "submit": "Odoslať",
+    "progress": "Priebeh"
+  },
+  "common": {
+    "sending": "Odosielanie…",
+    "back": "Späť",
+    "next": "Ďalej",
+    "read": "Čítať",
+    "error_submit": "Nepodarilo sa odoslať. Skúste znova."
+  },
+  "likert": {
+    "1": "Nikdy",
+    "2": "Zriedka",
+    "3": "Niekedy",
+    "4": "Často",
+    "5": "Veľmi často"
+  }
+}
