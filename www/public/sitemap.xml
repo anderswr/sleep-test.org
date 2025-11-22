@@ -80,11 +80,4 @@
     <changefreq>monthly</changefreq>
   </url>
 
-  <!-- Personvern -->
-  <url>
-    <loc>https://sleep-test.org/privacy</loc>
-    <priority>0.4</priority>
-    <changefreq>yearly</changefreq>
-  </url>
-
 </urlset>
