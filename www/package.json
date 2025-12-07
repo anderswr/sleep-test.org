@@ -10,8 +10,8 @@
   "dependencies": {
     "mongodb": "^6.6.0",
     "next": "15.2.6",
-    "react": "19.0.0-rc.1",
-    "react-dom": "19.0.0-rc.1",
+    "react": "19.0.0-rc-de68d2f4-20241204",
+    "react-dom": "19.0.0-rc-de68d2f4-20241204",
     "marked": "^12.0.0",
     "@vercel/analytics": "^1.0.0",
     "@vercel/speed-insights": "^1.0.0"
