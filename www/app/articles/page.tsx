@@ -94,8 +94,8 @@ export default function ArticlesPage() {
                     alt={a.title}
                     className="card-image"
                     loading="lazy"
-                    width={640}
-                    height={360}
+                    width={550}
+                    height={367}
                     sizes="(max-width: 980px) 100vw, 33vw"
                   />
                   <span className="media-gradient" aria-hidden />
@@ -156,12 +156,12 @@ export default function ArticlesPage() {
           .card-image {
             width: 100%;
             height: auto;
-            aspect-ratio: 16 / 9;
             object-fit: cover;
             display: block;
             transform: scale(1);
             filter: saturate(0.9) contrast(0.98);
             transition: transform 300ms ease, filter 300ms ease, opacity 300ms ease;
+            border-bottom: 1px solid var(--border);
           }
           .media-gradient {
             position: absolute;

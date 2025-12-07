@@ -47,7 +47,16 @@
         "red": "Вам следует изменить свои привычки в "
       },
       "lookup_hint": "Когда вы завершаете тест, вы получаете ID. Он анонимный, и вы можете открыть свой отчет в любое время. Вставьте свой ID, чтобы просмотреть отчет.",
-      "id_placeholder": "Ваш ID"
+      "id_placeholder": "Ваш ID",
+      "share": "Share report",
+      "suggestions": {
+        "title": "Improvement areas",
+        "subtitle": "Your result is based on your answers—focus on what feels relevant to you.",
+        "read_more": "Read more",
+        "score_green": "Good",
+        "score_orange": "Medium",
+        "score_red": "Needs attention"
+      }
     },
     "articles": {
       "minutes": {
@@ -94,6 +103,10 @@
           "teaser": "Когда храп безвреден, когда это может быть апноэ сна и что делать дальше."
         }
       }
+    },
+    "common": {
+      "copied": "Copied!",
+      "copy_link": "Copy link"
     }
   },
   "about": {
@@ -137,14 +150,38 @@
     "5": "Очень часто"
   },
   "category": {
-    "pattern": { "name": "Режим и продолжительность сна", "desc": "Длительность и регулярность." },
-    "insomnia": { "name": "Засыпание и ночь", "desc": "Засыпание, пробуждения, раннее утро." },
-    "quality": { "name": "Качество сна", "desc": "Восприятие качества и удовлетворенность." },
-    "daytime": { "name": "День и сонливость", "desc": "Сонливость и дневная активность." },
-    "hygiene": { "name": "Гигиена сна и рутины", "desc": "Привычки и время (экраны, кофеин)." },
-    "environment": { "name": "Среда сна", "desc": "Свет, шум, температура, кровать." },
-    "breathing": { "name": "Храп и дыхание", "desc": "Возможные признаки апноэ сна." },
-    "bloodpressure": { "name": "Давление – факторы образа жизни", "desc": "Диета, активность, алкоголь, стресс и вес." }
+    "pattern": {
+      "name": "Режим и продолжительность сна",
+      "desc": "Длительность и регулярность."
+    },
+    "insomnia": {
+      "name": "Засыпание и ночь",
+      "desc": "Засыпание, пробуждения, раннее утро."
+    },
+    "quality": {
+      "name": "Качество сна",
+      "desc": "Восприятие качества и удовлетворенность."
+    },
+    "daytime": {
+      "name": "День и сонливость",
+      "desc": "Сонливость и дневная активность."
+    },
+    "hygiene": {
+      "name": "Гигиена сна и рутины",
+      "desc": "Привычки и время (экраны, кофеин)."
+    },
+    "environment": {
+      "name": "Среда сна",
+      "desc": "Свет, шум, температура, кровать."
+    },
+    "breathing": {
+      "name": "Храп и дыхание",
+      "desc": "Возможные признаки апноэ сна."
+    },
+    "bloodpressure": {
+      "name": "Давление – факторы образа жизни",
+      "desc": "Диета, активность, алкоголь, стресс и вес."
+    }
   },
   "q": {
     "pattern": {
@@ -201,48 +238,130 @@
   },
   "tips": {
     "pattern": {
-      "keep_routine": "Соблюдайте стабильный режим сна – похожее время отхода ко сну и пробуждения большинство дней.",
-      "short_naps": "Если вам нужен сон днем, держите его коротким (20–30 мин) и пораньше.",
-      "consistent_bed_wake": "Старайтесь придерживаться постоянного времени сна и пробуждения (±30–60 мин).",
-      "plan_winddown": "Создайте простую рутину расслабления за 30–60 мин до сна (тусклый свет, спокойные занятия).",
-      "protect_7h": "Обеспечьте себе окно сна не менее 7 часов в большинстве ночей.",
-      "cut_late_naps": "Избегайте длинных или поздних дневных снов после ~15–16 ч — они могут задержать ночной сон."
+      "keep_routine": {
+        "title": "Keep your current rhythm",
+        "desc": "Fixed bed and wake times are working—stick with them."
+      },
+      "protect_7h": {
+        "title": "Protect at least 7 hours in bed",
+        "desc": "Block enough time so sleep pressure can build and you can recover."
+      },
+      "consistent_bed_wake": {
+        "title": "Regular bed and wake windows",
+        "desc": "Aim for roughly the same hours every day, even on weekends."
+      },
+      "plan_winddown": {
+        "title": "Plan a 20–30 minute wind-down",
+        "desc": "Dim lights, screens off, and do something calm before bed."
+      },
+      "cut_late_naps": {
+        "title": "Skip late naps",
+        "desc": "Avoid napping after mid-afternoon so you’re sleepy at night."
+      }
     },
     "insomnia": {
-      "maintain": "Сохраняйте то, что уже работает – маленькие стабильные привычки складываются.",
-      "rule_20min": "Если бодрствуете ~20 мин в постели: встаньте, сделайте что-то спокойное при слабом свете и попробуйте снова.",
-      "fixed_wake": "Соблюдайте фиксированное время пробуждения всегда – это тренирует ваши биологические часы.",
-      "stimulus_control": "Используйте кровать только для сна и интимности – не для TV, телефона или работы.",
-      "consider_cbti": "Если проблемы сохраняются: подумайте о КПТ-бессонницы (когнитивно-поведенческая терапия бессонницы)."
+      "maintain": {
+        "title": "Keep the helpful habits",
+        "desc": "You’re handling awakenings well—keep the routine steady."
+      },
+      "rule_20min": {
+        "title": "20-minute rule",
+        "desc": "If you can’t sleep, get up briefly and reset with a calm activity."
+      },
+      "fixed_wake": {
+        "title": "Fixed wake time",
+        "desc": "Wake at the same time daily to retrain your sleep drive."
+      },
+      "stimulus_control": {
+        "title": "Bed = sleep",
+        "desc": "Use the bed only for sleep and intimacy; move elsewhere when awake."
+      },
+      "consider_cbti": {
+        "title": "Consider CBT-I",
+        "desc": "If insomnia persists, a CBT-I program or clinician can help."
+      }
     },
     "quality": {
-      "track_triggers": "Отслеживайте возможные триггеры (кофеин, время тренировок, стресс), чтобы выявить закономерности.",
-      "address_disruptors": "Снижайте распространенные раздражители (шум, свет, дискомфорт, поздние экраны).",
-      "consult_if_pain": "Постоянная боль, беспокойство или кошмары? Обратитесь к врачу."
+      "track_triggers": {
+        "title": "Track triggers",
+        "desc": "Note what helps or hurts your nights to spot patterns."
+      },
+      "address_disruptors": {
+        "title": "Tackle disruptions",
+        "desc": "Reduce pain, noise, light, or worries that fragment sleep."
+      },
+      "consult_if_pain": {
+        "title": "Check pain or discomfort",
+        "desc": "If pain or breathing issues wake you, talk with a professional."
+      }
     },
     "daytime": {
-      "morning_light": "Получайте утренний свет (10–30 мин), чтобы повысить бодрость и закрепить циркадный ритм.",
-      "activity_breaks": "Делайте короткие перерывы на движение в течение дня; планируйте легкую активность вечером.",
-      "consider_medical": "Сильная дневная сонливость? Подумайте о медицинской проверке (например, апноэ сна или другие причины)."
+      "morning_light": {
+        "title": "Morning light",
+        "desc": "Get bright light within an hour of waking to anchor your rhythm."
+      },
+      "activity_breaks": {
+        "title": "Movement breaks",
+        "desc": "Short walks or stretches through the day boost energy later."
+      },
+      "consider_medical": {
+        "title": "Check ongoing sleepiness",
+        "desc": "If you’re very sleepy despite time in bed, consider a medical check."
+      }
     },
     "hygiene": {
-      "keep_it_up": "Сохраняйте привычки, которые уже помогают вашему сну.",
-      "screens_off_60": "Отключите экраны или снизьте их использование за 60 минут до сна.",
-      "limit_caffeine": "Избегайте кофеина после ~14–16 ч (6–8 ч до сна).",
-      "no_alcohol_late": "Избегайте алкоголя перед сном – он фрагментирует сон.",
-      "no_big_meals_late": "Избегайте тяжелых ужинов прямо перед сном; при необходимости выберите легкий перекус."
+      "keep_it_up": {
+        "title": "Keep your current wind-down",
+        "desc": "Your evening routine works—keep repeating it."
+      },
+      "screens_off_60": {
+        "title": "Screens off 60 minutes before bed",
+        "desc": "Shift to low light and calmer activities the last hour."
+      },
+      "limit_caffeine": {
+        "title": "Limit caffeine after lunch",
+        "desc": "Stop caffeine 6–8 hours before bed to protect sleep pressure."
+      },
+      "no_alcohol_late": {
+        "title": "Skip late alcohol",
+        "desc": "Avoid evening alcohol to prevent shallow, fragmented sleep."
+      }
     },
     "environment": {
-      "keep_cool_dark": "Держите спальню прохладной, темной и чистой – сделайте кровать сигналом для сна.",
-      "test_blackout": "Попробуйте затемняющие шторы/маску для глаз и приглушенный свет вечером.",
-      "noise_control": "Уберите шум (беруши, белый шум, ровный фоновый звук), если нужно.",
-      "try_new_pillow": "Оцените подушку/матрас – замените, если просыпаетесь с дискомфортом.",
-      "cooler_temp": "Понизьте температуру или используйте более легкое постельное белье, если вам жарко ночью."
+      "keep_cool_dark": {
+        "title": "Cool, dark room",
+        "desc": "Blackout curtains and a slight drop in temperature help quality."
+      },
+      "test_blackout": {
+        "title": "Test blackout and dim lights",
+        "desc": "Use masks or blackout to cut light leaks."
+      },
+      "noise_control": {
+        "title": "Quiet the room",
+        "desc": "Earplugs, white noise, or steady fan sounds reduce wake-ups."
+      },
+      "try_new_pillow": {
+        "title": "Try a pillow that fits you",
+        "desc": "A supportive pillow can reduce aches and tossing."
+      },
+      "cooler_temp": {
+        "title": "Cooler bedroom",
+        "desc": "Aim slightly cooler than daytime for better sleep depth."
+      }
     },
     "breathing": {
-      "side_sleep": "Попробуйте спать на боку (с подушкой за спиной) – это может снизить храп/апноэ у некоторых.",
-      "reduce_evening_alcohol": "Избегайте алкоголя вечером – он может усилить храп/дыхательные проблемы.",
-      "consider_gp_check": "Подозреваете апноэ сна (громкий храп, наблюдаемые паузы, дневная сонливость)? Обратитесь к врачу."
+      "side_sleep": {
+        "title": "Sleep on your side",
+        "desc": "Side-sleeping can reduce snoring and breathing pauses."
+      },
+      "reduce_evening_alcohol": {
+        "title": "Reduce evening alcohol",
+        "desc": "Alcohol relaxes airways and can worsen snoring."
+      },
+      "consider_gp_check": {
+        "title": "Talk to a doctor if snoring is heavy",
+        "desc": "Persistent loud snoring or pauses should be checked."
+      }
     }
   }
 }

@@ -122,9 +122,9 @@ export default function ArticlePageClient({ slug }: ArticlePageClientProps) {
                 className="hero-image"
                 onError={() => setShowHero(false)}
                 priority
-                width={1600}
-                height={900}
-                sizes="(max-width: 800px) 100vw, 800px"
+                width={550}
+                height={367}
+                sizes="(max-width: 960px) 100vw, 720px"
               />
             </div>
           )}
@@ -153,8 +153,8 @@ export default function ArticlePageClient({ slug }: ArticlePageClientProps) {
             height: auto;
             display: block;
             object-fit: cover;
-            aspect-ratio: 16 / 9;        /* holder en rolig høyde på toppbilder */
             filter: saturate(0.96) contrast(0.99);
+            border-bottom: 1px solid var(--border);
           }
         `}</style>
       </main>

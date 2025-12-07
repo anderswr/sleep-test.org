@@ -47,7 +47,16 @@
         "red": "आपको अपनी आदतें बदलनी चाहिए "
       },
       "lookup_hint": "जब आप एक परीक्षण पूरा करते हैं तो आपको एक आईडी प्राप्त होती है। यह गुमनाम है, और आप अपनी रिपोर्ट कभी भी देख सकते हैं। रिपोर्ट देखने के लिए अपनी आईडी पेस्ट करें।",
-      "id_placeholder": "आपकी आईडी"
+      "id_placeholder": "आपकी आईडी",
+      "share": "Share report",
+      "suggestions": {
+        "title": "Improvement areas",
+        "subtitle": "Your result is based on your answers—focus on what feels relevant to you.",
+        "read_more": "Read more",
+        "score_green": "Good",
+        "score_orange": "Medium",
+        "score_red": "Needs attention"
+      }
     },
     "articles": {
       "minutes": {
@@ -94,6 +103,10 @@
           "teaser": "जब खर्राटे हानिरहित हों, जब यह स्लीप एपनिया हो सकता है, और आगे क्या करना है।"
         }
       }
+    },
+    "common": {
+      "copied": "Copied!",
+      "copy_link": "Copy link"
     }
   },
   "about": {
@@ -137,14 +150,38 @@
     "5": "बहुत अक्सर"
   },
   "category": {
-    "pattern": { "name": "नींद पैटर्न और अवधि", "desc": "लंबाई और नियमितता।" },
-    "insomnia": { "name": "सोना और रात", "desc": "सोने की शुरुआत, बार-बार जागना, सुबह जल्दी।" },
-    "quality": { "name": "नींद की गुणवत्ता", "desc": "अनुभव और संतुष्टि।" },
-    "daytime": { "name": "दिन और नींद", "desc": "नींद और दिन का कार्य।" },
-    "hygiene": { "name": "नींद की स्वच्छता और दिनचर्या", "desc": "आदतें और समय (स्क्रीन, कैफीन)।" },
-    "environment": { "name": "नींद का वातावरण", "desc": "रोशनी, शोर, तापमान, बिस्तर।" },
-    "breathing": { "name": "खर्राटे और श्वसन संकेत", "desc": "स्लीप एपनिया के संभावित संकेत।" },
-    "bloodpressure": { "name": "रक्तचाप – जीवनशैली जोखिम", "desc": "आहार, गतिविधि, शराब, तनाव, और वजन।" }
+    "pattern": {
+      "name": "नींद पैटर्न और अवधि",
+      "desc": "लंबाई और नियमितता।"
+    },
+    "insomnia": {
+      "name": "सोना और रात",
+      "desc": "सोने की शुरुआत, बार-बार जागना, सुबह जल्दी।"
+    },
+    "quality": {
+      "name": "नींद की गुणवत्ता",
+      "desc": "अनुभव और संतुष्टि।"
+    },
+    "daytime": {
+      "name": "दिन और नींद",
+      "desc": "नींद और दिन का कार्य।"
+    },
+    "hygiene": {
+      "name": "नींद की स्वच्छता और दिनचर्या",
+      "desc": "आदतें और समय (स्क्रीन, कैफीन)।"
+    },
+    "environment": {
+      "name": "नींद का वातावरण",
+      "desc": "रोशनी, शोर, तापमान, बिस्तर।"
+    },
+    "breathing": {
+      "name": "खर्राटे और श्वसन संकेत",
+      "desc": "स्लीप एपनिया के संभावित संकेत।"
+    },
+    "bloodpressure": {
+      "name": "रक्तचाप – जीवनशैली जोखिम",
+      "desc": "आहार, गतिविधि, शराब, तनाव, और वजन।"
+    }
   },
   "q": {
     "pattern": {
@@ -201,48 +238,130 @@
   },
   "tips": {
     "pattern": {
-      "keep_routine": "एक स्थिर नींद दिनचर्या बनाए रखें — अधिकांश दिनों में समान सोने और जागने का समय।",
-      "short_naps": "यदि आपको झपकी लेनी है, तो इसे छोटा रखें (20–30 मिनट) और दिन में पहले।",
-      "consistent_bed_wake": "लगातार सोने और जागने का लक्ष्य रखें (±30–60 मिनट)।",
-      "plan_winddown": "सोने से 30–60 मिनट पहले एक सरल आराम दिनचर्या बनाएं (मंद रोशनी, कम उत्तेजक गतिविधियाँ)।",
-      "protect_7h": "अधिकांश रातों में कम से कम 7 घंटे की नींद की खिड़की की रक्षा करें।",
-      "cut_late_naps": "3–4 बजे के बाद लंबी या देर से झपकी से बचें — वे रात की नींद को प्रभावित कर सकती हैं।"
+      "keep_routine": {
+        "title": "Keep your current rhythm",
+        "desc": "Fixed bed and wake times are working—stick with them."
+      },
+      "protect_7h": {
+        "title": "Protect at least 7 hours in bed",
+        "desc": "Block enough time so sleep pressure can build and you can recover."
+      },
+      "consistent_bed_wake": {
+        "title": "Regular bed and wake windows",
+        "desc": "Aim for roughly the same hours every day, even on weekends."
+      },
+      "plan_winddown": {
+        "title": "Plan a 20–30 minute wind-down",
+        "desc": "Dim lights, screens off, and do something calm before bed."
+      },
+      "cut_late_naps": {
+        "title": "Skip late naps",
+        "desc": "Avoid napping after mid-afternoon so you’re sleepy at night."
+      }
     },
     "insomnia": {
-      "maintain": "जो पहले से काम कर रहा है उसे बनाए रखें — छोटे, स्थिर आदतें जोड़ती हैं।",
-      "rule_20min": "यदि बिस्तर पर ~20 मिनट जागे हैं: उठें, कम रोशनी में कुछ शांत करें, और फिर से प्रयास करें।",
-      "fixed_wake": "एक निश्चित जागने का समय रखें — यह आपके शरीर की घड़ी को प्रशिक्षित करता है।",
-      "stimulus_control": "बिस्तर को केवल नींद और निकटता के लिए सुरक्षित रखें — टीवी, फोन, या काम के लिए नहीं।",
-      "consider_cbti": "यदि समस्याएं बनी रहती हैं: CBT-I (अनिद्रा के लिए संज्ञानात्मक व्यवहार थेरेपी) पर विचार करें।"
+      "maintain": {
+        "title": "Keep the helpful habits",
+        "desc": "You’re handling awakenings well—keep the routine steady."
+      },
+      "rule_20min": {
+        "title": "20-minute rule",
+        "desc": "If you can’t sleep, get up briefly and reset with a calm activity."
+      },
+      "fixed_wake": {
+        "title": "Fixed wake time",
+        "desc": "Wake at the same time daily to retrain your sleep drive."
+      },
+      "stimulus_control": {
+        "title": "Bed = sleep",
+        "desc": "Use the bed only for sleep and intimacy; move elsewhere when awake."
+      },
+      "consider_cbti": {
+        "title": "Consider CBT-I",
+        "desc": "If insomnia persists, a CBT-I program or clinician can help."
+      }
     },
     "quality": {
-      "track_triggers": "संभावित ट्रिगर्स (कैफीन, व्यायाम समय, तनाव) का ट्रैक रखें।",
-      "address_disruptors": "सामान्य बाधाओं (शोर, रोशनी, असुविधा, देर रात स्क्रीन समय) को कम करें।",
-      "consult_if_pain": "लगातार दर्द, बेचैनी, या दुःस्वप्न? किसी चिकित्सक से परामर्श लें।"
+      "track_triggers": {
+        "title": "Track triggers",
+        "desc": "Note what helps or hurts your nights to spot patterns."
+      },
+      "address_disruptors": {
+        "title": "Tackle disruptions",
+        "desc": "Reduce pain, noise, light, or worries that fragment sleep."
+      },
+      "consult_if_pain": {
+        "title": "Check pain or discomfort",
+        "desc": "If pain or breathing issues wake you, talk with a professional."
+      }
     },
     "daytime": {
-      "morning_light": "सुबह की रोशनी (10–30 मिनट) प्राप्त करें — यह सतर्कता बढ़ाती है और आपकी जैविक घड़ी को स्थिर करती है।",
-      "activity_breaks": "दिन भर में छोटे मूवमेंट ब्रेक लें; शाम को हल्की गतिविधि निर्धारित करें।",
-      "consider_medical": "गंभीर दिन की नींद? चिकित्सीय जांच पर विचार करें (जैसे स्लीप एपनिया)।"
+      "morning_light": {
+        "title": "Morning light",
+        "desc": "Get bright light within an hour of waking to anchor your rhythm."
+      },
+      "activity_breaks": {
+        "title": "Movement breaks",
+        "desc": "Short walks or stretches through the day boost energy later."
+      },
+      "consider_medical": {
+        "title": "Check ongoing sleepiness",
+        "desc": "If you’re very sleepy despite time in bed, consider a medical check."
+      }
     },
     "hygiene": {
-      "keep_it_up": "नींद-सहायक आदतों को बनाए रखें जो पहले से मदद करती हैं।",
-      "screens_off_60": "सोने से 60 मिनट पहले स्क्रीन का उपयोग न करें।",
-      "limit_caffeine": "कैफीन से बचें ~2–4 बजे के बाद (सोने से 6–8 घंटे पहले)।",
-      "no_alcohol_late": "सोने के समय के पास शराब छोड़ें — यह नींद को टुकड़ों में बांट देता है।",
-      "no_big_meals_late": "सोने से ठीक पहले बड़े, भारी भोजन से बचें; आवश्यकता हो तो हल्का नाश्ता चुनें।"
+      "keep_it_up": {
+        "title": "Keep your current wind-down",
+        "desc": "Your evening routine works—keep repeating it."
+      },
+      "screens_off_60": {
+        "title": "Screens off 60 minutes before bed",
+        "desc": "Shift to low light and calmer activities the last hour."
+      },
+      "limit_caffeine": {
+        "title": "Limit caffeine after lunch",
+        "desc": "Stop caffeine 6–8 hours before bed to protect sleep pressure."
+      },
+      "no_alcohol_late": {
+        "title": "Skip late alcohol",
+        "desc": "Avoid evening alcohol to prevent shallow, fragmented sleep."
+      }
     },
     "environment": {
-      "keep_cool_dark": "शयनकक्ष को ठंडा, अंधेरा और साफ-सुथरा रखें — बिस्तर को नींद का संकेत बनाएं।",
-      "test_blackout": "ब्लैकआउट पर्दे/आई मास्क और शाम की मंद रोशनी का प्रयास करें।",
-      "noise_control": "शोर को नियंत्रित करें (ईयरप्लग, व्हाइट नॉइज़, पृष्ठभूमि ध्वनि) यदि आवश्यक हो।",
-      "try_new_pillow": "तकिया/गद्दे का मूल्यांकन करें — यदि आप असुविधा के साथ उठते हैं तो बदलें।",
-      "cooler_temp": "यदि आप रात में अधिक गर्म हो जाते हैं तो तापमान कम करें या हल्की बिस्तर सामग्री का उपयोग करें।"
+      "keep_cool_dark": {
+        "title": "Cool, dark room",
+        "desc": "Blackout curtains and a slight drop in temperature help quality."
+      },
+      "test_blackout": {
+        "title": "Test blackout and dim lights",
+        "desc": "Use masks or blackout to cut light leaks."
+      },
+      "noise_control": {
+        "title": "Quiet the room",
+        "desc": "Earplugs, white noise, or steady fan sounds reduce wake-ups."
+      },
+      "try_new_pillow": {
+        "title": "Try a pillow that fits you",
+        "desc": "A supportive pillow can reduce aches and tossing."
+      },
+      "cooler_temp": {
+        "title": "Cooler bedroom",
+        "desc": "Aim slightly cooler than daytime for better sleep depth."
+      }
     },
     "breathing": {
-      "side_sleep": "साइड-स्लीपिंग आज़माएं (पीठ के पीछे तकिया रखें) — कुछ लोगों के लिए खर्राटे/एपनिया कम हो सकते हैं।",
-      "reduce_evening_alcohol": "शाम को शराब से बचें — यह खर्राटे/सांस लेने की समस्याओं को खराब कर सकता है।",
-      "consider_gp_check": "स्लीप एपनिया का संदेह (जोरदार खर्राटे, देखे गए रुकावट, दिन की थकान)? अपने डॉक्टर को दिखाएं।"
+      "side_sleep": {
+        "title": "Sleep on your side",
+        "desc": "Side-sleeping can reduce snoring and breathing pauses."
+      },
+      "reduce_evening_alcohol": {
+        "title": "Reduce evening alcohol",
+        "desc": "Alcohol relaxes airways and can worsen snoring."
+      },
+      "consider_gp_check": {
+        "title": "Talk to a doctor if snoring is heavy",
+        "desc": "Persistent loud snoring or pauses should be checked."
+      }
     }
   }
 }

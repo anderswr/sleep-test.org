@@ -47,7 +47,16 @@
         "red": "Deberías cambiar tus hábitos en "
       },
       "lookup_hint": "Cuando completes una prueba recibirás un ID. Es anónimo y puedes abrir tu informe en cualquier momento. Pega tu ID para ver el informe.",
-      "id_placeholder": "Tu ID"
+      "id_placeholder": "Tu ID",
+      "share": "Share report",
+      "suggestions": {
+        "title": "Improvement areas",
+        "subtitle": "Your result is based on your answers—focus on what feels relevant to you.",
+        "read_more": "Read more",
+        "score_green": "Good",
+        "score_orange": "Medium",
+        "score_red": "Needs attention"
+      }
     },
     "articles": {
       "minutes": {
@@ -94,6 +103,10 @@
           "teaser": "Cuándo los ronquidos son inofensivos, cuándo podría ser apnea del sueño y qué hacer después."
         }
       }
+    },
+    "common": {
+      "copied": "Copied!",
+      "copy_link": "Copy link"
     }
   },
   "about": {
@@ -137,14 +150,38 @@
     "5": "Muy a menudo"
   },
   "category": {
-    "pattern": { "name": "Patrón de sueño y duración", "desc": "Duración y regularidad." },
-    "insomnia": { "name": "Conciliar el sueño & noche", "desc": "Inicio del sueño, despertares, madrugada." },
-    "quality": { "name": "Calidad del sueño", "desc": "Calidad percibida y satisfacción." },
-    "daytime": { "name": "Somnolencia diurna", "desc": "Somnolencia y funcionamiento diurno." },
-    "hygiene": { "name": "Higiene del sueño & rutinas", "desc": "Hábitos y horarios (pantallas, cafeína)." },
-    "environment": { "name": "Entorno de sueño", "desc": "Luz, ruido, temperatura, cama." },
-    "breathing": { "name": "Ronquidos & señales respiratorias", "desc": "Posibles signos de apnea del sueño." },
-    "bloodpressure": { "name": "Presión arterial – riesgo de estilo de vida", "desc": "Dieta, actividad, alcohol, estrés y peso." }
+    "pattern": {
+      "name": "Patrón de sueño y duración",
+      "desc": "Duración y regularidad."
+    },
+    "insomnia": {
+      "name": "Conciliar el sueño & noche",
+      "desc": "Inicio del sueño, despertares, madrugada."
+    },
+    "quality": {
+      "name": "Calidad del sueño",
+      "desc": "Calidad percibida y satisfacción."
+    },
+    "daytime": {
+      "name": "Somnolencia diurna",
+      "desc": "Somnolencia y funcionamiento diurno."
+    },
+    "hygiene": {
+      "name": "Higiene del sueño & rutinas",
+      "desc": "Hábitos y horarios (pantallas, cafeína)."
+    },
+    "environment": {
+      "name": "Entorno de sueño",
+      "desc": "Luz, ruido, temperatura, cama."
+    },
+    "breathing": {
+      "name": "Ronquidos & señales respiratorias",
+      "desc": "Posibles signos de apnea del sueño."
+    },
+    "bloodpressure": {
+      "name": "Presión arterial – riesgo de estilo de vida",
+      "desc": "Dieta, actividad, alcohol, estrés y peso."
+    }
   },
   "q": {
     "pattern": {
@@ -201,48 +238,130 @@
   },
   "tips": {
     "pattern": {
-      "keep_routine": "Mantén una rutina de sueño estable – horarios similares de acostarse y levantarse la mayoría de los días.",
-      "short_naps": "Si necesitas una siesta, que sea corta (20–30 min) y más temprano en el día.",
-      "consistent_bed_wake": "Apunta a horarios consistentes para dormir y despertar (±30–60 min).",
-      "plan_winddown": "Crea una rutina sencilla de relajación 30–60 min antes de acostarte (luces tenues, actividades tranquilas).",
-      "protect_7h": "Protege una ventana de sueño de al menos 7 horas la mayoría de las noches.",
-      "cut_late_naps": "Evita siestas largas o tardías después de las ~15–16 h – pueden retrasar el sueño nocturno."
+      "keep_routine": {
+        "title": "Keep your current rhythm",
+        "desc": "Fixed bed and wake times are working—stick with them."
+      },
+      "protect_7h": {
+        "title": "Protect at least 7 hours in bed",
+        "desc": "Block enough time so sleep pressure can build and you can recover."
+      },
+      "consistent_bed_wake": {
+        "title": "Regular bed and wake windows",
+        "desc": "Aim for roughly the same hours every day, even on weekends."
+      },
+      "plan_winddown": {
+        "title": "Plan a 20–30 minute wind-down",
+        "desc": "Dim lights, screens off, and do something calm before bed."
+      },
+      "cut_late_naps": {
+        "title": "Skip late naps",
+        "desc": "Avoid napping after mid-afternoon so you’re sleepy at night."
+      }
     },
     "insomnia": {
-      "maintain": "Mantén lo que ya funciona – pequeños hábitos constantes suman.",
-      "rule_20min": "Si estás despierto ~20 min en la cama: levántate, haz algo tranquilo con poca luz e inténtalo de nuevo.",
-      "fixed_wake": "Mantén una hora fija de despertar — entrena tu reloj biológico.",
-      "stimulus_control": "Reserva la cama solo para dormir e intimidad — no para TV, teléfono o trabajo.",
-      "consider_cbti": "Si los problemas persisten: considera la CBT-I (terapia cognitivo-conductual para el insomnio)."
+      "maintain": {
+        "title": "Keep the helpful habits",
+        "desc": "You’re handling awakenings well—keep the routine steady."
+      },
+      "rule_20min": {
+        "title": "20-minute rule",
+        "desc": "If you can’t sleep, get up briefly and reset with a calm activity."
+      },
+      "fixed_wake": {
+        "title": "Fixed wake time",
+        "desc": "Wake at the same time daily to retrain your sleep drive."
+      },
+      "stimulus_control": {
+        "title": "Bed = sleep",
+        "desc": "Use the bed only for sleep and intimacy; move elsewhere when awake."
+      },
+      "consider_cbti": {
+        "title": "Consider CBT-I",
+        "desc": "If insomnia persists, a CBT-I program or clinician can help."
+      }
     },
     "quality": {
-      "track_triggers": "Registra posibles desencadenantes (cafeína, horario de ejercicio, estrés) para detectar patrones.",
-      "address_disruptors": "Reduce factores comunes de interrupción (ruido, luz, incomodidad, pantallas tarde).",
-      "consult_if_pain": "¿Dolor persistente, agitación o pesadillas? Consulta a un profesional."
+      "track_triggers": {
+        "title": "Track triggers",
+        "desc": "Note what helps or hurts your nights to spot patterns."
+      },
+      "address_disruptors": {
+        "title": "Tackle disruptions",
+        "desc": "Reduce pain, noise, light, or worries that fragment sleep."
+      },
+      "consult_if_pain": {
+        "title": "Check pain or discomfort",
+        "desc": "If pain or breathing issues wake you, talk with a professional."
+      }
     },
     "daytime": {
-      "morning_light": "Recibe luz matutina (10–30 min) para aumentar la alerta y anclar tu ritmo circadiano.",
-      "activity_breaks": "Haz pausas breves de movimiento durante el día; programa actividad ligera más temprano en la noche.",
-      "consider_medical": "¿Somnolencia diurna marcada? Considera un chequeo médico (ej. apnea del sueño u otras causas)."
+      "morning_light": {
+        "title": "Morning light",
+        "desc": "Get bright light within an hour of waking to anchor your rhythm."
+      },
+      "activity_breaks": {
+        "title": "Movement breaks",
+        "desc": "Short walks or stretches through the day boost energy later."
+      },
+      "consider_medical": {
+        "title": "Check ongoing sleepiness",
+        "desc": "If you’re very sleepy despite time in bed, consider a medical check."
+      }
     },
     "hygiene": {
-      "keep_it_up": "Mantén los hábitos que ya apoyan tu sueño.",
-      "screens_off_60": "Reduce o evita pantallas durante los últimos 60 minutos antes de acostarte.",
-      "limit_caffeine": "Evita cafeína después de ~14–16 h (6–8 horas antes de dormir).",
-      "no_alcohol_late": "Evita alcohol cerca de la hora de dormir — fragmenta el sueño.",
-      "no_big_meals_late": "Evita comidas grandes y pesadas justo antes de dormir; elige un snack ligero si lo necesitas."
+      "keep_it_up": {
+        "title": "Keep your current wind-down",
+        "desc": "Your evening routine works—keep repeating it."
+      },
+      "screens_off_60": {
+        "title": "Screens off 60 minutes before bed",
+        "desc": "Shift to low light and calmer activities the last hour."
+      },
+      "limit_caffeine": {
+        "title": "Limit caffeine after lunch",
+        "desc": "Stop caffeine 6–8 hours before bed to protect sleep pressure."
+      },
+      "no_alcohol_late": {
+        "title": "Skip late alcohol",
+        "desc": "Avoid evening alcohol to prevent shallow, fragmented sleep."
+      }
     },
     "environment": {
-      "keep_cool_dark": "Mantén el dormitorio fresco, oscuro y ordenado – haz de la cama una señal de sueño.",
-      "test_blackout": "Prueba cortinas opacas/antifaz y luz tenue por la noche.",
-      "noise_control": "Controla el ruido (tapones, ruido blanco, sonido de fondo constante) si es necesario.",
-      "try_new_pillow": "Evalúa la almohada/colchón – reemplázalos si despiertas con molestias.",
-      "cooler_temp": "Baja la temperatura o usa ropa de cama más ligera si te sobrecalientas de noche."
+      "keep_cool_dark": {
+        "title": "Cool, dark room",
+        "desc": "Blackout curtains and a slight drop in temperature help quality."
+      },
+      "test_blackout": {
+        "title": "Test blackout and dim lights",
+        "desc": "Use masks or blackout to cut light leaks."
+      },
+      "noise_control": {
+        "title": "Quiet the room",
+        "desc": "Earplugs, white noise, or steady fan sounds reduce wake-ups."
+      },
+      "try_new_pillow": {
+        "title": "Try a pillow that fits you",
+        "desc": "A supportive pillow can reduce aches and tossing."
+      },
+      "cooler_temp": {
+        "title": "Cooler bedroom",
+        "desc": "Aim slightly cooler than daytime for better sleep depth."
+      }
     },
     "breathing": {
-      "side_sleep": "Prueba dormir de lado (usa una almohada detrás de la espalda) – puede reducir ronquidos/apneas en algunos.",
-      "reduce_evening_alcohol": "Evita el alcohol en la noche – puede empeorar ronquidos/problemas respiratorios.",
-      "consider_gp_check": "¿Sospechas apnea del sueño (ronquidos fuertes, pausas observadas, somnolencia diurna)? Consulta a tu médico."
+      "side_sleep": {
+        "title": "Sleep on your side",
+        "desc": "Side-sleeping can reduce snoring and breathing pauses."
+      },
+      "reduce_evening_alcohol": {
+        "title": "Reduce evening alcohol",
+        "desc": "Alcohol relaxes airways and can worsen snoring."
+      },
+      "consider_gp_check": {
+        "title": "Talk to a doctor if snoring is heavy",
+        "desc": "Persistent loud snoring or pauses should be checked."
+      }
     }
   }
 }

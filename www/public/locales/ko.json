@@ -47,7 +47,16 @@
         "red": "습관을 바꿔야 합니다: "
       },
       "lookup_hint": "테스트를 완료하면 ID가 발급됩니다. 이는 익명이며 언제든지 보고서를 열 수 있습니다. ID를 붙여넣어 보고서를 확인하세요.",
-      "id_placeholder": "당신의 ID"
+      "id_placeholder": "당신의 ID",
+      "share": "Share report",
+      "suggestions": {
+        "title": "Improvement areas",
+        "subtitle": "Your result is based on your answers—focus on what feels relevant to you.",
+        "read_more": "Read more",
+        "score_green": "Good",
+        "score_orange": "Medium",
+        "score_red": "Needs attention"
+      }
     },
     "articles": {
       "minutes": {
@@ -94,6 +103,10 @@
           "teaser": "무해한 코골이와 수면 무호흡 가능성의 차이, 그리고 다음 단계."
         }
       }
+    },
+    "common": {
+      "copied": "Copied!",
+      "copy_link": "Copy link"
     }
   },
   "about": {
@@ -137,14 +150,38 @@
     "5": "매우 자주"
   },
   "category": {
-    "pattern": { "name": "수면 패턴 & 시간", "desc": "길이와 규칙성." },
-    "insomnia": { "name": "입면 & 야간", "desc": "입면, 각성, 조기 기상." },
-    "quality": { "name": "수면의 질", "desc": "인지된 질과 만족도." },
-    "daytime": { "name": "낮 시간 & 졸음", "desc": "졸음과 낮 기능." },
-    "hygiene": { "name": "수면 위생 & 루틴", "desc": "습관과 타이밍 (화면, 카페인)." },
-    "environment": { "name": "수면 환경", "desc": "빛, 소음, 온도, 침대." },
-    "breathing": { "name": "코골이 & 호흡 신호", "desc": "수면 무호흡 가능성." },
-    "bloodpressure": { "name": "혈압 – 생활습관 위험", "desc": "식습관, 활동, 알코올, 스트레스, 체중." }
+    "pattern": {
+      "name": "수면 패턴 & 시간",
+      "desc": "길이와 규칙성."
+    },
+    "insomnia": {
+      "name": "입면 & 야간",
+      "desc": "입면, 각성, 조기 기상."
+    },
+    "quality": {
+      "name": "수면의 질",
+      "desc": "인지된 질과 만족도."
+    },
+    "daytime": {
+      "name": "낮 시간 & 졸음",
+      "desc": "졸음과 낮 기능."
+    },
+    "hygiene": {
+      "name": "수면 위생 & 루틴",
+      "desc": "습관과 타이밍 (화면, 카페인)."
+    },
+    "environment": {
+      "name": "수면 환경",
+      "desc": "빛, 소음, 온도, 침대."
+    },
+    "breathing": {
+      "name": "코골이 & 호흡 신호",
+      "desc": "수면 무호흡 가능성."
+    },
+    "bloodpressure": {
+      "name": "혈압 – 생활습관 위험",
+      "desc": "식습관, 활동, 알코올, 스트레스, 체중."
+    }
   },
   "q": {
     "pattern": {
@@ -201,48 +238,130 @@
   },
   "tips": {
     "pattern": {
-      "keep_routine": "규칙적인 수면 루틴을 유지하세요 – 대부분의 날 비슷한 시간에 자고 일어나기.",
-      "short_naps": "낮잠이 필요하다면 짧게(20–30분) 하고, 낮 시간에 하세요.",
-      "consistent_bed_wake": "잠자리에 드는 시간과 기상 시간을 일정하게 유지하세요 (±30–60분).",
-      "plan_winddown": "잠자기 전 30–60분 동안 조명을 낮추고 자극이 적은 활동으로 간단한 루틴을 만드세요.",
-      "protect_7h": "대부분의 날 최소 7시간의 수면 시간을 확보하세요.",
-      "cut_late_naps": "오후 3–4시 이후 긴 낮잠은 피하세요 – 밤 수면을 방해할 수 있습니다."
+      "keep_routine": {
+        "title": "Keep your current rhythm",
+        "desc": "Fixed bed and wake times are working—stick with them."
+      },
+      "protect_7h": {
+        "title": "Protect at least 7 hours in bed",
+        "desc": "Block enough time so sleep pressure can build and you can recover."
+      },
+      "consistent_bed_wake": {
+        "title": "Regular bed and wake windows",
+        "desc": "Aim for roughly the same hours every day, even on weekends."
+      },
+      "plan_winddown": {
+        "title": "Plan a 20–30 minute wind-down",
+        "desc": "Dim lights, screens off, and do something calm before bed."
+      },
+      "cut_late_naps": {
+        "title": "Skip late naps",
+        "desc": "Avoid napping after mid-afternoon so you’re sleepy at night."
+      }
     },
     "insomnia": {
-      "maintain": "이미 잘 하고 있는 습관을 유지하세요 – 작은 꾸준함이 쌓여 큰 효과를 냅니다.",
-      "rule_20min": "침대에서 약 20분 이상 깨어 있다면: 일어나서 조용한 활동을 하고 다시 시도하세요.",
-      "fixed_wake": "기상 시간은 꼭 일정하게 유지하세요 – 몸의 생체시계를 훈련합니다.",
-      "stimulus_control": "침대는 수면과 친밀함에만 사용하세요 – TV, 휴대폰, 일은 피하세요.",
-      "consider_cbti": "문제가 지속된다면: 불면증을 위한 인지행동치료(CBT-I)를 고려하세요."
+      "maintain": {
+        "title": "Keep the helpful habits",
+        "desc": "You’re handling awakenings well—keep the routine steady."
+      },
+      "rule_20min": {
+        "title": "20-minute rule",
+        "desc": "If you can’t sleep, get up briefly and reset with a calm activity."
+      },
+      "fixed_wake": {
+        "title": "Fixed wake time",
+        "desc": "Wake at the same time daily to retrain your sleep drive."
+      },
+      "stimulus_control": {
+        "title": "Bed = sleep",
+        "desc": "Use the bed only for sleep and intimacy; move elsewhere when awake."
+      },
+      "consider_cbti": {
+        "title": "Consider CBT-I",
+        "desc": "If insomnia persists, a CBT-I program or clinician can help."
+      }
     },
     "quality": {
-      "track_triggers": "카페인, 운동 시간, 스트레스 등 수면에 영향을 줄 수 있는 요인을 기록해보세요.",
-      "address_disruptors": "소음, 빛, 불편함, 늦은 화면 사용과 같은 방해 요소를 줄이세요.",
-      "consult_if_pain": "통증, 불안, 악몽이 지속된다면 전문가와 상담하세요."
+      "track_triggers": {
+        "title": "Track triggers",
+        "desc": "Note what helps or hurts your nights to spot patterns."
+      },
+      "address_disruptors": {
+        "title": "Tackle disruptions",
+        "desc": "Reduce pain, noise, light, or worries that fragment sleep."
+      },
+      "consult_if_pain": {
+        "title": "Check pain or discomfort",
+        "desc": "If pain or breathing issues wake you, talk with a professional."
+      }
     },
     "daytime": {
-      "morning_light": "아침 햇빛을 10–30분 동안 쬐세요 – 각성을 돕고 생체리듬을 조절합니다.",
-      "activity_breaks": "하루 종일 짧은 활동 휴식을 가지세요. 저녁에는 가벼운 활동을 하세요.",
-      "consider_medical": "뚜렷한 낮 졸림이 있나요? 수면무호흡증 등 원인 확인을 위해 진료를 고려하세요."
+      "morning_light": {
+        "title": "Morning light",
+        "desc": "Get bright light within an hour of waking to anchor your rhythm."
+      },
+      "activity_breaks": {
+        "title": "Movement breaks",
+        "desc": "Short walks or stretches through the day boost energy later."
+      },
+      "consider_medical": {
+        "title": "Check ongoing sleepiness",
+        "desc": "If you’re very sleepy despite time in bed, consider a medical check."
+      }
     },
     "hygiene": {
-      "keep_it_up": "이미 도움이 되는 습관을 잘 유지하세요.",
-      "screens_off_60": "잠자기 전 60분 동안은 화면 사용을 줄이거나 피하세요.",
-      "limit_caffeine": "오후 2–4시 이후에는 카페인을 피하세요 (취침 6–8시간 전).",
-      "no_alcohol_late": "잠자기 직전의 음주는 피하세요 – 수면을 방해합니다.",
-      "no_big_meals_late": "잠자기 직전의 무거운 식사는 피하고, 필요하다면 가벼운 간식을 선택하세요."
+      "keep_it_up": {
+        "title": "Keep your current wind-down",
+        "desc": "Your evening routine works—keep repeating it."
+      },
+      "screens_off_60": {
+        "title": "Screens off 60 minutes before bed",
+        "desc": "Shift to low light and calmer activities the last hour."
+      },
+      "limit_caffeine": {
+        "title": "Limit caffeine after lunch",
+        "desc": "Stop caffeine 6–8 hours before bed to protect sleep pressure."
+      },
+      "no_alcohol_late": {
+        "title": "Skip late alcohol",
+        "desc": "Avoid evening alcohol to prevent shallow, fragmented sleep."
+      }
     },
     "environment": {
-      "keep_cool_dark": "침실을 시원하고 어둡고 정리된 상태로 유지하세요 – 침대를 수면 신호로 만드세요.",
-      "test_blackout": "암막 커튼이나 안대, 조명을 줄이는 방법을 시도하세요.",
-      "noise_control": "필요하다면 귀마개, 화이트노이즈, 일정한 배경음을 사용하세요.",
-      "try_new_pillow": "베개나 매트리스를 점검하고 불편하다면 교체하세요.",
-      "cooler_temp": "밤에 더워진다면 온도를 낮추거나 가벼운 침구를 사용하세요."
+      "keep_cool_dark": {
+        "title": "Cool, dark room",
+        "desc": "Blackout curtains and a slight drop in temperature help quality."
+      },
+      "test_blackout": {
+        "title": "Test blackout and dim lights",
+        "desc": "Use masks or blackout to cut light leaks."
+      },
+      "noise_control": {
+        "title": "Quiet the room",
+        "desc": "Earplugs, white noise, or steady fan sounds reduce wake-ups."
+      },
+      "try_new_pillow": {
+        "title": "Try a pillow that fits you",
+        "desc": "A supportive pillow can reduce aches and tossing."
+      },
+      "cooler_temp": {
+        "title": "Cooler bedroom",
+        "desc": "Aim slightly cooler than daytime for better sleep depth."
+      }
     },
     "breathing": {
-      "side_sleep": "옆으로 자는 것을 시도하세요 (등 뒤에 베개 사용) – 일부 사람들에게 코골이/무호흡을 줄일 수 있습니다.",
-      "reduce_evening_alcohol": "저녁의 음주는 피하세요 – 코골이나 호흡 문제를 악화시킬 수 있습니다.",
-      "consider_gp_check": "큰 코골이, 호흡 중단, 낮 동안의 졸음이 있나요? 의사에게 상담하세요."
+      "side_sleep": {
+        "title": "Sleep on your side",
+        "desc": "Side-sleeping can reduce snoring and breathing pauses."
+      },
+      "reduce_evening_alcohol": {
+        "title": "Reduce evening alcohol",
+        "desc": "Alcohol relaxes airways and can worsen snoring."
+      },
+      "consider_gp_check": {
+        "title": "Talk to a doctor if snoring is heavy",
+        "desc": "Persistent loud snoring or pauses should be checked."
+      }
     }
   }
 }
