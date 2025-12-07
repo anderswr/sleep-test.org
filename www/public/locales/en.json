@@ -47,7 +47,16 @@
         "red": "You should change your habits for "
       },
       "lookup_hint": "When you complete a test you receive an ID. It is anonymous, and you can open your report anytime. Paste your ID to view the report.",
-      "id_placeholder": "Your ID"
+      "id_placeholder": "Your ID",
+      "share": "Share report",
+      "suggestions": {
+        "title": "Improvement areas",
+        "subtitle": "Your result is based on your answers—focus on what feels relevant to you.",
+        "read_more": "Read more",
+        "score_green": "Good",
+        "score_orange": "Medium",
+        "score_red": "Needs attention"
+      }
     },
     "articles": {
       "minutes": {
@@ -94,17 +103,21 @@
           "teaser": "When snoring is harmless, when it might be sleep apnea, and what to do next."
         }
       }
+    },
+    "common": {
+      "copied": "Copied!",
+      "copy_link": "Copy link"
     }
   },
-"about": {
-  "title": "Created by DMZ DATA AS",
-  "intro": "Built almost without effort in Porsgrunn, combining healthtech/sleeptech and AI.",
-  "contact": {
-    "title": "Contact",
-    "p1": "Responsible for www.sleep-test.org is DMZ DATA AS. Contact point for privacy inquiries and general questions: kontor@dmz.no.",
-    "p2": "Explore DMZ DATA wonders at <a href='https://www.dmz.no' target='_blank' rel='noopener'>www.dmz.no</a>, an app to learn Google web search (<a href='https://apps.apple.com/no/app/toiletlearn-web-search/id6748481089' target='_blank' rel='noopener'>LINK</a>), an app to learn ChatGPT (<a href='https://apps.apple.com/us/app/toiletlearn-web-search/id6748926636?platform=iphone' target='_blank' rel='noopener'>LINK</a>), and make your Homey smart home a bit more fun with DadJokes (<a href='https://homey.app/no-no/app/com.dmz.dadjokesplus/DadJokes-Plus/test/' target='_blank' rel='noopener'>LINK</a>)."
-  }
-},
+  "about": {
+    "title": "Created by DMZ DATA AS",
+    "intro": "Built almost without effort in Porsgrunn, combining healthtech/sleeptech and AI.",
+    "contact": {
+      "title": "Contact",
+      "p1": "Responsible for www.sleep-test.org is DMZ DATA AS. Contact point for privacy inquiries and general questions: kontor@dmz.no.",
+      "p2": "Explore DMZ DATA wonders at <a href='https://www.dmz.no' target='_blank' rel='noopener'>www.dmz.no</a>, an app to learn Google web search (<a href='https://apps.apple.com/no/app/toiletlearn-web-search/id6748481089' target='_blank' rel='noopener'>LINK</a>), an app to learn ChatGPT (<a href='https://apps.apple.com/us/app/toiletlearn-web-search/id6748926636?platform=iphone' target='_blank' rel='noopener'>LINK</a>), and make your Homey smart home a bit more fun with DadJokes (<a href='https://homey.app/no-no/app/com.dmz.dadjokesplus/DadJokes-Plus/test/' target='_blank' rel='noopener'>LINK</a>)."
+    }
+  },
   "privacy": {
     "title": "Privacy Policy",
     "p1": "We take privacy seriously. This policy explains how we handle information when you use www.sleep-test.org. By using the site, you confirm that you have read and accepted these terms. The site is designed so that schools can use it without providing any personal information.",
@@ -122,7 +135,6 @@
     "submit": "Submit",
     "progress": "Progress"
   },
-
   "common": {
     "sending": "Sending…",
     "back": "Back",
@@ -138,14 +150,38 @@
     "5": "Very often"
   },
   "category": {
-    "pattern": { "name": "Sleep pattern & duration", "desc": "Length and regularity." },
-    "insomnia": { "name": "Falling asleep & night", "desc": "Sleep onset, awakenings, early morning." },
-    "quality": { "name": "Sleep quality", "desc": "Perceived quality and satisfaction." },
-    "daytime": { "name": "Daytime & sleepiness", "desc": "Sleepiness and daytime function." },
-    "hygiene": { "name": "Sleep hygiene & routines", "desc": "Habits and timing (screens, caffeine)." },
-    "environment": { "name": "Sleep environment", "desc": "Light, noise, temperature, bed." },
-    "breathing": { "name": "Snoring & breathing signals", "desc": "Possible signs of sleep apnea." },
-    "bloodpressure": { "name": "Blood pressure – lifestyle risk", "desc": "Diet, activity, alcohol, stress, and weight." }
+    "pattern": {
+      "name": "Sleep pattern & duration",
+      "desc": "Length and regularity."
+    },
+    "insomnia": {
+      "name": "Falling asleep & night",
+      "desc": "Sleep onset, awakenings, early morning."
+    },
+    "quality": {
+      "name": "Sleep quality",
+      "desc": "Perceived quality and satisfaction."
+    },
+    "daytime": {
+      "name": "Daytime & sleepiness",
+      "desc": "Sleepiness and daytime function."
+    },
+    "hygiene": {
+      "name": "Sleep hygiene & routines",
+      "desc": "Habits and timing (screens, caffeine)."
+    },
+    "environment": {
+      "name": "Sleep environment",
+      "desc": "Light, noise, temperature, bed."
+    },
+    "breathing": {
+      "name": "Snoring & breathing signals",
+      "desc": "Possible signs of sleep apnea."
+    },
+    "bloodpressure": {
+      "name": "Blood pressure – lifestyle risk",
+      "desc": "Diet, activity, alcohol, stress, and weight."
+    }
   },
   "q": {
     "pattern": {
@@ -195,55 +231,137 @@
       "overweight_self": "I consider myself overweight."
     }
   },
- "flags": {
+  "flags": {
     "osa_signal": "Possible signs of sleep apnea – consider talking to your doctor.",
     "excessive_sleepiness": "Marked daytime sleepiness – be extra careful.",
     "high_bp_risk": "Several lifestyle factors point to an increased risk of high blood pressure. Consider measuring your blood pressure when you have the opportunity, especially if you have type 2 diabetes or close relatives with cardiovascular disease."
   },
   "tips": {
     "pattern": {
-      "keep_routine": "Keep a stable sleep routine – similar bed and wake times most days.",
-      "short_naps": "If you need a nap, keep it short (20–30 min) and earlier in the day.",
-      "consistent_bed_wake": "Aim for consistent bed and wake times (±30–60 min).",
-      "plan_winddown": "Create a simple wind-down routine 30–60 min before bed (dim lights, low-stim activities).",
-      "protect_7h": "Protect a sleep window of at least 7 hours most nights.",
-      "cut_late_naps": "Avoid long or late naps after ~3–4 pm – they can delay night sleep."
+      "keep_routine": {
+        "title": "Keep your current rhythm",
+        "desc": "Fixed bed and wake times are working—stick with them."
+      },
+      "protect_7h": {
+        "title": "Protect at least 7 hours in bed",
+        "desc": "Block enough time so sleep pressure can build and you can recover."
+      },
+      "consistent_bed_wake": {
+        "title": "Regular bed and wake windows",
+        "desc": "Aim for roughly the same hours every day, even on weekends."
+      },
+      "plan_winddown": {
+        "title": "Plan a 20–30 minute wind-down",
+        "desc": "Dim lights, screens off, and do something calm before bed."
+      },
+      "cut_late_naps": {
+        "title": "Skip late naps",
+        "desc": "Avoid napping after mid-afternoon so you’re sleepy at night."
+      }
     },
     "insomnia": {
-      "maintain": "Maintain what already works – small, steady habits add up.",
-      "rule_20min": "If awake ~20 min in bed: get up, do something calm in low light, and try again.",
-      "fixed_wake": "Keep a fixed wake time regardless – it trains your body clock.",
-      "stimulus_control": "Reserve bed for sleep and intimacy only – not TV, phone, or work.",
-      "consider_cbti": "If problems persist: consider CBT-I (cognitive behavioral therapy for insomnia)."
+      "maintain": {
+        "title": "Keep the helpful habits",
+        "desc": "You’re handling awakenings well—keep the routine steady."
+      },
+      "rule_20min": {
+        "title": "20-minute rule",
+        "desc": "If you can’t sleep, get up briefly and reset with a calm activity."
+      },
+      "fixed_wake": {
+        "title": "Fixed wake time",
+        "desc": "Wake at the same time daily to retrain your sleep drive."
+      },
+      "stimulus_control": {
+        "title": "Bed = sleep",
+        "desc": "Use the bed only for sleep and intimacy; move elsewhere when awake."
+      },
+      "consider_cbti": {
+        "title": "Consider CBT-I",
+        "desc": "If insomnia persists, a CBT-I program or clinician can help."
+      }
     },
     "quality": {
-      "track_triggers": "Track potential triggers (caffeine, workout timing, stress) to spot patterns.",
-      "address_disruptors": "Reduce common disruptors (noise, light, discomfort, late screen time).",
-      "consult_if_pain": "Persistent pain, restlessness, or nightmares? Consult a clinician."
+      "track_triggers": {
+        "title": "Track triggers",
+        "desc": "Note what helps or hurts your nights to spot patterns."
+      },
+      "address_disruptors": {
+        "title": "Tackle disruptions",
+        "desc": "Reduce pain, noise, light, or worries that fragment sleep."
+      },
+      "consult_if_pain": {
+        "title": "Check pain or discomfort",
+        "desc": "If pain or breathing issues wake you, talk with a professional."
+      }
     },
     "daytime": {
-      "morning_light": "Get morning light (10–30 min) to boost alertness and anchor your circadian rhythm.",
-      "activity_breaks": "Take brief movement breaks across the day; schedule light activity earlier in the evening.",
-      "consider_medical": "Marked daytime sleepiness? Consider a medical check (e.g., sleep apnea or other causes)."
+      "morning_light": {
+        "title": "Morning light",
+        "desc": "Get bright light within an hour of waking to anchor your rhythm."
+      },
+      "activity_breaks": {
+        "title": "Movement breaks",
+        "desc": "Short walks or stretches through the day boost energy later."
+      },
+      "consider_medical": {
+        "title": "Check ongoing sleepiness",
+        "desc": "If you’re very sleepy despite time in bed, consider a medical check."
+      }
     },
     "hygiene": {
-      "keep_it_up": "Keep up the sleep-supportive habits that already help.",
-      "screens_off_60": "Go screen-light or screen-free for the last 60 minutes before bed.",
-      "limit_caffeine": "Avoid caffeine after ~2–4 pm (6–8 hours before bedtime).",
-      "no_alcohol_late": "Skip alcohol close to bedtime – it fragments sleep.",
-      "no_big_meals_late": "Avoid large, heavy meals right before bed; choose a light snack if needed."
+      "keep_it_up": {
+        "title": "Keep your current wind-down",
+        "desc": "Your evening routine works—keep repeating it."
+      },
+      "screens_off_60": {
+        "title": "Screens off 60 minutes before bed",
+        "desc": "Shift to low light and calmer activities the last hour."
+      },
+      "limit_caffeine": {
+        "title": "Limit caffeine after lunch",
+        "desc": "Stop caffeine 6–8 hours before bed to protect sleep pressure."
+      },
+      "no_alcohol_late": {
+        "title": "Skip late alcohol",
+        "desc": "Avoid evening alcohol to prevent shallow, fragmented sleep."
+      }
     },
     "environment": {
-      "keep_cool_dark": "Keep the bedroom cool, dark, and uncluttered – make the bed a sleep cue.",
-      "test_blackout": "Try blackout shades/eye mask and dim evening lighting.",
-      "noise_control": "Tame noise (earplugs, white noise, steady background sound) if needed.",
-      "try_new_pillow": "Evaluate pillow/mattress – replace if you wake with discomfort.",
-      "cooler_temp": "Lower temperature or use lighter bedding if you overheat at night."
+      "keep_cool_dark": {
+        "title": "Cool, dark room",
+        "desc": "Blackout curtains and a slight drop in temperature help quality."
+      },
+      "test_blackout": {
+        "title": "Test blackout and dim lights",
+        "desc": "Use masks or blackout to cut light leaks."
+      },
+      "noise_control": {
+        "title": "Quiet the room",
+        "desc": "Earplugs, white noise, or steady fan sounds reduce wake-ups."
+      },
+      "try_new_pillow": {
+        "title": "Try a pillow that fits you",
+        "desc": "A supportive pillow can reduce aches and tossing."
+      },
+      "cooler_temp": {
+        "title": "Cooler bedroom",
+        "desc": "Aim slightly cooler than daytime for better sleep depth."
+      }
     },
     "breathing": {
-      "side_sleep": "Try side-sleeping (use a pillow behind your back) – may reduce snoring/apneas for some.",
-      "reduce_evening_alcohol": "Avoid evening alcohol – it can worsen snoring/breathing issues.",
-      "consider_gp_check": "Suspect sleep apnea (loud snoring, witnessed pauses, daytime tiredness)? See your doctor."
+      "side_sleep": {
+        "title": "Sleep on your side",
+        "desc": "Side-sleeping can reduce snoring and breathing pauses."
+      },
+      "reduce_evening_alcohol": {
+        "title": "Reduce evening alcohol",
+        "desc": "Alcohol relaxes airways and can worsen snoring."
+      },
+      "consider_gp_check": {
+        "title": "Talk to a doctor if snoring is heavy",
+        "desc": "Persistent loud snoring or pauses should be checked."
+      }
     }
   }
 }

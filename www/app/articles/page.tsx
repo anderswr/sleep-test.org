@@ -1,6 +1,7 @@
 "use client";
 
 import * as React from "react";
+import Image from "next/image";
 import Link from "next/link";
 import SiteHeader from "@/components/SiteHeader";
 import SiteFooter from "@/components/SiteFooter";
@@ -88,11 +89,14 @@ export default function ArticlesPage() {
                 aria-label={a.title}
               >
                 <div className="media">
-                  <img
+                  <Image
                     src={`/images/${a.slug}.png`}
                     alt={a.title}
                     className="card-image"
                     loading="lazy"
+                    width={550}
+                    height={367}
+                    sizes="(max-width: 980px) 100vw, 33vw"
                   />
                   <span className="media-gradient" aria-hidden />
                 </div>
@@ -152,12 +156,12 @@ export default function ArticlesPage() {
           .card-image {
             width: 100%;
             height: auto;
-            aspect-ratio: 16 / 9;
             object-fit: cover;
             display: block;
             transform: scale(1);
             filter: saturate(0.9) contrast(0.98);
             transition: transform 300ms ease, filter 300ms ease, opacity 300ms ease;
+            border-bottom: 1px solid var(--border);
           }
           .media-gradient {
             position: absolute;
