@@ -8,11 +8,10 @@ export const runtime = "nodejs";
 
 export async function GET(
   _req: NextRequest,
-  context: { params?: Record<string, string | string[]> }
+  { params }: { params: { id: string } }
 ) {
   try {
-    const idParam = context.params?.id;
-    const id = Array.isArray(idParam) ? idParam[0] : idParam;
+    const id = params.id;
 
     if (!id) {
       return NextResponse.json({ error: "missing_id" }, { status: 400 });
