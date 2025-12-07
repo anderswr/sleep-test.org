@@ -2,6 +2,7 @@
 "use client";
 
 import * as React from "react";
+import Image from "next/image";
 import SiteHeader from "@/components/SiteHeader";
 import SiteFooter from "@/components/SiteFooter";
 import { useI18n } from "@/app/providers/I18nProvider";
@@ -113,12 +114,15 @@ export default function ArticlePage({ params }: { params: { slug: string } }) {
           {/* Bilde før markdown-innholdet (skjules dersom mangler) */}
           {showHero && (
             <div className="hero-wrap">
-              <img
+              <Image
                 src={heroSrc}
-                alt={title}
+                alt={title || slug}
                 className="hero-image"
                 onError={() => setShowHero(false)}
-                loading="eager"
+                priority
+                width={1600}
+                height={900}
+                sizes="(max-width: 800px) 100vw, 800px"
               />
             </div>
           )}

@@ -1,6 +1,7 @@
 "use client";
 
 import * as React from "react";
+import Image from "next/image";
 import Link from "next/link";
 import SiteHeader from "@/components/SiteHeader";
 import SiteFooter from "@/components/SiteFooter";
@@ -88,11 +89,14 @@ export default function ArticlesPage() {
                 aria-label={a.title}
               >
                 <div className="media">
-                  <img
+                  <Image
                     src={`/images/${a.slug}.png`}
                     alt={a.title}
                     className="card-image"
                     loading="lazy"
+                    width={640}
+                    height={360}
+                    sizes="(max-width: 980px) 100vw, 33vw"
                   />
                   <span className="media-gradient" aria-hidden />
                 </div>
