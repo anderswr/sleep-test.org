@@ -47,7 +47,29 @@
         "red": "你需要改变以下方面的习惯："
       },
       "lookup_hint": "完成测试后，你会收到一个 ID。它是匿名的，你可以随时打开报告。输入你的 ID 即可查看报告。",
-      "id_placeholder": "你的 ID"
+      "id_placeholder": "你的 ID",
+      "share": "Share report",
+      "suggestions": {
+        "title": "Improvement areas",
+        "subtitle": "Your result is based on your answers—focus on what feels relevant to you.",
+        "read_more": "Read more",
+        "score_green": "Good",
+        "score_orange": "Medium",
+        "score_red": "Needs attention"
+      },
+      "share_message_with_score": "我做了一次免费的睡眠测试，得了{score}/100。你也可以匿名测试：",
+      "share_message": "我做了一次免费的睡眠测试。你也可以匿名测试：",
+      "share_instagram": "Instagram",
+      "share_tiktok": "TikTok",
+      "share_targets": {
+        "facebook": "Facebook",
+        "x": "X",
+        "linkedin": "LinkedIn",
+        "reddit": "Reddit",
+        "whatsapp": "WhatsApp",
+        "telegram": "Telegram",
+        "email": "Email"
+      }
     },
     "articles": {
       "minutes": {
@@ -93,7 +115,21 @@
           "title": "打鼾与呼吸信号：何时需要检查",
           "teaser": "什么时候打鼾无害，什么时候可能是睡眠呼吸暂停，以及下一步该做什么。"
         }
+      },
+      "summaries": {
+        "some": "社交媒体流行的睡眠窍门与科学研究对比，并提供一套优先级工具可尝试。",
+        "pattern": "固定作息和充足睡眠为何重要，以及一些简单可行的做法。",
+        "insomnia": "帮助更快入睡并处理夜间醒来的实用方法。",
+        "quality": "减少常见干扰，让夜晚更安静、更深沉。",
+        "daytime": "利用光线、活动和微休息，保持清醒与专注。",
+        "hygiene": "屏幕、咖啡因、酒精与睡前放松——真正有用的习惯。",
+        "environment": "光线、噪音、温度与床具：打造支持睡眠的卧室。",
+        "breathing": "何时打鼾是警示信号，以及接下来该做什么。"
       }
+    },
+    "common": {
+      "copied": "Copied!",
+      "copy_link": "Copy link"
     }
   },
   "about": {
@@ -137,14 +173,38 @@
     "5": "非常经常"
   },
   "category": {
-    "pattern": { "name": "睡眠模式与时长", "desc": "睡眠长度与规律性。" },
-    "insomnia": { "name": "入睡与夜间", "desc": "入睡、夜醒、早醒。" },
-    "quality": { "name": "睡眠质量", "desc": "主观质量与满意度。" },
-    "daytime": { "name": "白天与困倦", "desc": "困倦与日间功能。" },
-    "hygiene": { "name": "睡眠卫生与作息", "desc": "习惯与时间（屏幕、咖啡因）。" },
-    "environment": { "name": "睡眠环境", "desc": "光线、噪音、温度、床。" },
-    "breathing": { "name": "打鼾与呼吸信号", "desc": "可能的睡眠呼吸暂停迹象。" },
-    "bloodpressure": { "name": "血压 – 生活方式风险", "desc": "饮食、活动、酒精、压力和体重。" }
+    "pattern": {
+      "name": "睡眠模式与时长",
+      "desc": "睡眠长度与规律性。"
+    },
+    "insomnia": {
+      "name": "入睡与夜间",
+      "desc": "入睡、夜醒、早醒。"
+    },
+    "quality": {
+      "name": "睡眠质量",
+      "desc": "主观质量与满意度。"
+    },
+    "daytime": {
+      "name": "白天与困倦",
+      "desc": "困倦与日间功能。"
+    },
+    "hygiene": {
+      "name": "睡眠卫生与作息",
+      "desc": "习惯与时间（屏幕、咖啡因）。"
+    },
+    "environment": {
+      "name": "睡眠环境",
+      "desc": "光线、噪音、温度、床。"
+    },
+    "breathing": {
+      "name": "打鼾与呼吸信号",
+      "desc": "可能的睡眠呼吸暂停迹象。"
+    },
+    "bloodpressure": {
+      "name": "血压 – 生活方式风险",
+      "desc": "饮食、活动、酒精、压力和体重。"
+    }
   },
   "q": {
     "pattern": {
@@ -201,48 +261,130 @@
   },
   "tips": {
     "pattern": {
-      "keep_routine": "保持稳定的睡眠作息——大多数天上床和起床时间相近。",
-      "short_naps": "如果需要午睡，请保持短暂（20–30 分钟），并安排在白天较早时间。",
-      "consistent_bed_wake": "尽量保持一致的睡眠与起床时间（±30–60 分钟）。",
-      "plan_winddown": "在睡前 30–60 分钟制定一个简单的放松程序（调暗灯光、低刺激活动）。",
-      "protect_7h": "确保大多数夜晚至少有 7 小时的睡眠时间。",
-      "cut_late_naps": "避免下午 3–4 点后长时间或过晚的午睡——它们可能会推迟夜间睡眠。"
+      "keep_routine": {
+        "title": "Keep your current rhythm",
+        "desc": "Fixed bed and wake times are working—stick with them."
+      },
+      "protect_7h": {
+        "title": "Protect at least 7 hours in bed",
+        "desc": "Block enough time so sleep pressure can build and you can recover."
+      },
+      "consistent_bed_wake": {
+        "title": "Regular bed and wake windows",
+        "desc": "Aim for roughly the same hours every day, even on weekends."
+      },
+      "plan_winddown": {
+        "title": "Plan a 20–30 minute wind-down",
+        "desc": "Dim lights, screens off, and do something calm before bed."
+      },
+      "cut_late_naps": {
+        "title": "Skip late naps",
+        "desc": "Avoid napping after mid-afternoon so you’re sleepy at night."
+      }
     },
     "insomnia": {
-      "maintain": "保持已经有效的习惯——小而持续的习惯会积累效果。",
-      "rule_20min": "如果在床上清醒约 20 分钟：起床，在弱光下做些安静的事情，然后再尝试入睡。",
-      "fixed_wake": "保持固定的起床时间——它能训练你的生物钟。",
-      "stimulus_control": "仅将床用于睡眠和亲密关系——不要用于看电视、玩手机或工作。",
-      "consider_cbti": "如果问题持续：考虑 CBT-I（失眠认知行为疗法）。"
+      "maintain": {
+        "title": "Keep the helpful habits",
+        "desc": "You’re handling awakenings well—keep the routine steady."
+      },
+      "rule_20min": {
+        "title": "20-minute rule",
+        "desc": "If you can’t sleep, get up briefly and reset with a calm activity."
+      },
+      "fixed_wake": {
+        "title": "Fixed wake time",
+        "desc": "Wake at the same time daily to retrain your sleep drive."
+      },
+      "stimulus_control": {
+        "title": "Bed = sleep",
+        "desc": "Use the bed only for sleep and intimacy; move elsewhere when awake."
+      },
+      "consider_cbti": {
+        "title": "Consider CBT-I",
+        "desc": "If insomnia persists, a CBT-I program or clinician can help."
+      }
     },
     "quality": {
-      "track_triggers": "记录可能的触发因素（咖啡因、锻炼时间、压力）以发现规律。",
-      "address_disruptors": "减少常见干扰因素（噪音、光线、不适、晚间屏幕）。",
-      "consult_if_pain": "持续的疼痛、不安或噩梦？请咨询医生。"
+      "track_triggers": {
+        "title": "Track triggers",
+        "desc": "Note what helps or hurts your nights to spot patterns."
+      },
+      "address_disruptors": {
+        "title": "Tackle disruptions",
+        "desc": "Reduce pain, noise, light, or worries that fragment sleep."
+      },
+      "consult_if_pain": {
+        "title": "Check pain or discomfort",
+        "desc": "If pain or breathing issues wake you, talk with a professional."
+      }
     },
     "daytime": {
-      "morning_light": "早晨晒光（10–30 分钟）可提升清醒度并固定昼夜节律。",
-      "activity_breaks": "全天进行短暂活动休息；将轻度活动安排在晚上较早时间。",
-      "consider_medical": "明显的日间困倦？考虑做医学检查（如睡眠呼吸暂停或其他原因）。"
+      "morning_light": {
+        "title": "Morning light",
+        "desc": "Get bright light within an hour of waking to anchor your rhythm."
+      },
+      "activity_breaks": {
+        "title": "Movement breaks",
+        "desc": "Short walks or stretches through the day boost energy later."
+      },
+      "consider_medical": {
+        "title": "Check ongoing sleepiness",
+        "desc": "If you’re very sleepy despite time in bed, consider a medical check."
+      }
     },
     "hygiene": {
-      "keep_it_up": "保持已经有助于睡眠的良好习惯。",
-      "screens_off_60": "睡前 60 分钟尽量减少或避免屏幕。",
-      "limit_caffeine": "下午约 2–4 点（睡前 6–8 小时）后避免咖啡因。",
-      "no_alcohol_late": "睡前避免饮酒——它会导致睡眠碎片化。",
-      "no_big_meals_late": "避免睡前大量进食；如果需要，可选择轻食。"
+      "keep_it_up": {
+        "title": "Keep your current wind-down",
+        "desc": "Your evening routine works—keep repeating it."
+      },
+      "screens_off_60": {
+        "title": "Screens off 60 minutes before bed",
+        "desc": "Shift to low light and calmer activities the last hour."
+      },
+      "limit_caffeine": {
+        "title": "Limit caffeine after lunch",
+        "desc": "Stop caffeine 6–8 hours before bed to protect sleep pressure."
+      },
+      "no_alcohol_late": {
+        "title": "Skip late alcohol",
+        "desc": "Avoid evening alcohol to prevent shallow, fragmented sleep."
+      }
     },
     "environment": {
-      "keep_cool_dark": "保持卧室凉爽、黑暗、整洁——让床成为睡眠信号。",
-      "test_blackout": "尝试遮光窗帘/眼罩，晚上使用昏暗照明。",
-      "noise_control": "必要时控制噪音（耳塞、白噪音、稳定的背景音）。",
-      "try_new_pillow": "检查枕头/床垫——如果醒来感到不适，请更换。",
-      "cooler_temp": "如果夜间容易过热，降低温度或使用轻薄被褥。"
+      "keep_cool_dark": {
+        "title": "Cool, dark room",
+        "desc": "Blackout curtains and a slight drop in temperature help quality."
+      },
+      "test_blackout": {
+        "title": "Test blackout and dim lights",
+        "desc": "Use masks or blackout to cut light leaks."
+      },
+      "noise_control": {
+        "title": "Quiet the room",
+        "desc": "Earplugs, white noise, or steady fan sounds reduce wake-ups."
+      },
+      "try_new_pillow": {
+        "title": "Try a pillow that fits you",
+        "desc": "A supportive pillow can reduce aches and tossing."
+      },
+      "cooler_temp": {
+        "title": "Cooler bedroom",
+        "desc": "Aim slightly cooler than daytime for better sleep depth."
+      }
     },
     "breathing": {
-      "side_sleep": "尝试侧睡（背后放一个枕头）——有些人这样可以减少打鼾/呼吸暂停。",
-      "reduce_evening_alcohol": "避免晚上饮酒——它会加重打鼾/呼吸问题。",
-      "consider_gp_check": "怀疑睡眠呼吸暂停（大声打鼾、呼吸暂停、日间困倦）？请咨询医生。"
+      "side_sleep": {
+        "title": "Sleep on your side",
+        "desc": "Side-sleeping can reduce snoring and breathing pauses."
+      },
+      "reduce_evening_alcohol": {
+        "title": "Reduce evening alcohol",
+        "desc": "Alcohol relaxes airways and can worsen snoring."
+      },
+      "consider_gp_check": {
+        "title": "Talk to a doctor if snoring is heavy",
+        "desc": "Persistent loud snoring or pauses should be checked."
+      }
     }
   }
 }

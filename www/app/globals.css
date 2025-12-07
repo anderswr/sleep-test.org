@@ -317,9 +317,12 @@ p { line-height: 1.6; }
 .score-hero{
   display:flex; align-items:center; justify-content:space-between;
   gap: 24px;
+  background: linear-gradient(135deg, rgba(245,158,11,.12), rgba(34,179,230,.08));
+  border-radius: var(--radius);
+  padding: 6px;
 }
 .score-hero__left{ flex: 1; }
-.score-hero__right{ width: 180px; display:flex; justify-content:center; }
+.score-hero__right{ width: 220px; display:flex; flex-direction:column; align-items:center; justify-content:center; gap:8px; }
 
 .score-ring{
   width: 160px; height: 160px; border-radius: 999px;
@@ -331,7 +334,7 @@ p { line-height: 1.6; }
 
 /* Ring-farger: mørk-vennlige toner */
 .score-ring[data-color="green"]{ border-color:#1d3a2e; background:#0f1f1a; }
-.score-ring[data-color="orange"]{ border-color:#4a3420; background:#1b1510; }
+.score-ring[data-color="orange"]{ border-color:#d97706; background: radial-gradient(circle at 30% 30%, rgba(245,158,11,.15), #1b1510); }
 .score-ring[data-color="red"]{ border-color:#4a2323; background:#1b1111; }
 
 .grid-cards{
@@ -352,6 +355,15 @@ p { line-height: 1.6; }
 }
 .cat-card__score{ font-size: 1.2rem; }
 
+.score-chip{
+  display:inline-flex; align-items:baseline; gap:4px;
+  padding: 6px 10px; border-radius: 10px;
+  font-weight: 700; letter-spacing: .01em;
+  background: #0f1726; border:1px solid var(--border);
+}
+.score-chip__value{ font-size: 1.4rem; }
+.score-chip__label{ color: var(--muted); font-size: .9rem; font-weight: 500; }
+
 /* Pills */
 .pill{
   display:inline-flex; align-items:center; gap:6px;
@@ -364,9 +376,51 @@ p { line-height: 1.6; }
 .pill[data-color="red"]{ border-color:#5a2727; background:#1b1111; color:#f6a4a4; }
 
 /* Card bakgrunner (svak tint) */
-.cat-card[data-color="green"]{ border-color:#1f4d3f; background: #0f1f1a; }
-.cat-card[data-color="orange"]{ border-color:#5a3a1e; background: #1b1510; }
-.cat-card[data-color="red"]{ border-color:#5a2727; background: #1b1111; }
+.cat-card[data-color="green"],
+.card--score[data-color="green"]{ border-color:#1f4d3f; background: linear-gradient(135deg,#0f1f1a,#0a120e); }
+.cat-card[data-color="orange"],
+.card--score[data-color="orange"]{ border-color:#5a3a1e; background: linear-gradient(135deg,#1b1510,#120c08); }
+.cat-card[data-color="red"],
+.card--score[data-color="red"]{ border-color:#5a2727; background: linear-gradient(135deg,#1b1111,#120909); }
+
+.card--score header{ display:flex; align-items:flex-start; justify-content:space-between; gap:12px; }
+.card--score h3{ margin: 0; }
+.card--score .button[data-variant="ghost"]{ border-color: transparent; }
+
+.tips-grid{
+  display:grid;
+  gap: 10px;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  margin-top: 12px;
+}
+.tip h4{ margin: 0 0 4px 0; }
+.tip p{ margin: 0; color: var(--muted); }
+
+.share-card{ border:1px dashed var(--border); }
+.share-card__grid{ display:grid; grid-template-columns: 1.2fr 1fr; gap:16px; align-items:center; }
+.share-chip-row{ display:flex; flex-wrap:wrap; gap:8px; align-items:center; }
+.share-chip{
+  display:inline-flex; align-items:center; gap:6px;
+  border:1px solid var(--border);
+  padding:8px 12px; border-radius:12px;
+  background: var(--panel); color: var(--text);
+  cursor:pointer;
+  transition: transform 120ms ease, box-shadow 180ms ease, border-color 180ms ease;
+}
+.share-chip:hover,
+.share-chip:focus-visible{ transform: translateY(-1px); border-color: var(--primary-weak); box-shadow: var(--shadow); outline:none; }
+
+.share-icons{ display:flex; flex-wrap:wrap; gap:10px; justify-content:flex-end; }
+.share-icon{ width:44px; height:44px; border-radius:12px; border:1px solid var(--border); display:inline-flex; align-items:center; justify-content:center; background: var(--panel); color: var(--text); transition: transform 120ms ease, box-shadow 180ms ease, border-color 180ms ease; }
+.share-icon svg{ width:22px; height:22px; fill: currentColor; }
+.share-icon:hover,
+.share-icon:focus-visible{ transform: translateY(-1px); border-color: var(--primary-weak); box-shadow: var(--shadow); outline:none; }
+
+@media (max-width: 720px){
+  .share-card__grid{ grid-template-columns: 1fr; }
+  .score-hero{ flex-direction: column; align-items: flex-start; }
+  .score-hero__right{ width: 100%; align-items:flex-start; }
+}
 
 /* ===================================================================
    PROSE (markdown-artikler)

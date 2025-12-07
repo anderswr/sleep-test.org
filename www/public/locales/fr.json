@@ -47,7 +47,29 @@
         "red": "Vous devriez changer vos habitudes pour "
       },
       "lookup_hint": "Lorsque vous terminez un test, vous recevez un ID. Il est anonyme et vous pouvez ouvrir votre rapport à tout moment. Collez votre ID pour voir le rapport.",
-      "id_placeholder": "Votre ID"
+      "id_placeholder": "Votre ID",
+      "share": "Share report",
+      "suggestions": {
+        "title": "Improvement areas",
+        "subtitle": "Your result is based on your answers—focus on what feels relevant to you.",
+        "read_more": "Read more",
+        "score_green": "Good",
+        "score_orange": "Medium",
+        "score_red": "Needs attention"
+      },
+      "share_message_with_score": "J'ai passé un test de sommeil gratuit et j'ai obtenu {score}/100. Fais ton test anonyme :",
+      "share_message": "J'ai passé un test de sommeil gratuit. Fais ton test anonyme :",
+      "share_instagram": "Instagram",
+      "share_tiktok": "TikTok",
+      "share_targets": {
+        "facebook": "Facebook",
+        "x": "X",
+        "linkedin": "LinkedIn",
+        "reddit": "Reddit",
+        "whatsapp": "WhatsApp",
+        "telegram": "Telegram",
+        "email": "Email"
+      }
     },
     "articles": {
       "minutes": {
@@ -93,7 +115,21 @@
           "title": "Ronflements & signaux respiratoires : quand vérifier",
           "teaser": "Quand le ronflement est inoffensif, quand il peut s'agir d'apnée du sommeil, et que faire ensuite."
         }
+      },
+      "summaries": {
+        "some": "Astuces des réseaux sociaux comparées à la recherche, plus une boîte à outils priorisée à essayer.",
+        "pattern": "Pourquoi des horaires réguliers et assez de sommeil comptent, avec des gestes simples.",
+        "insomnia": "Des moyens pratiques pour s'endormir plus vite et gérer les réveils nocturnes.",
+        "quality": "Réduire les perturbateurs courants et rendre les nuits plus calmes et profondes.",
+        "daytime": "Lumière, mouvement et micro-pauses : rester alerte et fonctionner mieux.",
+        "hygiene": "Écrans, caféine, alcool et détente : des habitudes qui aident vraiment.",
+        "environment": "Lumière, bruit, température et literie : créer une chambre qui soutient le sommeil.",
+        "breathing": "Quand le ronflement est un signal d'alerte et quoi faire ensuite."
       }
+    },
+    "common": {
+      "copied": "Copied!",
+      "copy_link": "Copy link"
     }
   },
   "about": {
@@ -137,14 +173,38 @@
     "5": "Très souvent"
   },
   "category": {
-    "pattern": { "name": "Schéma et durée du sommeil", "desc": "Durée et régularité." },
-    "insomnia": { "name": "Endormissement & nuit", "desc": "Début du sommeil, réveils, matinée précoce." },
-    "quality": { "name": "Qualité du sommeil", "desc": "Qualité perçue et satisfaction." },
-    "daytime": { "name": "Somnolence diurne", "desc": "Somnolence et fonctionnement diurne." },
-    "hygiene": { "name": "Hygiène du sommeil & routines", "desc": "Habitudes et horaires (écrans, caféine)." },
-    "environment": { "name": "Environnement de sommeil", "desc": "Lumière, bruit, température, lit." },
-    "breathing": { "name": "Ronflements & signaux respiratoires", "desc": "Signes possibles d'apnée du sommeil." },
-    "bloodpressure": { "name": "Pression artérielle – risque lié au mode de vie", "desc": "Alimentation, activité, alcool, stress et poids." }
+    "pattern": {
+      "name": "Schéma et durée du sommeil",
+      "desc": "Durée et régularité."
+    },
+    "insomnia": {
+      "name": "Endormissement & nuit",
+      "desc": "Début du sommeil, réveils, matinée précoce."
+    },
+    "quality": {
+      "name": "Qualité du sommeil",
+      "desc": "Qualité perçue et satisfaction."
+    },
+    "daytime": {
+      "name": "Somnolence diurne",
+      "desc": "Somnolence et fonctionnement diurne."
+    },
+    "hygiene": {
+      "name": "Hygiène du sommeil & routines",
+      "desc": "Habitudes et horaires (écrans, caféine)."
+    },
+    "environment": {
+      "name": "Environnement de sommeil",
+      "desc": "Lumière, bruit, température, lit."
+    },
+    "breathing": {
+      "name": "Ronflements & signaux respiratoires",
+      "desc": "Signes possibles d'apnée du sommeil."
+    },
+    "bloodpressure": {
+      "name": "Pression artérielle – risque lié au mode de vie",
+      "desc": "Alimentation, activité, alcool, stress et poids."
+    }
   },
   "q": {
     "pattern": {
@@ -201,48 +261,130 @@
   },
   "tips": {
     "pattern": {
-      "keep_routine": "Gardez une routine de sommeil stable – heures de coucher et de lever similaires la plupart des jours.",
-      "short_naps": "Si vous avez besoin d'une sieste, gardez-la courte (20–30 min) et plus tôt dans la journée.",
-      "consistent_bed_wake": "Visez des heures de coucher et de lever régulières (±30–60 min).",
-      "plan_winddown": "Créez une routine simple de détente 30–60 min avant de dormir (lumières tamisées, activités calmes).",
-      "protect_7h": "Protégez une période de sommeil d'au moins 7 heures la plupart des nuits.",
-      "cut_late_naps": "Évitez les siestes longues ou tardives après ~15–16 h – elles peuvent retarder le sommeil nocturne."
+      "keep_routine": {
+        "title": "Keep your current rhythm",
+        "desc": "Fixed bed and wake times are working—stick with them."
+      },
+      "protect_7h": {
+        "title": "Protect at least 7 hours in bed",
+        "desc": "Block enough time so sleep pressure can build and you can recover."
+      },
+      "consistent_bed_wake": {
+        "title": "Regular bed and wake windows",
+        "desc": "Aim for roughly the same hours every day, even on weekends."
+      },
+      "plan_winddown": {
+        "title": "Plan a 20–30 minute wind-down",
+        "desc": "Dim lights, screens off, and do something calm before bed."
+      },
+      "cut_late_naps": {
+        "title": "Skip late naps",
+        "desc": "Avoid napping after mid-afternoon so you’re sleepy at night."
+      }
     },
     "insomnia": {
-      "maintain": "Maintenez ce qui fonctionne déjà – de petites habitudes régulières s'additionnent.",
-      "rule_20min": "Si vous restez éveillé ~20 min au lit : levez-vous, faites quelque chose de calme dans une faible lumière, puis réessayez.",
-      "fixed_wake": "Gardez une heure de réveil fixe — elle entraîne votre horloge biologique.",
-      "stimulus_control": "Réservez le lit uniquement pour dormir et l'intimité — pas pour la TV, le téléphone ou le travail.",
-      "consider_cbti": "Si les problèmes persistent : envisagez la TCC-I (thérapie cognitivo-comportementale pour l'insomnie)."
+      "maintain": {
+        "title": "Keep the helpful habits",
+        "desc": "You’re handling awakenings well—keep the routine steady."
+      },
+      "rule_20min": {
+        "title": "20-minute rule",
+        "desc": "If you can’t sleep, get up briefly and reset with a calm activity."
+      },
+      "fixed_wake": {
+        "title": "Fixed wake time",
+        "desc": "Wake at the same time daily to retrain your sleep drive."
+      },
+      "stimulus_control": {
+        "title": "Bed = sleep",
+        "desc": "Use the bed only for sleep and intimacy; move elsewhere when awake."
+      },
+      "consider_cbti": {
+        "title": "Consider CBT-I",
+        "desc": "If insomnia persists, a CBT-I program or clinician can help."
+      }
     },
     "quality": {
-      "track_triggers": "Suivez les déclencheurs possibles (caféine, horaire d'exercice, stress) pour identifier les schémas.",
-      "address_disruptors": "Réduisez les perturbateurs courants (bruit, lumière, inconfort, écrans tardifs).",
-      "consult_if_pain": "Douleur persistante, agitation ou cauchemars ? Consultez un professionnel."
+      "track_triggers": {
+        "title": "Track triggers",
+        "desc": "Note what helps or hurts your nights to spot patterns."
+      },
+      "address_disruptors": {
+        "title": "Tackle disruptions",
+        "desc": "Reduce pain, noise, light, or worries that fragment sleep."
+      },
+      "consult_if_pain": {
+        "title": "Check pain or discomfort",
+        "desc": "If pain or breathing issues wake you, talk with a professional."
+      }
     },
     "daytime": {
-      "morning_light": "Prenez la lumière du matin (10–30 min) pour stimuler la vigilance et ancrer votre rythme circadien.",
-      "activity_breaks": "Faites de courtes pauses de mouvement tout au long de la journée ; prévoyez une activité légère plus tôt dans la soirée.",
-      "consider_medical": "Somnolence diurne marquée ? Envisagez un examen médical (p. ex. apnée du sommeil ou autres causes)."
+      "morning_light": {
+        "title": "Morning light",
+        "desc": "Get bright light within an hour of waking to anchor your rhythm."
+      },
+      "activity_breaks": {
+        "title": "Movement breaks",
+        "desc": "Short walks or stretches through the day boost energy later."
+      },
+      "consider_medical": {
+        "title": "Check ongoing sleepiness",
+        "desc": "If you’re very sleepy despite time in bed, consider a medical check."
+      }
     },
     "hygiene": {
-      "keep_it_up": "Conservez les habitudes qui soutiennent déjà votre sommeil.",
-      "screens_off_60": "Réduisez ou évitez les écrans pendant les 60 dernières minutes avant le coucher.",
-      "limit_caffeine": "Évitez la caféine après ~14–16 h (6–8 heures avant le coucher).",
-      "no_alcohol_late": "Évitez l'alcool près de l'heure du coucher — il fragmente le sommeil.",
-      "no_big_meals_late": "Évitez les gros repas tard le soir ; préférez une collation légère si nécessaire."
+      "keep_it_up": {
+        "title": "Keep your current wind-down",
+        "desc": "Your evening routine works—keep repeating it."
+      },
+      "screens_off_60": {
+        "title": "Screens off 60 minutes before bed",
+        "desc": "Shift to low light and calmer activities the last hour."
+      },
+      "limit_caffeine": {
+        "title": "Limit caffeine after lunch",
+        "desc": "Stop caffeine 6–8 hours before bed to protect sleep pressure."
+      },
+      "no_alcohol_late": {
+        "title": "Skip late alcohol",
+        "desc": "Avoid evening alcohol to prevent shallow, fragmented sleep."
+      }
     },
     "environment": {
-      "keep_cool_dark": "Gardez la chambre fraîche, sombre et ordonnée — faites du lit un signal de sommeil.",
-      "test_blackout": "Essayez des rideaux occultants/masque de nuit et un éclairage tamisé en soirée.",
-      "noise_control": "Réduisez le bruit (bouchons d'oreille, bruit blanc, son constant en arrière-plan) si nécessaire.",
-      "try_new_pillow": "Évaluez l'oreiller/le matelas – remplacez-les si vous vous réveillez avec des inconforts.",
-      "cooler_temp": "Abaissez la température ou utilisez une literie plus légère si vous avez trop chaud la nuit."
+      "keep_cool_dark": {
+        "title": "Cool, dark room",
+        "desc": "Blackout curtains and a slight drop in temperature help quality."
+      },
+      "test_blackout": {
+        "title": "Test blackout and dim lights",
+        "desc": "Use masks or blackout to cut light leaks."
+      },
+      "noise_control": {
+        "title": "Quiet the room",
+        "desc": "Earplugs, white noise, or steady fan sounds reduce wake-ups."
+      },
+      "try_new_pillow": {
+        "title": "Try a pillow that fits you",
+        "desc": "A supportive pillow can reduce aches and tossing."
+      },
+      "cooler_temp": {
+        "title": "Cooler bedroom",
+        "desc": "Aim slightly cooler than daytime for better sleep depth."
+      }
     },
     "breathing": {
-      "side_sleep": "Essayez de dormir sur le côté (utilisez un oreiller derrière votre dos) – peut réduire le ronflement/apnées pour certains.",
-      "reduce_evening_alcohol": "Évitez l'alcool le soir – il peut aggraver le ronflement/problèmes respiratoires.",
-      "consider_gp_check": "Soupçon d'apnée du sommeil (ronflement fort, pauses observées, somnolence diurne) ? Consultez votre médecin."
+      "side_sleep": {
+        "title": "Sleep on your side",
+        "desc": "Side-sleeping can reduce snoring and breathing pauses."
+      },
+      "reduce_evening_alcohol": {
+        "title": "Reduce evening alcohol",
+        "desc": "Alcohol relaxes airways and can worsen snoring."
+      },
+      "consider_gp_check": {
+        "title": "Talk to a doctor if snoring is heavy",
+        "desc": "Persistent loud snoring or pauses should be checked."
+      }
     }
   }
 }

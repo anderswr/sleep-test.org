@@ -47,7 +47,29 @@
         "red": "Du bør endre vanene dine for "
       },
       "lookup_hint": "Når du har gjennomført en test får du en ID. Den er anonym, og du kan åpne rapporten når du vil. Lim inn ID-en for å åpne rapporten.",
-      "id_placeholder": "Din ID"
+      "id_placeholder": "Din ID",
+      "share": "Del rapporten",
+      "suggestions": {
+        "title": "Forbedringsområder",
+        "subtitle": "Ditt resultat baseres på svarene dine, så fokuser på det som virker relevant for deg.",
+        "read_more": "Les mer",
+        "score_green": "Bra",
+        "score_orange": "Middels",
+        "score_red": "Bør forbedres"
+      },
+      "share_message_with_score": "Jeg tok en gratis søvntest og fikk {score}/100. Prøv din egen anonyme test:",
+      "share_message": "Jeg tok en gratis søvntest. Prøv din egen anonyme test:",
+      "share_instagram": "Instagram",
+      "share_tiktok": "TikTok",
+      "share_targets": {
+        "facebook": "Facebook",
+        "x": "X",
+        "linkedin": "LinkedIn",
+        "reddit": "Reddit",
+        "whatsapp": "WhatsApp",
+        "telegram": "Telegram",
+        "email": "Email"
+      }
     },
     "articles": {
       "card": {
@@ -83,18 +105,32 @@
           "title": "Snorking og pustesignal: når bør du sjekke det?",
           "teaser": "Når snorking er ufarlig, og når det kan være søvnapné – og hva du gjør med det."
         }
+      },
+      "summaries": {
+        "some": "Tips fra TikTok, Reddit og andre plattformer vurdert opp mot søvnforskning – og en rangert verktøykasse du kan prøve.",
+        "pattern": "Hvordan faste tider og søvnlengde påvirker søvnkvalitet – og enkle grep som virker.",
+        "insomnia": "Råd for inn- og gjennom­soving, og hva du gjør når du ligger våken.",
+        "quality": "Hva som forstyrrer søvnen – og hvordan du gjør nettene roligere.",
+        "daytime": "Lys, bevegelse og mikropauser – slik blir du mindre søvnig på dagtid.",
+        "hygiene": "Skjerm, koffein, alkohol og kveldsrutine – gode vaner som gir bedre søvn.",
+        "environment": "Lys, støy, temperatur og seng – lag et rom som faktisk hjelper søvnen.",
+        "breathing": "Når snorking kan være et faresignal, og hva du kan gjøre med det."
       }
+    },
+    "common": {
+      "copied": "Kopiert!",
+      "copy_link": "Kopier lenke"
     }
   },
-"about": {
-  "title": "Laget av DMZ DATA AS",
-  "intro": "Laget på dugnad i Porsgrunn, helsetech/søvntech og AI.",
-  "contact": {
-    "title": "Kontakt",
-    "p1": "Ansvarlig for www.sleep-test.org er DMZ DATA AS. Kontaktpunkt for personvern og generelle henvendelser: kontor@dmz.no.",
-    "p2": "Utforsk DMZ DATA-underverker på <a href='https://www.dmz.no' target='_blank' rel='noopener'>www.dmz.no</a>, App for å lære Google web search (<a href='https://apps.apple.com/no/app/toiletlearn-web-search/id6748481089' target='_blank' rel='noopener'>LINK</a>), App for å lære ChatGPT (<a href='https://apps.apple.com/us/app/toiletlearn-web-search/id6748926636?platform=iphone' target='_blank' rel='noopener'>LINK</a>) og gjør Homey smarthuset ditt litt mer gøy med DadJokes (<a href='https://homey.app/no-no/app/com.dmz.dadjokesplus/DadJokes-Plus/test/' target='_blank' rel='noopener'>LINK</a>)."
-  }
-},
+  "about": {
+    "title": "Laget av DMZ DATA AS",
+    "intro": "Laget på dugnad i Porsgrunn, helsetech/søvntech og AI.",
+    "contact": {
+      "title": "Kontakt",
+      "p1": "Ansvarlig for www.sleep-test.org er DMZ DATA AS. Kontaktpunkt for personvern og generelle henvendelser: kontor@dmz.no.",
+      "p2": "Utforsk DMZ DATA-underverker på <a href='https://www.dmz.no' target='_blank' rel='noopener'>www.dmz.no</a>, App for å lære Google web search (<a href='https://apps.apple.com/no/app/toiletlearn-web-search/id6748481089' target='_blank' rel='noopener'>LINK</a>), App for å lære ChatGPT (<a href='https://apps.apple.com/us/app/toiletlearn-web-search/id6748926636?platform=iphone' target='_blank' rel='noopener'>LINK</a>) og gjør Homey smarthuset ditt litt mer gøy med DadJokes (<a href='https://homey.app/no-no/app/com.dmz.dadjokesplus/DadJokes-Plus/test/' target='_blank' rel='noopener'>LINK</a>)."
+    }
+  },
   "privacy": {
     "title": "Personvernerklæring",
     "p1": "Vi tar personvern på alvor. Denne erklæringen forklarer hvordan vi behandler opplysninger når du bruker www.sleep-test.org. Ved å bruke nettstedet bekrefter du at du har lest og akseptert disse vilkårene. Nettstedet er designet slik at skoler kan bruke tjenesten uten å oppgi personopplysninger.",
@@ -127,14 +163,38 @@
     "5": "Svært ofte"
   },
   "category": {
-    "pattern": { "name": "Søvnmønster & varighet", "desc": "Lengde og regelmessighet." },
-    "insomnia": { "name": "Innsovning & natt", "desc": "Sovning, oppvåkninger, tidlig oppvåkning." },
-    "quality": { "name": "Søvnkvalitet", "desc": "Opplevd kvalitet og fornøydhet." },
-    "daytime": { "name": "Dagtid & søvnighet", "desc": "Døsighet og funksjon på dagtid." },
-    "hygiene": { "name": "Søvnhygiene & rutiner", "desc": "Vaner og timing (skjermer, koffein)." },
-    "environment": { "name": "Søvnmiljø", "desc": "Lys, støy, temperatur, seng." },
-    "breathing": { "name": "Snorking & pustesignal", "desc": "Mulige tegn på søvnapné." },
-    "bloodpressure": { "name": "Blodtrykk – livsstilsrisiko", "desc": "Kosthold, aktivitet, alkohol, stress og vekt." }
+    "pattern": {
+      "name": "Søvnmønster & varighet",
+      "desc": "Lengde og regelmessighet."
+    },
+    "insomnia": {
+      "name": "Innsovning & natt",
+      "desc": "Sovning, oppvåkninger, tidlig oppvåkning."
+    },
+    "quality": {
+      "name": "Søvnkvalitet",
+      "desc": "Opplevd kvalitet og fornøydhet."
+    },
+    "daytime": {
+      "name": "Dagtid & søvnighet",
+      "desc": "Døsighet og funksjon på dagtid."
+    },
+    "hygiene": {
+      "name": "Søvnhygiene & rutiner",
+      "desc": "Vaner og timing (skjermer, koffein)."
+    },
+    "environment": {
+      "name": "Søvnmiljø",
+      "desc": "Lys, støy, temperatur, seng."
+    },
+    "breathing": {
+      "name": "Snorking & pustesignal",
+      "desc": "Mulige tegn på søvnapné."
+    },
+    "bloodpressure": {
+      "name": "Blodtrykk – livsstilsrisiko",
+      "desc": "Kosthold, aktivitet, alkohol, stress og vekt."
+    }
   },
   "q": {
     "pattern": {
@@ -191,48 +251,130 @@
   },
   "tips": {
     "pattern": {
-      "keep_routine": "Fortsett å holde en fast døgnrytme – samme legge- og stå-opp-tid flesteparten av dagene.",
-      "short_naps": "Bruk korte powernaps (20–30 min) tidlig på dagen om du må hvile.",
-      "consistent_bed_wake": "Legg deg og stå opp til omtrent samme tid hver dag (±30–60 min).",
-      "plan_winddown": "Lag en enkel nedroingsrutine 30–60 min før leggetid (lys ned, skjermfri, rolig aktivitet).",
-      "protect_7h": "Beskytt minst 7 timer søvnvindu hver natt over tid.",
-      "cut_late_naps": "Unngå lange eller sene lurer etter kl. 15–16 — de kan skyve på nattesøvnen."
+      "keep_routine": {
+        "title": "Behold rytmen",
+        "desc": "Faste legge- og ståtider funker – hold på dem."
+      },
+      "protect_7h": {
+        "title": "Skjerm minst 7 timer i sengen",
+        "desc": "Sett av nok tid slik at søvntrykket får bygget seg opp og du rekker å hente deg inn."
+      },
+      "consistent_bed_wake": {
+        "title": "Jevne legge- og ståttider",
+        "desc": "Prøv å holde omtrent samme tider hver dag, også i helger."
+      },
+      "plan_winddown": {
+        "title": "Planlegg 20–30 min nedroing",
+        "desc": "Demp lys, legg bort skjermer, gjør noe rolig før du legger deg."
+      },
+      "cut_late_naps": {
+        "title": "Dropp sene powernaps",
+        "desc": "Unngå lur etter ettermiddag så du er søvnig om kvelden."
+      }
     },
     "insomnia": {
-      "maintain": "Hold fast ved vanene som fungerer – små, stabile grep gir best effekt over tid.",
-      "rule_20min": "Ligg ikke våken mer enn ~20 min: stå opp, gjør noe rolig i dempet lys og prøv igjen.",
-      "fixed_wake": "Stå opp til fast tid uansett – det hjelper kroppsklokken å stabilisere seg.",
-      "stimulus_control": "Bruk sengen kun til søvn og intimitet – ikke TV, mobil eller jobb.",
-      "consider_cbti": "Ved vedvarende plager: vurder kognitiv atferdsterapi for insomni (CBT-I) via lege/psykolog."
+      "maintain": {
+        "title": "Fortsett med det som funker",
+        "desc": "Du håndterer oppvåkninger bra – hold rytmen stødig."
+      },
+      "rule_20min": {
+        "title": "20-minuttersregelen",
+        "desc": "Hvis du ikke får sove, stå opp en kort stund og gjør noe rolig før du prøver igjen."
+      },
+      "fixed_wake": {
+        "title": "Fast oppvåkningstid",
+        "desc": "Stå opp til samme tid hver dag for å trene søvntrykket."
+      },
+      "stimulus_control": {
+        "title": "Sengen = søvn",
+        "desc": "Bruk sengen bare til søvn og nærhet; gå et annet sted når du er våken."
+      },
+      "consider_cbti": {
+        "title": "Vurder CBT-I",
+        "desc": "Vedvarende insomni kan hjelpes av et CBT-I-program eller behandler."
+      }
     },
     "quality": {
-      "track_triggers": "Notér hva som påvirker søvnen (koffein, treningstid, stress) for å se mønstre.",
-      "address_disruptors": "Reduser faktorer som ofte forstyrrer (støy, lys, ubehag, sen mobilbruk).",
-      "consult_if_pain": "Ved smerter, uro eller mareritt som varer: ta det opp med fastlege for tiltak."
+      "track_triggers": {
+        "title": "Følg med på triggere",
+        "desc": "Noter hva som hjelper eller drar ned nettene for å se mønstre."
+      },
+      "address_disruptors": {
+        "title": "Fjern forstyrrelser",
+        "desc": "Reduser smerte, støy, lys eller bekymringer som splitter opp søvnen."
+      },
+      "consult_if_pain": {
+        "title": "Sjekk smerter/ubehag",
+        "desc": "Hvis smerter eller pust plager natten, ta det opp med fagperson."
+      }
     },
     "daytime": {
-      "morning_light": "Få dagslys tidlig (10–30 min) – det gjør deg mer våken og styrker døgnrytmen.",
-      "activity_breaks": "Ta korte bevegelsespauser gjennom dagen og legg lett aktivitet tidligere på kvelden.",
-      "consider_medical": "Ved uttalt søvnighet dagtid: vurder å snakke med fastlege (f.eks. søvnapné, andre årsaker)."
+      "morning_light": {
+        "title": "Morgendose med lys",
+        "desc": "Få sterkt lys innen en time etter oppvåkning for å forankre rytmen."
+      },
+      "activity_breaks": {
+        "title": "Bevegelsespauser",
+        "desc": "Korte turer eller strekk gjennom dagen gir mer energi senere."
+      },
+      "consider_medical": {
+        "title": "Vedvarende trøtthet",
+        "desc": "Hvis du er veldig trøtt selv med tid i sengen, vurder en medisinsk sjekk."
+      }
     },
     "hygiene": {
-      "keep_it_up": "Fortsett med gode vaner som hjelper søvnen (rolig kveldsrutine, jevne tider).",
-      "screens_off_60": "Skjermfri siste 60 min før leggetid, eller bruk sterk demping/nattfilter.",
-      "limit_caffeine": "Unngå koffein etter kl. 14–16 (senest 6–8 t før leggetid).",
-      "no_alcohol_late": "Styr unna alkohol nær leggetid – det kan gi lett, oppstykket søvn.",
-      "no_big_meals_late": "Unngå store, tunge måltid rett før leggetid; velg lett kveldsmat."
+      "keep_it_up": {
+        "title": "Fortsett med kveldsritualet",
+        "desc": "Kveldsvanene dine fungerer – fortsett å gjenta dem."
+      },
+      "screens_off_60": {
+        "title": "Skjermfri siste time",
+        "desc": "Gå over til svakt lys og rolige aktiviteter siste timen."
+      },
+      "limit_caffeine": {
+        "title": "Begrens koffein etter lunsj",
+        "desc": "Stopp koffein 6–8 timer før leggetid for å bevare søvntrykket."
+      },
+      "no_alcohol_late": {
+        "title": "Unngå sen alkohol",
+        "desc": "Dropp alkohol sent for å unngå grunn og oppstykket søvn."
+      }
     },
     "environment": {
-      "keep_cool_dark": "Hold soverommet kjølig, mørkt og ryddig – gjør senga til et sove-signal.",
-      "test_blackout": "Prøv mørklegging/øyemaske og dempet belysning på kvelden.",
-      "noise_control": "Demp støy (ørepropper, hvit støy, jevn bakgrunnslyd) om nødvendig.",
-      "try_new_pillow": "Sjekk pute/madrass – bytt ved ubehag, vond nakke eller hofter.",
-      "cooler_temp": "Senk temp eller lette på dyne hvis du blir varm om natta."
+      "keep_cool_dark": {
+        "title": "Kjølig og mørkt rom",
+        "desc": "Blendingsgardiner og litt lavere temperatur hjelper kvaliteten."
+      },
+      "test_blackout": {
+        "title": "Test mørklegging",
+        "desc": "Bruk maske eller blackout for å kutte lyssøl."
+      },
+      "noise_control": {
+        "title": "Demp støy",
+        "desc": "Ørepropper, hvit støy eller jevn vifte kan redusere oppvåkninger."
+      },
+      "try_new_pillow": {
+        "title": "Prøv en pute som passer",
+        "desc": "En støttende pute kan redusere vondter og uro."
+      },
+      "cooler_temp": {
+        "title": "Kjøligere soverom",
+        "desc": "Ha det litt kjøligere enn på dagtid for dypere søvn."
+      }
     },
     "breathing": {
-      "side_sleep": "Prøv sidesoving (pute i ryggen) – kan dempe snorking og pustestopp hos noen.",
-      "reduce_evening_alcohol": "Kutt alkohol sent – det kan forverre snorking/pusteplager.",
-      "consider_gp_check": "Mistenker du søvnapné (høy snorking, pustestopp, dagtrøtthet)? Snakk med fastlege."
+      "side_sleep": {
+        "title": "Sov på siden",
+        "desc": "Sidesøvn kan dempe snorking og pustestopp."
+      },
+      "reduce_evening_alcohol": {
+        "title": "Mindre alkohol på kvelden",
+        "desc": "Alkohol gjør luftveier slappere og kan forverre snorking."
+      },
+      "consider_gp_check": {
+        "title": "Snakk med lege ved kraftig snorking",
+        "desc": "Vedvarende høy snorking eller pustestopp bør sjekkes."
+      }
     }
   }
 }

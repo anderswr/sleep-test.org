@@ -47,7 +47,29 @@
         "red": "習慣を変える必要があります "
       },
       "lookup_hint": "テストを完了するとIDが発行されます。これは匿名で、いつでもレポートを開けます。IDを貼り付けてレポートを表示してください。",
-      "id_placeholder": "あなたのID"
+      "id_placeholder": "あなたのID",
+      "share": "Share report",
+      "suggestions": {
+        "title": "Improvement areas",
+        "subtitle": "Your result is based on your answers—focus on what feels relevant to you.",
+        "read_more": "Read more",
+        "score_green": "Good",
+        "score_orange": "Medium",
+        "score_red": "Needs attention"
+      },
+      "share_message_with_score": "無料の睡眠テストを受けて{score}/100でした。あなたも匿名で試してみてください:",
+      "share_message": "無料の睡眠テストを受けました。あなたも匿名で試してみてください:",
+      "share_instagram": "Instagram",
+      "share_tiktok": "TikTok",
+      "share_targets": {
+        "facebook": "Facebook",
+        "x": "X",
+        "linkedin": "LinkedIn",
+        "reddit": "Reddit",
+        "whatsapp": "WhatsApp",
+        "telegram": "Telegram",
+        "email": "Email"
+      }
     },
     "articles": {
       "minutes": {
@@ -93,7 +115,21 @@
           "title": "いびきと呼吸のサイン: いつチェックするか",
           "teaser": "無害ないびきと、睡眠時無呼吸の可能性がある場合の違い、次に取るべき行動。"
         }
+      },
+      "summaries": {
+        "some": "SNSの睡眠ハックを研究と照らし合わせ、試せる優先度付きツール集を紹介。",
+        "pattern": "決まった就寝・起床と十分な睡眠が大切な理由と、すぐできる対策。",
+        "insomnia": "早く眠りにつき、夜中の覚醒に対処する実践的な方法。",
+        "quality": "よくある妨害を減らし、夜をより静かで深いものにする。",
+        "daytime": "光、動き、短い休憩で日中の眠気を抑え、集中を保つ。",
+        "hygiene": "スクリーン、カフェイン、アルコール、就寝前のリラックスなど本当に効く習慣。",
+        "environment": "光、騒音、温度、寝具を整えて眠りやすい環境を作る。",
+        "breathing": "いびきが警告サインになるときと、その対処法。"
       }
+    },
+    "common": {
+      "copied": "Copied!",
+      "copy_link": "Copy link"
     }
   },
   "about": {
@@ -137,14 +173,38 @@
     "5": "非常によくある"
   },
   "category": {
-    "pattern": { "name": "睡眠パターンと時間", "desc": "長さと規則性。" },
-    "insomnia": { "name": "入眠と夜間", "desc": "入眠、夜間覚醒、早朝覚醒。" },
-    "quality": { "name": "睡眠の質", "desc": "主観的な質と満足度。" },
-    "daytime": { "name": "日中と眠気", "desc": "眠気と日中の機能。" },
-    "hygiene": { "name": "睡眠衛生と習慣", "desc": "習慣とタイミング（スクリーン、カフェイン）。" },
-    "environment": { "name": "睡眠環境", "desc": "光、騒音、温度、寝具。" },
-    "breathing": { "name": "いびきと呼吸のサイン", "desc": "睡眠時無呼吸の可能性。" },
-    "bloodpressure": { "name": "血圧 – 生活習慣リスク", "desc": "食事、活動、アルコール、ストレス、体重。" }
+    "pattern": {
+      "name": "睡眠パターンと時間",
+      "desc": "長さと規則性。"
+    },
+    "insomnia": {
+      "name": "入眠と夜間",
+      "desc": "入眠、夜間覚醒、早朝覚醒。"
+    },
+    "quality": {
+      "name": "睡眠の質",
+      "desc": "主観的な質と満足度。"
+    },
+    "daytime": {
+      "name": "日中と眠気",
+      "desc": "眠気と日中の機能。"
+    },
+    "hygiene": {
+      "name": "睡眠衛生と習慣",
+      "desc": "習慣とタイミング（スクリーン、カフェイン）。"
+    },
+    "environment": {
+      "name": "睡眠環境",
+      "desc": "光、騒音、温度、寝具。"
+    },
+    "breathing": {
+      "name": "いびきと呼吸のサイン",
+      "desc": "睡眠時無呼吸の可能性。"
+    },
+    "bloodpressure": {
+      "name": "血圧 – 生活習慣リスク",
+      "desc": "食事、活動、アルコール、ストレス、体重。"
+    }
   },
   "q": {
     "pattern": {
@@ -201,48 +261,130 @@
   },
   "tips": {
     "pattern": {
-      "keep_routine": "安定した睡眠習慣を維持する — ほとんどの日で同じ就寝・起床時間。",
-      "short_naps": "昼寝が必要な場合は短く（20〜30分）、日中の早い時間に。",
-      "consistent_bed_wake": "一貫した就寝・起床時間を目指す（±30〜60分）。",
-      "plan_winddown": "就寝の30〜60分前にシンプルなリラックス習慣を作る（照明を落とす、静かな活動）。",
-      "protect_7h": "ほとんどの夜で少なくとも7時間の睡眠時間を確保する。",
-      "cut_late_naps": "午後3〜4時以降の長い昼寝や遅い昼寝を避ける — 夜の睡眠が遅れます。"
+      "keep_routine": {
+        "title": "Keep your current rhythm",
+        "desc": "Fixed bed and wake times are working—stick with them."
+      },
+      "protect_7h": {
+        "title": "Protect at least 7 hours in bed",
+        "desc": "Block enough time so sleep pressure can build and you can recover."
+      },
+      "consistent_bed_wake": {
+        "title": "Regular bed and wake windows",
+        "desc": "Aim for roughly the same hours every day, even on weekends."
+      },
+      "plan_winddown": {
+        "title": "Plan a 20–30 minute wind-down",
+        "desc": "Dim lights, screens off, and do something calm before bed."
+      },
+      "cut_late_naps": {
+        "title": "Skip late naps",
+        "desc": "Avoid napping after mid-afternoon so you’re sleepy at night."
+      }
     },
     "insomnia": {
-      "maintain": "すでにうまくいっていることを維持する — 小さな習慣が積み重なります。",
-      "rule_20min": "ベッドで約20分起きたままの場合は、起きて照明を落とした落ち着いた活動をしてから再度試してください。",
-      "fixed_wake": "起床時間を固定しましょう — 体内時計を訓練します。",
-      "stimulus_control": "ベッドは睡眠と親密さだけに使用し、テレビ、携帯、仕事には使わないでください。",
-      "consider_cbti": "問題が続く場合: CBT-I（不眠症のための認知行動療法）を検討してください。"
+      "maintain": {
+        "title": "Keep the helpful habits",
+        "desc": "You’re handling awakenings well—keep the routine steady."
+      },
+      "rule_20min": {
+        "title": "20-minute rule",
+        "desc": "If you can’t sleep, get up briefly and reset with a calm activity."
+      },
+      "fixed_wake": {
+        "title": "Fixed wake time",
+        "desc": "Wake at the same time daily to retrain your sleep drive."
+      },
+      "stimulus_control": {
+        "title": "Bed = sleep",
+        "desc": "Use the bed only for sleep and intimacy; move elsewhere when awake."
+      },
+      "consider_cbti": {
+        "title": "Consider CBT-I",
+        "desc": "If insomnia persists, a CBT-I program or clinician can help."
+      }
     },
     "quality": {
-      "track_triggers": "潜在的な要因（カフェイン、運動のタイミング、ストレス）を記録してパターンを見つける。",
-      "address_disruptors": "一般的な妨害要因（騒音、光、不快感、遅い時間の画面使用）を減らす。",
-      "consult_if_pain": "持続的な痛み、不安、悪夢がある場合は、専門医に相談してください。"
+      "track_triggers": {
+        "title": "Track triggers",
+        "desc": "Note what helps or hurts your nights to spot patterns."
+      },
+      "address_disruptors": {
+        "title": "Tackle disruptions",
+        "desc": "Reduce pain, noise, light, or worries that fragment sleep."
+      },
+      "consult_if_pain": {
+        "title": "Check pain or discomfort",
+        "desc": "If pain or breathing issues wake you, talk with a professional."
+      }
     },
     "daytime": {
-      "morning_light": "朝の光を浴びましょう（10〜30分） — 覚醒度を高め、体内時計を安定させます。",
-      "activity_breaks": "日中に短い運動休憩を取りましょう。夕方には軽い活動を予定してください。",
-      "consider_medical": "著しい日中の眠気がありますか？ 医療チェックを検討してください（睡眠時無呼吸などの原因）。"
+      "morning_light": {
+        "title": "Morning light",
+        "desc": "Get bright light within an hour of waking to anchor your rhythm."
+      },
+      "activity_breaks": {
+        "title": "Movement breaks",
+        "desc": "Short walks or stretches through the day boost energy later."
+      },
+      "consider_medical": {
+        "title": "Check ongoing sleepiness",
+        "desc": "If you’re very sleepy despite time in bed, consider a medical check."
+      }
     },
     "hygiene": {
-      "keep_it_up": "すでに助けになっている睡眠習慣を維持しましょう。",
-      "screens_off_60": "就寝の60分前には画面をオフにするか控えましょう。",
-      "limit_caffeine": "午後2〜4時以降はカフェインを避けましょう（就寝の6〜8時間前）。",
-      "no_alcohol_late": "就寝前のアルコールは避けましょう — 睡眠を断片化させます。",
-      "no_big_meals_late": "寝る直前の大量で重い食事は避け、必要であれば軽いスナックを選びましょう。"
+      "keep_it_up": {
+        "title": "Keep your current wind-down",
+        "desc": "Your evening routine works—keep repeating it."
+      },
+      "screens_off_60": {
+        "title": "Screens off 60 minutes before bed",
+        "desc": "Shift to low light and calmer activities the last hour."
+      },
+      "limit_caffeine": {
+        "title": "Limit caffeine after lunch",
+        "desc": "Stop caffeine 6–8 hours before bed to protect sleep pressure."
+      },
+      "no_alcohol_late": {
+        "title": "Skip late alcohol",
+        "desc": "Avoid evening alcohol to prevent shallow, fragmented sleep."
+      }
     },
     "environment": {
-      "keep_cool_dark": "寝室を涼しく、暗く、整理された状態に保ちましょう — ベッドを睡眠の合図にします。",
-      "test_blackout": "遮光カーテンやアイマスクを試し、夜は照明を落としましょう。",
-      "noise_control": "必要に応じて耳栓やホワイトノイズを使用して騒音を抑えましょう。",
-      "try_new_pillow": "枕やマットレスを見直し、不快感で目覚める場合は交換を検討してください。",
-      "cooler_temp": "夜に暑すぎる場合は、温度を下げるか軽い寝具を使用してください。"
+      "keep_cool_dark": {
+        "title": "Cool, dark room",
+        "desc": "Blackout curtains and a slight drop in temperature help quality."
+      },
+      "test_blackout": {
+        "title": "Test blackout and dim lights",
+        "desc": "Use masks or blackout to cut light leaks."
+      },
+      "noise_control": {
+        "title": "Quiet the room",
+        "desc": "Earplugs, white noise, or steady fan sounds reduce wake-ups."
+      },
+      "try_new_pillow": {
+        "title": "Try a pillow that fits you",
+        "desc": "A supportive pillow can reduce aches and tossing."
+      },
+      "cooler_temp": {
+        "title": "Cooler bedroom",
+        "desc": "Aim slightly cooler than daytime for better sleep depth."
+      }
     },
     "breathing": {
-      "side_sleep": "横向きで寝る（背中に枕を置く） — いびきや無呼吸が減ることがあります。",
-      "reduce_evening_alcohol": "夜のアルコールは避けましょう — いびきや呼吸問題を悪化させる可能性があります。",
-      "consider_gp_check": "睡眠時無呼吸の疑いがありますか（大きないびき、無呼吸、日中の強い眠気）？ 医師に相談してください。"
+      "side_sleep": {
+        "title": "Sleep on your side",
+        "desc": "Side-sleeping can reduce snoring and breathing pauses."
+      },
+      "reduce_evening_alcohol": {
+        "title": "Reduce evening alcohol",
+        "desc": "Alcohol relaxes airways and can worsen snoring."
+      },
+      "consider_gp_check": {
+        "title": "Talk to a doctor if snoring is heavy",
+        "desc": "Persistent loud snoring or pauses should be checked."
+      }
     }
   }
 }

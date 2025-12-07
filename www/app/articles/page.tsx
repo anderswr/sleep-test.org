@@ -1,6 +1,7 @@
 "use client";
 
 import * as React from "react";
+import Image from "next/image";
 import Link from "next/link";
 import SiteHeader from "@/components/SiteHeader";
 import SiteFooter from "@/components/SiteFooter";
@@ -80,28 +81,35 @@ export default function ArticlesPage() {
 
         {items && (
           <section className="cards-row mt-6">
-            {items.map((a) => (
-              <Link
-                key={a.slug}
-                href={`/articles/${a.slug}`}
+            {items.map((a) => {
+              const summary = t(dict, `ui.articles.summaries.${a.slug}`, a.summary ?? "");
+
+              return (
+                <Link
+                  key={a.slug}
+                  href={`/articles/${a.slug}`}
                 className="card article-card"
                 aria-label={a.title}
               >
                 <div className="media">
-                  <img
+                  <Image
                     src={`/images/${a.slug}.png`}
                     alt={a.title}
                     className="card-image"
                     loading="lazy"
+                    width={550}
+                    height={367}
+                    sizes="(max-width: 980px) 100vw, 33vw"
                   />
                   <span className="media-gradient" aria-hidden />
                 </div>
                 <div className="card-content">
                   <h3 className="card-title">{a.title}</h3>
-                  {a.summary && <p className="card-summary">{a.summary}</p>}
+                  {summary && <p className="card-summary">{summary}</p>}
                 </div>
               </Link>
-            ))}
+              );
+            })}
           </section>
         )}
 
@@ -148,16 +156,17 @@ export default function ArticlesPage() {
             overflow: hidden;
             isolation: isolate;
             background: #f8fafc;
+            aspect-ratio: 550 / 367;
           }
           .card-image {
             width: 100%;
-            height: auto;
-            aspect-ratio: 16 / 9;
+            height: 100%;
             object-fit: cover;
             display: block;
             transform: scale(1);
             filter: saturate(0.9) contrast(0.98);
             transition: transform 300ms ease, filter 300ms ease, opacity 300ms ease;
+            border-bottom: 1px solid var(--border);
           }
           .media-gradient {
             position: absolute;

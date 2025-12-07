@@ -47,7 +47,29 @@
         "red": "Mali by ste zmeniť svoje návyky v oblasti "
       },
       "lookup_hint": "Po dokončení testu dostanete ID. Je anonymné a svoj report si môžete otvoriť kedykoľvek. Vložte svoje ID na zobrazenie reportu.",
-      "id_placeholder": "Vaše ID"
+      "id_placeholder": "Vaše ID",
+      "share": "Share report",
+      "suggestions": {
+        "title": "Improvement areas",
+        "subtitle": "Your result is based on your answers—focus on what feels relevant to you.",
+        "read_more": "Read more",
+        "score_green": "Good",
+        "score_orange": "Medium",
+        "score_red": "Needs attention"
+      },
+      "share_message_with_score": "Absolvoval som bezplatný spánkový test a získal {score}/100. Vyskúšaj si anonymný test:",
+      "share_message": "Absolvoval som bezplatný spánkový test. Vyskúšaj si anonymný test:",
+      "share_instagram": "Instagram",
+      "share_tiktok": "TikTok",
+      "share_targets": {
+        "facebook": "Facebook",
+        "x": "X",
+        "linkedin": "LinkedIn",
+        "reddit": "Reddit",
+        "whatsapp": "WhatsApp",
+        "telegram": "Telegram",
+        "email": "Email"
+      }
     },
     "articles": {
       "minutes": {
@@ -93,7 +115,21 @@
           "title": "Chrápanie a dýchanie: kedy to skontrolovať",
           "teaser": "Kedy je chrápanie neškodné, kedy to môže byť spánkové apnoe a čo robiť ďalej."
         }
+      },
+      "summaries": {
+        "some": "Tipy zo sociálnych sietí verzus výskum – plus zoradená sada nástrojov na vyskúšanie.",
+        "pattern": "Prečo sú dôležité pravidelné časy a dosť spánku, a jednoduché kroky, ktoré fungujú.",
+        "insomnia": "Praktické spôsoby, ako rýchlejšie zaspať a zvládať nočné prebúdzanie.",
+        "quality": "Znižujte časté rušiče a spravte noci pokojnejšie a hlbšie.",
+        "daytime": "Svetlo, pohyb a mikro prestávky: zostaňte bdelí a fungujte lepšie.",
+        "hygiene": "Obrazovky, kofeín, alkohol a večerný oddych: návyky, ktoré skutočne pomáhajú.",
+        "environment": "Svetlo, hluk, teplota a posteľ: vytvorte izbu, ktorá podporuje spánok.",
+        "breathing": "Kedy je chrápanie varovným signálom a čo robiť ďalej."
       }
+    },
+    "common": {
+      "copied": "Copied!",
+      "copy_link": "Copy link"
     }
   },
   "about": {
@@ -137,14 +173,38 @@
     "5": "Veľmi často"
   },
   "category": {
-    "pattern": { "name": "Vzorce a dĺžka spánku", "desc": "Dĺžka a pravidelnosť." },
-    "insomnia": { "name": "Zaspávanie a noc", "desc": "Zaspanie, prebúdzanie, skoré ráno." },
-    "quality": { "name": "Kvalita spánku", "desc": "Vnímaná kvalita a spokojnosť." },
-    "daytime": { "name": "Deň a ospalosť", "desc": "Ospalosť a denná funkčnosť." },
-    "hygiene": { "name": "Spánková hygiena a rutiny", "desc": "Návyky a načasovanie (obrazovky, kofeín)." },
-    "environment": { "name": "Prostredie na spánok", "desc": "Svetlo, hluk, teplota, posteľ." },
-    "breathing": { "name": "Chrápanie a dýchanie", "desc": "Možné príznaky spánkového apnoe." },
-    "bloodpressure": { "name": "Krvný tlak – riziko životného štýlu", "desc": "Strava, aktivita, alkohol, stres a hmotnosť." }
+    "pattern": {
+      "name": "Vzorce a dĺžka spánku",
+      "desc": "Dĺžka a pravidelnosť."
+    },
+    "insomnia": {
+      "name": "Zaspávanie a noc",
+      "desc": "Zaspanie, prebúdzanie, skoré ráno."
+    },
+    "quality": {
+      "name": "Kvalita spánku",
+      "desc": "Vnímaná kvalita a spokojnosť."
+    },
+    "daytime": {
+      "name": "Deň a ospalosť",
+      "desc": "Ospalosť a denná funkčnosť."
+    },
+    "hygiene": {
+      "name": "Spánková hygiena a rutiny",
+      "desc": "Návyky a načasovanie (obrazovky, kofeín)."
+    },
+    "environment": {
+      "name": "Prostredie na spánok",
+      "desc": "Svetlo, hluk, teplota, posteľ."
+    },
+    "breathing": {
+      "name": "Chrápanie a dýchanie",
+      "desc": "Možné príznaky spánkového apnoe."
+    },
+    "bloodpressure": {
+      "name": "Krvný tlak – riziko životného štýlu",
+      "desc": "Strava, aktivita, alkohol, stres a hmotnosť."
+    }
   },
   "q": {
     "pattern": {
@@ -194,55 +254,137 @@
       "overweight_self": "Považujem sa za človeka s nadváhou."
     }
   },
- "flags": {
+  "flags": {
     "osa_signal": "Možné príznaky spánkového apnoe – zvážte konzultáciu s lekárom.",
     "excessive_sleepiness": "Výrazná denná ospalosť – buďte mimoriadne opatrný.",
     "high_bp_risk": "Niekoľko faktorov životného štýlu poukazuje na zvýšené riziko vysokého krvného tlaku. Zvážte meranie krvného tlaku, keď budete mať príležitosť, najmä ak máte cukrovku 2. typu alebo blízkych príbuzných s kardiovaskulárnymi ochoreniami."
   },
   "tips": {
     "pattern": {
-      "keep_routine": "Dodržujte stabilnú spánkovú rutinu – podobné časy spánku a budenia väčšinu dní.",
-      "short_naps": "Ak potrebujete zdriemnuť, udržujte to krátke (20–30 min) a skôr počas dňa.",
-      "consistent_bed_wake": "Snažte sa o konzistentné časy spánku a budenia (±30–60 min).",
-      "plan_winddown": "Vytvorte si jednoduchú rutinu na ukľudnenie 30–60 min pred spaním (stlmené svetlá, nízka stimulácia).",
-      "protect_7h": "Chráňte si spánkové okno aspoň 7 hodín väčšinu nocí.",
-      "cut_late_naps": "Vyhnite sa dlhým alebo neskorým zdriemnutiam po ~15–16 hodine – môžu oddialiť nočný spánok."
+      "keep_routine": {
+        "title": "Keep your current rhythm",
+        "desc": "Fixed bed and wake times are working—stick with them."
+      },
+      "protect_7h": {
+        "title": "Protect at least 7 hours in bed",
+        "desc": "Block enough time so sleep pressure can build and you can recover."
+      },
+      "consistent_bed_wake": {
+        "title": "Regular bed and wake windows",
+        "desc": "Aim for roughly the same hours every day, even on weekends."
+      },
+      "plan_winddown": {
+        "title": "Plan a 20–30 minute wind-down",
+        "desc": "Dim lights, screens off, and do something calm before bed."
+      },
+      "cut_late_naps": {
+        "title": "Skip late naps",
+        "desc": "Avoid napping after mid-afternoon so you’re sleepy at night."
+      }
     },
     "insomnia": {
-      "maintain": "Udržujte to, čo už funguje – malé, stabilné návyky sa sčítajú.",
-      "rule_20min": "Ak ste bdelý ~20 min v posteli: vstaňte, robte niečo pokojné pri slabom svetle a skúste to znova.",
-      "fixed_wake": "Dodržujte pevný čas budenia bez ohľadu na okolnosti – trénuje to vaše biologické hodiny.",
-      "stimulus_control": "Vyhradzujte posteľ iba na spánok a intimitu – nie na TV, telefón alebo prácu.",
-      "consider_cbti": "Ak problémy pretrvávajú: zvážte CBT-I (kognitívno-behaviorálnu terapiu nespavosti)."
+      "maintain": {
+        "title": "Keep the helpful habits",
+        "desc": "You’re handling awakenings well—keep the routine steady."
+      },
+      "rule_20min": {
+        "title": "20-minute rule",
+        "desc": "If you can’t sleep, get up briefly and reset with a calm activity."
+      },
+      "fixed_wake": {
+        "title": "Fixed wake time",
+        "desc": "Wake at the same time daily to retrain your sleep drive."
+      },
+      "stimulus_control": {
+        "title": "Bed = sleep",
+        "desc": "Use the bed only for sleep and intimacy; move elsewhere when awake."
+      },
+      "consider_cbti": {
+        "title": "Consider CBT-I",
+        "desc": "If insomnia persists, a CBT-I program or clinician can help."
+      }
     },
     "quality": {
-      "track_triggers": "Sledujte možné spúšťače (kofeín, čas cvičenia, stres), aby ste si všimli vzorce.",
-      "address_disruptors": "Znížte bežné rušivé vplyvy (hluk, svetlo, nepohodlie, neskoré obrazovky).",
-      "consult_if_pain": "Pretrvávajúca bolesť, nepokoj alebo nočné mory? Poraďte sa s lekárom."
+      "track_triggers": {
+        "title": "Track triggers",
+        "desc": "Note what helps or hurts your nights to spot patterns."
+      },
+      "address_disruptors": {
+        "title": "Tackle disruptions",
+        "desc": "Reduce pain, noise, light, or worries that fragment sleep."
+      },
+      "consult_if_pain": {
+        "title": "Check pain or discomfort",
+        "desc": "If pain or breathing issues wake you, talk with a professional."
+      }
     },
     "daytime": {
-      "morning_light": "Získajte ranné svetlo (10–30 min) na zvýšenie bdelosti a ukotvenie svojho cirkadiánneho rytmu.",
-      "activity_breaks": "Doprajte si krátke pohybové prestávky počas dňa; ľahkú aktivitu plánujte skôr večer.",
-      "consider_medical": "Výrazná denná ospalosť? Zvážte lekársku kontrolu (napr. spánkové apnoe alebo iné príčiny)."
+      "morning_light": {
+        "title": "Morning light",
+        "desc": "Get bright light within an hour of waking to anchor your rhythm."
+      },
+      "activity_breaks": {
+        "title": "Movement breaks",
+        "desc": "Short walks or stretches through the day boost energy later."
+      },
+      "consider_medical": {
+        "title": "Check ongoing sleepiness",
+        "desc": "If you’re very sleepy despite time in bed, consider a medical check."
+      }
     },
     "hygiene": {
-      "keep_it_up": "Pokračujte v spánkových návykoch, ktoré vám už pomáhajú.",
-      "screens_off_60": "Posledných 60 min pred spaním obmedzte alebo vypnite obrazovky.",
-      "limit_caffeine": "Vyhnite sa kofeínu po ~14–16 hodine (6–8 hodín pred spaním).",
-      "no_alcohol_late": "Vynechajte alkohol tesne pred spaním – narúša spánok.",
-      "no_big_meals_late": "Vyhnite sa veľkým, ťažkým jedlám tesne pred spaním; ak treba, dajte si ľahkú desiatu."
+      "keep_it_up": {
+        "title": "Keep your current wind-down",
+        "desc": "Your evening routine works—keep repeating it."
+      },
+      "screens_off_60": {
+        "title": "Screens off 60 minutes before bed",
+        "desc": "Shift to low light and calmer activities the last hour."
+      },
+      "limit_caffeine": {
+        "title": "Limit caffeine after lunch",
+        "desc": "Stop caffeine 6–8 hours before bed to protect sleep pressure."
+      },
+      "no_alcohol_late": {
+        "title": "Skip late alcohol",
+        "desc": "Avoid evening alcohol to prevent shallow, fragmented sleep."
+      }
     },
     "environment": {
-      "keep_cool_dark": "Udržujte spálňu chladnú, tmavú a čistú – posteľ si spojte so spánkom.",
-      "test_blackout": "Skúste zatemňovacie závesy/masku na oči a tlmené večerné osvetlenie.",
-      "noise_control": "Obmedzte hluk (berušky, biely šum, stabilné pozadie), ak treba.",
-      "try_new_pillow": "Zvážte nový vankúš/matrac – vymeňte, ak sa budíte s diskomfortom.",
-      "cooler_temp": "Znížte teplotu alebo použite ľahšie prikrývky, ak sa v noci prehrievate."
+      "keep_cool_dark": {
+        "title": "Cool, dark room",
+        "desc": "Blackout curtains and a slight drop in temperature help quality."
+      },
+      "test_blackout": {
+        "title": "Test blackout and dim lights",
+        "desc": "Use masks or blackout to cut light leaks."
+      },
+      "noise_control": {
+        "title": "Quiet the room",
+        "desc": "Earplugs, white noise, or steady fan sounds reduce wake-ups."
+      },
+      "try_new_pillow": {
+        "title": "Try a pillow that fits you",
+        "desc": "A supportive pillow can reduce aches and tossing."
+      },
+      "cooler_temp": {
+        "title": "Cooler bedroom",
+        "desc": "Aim slightly cooler than daytime for better sleep depth."
+      }
     },
     "breathing": {
-      "side_sleep": "Skúste spať na boku (s vankúšom za chrbtom) – môže to znížiť chrápanie/apnoe u niektorých.",
-      "reduce_evening_alcohol": "Vyhnite sa alkoholu večer – môže zhoršiť chrápanie/problémy s dýchaním.",
-      "consider_gp_check": "Máte podozrenie na spánkové apnoe (hlasné chrápanie, pozorované prestávky, denná ospalosť)? Navštívte lekára."
+      "side_sleep": {
+        "title": "Sleep on your side",
+        "desc": "Side-sleeping can reduce snoring and breathing pauses."
+      },
+      "reduce_evening_alcohol": {
+        "title": "Reduce evening alcohol",
+        "desc": "Alcohol relaxes airways and can worsen snoring."
+      },
+      "consider_gp_check": {
+        "title": "Talk to a doctor if snoring is heavy",
+        "desc": "Persistent loud snoring or pauses should be checked."
+      }
     }
   }
 }

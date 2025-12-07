@@ -47,7 +47,29 @@
         "red": "يجب أن تغيّر عاداتك في "
       },
       "lookup_hint": "عند إكمال اختبار ستحصل على معرّف. هو مجهول، ويمكنك فتح تقريرك في أي وقت. ألصق معرّفك لعرض التقرير.",
-      "id_placeholder": "المعرّف الخاص بك"
+      "id_placeholder": "المعرّف الخاص بك",
+      "share": "Share report",
+      "suggestions": {
+        "title": "Improvement areas",
+        "subtitle": "Your result is based on your answers—focus on what feels relevant to you.",
+        "read_more": "Read more",
+        "score_green": "Good",
+        "score_orange": "Medium",
+        "score_red": "Needs attention"
+      },
+      "share_message_with_score": "أجريت اختبار نوم مجاني وحصلت على {score}/100. جرّب اختبارك المجهول:",
+      "share_message": "أجريت اختبار نوم مجاني. جرّب اختبارك المجهول:",
+      "share_instagram": "Instagram",
+      "share_tiktok": "TikTok",
+      "share_targets": {
+        "facebook": "Facebook",
+        "x": "X",
+        "linkedin": "LinkedIn",
+        "reddit": "Reddit",
+        "whatsapp": "WhatsApp",
+        "telegram": "Telegram",
+        "email": "Email"
+      }
     },
     "articles": {
       "minutes": {
@@ -93,7 +115,21 @@
           "title": "الشخير وإشارات التنفس: متى تتحقق",
           "teaser": "متى يكون الشخير غير ضار، ومتى قد يشير إلى انقطاع النفس أثناء النوم، وما يجب فعله بعد ذلك."
         }
+      },
+      "summaries": {
+        "some": "حيل النوم من وسائل التواصل مقابل الأبحاث العلمية، مع صندوق أدوات مرتَّب لتجربته.",
+        "pattern": "لماذا تهم المواعيد المنتظمة وكفاية النوم، مع خطوات بسيطة مجدية.",
+        "insomnia": "طرق عملية لتغفو أسرع والتعامل مع الاستيقاظ ليلاً.",
+        "quality": "قلّل المشتتات الشائعة واجعل الليالي أهدأ وأعمق.",
+        "daytime": "الضوء والحركة والاستراحات القصيرة: ابقَ متيقظاً واعمل بشكل أفضل.",
+        "hygiene": "الشاشات، الكافيين، الكحول والتهيؤ للنوم: عادات تساعد فعلاً.",
+        "environment": "الضوء والضوضاء والحرارة والسرير: أنشئ غرفة تدعم النوم.",
+        "breathing": "متى يكون الشخير إشارة تحذير وما الخطوة التالية."
       }
+    },
+    "common": {
+      "copied": "Copied!",
+      "copy_link": "Copy link"
     }
   },
   "about": {
@@ -137,14 +173,38 @@
     "5": "كثيراً جداً"
   },
   "category": {
-    "pattern": { "name": "نمط النوم والمدة", "desc": "الطول والانتظام." },
-    "insomnia": { "name": "صعوبة النوم والليل", "desc": "بداية النوم، الاستيقاظات، الصباح المبكر." },
-    "quality": { "name": "جودة النوم", "desc": "الجودة المتصورة والرضا." },
-    "daytime": { "name": "النهار والنعاس", "desc": "النعاس والأداء النهاري." },
-    "hygiene": { "name": "نظافة النوم والروتين", "desc": "العادات والتوقيت (الشاشات، الكافيين)." },
-    "environment": { "name": "بيئة النوم", "desc": "الضوء، الضوضاء، الحرارة، السرير." },
-    "breathing": { "name": "الشخير وإشارات التنفس", "desc": "علامات محتملة لانقطاع النفس أثناء النوم." },
-    "bloodpressure": { "name": "ضغط الدم – خطر نمط الحياة", "desc": "النظام الغذائي، النشاط، الكحول، التوتر، والوزن." }
+    "pattern": {
+      "name": "نمط النوم والمدة",
+      "desc": "الطول والانتظام."
+    },
+    "insomnia": {
+      "name": "صعوبة النوم والليل",
+      "desc": "بداية النوم، الاستيقاظات، الصباح المبكر."
+    },
+    "quality": {
+      "name": "جودة النوم",
+      "desc": "الجودة المتصورة والرضا."
+    },
+    "daytime": {
+      "name": "النهار والنعاس",
+      "desc": "النعاس والأداء النهاري."
+    },
+    "hygiene": {
+      "name": "نظافة النوم والروتين",
+      "desc": "العادات والتوقيت (الشاشات، الكافيين)."
+    },
+    "environment": {
+      "name": "بيئة النوم",
+      "desc": "الضوء، الضوضاء، الحرارة، السرير."
+    },
+    "breathing": {
+      "name": "الشخير وإشارات التنفس",
+      "desc": "علامات محتملة لانقطاع النفس أثناء النوم."
+    },
+    "bloodpressure": {
+      "name": "ضغط الدم – خطر نمط الحياة",
+      "desc": "النظام الغذائي، النشاط، الكحول، التوتر، والوزن."
+    }
   },
   "q": {
     "pattern": {
@@ -201,48 +261,130 @@
   },
   "tips": {
     "pattern": {
-      "keep_routine": "حافظ على روتين نوم ثابت – أوقات نوم واستيقاظ متشابهة معظم الأيام.",
-      "short_naps": "إذا احتجت إلى قيلولة، اجعلها قصيرة (20–30 دقيقة) وفي وقت مبكر من اليوم.",
-      "consistent_bed_wake": "استهدف أوقات نوم واستيقاظ ثابتة (±30–60 دقيقة).",
-      "plan_winddown": "أنشئ روتين استرخاء بسيط قبل النوم بـ30–60 دقيقة (إضاءة خافتة، أنشطة هادئة).",
-      "protect_7h": "احرص على نافذة نوم لا تقل عن 7 ساعات معظم الليالي.",
-      "cut_late_naps": "تجنب القيلولات الطويلة أو المتأخرة بعد 3–4 مساءً — قد تؤخر نوم الليل."
+      "keep_routine": {
+        "title": "Keep your current rhythm",
+        "desc": "Fixed bed and wake times are working—stick with them."
+      },
+      "protect_7h": {
+        "title": "Protect at least 7 hours in bed",
+        "desc": "Block enough time so sleep pressure can build and you can recover."
+      },
+      "consistent_bed_wake": {
+        "title": "Regular bed and wake windows",
+        "desc": "Aim for roughly the same hours every day, even on weekends."
+      },
+      "plan_winddown": {
+        "title": "Plan a 20–30 minute wind-down",
+        "desc": "Dim lights, screens off, and do something calm before bed."
+      },
+      "cut_late_naps": {
+        "title": "Skip late naps",
+        "desc": "Avoid napping after mid-afternoon so you’re sleepy at night."
+      }
     },
     "insomnia": {
-      "maintain": "حافظ على ما يعمل بالفعل — العادات الصغيرة والثابتة تُحدث فرقاً.",
-      "rule_20min": "إذا كنت مستيقظاً حوالي 20 دقيقة في السرير: انهض، قم بشيء هادئ بإضاءة منخفضة، وحاول مرة أخرى.",
-      "fixed_wake": "حافظ على وقت استيقاظ ثابت مهما كان — فهذا يدرب ساعتك البيولوجية.",
-      "stimulus_control": "خصص السرير للنوم والعلاقة فقط — ليس للتلفاز أو الهاتف أو العمل.",
-      "consider_cbti": "إذا استمرت المشاكل: فكر في العلاج السلوكي المعرفي للأرق (CBT-I)."
+      "maintain": {
+        "title": "Keep the helpful habits",
+        "desc": "You’re handling awakenings well—keep the routine steady."
+      },
+      "rule_20min": {
+        "title": "20-minute rule",
+        "desc": "If you can’t sleep, get up briefly and reset with a calm activity."
+      },
+      "fixed_wake": {
+        "title": "Fixed wake time",
+        "desc": "Wake at the same time daily to retrain your sleep drive."
+      },
+      "stimulus_control": {
+        "title": "Bed = sleep",
+        "desc": "Use the bed only for sleep and intimacy; move elsewhere when awake."
+      },
+      "consider_cbti": {
+        "title": "Consider CBT-I",
+        "desc": "If insomnia persists, a CBT-I program or clinician can help."
+      }
     },
     "quality": {
-      "track_triggers": "تتبع المحفزات المحتملة (الكافيين، توقيت التمارين، التوتر) لاكتشاف الأنماط.",
-      "address_disruptors": "قلل من المشتتات الشائعة (الضوضاء، الضوء، الانزعاج، الشاشات المتأخرة).",
-      "consult_if_pain": "ألم مستمر، قلق، أو كوابيس؟ استشر الطبيب."
+      "track_triggers": {
+        "title": "Track triggers",
+        "desc": "Note what helps or hurts your nights to spot patterns."
+      },
+      "address_disruptors": {
+        "title": "Tackle disruptions",
+        "desc": "Reduce pain, noise, light, or worries that fragment sleep."
+      },
+      "consult_if_pain": {
+        "title": "Check pain or discomfort",
+        "desc": "If pain or breathing issues wake you, talk with a professional."
+      }
     },
     "daytime": {
-      "morning_light": "احصل على ضوء الصباح (10–30 دقيقة) لتعزيز اليقظة وضبط إيقاعك اليومي.",
-      "activity_breaks": "خذ فترات حركة قصيرة خلال اليوم؛ وجدول نشاطاً خفيفاً في وقت مبكر من المساء.",
-      "consider_medical": "هل تعاني من نعاس نهاري مفرط؟ فكر في فحص طبي (مثل انقطاع النفس أثناء النوم أو أسباب أخرى)."
+      "morning_light": {
+        "title": "Morning light",
+        "desc": "Get bright light within an hour of waking to anchor your rhythm."
+      },
+      "activity_breaks": {
+        "title": "Movement breaks",
+        "desc": "Short walks or stretches through the day boost energy later."
+      },
+      "consider_medical": {
+        "title": "Check ongoing sleepiness",
+        "desc": "If you’re very sleepy despite time in bed, consider a medical check."
+      }
     },
     "hygiene": {
-      "keep_it_up": "حافظ على العادات الداعمة للنوم التي تساعدك بالفعل.",
-      "screens_off_60": "تجنب الشاشات في آخر 60 دقيقة قبل النوم.",
-      "limit_caffeine": "تجنب الكافيين بعد الساعة 2–4 مساءً (6–8 ساعات قبل النوم).",
-      "no_alcohol_late": "تجنب الكحول بالقرب من وقت النوم — فهو يجزئ النوم.",
-      "no_big_meals_late": "تجنب الوجبات الكبيرة والثقيلة مباشرة قبل النوم؛ اختر وجبة خفيفة إذا لزم الأمر."
+      "keep_it_up": {
+        "title": "Keep your current wind-down",
+        "desc": "Your evening routine works—keep repeating it."
+      },
+      "screens_off_60": {
+        "title": "Screens off 60 minutes before bed",
+        "desc": "Shift to low light and calmer activities the last hour."
+      },
+      "limit_caffeine": {
+        "title": "Limit caffeine after lunch",
+        "desc": "Stop caffeine 6–8 hours before bed to protect sleep pressure."
+      },
+      "no_alcohol_late": {
+        "title": "Skip late alcohol",
+        "desc": "Avoid evening alcohol to prevent shallow, fragmented sleep."
+      }
     },
     "environment": {
-      "keep_cool_dark": "اجعل غرفة النوم باردة، مظلمة ومرتبة — ليصبح السرير إشارة للنوم.",
-      "test_blackout": "جرّب ستائر التعتيم/قناع العين والإضاءة الخافتة في المساء.",
-      "noise_control": "خفف الضوضاء (سدادات الأذن، الضوضاء البيضاء، صوت ثابت بالخلفية) إذا لزم الأمر.",
-      "try_new_pillow": "قيّم الوسادة/المرتبة — استبدلها إذا استيقظت مع انزعاج.",
-      "cooler_temp": "اخفض درجة الحرارة أو استخدم فراشاً أخف إذا شعرت بالحرارة الزائدة ليلاً."
+      "keep_cool_dark": {
+        "title": "Cool, dark room",
+        "desc": "Blackout curtains and a slight drop in temperature help quality."
+      },
+      "test_blackout": {
+        "title": "Test blackout and dim lights",
+        "desc": "Use masks or blackout to cut light leaks."
+      },
+      "noise_control": {
+        "title": "Quiet the room",
+        "desc": "Earplugs, white noise, or steady fan sounds reduce wake-ups."
+      },
+      "try_new_pillow": {
+        "title": "Try a pillow that fits you",
+        "desc": "A supportive pillow can reduce aches and tossing."
+      },
+      "cooler_temp": {
+        "title": "Cooler bedroom",
+        "desc": "Aim slightly cooler than daytime for better sleep depth."
+      }
     },
     "breathing": {
-      "side_sleep": "جرّب النوم على الجانب (استخدم وسادة خلف ظهرك) — قد يقلل الشخير/انقطاع النفس لدى البعض.",
-      "reduce_evening_alcohol": "تجنب الكحول في المساء — فقد يزيد الشخير/مشاكل التنفس.",
-      "consider_gp_check": "هل تشك في انقطاع النفس أثناء النوم (شخير مرتفع، توقفات ملحوظة، نعاس نهاري)؟ راجع طبيبك."
+      "side_sleep": {
+        "title": "Sleep on your side",
+        "desc": "Side-sleeping can reduce snoring and breathing pauses."
+      },
+      "reduce_evening_alcohol": {
+        "title": "Reduce evening alcohol",
+        "desc": "Alcohol relaxes airways and can worsen snoring."
+      },
+      "consider_gp_check": {
+        "title": "Talk to a doctor if snoring is heavy",
+        "desc": "Persistent loud snoring or pauses should be checked."
+      }
     }
   }
 }
