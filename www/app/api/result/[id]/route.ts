@@ -6,12 +6,22 @@ import { AnswerMap } from "@/lib/types";
 
 export const runtime = "nodejs";
 
-export async function GET(_req: NextRequest, { params }: { params: { id: string } }) {
+export async function GET(
+  _req: NextRequest,
+  context: { params?: Record<string, string | string[]> }
+) {
   try {
+    const idParam = context.params?.id;
+    const id = Array.isArray(idParam) ? idParam[0] : idParam;
+
+    if (!id) {
+      return NextResponse.json({ error: "missing_id" }, { status: 400 });
+    }
+
     const col = await getCollection("results");
 
     // Hent dokumentet – men ikke send hele videre (vi gjør egen retur under)
-    const doc = await col.findOne({ id: params.id }, { projection: { _id: 0 } });
+    const doc = await col.findOne({ id }, { projection: { _id: 0 } });
     if (!doc) {
       return NextResponse.json({ error: "not_found" }, { status: 404 });
     }
