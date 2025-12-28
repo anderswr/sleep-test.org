@@ -39,7 +39,7 @@
       "title": "Resultat",
       "sleep_score": "Søvn-score",
       "copy_id": "Kopier ID",
-      "disclaimer": "Dette er ikke en medisinsk vurdering, men en generell veiledning som kan hjelpe deg å se mønstre og prøve praktiske tiltak. Husk at søvnvaner ofte endres gradvis — prøv deg frem, vær tålmodig, og se hva som fungerer best for deg.",
+      "disclaimer": "Dette er ikke en medisinsk vurdering, men en generell veiledning som kan hjelpe deg å legge merke til mønstre og prøve praktiske tiltak. Søvnvaner endrer seg ofte gradvis — eksperimenter, vær tålmodig og se hva som fungerer best for deg. Noen reseptbelagte medisiner kan påvirke søvnkvaliteten. Hvis du bruker medisiner for hjerte-, puste- eller stemningslidelser, bør du vurdere å gå gjennom disse resultatene med legen som har skrevet dem ut.",
       "how_to_improve": "Oppretthold og forbedre dette:",
       "lead": {
         "green": "Du svarer godt på ",
@@ -47,7 +47,8 @@
         "red": "Du bør endre vanene dine for "
       },
       "lookup_hint": "Når du har gjennomført en test får du en ID. Den er anonym, og du kan åpne rapporten når du vil. Lim inn ID-en for å åpne rapporten.",
-      "id_placeholder": "Din ID"
+      "id_placeholder": "Din ID",
+      "disclaimer2": "Søvnproblemer kan også variere i varighet. Kortvarige søvnvansker er ofte knyttet til stress, rutiner eller midlertidige endringer, mens mer langvarige søvnproblemer kan ha nytte av strukturert oppfølging. Hvis søvnproblemene vedvarer over tid, bør du vurdere å søke råd hos kvalifisert helsepersonell."
     },
     "articles": {
       "card": {
@@ -86,15 +87,15 @@
       }
     }
   },
-"about": {
-  "title": "Laget av DMZ DATA AS",
-  "intro": "Laget på dugnad i Porsgrunn, helsetech/søvntech og AI.",
-  "contact": {
-    "title": "Kontakt",
-    "p1": "Ansvarlig for www.sleep-test.org er DMZ DATA AS. Kontaktpunkt for personvern og generelle henvendelser: kontor@dmz.no.",
-    "p2": "Utforsk DMZ DATA-underverker på <a href='https://www.dmz.no' target='_blank' rel='noopener'>www.dmz.no</a>, App for å lære Google web search (<a href='https://apps.apple.com/no/app/toiletlearn-web-search/id6748481089' target='_blank' rel='noopener'>LINK</a>), App for å lære ChatGPT (<a href='https://apps.apple.com/us/app/toiletlearn-web-search/id6748926636?platform=iphone' target='_blank' rel='noopener'>LINK</a>) og gjør Homey smarthuset ditt litt mer gøy med DadJokes (<a href='https://homey.app/no-no/app/com.dmz.dadjokesplus/DadJokes-Plus/test/' target='_blank' rel='noopener'>LINK</a>)."
-  }
-},
+  "about": {
+    "title": "Laget av DMZ DATA AS",
+    "intro": "Laget på dugnad i Porsgrunn, helsetech/søvntech og AI.",
+    "contact": {
+      "title": "Kontakt",
+      "p1": "Ansvarlig for www.sleep-test.org er DMZ DATA AS. Kontaktpunkt for personvern og generelle henvendelser: kontor@dmz.no.",
+      "p2": "Utforsk DMZ DATA-underverker på <a href='https://www.dmz.no' target='_blank' rel='noopener'>www.dmz.no</a>, App for å lære Google web search (<a href='https://apps.apple.com/no/app/toiletlearn-web-search/id6748481089' target='_blank' rel='noopener'>LINK</a>), App for å lære ChatGPT (<a href='https://apps.apple.com/us/app/toiletlearn-web-search/id6748926636?platform=iphone' target='_blank' rel='noopener'>LINK</a>) og gjør Homey smarthuset ditt litt mer gøy med DadJokes (<a href='https://homey.app/no-no/app/com.dmz.dadjokesplus/DadJokes-Plus/test/' target='_blank' rel='noopener'>LINK</a>)."
+    }
+  },
   "privacy": {
     "title": "Personvernerklæring",
     "p1": "Vi tar personvern på alvor. Denne erklæringen forklarer hvordan vi behandler opplysninger når du bruker www.sleep-test.org. Ved å bruke nettstedet bekrefter du at du har lest og akseptert disse vilkårene. Nettstedet er designet slik at skoler kan bruke tjenesten uten å oppgi personopplysninger.",
@@ -127,14 +128,38 @@
     "5": "Svært ofte"
   },
   "category": {
-    "pattern": { "name": "Søvnmønster & varighet", "desc": "Lengde og regelmessighet." },
-    "insomnia": { "name": "Innsovning & natt", "desc": "Sovning, oppvåkninger, tidlig oppvåkning." },
-    "quality": { "name": "Søvnkvalitet", "desc": "Opplevd kvalitet og fornøydhet." },
-    "daytime": { "name": "Dagtid & søvnighet", "desc": "Døsighet og funksjon på dagtid." },
-    "hygiene": { "name": "Søvnhygiene & rutiner", "desc": "Vaner og timing (skjermer, koffein)." },
-    "environment": { "name": "Søvnmiljø", "desc": "Lys, støy, temperatur, seng." },
-    "breathing": { "name": "Snorking & pustesignal", "desc": "Mulige tegn på søvnapné." },
-    "bloodpressure": { "name": "Blodtrykk – livsstilsrisiko", "desc": "Kosthold, aktivitet, alkohol, stress og vekt." }
+    "pattern": {
+      "name": "Søvnmønster & varighet",
+      "desc": "Lengde og regelmessighet."
+    },
+    "insomnia": {
+      "name": "Innsovning & natt",
+      "desc": "Sovning, oppvåkninger, tidlig oppvåkning."
+    },
+    "quality": {
+      "name": "Søvnkvalitet",
+      "desc": "Opplevd kvalitet og fornøydhet."
+    },
+    "daytime": {
+      "name": "Dagtid & søvnighet",
+      "desc": "Døsighet og funksjon på dagtid."
+    },
+    "hygiene": {
+      "name": "Søvnhygiene & rutiner",
+      "desc": "Vaner og timing (skjermer, koffein)."
+    },
+    "environment": {
+      "name": "Søvnmiljø",
+      "desc": "Lys, støy, temperatur, seng."
+    },
+    "breathing": {
+      "name": "Snorking & pustesignal",
+      "desc": "Mulige tegn på søvnapné."
+    },
+    "bloodpressure": {
+      "name": "Blodtrykk – livsstilsrisiko",
+      "desc": "Kosthold, aktivitet, alkohol, stress og vekt."
+    }
   },
   "q": {
     "pattern": {

@@ -39,7 +39,7 @@
       "title": "Result",
       "sleep_score": "Sleep score",
       "copy_id": "Copy ID",
-      "disclaimer": "This is not a medical evaluation, but a general guide to help you notice patterns and try practical steps. Sleep habits often change gradually — experiment, be patient, and see what works best for you.",
+      "disclaimer": "This is not a medical evaluation, but a general guide to help you notice patterns and try practical steps. Sleep habits often change gradually — experiment, be patient, and see what works best for you. Some prescription medications can affect sleep quality. If you are taking medication for heart, breathing, or mood conditions, consider reviewing these results with your prescribing doctor.",
       "how_to_improve": "Keep and improve this:",
       "lead": {
         "green": "You are doing well on ",
@@ -47,7 +47,8 @@
         "red": "You should change your habits for "
       },
       "lookup_hint": "When you complete a test you receive an ID. It is anonymous, and you can open your report anytime. Paste your ID to view the report.",
-      "id_placeholder": "Your ID"
+      "id_placeholder": "Your ID",
+      "disclaimer2": "Sleep challenges can also differ by duration. Short-term sleep difficulties are often linked to stress, routines, or temporary changes, while longer-lasting sleep problems may benefit from structured support. If sleep issues persist over time, consider seeking guidance from a qualified healthcare professional."
     },
     "articles": {
       "minutes": {
@@ -96,15 +97,15 @@
       }
     }
   },
-"about": {
-  "title": "Created by DMZ DATA AS",
-  "intro": "Built almost without effort in Porsgrunn, combining healthtech/sleeptech and AI.",
-  "contact": {
-    "title": "Contact",
-    "p1": "Responsible for www.sleep-test.org is DMZ DATA AS. Contact point for privacy inquiries and general questions: kontor@dmz.no.",
-    "p2": "Explore DMZ DATA wonders at <a href='https://www.dmz.no' target='_blank' rel='noopener'>www.dmz.no</a>, an app to learn Google web search (<a href='https://apps.apple.com/no/app/toiletlearn-web-search/id6748481089' target='_blank' rel='noopener'>LINK</a>), an app to learn ChatGPT (<a href='https://apps.apple.com/us/app/toiletlearn-web-search/id6748926636?platform=iphone' target='_blank' rel='noopener'>LINK</a>), and make your Homey smart home a bit more fun with DadJokes (<a href='https://homey.app/no-no/app/com.dmz.dadjokesplus/DadJokes-Plus/test/' target='_blank' rel='noopener'>LINK</a>)."
-  }
-},
+  "about": {
+    "title": "Created by DMZ DATA AS",
+    "intro": "Built almost without effort in Porsgrunn, combining healthtech/sleeptech and AI.",
+    "contact": {
+      "title": "Contact",
+      "p1": "Responsible for www.sleep-test.org is DMZ DATA AS. Contact point for privacy inquiries and general questions: kontor@dmz.no.",
+      "p2": "Explore DMZ DATA wonders at <a href='https://www.dmz.no' target='_blank' rel='noopener'>www.dmz.no</a>, an app to learn Google web search (<a href='https://apps.apple.com/no/app/toiletlearn-web-search/id6748481089' target='_blank' rel='noopener'>LINK</a>), an app to learn ChatGPT (<a href='https://apps.apple.com/us/app/toiletlearn-web-search/id6748926636?platform=iphone' target='_blank' rel='noopener'>LINK</a>), and make your Homey smart home a bit more fun with DadJokes (<a href='https://homey.app/no-no/app/com.dmz.dadjokesplus/DadJokes-Plus/test/' target='_blank' rel='noopener'>LINK</a>)."
+    }
+  },
   "privacy": {
     "title": "Privacy Policy",
     "p1": "We take privacy seriously. This policy explains how we handle information when you use www.sleep-test.org. By using the site, you confirm that you have read and accepted these terms. The site is designed so that schools can use it without providing any personal information.",
@@ -122,7 +123,6 @@
     "submit": "Submit",
     "progress": "Progress"
   },
-
   "common": {
     "sending": "Sending…",
     "back": "Back",
@@ -138,14 +138,38 @@
     "5": "Very often"
   },
   "category": {
-    "pattern": { "name": "Sleep pattern & duration", "desc": "Length and regularity." },
-    "insomnia": { "name": "Falling asleep & night", "desc": "Sleep onset, awakenings, early morning." },
-    "quality": { "name": "Sleep quality", "desc": "Perceived quality and satisfaction." },
-    "daytime": { "name": "Daytime & sleepiness", "desc": "Sleepiness and daytime function." },
-    "hygiene": { "name": "Sleep hygiene & routines", "desc": "Habits and timing (screens, caffeine)." },
-    "environment": { "name": "Sleep environment", "desc": "Light, noise, temperature, bed." },
-    "breathing": { "name": "Snoring & breathing signals", "desc": "Possible signs of sleep apnea." },
-    "bloodpressure": { "name": "Blood pressure – lifestyle risk", "desc": "Diet, activity, alcohol, stress, and weight." }
+    "pattern": {
+      "name": "Sleep pattern & duration",
+      "desc": "Length and regularity."
+    },
+    "insomnia": {
+      "name": "Falling asleep & night",
+      "desc": "Sleep onset, awakenings, early morning."
+    },
+    "quality": {
+      "name": "Sleep quality",
+      "desc": "Perceived quality and satisfaction."
+    },
+    "daytime": {
+      "name": "Daytime & sleepiness",
+      "desc": "Sleepiness and daytime function."
+    },
+    "hygiene": {
+      "name": "Sleep hygiene & routines",
+      "desc": "Habits and timing (screens, caffeine)."
+    },
+    "environment": {
+      "name": "Sleep environment",
+      "desc": "Light, noise, temperature, bed."
+    },
+    "breathing": {
+      "name": "Snoring & breathing signals",
+      "desc": "Possible signs of sleep apnea."
+    },
+    "bloodpressure": {
+      "name": "Blood pressure – lifestyle risk",
+      "desc": "Diet, activity, alcohol, stress, and weight."
+    }
   },
   "q": {
     "pattern": {
@@ -195,7 +219,7 @@
       "overweight_self": "I consider myself overweight."
     }
   },
- "flags": {
+  "flags": {
     "osa_signal": "Possible signs of sleep apnea – consider talking to your doctor.",
     "excessive_sleepiness": "Marked daytime sleepiness – be extra careful.",
     "high_bp_risk": "Several lifestyle factors point to an increased risk of high blood pressure. Consider measuring your blood pressure when you have the opportunity, especially if you have type 2 diabetes or close relatives with cardiovascular disease."

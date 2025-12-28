@@ -39,7 +39,7 @@
       "title": "Resultado",
       "sleep_score": "Pontuação do sono",
       "copy_id": "Copiar ID",
-      "disclaimer": "Este não é um diagnóstico médico, mas um guia geral para ajudá-lo a perceber padrões e tentar passos práticos. Hábitos de sono geralmente mudam gradualmente — experimente, seja paciente e veja o que funciona melhor para você.",
+      "disclaimer": "Isto não é uma avaliação médica, mas um guia geral para ajudar você a perceber padrões e tentar medidas práticas. Os hábitos de sono costumam mudar gradualmente — experimente, tenha paciência e veja o que funciona melhor para você. Alguns medicamentos prescritos podem afetar a qualidade do sono. Se você estiver tomando medicação para condições cardíacas, respiratórias ou de humor, considere revisar estes resultados com o médico que prescreveu.",
       "how_to_improve": "Mantenha e melhore isto:",
       "lead": {
         "green": "Você está indo bem em ",
@@ -47,7 +47,8 @@
         "red": "Você deve mudar seus hábitos em "
       },
       "lookup_hint": "Quando você conclui um teste, recebe um ID. Ele é anônimo e você pode abrir seu relatório a qualquer momento. Cole seu ID para visualizar o relatório.",
-      "id_placeholder": "Seu ID"
+      "id_placeholder": "Seu ID",
+      "disclaimer2": "Os desafios do sono também podem variar conforme a duração. Dificuldades de sono de curto prazo costumam estar ligadas ao estresse, às rotinas ou a mudanças temporárias, enquanto problemas de sono mais duradouros podem se beneficiar de um suporte estruturado. Se os problemas de sono persistirem ao longo do tempo, considere buscar orientação de um profissional de saúde qualificado."
     },
     "articles": {
       "minutes": {
@@ -137,14 +138,38 @@
     "5": "Muito frequentemente"
   },
   "category": {
-    "pattern": { "name": "Padrão e duração do sono", "desc": "Duração e regularidade." },
-    "insomnia": { "name": "Adormecer & noite", "desc": "Início do sono, despertares, manhã precoce." },
-    "quality": { "name": "Qualidade do sono", "desc": "Qualidade percebida e satisfação." },
-    "daytime": { "name": "Dia & sonolência", "desc": "Sonolência e funcionamento diurno." },
-    "hygiene": { "name": "Higiene do sono & rotinas", "desc": "Hábitos e horários (telas, cafeína)." },
-    "environment": { "name": "Ambiente do sono", "desc": "Luz, ruído, temperatura, cama." },
-    "breathing": { "name": "Ronco & sinais respiratórios", "desc": "Possíveis sinais de apneia do sono." },
-    "bloodpressure": { "name": "Pressão arterial – risco de estilo de vida", "desc": "Dieta, atividade, álcool, estresse e peso." }
+    "pattern": {
+      "name": "Padrão e duração do sono",
+      "desc": "Duração e regularidade."
+    },
+    "insomnia": {
+      "name": "Adormecer & noite",
+      "desc": "Início do sono, despertares, manhã precoce."
+    },
+    "quality": {
+      "name": "Qualidade do sono",
+      "desc": "Qualidade percebida e satisfação."
+    },
+    "daytime": {
+      "name": "Dia & sonolência",
+      "desc": "Sonolência e funcionamento diurno."
+    },
+    "hygiene": {
+      "name": "Higiene do sono & rotinas",
+      "desc": "Hábitos e horários (telas, cafeína)."
+    },
+    "environment": {
+      "name": "Ambiente do sono",
+      "desc": "Luz, ruído, temperatura, cama."
+    },
+    "breathing": {
+      "name": "Ronco & sinais respiratórios",
+      "desc": "Possíveis sinais de apneia do sono."
+    },
+    "bloodpressure": {
+      "name": "Pressão arterial – risco de estilo de vida",
+      "desc": "Dieta, atividade, álcool, estresse e peso."
+    }
   },
   "q": {
     "pattern": {

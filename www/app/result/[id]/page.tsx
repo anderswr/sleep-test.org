@@ -215,11 +215,18 @@ export default function ResultPage({ params }: { params: { id: string } }) {
                 </div>
 
                 {/* Disclaimer */}
-                <p style={{ marginTop: 12, color: "var(--muted)" }}>
+                <p style={{ marginTop: 12, color: "var(--muted)", fontSize: ".9rem" }}>
                   {t(
                     dict,
                     "ui.result.disclaimer",
                     "This is not a medical evaluation, but a general guide to help you notice patterns and try practical steps."
+                  )}
+                </p>
+                <p style={{ marginTop: 12, color: "var(--muted)", fontSize: ".9rem" }}>
+                  {t(
+                    dict,
+                    "ui.result.disclaimer2",
+                    "Sleep challenges can also differ by duration. Short-term sleep difficulties are often linked to stress, routines, or temporary changes, while longer-lasting sleep problems may benefit from structured support. If sleep issues persist over time, consider seeking guidance from a qualified healthcare professional."
                   )}
                 </p>
               </div>

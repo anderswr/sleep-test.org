@@ -39,7 +39,7 @@
       "title": "Résultat",
       "sleep_score": "Score de sommeil",
       "copy_id": "Copier l'ID",
-      "disclaimer": "Ceci n'est pas une évaluation médicale, mais un guide général pour vous aider à remarquer des tendances et essayer des étapes pratiques. Les habitudes de sommeil changent souvent progressivement — expérimentez, soyez patient et découvrez ce qui fonctionne le mieux pour vous.",
+      "disclaimer": "Ceci n’est pas une évaluation médicale, mais un guide général pour vous aider à repérer des schémas et à essayer des mesures pratiques. Les habitudes de sommeil changent souvent progressivement — expérimentez, soyez patient et voyez ce qui fonctionne le mieux pour vous. Certains médicaments sur ordonnance peuvent affecter la qualité du sommeil. Si vous prenez un traitement pour des troubles cardiaques, respiratoires ou de l’humeur, envisagez de revoir ces résultats avec votre médecin prescripteur.",
       "how_to_improve": "Conservez et améliorez ceci :",
       "lead": {
         "green": "Vous vous en sortez bien pour ",
@@ -47,7 +47,8 @@
         "red": "Vous devriez changer vos habitudes pour "
       },
       "lookup_hint": "Lorsque vous terminez un test, vous recevez un ID. Il est anonyme et vous pouvez ouvrir votre rapport à tout moment. Collez votre ID pour voir le rapport.",
-      "id_placeholder": "Votre ID"
+      "id_placeholder": "Votre ID",
+      "disclaimer2": "Les difficultés de sommeil peuvent aussi varier selon leur durée. Les troubles du sommeil à court terme sont souvent liés au stress, aux routines ou à des changements temporaires, tandis que les problèmes de sommeil plus durables peuvent bénéficier d’un accompagnement structuré. Si les problèmes de sommeil persistent dans le temps, envisagez de demander conseil à un professionnel de santé qualifié."
     },
     "articles": {
       "minutes": {
@@ -137,14 +138,38 @@
     "5": "Très souvent"
   },
   "category": {
-    "pattern": { "name": "Schéma et durée du sommeil", "desc": "Durée et régularité." },
-    "insomnia": { "name": "Endormissement & nuit", "desc": "Début du sommeil, réveils, matinée précoce." },
-    "quality": { "name": "Qualité du sommeil", "desc": "Qualité perçue et satisfaction." },
-    "daytime": { "name": "Somnolence diurne", "desc": "Somnolence et fonctionnement diurne." },
-    "hygiene": { "name": "Hygiène du sommeil & routines", "desc": "Habitudes et horaires (écrans, caféine)." },
-    "environment": { "name": "Environnement de sommeil", "desc": "Lumière, bruit, température, lit." },
-    "breathing": { "name": "Ronflements & signaux respiratoires", "desc": "Signes possibles d'apnée du sommeil." },
-    "bloodpressure": { "name": "Pression artérielle – risque lié au mode de vie", "desc": "Alimentation, activité, alcool, stress et poids." }
+    "pattern": {
+      "name": "Schéma et durée du sommeil",
+      "desc": "Durée et régularité."
+    },
+    "insomnia": {
+      "name": "Endormissement & nuit",
+      "desc": "Début du sommeil, réveils, matinée précoce."
+    },
+    "quality": {
+      "name": "Qualité du sommeil",
+      "desc": "Qualité perçue et satisfaction."
+    },
+    "daytime": {
+      "name": "Somnolence diurne",
+      "desc": "Somnolence et fonctionnement diurne."
+    },
+    "hygiene": {
+      "name": "Hygiène du sommeil & routines",
+      "desc": "Habitudes et horaires (écrans, caféine)."
+    },
+    "environment": {
+      "name": "Environnement de sommeil",
+      "desc": "Lumière, bruit, température, lit."
+    },
+    "breathing": {
+      "name": "Ronflements & signaux respiratoires",
+      "desc": "Signes possibles d'apnée du sommeil."
+    },
+    "bloodpressure": {
+      "name": "Pression artérielle – risque lié au mode de vie",
+      "desc": "Alimentation, activité, alcool, stress et poids."
+    }
   },
   "q": {
     "pattern": {

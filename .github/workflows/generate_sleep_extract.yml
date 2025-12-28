@@ -1,0 +1,27 @@
+name: Generate sleep questionnaire extract
+
+on:
+  workflow_dispatch:
+
+jobs:
+  build-extract:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Generate extract workbook
+        run: python tools/generate_sleep_extract.py
+
+      - name: Upload extract artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: sleep-questionnaire-scoring-extract
+          path: |
+            sleep_questionnaire_scoring_extract.xlsx
+            README_for_reviewers.md
