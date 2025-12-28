@@ -48,27 +48,3 @@ export function computeTotalRaw(categoryScores: CategoryScores): number {
   const values = Object.values(categoryScores).filter((v) => typeof v === "number");
   return Math.round(avg(values));
 }
-
-/**
- * Blodtrykks-risiko basert på Likert-spørsmålene bp1–bp5:
- * Regn ut gjennomsnittet (1–5). Flagges hvis gj.snitt ≥ threshold (default 4.0) og minst minItems svar (default 3).
- * - 4 ≈ "Ofte", 5 = "Svært ofte".
- */
-const BP_IDS = ["bp1", "bp2", "bp3", "bp4", "bp5"] as const;
-
-export function computeHighBpRisk(
-  answers: AnswerMap,
-  opts?: { threshold?: number; minItems?: number }
-): boolean {
-  const threshold = opts?.threshold ?? 4.0; // “høyt nivå”
-  const minItems = opts?.minItems ?? 3;
-
-  const vals = BP_IDS
-    .map((id) => answers[id])
-    .filter((v): v is LikertValue => typeof v === "number");
-
-  if (vals.length < minItems) return false;
-
-  const mean = avg(vals);
-  return mean >= threshold;
-}
