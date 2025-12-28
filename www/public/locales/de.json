@@ -39,7 +39,7 @@
       "title": "Ergebnis",
       "sleep_score": "Schlafscore",
       "copy_id": "ID kopieren",
-      "disclaimer": "Dies ist keine medizinische Bewertung, sondern ein allgemeiner Leitfaden, der Ihnen hilft, Muster zu erkennen und praktische Schritte auszuprobieren. Schlafgewohnheiten ändern sich oft schrittweise — experimentieren Sie, haben Sie Geduld und finden Sie heraus, was für Sie am besten funktioniert.",
+      "disclaimer": "This is not a medical evaluation, but a general guide to help you notice patterns and try practical steps. Sleep habits often change gradually — experiment, be patient, and see what works best for you. Some prescription medications can affect sleep quality. If you are taking medication for heart, breathing, or mood conditions, consider reviewing these results with your prescribing doctor.",
       "how_to_improve": "Behalten und verbessern Sie dies:",
       "lead": {
         "green": "Sie machen es gut bei ",
@@ -137,14 +137,38 @@
     "5": "Sehr oft"
   },
   "category": {
-    "pattern": { "name": "Schlafmuster & Dauer", "desc": "Länge und Regelmäßigkeit." },
-    "insomnia": { "name": "Einschlafen & Nacht", "desc": "Schlafbeginn, Aufwachen, früher Morgen." },
-    "quality": { "name": "Schlafqualität", "desc": "Wahrgenommene Qualität und Zufriedenheit." },
-    "daytime": { "name": "Tag & Schläfrigkeit", "desc": "Schläfrigkeit und Tagesfunktion." },
-    "hygiene": { "name": "Schlafhygiene & Routinen", "desc": "Gewohnheiten und Timing (Bildschirme, Koffein)." },
-    "environment": { "name": "Schlafumgebung", "desc": "Licht, Lärm, Temperatur, Bett." },
-    "breathing": { "name": "Schnarchen & Atmungssignale", "desc": "Mögliche Anzeichen für Schlafapnoe." },
-    "bloodpressure": { "name": "Blutdruck – Lebensstilrisiko", "desc": "Ernährung, Aktivität, Alkohol, Stress und Gewicht." }
+    "pattern": {
+      "name": "Schlafmuster & Dauer",
+      "desc": "Länge und Regelmäßigkeit."
+    },
+    "insomnia": {
+      "name": "Einschlafen & Nacht",
+      "desc": "Schlafbeginn, Aufwachen, früher Morgen."
+    },
+    "quality": {
+      "name": "Schlafqualität",
+      "desc": "Wahrgenommene Qualität und Zufriedenheit."
+    },
+    "daytime": {
+      "name": "Tag & Schläfrigkeit",
+      "desc": "Schläfrigkeit und Tagesfunktion."
+    },
+    "hygiene": {
+      "name": "Schlafhygiene & Routinen",
+      "desc": "Gewohnheiten und Timing (Bildschirme, Koffein)."
+    },
+    "environment": {
+      "name": "Schlafumgebung",
+      "desc": "Licht, Lärm, Temperatur, Bett."
+    },
+    "breathing": {
+      "name": "Schnarchen & Atmungssignale",
+      "desc": "Mögliche Anzeichen für Schlafapnoe."
+    },
+    "bloodpressure": {
+      "name": "Blutdruck – Lebensstilrisiko",
+      "desc": "Ernährung, Aktivität, Alkohol, Stress und Gewicht."
+    }
   },
   "q": {
     "pattern": {

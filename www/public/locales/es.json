@@ -39,7 +39,7 @@
       "title": "Resultado",
       "sleep_score": "Puntuación de sueño",
       "copy_id": "Copiar ID",
-      "disclaimer": "Esto no es una evaluación médica, sino una guía general para ayudarte a notar patrones e intentar pasos prácticos. Los hábitos de sueño suelen cambiar gradualmente — experimenta, ten paciencia y descubre lo que mejor funciona para ti.",
+      "disclaimer": "This is not a medical evaluation, but a general guide to help you notice patterns and try practical steps. Sleep habits often change gradually — experiment, be patient, and see what works best for you. Some prescription medications can affect sleep quality. If you are taking medication for heart, breathing, or mood conditions, consider reviewing these results with your prescribing doctor.",
       "how_to_improve": "Mantén y mejora esto:",
       "lead": {
         "green": "Lo estás haciendo bien en ",
@@ -137,14 +137,38 @@
     "5": "Muy a menudo"
   },
   "category": {
-    "pattern": { "name": "Patrón de sueño y duración", "desc": "Duración y regularidad." },
-    "insomnia": { "name": "Conciliar el sueño & noche", "desc": "Inicio del sueño, despertares, madrugada." },
-    "quality": { "name": "Calidad del sueño", "desc": "Calidad percibida y satisfacción." },
-    "daytime": { "name": "Somnolencia diurna", "desc": "Somnolencia y funcionamiento diurno." },
-    "hygiene": { "name": "Higiene del sueño & rutinas", "desc": "Hábitos y horarios (pantallas, cafeína)." },
-    "environment": { "name": "Entorno de sueño", "desc": "Luz, ruido, temperatura, cama." },
-    "breathing": { "name": "Ronquidos & señales respiratorias", "desc": "Posibles signos de apnea del sueño." },
-    "bloodpressure": { "name": "Presión arterial – riesgo de estilo de vida", "desc": "Dieta, actividad, alcohol, estrés y peso." }
+    "pattern": {
+      "name": "Patrón de sueño y duración",
+      "desc": "Duración y regularidad."
+    },
+    "insomnia": {
+      "name": "Conciliar el sueño & noche",
+      "desc": "Inicio del sueño, despertares, madrugada."
+    },
+    "quality": {
+      "name": "Calidad del sueño",
+      "desc": "Calidad percibida y satisfacción."
+    },
+    "daytime": {
+      "name": "Somnolencia diurna",
+      "desc": "Somnolencia y funcionamiento diurno."
+    },
+    "hygiene": {
+      "name": "Higiene del sueño & rutinas",
+      "desc": "Hábitos y horarios (pantallas, cafeína)."
+    },
+    "environment": {
+      "name": "Entorno de sueño",
+      "desc": "Luz, ruido, temperatura, cama."
+    },
+    "breathing": {
+      "name": "Ronquidos & señales respiratorias",
+      "desc": "Posibles signos de apnea del sueño."
+    },
+    "bloodpressure": {
+      "name": "Presión arterial – riesgo de estilo de vida",
+      "desc": "Dieta, actividad, alcohol, estrés y peso."
+    }
   },
   "q": {
     "pattern": {

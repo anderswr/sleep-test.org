@@ -39,7 +39,7 @@
       "title": "النتيجة",
       "sleep_score": "درجة النوم",
       "copy_id": "نسخ المعرّف",
-      "disclaimer": "هذا ليس تقييماً طبياً، بل هو دليل عام لمساعدتك على ملاحظة الأنماط وتجربة خطوات عملية. غالباً ما تتغير عادات النوم تدريجياً — جرّب، كن صبوراً، واكتشف ما يناسبك أكثر.",
+      "disclaimer": "This is not a medical evaluation, but a general guide to help you notice patterns and try practical steps. Sleep habits often change gradually — experiment, be patient, and see what works best for you. Some prescription medications can affect sleep quality. If you are taking medication for heart, breathing, or mood conditions, consider reviewing these results with your prescribing doctor.",
       "how_to_improve": "حافظ وحسّن هذا:",
       "lead": {
         "green": "أنت تقوم بعمل جيد في ",
@@ -137,14 +137,38 @@
     "5": "كثيراً جداً"
   },
   "category": {
-    "pattern": { "name": "نمط النوم والمدة", "desc": "الطول والانتظام." },
-    "insomnia": { "name": "صعوبة النوم والليل", "desc": "بداية النوم، الاستيقاظات، الصباح المبكر." },
-    "quality": { "name": "جودة النوم", "desc": "الجودة المتصورة والرضا." },
-    "daytime": { "name": "النهار والنعاس", "desc": "النعاس والأداء النهاري." },
-    "hygiene": { "name": "نظافة النوم والروتين", "desc": "العادات والتوقيت (الشاشات، الكافيين)." },
-    "environment": { "name": "بيئة النوم", "desc": "الضوء، الضوضاء، الحرارة، السرير." },
-    "breathing": { "name": "الشخير وإشارات التنفس", "desc": "علامات محتملة لانقطاع النفس أثناء النوم." },
-    "bloodpressure": { "name": "ضغط الدم – خطر نمط الحياة", "desc": "النظام الغذائي، النشاط، الكحول، التوتر، والوزن." }
+    "pattern": {
+      "name": "نمط النوم والمدة",
+      "desc": "الطول والانتظام."
+    },
+    "insomnia": {
+      "name": "صعوبة النوم والليل",
+      "desc": "بداية النوم، الاستيقاظات، الصباح المبكر."
+    },
+    "quality": {
+      "name": "جودة النوم",
+      "desc": "الجودة المتصورة والرضا."
+    },
+    "daytime": {
+      "name": "النهار والنعاس",
+      "desc": "النعاس والأداء النهاري."
+    },
+    "hygiene": {
+      "name": "نظافة النوم والروتين",
+      "desc": "العادات والتوقيت (الشاشات، الكافيين)."
+    },
+    "environment": {
+      "name": "بيئة النوم",
+      "desc": "الضوء، الضوضاء، الحرارة، السرير."
+    },
+    "breathing": {
+      "name": "الشخير وإشارات التنفس",
+      "desc": "علامات محتملة لانقطاع النفس أثناء النوم."
+    },
+    "bloodpressure": {
+      "name": "ضغط الدم – خطر نمط الحياة",
+      "desc": "النظام الغذائي، النشاط، الكحول، التوتر، والوزن."
+    }
   },
   "q": {
     "pattern": {
