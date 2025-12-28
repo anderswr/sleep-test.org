@@ -94,12 +94,12 @@ export default function TestPage() {
             {/* Topp */}
             <div className="stage-head">
               <div className="row" style={{ justifyContent: "space-between" }}>
-                <h1 style={{ margin: 0 }}>{t(dict, "ui.test.title", "Søvntest")}</h1>
+                <h1 style={{ margin: 0 }}>{t(dict, "test.title", "Søvntest")}</h1>
                 <div style={{ display: "flex", alignItems: "center", gap: 8 }}>
                   <div
                     className="progress"
                     style={{ width: 180 }}
-                    aria-label={t(dict, "ui.test.progress", "Fremdrift")}
+                    aria-label={t(dict, "test.progress", "Fremdrift")}
                   >
                     <div
                       style={{
@@ -160,7 +160,7 @@ export default function TestPage() {
                   onClick={submit}
                   disabled={!isAnswered || submitting}
                 >
-                  {submitting ? t(dict, "ui.common.sending", "Sender…") : t(dict, "ui.test.submit", "Send inn")}
+                  {submitting ? t(dict, "ui.common.sending", "Sender…") : t(dict, "test.submit", "Send inn")}
                 </button>
               )}
             </div>
