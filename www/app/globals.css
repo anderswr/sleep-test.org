@@ -319,11 +319,11 @@ p { line-height: 1.6; }
   gap: 24px;
 }
 .score-hero__left{ flex: 1; }
-.score-hero__right{ width: 210px; display:flex; justify-content:center; }
+.score-hero__right{ width: 240px; display:flex; justify-content:center; }
 
 .score-ring{
-  width: 184px; height: 184px; border-radius: 999px;
-  border: 12px solid var(--primary-weak);
+  width: 210px; height: 210px; border-radius: 999px;
+  border: 14px solid var(--primary-weak);
   display:flex; flex-direction:column; align-items:center; justify-content:center;
 }
 .score-ring__value{ font-size: 42px; font-weight: 700; line-height: 1; }
