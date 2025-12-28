@@ -47,7 +47,8 @@
         "red": "Vous devriez changer vos habitudes pour "
       },
       "lookup_hint": "Lorsque vous terminez un test, vous recevez un ID. Il est anonyme et vous pouvez ouvrir votre rapport à tout moment. Collez votre ID pour voir le rapport.",
-      "id_placeholder": "Votre ID"
+      "id_placeholder": "Votre ID",
+      "disclaimer2": "Les difficultés de sommeil peuvent aussi varier selon leur durée. Les troubles du sommeil à court terme sont souvent liés au stress, aux routines ou à des changements temporaires, tandis que les problèmes de sommeil plus durables peuvent bénéficier d’un accompagnement structuré. Si les problèmes de sommeil persistent dans le temps, envisagez de demander conseil à un professionnel de santé qualifié."
     },
     "articles": {
       "minutes": {

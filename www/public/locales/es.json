@@ -47,7 +47,8 @@
         "red": "Deberías cambiar tus hábitos en "
       },
       "lookup_hint": "Cuando completes una prueba recibirás un ID. Es anónimo y puedes abrir tu informe en cualquier momento. Pega tu ID para ver el informe.",
-      "id_placeholder": "Tu ID"
+      "id_placeholder": "Tu ID",
+      "disclaimer2": "Los problemas de sueño también pueden variar según su duración. Las dificultades de sueño a corto plazo suelen estar relacionadas con el estrés, las rutinas o cambios temporales, mientras que los problemas de sueño de mayor duración pueden beneficiarse de un apoyo estructurado. Si los problemas de sueño persisten con el tiempo, considera buscar orientación de un profesional de la salud cualificado."
     },
     "articles": {
       "minutes": {

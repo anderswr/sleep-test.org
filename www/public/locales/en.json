@@ -47,7 +47,8 @@
         "red": "You should change your habits for "
       },
       "lookup_hint": "When you complete a test you receive an ID. It is anonymous, and you can open your report anytime. Paste your ID to view the report.",
-      "id_placeholder": "Your ID"
+      "id_placeholder": "Your ID",
+      "disclaimer2": "Sleep challenges can also differ by duration. Short-term sleep difficulties are often linked to stress, routines, or temporary changes, while longer-lasting sleep problems may benefit from structured support. If sleep issues persist over time, consider seeking guidance from a qualified healthcare professional."
     },
     "articles": {
       "minutes": {

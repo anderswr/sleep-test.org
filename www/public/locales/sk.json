@@ -47,7 +47,8 @@
         "red": "Mali by ste zmeniť svoje návyky v oblasti "
       },
       "lookup_hint": "Po dokončení testu dostanete ID. Je anonymné a svoj report si môžete otvoriť kedykoľvek. Vložte svoje ID na zobrazenie reportu.",
-      "id_placeholder": "Vaše ID"
+      "id_placeholder": "Vaše ID",
+      "disclaimer2": "Problémy so spánkom sa môžu líšiť aj podľa trvania. Krátkodobé ťažkosti so spánkom často súvisia so stresom, rutinami alebo dočasnými zmenami, zatiaľ čo dlhodobejšie problémy so spánkom môžu mať úžitok zo štruktúrovanej podpory. Ak problémy so spánkom pretrvávajú v čase, zvážte vyhľadanie usmernenia u kvalifikovaného zdravotníckeho odborníka."
     },
     "articles": {
       "minutes": {

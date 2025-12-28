@@ -47,7 +47,8 @@
         "red": "Você deve mudar seus hábitos em "
       },
       "lookup_hint": "Quando você conclui um teste, recebe um ID. Ele é anônimo e você pode abrir seu relatório a qualquer momento. Cole seu ID para visualizar o relatório.",
-      "id_placeholder": "Seu ID"
+      "id_placeholder": "Seu ID",
+      "disclaimer2": "Os desafios do sono também podem variar conforme a duração. Dificuldades de sono de curto prazo costumam estar ligadas ao estresse, às rotinas ou a mudanças temporárias, enquanto problemas de sono mais duradouros podem se beneficiar de um suporte estruturado. Se os problemas de sono persistirem ao longo do tempo, considere buscar orientação de um profissional de saúde qualificado."
     },
     "articles": {
       "minutes": {

@@ -47,7 +47,8 @@
         "red": "Du bør endre vanene dine for "
       },
       "lookup_hint": "Når du har gjennomført en test får du en ID. Den er anonym, og du kan åpne rapporten når du vil. Lim inn ID-en for å åpne rapporten.",
-      "id_placeholder": "Din ID"
+      "id_placeholder": "Din ID",
+      "disclaimer2": "Søvnproblemer kan også variere i varighet. Kortvarige søvnvansker er ofte knyttet til stress, rutiner eller midlertidige endringer, mens mer langvarige søvnproblemer kan ha nytte av strukturert oppfølging. Hvis søvnproblemene vedvarer over tid, bør du vurdere å søke råd hos kvalifisert helsepersonell."
     },
     "articles": {
       "card": {
