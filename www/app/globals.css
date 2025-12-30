@@ -331,10 +331,10 @@ p { line-height: 1.6; }
 .score-hero__right{ width: 210px; display:flex; justify-content:center; }
 
 .score-ring{
-  width: 160px; 
-  height: 160px;
+  width: 180px; 
+  height: 180px;
   padding: 40px;  
-  border-radius: 1px;
+  border-radius: 999px;
   border: 1px solid var(--primary-weak);
   display:flex; flex-direction:column; align-items:center; justify-content:center;
   color: var(--result-text);
