@@ -49,7 +49,7 @@
       "lookup_hint": "Когда вы завершаете тест, вы получаете ID. Он анонимный, и вы можете открыть свой отчет в любое время. Вставьте свой ID, чтобы просмотреть отчет.",
       "id_placeholder": "Ваш ID",
       "disclaimer2": "Проблемы со сном также могут различаться по продолжительности. Краткосрочные трудности со сном часто связаны со стрессом, режимом или временными изменениями, тогда как более длительные проблемы со сном могут выиграть от структурированной поддержки. Если проблемы со сном сохраняются со временем, подумайте о том, чтобы обратиться за советом к квалифицированному медицинскому специалисту.",
-      "not_answered": "Not answered"
+      "not_answered": "Нет ответа"
     },
     "articles": {
       "minutes": {
@@ -99,16 +99,16 @@
     },
     "domain": {
       "mental": {
-        "title": "Mental calm & stress"
+        "title": "Психическое спокойствие и стресс"
       },
       "chronotype": {
-        "title": "Circadian rhythm & shift work"
+        "title": "Циркадный ритм и смены"
       }
     },
     "severity": {
-      "green": "Green",
-      "yellow": "Yellow",
-      "red": "Red"
+      "green": "Зелёный",
+      "yellow": "Жёлтый",
+      "red": "Красный"
     }
   },
   "about": {
@@ -185,12 +185,12 @@
       "desc": "Диета, активность, алкоголь, стресс и вес."
     },
     "mental": {
-      "name": "Mental calm & stress",
-      "desc": "Stress, worry, and arousal at bedtime."
+      "name": "Психическое спокойствие и стресс",
+      "desc": "Стресс, тревога и возбуждение перед сном."
     },
     "chronotype": {
-      "name": "Circadian rhythm & shift work",
-      "desc": "Evening preference and sleep timing mismatch."
+      "name": "Циркадный ритм и смены",
+      "desc": "Вечерний тип и несоответствие времени сна."
     }
   },
   "q": {
@@ -241,15 +241,15 @@
       "overweight_self": "Я считаю себя с лишним весом."
     },
     "mental": {
-      "racing_mind": "My mind feels busy or racing when I try to fall asleep.",
-      "worry_at_bed": "Worrying or overthinking keeps me from falling asleep.",
-      "stress_affects_sleep": "Stress in my daily life clearly affects my sleep.",
-      "hyperarousal": "I feel tense, restless, or 'on edge' when trying to sleep."
+      "racing_mind": "Мой разум занят или «гоняет мысли», когда я пытаюсь заснуть.",
+      "worry_at_bed": "Тревоги или чрезмерные мысли мешают мне заснуть.",
+      "stress_affects_sleep": "Стресс в моей повседневной жизни явно влияет на сон.",
+      "hyperarousal": "Я чувствую напряжение, беспокойство или «на взводе», когда пытаюсь уснуть."
     },
     "chrono": {
-      "evening_type": "I naturally feel more alert in the evening than in the morning.",
-      "shift_work": "I frequently work night shifts or rotating shifts.",
-      "sleep_window_mismatch": "I often have to sleep at times that don’t suit my body."
+      "evening_type": "Естественно я более бодр(а) вечером, чем утром.",
+      "shift_work": "Я часто работаю в ночные или сменные графики.",
+      "sleep_window_mismatch": "Мне часто приходится спать в неудобное для тела время."
     }
   },
   "flags": {
@@ -303,20 +303,20 @@
       "consider_gp_check": "Подозреваете апноэ сна (громкий храп, наблюдаемые паузы, дневная сонливость)? Обратитесь к врачу."
     },
     "mental": {
-      "wind_down_45": "Wind down for 45–60 minutes before bed.",
-      "write_worries": "Write down worries or plan tomorrow 10 minutes earlier in the evening.",
-      "calm_breath": "Calm breathing with longer exhales for 2–5 minutes.",
-      "stimulus_control": "Stimulus control: get out of bed if you are awake for long.",
-      "maintain": "Maintain: keep your wind-down and stable routines."
+      "wind_down_45": "Снижайте активность за 45–60 минут до сна.",
+      "write_worries": "Запишите тревоги или спланируйте завтра на 10 минут раньше вечером.",
+      "calm_breath": "Спокойное дыхание с более длинным выдохом 2–5 минут.",
+      "stimulus_control": "Контроль стимулов: выйдите из кровати, если долго не засыпаете.",
+      "maintain": "Поддерживайте стабильные рутины."
     },
     "chrono": {
-      "light_management": "Light management: bright light at the “start of day”, dimmer before sleep.",
-      "anchoring": "Anchoring: keep a consistent wake time on days off as much as possible.",
-      "short_naps": "Short naps (15–25 min) early in the wake period.",
-      "caffeine_cutoff": "Adjust caffeine cut-off to your shift (avoid late in the wake period).",
-      "shift_gradual": "Shift bedtime/wake time gradually by 15 min every 2–3 days.",
-      "morning_light": "Get morning light for 10–30 minutes.",
-      "maintain": "Maintain a stable sleep window when possible."
+      "light_management": "Управление светом: яркий свет в «начале дня», темнее перед сном.",
+      "anchoring": "Якорение: по возможности фиксированное время подъёма в выходные.",
+      "short_naps": "Короткие дневные сны (15–25 мин) в начале периода бодрствования.",
+      "caffeine_cutoff": "Настройте отсечку кофеина под смену (не поздно в период бодрствования).",
+      "shift_gradual": "Сдвигайте время сна/подъёма на 15 мин каждые 2–3 дня.",
+      "morning_light": "Утренний свет 10–30 минут.",
+      "maintain": "По возможности поддерживайте стабильное окно сна."
     }
   }
 }

@@ -255,7 +255,7 @@ export default function ResultPage({ params }: { params: { id: string } }) {
 
             {/* Kategorier */}
             <section className="grid-cards mt-6">
-              {entries.map(({ id: cat, raw, display, severity, hasAnswer }) => {
+              {entries.map(({ id: cat, raw, display, hasAnswer }) => {
                 const color =
                   typeof raw === "number"
                     ? (bucketColor(raw).replace("yellow", "orange") as "green" | "orange" | "red")
@@ -268,8 +268,6 @@ export default function ResultPage({ params }: { params: { id: string } }) {
                     : cat === CategoryId.Chronotype
                       ? t(dict, "ui.domain.chronotype.title", "")
                       : t(dict, `category.${cat}.name`, "");
-                const severityLabel = t(dict, `ui.severity.${severity}`, "");
-                const severityColor = severity === "yellow" ? "orange" : severity;
                 const fallbackTips = pickTipKeys(cat, color as "green" | "orange" | "red");
                 const tipKeys =
                   data?.suggestedTips?.[cat]?.length
@@ -286,14 +284,9 @@ export default function ResultPage({ params }: { params: { id: string } }) {
                     data-color={color}
                   >
                     <div className="cat-card__head">
-                      <div style={{ display: "flex", alignItems: "center", gap: 8, flexWrap: "wrap" }}>
-                        <span className="pill" data-color={color}>
-                          {title}
-                        </span>
-                        <span className="pill pill--tight" data-color={severityColor}>
-                          {severityLabel}
-                        </span>
-                      </div>
+                      <span className="pill" data-color={color}>
+                        {title}
+                      </span>
                       <div style={{ display: "flex", alignItems: "baseline", gap: 8 }}>
                         <strong className="cat-card__score">{display}</strong>
                         <span className="cat-card__denom" style={{ fontSize: ".85rem" }}>

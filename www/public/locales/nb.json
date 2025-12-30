@@ -231,15 +231,15 @@
       "overweight_self": "Jeg oppfatter meg selv som overvektig."
     },
     "mental": {
-      "racing_mind": "My mind feels busy or racing when I try to fall asleep.",
-      "worry_at_bed": "Worrying or overthinking keeps me from falling asleep.",
-      "stress_affects_sleep": "Stress in my daily life clearly affects my sleep.",
-      "hyperarousal": "I feel tense, restless, or 'on edge' when trying to sleep."
+      "racing_mind": "Tankene mine er travle eller løper når jeg prøver å sovne.",
+      "worry_at_bed": "Bekymring eller overtenking hindrer meg i å sovne.",
+      "stress_affects_sleep": "Stress i hverdagen påvirker søvnen min tydelig.",
+      "hyperarousal": "Jeg føler meg spent, rastløs eller «på alerten» når jeg prøver å sove."
     },
     "chrono": {
-      "evening_type": "I naturally feel more alert in the evening than in the morning.",
-      "shift_work": "I frequently work night shifts or rotating shifts.",
-      "sleep_window_mismatch": "I often have to sleep at times that don’t suit my body."
+      "evening_type": "Jeg føler meg naturlig mer våken om kvelden enn om morgenen.",
+      "shift_work": "Jeg jobber ofte nattskift eller roterende skift.",
+      "sleep_window_mismatch": "Jeg må ofte sove på tider som ikke passer kroppen min."
     }
   },
   "flags": {
@@ -297,10 +297,10 @@
       "write_worries": "Skriv ut bekymringer eller planlegg neste dag 10 min tidligere på kvelden.",
       "calm_breath": "Rolig pust med lang utpust i 2–5 min.",
       "stimulus_control": "Stimulus-kontroll: gå ut av sengen hvis du er våken lenge.",
-      "maintain": "Vedlikehold: fortsett med nedtrapping og stabile rutiner."
+      "maintain": "Vedlikehold: fortsett med stabile rutiner."
     },
     "chrono": {
-      "light_management": "Lysstyring: sterkt lys ved “start av dag”, mørkere før søvn.",
+      "light_management": "Lysstyring: sterkt lys ved «start av dag», mørkere før søvn.",
       "anchoring": "Anchoring: fast oppvåkning på fridager så langt mulig.",
       "short_naps": "Korte naps (15–25 min) tidlig i våkenperioden.",
       "caffeine_cutoff": "Koffein-cutoff tilpasset skift (ikke sent i våkenperioden).",

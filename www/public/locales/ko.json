@@ -49,7 +49,7 @@
       "lookup_hint": "테스트를 완료하면 ID가 발급됩니다. 이는 익명이며 언제든지 보고서를 열 수 있습니다. ID를 붙여넣어 보고서를 확인하세요.",
       "id_placeholder": "당신의 ID",
       "disclaimer2": "수면 문제는 지속 기간에 따라서도 다를 수 있습니다. 단기적인 수면 어려움은 스트레스, 생활 습관, 또는 일시적인 변화와 관련되는 경우가 많지만, 장기적인 수면 문제는 구조화된 지원이 도움이 될 수 있습니다. 수면 문제가 시간이 지나도 지속된다면, 자격을 갖춘 의료 전문가에게 상담을 받아보는 것을 고려하세요.",
-      "not_answered": "Not answered"
+      "not_answered": "미응답"
     },
     "articles": {
       "minutes": {
@@ -99,16 +99,16 @@
     },
     "domain": {
       "mental": {
-        "title": "Mental calm & stress"
+        "title": "정신적 안정과 스트레스"
       },
       "chronotype": {
-        "title": "Circadian rhythm & shift work"
+        "title": "생체 리듬과 교대근무"
       }
     },
     "severity": {
-      "green": "Green",
-      "yellow": "Yellow",
-      "red": "Red"
+      "green": "녹색",
+      "yellow": "노랑",
+      "red": "빨강"
     }
   },
   "about": {
@@ -185,12 +185,12 @@
       "desc": "식습관, 활동, 알코올, 스트레스, 체중."
     },
     "mental": {
-      "name": "Mental calm & stress",
-      "desc": "Stress, worry, and arousal at bedtime."
+      "name": "정신적 안정과 스트레스",
+      "desc": "취침 시 스트레스, 걱정, 각성."
     },
     "chronotype": {
-      "name": "Circadian rhythm & shift work",
-      "desc": "Evening preference and sleep timing mismatch."
+      "name": "생체 리듬과 교대근무",
+      "desc": "야행성 성향과 수면 시간 불일치."
     }
   },
   "q": {
@@ -241,15 +241,15 @@
       "overweight_self": "나는 스스로를 과체중이라고 생각한다."
     },
     "mental": {
-      "racing_mind": "My mind feels busy or racing when I try to fall asleep.",
-      "worry_at_bed": "Worrying or overthinking keeps me from falling asleep.",
-      "stress_affects_sleep": "Stress in my daily life clearly affects my sleep.",
-      "hyperarousal": "I feel tense, restless, or 'on edge' when trying to sleep."
+      "racing_mind": "잠들려고 하면 머리가 바쁘거나 생각이 빨라집니다.",
+      "worry_at_bed": "걱정이나 과한 생각 때문에 잠들기 어렵습니다.",
+      "stress_affects_sleep": "일상 스트레스가 수면에 분명히 영향을 줍니다.",
+      "hyperarousal": "잠들 때 긴장되거나 불안하고 “각성된” 느낌이 듭니다."
     },
     "chrono": {
-      "evening_type": "I naturally feel more alert in the evening than in the morning.",
-      "shift_work": "I frequently work night shifts or rotating shifts.",
-      "sleep_window_mismatch": "I often have to sleep at times that don’t suit my body."
+      "evening_type": "아침보다 저녁에 더 각성되는 편입니다.",
+      "shift_work": "야간 근무나 교대 근무가 잦습니다.",
+      "sleep_window_mismatch": "몸에 맞지 않는 시간에 잠을 자야 하는 경우가 많습니다."
     }
   },
   "flags": {
@@ -303,20 +303,20 @@
       "consider_gp_check": "큰 코골이, 호흡 중단, 낮 동안의 졸음이 있나요? 의사에게 상담하세요."
     },
     "mental": {
-      "wind_down_45": "Wind down for 45–60 minutes before bed.",
-      "write_worries": "Write down worries or plan tomorrow 10 minutes earlier in the evening.",
-      "calm_breath": "Calm breathing with longer exhales for 2–5 minutes.",
-      "stimulus_control": "Stimulus control: get out of bed if you are awake for long.",
-      "maintain": "Maintain: keep your wind-down and stable routines."
+      "wind_down_45": "잠들기 45–60분 전에 긴장을 풀어 주세요.",
+      "write_worries": "걱정을 적거나 다음 날 계획을 밤에 10분 일찍 세우세요.",
+      "calm_breath": "긴 호흡으로 2–5분간 천천히 숨 쉬기.",
+      "stimulus_control": "자극 조절: 오래 깨어 있으면 침대에서 나오세요.",
+      "maintain": "유지: 안정적인 루틴을 계속하세요."
     },
     "chrono": {
-      "light_management": "Light management: bright light at the “start of day”, dimmer before sleep.",
-      "anchoring": "Anchoring: keep a consistent wake time on days off as much as possible.",
-      "short_naps": "Short naps (15–25 min) early in the wake period.",
-      "caffeine_cutoff": "Adjust caffeine cut-off to your shift (avoid late in the wake period).",
-      "shift_gradual": "Shift bedtime/wake time gradually by 15 min every 2–3 days.",
-      "morning_light": "Get morning light for 10–30 minutes.",
-      "maintain": "Maintain a stable sleep window when possible."
+      "light_management": "빛 관리: “하루 시작”에 밝은 빛, 잠들기 전에는 어둡게.",
+      "anchoring": "앵커링: 쉬는 날에도 가능한 일정한 기상 시간을 유지.",
+      "short_naps": "짧은 낮잠(15–25분)을 깨어 있는 초기 시간에.",
+      "caffeine_cutoff": "근무에 맞춰 카페인 종료 시간을 조정(각성 후반은 피하기).",
+      "shift_gradual": "취침/기상 시간을 2–3일마다 15분씩 서서히 이동.",
+      "morning_light": "아침 햇빛 10–30분.",
+      "maintain": "가능하면 안정적인 수면 창을 유지하세요."
     }
   }
 }

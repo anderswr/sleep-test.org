@@ -49,7 +49,7 @@
       "lookup_hint": "Wenn Sie einen Test abschließen, erhalten Sie eine ID. Sie ist anonym, und Sie können Ihren Bericht jederzeit öffnen. Fügen Sie Ihre ID ein, um den Bericht anzuzeigen.",
       "id_placeholder": "Ihre ID",
       "disclaimer2": "Schlafprobleme können sich auch in ihrer Dauer unterscheiden. Kurzfristige Schlafschwierigkeiten hängen oft mit Stress, Routinen oder vorübergehenden Veränderungen zusammen, während länger anhaltende Schlafprobleme von einer strukturierten Unterstützung profitieren können. Wenn Schlafprobleme über längere Zeit bestehen, ziehen Sie in Betracht, sich von einer qualifizierten medizinischen Fachkraft beraten zu lassen.",
-      "not_answered": "Not answered"
+      "not_answered": "Nicht beantwortet"
     },
     "articles": {
       "minutes": {
@@ -99,16 +99,16 @@
     },
     "domain": {
       "mental": {
-        "title": "Mental calm & stress"
+        "title": "Mentale Ruhe & Stress"
       },
       "chronotype": {
-        "title": "Circadian rhythm & shift work"
+        "title": "Zirkadianer Rhythmus & Schichtarbeit"
       }
     },
     "severity": {
-      "green": "Green",
-      "yellow": "Yellow",
-      "red": "Red"
+      "green": "Grün",
+      "yellow": "Gelb",
+      "red": "Rot"
     }
   },
   "about": {
@@ -185,12 +185,12 @@
       "desc": "Ernährung, Aktivität, Alkohol, Stress und Gewicht."
     },
     "mental": {
-      "name": "Mental calm & stress",
-      "desc": "Stress, worry, and arousal at bedtime."
+      "name": "Mentale Ruhe & Stress",
+      "desc": "Stress, Sorgen und Aktivierung zur Schlafenszeit."
     },
     "chronotype": {
-      "name": "Circadian rhythm & shift work",
-      "desc": "Evening preference and sleep timing mismatch."
+      "name": "Zirkadianer Rhythmus & Schichtarbeit",
+      "desc": "Abendtyp und Schlafzeit-Mismatch."
     }
   },
   "q": {
@@ -241,15 +241,15 @@
       "overweight_self": "Ich halte mich für übergewichtig."
     },
     "mental": {
-      "racing_mind": "My mind feels busy or racing when I try to fall asleep.",
-      "worry_at_bed": "Worrying or overthinking keeps me from falling asleep.",
-      "stress_affects_sleep": "Stress in my daily life clearly affects my sleep.",
-      "hyperarousal": "I feel tense, restless, or 'on edge' when trying to sleep."
+      "racing_mind": "Mein Kopf ist beschäftigt oder rast, wenn ich einschlafen will.",
+      "worry_at_bed": "Sorgen oder Grübeln halten mich vom Einschlafen ab.",
+      "stress_affects_sleep": "Stress im Alltag beeinflusst meinen Schlaf deutlich.",
+      "hyperarousal": "Ich fühle mich angespannt, unruhig oder „auf Alarm“, wenn ich schlafen will."
     },
     "chrono": {
-      "evening_type": "I naturally feel more alert in the evening than in the morning.",
-      "shift_work": "I frequently work night shifts or rotating shifts.",
-      "sleep_window_mismatch": "I often have to sleep at times that don’t suit my body."
+      "evening_type": "Ich fühle mich abends natürlich wacher als morgens.",
+      "shift_work": "Ich arbeite häufig Nachtschichten oder wechselnde Schichten.",
+      "sleep_window_mismatch": "Ich muss oft zu Zeiten schlafen, die meinem Körper nicht passen."
     }
   },
   "flags": {
@@ -303,20 +303,20 @@
       "consider_gp_check": "Vermutung auf Schlafapnoe (lautes Schnarchen, beobachtete Pausen, Tagesschläfrigkeit)? Sprechen Sie mit Ihrem Arzt."
     },
     "mental": {
-      "wind_down_45": "Wind down for 45–60 minutes before bed.",
-      "write_worries": "Write down worries or plan tomorrow 10 minutes earlier in the evening.",
-      "calm_breath": "Calm breathing with longer exhales for 2–5 minutes.",
-      "stimulus_control": "Stimulus control: get out of bed if you are awake for long.",
-      "maintain": "Maintain: keep your wind-down and stable routines."
+      "wind_down_45": "45–60 Minuten vor dem Schlafen herunterfahren.",
+      "write_worries": "Sorgen aufschreiben oder den nächsten Tag 10 Minuten früher am Abend planen.",
+      "calm_breath": "Ruhige Atmung mit längerer Ausatmung für 2–5 Minuten.",
+      "stimulus_control": "Stimuluskontrolle: aus dem Bett gehen, wenn Sie lange wach liegen.",
+      "maintain": "Beibehalten: stabile Routinen fortführen."
     },
     "chrono": {
-      "light_management": "Light management: bright light at the “start of day”, dimmer before sleep.",
-      "anchoring": "Anchoring: keep a consistent wake time on days off as much as possible.",
-      "short_naps": "Short naps (15–25 min) early in the wake period.",
-      "caffeine_cutoff": "Adjust caffeine cut-off to your shift (avoid late in the wake period).",
-      "shift_gradual": "Shift bedtime/wake time gradually by 15 min every 2–3 days.",
-      "morning_light": "Get morning light for 10–30 minutes.",
-      "maintain": "Maintain a stable sleep window when possible."
+      "light_management": "Lichtsteuerung: helles Licht beim „Tagesbeginn“, dunkler vor dem Schlafen.",
+      "anchoring": "Anchoring: möglichst konstante Aufstehzeit an freien Tagen.",
+      "short_naps": "Kurze Nickerchen (15–25 Min) früh in der Wachphase.",
+      "caffeine_cutoff": "Koffein-Stopp an den Schichtplan anpassen (nicht spät in der Wachphase).",
+      "shift_gradual": "Schlafenszeit/Aufstehzeit schrittweise um 15 Min alle 2–3 Tage verschieben.",
+      "morning_light": "Morgenlicht 10–30 Minuten.",
+      "maintain": "Wenn möglich ein stabiles Schlaffenster beibehalten."
     }
   }
 }

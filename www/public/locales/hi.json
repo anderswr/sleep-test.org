@@ -49,7 +49,7 @@
       "lookup_hint": "जब आप एक परीक्षण पूरा करते हैं तो आपको एक आईडी प्राप्त होती है। यह गुमनाम है, और आप अपनी रिपोर्ट कभी भी देख सकते हैं। रिपोर्ट देखने के लिए अपनी आईडी पेस्ट करें।",
       "id_placeholder": "आपकी आईडी",
       "disclaimer2": "नींद से जुड़ी समस्याएँ अवधि के अनुसार भी अलग हो सकती हैं। अल्पकालिक नींद की कठिनाइयाँ अक्सर तनाव, दिनचर्या या अस्थायी बदलावों से जुड़ी होती हैं, जबकि लंबे समय तक रहने वाली नींद की समस्याओं में संरचित सहायता लाभकारी हो सकती है। यदि नींद की समस्याएँ समय के साथ बनी रहें, तो किसी योग्य स्वास्थ्य पेशेवर से मार्गदर्शन लेने पर विचार करें।",
-      "not_answered": "Not answered"
+      "not_answered": "उत्तर नहीं दिया"
     },
     "articles": {
       "minutes": {
@@ -99,16 +99,16 @@
     },
     "domain": {
       "mental": {
-        "title": "Mental calm & stress"
+        "title": "मानसिक शांति और तनाव"
       },
       "chronotype": {
-        "title": "Circadian rhythm & shift work"
+        "title": "सर्केडियन रिद्म और शिफ्ट"
       }
     },
     "severity": {
-      "green": "Green",
-      "yellow": "Yellow",
-      "red": "Red"
+      "green": "हरा",
+      "yellow": "पीला",
+      "red": "लाल"
     }
   },
   "about": {
@@ -185,12 +185,12 @@
       "desc": "आहार, गतिविधि, शराब, तनाव, और वजन।"
     },
     "mental": {
-      "name": "Mental calm & stress",
-      "desc": "Stress, worry, and arousal at bedtime."
+      "name": "मानसिक शांति और तनाव",
+      "desc": "सोने के समय तनाव, चिंता और उत्तेजना।"
     },
     "chronotype": {
-      "name": "Circadian rhythm & shift work",
-      "desc": "Evening preference and sleep timing mismatch."
+      "name": "सर्केडियन रिद्म और शिफ्ट",
+      "desc": "शाम पसंद और नींद के समय का असंतुलन।"
     }
   },
   "q": {
@@ -241,15 +241,15 @@
       "overweight_self": "मैं स्वयं को अधिक वजन वाला मानता हूं।"
     },
     "mental": {
-      "racing_mind": "My mind feels busy or racing when I try to fall asleep.",
-      "worry_at_bed": "Worrying or overthinking keeps me from falling asleep.",
-      "stress_affects_sleep": "Stress in my daily life clearly affects my sleep.",
-      "hyperarousal": "I feel tense, restless, or 'on edge' when trying to sleep."
+      "racing_mind": "जब मैं सोने की कोशिश करता/करती हूँ, मेरा दिमाग बहुत व्यस्त या तेज़ रहता है।",
+      "worry_at_bed": "चिंता या अधिक सोचने से मुझे नींद नहीं आती।",
+      "stress_affects_sleep": "मेरे दैनिक जीवन का तनाव मेरी नींद को स्पष्ट रूप से प्रभावित करता है।",
+      "hyperarousal": "सोने की कोशिश करते समय मैं तनावग्रस्त, बेचैन या “हाइपर-अलर्ट” महसूस करता/करती हूँ।"
     },
     "chrono": {
-      "evening_type": "I naturally feel more alert in the evening than in the morning.",
-      "shift_work": "I frequently work night shifts or rotating shifts.",
-      "sleep_window_mismatch": "I often have to sleep at times that don’t suit my body."
+      "evening_type": "मैं सुबह की तुलना में शाम को स्वाभाविक रूप से अधिक सतर्क महसूस करता/करती हूँ।",
+      "shift_work": "मैं अक्सर रात की शिफ्ट या रोटेटिंग शिफ्ट में काम करता/करती हूँ।",
+      "sleep_window_mismatch": "मुझे अक्सर ऐसे समय पर सोना पड़ता है जो मेरे शरीर के लिए उपयुक्त नहीं है।"
     }
   },
   "flags": {
@@ -303,20 +303,20 @@
       "consider_gp_check": "स्लीप एपनिया का संदेह (जोरदार खर्राटे, देखे गए रुकावट, दिन की थकान)? अपने डॉक्टर को दिखाएं।"
     },
     "mental": {
-      "wind_down_45": "Wind down for 45–60 minutes before bed.",
-      "write_worries": "Write down worries or plan tomorrow 10 minutes earlier in the evening.",
-      "calm_breath": "Calm breathing with longer exhales for 2–5 minutes.",
-      "stimulus_control": "Stimulus control: get out of bed if you are awake for long.",
-      "maintain": "Maintain: keep your wind-down and stable routines."
+      "wind_down_45": "सोने से 45–60 मिनट पहले धीमा पड़ें।",
+      "write_worries": "चिंताएँ लिखें या अगले दिन की योजना शाम में 10 मिनट पहले बनाएं।",
+      "calm_breath": "लंबे सांस छोड़ते हुए 2–5 मिनट शांत श्वास लें।",
+      "stimulus_control": "उत्तेजना नियंत्रण: यदि लंबे समय तक जाग रहे हों तो बिस्तर से उठ जाएँ।",
+      "maintain": "बनाए रखें: स्थिर दिनचर्या जारी रखें।"
     },
     "chrono": {
-      "light_management": "Light management: bright light at the “start of day”, dimmer before sleep.",
-      "anchoring": "Anchoring: keep a consistent wake time on days off as much as possible.",
-      "short_naps": "Short naps (15–25 min) early in the wake period.",
-      "caffeine_cutoff": "Adjust caffeine cut-off to your shift (avoid late in the wake period).",
-      "shift_gradual": "Shift bedtime/wake time gradually by 15 min every 2–3 days.",
-      "morning_light": "Get morning light for 10–30 minutes.",
-      "maintain": "Maintain a stable sleep window when possible."
+      "light_management": "लाइट मैनेजमेंट: “दिन की शुरुआत” में तेज़ रोशनी, सोने से पहले कम रोशनी।",
+      "anchoring": "एंकरिंग: छुट्टी के दिनों में भी जितना हो सके एक समय पर जागें।",
+      "short_naps": "जागने की अवधि की शुरुआत में छोटी झपकी (15–25 मिनट)।",
+      "caffeine_cutoff": "शिफ्ट के अनुसार कैफीन कट-ऑफ तय करें (जागने के अंत में नहीं)।",
+      "shift_gradual": "सोने/जागने का समय हर 2–3 दिन में 15 मिनट धीरे-धीरे बदलें।",
+      "morning_light": "सुबह की रोशनी 10–30 मिनट।",
+      "maintain": "जहाँ संभव हो स्थिर नींद विंडो बनाए रखें।"
     }
   }
 }

@@ -49,7 +49,7 @@
       "lookup_hint": "Po dokončení testu dostanete ID. Je anonymné a svoj report si môžete otvoriť kedykoľvek. Vložte svoje ID na zobrazenie reportu.",
       "id_placeholder": "Vaše ID",
       "disclaimer2": "Problémy so spánkom sa môžu líšiť aj podľa trvania. Krátkodobé ťažkosti so spánkom často súvisia so stresom, rutinami alebo dočasnými zmenami, zatiaľ čo dlhodobejšie problémy so spánkom môžu mať úžitok zo štruktúrovanej podpory. Ak problémy so spánkom pretrvávajú v čase, zvážte vyhľadanie usmernenia u kvalifikovaného zdravotníckeho odborníka.",
-      "not_answered": "Not answered"
+      "not_answered": "Nezodpovedané"
     },
     "articles": {
       "minutes": {
@@ -99,16 +99,16 @@
     },
     "domain": {
       "mental": {
-        "title": "Mental calm & stress"
+        "title": "Mentálny pokoj a stres"
       },
       "chronotype": {
-        "title": "Circadian rhythm & shift work"
+        "title": "Cirkadiánny rytmus a smeny"
       }
     },
     "severity": {
-      "green": "Green",
-      "yellow": "Yellow",
-      "red": "Red"
+      "green": "Zelená",
+      "yellow": "Žltá",
+      "red": "Červená"
     }
   },
   "about": {
@@ -185,12 +185,12 @@
       "desc": "Strava, aktivita, alkohol, stres a hmotnosť."
     },
     "mental": {
-      "name": "Mental calm & stress",
-      "desc": "Stress, worry, and arousal at bedtime."
+      "name": "Mentálny pokoj a stres",
+      "desc": "Stres, starosti a aktivácia pri zaspávaní."
     },
     "chronotype": {
-      "name": "Circadian rhythm & shift work",
-      "desc": "Evening preference and sleep timing mismatch."
+      "name": "Cirkadiánny rytmus a smeny",
+      "desc": "Večerný typ a nesúlad času spánku."
     }
   },
   "q": {
@@ -241,15 +241,15 @@
       "overweight_self": "Považujem sa za človeka s nadváhou."
     },
     "mental": {
-      "racing_mind": "My mind feels busy or racing when I try to fall asleep.",
-      "worry_at_bed": "Worrying or overthinking keeps me from falling asleep.",
-      "stress_affects_sleep": "Stress in my daily life clearly affects my sleep.",
-      "hyperarousal": "I feel tense, restless, or 'on edge' when trying to sleep."
+      "racing_mind": "Keď sa snažím zaspať, moja myseľ je zaneprázdnená alebo zrýchlená.",
+      "worry_at_bed": "Obavy alebo prehnané premýšľanie mi bránia zaspať.",
+      "stress_affects_sleep": "Stres v bežnom živote jasne ovplyvňuje môj spánok.",
+      "hyperarousal": "Keď sa snažím spať, cítim napätie, nepokoj alebo „na hrane“."
     },
     "chrono": {
-      "evening_type": "I naturally feel more alert in the evening than in the morning.",
-      "shift_work": "I frequently work night shifts or rotating shifts.",
-      "sleep_window_mismatch": "I often have to sleep at times that don’t suit my body."
+      "evening_type": "Prirodzene sa cítim večer bdelejší než ráno.",
+      "shift_work": "Často pracujem nočné alebo striedavé smeny.",
+      "sleep_window_mismatch": "Často musím spať v časoch, ktoré môjmu telu nevyhovujú."
     }
   },
   "flags": {
@@ -303,20 +303,20 @@
       "consider_gp_check": "Máte podozrenie na spánkové apnoe (hlasné chrápanie, pozorované prestávky, denná ospalosť)? Navštívte lekára."
     },
     "mental": {
-      "wind_down_45": "Wind down for 45–60 minutes before bed.",
-      "write_worries": "Write down worries or plan tomorrow 10 minutes earlier in the evening.",
-      "calm_breath": "Calm breathing with longer exhales for 2–5 minutes.",
-      "stimulus_control": "Stimulus control: get out of bed if you are awake for long.",
-      "maintain": "Maintain: keep your wind-down and stable routines."
+      "wind_down_45": "Spomaľte 45–60 minút pred spaním.",
+      "write_worries": "Zapíšte si starosti alebo naplánujte zajtrajšok o 10 minút skôr večer.",
+      "calm_breath": "Pokojné dýchanie s dlhším výdychom 2–5 minút.",
+      "stimulus_control": "Kontrola stimulov: ak ste dlho bdelí, vstaňte z postele.",
+      "maintain": "Udržiavajte stabilné rutiny."
     },
     "chrono": {
-      "light_management": "Light management: bright light at the “start of day”, dimmer before sleep.",
-      "anchoring": "Anchoring: keep a consistent wake time on days off as much as possible.",
-      "short_naps": "Short naps (15–25 min) early in the wake period.",
-      "caffeine_cutoff": "Adjust caffeine cut-off to your shift (avoid late in the wake period).",
-      "shift_gradual": "Shift bedtime/wake time gradually by 15 min every 2–3 days.",
-      "morning_light": "Get morning light for 10–30 minutes.",
-      "maintain": "Maintain a stable sleep window when possible."
+      "light_management": "Riadenie svetla: jasné svetlo na „začiatku dňa“, tlmenejšie pred spánkom.",
+      "anchoring": "Kotvenie: držte si čo najviac stabilný čas vstávania aj vo voľné dni.",
+      "short_naps": "Krátke zdriemnutia (15–25 min) skoro v období bdenia.",
+      "caffeine_cutoff": "Prispôsobte hranicu kofeínu zmene (nepiť neskoro v období bdenia).",
+      "shift_gradual": "Posúvajte čas spánku/vstávania o 15 min každé 2–3 dni.",
+      "morning_light": "Ranné svetlo 10–30 minút.",
+      "maintain": "Udržujte stabilné spánkové okno, keď je to možné."
     }
   }
 }

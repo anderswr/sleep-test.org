@@ -49,7 +49,7 @@
       "lookup_hint": "Lorsque vous terminez un test, vous recevez un ID. Il est anonyme et vous pouvez ouvrir votre rapport à tout moment. Collez votre ID pour voir le rapport.",
       "id_placeholder": "Votre ID",
       "disclaimer2": "Les difficultés de sommeil peuvent aussi varier selon leur durée. Les troubles du sommeil à court terme sont souvent liés au stress, aux routines ou à des changements temporaires, tandis que les problèmes de sommeil plus durables peuvent bénéficier d’un accompagnement structuré. Si les problèmes de sommeil persistent dans le temps, envisagez de demander conseil à un professionnel de santé qualifié.",
-      "not_answered": "Not answered"
+      "not_answered": "Non répondu"
     },
     "articles": {
       "minutes": {
@@ -99,16 +99,16 @@
     },
     "domain": {
       "mental": {
-        "title": "Mental calm & stress"
+        "title": "Calme mental et stress"
       },
       "chronotype": {
-        "title": "Circadian rhythm & shift work"
+        "title": "Rythme circadien et travail posté"
       }
     },
     "severity": {
-      "green": "Green",
-      "yellow": "Yellow",
-      "red": "Red"
+      "green": "Vert",
+      "yellow": "Jaune",
+      "red": "Rouge"
     }
   },
   "about": {
@@ -185,12 +185,12 @@
       "desc": "Alimentation, activité, alcool, stress et poids."
     },
     "mental": {
-      "name": "Mental calm & stress",
-      "desc": "Stress, worry, and arousal at bedtime."
+      "name": "Calme mental et stress",
+      "desc": "Stress, inquiétude et activation au moment du coucher."
     },
     "chronotype": {
-      "name": "Circadian rhythm & shift work",
-      "desc": "Evening preference and sleep timing mismatch."
+      "name": "Rythme circadien et travail posté",
+      "desc": "Préférence du soir et décalage de l'horaire de sommeil."
     }
   },
   "q": {
@@ -241,15 +241,15 @@
       "overweight_self": "Je me considère en surpoids."
     },
     "mental": {
-      "racing_mind": "My mind feels busy or racing when I try to fall asleep.",
-      "worry_at_bed": "Worrying or overthinking keeps me from falling asleep.",
-      "stress_affects_sleep": "Stress in my daily life clearly affects my sleep.",
-      "hyperarousal": "I feel tense, restless, or 'on edge' when trying to sleep."
+      "racing_mind": "Mon esprit est agité ou accéléré quand j'essaie de m'endormir.",
+      "worry_at_bed": "Les inquiétudes ou le fait de trop penser m'empêchent de m'endormir.",
+      "stress_affects_sleep": "Le stress de ma vie quotidienne affecte clairement mon sommeil.",
+      "hyperarousal": "Je me sens tendu, agité ou « sur le qui-vive » quand j'essaie de dormir."
     },
     "chrono": {
-      "evening_type": "I naturally feel more alert in the evening than in the morning.",
-      "shift_work": "I frequently work night shifts or rotating shifts.",
-      "sleep_window_mismatch": "I often have to sleep at times that don’t suit my body."
+      "evening_type": "Je me sens naturellement plus alerte le soir que le matin.",
+      "shift_work": "Je travaille souvent de nuit ou en horaires tournants.",
+      "sleep_window_mismatch": "Je dois souvent dormir à des horaires qui ne conviennent pas à mon corps."
     }
   },
   "flags": {
@@ -303,20 +303,20 @@
       "consider_gp_check": "Soupçon d'apnée du sommeil (ronflement fort, pauses observées, somnolence diurne) ? Consultez votre médecin."
     },
     "mental": {
-      "wind_down_45": "Wind down for 45–60 minutes before bed.",
-      "write_worries": "Write down worries or plan tomorrow 10 minutes earlier in the evening.",
-      "calm_breath": "Calm breathing with longer exhales for 2–5 minutes.",
-      "stimulus_control": "Stimulus control: get out of bed if you are awake for long.",
-      "maintain": "Maintain: keep your wind-down and stable routines."
+      "wind_down_45": "Décompressez 45–60 minutes avant le coucher.",
+      "write_worries": "Écrivez vos préoccupations ou planifiez demain 10 minutes plus tôt le soir.",
+      "calm_breath": "Respiration calme avec des expirations plus longues pendant 2–5 minutes.",
+      "stimulus_control": "Contrôle des stimuli : sortez du lit si vous restez éveillé longtemps.",
+      "maintain": "Maintenir : continuez avec des routines stables."
     },
     "chrono": {
-      "light_management": "Light management: bright light at the “start of day”, dimmer before sleep.",
-      "anchoring": "Anchoring: keep a consistent wake time on days off as much as possible.",
-      "short_naps": "Short naps (15–25 min) early in the wake period.",
-      "caffeine_cutoff": "Adjust caffeine cut-off to your shift (avoid late in the wake period).",
-      "shift_gradual": "Shift bedtime/wake time gradually by 15 min every 2–3 days.",
-      "morning_light": "Get morning light for 10–30 minutes.",
-      "maintain": "Maintain a stable sleep window when possible."
+      "light_management": "Gestion de la lumière : lumière vive au « début de journée », plus faible avant le sommeil.",
+      "anchoring": "Ancrage : gardez une heure de réveil constante les jours libres.",
+      "short_naps": "Siestes courtes (15–25 min) tôt dans la période d’éveil.",
+      "caffeine_cutoff": "Adaptez la coupure de caféine à votre service (évitez tard dans l’éveil).",
+      "shift_gradual": "Décalez l’heure du coucher/réveil de 15 min tous les 2–3 jours.",
+      "morning_light": "Lumière matinale pendant 10–30 minutes.",
+      "maintain": "Maintenez une fenêtre de sommeil stable si possible."
     }
   }
 }
