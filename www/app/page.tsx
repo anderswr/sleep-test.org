@@ -80,7 +80,7 @@ export default function Home() {
             {t(
               dict,
               "ui.home.pitch",
-              "Answer 30 questions in 5–10 minutes — get a free, practical sleep report."
+              "Answer 37 questions in 5–10 minutes — get a free, practical sleep report."
             )}
           </p>
           <div
@@ -90,7 +90,7 @@ export default function Home() {
             <Link href="/test" className="btn primary">
               {t(dict, "ui.home.cta", "Start the test")}
             </Link>
-            <Link href="/result/WYvIBTnpKTs" className="btn">
+            <Link href="/result/powekmNVMeM" className="btn">
               {t(dict, "ui.home.example", "See sample report")}
             </Link>
           </div>
