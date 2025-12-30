@@ -48,7 +48,8 @@
       },
       "lookup_hint": "When you complete a test you receive an ID. It is anonymous, and you can open your report anytime. Paste your ID to view the report.",
       "id_placeholder": "Your ID",
-      "disclaimer2": "Sleep challenges can also differ by duration. Short-term sleep difficulties are often linked to stress, routines, or temporary changes, while longer-lasting sleep problems may benefit from structured support. If sleep issues persist over time, consider seeking guidance from a qualified healthcare professional."
+      "disclaimer2": "Sleep challenges can also differ by duration. Short-term sleep difficulties are often linked to stress, routines, or temporary changes, while longer-lasting sleep problems may benefit from structured support. If sleep issues persist over time, consider seeking guidance from a qualified healthcare professional.",
+      "not_answered": "Not answered"
     },
     "articles": {
       "minutes": {
@@ -95,6 +96,19 @@
           "teaser": "When snoring is harmless, when it might be sleep apnea, and what to do next."
         }
       }
+    },
+    "domain": {
+      "mental": {
+        "title": "Mental calm & stress"
+      },
+      "chronotype": {
+        "title": "Circadian rhythm & shift work"
+      }
+    },
+    "severity": {
+      "green": "Green",
+      "yellow": "Yellow",
+      "red": "Red"
     }
   },
   "about": {
@@ -169,6 +183,14 @@
     "bloodpressure": {
       "name": "Blood pressure – lifestyle risk",
       "desc": "Diet, activity, alcohol, stress, and weight."
+    },
+    "mental": {
+      "name": "Mental calm & stress",
+      "desc": "Stress, worry, and arousal at bedtime."
+    },
+    "chronotype": {
+      "name": "Circadian rhythm & shift work",
+      "desc": "Evening preference and sleep timing mismatch."
     }
   },
   "q": {
@@ -217,6 +239,17 @@
       "alcohol_often": "I drink alcohol more often or in larger amounts than recommended.",
       "stress_high": "I experience a lot of stress in everyday life.",
       "overweight_self": "I consider myself overweight."
+    },
+    "mental": {
+      "racing_mind": "My mind feels busy or racing when I try to fall asleep.",
+      "worry_at_bed": "Worrying or overthinking keeps me from falling asleep.",
+      "stress_affects_sleep": "Stress in my daily life clearly affects my sleep.",
+      "hyperarousal": "I feel tense, restless, or 'on edge' when trying to sleep."
+    },
+    "chrono": {
+      "evening_type": "I naturally feel more alert in the evening than in the morning.",
+      "shift_work": "I frequently work night shifts or rotating shifts.",
+      "sleep_window_mismatch": "I often have to sleep at times that don’t suit my body."
     }
   },
   "flags": {
@@ -268,6 +301,22 @@
       "side_sleep": "Try side-sleeping (use a pillow behind your back) – may reduce snoring/apneas for some.",
       "reduce_evening_alcohol": "Avoid evening alcohol – it can worsen snoring/breathing issues.",
       "consider_gp_check": "Suspect sleep apnea (loud snoring, witnessed pauses, daytime tiredness)? See your doctor."
+    },
+    "mental": {
+      "wind_down_45": "Wind down for 45–60 minutes before bed.",
+      "write_worries": "Write down worries or plan tomorrow 10 minutes earlier in the evening.",
+      "calm_breath": "Calm breathing with longer exhales for 2–5 minutes.",
+      "stimulus_control": "Stimulus control: get out of bed if you are awake for long.",
+      "maintain": "Maintain: keep your wind-down and stable routines."
+    },
+    "chrono": {
+      "light_management": "Light management: bright light at the “start of day”, dimmer before sleep.",
+      "anchoring": "Anchoring: keep a consistent wake time on days off as much as possible.",
+      "short_naps": "Short naps (15–25 min) early in the wake period.",
+      "caffeine_cutoff": "Adjust caffeine cut-off to your shift (avoid late in the wake period).",
+      "shift_gradual": "Shift bedtime/wake time gradually by 15 min every 2–3 days.",
+      "morning_light": "Get morning light for 10–30 minutes.",
+      "maintain": "Maintain a stable sleep window when possible."
     }
   }
 }

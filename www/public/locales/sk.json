@@ -48,7 +48,8 @@
       },
       "lookup_hint": "Po dokončení testu dostanete ID. Je anonymné a svoj report si môžete otvoriť kedykoľvek. Vložte svoje ID na zobrazenie reportu.",
       "id_placeholder": "Vaše ID",
-      "disclaimer2": "Problémy so spánkom sa môžu líšiť aj podľa trvania. Krátkodobé ťažkosti so spánkom často súvisia so stresom, rutinami alebo dočasnými zmenami, zatiaľ čo dlhodobejšie problémy so spánkom môžu mať úžitok zo štruktúrovanej podpory. Ak problémy so spánkom pretrvávajú v čase, zvážte vyhľadanie usmernenia u kvalifikovaného zdravotníckeho odborníka."
+      "disclaimer2": "Problémy so spánkom sa môžu líšiť aj podľa trvania. Krátkodobé ťažkosti so spánkom často súvisia so stresom, rutinami alebo dočasnými zmenami, zatiaľ čo dlhodobejšie problémy so spánkom môžu mať úžitok zo štruktúrovanej podpory. Ak problémy so spánkom pretrvávajú v čase, zvážte vyhľadanie usmernenia u kvalifikovaného zdravotníckeho odborníka.",
+      "not_answered": "Nezodpovedané"
     },
     "articles": {
       "minutes": {
@@ -95,6 +96,19 @@
           "teaser": "Kedy je chrápanie neškodné, kedy to môže byť spánkové apnoe a čo robiť ďalej."
         }
       }
+    },
+    "domain": {
+      "mental": {
+        "title": "Mentálny pokoj a stres"
+      },
+      "chronotype": {
+        "title": "Cirkadiánny rytmus a smeny"
+      }
+    },
+    "severity": {
+      "green": "Zelená",
+      "yellow": "Žltá",
+      "red": "Červená"
     }
   },
   "about": {
@@ -169,6 +183,14 @@
     "bloodpressure": {
       "name": "Krvný tlak – riziko životného štýlu",
       "desc": "Strava, aktivita, alkohol, stres a hmotnosť."
+    },
+    "mental": {
+      "name": "Mentálny pokoj a stres",
+      "desc": "Stres, starosti a aktivácia pri zaspávaní."
+    },
+    "chronotype": {
+      "name": "Cirkadiánny rytmus a smeny",
+      "desc": "Večerný typ a nesúlad času spánku."
     }
   },
   "q": {
@@ -217,6 +239,17 @@
       "alcohol_often": "Pijem alkohol častejšie alebo vo väčšom množstve, než sa odporúča.",
       "stress_high": "Zažívam veľa stresu v každodennom živote.",
       "overweight_self": "Považujem sa za človeka s nadváhou."
+    },
+    "mental": {
+      "racing_mind": "Keď sa snažím zaspať, moja myseľ je zaneprázdnená alebo zrýchlená.",
+      "worry_at_bed": "Obavy alebo prehnané premýšľanie mi bránia zaspať.",
+      "stress_affects_sleep": "Stres v bežnom živote jasne ovplyvňuje môj spánok.",
+      "hyperarousal": "Keď sa snažím spať, cítim napätie, nepokoj alebo „na hrane“."
+    },
+    "chrono": {
+      "evening_type": "Prirodzene sa cítim večer bdelejší než ráno.",
+      "shift_work": "Často pracujem nočné alebo striedavé smeny.",
+      "sleep_window_mismatch": "Často musím spať v časoch, ktoré môjmu telu nevyhovujú."
     }
   },
   "flags": {
@@ -268,6 +301,22 @@
       "side_sleep": "Skúste spať na boku (s vankúšom za chrbtom) – môže to znížiť chrápanie/apnoe u niektorých.",
       "reduce_evening_alcohol": "Vyhnite sa alkoholu večer – môže zhoršiť chrápanie/problémy s dýchaním.",
       "consider_gp_check": "Máte podozrenie na spánkové apnoe (hlasné chrápanie, pozorované prestávky, denná ospalosť)? Navštívte lekára."
+    },
+    "mental": {
+      "wind_down_45": "Spomaľte 45–60 minút pred spaním.",
+      "write_worries": "Zapíšte si starosti alebo naplánujte zajtrajšok o 10 minút skôr večer.",
+      "calm_breath": "Pokojné dýchanie s dlhším výdychom 2–5 minút.",
+      "stimulus_control": "Kontrola stimulov: ak ste dlho bdelí, vstaňte z postele.",
+      "maintain": "Udržiavajte stabilné rutiny."
+    },
+    "chrono": {
+      "light_management": "Riadenie svetla: jasné svetlo na „začiatku dňa“, tlmenejšie pred spánkom.",
+      "anchoring": "Kotvenie: držte si čo najviac stabilný čas vstávania aj vo voľné dni.",
+      "short_naps": "Krátke zdriemnutia (15–25 min) skoro v období bdenia.",
+      "caffeine_cutoff": "Prispôsobte hranicu kofeínu zmene (nepiť neskoro v období bdenia).",
+      "shift_gradual": "Posúvajte čas spánku/vstávania o 15 min každé 2–3 dni.",
+      "morning_light": "Ranné svetlo 10–30 minút.",
+      "maintain": "Udržujte stabilné spánkové okno, keď je to možné."
     }
   }
 }

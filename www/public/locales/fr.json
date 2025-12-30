@@ -48,7 +48,8 @@
       },
       "lookup_hint": "Lorsque vous terminez un test, vous recevez un ID. Il est anonyme et vous pouvez ouvrir votre rapport à tout moment. Collez votre ID pour voir le rapport.",
       "id_placeholder": "Votre ID",
-      "disclaimer2": "Les difficultés de sommeil peuvent aussi varier selon leur durée. Les troubles du sommeil à court terme sont souvent liés au stress, aux routines ou à des changements temporaires, tandis que les problèmes de sommeil plus durables peuvent bénéficier d’un accompagnement structuré. Si les problèmes de sommeil persistent dans le temps, envisagez de demander conseil à un professionnel de santé qualifié."
+      "disclaimer2": "Les difficultés de sommeil peuvent aussi varier selon leur durée. Les troubles du sommeil à court terme sont souvent liés au stress, aux routines ou à des changements temporaires, tandis que les problèmes de sommeil plus durables peuvent bénéficier d’un accompagnement structuré. Si les problèmes de sommeil persistent dans le temps, envisagez de demander conseil à un professionnel de santé qualifié.",
+      "not_answered": "Non répondu"
     },
     "articles": {
       "minutes": {
@@ -95,6 +96,19 @@
           "teaser": "Quand le ronflement est inoffensif, quand il peut s'agir d'apnée du sommeil, et que faire ensuite."
         }
       }
+    },
+    "domain": {
+      "mental": {
+        "title": "Calme mental et stress"
+      },
+      "chronotype": {
+        "title": "Rythme circadien et travail posté"
+      }
+    },
+    "severity": {
+      "green": "Vert",
+      "yellow": "Jaune",
+      "red": "Rouge"
     }
   },
   "about": {
@@ -169,6 +183,14 @@
     "bloodpressure": {
       "name": "Pression artérielle – risque lié au mode de vie",
       "desc": "Alimentation, activité, alcool, stress et poids."
+    },
+    "mental": {
+      "name": "Calme mental et stress",
+      "desc": "Stress, inquiétude et activation au moment du coucher."
+    },
+    "chronotype": {
+      "name": "Rythme circadien et travail posté",
+      "desc": "Préférence du soir et décalage de l'horaire de sommeil."
     }
   },
   "q": {
@@ -217,6 +239,17 @@
       "alcohol_often": "Je bois de l'alcool plus souvent ou en plus grandes quantités que recommandé.",
       "stress_high": "Je subis beaucoup de stress dans la vie quotidienne.",
       "overweight_self": "Je me considère en surpoids."
+    },
+    "mental": {
+      "racing_mind": "Mon esprit est agité ou accéléré quand j'essaie de m'endormir.",
+      "worry_at_bed": "Les inquiétudes ou le fait de trop penser m'empêchent de m'endormir.",
+      "stress_affects_sleep": "Le stress de ma vie quotidienne affecte clairement mon sommeil.",
+      "hyperarousal": "Je me sens tendu, agité ou « sur le qui-vive » quand j'essaie de dormir."
+    },
+    "chrono": {
+      "evening_type": "Je me sens naturellement plus alerte le soir que le matin.",
+      "shift_work": "Je travaille souvent de nuit ou en horaires tournants.",
+      "sleep_window_mismatch": "Je dois souvent dormir à des horaires qui ne conviennent pas à mon corps."
     }
   },
   "flags": {
@@ -268,6 +301,22 @@
       "side_sleep": "Essayez de dormir sur le côté (utilisez un oreiller derrière votre dos) – peut réduire le ronflement/apnées pour certains.",
       "reduce_evening_alcohol": "Évitez l'alcool le soir – il peut aggraver le ronflement/problèmes respiratoires.",
       "consider_gp_check": "Soupçon d'apnée du sommeil (ronflement fort, pauses observées, somnolence diurne) ? Consultez votre médecin."
+    },
+    "mental": {
+      "wind_down_45": "Décompressez 45–60 minutes avant le coucher.",
+      "write_worries": "Écrivez vos préoccupations ou planifiez demain 10 minutes plus tôt le soir.",
+      "calm_breath": "Respiration calme avec des expirations plus longues pendant 2–5 minutes.",
+      "stimulus_control": "Contrôle des stimuli : sortez du lit si vous restez éveillé longtemps.",
+      "maintain": "Maintenir : continuez avec des routines stables."
+    },
+    "chrono": {
+      "light_management": "Gestion de la lumière : lumière vive au « début de journée », plus faible avant le sommeil.",
+      "anchoring": "Ancrage : gardez une heure de réveil constante les jours libres.",
+      "short_naps": "Siestes courtes (15–25 min) tôt dans la période d’éveil.",
+      "caffeine_cutoff": "Adaptez la coupure de caféine à votre service (évitez tard dans l’éveil).",
+      "shift_gradual": "Décalez l’heure du coucher/réveil de 15 min tous les 2–3 jours.",
+      "morning_light": "Lumière matinale pendant 10–30 minutes.",
+      "maintain": "Maintenez une fenêtre de sommeil stable si possible."
     }
   }
 }

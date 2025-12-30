@@ -6,7 +6,7 @@ import {
   ComputedResult,
   BANK_VERSION,
 } from "@/lib/types";
-import { computeCategoryScores } from "@/lib/scoring";
+import { computeCategoryScores, computeTotalRaw } from "@/lib/scoring";
 import { computeFlags } from "@/lib/flags";
 
 /**
@@ -23,7 +23,12 @@ const BY_CAT: Record<CategoryId, string[]> = {
   [CategoryId.Breathing]:     ["q23", "q24", "q25"],
   // NEW: Blood pressure lifestyle risk (Likert-only)
   [CategoryId.BloodPressure]: ["q26", "q27", "q28", "q29", "q30"],
+  [CategoryId.Mental]:        ["q31", "q32", "q33", "q34"],
+  [CategoryId.Chronotype]:    ["q35", "q36", "q37"],
 };
+
+const hasAnyAnswer = (answers: AnswerMap, ids: string[]) =>
+  ids.some((id) => typeof answers[id] === "number");
 
 /**
  * Compute the full result doc from answers.
@@ -32,19 +37,60 @@ const BY_CAT: Record<CategoryId, string[]> = {
 export async function computeAllServer(answers: AnswerMap): Promise<ComputedResult> {
   const categoryScores: CategoryScores = computeCategoryScores(answers, BY_CAT);
 
-  // totalRaw is the average across categories (0–100; higher is worse)
-  const catVals = Object.values(categoryScores);
-  const totalRaw = catVals.length
-    ? Math.round(catVals.reduce((a, b) => a + b, 0) / catVals.length)
-    : 0;
+  const includeMental = hasAnyAnswer(answers, BY_CAT[CategoryId.Mental]);
+
+  // totalRaw is the weighted average across categories (0–100; higher is worse)
+  const totalRaw = computeTotalRaw(categoryScores, { includeMental });
 
   // sleepScore is the “positive” score (higher is better)
   const sleepScore = Math.max(0, 100 - totalRaw);
 
   const flags = computeFlags(answers);
 
-  // Suggested tips are populated client-side from i18n per category/color.
   const suggestedTips = {} as ComputedResult["suggestedTips"];
+
+  const mentalScore = categoryScores[CategoryId.Mental] ?? 0;
+  const mentalDisplay = 100 - mentalScore;
+  const mentalColor =
+    mentalDisplay <= 30 ? "red" : mentalDisplay <= 70 ? "yellow" : "green";
+
+  if (includeMental) {
+    suggestedTips[CategoryId.Mental] =
+      mentalColor === "green"
+        ? ["tips.mental.maintain"]
+        : [
+            "tips.mental.wind_down_45",
+            "tips.mental.write_worries",
+            "tips.mental.calm_breath",
+            "tips.mental.stimulus_control",
+          ];
+  }
+
+  const shiftWork = answers["q36"];
+  const eveningType = answers["q35"];
+  const shiftWorkHigh = typeof shiftWork === "number" && shiftWork >= 4;
+  const eveningTypeHigh = typeof eveningType === "number" && eveningType >= 4;
+
+  if (hasAnyAnswer(answers, BY_CAT[CategoryId.Chronotype])) {
+    if (shiftWorkHigh) {
+      suggestedTips[CategoryId.Chronotype] = [
+        "tips.chrono.light_management",
+        "tips.chrono.anchoring",
+        "tips.chrono.short_naps",
+        "tips.chrono.caffeine_cutoff",
+      ];
+    } else if (eveningTypeHigh) {
+      suggestedTips[CategoryId.Chronotype] = [
+        "tips.chrono.shift_gradual",
+        "tips.chrono.morning_light",
+      ];
+    } else {
+      suggestedTips[CategoryId.Chronotype] = [
+        "tips.chrono.maintain",
+        "tips.chrono.morning_light",
+      ];
+    }
+  }
 
   return {
     version: BANK_VERSION,

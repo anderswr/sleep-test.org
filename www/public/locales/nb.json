@@ -48,7 +48,8 @@
       },
       "lookup_hint": "Når du har gjennomført en test får du en ID. Den er anonym, og du kan åpne rapporten når du vil. Lim inn ID-en for å åpne rapporten.",
       "id_placeholder": "Din ID",
-      "disclaimer2": "Søvnproblemer kan også variere i varighet. Kortvarige søvnvansker er ofte knyttet til stress, rutiner eller midlertidige endringer, mens mer langvarige søvnproblemer kan ha nytte av strukturert oppfølging. Hvis søvnproblemene vedvarer over tid, bør du vurdere å søke råd hos kvalifisert helsepersonell."
+      "disclaimer2": "Søvnproblemer kan også variere i varighet. Kortvarige søvnvansker er ofte knyttet til stress, rutiner eller midlertidige endringer, mens mer langvarige søvnproblemer kan ha nytte av strukturert oppfølging. Hvis søvnproblemene vedvarer over tid, bør du vurdere å søke råd hos kvalifisert helsepersonell.",
+      "not_answered": "Ikke besvart"
     },
     "articles": {
       "card": {
@@ -85,6 +86,19 @@
           "teaser": "Når snorking er ufarlig, og når det kan være søvnapné – og hva du gjør med det."
         }
       }
+    },
+    "domain": {
+      "mental": {
+        "title": "Mental ro & stress"
+      },
+      "chronotype": {
+        "title": "Døgnrytme & skift"
+      }
+    },
+    "severity": {
+      "green": "Grønn",
+      "yellow": "Gul",
+      "red": "Rød"
     }
   },
   "about": {
@@ -159,6 +173,14 @@
     "bloodpressure": {
       "name": "Blodtrykk – livsstilsrisiko",
       "desc": "Kosthold, aktivitet, alkohol, stress og vekt."
+    },
+    "mental": {
+      "name": "Mental ro & stress",
+      "desc": "Stress, bekymring og aktivering ved leggetid."
+    },
+    "chronotype": {
+      "name": "Døgnrytme & skift",
+      "desc": "Kveldstype og mismatch med søvnvindu."
     }
   },
   "q": {
@@ -207,6 +229,17 @@
       "alcohol_often": "Jeg drikker alkohol oftere eller mer mangde enn anbefalt.",
       "stress_high": "Jeg opplever mye stress i hverdagen.",
       "overweight_self": "Jeg oppfatter meg selv som overvektig."
+    },
+    "mental": {
+      "racing_mind": "Tankene mine er travle eller løper når jeg prøver å sovne.",
+      "worry_at_bed": "Bekymring eller overtenking hindrer meg i å sovne.",
+      "stress_affects_sleep": "Stress i hverdagen påvirker søvnen min tydelig.",
+      "hyperarousal": "Jeg føler meg spent, rastløs eller «på alerten» når jeg prøver å sove."
+    },
+    "chrono": {
+      "evening_type": "Jeg føler meg naturlig mer våken om kvelden enn om morgenen.",
+      "shift_work": "Jeg jobber ofte nattskift eller roterende skift.",
+      "sleep_window_mismatch": "Jeg må ofte sove på tider som ikke passer kroppen min."
     }
   },
   "flags": {
@@ -258,6 +291,22 @@
       "side_sleep": "Prøv sidesoving (pute i ryggen) – kan dempe snorking og pustestopp hos noen.",
       "reduce_evening_alcohol": "Kutt alkohol sent – det kan forverre snorking/pusteplager.",
       "consider_gp_check": "Mistenker du søvnapné (høy snorking, pustestopp, dagtrøtthet)? Snakk med fastlege."
+    },
+    "mental": {
+      "wind_down_45": "Nedtrapping 45–60 min før leggetid.",
+      "write_worries": "Skriv ut bekymringer eller planlegg neste dag 10 min tidligere på kvelden.",
+      "calm_breath": "Rolig pust med lang utpust i 2–5 min.",
+      "stimulus_control": "Stimulus-kontroll: gå ut av sengen hvis du er våken lenge.",
+      "maintain": "Vedlikehold: fortsett med stabile rutiner."
+    },
+    "chrono": {
+      "light_management": "Lysstyring: sterkt lys ved «start av dag», mørkere før søvn.",
+      "anchoring": "Anchoring: fast oppvåkning på fridager så langt mulig.",
+      "short_naps": "Korte naps (15–25 min) tidlig i våkenperioden.",
+      "caffeine_cutoff": "Koffein-cutoff tilpasset skift (ikke sent i våkenperioden).",
+      "shift_gradual": "Gradvis flytt leggetid/oppvåkning 15 min hver 2–3 dag.",
+      "morning_light": "Morgenlys 10–30 min.",
+      "maintain": "Vedlikehold så stabilt søvnvindu som mulig."
     }
   }
 }
