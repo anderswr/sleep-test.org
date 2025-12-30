@@ -117,7 +117,9 @@
     "contact": {
       "title": "联系方式",
       "p1": "www.sleep-test.org 的负责人是 DMZ DATA AS。隐私和一般问题的联络点：kontor@dmz.no。",
-      "p2": "探索 DMZ DATA 的成果 <a href='https://www.dmz.no' target='_blank' rel='noopener'>www.dmz.no</a>，一款学习 Google 搜索的应用 (<a href='https://apps.apple.com/no/app/toiletlearn-web-search/id6748481089' target='_blank' rel='noopener'>链接</a>)，一款学习 ChatGPT 的应用 (<a href='https://apps.apple.com/us/app/toiletlearn-web-search/id6748926636?platform=iphone' target='_blank' rel='noopener'>链接</a>)，以及一个让你的 Homey 智能家居更有趣的 DadJokes 插件 (<a href='https://homey.app/no-no/app/com.dmz.dadjokesplus/DadJokes-Plus/test/' target='_blank' rel='noopener'>链接</a>)。"
+      "p2": "探索 DMZ DATA 的成果 <a href='https://www.dmz.no' target='_blank' rel='noopener'>www.dmz.no</a>，一款学习 Google 搜索的应用 (<a href='https://apps.apple.com/no/app/toiletlearn-web-search/id6748481089' target='_blank' rel='noopener'>链接</a>)，一款学习 ChatGPT 的应用 (<a href='https://apps.apple.com/us/app/toiletlearn-web-search/id6748926636?platform=iphone' target='_blank' rel='noopener'>链接</a>)，以及一个让你的 Homey 智能家居更有趣的 DadJokes 插件 (<a href='https://homey.app/no-no/app/com.dmz.dadjokesplus/DadJokes-Plus/test/' target='_blank' rel='noopener'>链接</a>)。",
+      "p3": "Sleep-test.org 是一款关于睡眠习惯和睡眠相关挑战的自我报告工具。问题与建议参考了成熟的睡眠研究、临床指南以及公开可获取的睡眠医学和公共卫生资料。本服务旨在提供指引并支持对睡眠的反思，非诊断工具。",
+      "p4": "参考资料与灵感包括美国睡眠医学学会（AASM）、美国国立卫生研究院（NIH）、美国疾病控制与预防中心（CDC）、英国国家医疗服务体系（NHS）等，以及关于睡眠卫生、昼夜节律和失眠的研究。更详细的专业背景与来源请参阅网站文章。"
     }
   },
   "privacy": {

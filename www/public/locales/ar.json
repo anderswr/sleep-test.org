@@ -117,7 +117,9 @@
     "contact": {
       "title": "اتصال",
       "p1": "المسؤول عن www.sleep-test.org هو DMZ DATA AS. نقطة الاتصال لأسئلة الخصوصية والأسئلة العامة: kontor@dmz.no.",
-      "p2": "اكتشف مشاريع DMZ DATA على <a href='https://www.dmz.no' target='_blank' rel='noopener'>www.dmz.no</a>، تطبيق لتعلّم بحث Google (<a href='https://apps.apple.com/no/app/toiletlearn-web-search/id6748481089' target='_blank' rel='noopener'>رابط</a>)، تطبيق لتعلّم ChatGPT (<a href='https://apps.apple.com/us/app/toiletlearn-web-search/id6748926636?platform=iphone' target='_blank' rel='noopener'>رابط</a>)، واجعل منزلك الذكي Homey أكثر متعة مع DadJokes (<a href='https://homey.app/no-no/app/com.dmz.dadjokesplus/DadJokes-Plus/test/' target='_blank' rel='noopener'>رابط</a>)."
+      "p2": "اكتشف مشاريع DMZ DATA على <a href='https://www.dmz.no' target='_blank' rel='noopener'>www.dmz.no</a>، تطبيق لتعلّم بحث Google (<a href='https://apps.apple.com/no/app/toiletlearn-web-search/id6748481089' target='_blank' rel='noopener'>رابط</a>)، تطبيق لتعلّم ChatGPT (<a href='https://apps.apple.com/us/app/toiletlearn-web-search/id6748926636?platform=iphone' target='_blank' rel='noopener'>رابط</a>)، واجعل منزلك الذكي Homey أكثر متعة مع DadJokes (<a href='https://homey.app/no-no/app/com.dmz.dadjokesplus/DadJokes-Plus/test/' target='_blank' rel='noopener'>رابط</a>).",
+      "p3": "Sleep-test.org أداة للتقرير الذاتي عن عادات النوم والتحديات المرتبطة بالنوم. تستند الأسئلة والتوصيات إلى أبحاث النوم الراسخة، والإرشادات السريرية، والمصادر الصحية المتاحة للعامة في طب النوم والصحة العامة. تهدف الخدمة إلى الإرشاد ودعم التأمل في النوم، وليست أداة تشخيصية.",
+      "p4": "تشمل المواد والخلفيات المرجعية على سبيل المثال American Academy of Sleep Medicine (AASM) وNational Institutes of Health (NIH) وCenters for Disease Control and Prevention (CDC) وNational Health Service (NHS)، بالإضافة إلى أبحاث حول نظافة النوم والإيقاع اليومي والأرق. لمزيد من الخلفية المهنية والمصادر، راجع مقالات الموقع."
     }
   },
   "privacy": {

@@ -97,17 +97,17 @@
           "title": "Snoring & breathing signals: when to check it",
           "teaser": "When snoring is harmless, when it might be sleep apnea, and what to do next."
         },
-       "some": {
+        "some": {
           "title": "Snoring & breathing signals: when nighttime sounds matter",
           "teaser": "When snoring is harmless, when it may signal sleep apnea, and when to seek help."
         },
         "mental-health-and-sleep": {
-            "title": "Stress & racing thoughts: when the mind won’t switch off",
-            "teaser": "How stress and mental activation disrupt sleep, and what can help calm the mind at night."
+          "title": "Stress & racing thoughts: when the mind won’t switch off",
+          "teaser": "How stress and mental activation disrupt sleep, and what can help calm the mind at night."
         },
         "circadian-rhythm-and-shift-work": {
-            "title": "Circadian rhythm & shift work: when sleep timing feels off",
-            "teaser": "Why irregular sleep isn’t always bad habits — and how rhythm and shift work affect sleep."
+          "title": "Circadian rhythm & shift work: when sleep timing feels off",
+          "teaser": "Why irregular sleep isn’t always bad habits — and how rhythm and shift work affect sleep."
         }
       }
     },
@@ -131,7 +131,9 @@
     "contact": {
       "title": "Contact",
       "p1": "Responsible for www.sleep-test.org is DMZ DATA AS. Contact point for privacy inquiries and general questions: kontor@dmz.no.",
-      "p2": "Explore DMZ DATA wonders at <a href='https://www.dmz.no' target='_blank' rel='noopener'>www.dmz.no</a>, an app to learn Google web search (<a href='https://apps.apple.com/no/app/toiletlearn-web-search/id6748481089' target='_blank' rel='noopener'>LINK</a>), an app to learn ChatGPT (<a href='https://apps.apple.com/us/app/toiletlearn-web-search/id6748926636?platform=iphone' target='_blank' rel='noopener'>LINK</a>), and make your Homey smart home a bit more fun with DadJokes (<a href='https://homey.app/no-no/app/com.dmz.dadjokesplus/DadJokes-Plus/test/' target='_blank' rel='noopener'>LINK</a>)."
+      "p2": "Explore DMZ DATA wonders at <a href='https://www.dmz.no' target='_blank' rel='noopener'>www.dmz.no</a>, an app to learn Google web search (<a href='https://apps.apple.com/no/app/toiletlearn-web-search/id6748481089' target='_blank' rel='noopener'>LINK</a>), an app to learn ChatGPT (<a href='https://apps.apple.com/us/app/toiletlearn-web-search/id6748926636?platform=iphone' target='_blank' rel='noopener'>LINK</a>), and make your Homey smart home a bit more fun with DadJokes (<a href='https://homey.app/no-no/app/com.dmz.dadjokesplus/DadJokes-Plus/test/' target='_blank' rel='noopener'>LINK</a>).",
+      "p3": "Sleep-test.org is a self-reporting tool for sleep habits and sleep-related challenges. The questions and recommendations are inspired by established sleep research, clinical guidelines, and publicly available health sources in sleep medicine and public health. The service is intended as guidance and support for reflection on sleep, and is not a diagnostic tool.",
+      "p4": "Background material and inspiration include, among others, the American Academy of Sleep Medicine (AASM), National Institutes of Health (NIH), Centers for Disease Control and Prevention (CDC), National Health Service (NHS) as well as research on sleep hygiene, circadian rhythm, and insomnia. For more detailed professional background and sources, see the articles on the website."
     }
   },
   "privacy": {

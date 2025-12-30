@@ -107,7 +107,9 @@
     "contact": {
       "title": "Kontakt",
       "p1": "Ansvarlig for www.sleep-test.org er DMZ DATA AS. Kontaktpunkt for personvern og generelle henvendelser: kontor@dmz.no.",
-      "p2": "Utforsk DMZ DATA-underverker på <a href='https://www.dmz.no' target='_blank' rel='noopener'>www.dmz.no</a>, App for å lære Google web search (<a href='https://apps.apple.com/no/app/toiletlearn-web-search/id6748481089' target='_blank' rel='noopener'>LINK</a>), App for å lære ChatGPT (<a href='https://apps.apple.com/us/app/toiletlearn-web-search/id6748926636?platform=iphone' target='_blank' rel='noopener'>LINK</a>) og gjør Homey smarthuset ditt litt mer gøy med DadJokes (<a href='https://homey.app/no-no/app/com.dmz.dadjokesplus/DadJokes-Plus/test/' target='_blank' rel='noopener'>LINK</a>)."
+      "p2": "Utforsk DMZ DATA-underverker på <a href='https://www.dmz.no' target='_blank' rel='noopener'>www.dmz.no</a>, App for å lære Google web search (<a href='https://apps.apple.com/no/app/toiletlearn-web-search/id6748481089' target='_blank' rel='noopener'>LINK</a>), App for å lære ChatGPT (<a href='https://apps.apple.com/us/app/toiletlearn-web-search/id6748926636?platform=iphone' target='_blank' rel='noopener'>LINK</a>) og gjør Homey smarthuset ditt litt mer gøy med DadJokes (<a href='https://homey.app/no-no/app/com.dmz.dadjokesplus/DadJokes-Plus/test/' target='_blank' rel='noopener'>LINK</a>).",
+      "p3": "Sleep-test.org er et selvrapporteringsverktøy for søvnvaner og søvnrelaterte utfordringer. Spørsmålene og anbefalingene er inspirert av etablert søvnforskning, kliniske retningslinjer og offentlig tilgjengelige helsekilder innen søvnmedisin og folkehelse. Tjenesten er ment som veiledning og støtte til refleksjon rundt søvn, og er ikke et diagnostisk verktøy.",
+      "p4": "Bakgrunnsmateriale og inspirasjon inkluderer blant annet American Academy of Sleep Medicine (AASM), National Institutes of Health (NIH), Centers for Disease Control and Prevention (CDC), National Health Service (NHS) samt forskning på søvnhygiene, døgnrytme og insomni. For mer detaljert faglig bakgrunn og kilder, se artiklene på nettstedet."
     }
   },
   "privacy": {
