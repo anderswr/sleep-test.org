@@ -9,7 +9,7 @@
     },
     "home": {
       "title": "Бесплатный тест сна — получите свой персональный отчет (бета)",
-      "pitch": "Ответьте на 30 быстрых вопросов за 5–10 минут. Без оплаты, без регистрации. Получите понятный отчет, основанный на науке, с объяснениями и практическими советами.",
+      "pitch": "Ответьте на 37 быстрых вопросов за 5–10 минут. Без оплаты, без регистрации. Получите понятный отчет, основанный на науке, с объяснениями и практическими советами.",
       "cta": "Начать тест",
       "example": "Посмотреть пример отчета",
       "tests_count_title": "Пройденные тесты сна",
@@ -117,7 +117,9 @@
     "contact": {
       "title": "Контакты",
       "p1": "Ответственным за www.sleep-test.org является DMZ DATA AS. Контактное лицо для вопросов о конфиденциальности и общих вопросов: kontor@dmz.no.",
-      "p2": "Ознакомьтесь с проектами DMZ DATA на <a href='https://www.dmz.no' target='_blank' rel='noopener'>www.dmz.no</a>, приложение для изучения поиска в Google (<a href='https://apps.apple.com/no/app/toiletlearn-web-search/id6748481089' target='_blank' rel='noopener'>ССЫЛКА</a>), приложение для изучения ChatGPT (<a href='https://apps.apple.com/us/app/toiletlearn-web-search/id6748926636?platform=iphone' target='_blank' rel='noopener'>ССЫЛКА</a>), и сделайте свой умный дом Homey немного веселее с DadJokes (<a href='https://homey.app/no-no/app/com.dmz.dadjokesplus/DadJokes-Plus/test/' target='_blank' rel='noopener'>ССЫЛКА</a>)."
+      "p2": "Ознакомьтесь с проектами DMZ DATA на <a href='https://www.dmz.no' target='_blank' rel='noopener'>www.dmz.no</a>, приложение для изучения поиска в Google (<a href='https://apps.apple.com/no/app/toiletlearn-web-search/id6748481089' target='_blank' rel='noopener'>ССЫЛКА</a>), приложение для изучения ChatGPT (<a href='https://apps.apple.com/us/app/toiletlearn-web-search/id6748926636?platform=iphone' target='_blank' rel='noopener'>ССЫЛКА</a>), и сделайте свой умный дом Homey немного веселее с DadJokes (<a href='https://homey.app/no-no/app/com.dmz.dadjokesplus/DadJokes-Plus/test/' target='_blank' rel='noopener'>ССЫЛКА</a>).",
+      "p3": "Sleep-test.org — инструмент самооценки привычек сна и связанных со сном трудностей. Вопросы и рекомендации основаны на признанных исследованиях сна, клинических руководствах и общедоступных источниках в области медицины сна и общественного здравоохранения. Сервис предназначен для ориентира и поддержки в размышлении о сне и не является диагностическим инструментом.",
+      "p4": "В числе источников и вдохновения — American Academy of Sleep Medicine (AASM), National Institutes of Health (NIH), Centers for Disease Control and Prevention (CDC), National Health Service (NHS), а также исследования по гигиене сна, циркадным ритмам и бессоннице. Для более подробной профессиональной информации и источников см. статьи на сайте."
     }
   },
   "privacy": {

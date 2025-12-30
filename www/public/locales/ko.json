@@ -9,7 +9,7 @@
     },
     "home": {
       "title": "무료 수면 테스트 — 개인 맞춤형 보고서 받기 (베타)",
-      "pitch": "5~10분 안에 30개의 간단한 질문에 답하세요. 비용 없음, 등록 없음. 설명과 실용적인 팁이 포함된 명확하고 과학 기반의 보고서를 받으세요.",
+      "pitch": "5~10분 안에 37개의 간단한 질문에 답하세요. 비용 없음, 등록 없음. 설명과 실용적인 팁이 포함된 명확하고 과학 기반의 보고서를 받으세요.",
       "cta": "테스트 시작",
       "example": "예시 보고서 보기",
       "tests_count_title": "완료된 수면 테스트",
@@ -117,7 +117,9 @@
     "contact": {
       "title": "연락처",
       "p1": "www.sleep-test.org 의 책임자는 DMZ DATA AS 입니다. 개인정보 문의 및 일반 질문: kontor@dmz.no.",
-      "p2": "DMZ DATA의 프로젝트를 탐색해보세요 <a href='https://www.dmz.no' target='_blank' rel='noopener'>www.dmz.no</a>, 구글 검색 학습 앱 (<a href='https://apps.apple.com/no/app/toiletlearn-web-search/id6748481089' target='_blank' rel='noopener'>링크</a>), ChatGPT 학습 앱 (<a href='https://apps.apple.com/us/app/toiletlearn-web-search/id6748926636?platform=iphone' target='_blank' rel='noopener'>링크</a>), 그리고 DadJokes로 Homey 스마트홈을 더 재미있게 (<a href='https://homey.app/no-no/app/com.dmz.dadjokesplus/DadJokes-Plus/test/' target='_blank' rel='noopener'>링크</a>)."
+      "p2": "DMZ DATA의 프로젝트를 탐색해보세요 <a href='https://www.dmz.no' target='_blank' rel='noopener'>www.dmz.no</a>, 구글 검색 학습 앱 (<a href='https://apps.apple.com/no/app/toiletlearn-web-search/id6748481089' target='_blank' rel='noopener'>링크</a>), ChatGPT 학습 앱 (<a href='https://apps.apple.com/us/app/toiletlearn-web-search/id6748926636?platform=iphone' target='_blank' rel='noopener'>링크</a>), 그리고 DadJokes로 Homey 스마트홈을 더 재미있게 (<a href='https://homey.app/no-no/app/com.dmz.dadjokesplus/DadJokes-Plus/test/' target='_blank' rel='noopener'>링크</a>).",
+      "p3": "Sleep-test.org는 수면 습관과 수면 관련 어려움에 대한 자기보고 도구입니다. 질문과 권고는 확립된 수면 연구, 임상 지침, 그리고 수면의학 및 공중보건 분야의 공개 자료에서 영감을 받았습니다. 이 서비스는 수면에 대해 성찰하도록 돕는 안내이며 진단 도구가 아닙니다.",
+      "p4": "참고 자료와 영감은 American Academy of Sleep Medicine (AASM), National Institutes of Health (NIH), Centers for Disease Control and Prevention (CDC), National Health Service (NHS) 등을 포함하며, 수면 위생, 생체리듬, 불면에 관한 연구도 포함됩니다. 더 자세한 전문적 배경과 출처는 사이트의 기사에서 확인하세요."
     }
   },
   "privacy": {

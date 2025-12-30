@@ -33,13 +33,15 @@ export default function AboutPage() {
   const contactTitle = t(dict, "about.contact.title", "");
   const contactP1    = t(dict, "about.contact.p1", "");
   const contactP2    = t(dict, "about.contact.p2", "");
+  const contactP3    = t(dict, "about.contact.p3", "");
+  const contactP4    = t(dict, "about.contact.p4", "");
 
   // privacy.*
   const privacyTitle = t(dict, "privacy.title", "");
   const privacyP1    = t(dict, "privacy.p1", "");
   const privacyList  = renderList(dict, "privacy");
 
-  const hasContact = !!(contactTitle || contactP1 || contactP2);
+  const hasContact = !!(contactTitle || contactP1 || contactP2 || contactP3 || contactP4);
   const hasPrivacy = !!(privacyTitle || privacyP1 || privacyList);
 
   return (
@@ -63,6 +65,8 @@ export default function AboutPage() {
                   dangerouslySetInnerHTML={{ __html: contactP2 }}
                 />
               )}
+              {contactP3 && <p className="muted">{contactP3}</p>}
+              {contactP4 && <p className="muted">{contactP4}</p>}
             </section>
           )}
         </article>

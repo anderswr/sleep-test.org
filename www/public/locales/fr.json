@@ -9,7 +9,7 @@
     },
     "home": {
       "title": "Test de sommeil gratuit — obtenez votre rapport personnalisé (bêta)",
-      "pitch": "Répondez à 30 questions rapides en 5 à 10 minutes. Sans coût, sans inscription. Obtenez un rapport clair, basé sur la science, avec des explications et des conseils pratiques.",
+      "pitch": "Répondez à 37 questions rapides en 5 à 10 minutes. Sans coût, sans inscription. Obtenez un rapport clair, basé sur la science, avec des explications et des conseils pratiques.",
       "cta": "Commencer le test",
       "example": "Voir un exemple de rapport",
       "tests_count_title": "Tests de sommeil complétés",
@@ -117,7 +117,9 @@
     "contact": {
       "title": "Contact",
       "p1": "Le responsable de www.sleep-test.org est DMZ DATA AS. Point de contact pour les questions de confidentialité et générales : kontor@dmz.no.",
-      "p2": "Découvrez les projets de DMZ DATA sur <a href='https://www.dmz.no' target='_blank' rel='noopener'>www.dmz.no</a>, une application pour apprendre la recherche Google (<a href='https://apps.apple.com/no/app/toiletlearn-web-search/id6748481089' target='_blank' rel='noopener'>LINK</a>), une application pour apprendre ChatGPT (<a href='https://apps.apple.com/us/app/toiletlearn-web-search/id6748926636?platform=iphone' target='_blank' rel='noopener'>LINK</a>), et rendez votre maison intelligente Homey plus amusante avec DadJokes (<a href='https://homey.app/no-no/app/com.dmz.dadjokesplus/DadJokes-Plus/test/' target='_blank' rel='noopener'>LINK</a>)."
+      "p2": "Découvrez les projets de DMZ DATA sur <a href='https://www.dmz.no' target='_blank' rel='noopener'>www.dmz.no</a>, une application pour apprendre la recherche Google (<a href='https://apps.apple.com/no/app/toiletlearn-web-search/id6748481089' target='_blank' rel='noopener'>LINK</a>), une application pour apprendre ChatGPT (<a href='https://apps.apple.com/us/app/toiletlearn-web-search/id6748926636?platform=iphone' target='_blank' rel='noopener'>LINK</a>), et rendez votre maison intelligente Homey plus amusante avec DadJokes (<a href='https://homey.app/no-no/app/com.dmz.dadjokesplus/DadJokes-Plus/test/' target='_blank' rel='noopener'>LINK</a>).",
+      "p3": "Sleep-test.org est un outil d’auto-évaluation des habitudes de sommeil et des difficultés liées au sommeil. Les questions et recommandations s’inspirent de la recherche sur le sommeil, de recommandations cliniques et de sources de santé publique accessibles. Le service vise à guider la réflexion sur le sommeil et n’est pas un outil de diagnostic.",
+      "p4": "Les sources et inspirations incluent notamment l’American Academy of Sleep Medicine (AASM), les National Institutes of Health (NIH), les Centers for Disease Control and Prevention (CDC), le National Health Service (NHS), ainsi que des recherches sur l’hygiène du sommeil, le rythme circadien et l’insomnie. Pour davantage de références et de sources, voir les articles du site."
     }
   },
   "privacy": {

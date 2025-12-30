@@ -9,7 +9,7 @@
     },
     "home": {
       "title": "Bezplatný test spánku — získajte svoj osobný report (beta)",
-      "pitch": "Odpovedzte na 30 rýchlych otázok za 5–10 minút. Bez poplatku, bez registrácie. Získajte jasný, vedecky podložený report s vysvetleniami a praktickými tipmi.",
+      "pitch": "Odpovedzte na 37 rýchlych otázok za 5–10 minút. Bez poplatku, bez registrácie. Získajte jasný, vedecky podložený report s vysvetleniami a praktickými tipmi.",
       "cta": "Začať test",
       "example": "Zobraziť ukážkový report",
       "tests_count_title": "Dokončené testy spánku",
@@ -117,7 +117,9 @@
     "contact": {
       "title": "Kontakt",
       "p1": "Za www.sleep-test.org je zodpovedná spoločnosť DMZ DATA AS. Kontakt pre otázky týkajúce sa ochrany osobných údajov a všeobecných otázok: kontor@dmz.no.",
-      "p2": "Objavte projekty DMZ DATA na <a href='https://www.dmz.no' target='_blank' rel='noopener'>www.dmz.no</a>, aplikáciu na učenie sa Google vyhľadávania (<a href='https://apps.apple.com/no/app/toiletlearn-web-search/id6748481089' target='_blank' rel='noopener'>ODKAZ</a>), aplikáciu na učenie sa ChatGPT (<a href='https://apps.apple.com/us/app/toiletlearn-web-search/id6748926636?platform=iphone' target='_blank' rel='noopener'>ODKAZ</a>) a spravte svoj inteligentný domov Homey o niečo zábavnejší s DadJokes (<a href='https://homey.app/no-no/app/com.dmz.dadjokesplus/DadJokes-Plus/test/' target='_blank' rel='noopener'>ODKAZ</a>)."
+      "p2": "Objavte projekty DMZ DATA na <a href='https://www.dmz.no' target='_blank' rel='noopener'>www.dmz.no</a>, aplikáciu na učenie sa Google vyhľadávania (<a href='https://apps.apple.com/no/app/toiletlearn-web-search/id6748481089' target='_blank' rel='noopener'>ODKAZ</a>), aplikáciu na učenie sa ChatGPT (<a href='https://apps.apple.com/us/app/toiletlearn-web-search/id6748926636?platform=iphone' target='_blank' rel='noopener'>ODKAZ</a>) a spravte svoj inteligentný domov Homey o niečo zábavnejší s DadJokes (<a href='https://homey.app/no-no/app/com.dmz.dadjokesplus/DadJokes-Plus/test/' target='_blank' rel='noopener'>ODKAZ</a>).",
+      "p3": "Sleep-test.org je nástroj na sebahodnotenie spánkových návykov a problémov súvisiacich so spánkom. Otázky a odporúčania sú inšpirované zavedeným výskumom spánku, klinickými usmerneniami a verejne dostupnými zdrojmi v spánkovej medicíne a verejnom zdraví. Služba má slúžiť ako usmernenie a podpora pri uvažovaní o spánku a nie je diagnostickým nástrojom.",
+      "p4": "Podkladové materiály a inšpirácia zahŕňajú okrem iného American Academy of Sleep Medicine (AASM), National Institutes of Health (NIH), Centers for Disease Control and Prevention (CDC), National Health Service (NHS) a tiež výskum spánkovej hygieny, cirkadiánneho rytmu a insomnie. Podrobnejšie odborné pozadie a zdroje nájdete v článkoch na stránke."
     }
   },
   "privacy": {

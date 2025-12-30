@@ -9,7 +9,7 @@
     },
     "home": {
       "title": "नि:शुल्क नींद परीक्षण — अपनी व्यक्तिगत रिपोर्ट प्राप्त करें (बीटा)",
-      "pitch": "5–10 मिनट में 30 त्वरित प्रश्नों का उत्तर दें। कोई लागत नहीं, कोई पंजीकरण नहीं। स्पष्टीकरण और व्यावहारिक सुझावों के साथ एक स्पष्ट, विज्ञान-आधारित रिपोर्ट प्राप्त करें।",
+      "pitch": "5–10 मिनट में 37 त्वरित प्रश्नों का उत्तर दें। कोई लागत नहीं, कोई पंजीकरण नहीं। स्पष्टीकरण और व्यावहारिक सुझावों के साथ एक स्पष्ट, विज्ञान-आधारित रिपोर्ट प्राप्त करें।",
       "cta": "परीक्षण शुरू करें",
       "example": "उदाहरण रिपोर्ट देखें",
       "tests_count_title": "पूर्ण किए गए नींद परीक्षण",
@@ -117,7 +117,9 @@
     "contact": {
       "title": "संपर्क करें",
       "p1": "www.sleep-test.org के लिए जिम्मेदार DMZ DATA AS है। गोपनीयता और सामान्य प्रश्नों के लिए संपर्क बिंदु: kontor@dmz.no।",
-      "p2": "DMZ DATA की और खोज करें <a href='https://www.dmz.no' target='_blank' rel='noopener'>www.dmz.no</a>, गूगल वेब सर्च सीखने के लिए एक ऐप (<a href='https://apps.apple.com/no/app/toiletlearn-web-search/id6748481089' target='_blank' rel='noopener'>लिंक</a>), ChatGPT सीखने के लिए एक ऐप (<a href='https://apps.apple.com/us/app/toiletlearn-web-search/id6748926636?platform=iphone' target='_blank' rel='noopener'>लिंक</a>), और अपने Homey स्मार्ट होम को DadJokes के साथ और मजेदार बनाएं (<a href='https://homey.app/no-no/app/com.dmz.dadjokesplus/DadJokes-Plus/test/' target='_blank' rel='noopener'>लिंक</a>)।"
+      "p2": "DMZ DATA की और खोज करें <a href='https://www.dmz.no' target='_blank' rel='noopener'>www.dmz.no</a>, गूगल वेब सर्च सीखने के लिए एक ऐप (<a href='https://apps.apple.com/no/app/toiletlearn-web-search/id6748481089' target='_blank' rel='noopener'>लिंक</a>), ChatGPT सीखने के लिए एक ऐप (<a href='https://apps.apple.com/us/app/toiletlearn-web-search/id6748926636?platform=iphone' target='_blank' rel='noopener'>लिंक</a>), और अपने Homey स्मार्ट होम को DadJokes के साथ और मजेदार बनाएं (<a href='https://homey.app/no-no/app/com.dmz.dadjokesplus/DadJokes-Plus/test/' target='_blank' rel='noopener'>लिंक</a>)।",
+      "p3": "Sleep-test.org नींद की आदतों और नींद से जुड़ी चुनौतियों के बारे में स्व-रिपोर्टिंग टूल है। प्रश्न और सुझाव स्थापित स्लीप रिसर्च, क्लिनिकल दिशानिर्देशों और स्लीप मेडिसिन व सार्वजनिक स्वास्थ्य के खुले स्रोतों से प्रेरित हैं। यह सेवा नींद पर विचार करने में मार्गदर्शन और सहायता के लिए है, और यह निदान उपकरण नहीं है।",
+      "p4": "पृष्ठभूमि सामग्री और प्रेरणा में American Academy of Sleep Medicine (AASM), National Institutes of Health (NIH), Centers for Disease Control and Prevention (CDC), National Health Service (NHS) सहित नींद स्वच्छता, सर्कैडियन रिद्म और अनिद्रा पर शोध शामिल हैं। अधिक विस्तृत पेशेवर पृष्ठभूमि और स्रोतों के लिए वेबसाइट पर लेख देखें।"
     }
   },
   "privacy": {

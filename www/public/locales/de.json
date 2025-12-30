@@ -9,7 +9,7 @@
     },
     "home": {
       "title": "Kostenloser Schlaftest — erhalten Sie Ihren persönlichen Bericht (Beta)",
-      "pitch": "Beantworten Sie 30 kurze Fragen in 5–10 Minuten. Keine Kosten, keine Registrierung. Erhalten Sie einen klaren, wissenschaftlich fundierten Bericht mit Erklärungen und praktischen Tipps.",
+      "pitch": "Beantworten Sie 37 kurze Fragen in 5–10 Minuten. Keine Kosten, keine Registrierung. Erhalten Sie einen klaren, wissenschaftlich fundierten Bericht mit Erklärungen und praktischen Tipps.",
       "cta": "Test starten",
       "example": "Beispielbericht anzeigen",
       "tests_count_title": "Abgeschlossene Schlaftests",
@@ -117,7 +117,9 @@
     "contact": {
       "title": "Kontakt",
       "p1": "Verantwortlich für www.sleep-test.org ist DMZ DATA AS. Kontaktstelle für Datenschutzanfragen und allgemeine Fragen: kontor@dmz.no.",
-      "p2": "Entdecken Sie die Projekte von DMZ DATA auf <a href='https://www.dmz.no' target='_blank' rel='noopener'>www.dmz.no</a>, eine App zum Lernen der Google-Websuche (<a href='https://apps.apple.com/no/app/toiletlearn-web-search/id6748481089' target='_blank' rel='noopener'>LINK</a>), eine App zum Lernen von ChatGPT (<a href='https://apps.apple.com/us/app/toiletlearn-web-search/id6748926636?platform=iphone' target='_blank' rel='noopener'>LINK</a>) und machen Sie Ihr Homey Smart Home mit DadJokes ein wenig unterhaltsamer (<a href='https://homey.app/no-no/app/com.dmz.dadjokesplus/DadJokes-Plus/test/' target='_blank' rel='noopener'>LINK</a>)."
+      "p2": "Entdecken Sie die Projekte von DMZ DATA auf <a href='https://www.dmz.no' target='_blank' rel='noopener'>www.dmz.no</a>, eine App zum Lernen der Google-Websuche (<a href='https://apps.apple.com/no/app/toiletlearn-web-search/id6748481089' target='_blank' rel='noopener'>LINK</a>), eine App zum Lernen von ChatGPT (<a href='https://apps.apple.com/us/app/toiletlearn-web-search/id6748926636?platform=iphone' target='_blank' rel='noopener'>LINK</a>) und machen Sie Ihr Homey Smart Home mit DadJokes ein wenig unterhaltsamer (<a href='https://homey.app/no-no/app/com.dmz.dadjokesplus/DadJokes-Plus/test/' target='_blank' rel='noopener'>LINK</a>).",
+      "p3": "Sleep-test.org ist ein Selbstauskunfts-Tool zu Schlafgewohnheiten und schlafbezogenen Herausforderungen. Die Fragen und Empfehlungen sind inspiriert von etablierter Schlafforschung, klinischen Leitlinien und öffentlich zugänglichen Gesundheitsquellen aus Schlafmedizin und Public Health. Der Dienst dient der Orientierung und Unterstützung bei der Reflexion über Schlaf und ist kein diagnostisches Werkzeug.",
+      "p4": "Hintergrundmaterial und Inspiration umfassen unter anderem die American Academy of Sleep Medicine (AASM), die National Institutes of Health (NIH), die Centers for Disease Control and Prevention (CDC), den National Health Service (NHS) sowie Forschung zu Schlafhygiene, zirkadianem Rhythmus und Insomnie. Für ausführlichere fachliche Hintergründe und Quellen siehe die Artikel auf der Website."
     }
   },
   "privacy": {
