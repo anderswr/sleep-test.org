@@ -328,12 +328,12 @@ p { line-height: 1.6; }
   gap: 24px;
 }
 .score-hero__left{ flex: 1; }
-.score-hero__right{ width: 220px; display:flex; justify-content:center; }
+.score-hero__right{ width: 175px; display:flex; justify-content:center; }
 
 .score-ring{
   /* width: 200px; 
   height: 200px; */
-  padding: 20px;  
+  padding: 50px;  
   border-radius: 1px;
   border: 1px solid var(--primary-weak);
   display:flex; flex-direction:column; align-items:center; justify-content:center;
@@ -342,10 +342,10 @@ p { line-height: 1.6; }
 .score-ring__value{ font-size: 42px; font-weight: 700; line-height: 1; }
 .score-ring__label{ font-size: .9rem; color: var(--muted); margin-top: 6px; }
 
-/* Ring-farger: mørk-vennlige toner */
-.score-ring[data-color="green"]{ border-color:var(--result-green-bg); background:var(--result-green-bg); }
+/* Ring-farger: mørk-vennlige toner 
+.score-ring[data-color="green"]{ border-color:var(--result-green-border); background:var(--result-green-bg); }
 .score-ring[data-color="orange"]{ border-color:var(--result-yellow-border); background:var(--result-yellow-bg); }
-.score-ring[data-color="red"]{ border-color:var(--result-red-border); background:var(--result-red-bg); }
+.score-ring[data-color="red"]{ border-color:var(--result-red-border); background:var(--result-red-bg); } */
 
 .grid-cards{
   display:grid;
