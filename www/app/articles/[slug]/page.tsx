@@ -33,6 +33,8 @@ const VALID = new Set<string>([
   "environment",
   "breathing",
   "some",
+  "circadian-rhythm-and-shift-work",
+  "mental-health-and-sleep",
 ]);
 
 export default function ArticlePage({ params }: { params: { slug: string } }) {

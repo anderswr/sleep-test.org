@@ -60,7 +60,9 @@
         "hygiene": "6 min",
         "environment": "5 min",
         "breathing": "6 min",
-        "some": "7 min"
+        "some": "7 min",
+        "circadian-rhythm-and-shift-work.md": "6 min",
+        "mental-health-and-sleep": "7 min"
       },
       "card": {
         "title": "Sleep tips & knowledge",
@@ -94,6 +96,18 @@
         "breathing": {
           "title": "Snoring & breathing signals: when to check it",
           "teaser": "When snoring is harmless, when it might be sleep apnea, and what to do next."
+        },
+       "some": {
+          "title": "Snoring & breathing signals: when nighttime sounds matter",
+          "teaser": "When snoring is harmless, when it may signal sleep apnea, and when to seek help."
+        },
+        "mental-health-and-sleep": {
+            "title": "Stress & racing thoughts: when the mind won’t switch off",
+            "teaser": "How stress and mental activation disrupt sleep, and what can help calm the mind at night."
+        },
+        "circadian-rhythm-and-shift-work": {
+            "title": "Circadian rhythm & shift work: when sleep timing feels off",
+            "teaser": "Why irregular sleep isn’t always bad habits — and how rhythm and shift work affect sleep."
         }
       }
     },
