@@ -32,6 +32,7 @@
   --result-yellow-border: #edbb04;
   --result-red-bg: #392a39;
   --result-red-border: #f96265;
+  --result-text: #e6eaf2;
 
   /* Prose helpers */
   --prose-accent: #5dd6c6;  /* lenker i prose */
@@ -333,7 +334,7 @@ p { line-height: 1.6; }
   width: 318px; height: 318px; border-radius: 999px;
   border: 1px solid var(--primary-weak);
   display:flex; flex-direction:column; align-items:center; justify-content:center;
-  color: var(--text);
+  color: var(--result-text);
 }
 .score-ring__value{ font-size: 42px; font-weight: 700; line-height: 1; }
 .score-ring__label{ font-size: .9rem; color: var(--muted); margin-top: 6px; }
@@ -354,7 +355,7 @@ p { line-height: 1.6; }
   border-radius: var(--radius);
   padding: 14px;
   box-shadow: var(--shadow);
-  color: var(--text);
+  color: var(--result-text);
 }
 .cat-card__head{
   display:flex; align-items:center; justify-content:space-between; gap: 8px;
@@ -368,7 +369,7 @@ p { line-height: 1.6; }
   padding: 6px 10px; border-radius: 999px; font-size: .85rem;
   border: 1px solid var(--border);
   background: #0f1726;
-  color: var(--text);
+  color: var(--result-text);
 }
 .pill[data-color="green"]{ border-color:var(--result-green-border); background:var(--result-green-bg); }
 .pill[data-color="orange"]{ border-color:var(--result-yellow-border); background:var(--result-yellow-bg); }
@@ -384,7 +385,7 @@ p { line-height: 1.6; }
 .cat-card__link,
 .tips-list li,
 .tips-list .star {
-  color: var(--text);
+  color: var(--result-text);
 }
 .cat-card__denom { opacity: .75; }
 .cat-card__lead { opacity: .9; }
