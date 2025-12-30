@@ -39,7 +39,7 @@
       "title": "Výsledok",
       "sleep_score": "Skóre spánku",
       "copy_id": "Kopírovať ID",
-      "disclaimer": "Toto nie je lekárske hodnotenie, ale všeobecný návod, ktorý vám pomôže všimnúť si vzorce a vyskúšať praktické kroky. Spánkové návyky sa často menia postupne — experimentujte, buďte trpezliví a zistite, čo funguje najlepšie pre vás.",
+      "disclaimer": "Toto nie je lekárske hodnotenie, ale všeobecný návod, ktorý vám pomôže všimnúť si vzorce a vyskúšať praktické kroky. Spánkové návyky sa často menia postupne — skúšajte, buďte trpezliví a zistite, čo vám najlepšie vyhovuje. Niektoré lieky na predpis môžu ovplyvniť kvalitu spánku. Ak užívate lieky na srdcové, respiračné alebo náladové ťažkosti, zvážte prebratie týchto výsledkov so svojím predpisujúcim lekárom.",
       "how_to_improve": "Zachovajte a zlepšujte toto:",
       "lead": {
         "green": "Darí sa vám v oblasti ",
@@ -47,7 +47,8 @@
         "red": "Mali by ste zmeniť svoje návyky v oblasti "
       },
       "lookup_hint": "Po dokončení testu dostanete ID. Je anonymné a svoj report si môžete otvoriť kedykoľvek. Vložte svoje ID na zobrazenie reportu.",
-      "id_placeholder": "Vaše ID"
+      "id_placeholder": "Vaše ID",
+      "disclaimer2": "Problémy so spánkom sa môžu líšiť aj podľa trvania. Krátkodobé ťažkosti so spánkom často súvisia so stresom, rutinami alebo dočasnými zmenami, zatiaľ čo dlhodobejšie problémy so spánkom môžu mať úžitok zo štruktúrovanej podpory. Ak problémy so spánkom pretrvávajú v čase, zvážte vyhľadanie usmernenia u kvalifikovaného zdravotníckeho odborníka."
     },
     "articles": {
       "minutes": {
@@ -137,14 +138,38 @@
     "5": "Veľmi často"
   },
   "category": {
-    "pattern": { "name": "Vzorce a dĺžka spánku", "desc": "Dĺžka a pravidelnosť." },
-    "insomnia": { "name": "Zaspávanie a noc", "desc": "Zaspanie, prebúdzanie, skoré ráno." },
-    "quality": { "name": "Kvalita spánku", "desc": "Vnímaná kvalita a spokojnosť." },
-    "daytime": { "name": "Deň a ospalosť", "desc": "Ospalosť a denná funkčnosť." },
-    "hygiene": { "name": "Spánková hygiena a rutiny", "desc": "Návyky a načasovanie (obrazovky, kofeín)." },
-    "environment": { "name": "Prostredie na spánok", "desc": "Svetlo, hluk, teplota, posteľ." },
-    "breathing": { "name": "Chrápanie a dýchanie", "desc": "Možné príznaky spánkového apnoe." },
-    "bloodpressure": { "name": "Krvný tlak – riziko životného štýlu", "desc": "Strava, aktivita, alkohol, stres a hmotnosť." }
+    "pattern": {
+      "name": "Vzorce a dĺžka spánku",
+      "desc": "Dĺžka a pravidelnosť."
+    },
+    "insomnia": {
+      "name": "Zaspávanie a noc",
+      "desc": "Zaspanie, prebúdzanie, skoré ráno."
+    },
+    "quality": {
+      "name": "Kvalita spánku",
+      "desc": "Vnímaná kvalita a spokojnosť."
+    },
+    "daytime": {
+      "name": "Deň a ospalosť",
+      "desc": "Ospalosť a denná funkčnosť."
+    },
+    "hygiene": {
+      "name": "Spánková hygiena a rutiny",
+      "desc": "Návyky a načasovanie (obrazovky, kofeín)."
+    },
+    "environment": {
+      "name": "Prostredie na spánok",
+      "desc": "Svetlo, hluk, teplota, posteľ."
+    },
+    "breathing": {
+      "name": "Chrápanie a dýchanie",
+      "desc": "Možné príznaky spánkového apnoe."
+    },
+    "bloodpressure": {
+      "name": "Krvný tlak – riziko životného štýlu",
+      "desc": "Strava, aktivita, alkohol, stres a hmotnosť."
+    }
   },
   "q": {
     "pattern": {
@@ -194,7 +219,7 @@
       "overweight_self": "Považujem sa za človeka s nadváhou."
     }
   },
- "flags": {
+  "flags": {
     "osa_signal": "Možné príznaky spánkového apnoe – zvážte konzultáciu s lekárom.",
     "excessive_sleepiness": "Výrazná denná ospalosť – buďte mimoriadne opatrný.",
     "high_bp_risk": "Niekoľko faktorov životného štýlu poukazuje na zvýšené riziko vysokého krvného tlaku. Zvážte meranie krvného tlaku, keď budete mať príležitosť, najmä ak máte cukrovku 2. typu alebo blízkych príbuzných s kardiovaskulárnymi ochoreniami."

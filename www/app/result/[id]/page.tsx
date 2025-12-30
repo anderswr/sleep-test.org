@@ -215,11 +215,18 @@ export default function ResultPage({ params }: { params: { id: string } }) {
                 </div>
 
                 {/* Disclaimer */}
-                <p style={{ marginTop: 12, color: "var(--muted)" }}>
+                <p style={{ marginTop: 12, color: "var(--muted)", fontSize: ".9rem" }}>
                   {t(
                     dict,
                     "ui.result.disclaimer",
                     "This is not a medical evaluation, but a general guide to help you notice patterns and try practical steps."
+                  )}
+                </p>
+                <p style={{ marginTop: 12, color: "var(--muted)", fontSize: ".9rem" }}>
+                  {t(
+                    dict,
+                    "ui.result.disclaimer2",
+                    "Sleep challenges can also differ by duration. Short-term sleep difficulties are often linked to stress, routines, or temporary changes, while longer-lasting sleep problems may benefit from structured support. If sleep issues persist over time, consider seeking guidance from a qualified healthcare professional."
                   )}
                 </p>
               </div>
@@ -230,11 +237,11 @@ export default function ResultPage({ params }: { params: { id: string } }) {
                   data-color={ringColor}
                   aria-label={t(dict, "ui.result.sleep_score", "Søvn-score")}
                 >
-                  {/* Force white text in the ring */}
-                  <div className="score-ring__value" style={{ color: "#fff" }}>
+                  {/* Force light text in the ring */}
+                  <div className="score-ring__value" style={{ color: "var(--text)" }}>
                     {Number(data.sleepScore)}
                   </div>
-                  <div className="score-ring__label" style={{ color: "rgba(255,255,255,.85)" }}>
+                  <div className="score-ring__label" style={{ color: "rgba(230,234,242,.85)" }}>
                     {t(dict, "ui.result.sleep_score", "Søvn-score")}
                   </div>
                 </div>
@@ -258,23 +265,23 @@ export default function ResultPage({ params }: { params: { id: string } }) {
                     key={cat}
                     className="cat-card"
                     data-color={color}
-                    // Force white foreground for everything inside this tinted card
-                    style={{ color: "#fff" }}
+                    // Force light foreground for everything inside this tinted card
+                    style={{ color: "var(--text)" }}
                   >
                     <div className="cat-card__head">
                       <span
                         className="pill"
                         data-color={color}
-                        // ensure pill text is white too
-                        style={{ color: "#fff" }}
+                        // ensure pill text is light too
+                        style={{ color: "var(--text)" }}
                       >
                         {t(dict, `category.${cat}.name`, String(cat))}
                       </span>
                       <div style={{ display: "flex", alignItems: "baseline", gap: 8 }}>
-                        <strong className="cat-card__score" style={{ color: "#fff" }}>
+                        <strong className="cat-card__score" style={{ color: "var(--text)" }}>
                           {display}
                         </strong>
-                        <span style={{ fontSize: ".85rem", color: "rgba(255,255,255,.75)" }}>
+                        <span style={{ fontSize: ".85rem", color: "rgba(230,234,242,.75)" }}>
                           / 100
                         </span>
                       </div>
@@ -286,11 +293,11 @@ export default function ResultPage({ params }: { params: { id: string } }) {
                         display: "flex",
                         alignItems: "center",
                         gap: 8,
-                        color: "rgba(255,255,255,.9)",
+                        color: "rgba(230,234,242,.9)",
                       }}
                     >
                       <span>
-                        <strong style={{ color: "#fff" }}>{lead}</strong>{" "}
+                      <strong style={{ color: "var(--text)" }}>{lead}</strong>{" "}
                         {decapitalize(desc)}
                       </span>
                       {showArticleIcon && (
@@ -298,7 +305,7 @@ export default function ResultPage({ params }: { params: { id: string } }) {
                           href={`/articles/${articleSlug}`}
                           aria-label={t(dict, "ui.common.read", "Read")}
                           title={t(dict, "ui.common.read", "Read")}
-                          style={{ display: "inline-flex", alignItems: "center", color: "rgba(255,255,255,.85)" }}
+                          style={{ display: "inline-flex", alignItems: "center", color: "rgba(230,234,242,.85)" }}
                         >
                           <svg width="18" height="18" viewBox="0 0 24 24" aria-hidden focusable="false">
                             <path fill="currentColor" d="M14 3h7v7h-2V6.41l-9.29 9.3-1.42-1.42 9.3-9.29H14V3Zm-4 4v2H5v10h10v-5h2v7H3V7h7Z"/>
@@ -309,13 +316,13 @@ export default function ResultPage({ params }: { params: { id: string } }) {
 
                     {tipKeys.length > 0 && (
                       <>
-                        <h4 className="mb-2 mt-6" style={{ color: "#fff" }}>
+                        <h4 className="mb-2 mt-6" style={{ color: "var(--text)" }}>
                           {t(dict, "ui.result.how_to_improve", "Hvordan forbedre dette:")}
                         </h4>
                         <ul className="tips-list">
                           {tipKeys.map((key) => (
-                            <li key={`${cat}-${key}`} style={{ color: "rgba(255,255,255,.92)" }}>
-                              <span className="star" style={{ color: "rgba(255,255,255,.7)" }}>*</span>{" "}
+                            <li key={`${cat}-${key}`} style={{ color: "rgba(230,234,242,.92)" }}>
+                              <span className="star" style={{ color: "rgba(230,234,242,.7)" }}>*</span>{" "}
                               {t(dict, key, key)}
                             </li>
                           ))}
