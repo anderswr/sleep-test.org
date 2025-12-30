@@ -331,7 +331,10 @@ p { line-height: 1.6; }
 .score-hero__right{ width: 220px; display:flex; justify-content:center; }
 
 .score-ring{
- /* width: 200px; height: 200px; border-radius: 1px; */
+  /* width: 200px; 
+  height: 200px; */
+  padding: 20px;  
+  border-radius: 1px;
   border: 1px solid var(--primary-weak);
   display:flex; flex-direction:column; align-items:center; justify-content:center;
   color: var(--result-text);
@@ -340,7 +343,7 @@ p { line-height: 1.6; }
 .score-ring__label{ font-size: .9rem; color: var(--muted); margin-top: 6px; }
 
 /* Ring-farger: mørk-vennlige toner */
-.score-ring[data-color="green"]{ border-color:var(--result-green-border); background:var(--result-green-bg); }
+.score-ring[data-color="green"]{ border-color:var(--result-green-bg); background:var(--result-green-bg); }
 .score-ring[data-color="orange"]{ border-color:var(--result-yellow-border); background:var(--result-yellow-bg); }
 .score-ring[data-color="red"]{ border-color:var(--result-red-border); background:var(--result-red-bg); }
 
