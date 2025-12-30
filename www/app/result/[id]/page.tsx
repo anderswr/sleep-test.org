@@ -237,11 +237,8 @@ export default function ResultPage({ params }: { params: { id: string } }) {
                   data-color={ringColor}
                   aria-label={t(dict, "ui.result.sleep_score", "Søvn-score")}
                 >
-                  {/* Force white text in the ring */}
-                  <div className="score-ring__value" style={{ color: "#fff" }}>
-                    {Number(data.sleepScore)}
-                  </div>
-                  <div className="score-ring__label" style={{ color: "rgba(255,255,255,.85)" }}>
+                  <div className="score-ring__value">{Number(data.sleepScore)}</div>
+                  <div className="score-ring__label">
                     {t(dict, "ui.result.sleep_score", "Søvn-score")}
                   </div>
                 </div>
@@ -265,39 +262,30 @@ export default function ResultPage({ params }: { params: { id: string } }) {
                     key={cat}
                     className="cat-card"
                     data-color={color}
-                    // Force white foreground for everything inside this tinted card
-                    style={{ color: "#fff" }}
                   >
                     <div className="cat-card__head">
-                      <span
-                        className="pill"
-                        data-color={color}
-                        // ensure pill text is white too
-                        style={{ color: "#fff" }}
-                      >
+                      <span className="pill" data-color={color}>
                         {t(dict, `category.${cat}.name`, String(cat))}
                       </span>
                       <div style={{ display: "flex", alignItems: "baseline", gap: 8 }}>
-                        <strong className="cat-card__score" style={{ color: "#fff" }}>
-                          {display}
-                        </strong>
-                        <span style={{ fontSize: ".85rem", color: "rgba(255,255,255,.75)" }}>
+                        <strong className="cat-card__score">{display}</strong>
+                        <span className="cat-card__denom" style={{ fontSize: ".85rem" }}>
                           / 100
                         </span>
                       </div>
                     </div>
 
                     <p
+                      className="cat-card__lead"
                       style={{
                         marginTop: 6,
                         display: "flex",
                         alignItems: "center",
                         gap: 8,
-                        color: "rgba(255,255,255,.9)",
                       }}
                     >
                       <span>
-                        <strong style={{ color: "#fff" }}>{lead}</strong>{" "}
+                        <strong style={{ color: "inherit" }}>{lead}</strong>{" "}
                         {decapitalize(desc)}
                       </span>
                       {showArticleIcon && (
@@ -305,7 +293,8 @@ export default function ResultPage({ params }: { params: { id: string } }) {
                           href={`/articles/${articleSlug}`}
                           aria-label={t(dict, "ui.common.read", "Read")}
                           title={t(dict, "ui.common.read", "Read")}
-                          style={{ display: "inline-flex", alignItems: "center", color: "rgba(255,255,255,.85)" }}
+                          className="cat-card__link"
+                          style={{ display: "inline-flex", alignItems: "center" }}
                         >
                           <svg width="18" height="18" viewBox="0 0 24 24" aria-hidden focusable="false">
                             <path fill="currentColor" d="M14 3h7v7h-2V6.41l-9.29 9.3-1.42-1.42 9.3-9.29H14V3Zm-4 4v2H5v10h10v-5h2v7H3V7h7Z"/>
@@ -316,13 +305,13 @@ export default function ResultPage({ params }: { params: { id: string } }) {
 
                     {tipKeys.length > 0 && (
                       <>
-                        <h4 className="mb-2 mt-6" style={{ color: "#fff" }}>
+                        <h4 className="mb-2 mt-6">
                           {t(dict, "ui.result.how_to_improve", "Hvordan forbedre dette:")}
                         </h4>
                         <ul className="tips-list">
                           {tipKeys.map((key) => (
-                            <li key={`${cat}-${key}`} style={{ color: "rgba(255,255,255,.92)" }}>
-                              <span className="star" style={{ color: "rgba(255,255,255,.7)" }}>*</span>{" "}
+                            <li key={`${cat}-${key}`}>
+                              <span className="star">*</span>{" "}
                               {t(dict, key, key)}
                             </li>
                           ))}

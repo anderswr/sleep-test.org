@@ -25,6 +25,15 @@
 
   --radius: 16px;
 
+  /* Result colors */
+  --result-green-bg: #203a3c;
+  --result-green-border: #06d76f;
+  --result-yellow-bg: #383734;
+  --result-yellow-border: #edbb04;
+  --result-red-bg: #392a39;
+  --result-red-border: #f96265;
+  --result-text: #e6eaf2;
+
   /* Prose helpers */
   --prose-accent: #5dd6c6;  /* lenker i prose */
   --prose-quote-bg: #0f1726;
@@ -319,20 +328,21 @@ p { line-height: 1.6; }
   gap: 24px;
 }
 .score-hero__left{ flex: 1; }
-.score-hero__right{ width: 240px; display:flex; justify-content:center; }
+.score-hero__right{ width: 360px; display:flex; justify-content:center; }
 
 .score-ring{
-  width: 210px; height: 210px; border-radius: 999px;
-  border: 14px solid var(--primary-weak);
+  width: 318px; height: 318px; border-radius: 999px;
+  border: 1px solid var(--primary-weak);
   display:flex; flex-direction:column; align-items:center; justify-content:center;
+  color: var(--result-text);
 }
 .score-ring__value{ font-size: 42px; font-weight: 700; line-height: 1; }
 .score-ring__label{ font-size: .9rem; color: var(--muted); margin-top: 6px; }
 
 /* Ring-farger: mørk-vennlige toner */
-.score-ring[data-color="green"]{ border-color:#1d3a2e; background:#0f1f1a; }
-.score-ring[data-color="orange"]{ border-color:#4a3420; background:#1b1510; }
-.score-ring[data-color="red"]{ border-color:#4a2323; background:#1b1111; }
+.score-ring[data-color="green"]{ border-color:var(--result-green-border); background:var(--result-green-bg); }
+.score-ring[data-color="orange"]{ border-color:var(--result-yellow-border); background:var(--result-yellow-bg); }
+.score-ring[data-color="red"]{ border-color:var(--result-red-border); background:var(--result-red-bg); }
 
 .grid-cards{
   display:grid;
@@ -345,6 +355,7 @@ p { line-height: 1.6; }
   border-radius: var(--radius);
   padding: 14px;
   box-shadow: var(--shadow);
+  color: var(--result-text);
 }
 .cat-card__head{
   display:flex; align-items:center; justify-content:space-between; gap: 8px;
@@ -358,15 +369,29 @@ p { line-height: 1.6; }
   padding: 6px 10px; border-radius: 999px; font-size: .85rem;
   border: 1px solid var(--border);
   background: #0f1726;
+  color: var(--result-text);
 }
-.pill[data-color="green"]{ border-color:#1f4d3f; background:#0f1f1a; color:#7ee1bb; }
-.pill[data-color="orange"]{ border-color:#5a3a1e; background:#1b1510; color:#f5c48a; }
-.pill[data-color="red"]{ border-color:#5a2727; background:#1b1111; color:#f6a4a4; }
+.pill[data-color="green"]{ border-color:var(--result-green-border); background:var(--result-green-bg); }
+.pill[data-color="orange"]{ border-color:var(--result-yellow-border); background:var(--result-yellow-bg); }
+.pill[data-color="red"]{ border-color:var(--result-red-border); background:var(--result-red-bg); }
 
 /* Card bakgrunner (svak tint) */
-.cat-card[data-color="green"]{ border-color:#1f4d3f; background: #0f1f1a; }
-.cat-card[data-color="orange"]{ border-color:#5a3a1e; background: #1b1510; }
-.cat-card[data-color="red"]{ border-color:#5a2727; background: #1b1111; }
+.cat-card[data-color="green"]{ border-color:var(--result-green-border); background: var(--result-green-bg); }
+.cat-card[data-color="orange"]{ border-color:var(--result-yellow-border); background: var(--result-yellow-bg); }
+.cat-card[data-color="red"]{ border-color:var(--result-red-border); background: var(--result-red-bg); }
+
+.cat-card__denom,
+.cat-card__lead,
+.cat-card__link,
+.tips-list li,
+.tips-list .star {
+  color: var(--result-text);
+}
+.cat-card__denom { opacity: .75; }
+.cat-card__lead { opacity: .9; }
+.cat-card__link { opacity: .85; }
+.tips-list li { opacity: .92; }
+.tips-list .star { opacity: .7; }
 
 /* ===================================================================
    PROSE (markdown-artikler)
