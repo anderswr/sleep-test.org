@@ -215,14 +215,14 @@ export default function ResultPage({ params }: { params: { id: string } }) {
                 </div>
 
                 {/* Disclaimer */}
-                <p style={{ marginTop: 12, color: "var(--muted)", fontSize: ".9rem" }}>
+                <p style={{ marginTop: 12, color: "var(--muted)", fontSize: ".8rem" }}>
                   {t(
                     dict,
                     "ui.result.disclaimer",
                     "This is not a medical evaluation, but a general guide to help you notice patterns and try practical steps."
                   )}
                 </p>
-                <p style={{ marginTop: 12, color: "var(--muted)", fontSize: ".9rem" }}>
+                <p style={{ marginTop: 12, color: "var(--muted)", fontSize: ".8rem" }}>
                   {t(
                     dict,
                     "ui.result.disclaimer2",
@@ -448,19 +448,6 @@ export default function ResultPage({ params }: { params: { id: string } }) {
           font-size: 0.875rem;
           color: var(--muted, #6b7280);
         }
-        .score-ring {
-          position: relative;
-          width: 148px; height: 148px;
-          border-radius: 999px;
-          display: grid; place-items: center;
-          background: var(--ring-bg, #111);
-        }
-        .score-ring[data-color="green"] { background: linear-gradient(135deg,#16a34a,#22c55e); }
-        .score-ring[data-color="orange"] { background: linear-gradient(135deg,#f59e0b,#f97316); }
-        .score-ring[data-color="red"] { background: linear-gradient(135deg,#ef4444,#dc2626); }
-        .score-ring__value { font-size: 44px; font-weight: 700; }
-        .score-ring__label { font-size: 12px; letter-spacing: .08em; text-transform: uppercase; }
-
         /* (… eksisterende styles beholdes overalt ellers) */
       `}</style>
     </div>
