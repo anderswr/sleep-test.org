@@ -297,7 +297,7 @@ export default function ResultPage({ params }: { params: { id: string } }) {
                       }}
                     >
                       <span>
-                      <strong style={{ color: "var(--text)" }}>{lead}</strong>{" "}
+                      <strong style={{ color: "inherit" }}>{lead}</strong>{" "}
                         {decapitalize(desc)}
                       </span>
                       {showArticleIcon && (
