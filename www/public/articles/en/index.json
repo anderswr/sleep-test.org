@@ -6,5 +6,7 @@
   { "slug": "daytime",   "title": "Daytime & sleepiness",     "summary": "Light, movement and micro-breaks: stay alert and function better." },
   { "slug": "hygiene",   "title": "Sleep hygiene & routines", "summary": "Screens, caffeine, alcohol and wind-down: habits that truly help." },
   { "slug": "environment","title": "Sleep environment",       "summary": "Light, noise, temperature and bed: build a room that supports sleep." },
-  { "slug": "breathing", "title": "Snoring & breathing",      "summary": "When snoring is a warning sign and what to do next." }
+  { "slug": "breathing", "title": "Snoring & breathing",      "summary": "When snoring is a warning sign and what to do next." },
+  { "slug": "mental-health-and-sleep", "title": "Stress, racing thoughts and sleep", "summary": "How stress and a busy mind keep you awake — and ways to calm down.", "category": "Mental calm & stress" },
+  { "slug": "circadian-rhythm-and-shift-work", "title": "Circadian rhythm, shift work and sleep", "summary": "When your body clock clashes with life — tips for evening types and shift work.", "category": "Circadian rhythm & shift work" }
 ]
