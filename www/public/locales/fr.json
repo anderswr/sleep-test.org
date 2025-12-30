@@ -48,7 +48,8 @@
       },
       "lookup_hint": "Lorsque vous terminez un test, vous recevez un ID. Il est anonyme et vous pouvez ouvrir votre rapport à tout moment. Collez votre ID pour voir le rapport.",
       "id_placeholder": "Votre ID",
-      "disclaimer2": "Les difficultés de sommeil peuvent aussi varier selon leur durée. Les troubles du sommeil à court terme sont souvent liés au stress, aux routines ou à des changements temporaires, tandis que les problèmes de sommeil plus durables peuvent bénéficier d’un accompagnement structuré. Si les problèmes de sommeil persistent dans le temps, envisagez de demander conseil à un professionnel de santé qualifié."
+      "disclaimer2": "Les difficultés de sommeil peuvent aussi varier selon leur durée. Les troubles du sommeil à court terme sont souvent liés au stress, aux routines ou à des changements temporaires, tandis que les problèmes de sommeil plus durables peuvent bénéficier d’un accompagnement structuré. Si les problèmes de sommeil persistent dans le temps, envisagez de demander conseil à un professionnel de santé qualifié.",
+      "not_answered": "Not answered"
     },
     "articles": {
       "minutes": {
@@ -95,6 +96,19 @@
           "teaser": "Quand le ronflement est inoffensif, quand il peut s'agir d'apnée du sommeil, et que faire ensuite."
         }
       }
+    },
+    "domain": {
+      "mental": {
+        "title": "Mental calm & stress"
+      },
+      "chronotype": {
+        "title": "Circadian rhythm & shift work"
+      }
+    },
+    "severity": {
+      "green": "Green",
+      "yellow": "Yellow",
+      "red": "Red"
     }
   },
   "about": {
@@ -169,6 +183,14 @@
     "bloodpressure": {
       "name": "Pression artérielle – risque lié au mode de vie",
       "desc": "Alimentation, activité, alcool, stress et poids."
+    },
+    "mental": {
+      "name": "Mental calm & stress",
+      "desc": "Stress, worry, and arousal at bedtime."
+    },
+    "chronotype": {
+      "name": "Circadian rhythm & shift work",
+      "desc": "Evening preference and sleep timing mismatch."
     }
   },
   "q": {
@@ -217,6 +239,17 @@
       "alcohol_often": "Je bois de l'alcool plus souvent ou en plus grandes quantités que recommandé.",
       "stress_high": "Je subis beaucoup de stress dans la vie quotidienne.",
       "overweight_self": "Je me considère en surpoids."
+    },
+    "mental": {
+      "racing_mind": "My mind feels busy or racing when I try to fall asleep.",
+      "worry_at_bed": "Worrying or overthinking keeps me from falling asleep.",
+      "stress_affects_sleep": "Stress in my daily life clearly affects my sleep.",
+      "hyperarousal": "I feel tense, restless, or 'on edge' when trying to sleep."
+    },
+    "chrono": {
+      "evening_type": "I naturally feel more alert in the evening than in the morning.",
+      "shift_work": "I frequently work night shifts or rotating shifts.",
+      "sleep_window_mismatch": "I often have to sleep at times that don’t suit my body."
     }
   },
   "flags": {
@@ -268,6 +301,22 @@
       "side_sleep": "Essayez de dormir sur le côté (utilisez un oreiller derrière votre dos) – peut réduire le ronflement/apnées pour certains.",
       "reduce_evening_alcohol": "Évitez l'alcool le soir – il peut aggraver le ronflement/problèmes respiratoires.",
       "consider_gp_check": "Soupçon d'apnée du sommeil (ronflement fort, pauses observées, somnolence diurne) ? Consultez votre médecin."
+    },
+    "mental": {
+      "wind_down_45": "Wind down for 45–60 minutes before bed.",
+      "write_worries": "Write down worries or plan tomorrow 10 minutes earlier in the evening.",
+      "calm_breath": "Calm breathing with longer exhales for 2–5 minutes.",
+      "stimulus_control": "Stimulus control: get out of bed if you are awake for long.",
+      "maintain": "Maintain: keep your wind-down and stable routines."
+    },
+    "chrono": {
+      "light_management": "Light management: bright light at the “start of day”, dimmer before sleep.",
+      "anchoring": "Anchoring: keep a consistent wake time on days off as much as possible.",
+      "short_naps": "Short naps (15–25 min) early in the wake period.",
+      "caffeine_cutoff": "Adjust caffeine cut-off to your shift (avoid late in the wake period).",
+      "shift_gradual": "Shift bedtime/wake time gradually by 15 min every 2–3 days.",
+      "morning_light": "Get morning light for 10–30 minutes.",
+      "maintain": "Maintain a stable sleep window when possible."
     }
   }
 }

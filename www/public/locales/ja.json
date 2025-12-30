@@ -48,7 +48,8 @@
       },
       "lookup_hint": "テストを完了するとIDが発行されます。これは匿名で、いつでもレポートを開けます。IDを貼り付けてレポートを表示してください。",
       "id_placeholder": "あなたのID",
-      "disclaimer2": "睡眠の課題は持続期間によっても異なります。短期的な睡眠の問題はストレスや生活習慣、一時的な変化に関連していることが多く、より長く続く睡眠の問題は構造的な支援が役立つ場合があります。睡眠の問題が長期にわたって続く場合は、資格のある医療専門家に相談することを検討してください。"
+      "disclaimer2": "睡眠の課題は持続期間によっても異なります。短期的な睡眠の問題はストレスや生活習慣、一時的な変化に関連していることが多く、より長く続く睡眠の問題は構造的な支援が役立つ場合があります。睡眠の問題が長期にわたって続く場合は、資格のある医療専門家に相談することを検討してください。",
+      "not_answered": "Not answered"
     },
     "articles": {
       "minutes": {
@@ -95,6 +96,19 @@
           "teaser": "無害ないびきと、睡眠時無呼吸の可能性がある場合の違い、次に取るべき行動。"
         }
       }
+    },
+    "domain": {
+      "mental": {
+        "title": "Mental calm & stress"
+      },
+      "chronotype": {
+        "title": "Circadian rhythm & shift work"
+      }
+    },
+    "severity": {
+      "green": "Green",
+      "yellow": "Yellow",
+      "red": "Red"
     }
   },
   "about": {
@@ -169,6 +183,14 @@
     "bloodpressure": {
       "name": "血圧 – 生活習慣リスク",
       "desc": "食事、活動、アルコール、ストレス、体重。"
+    },
+    "mental": {
+      "name": "Mental calm & stress",
+      "desc": "Stress, worry, and arousal at bedtime."
+    },
+    "chronotype": {
+      "name": "Circadian rhythm & shift work",
+      "desc": "Evening preference and sleep timing mismatch."
     }
   },
   "q": {
@@ -217,6 +239,17 @@
       "alcohol_often": "私は推奨より頻繁または大量にアルコールを飲みます。",
       "stress_high": "私は日常生活で多くのストレスを感じます。",
       "overweight_self": "私は自分を太りすぎだと考えています。"
+    },
+    "mental": {
+      "racing_mind": "My mind feels busy or racing when I try to fall asleep.",
+      "worry_at_bed": "Worrying or overthinking keeps me from falling asleep.",
+      "stress_affects_sleep": "Stress in my daily life clearly affects my sleep.",
+      "hyperarousal": "I feel tense, restless, or 'on edge' when trying to sleep."
+    },
+    "chrono": {
+      "evening_type": "I naturally feel more alert in the evening than in the morning.",
+      "shift_work": "I frequently work night shifts or rotating shifts.",
+      "sleep_window_mismatch": "I often have to sleep at times that don’t suit my body."
     }
   },
   "flags": {
@@ -268,6 +301,22 @@
       "side_sleep": "横向きで寝る（背中に枕を置く） — いびきや無呼吸が減ることがあります。",
       "reduce_evening_alcohol": "夜のアルコールは避けましょう — いびきや呼吸問題を悪化させる可能性があります。",
       "consider_gp_check": "睡眠時無呼吸の疑いがありますか（大きないびき、無呼吸、日中の強い眠気）？ 医師に相談してください。"
+    },
+    "mental": {
+      "wind_down_45": "Wind down for 45–60 minutes before bed.",
+      "write_worries": "Write down worries or plan tomorrow 10 minutes earlier in the evening.",
+      "calm_breath": "Calm breathing with longer exhales for 2–5 minutes.",
+      "stimulus_control": "Stimulus control: get out of bed if you are awake for long.",
+      "maintain": "Maintain: keep your wind-down and stable routines."
+    },
+    "chrono": {
+      "light_management": "Light management: bright light at the “start of day”, dimmer before sleep.",
+      "anchoring": "Anchoring: keep a consistent wake time on days off as much as possible.",
+      "short_naps": "Short naps (15–25 min) early in the wake period.",
+      "caffeine_cutoff": "Adjust caffeine cut-off to your shift (avoid late in the wake period).",
+      "shift_gradual": "Shift bedtime/wake time gradually by 15 min every 2–3 days.",
+      "morning_light": "Get morning light for 10–30 minutes.",
+      "maintain": "Maintain a stable sleep window when possible."
     }
   }
 }

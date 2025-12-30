@@ -48,7 +48,8 @@
       },
       "lookup_hint": "Wenn Sie einen Test abschließen, erhalten Sie eine ID. Sie ist anonym, und Sie können Ihren Bericht jederzeit öffnen. Fügen Sie Ihre ID ein, um den Bericht anzuzeigen.",
       "id_placeholder": "Ihre ID",
-      "disclaimer2": "Schlafprobleme können sich auch in ihrer Dauer unterscheiden. Kurzfristige Schlafschwierigkeiten hängen oft mit Stress, Routinen oder vorübergehenden Veränderungen zusammen, während länger anhaltende Schlafprobleme von einer strukturierten Unterstützung profitieren können. Wenn Schlafprobleme über längere Zeit bestehen, ziehen Sie in Betracht, sich von einer qualifizierten medizinischen Fachkraft beraten zu lassen."
+      "disclaimer2": "Schlafprobleme können sich auch in ihrer Dauer unterscheiden. Kurzfristige Schlafschwierigkeiten hängen oft mit Stress, Routinen oder vorübergehenden Veränderungen zusammen, während länger anhaltende Schlafprobleme von einer strukturierten Unterstützung profitieren können. Wenn Schlafprobleme über längere Zeit bestehen, ziehen Sie in Betracht, sich von einer qualifizierten medizinischen Fachkraft beraten zu lassen.",
+      "not_answered": "Not answered"
     },
     "articles": {
       "minutes": {
@@ -95,6 +96,19 @@
           "teaser": "Wann Schnarchen harmlos ist, wann es Schlafapnoe sein könnte und was als Nächstes zu tun ist."
         }
       }
+    },
+    "domain": {
+      "mental": {
+        "title": "Mental calm & stress"
+      },
+      "chronotype": {
+        "title": "Circadian rhythm & shift work"
+      }
+    },
+    "severity": {
+      "green": "Green",
+      "yellow": "Yellow",
+      "red": "Red"
     }
   },
   "about": {
@@ -169,6 +183,14 @@
     "bloodpressure": {
       "name": "Blutdruck – Lebensstilrisiko",
       "desc": "Ernährung, Aktivität, Alkohol, Stress und Gewicht."
+    },
+    "mental": {
+      "name": "Mental calm & stress",
+      "desc": "Stress, worry, and arousal at bedtime."
+    },
+    "chronotype": {
+      "name": "Circadian rhythm & shift work",
+      "desc": "Evening preference and sleep timing mismatch."
     }
   },
   "q": {
@@ -217,6 +239,17 @@
       "alcohol_often": "Ich trinke häufiger oder in größeren Mengen Alkohol als empfohlen.",
       "stress_high": "Ich habe viel Stress im Alltag.",
       "overweight_self": "Ich halte mich für übergewichtig."
+    },
+    "mental": {
+      "racing_mind": "My mind feels busy or racing when I try to fall asleep.",
+      "worry_at_bed": "Worrying or overthinking keeps me from falling asleep.",
+      "stress_affects_sleep": "Stress in my daily life clearly affects my sleep.",
+      "hyperarousal": "I feel tense, restless, or 'on edge' when trying to sleep."
+    },
+    "chrono": {
+      "evening_type": "I naturally feel more alert in the evening than in the morning.",
+      "shift_work": "I frequently work night shifts or rotating shifts.",
+      "sleep_window_mismatch": "I often have to sleep at times that don’t suit my body."
     }
   },
   "flags": {
@@ -268,6 +301,22 @@
       "side_sleep": "Versuchen Sie, auf der Seite zu schlafen (verwenden Sie ein Kissen hinter dem Rücken) – kann bei manchen Schnarchen/Apnoen reduzieren.",
       "reduce_evening_alcohol": "Vermeiden Sie Alkohol am Abend – er kann Schnarchen/Atmungsprobleme verschlimmern.",
       "consider_gp_check": "Vermutung auf Schlafapnoe (lautes Schnarchen, beobachtete Pausen, Tagesschläfrigkeit)? Sprechen Sie mit Ihrem Arzt."
+    },
+    "mental": {
+      "wind_down_45": "Wind down for 45–60 minutes before bed.",
+      "write_worries": "Write down worries or plan tomorrow 10 minutes earlier in the evening.",
+      "calm_breath": "Calm breathing with longer exhales for 2–5 minutes.",
+      "stimulus_control": "Stimulus control: get out of bed if you are awake for long.",
+      "maintain": "Maintain: keep your wind-down and stable routines."
+    },
+    "chrono": {
+      "light_management": "Light management: bright light at the “start of day”, dimmer before sleep.",
+      "anchoring": "Anchoring: keep a consistent wake time on days off as much as possible.",
+      "short_naps": "Short naps (15–25 min) early in the wake period.",
+      "caffeine_cutoff": "Adjust caffeine cut-off to your shift (avoid late in the wake period).",
+      "shift_gradual": "Shift bedtime/wake time gradually by 15 min every 2–3 days.",
+      "morning_light": "Get morning light for 10–30 minutes.",
+      "maintain": "Maintain a stable sleep window when possible."
     }
   }
 }

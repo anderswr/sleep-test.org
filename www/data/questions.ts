@@ -56,5 +56,16 @@ export const QUESTION_BANK: Question[] = [
   { id: "q27", kind: "likert", category: CategoryId.BloodPressure, textKey: "q.bloodpressure.activity_low" },
   { id: "q28", kind: "likert", category: CategoryId.BloodPressure, textKey: "q.bloodpressure.alcohol_often" },
   { id: "q29", kind: "likert", category: CategoryId.BloodPressure, textKey: "q.bloodpressure.stress_high" },
-  { id: "q30", kind: "likert", category: CategoryId.BloodPressure, textKey: "q.bloodpressure.overweight_self" }
+  { id: "q30", kind: "likert", category: CategoryId.BloodPressure, textKey: "q.bloodpressure.overweight_self" },
+
+  // 9) Mental ro & stress (Mental)
+  { id: "q31", kind: "likert", category: CategoryId.Mental, textKey: "q.mental.racing_mind" },
+  { id: "q32", kind: "likert", category: CategoryId.Mental, textKey: "q.mental.worry_at_bed" },
+  { id: "q33", kind: "likert", category: CategoryId.Mental, textKey: "q.mental.stress_affects_sleep" },
+  { id: "q34", kind: "likert", category: CategoryId.Mental, textKey: "q.mental.hyperarousal" },
+
+  // 10) Døgnrytme & skift (Chronotype)
+  { id: "q35", kind: "likert", category: CategoryId.Chronotype, textKey: "q.chrono.evening_type" },
+  { id: "q36", kind: "likert", category: CategoryId.Chronotype, textKey: "q.chrono.shift_work" },
+  { id: "q37", kind: "likert", category: CategoryId.Chronotype, textKey: "q.chrono.sleep_window_mismatch" }
 ];

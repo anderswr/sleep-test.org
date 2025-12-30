@@ -1,6 +1,6 @@
 // /lib/types.ts
 
-export const BANK_VERSION = "1.2.0" as const;
+export const BANK_VERSION = "1.3.0" as const;
 
 export enum CategoryId {
   Pattern = "pattern",
@@ -11,6 +11,8 @@ export enum CategoryId {
   Environment = "environment",
   Breathing = "breathing",
   BloodPressure = "bloodpressure",
+  Mental = "mental",
+  Chronotype = "chronotype",
 }
 
 export const ALL_CATEGORIES: CategoryId[] = [
@@ -22,6 +24,8 @@ export const ALL_CATEGORIES: CategoryId[] = [
   CategoryId.Environment,
   CategoryId.Breathing,
   CategoryId.BloodPressure,
+  CategoryId.Mental,
+  CategoryId.Chronotype,
 ];
 
 export type LikertValue = 1 | 2 | 3 | 4 | 5;

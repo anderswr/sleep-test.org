@@ -8,6 +8,7 @@ import { useI18n } from "@/app/providers/I18nProvider";
 import { t } from "@/lib/i18n";
 import { bucketColor } from "@/lib/scoring";
 import { CategoryId } from "@/lib/types";
+import { buildCategoryEntries } from "@/lib/result";
 
 type ResultDoc = {
   id: string;
@@ -69,6 +70,19 @@ function pickTipKeys(cat: CategoryId, color: "green" | "orange" | "red"): string
     if (color === "orange") return ["tips.breathing.side_sleep", "tips.breathing.reduce_evening_alcohol"];
     return ["tips.breathing.side_sleep", "tips.breathing.reduce_evening_alcohol", "tips.breathing.consider_gp_check"];
   }
+  if (cat === CategoryId.Mental) {
+    if (color === "green") return ["tips.mental.maintain"];
+    return [
+      "tips.mental.wind_down_45",
+      "tips.mental.write_worries",
+      "tips.mental.calm_breath",
+      "tips.mental.stimulus_control",
+    ];
+  }
+  if (cat === CategoryId.Chronotype) {
+    if (color === "green") return ["tips.chrono.maintain", "tips.chrono.morning_light"];
+    return ["tips.chrono.shift_gradual", "tips.chrono.morning_light"];
+  }
   return [];
 }
 
@@ -110,13 +124,7 @@ export default function ResultPage({ params }: { params: { id: string } }) {
     })();
   }, [params.id]);
 
-  const entries = useMemo(
-    () =>
-      Object.entries((data?.categoryScores || {}) as Record<string, number>) as Array<
-        [CategoryId, number]
-      >,
-    [data]
-  );
+  const entries = useMemo(() => buildCategoryEntries(data?.categoryScores ?? null), [data]);
 
   if (notFound) {
     return (
@@ -247,13 +255,27 @@ export default function ResultPage({ params }: { params: { id: string } }) {
 
             {/* Kategorier */}
             <section className="grid-cards mt-6">
-              {entries.map(([cat, rawVal]) => {
-                const raw = Number(rawVal);
-                const display = 100 - raw;
-                const color = bucketColor(raw).replace("yellow", "orange") as "green" | "orange" | "red";
+              {entries.map(({ id: cat, raw, display, severity, hasAnswer }) => {
+                const color =
+                  typeof raw === "number"
+                    ? (bucketColor(raw).replace("yellow", "orange") as "green" | "orange" | "red")
+                    : "orange";
                 const desc = t(dict, `category.${cat}.desc`, "");
                 const lead = t(dict, `ui.result.lead.${color}`, "");
-                const tipKeys = pickTipKeys(cat, color).filter((k) => t(dict, k, "") !== "");
+                const title =
+                  cat === CategoryId.Mental
+                    ? t(dict, "ui.domain.mental.title", "")
+                    : cat === CategoryId.Chronotype
+                      ? t(dict, "ui.domain.chronotype.title", "")
+                      : t(dict, `category.${cat}.name`, "");
+                const severityLabel = t(dict, `ui.severity.${severity}`, "");
+                const severityColor = severity === "yellow" ? "orange" : severity;
+                const fallbackTips = pickTipKeys(cat, color as "green" | "orange" | "red");
+                const tipKeys =
+                  data?.suggestedTips?.[cat]?.length
+                    ? data.suggestedTips[cat]
+                    : fallbackTips;
+                const filteredTipKeys = tipKeys.filter((k) => t(dict, k, "") !== "");
                 const articleSlug = ARTICLE_SLUG_BY_CAT[cat];
                 const showArticleIcon = !!articleSlug;
 
@@ -264,9 +286,14 @@ export default function ResultPage({ params }: { params: { id: string } }) {
                     data-color={color}
                   >
                     <div className="cat-card__head">
-                      <span className="pill" data-color={color}>
-                        {t(dict, `category.${cat}.name`, String(cat))}
-                      </span>
+                      <div style={{ display: "flex", alignItems: "center", gap: 8, flexWrap: "wrap" }}>
+                        <span className="pill" data-color={color}>
+                          {title}
+                        </span>
+                        <span className="pill pill--tight" data-color={severityColor}>
+                          {severityLabel}
+                        </span>
+                      </div>
                       <div style={{ display: "flex", alignItems: "baseline", gap: 8 }}>
                         <strong className="cat-card__score">{display}</strong>
                         <span className="cat-card__denom" style={{ fontSize: ".85rem" }}>
@@ -275,41 +302,47 @@ export default function ResultPage({ params }: { params: { id: string } }) {
                       </div>
                     </div>
 
-                    <p
-                      className="cat-card__lead"
-                      style={{
-                        marginTop: 6,
-                        display: "flex",
-                        alignItems: "center",
-                        gap: 8,
-                      }}
-                    >
-                      <span>
-                        <strong style={{ color: "inherit" }}>{lead}</strong>{" "}
-                        {decapitalize(desc)}
-                      </span>
-                      {showArticleIcon && (
-                        <a
-                          href={`/articles/${articleSlug}`}
-                          aria-label={t(dict, "ui.common.read", "Read")}
-                          title={t(dict, "ui.common.read", "Read")}
-                          className="cat-card__link"
-                          style={{ display: "inline-flex", alignItems: "center" }}
-                        >
-                          <svg width="18" height="18" viewBox="0 0 24 24" aria-hidden focusable="false">
-                            <path fill="currentColor" d="M14 3h7v7h-2V6.41l-9.29 9.3-1.42-1.42 9.3-9.29H14V3Zm-4 4v2H5v10h10v-5h2v7H3V7h7Z"/>
-                          </svg>
-                        </a>
-                      )}
-                    </p>
+                    {hasAnswer ? (
+                      <p
+                        className="cat-card__lead"
+                        style={{
+                          marginTop: 6,
+                          display: "flex",
+                          alignItems: "center",
+                          gap: 8,
+                        }}
+                      >
+                        <span>
+                          <strong style={{ color: "inherit" }}>{lead}</strong>{" "}
+                          {decapitalize(desc)}
+                        </span>
+                        {showArticleIcon && (
+                          <a
+                            href={`/articles/${articleSlug}`}
+                            aria-label={t(dict, "ui.common.read", "Read")}
+                            title={t(dict, "ui.common.read", "Read")}
+                            className="cat-card__link"
+                            style={{ display: "inline-flex", alignItems: "center" }}
+                          >
+                            <svg width="18" height="18" viewBox="0 0 24 24" aria-hidden focusable="false">
+                              <path fill="currentColor" d="M14 3h7v7h-2V6.41l-9.29 9.3-1.42-1.42 9.3-9.29H14V3Zm-4 4v2H5v10h10v-5h2v7H3V7h7Z"/>
+                            </svg>
+                          </a>
+                        )}
+                      </p>
+                    ) : (
+                      <p className="cat-card__lead" style={{ marginTop: 6 }}>
+                        {t(dict, "ui.result.not_answered", "")}
+                      </p>
+                    )}
 
-                    {tipKeys.length > 0 && (
+                    {hasAnswer && filteredTipKeys.length > 0 && (
                       <>
                         <h4 className="mb-2 mt-6">
                           {t(dict, "ui.result.how_to_improve", "Hvordan forbedre dette:")}
                         </h4>
                         <ul className="tips-list">
-                          {tipKeys.map((key) => (
+                          {filteredTipKeys.map((key) => (
                             <li key={`${cat}-${key}`}>
                               <span className="star">*</span>{" "}
                               {t(dict, key, key)}

@@ -374,6 +374,10 @@ p { line-height: 1.6; }
   background: #0f1726;
   color: var(--result-text);
 }
+.pill--tight{
+  padding: 4px 8px;
+  font-size: .78rem;
+}
 .pill[data-color="green"]{ border-color:var(--result-green-border); background:var(--result-green-bg); }
 .pill[data-color="orange"]{ border-color:var(--result-yellow-border); background:var(--result-yellow-bg); }
 .pill[data-color="red"]{ border-color:var(--result-red-border); background:var(--result-red-bg); }

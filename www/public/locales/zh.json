@@ -48,7 +48,8 @@
       },
       "lookup_hint": "完成测试后，你会收到一个 ID。它是匿名的，你可以随时打开报告。输入你的 ID 即可查看报告。",
       "id_placeholder": "你的 ID",
-      "disclaimer2": "睡眠问题也可能因持续时间而异。短期的睡眠困难通常与压力、作息或暂时性的变化有关，而持续时间较长的睡眠问题可能需要更有结构的支持。如果睡眠问题长期存在，建议寻求合格的医疗专业人士的指导。"
+      "disclaimer2": "睡眠问题也可能因持续时间而异。短期的睡眠困难通常与压力、作息或暂时性的变化有关，而持续时间较长的睡眠问题可能需要更有结构的支持。如果睡眠问题长期存在，建议寻求合格的医疗专业人士的指导。",
+      "not_answered": "Not answered"
     },
     "articles": {
       "minutes": {
@@ -95,6 +96,19 @@
           "teaser": "什么时候打鼾无害，什么时候可能是睡眠呼吸暂停，以及下一步该做什么。"
         }
       }
+    },
+    "domain": {
+      "mental": {
+        "title": "Mental calm & stress"
+      },
+      "chronotype": {
+        "title": "Circadian rhythm & shift work"
+      }
+    },
+    "severity": {
+      "green": "Green",
+      "yellow": "Yellow",
+      "red": "Red"
     }
   },
   "about": {
@@ -169,6 +183,14 @@
     "bloodpressure": {
       "name": "血压 – 生活方式风险",
       "desc": "饮食、活动、酒精、压力和体重。"
+    },
+    "mental": {
+      "name": "Mental calm & stress",
+      "desc": "Stress, worry, and arousal at bedtime."
+    },
+    "chronotype": {
+      "name": "Circadian rhythm & shift work",
+      "desc": "Evening preference and sleep timing mismatch."
     }
   },
   "q": {
@@ -217,6 +239,17 @@
       "alcohol_often": "我饮酒的频率或量超过推荐。",
       "stress_high": "我在日常生活中感到压力很大。",
       "overweight_self": "我认为自己超重。"
+    },
+    "mental": {
+      "racing_mind": "My mind feels busy or racing when I try to fall asleep.",
+      "worry_at_bed": "Worrying or overthinking keeps me from falling asleep.",
+      "stress_affects_sleep": "Stress in my daily life clearly affects my sleep.",
+      "hyperarousal": "I feel tense, restless, or 'on edge' when trying to sleep."
+    },
+    "chrono": {
+      "evening_type": "I naturally feel more alert in the evening than in the morning.",
+      "shift_work": "I frequently work night shifts or rotating shifts.",
+      "sleep_window_mismatch": "I often have to sleep at times that don’t suit my body."
     }
   },
   "flags": {
@@ -268,6 +301,22 @@
       "side_sleep": "尝试侧睡（背后放一个枕头）——有些人这样可以减少打鼾/呼吸暂停。",
       "reduce_evening_alcohol": "避免晚上饮酒——它会加重打鼾/呼吸问题。",
       "consider_gp_check": "怀疑睡眠呼吸暂停（大声打鼾、呼吸暂停、日间困倦）？请咨询医生。"
+    },
+    "mental": {
+      "wind_down_45": "Wind down for 45–60 minutes before bed.",
+      "write_worries": "Write down worries or plan tomorrow 10 minutes earlier in the evening.",
+      "calm_breath": "Calm breathing with longer exhales for 2–5 minutes.",
+      "stimulus_control": "Stimulus control: get out of bed if you are awake for long.",
+      "maintain": "Maintain: keep your wind-down and stable routines."
+    },
+    "chrono": {
+      "light_management": "Light management: bright light at the “start of day”, dimmer before sleep.",
+      "anchoring": "Anchoring: keep a consistent wake time on days off as much as possible.",
+      "short_naps": "Short naps (15–25 min) early in the wake period.",
+      "caffeine_cutoff": "Adjust caffeine cut-off to your shift (avoid late in the wake period).",
+      "shift_gradual": "Shift bedtime/wake time gradually by 15 min every 2–3 days.",
+      "morning_light": "Get morning light for 10–30 minutes.",
+      "maintain": "Maintain a stable sleep window when possible."
     }
   }
 }

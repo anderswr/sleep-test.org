@@ -48,7 +48,8 @@
       },
       "lookup_hint": "Когда вы завершаете тест, вы получаете ID. Он анонимный, и вы можете открыть свой отчет в любое время. Вставьте свой ID, чтобы просмотреть отчет.",
       "id_placeholder": "Ваш ID",
-      "disclaimer2": "Проблемы со сном также могут различаться по продолжительности. Краткосрочные трудности со сном часто связаны со стрессом, режимом или временными изменениями, тогда как более длительные проблемы со сном могут выиграть от структурированной поддержки. Если проблемы со сном сохраняются со временем, подумайте о том, чтобы обратиться за советом к квалифицированному медицинскому специалисту."
+      "disclaimer2": "Проблемы со сном также могут различаться по продолжительности. Краткосрочные трудности со сном часто связаны со стрессом, режимом или временными изменениями, тогда как более длительные проблемы со сном могут выиграть от структурированной поддержки. Если проблемы со сном сохраняются со временем, подумайте о том, чтобы обратиться за советом к квалифицированному медицинскому специалисту.",
+      "not_answered": "Not answered"
     },
     "articles": {
       "minutes": {
@@ -95,6 +96,19 @@
           "teaser": "Когда храп безвреден, когда это может быть апноэ сна и что делать дальше."
         }
       }
+    },
+    "domain": {
+      "mental": {
+        "title": "Mental calm & stress"
+      },
+      "chronotype": {
+        "title": "Circadian rhythm & shift work"
+      }
+    },
+    "severity": {
+      "green": "Green",
+      "yellow": "Yellow",
+      "red": "Red"
     }
   },
   "about": {
@@ -169,6 +183,14 @@
     "bloodpressure": {
       "name": "Давление – факторы образа жизни",
       "desc": "Диета, активность, алкоголь, стресс и вес."
+    },
+    "mental": {
+      "name": "Mental calm & stress",
+      "desc": "Stress, worry, and arousal at bedtime."
+    },
+    "chronotype": {
+      "name": "Circadian rhythm & shift work",
+      "desc": "Evening preference and sleep timing mismatch."
     }
   },
   "q": {
@@ -217,6 +239,17 @@
       "alcohol_often": "Я пью алкоголь чаще или в больших количествах, чем рекомендовано.",
       "stress_high": "Я испытываю много стресса в повседневной жизни.",
       "overweight_self": "Я считаю себя с лишним весом."
+    },
+    "mental": {
+      "racing_mind": "My mind feels busy or racing when I try to fall asleep.",
+      "worry_at_bed": "Worrying or overthinking keeps me from falling asleep.",
+      "stress_affects_sleep": "Stress in my daily life clearly affects my sleep.",
+      "hyperarousal": "I feel tense, restless, or 'on edge' when trying to sleep."
+    },
+    "chrono": {
+      "evening_type": "I naturally feel more alert in the evening than in the morning.",
+      "shift_work": "I frequently work night shifts or rotating shifts.",
+      "sleep_window_mismatch": "I often have to sleep at times that don’t suit my body."
     }
   },
   "flags": {
@@ -268,6 +301,22 @@
       "side_sleep": "Попробуйте спать на боку (с подушкой за спиной) – это может снизить храп/апноэ у некоторых.",
       "reduce_evening_alcohol": "Избегайте алкоголя вечером – он может усилить храп/дыхательные проблемы.",
       "consider_gp_check": "Подозреваете апноэ сна (громкий храп, наблюдаемые паузы, дневная сонливость)? Обратитесь к врачу."
+    },
+    "mental": {
+      "wind_down_45": "Wind down for 45–60 minutes before bed.",
+      "write_worries": "Write down worries or plan tomorrow 10 minutes earlier in the evening.",
+      "calm_breath": "Calm breathing with longer exhales for 2–5 minutes.",
+      "stimulus_control": "Stimulus control: get out of bed if you are awake for long.",
+      "maintain": "Maintain: keep your wind-down and stable routines."
+    },
+    "chrono": {
+      "light_management": "Light management: bright light at the “start of day”, dimmer before sleep.",
+      "anchoring": "Anchoring: keep a consistent wake time on days off as much as possible.",
+      "short_naps": "Short naps (15–25 min) early in the wake period.",
+      "caffeine_cutoff": "Adjust caffeine cut-off to your shift (avoid late in the wake period).",
+      "shift_gradual": "Shift bedtime/wake time gradually by 15 min every 2–3 days.",
+      "morning_light": "Get morning light for 10–30 minutes.",
+      "maintain": "Maintain a stable sleep window when possible."
     }
   }
 }

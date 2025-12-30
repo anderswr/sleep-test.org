@@ -48,7 +48,8 @@
       },
       "lookup_hint": "Po dokončení testu dostanete ID. Je anonymné a svoj report si môžete otvoriť kedykoľvek. Vložte svoje ID na zobrazenie reportu.",
       "id_placeholder": "Vaše ID",
-      "disclaimer2": "Problémy so spánkom sa môžu líšiť aj podľa trvania. Krátkodobé ťažkosti so spánkom často súvisia so stresom, rutinami alebo dočasnými zmenami, zatiaľ čo dlhodobejšie problémy so spánkom môžu mať úžitok zo štruktúrovanej podpory. Ak problémy so spánkom pretrvávajú v čase, zvážte vyhľadanie usmernenia u kvalifikovaného zdravotníckeho odborníka."
+      "disclaimer2": "Problémy so spánkom sa môžu líšiť aj podľa trvania. Krátkodobé ťažkosti so spánkom často súvisia so stresom, rutinami alebo dočasnými zmenami, zatiaľ čo dlhodobejšie problémy so spánkom môžu mať úžitok zo štruktúrovanej podpory. Ak problémy so spánkom pretrvávajú v čase, zvážte vyhľadanie usmernenia u kvalifikovaného zdravotníckeho odborníka.",
+      "not_answered": "Not answered"
     },
     "articles": {
       "minutes": {
@@ -95,6 +96,19 @@
           "teaser": "Kedy je chrápanie neškodné, kedy to môže byť spánkové apnoe a čo robiť ďalej."
         }
       }
+    },
+    "domain": {
+      "mental": {
+        "title": "Mental calm & stress"
+      },
+      "chronotype": {
+        "title": "Circadian rhythm & shift work"
+      }
+    },
+    "severity": {
+      "green": "Green",
+      "yellow": "Yellow",
+      "red": "Red"
     }
   },
   "about": {
@@ -169,6 +183,14 @@
     "bloodpressure": {
       "name": "Krvný tlak – riziko životného štýlu",
       "desc": "Strava, aktivita, alkohol, stres a hmotnosť."
+    },
+    "mental": {
+      "name": "Mental calm & stress",
+      "desc": "Stress, worry, and arousal at bedtime."
+    },
+    "chronotype": {
+      "name": "Circadian rhythm & shift work",
+      "desc": "Evening preference and sleep timing mismatch."
     }
   },
   "q": {
@@ -217,6 +239,17 @@
       "alcohol_often": "Pijem alkohol častejšie alebo vo väčšom množstve, než sa odporúča.",
       "stress_high": "Zažívam veľa stresu v každodennom živote.",
       "overweight_self": "Považujem sa za človeka s nadváhou."
+    },
+    "mental": {
+      "racing_mind": "My mind feels busy or racing when I try to fall asleep.",
+      "worry_at_bed": "Worrying or overthinking keeps me from falling asleep.",
+      "stress_affects_sleep": "Stress in my daily life clearly affects my sleep.",
+      "hyperarousal": "I feel tense, restless, or 'on edge' when trying to sleep."
+    },
+    "chrono": {
+      "evening_type": "I naturally feel more alert in the evening than in the morning.",
+      "shift_work": "I frequently work night shifts or rotating shifts.",
+      "sleep_window_mismatch": "I often have to sleep at times that don’t suit my body."
     }
   },
   "flags": {
@@ -268,6 +301,22 @@
       "side_sleep": "Skúste spať na boku (s vankúšom za chrbtom) – môže to znížiť chrápanie/apnoe u niektorých.",
       "reduce_evening_alcohol": "Vyhnite sa alkoholu večer – môže zhoršiť chrápanie/problémy s dýchaním.",
       "consider_gp_check": "Máte podozrenie na spánkové apnoe (hlasné chrápanie, pozorované prestávky, denná ospalosť)? Navštívte lekára."
+    },
+    "mental": {
+      "wind_down_45": "Wind down for 45–60 minutes before bed.",
+      "write_worries": "Write down worries or plan tomorrow 10 minutes earlier in the evening.",
+      "calm_breath": "Calm breathing with longer exhales for 2–5 minutes.",
+      "stimulus_control": "Stimulus control: get out of bed if you are awake for long.",
+      "maintain": "Maintain: keep your wind-down and stable routines."
+    },
+    "chrono": {
+      "light_management": "Light management: bright light at the “start of day”, dimmer before sleep.",
+      "anchoring": "Anchoring: keep a consistent wake time on days off as much as possible.",
+      "short_naps": "Short naps (15–25 min) early in the wake period.",
+      "caffeine_cutoff": "Adjust caffeine cut-off to your shift (avoid late in the wake period).",
+      "shift_gradual": "Shift bedtime/wake time gradually by 15 min every 2–3 days.",
+      "morning_light": "Get morning light for 10–30 minutes.",
+      "maintain": "Maintain a stable sleep window when possible."
     }
   }
 }
