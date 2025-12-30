@@ -215,14 +215,14 @@ export default function ResultPage({ params }: { params: { id: string } }) {
                 </div>
 
                 {/* Disclaimer */}
-                <p style={{ marginTop: 12, color: "var(--muted)", fontSize: ".9rem" }}>
+                <p style={{ marginTop: 12, color: "var(--muted)", fontSize: ".7rem" }}>
                   {t(
                     dict,
                     "ui.result.disclaimer",
                     "This is not a medical evaluation, but a general guide to help you notice patterns and try practical steps."
                   )}
                 </p>
-                <p style={{ marginTop: 12, color: "var(--muted)", fontSize: ".9rem" }}>
+                <p style={{ marginTop: 12, color: "var(--muted)", fontSize: ".7rem" }}>
                   {t(
                     dict,
                     "ui.result.disclaimer2",
