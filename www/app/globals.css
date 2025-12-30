@@ -331,7 +331,7 @@ p { line-height: 1.6; }
 .score-hero__right{ width: 220px; display:flex; justify-content:center; }
 
 .score-ring{
-  width: 200px; height: 200px; border-radius: 1px;
+ /* width: 200px; height: 200px; border-radius: 1px; */
   border: 1px solid var(--primary-weak);
   display:flex; flex-direction:column; align-items:center; justify-content:center;
   color: var(--result-text);
