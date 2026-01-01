@@ -63,7 +63,7 @@ If your mind won’t switch off at night, the solution may lie not in stricter s
 
 ---
 
-### Kilder og videre lesning
+### Further reading
 - [American Academy of Sleep Medicine: Insomnia](https://aasm.org/resources/factsheets/insomnia.pdf)  
 - [National Institutes of Health: Insomnia](https://www.nhlbi.nih.gov/health/insomnia)  
 - [Sleep Foundation: CBT-I](https://www.sleepfoundation.org/insomnia/treatment/cognitive-behavioral-therapy-for-insomnia)  
