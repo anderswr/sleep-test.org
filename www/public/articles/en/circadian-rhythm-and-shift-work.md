@@ -11,7 +11,7 @@ The circadian rhythm is the body’s internal clock that regulates sleep and wak
 It is strongly influenced by light exposure, activity, and consistent routines.
 
 Health authorities describe the circadian rhythm as a core biological system affecting sleep, alertness, and overall health  
-([CDC](https://www.cdc.gov/niosh/topics/shiftwork/)).
+([CDC](https://blogs.cdc.gov/niosh-science-blog/2016/10/05/shift-work-and-sleep/)).
 
 ---
 
@@ -39,14 +39,14 @@ According to the CDC, shift work is associated with:
 - Increased daytime sleepiness  
 - Greater difficulty recovering between shifts  
 
-([CDC – Shift Work](https://www.cdc.gov/niosh/topics/shiftwork/)).
+([CDC – Shift Work](https://www.cdc.gov/niosh/work-hour-training-for-nurses/longhours/mod1/01.html)).
 
 ---
 
 ## Practical tips
 
 - **Use light strategically**: Bright light when you need to be alert, dim light before sleep. Light is the strongest signal for resetting the body clock  
-  ([American Academy of Sleep Medicine](https://aasm.org/resources/factsheets/circadianrhythm.pdf)).  
+  ([American Academy of Sleep Medicine](https://sleepeducation.org/patients/bright-light-therapy)).  
 - **Anchor your wake-up time**: Keeping a relatively stable wake time, even on days off, helps stabilize the rhythm.  
 - **Nap carefully**: Short naps (15–25 minutes) early in the wake period may help; long or late naps can backfire.  
 - **Be mindful with caffeine**: Use it early in your wake period and avoid it close to planned sleep.
@@ -67,7 +67,7 @@ Understanding your circadian clock can help you choose strategies that work *wit
 
 ---
 
-### Kilder og videre lesning
-- [CDC: Shift work and health](https://www.cdc.gov/niosh/topics/shiftwork/)  
+### Further reading
+- [CDC: Shift work and health](https://www.cdc.gov/niosh/work-hour-training-for-nurses/longhours/mod1/01.html)  
 - [National Sleep Foundation: Circadian rhythm](https://www.sleepfoundation.org/circadian-rhythm)  
-- [American Academy of Sleep Medicine: Circadian rhythm](https://aasm.org/resources/factsheets/circadianrhythm.pdf)
+- [American Academy of Sleep Medicine: Circadian rhythm](https://sleepeducation.org/patients/bright-light-therapy)
