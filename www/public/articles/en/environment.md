@@ -48,6 +48,5 @@ Small adjustments to your surroundings can make a big difference in how rested y
 ---
 
 ### Further reading
-- [National Sleep Foundation: Bedroom environment](https://www.sleepfoundation.org/bedroom-environment)  
 - [Sleep Foundation: Bedroom tips](https://www.sleepfoundation.org/bedroom-environment)  
 - [NHS: 10 tips to beat insomnia](https://www.nhs.uk/live-well/sleep-and-tiredness/how-to-get-to-sleep/)  
