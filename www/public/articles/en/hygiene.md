@@ -40,7 +40,7 @@ Poor sleep hygiene often leads to:
 
 ## When habits aren’t enough
 
-If you’ve improved your sleep hygiene but still suffer from insomnia, it may be time for further steps, such as **Cognitive Behavioral Therapy for Insomnia (CBT-I)** — the gold-standard, evidence-based treatment ([American Academy of Sleep Medicine](https://aasm.org/)).
+If you’ve improved your sleep hygiene but still suffer from insomnia, it may be time for further steps, such as **Cognitive Behavioral Therapy for Insomnia (CBT-I)** — the gold-standard, evidence-based treatment ([Standford Health Care](https://stanfordhealthcare.org/medical-treatments/c/cognitive-behavioral-therapy-insomnia/procedures.html)).
 
 ---
 
@@ -54,4 +54,4 @@ By aligning your habits with your body’s natural rhythms, you make it easier t
 ### Further reading
 - [Sleep Foundation: Sleep hygiene basics](https://www.sleepfoundation.org/sleep-hygiene)  
 - [NHS: How to get to sleep](https://www.nhs.uk/every-mind-matters/mental-health-issues/sleep/)  
-- [American Academy of Sleep Medicine: CBT-I](https://aasm.org/resources/factsheets/cbtinsomnia.pdf)  
+- [Standford Health Care](https://stanfordhealthcare.org/medical-treatments/c/cognitive-behavioral-therapy-insomnia/procedures.html)
