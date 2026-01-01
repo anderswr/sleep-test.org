@@ -44,7 +44,7 @@ That’s why approaches targeting mental activation, such as Cognitive Behaviora
 
 - **Wind down intentionally**: Allow 45–60 minutes before bed for calm, low-demand activities.  
 - **Write worries down**: Listing concerns or tasks earlier in the evening can reduce nighttime rumination  
-  ([NHS](https://www.nhs.uk/mental-health/self-help/tips-and-support/how-to-manage-stress/)).  
+  ([NHS](https://www.nhs.uk/every-mind-matters/mental-wellbeing-tips/self-help-cbt-techniques/tackling-your-worries/)).  
 - **Slow your breathing**: Longer exhales can help activate the body’s calming response.  
 - **Get out of bed if you’re wide awake**: Doing something quiet until sleepiness returns helps retrain the brain to associate bed with sleep, not worry.
 
@@ -67,4 +67,4 @@ If your mind won’t switch off at night, the solution may lie not in stricter s
 - [American Academy of Sleep Medicine: Insomnia](https://aasm.org/resources/factsheets/insomnia.pdf)  
 - [National Institutes of Health: Insomnia](https://www.nhlbi.nih.gov/health/insomnia)  
 - [Sleep Foundation: CBT-I](https://www.sleepfoundation.org/insomnia/treatment/cognitive-behavioral-therapy-for-insomnia)  
-- [NHS: Managing stress](https://www.nhs.uk/mental-health/self-help/tips-and-support/how-to-manage-stress/)
+- [NHS: Managing stress](https://www.nhs.uk/every-mind-matters/mental-wellbeing-tips/self-help-cbt-techniques/tackling-your-worries/)
