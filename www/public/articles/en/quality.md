@@ -19,7 +19,7 @@ If you wake often, toss and turn, or feel unrefreshed, your sleep quality may be
 
 ## Why it matters
 
-Poor-quality sleep affects memory, mood, and physical repair. Over time, it increases risks of depression, metabolic disease, and lower immune function ([Harvard Health](https://www.health.harvard.edu/staying-healthy/why-sleep-matters-and-how-to-get-enough)).
+Poor-quality sleep affects memory, mood, and physical repair. Over time, it increases risks of depression, metabolic disease, and lower immune function ([Harvard Health](https://www.health.harvard.edu/heart-health/the-many-dimensions-of-a-good-nights-sleep#:~:text=Sleep%20duration.,for%20at%20least%20two%20weeks.)).
 
 ---
 
@@ -56,6 +56,6 @@ Sleep quality is about depth and continuity, not just quantity. With a calm rout
 ---
 
 ### Further reading
-- [Harvard Health: Why sleep matters](https://www.health.harvard.edu/staying-healthy/why-sleep-matters-and-how-to-get-enough)  
+- [Harvard Health: Rest better](https://www.health.harvard.edu/healthbeat/sleep-smarter-as-you-age6-ways-to-rest-better-at-night)  
 - [Sleep Foundation: Sleep quality](https://www.sleepfoundation.org/sleep-hygiene/sleep-quality)  
 - [NHS: How to get to sleep](https://www.nhs.uk/live-well/sleep-and-tiredness/how-to-get-to-sleep/)
