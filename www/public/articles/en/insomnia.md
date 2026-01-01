@@ -50,5 +50,5 @@ Insomnia is frustrating — but it’s not hopeless. By resetting habits, limiti
 
 ### Further reading
 - [National Heart, Lung, and Blood Institute: Insomnia basics](https://www.nhlbi.nih.gov/health/insomnia)  
-- [Sleep Foundation: What is CBT-I?](https://www.sleepfoundation.org/insomnia/treatment/cognitive-behavioral-therapy-insomnia)  
+- [Sleep Foundation: What is CBT-I?](https://www.sleepfoundation.org/insomnia/treatment/cognitive-behavioral-therapy-for-insomnia)  
 - [Mayo Clinic: Insomnia treatment](https://www.mayoclinic.org/diseases-conditions/insomnia/diagnosis-treatment/drc-20355173)

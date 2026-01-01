@@ -14,7 +14,7 @@ Søvnkvalitet beskriver opplevelsen av søvnen din:
 God søvnkvalitet handler ikke bare om antall timer, men også om **dybden og kontinuiteten** i søvnen.
 
 Ifølge Folkehelseinstituttet opplever rundt 1 av 3 voksne søvnproblemer i perioder.  
-([fhi.no](https://www.fhi.no/nettpub/hin/psykiskhelse/sovn/?utm_source=chatgpt.com))
+([fhi.no](https://www.fhi.no/nettpub/hin/psykiskhelse/sovn/))
 
 ---
 
@@ -54,13 +54,13 @@ Fastlege kan henvise til søvnspesialist, psykolog eller fysioterapeut avhengig 
 ## Hva forskningen sier
 
 - **Søvnhygiene** alene løser sjelden alt, men kan gi gode effekter i kombinasjon med andre tiltak.  
-  ([sleepfoundation.org](https://www.sleepfoundation.org/sleep-hygiene?utm_source=chatgpt.com))  
+  ([sleepfoundation.org](https://www.sleepfoundation.org/sleep-hygiene))  
 
 - **Stressmestring** og kognitiv terapi kan bedre søvnkvalitet ved å redusere tankekjør og uro.  
-  ([ncbi.nlm.nih.gov](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6891527/?utm_source=chatgpt.com))  
+  ([ncbi.nlm.nih.gov](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6891527/))  
 
 - **Fysisk aktivitet** gir ofte dypere søvn, men bør ikke legges rett før leggetid.  
-  ([mayoclinic.org](https://www.mayoclinic.org/healthy-lifestyle/adult-health/in-depth/sleep/art-20048379?utm_source=chatgpt.com))
+  ([mayoclinic.org](https://www.mayoclinic.org/healthy-lifestyle/adult-health/in-depth/sleep/art-20048379))
 
 ---
 
@@ -75,9 +75,9 @@ Fastlege kan henvise til søvnspesialist, psykolog eller fysioterapeut avhengig 
 
 ## Kilder og videre lesning
 
-- FHI: *Søvn og søvnproblemer* ([fhi.no](https://www.fhi.no/nettpub/hin/psykiskhelse/sovn/?utm_source=chatgpt.com))  
-- Sleep Foundation: *Sleep Hygiene* ([sleepfoundation.org](https://www.sleepfoundation.org/sleep-hygiene?utm_source=chatgpt.com))  
-- NIH: *Cognitive Behavioral Therapy and Sleep* ([ncbi.nlm.nih.gov](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6891527/?utm_source=chatgpt.com))  
-- Mayo Clinic: *Sleep tips* ([mayoclinic.org](https://www.mayoclinic.org/healthy-lifestyle/adult-health/in-depth/sleep/art-20048379?utm_source=chatgpt.com))
+- FHI: *Søvn og søvnproblemer* ([fhi.no](https://www.fhi.no/nettpub/hin/psykiskhelse/sovn/))  
+- Sleep Foundation: *Sleep Hygiene* ([sleepfoundation.org](https://www.sleepfoundation.org/sleep-hygiene))  
+- NIH: *Cognitive Behavioral Therapy and Sleep* ([ncbi.nlm.nih.gov](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6891527/))  
+- Mayo Clinic: *Sleep tips* ([mayoclinic.org](https://www.mayoclinic.org/healthy-lifestyle/adult-health/in-depth/sleep/art-20048379))
 
 ---

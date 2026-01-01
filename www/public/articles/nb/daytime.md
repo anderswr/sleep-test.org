@@ -7,7 +7,7 @@ Søvnighet på dagtid kan gjøre det vanskelig å fungere som du vil. Mange merk
 ## Hvor vanlig er dagtretthet?
 
 Ifølge Folkehelseinstituttet rapporterer opptil 20–25 % av voksne at de ofte er søvnige på dagtid.  
-([fhi.no](https://www.fhi.no/nettpub/hin/psykiskhelse/sovn/?utm_source=chatgpt.com))
+([fhi.no](https://www.fhi.no/nettpub/hin/psykiskhelse/sovn/))
 
 Å være trøtt av og til er normalt, men **vedvarende søvnighet** kan være et tegn på underliggende søvnproblemer eller helseplager.
 
@@ -47,13 +47,13 @@ Fastlegen kan bestille søvnutredning eller henvise videre.
 ## Hva forskningen sier
 
 - **Morgendagslys** er en av de sterkeste «signalene» for å stille døgnrytmen.  
-  ([sleepfoundation.org](https://www.sleepfoundation.org/circadian-rhythm/morning-light?utm_source=chatgpt.com))  
+  ([sleepfoundation.org](https://www.sleepfoundation.org/circadian-rhythm/morning-light))  
 
 - **Kort søvn på dagen** kan gi økt våkenhet, men lange lurer forstyrrer natten.  
-  ([mayoclinic.org](https://www.mayoclinic.org/healthy-lifestyle/adult-health/in-depth/napping/art-20048319?utm_source=chatgpt.com))  
+  ([mayoclinic.org](https://www.mayoclinic.org/healthy-lifestyle/adult-health/in-depth/napping/art-20048319))  
 
 - **Søvnapné** er en av de vanligste medisinske årsakene til dagtrøtthet, og behandling kan gi betydelig bedre livskvalitet.  
-  ([nhs.uk](https://www.nhs.uk/conditions/obstructive-sleep-apnoea/?utm_source=chatgpt.com))
+  ([nhs.uk](https://www.nhs.uk/conditions/obstructive-sleep-apnoea/))
 
 ---
 
@@ -67,9 +67,9 @@ Fastlegen kan bestille søvnutredning eller henvise videre.
 
 ## Kilder og videre lesning
 
-- FHI: *Søvn og søvnproblemer* ([fhi.no](https://www.fhi.no/nettpub/hin/psykiskhelse/sovn/?utm_source=chatgpt.com))  
-- Sleep Foundation: *Morning Light and Sleep* ([sleepfoundation.org](https://www.sleepfoundation.org/circadian-rhythm/morning-light?utm_source=chatgpt.com))  
-- Mayo Clinic: *Napping: Do's and don'ts* ([mayoclinic.org](https://www.mayoclinic.org/healthy-lifestyle/adult-health/in-depth/napping/art-20048319?utm_source=chatgpt.com))  
-- NHS: *Obstructive Sleep Apnea* ([nhs.uk](https://www.nhs.uk/conditions/obstructive-sleep-apnoea/?utm_source=chatgpt.com))
+- FHI: *Søvn og søvnproblemer* ([fhi.no](https://www.fhi.no/nettpub/hin/psykiskhelse/sovn/))  
+- Sleep Foundation: *Morning Light and Sleep* ([sleepfoundation.org](https://www.sleepfoundation.org/circadian-rhythm/morning-light))  
+- Mayo Clinic: *Napping: Do's and don'ts* ([mayoclinic.org](https://www.mayoclinic.org/healthy-lifestyle/adult-health/in-depth/napping/art-20048319))  
+- NHS: *Obstructive Sleep Apnea* ([nhs.uk](https://www.nhs.uk/conditions/obstructive-sleep-apnoea/))
 
 ---
