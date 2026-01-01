@@ -13,8 +13,8 @@ Søvnkvalitet beskriver opplevelsen av søvnen din:
 
 God søvnkvalitet handler ikke bare om antall timer, men også om **dybden og kontinuiteten** i søvnen.
 
-Ifølge Folkehelseinstituttet opplever rundt 1 av 3 voksne søvnproblemer i perioder.  
-([fhi.no](https://www.fhi.no/nettpub/hin/psykiskhelse/sovn/))
+Ifølge Harvard Health opplever mange søvnproblemer i perioder.  
+([Harvard Health](https://www.health.harvard.edu/staying-healthy/why-sleep-matters-and-how-to-get-enough))
 
 ---
 
@@ -54,13 +54,13 @@ Fastlege kan henvise til søvnspesialist, psykolog eller fysioterapeut avhengig 
 ## Hva forskningen sier
 
 - **Søvnhygiene** alene løser sjelden alt, men kan gi gode effekter i kombinasjon med andre tiltak.  
-  ([sleepfoundation.org](https://www.sleepfoundation.org/sleep-hygiene))  
+  ([Sleep Foundation: Sleep quality](https://www.sleepfoundation.org/sleep-hygiene/sleep-quality))  
 
 - **Stressmestring** og kognitiv terapi kan bedre søvnkvalitet ved å redusere tankekjør og uro.  
-  ([ncbi.nlm.nih.gov](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6891527/))  
+  ([Harvard Health: Why sleep matters](https://www.health.harvard.edu/staying-healthy/why-sleep-matters-and-how-to-get-enough))  
 
 - **Fysisk aktivitet** gir ofte dypere søvn, men bør ikke legges rett før leggetid.  
-  ([mayoclinic.org](https://www.mayoclinic.org/healthy-lifestyle/adult-health/in-depth/sleep/art-20048379))
+  ([NHS: How to get to sleep](https://www.nhs.uk/live-well/sleep-and-tiredness/how-to-get-to-sleep/))
 
 ---
 
@@ -75,9 +75,8 @@ Fastlege kan henvise til søvnspesialist, psykolog eller fysioterapeut avhengig 
 
 ## Kilder og videre lesning
 
-- FHI: *Søvn og søvnproblemer* ([fhi.no](https://www.fhi.no/nettpub/hin/psykiskhelse/sovn/))  
-- Sleep Foundation: *Sleep Hygiene* ([sleepfoundation.org](https://www.sleepfoundation.org/sleep-hygiene))  
-- NIH: *Cognitive Behavioral Therapy and Sleep* ([ncbi.nlm.nih.gov](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6891527/))  
-- Mayo Clinic: *Sleep tips* ([mayoclinic.org](https://www.mayoclinic.org/healthy-lifestyle/adult-health/in-depth/sleep/art-20048379))
+- [Harvard Health: Why sleep matters](https://www.health.harvard.edu/staying-healthy/why-sleep-matters-and-how-to-get-enough)  
+- [Sleep Foundation: Sleep quality](https://www.sleepfoundation.org/sleep-hygiene/sleep-quality)  
+- [NHS: How to get to sleep](https://www.nhs.uk/live-well/sleep-and-tiredness/how-to-get-to-sleep/)
 
 ---

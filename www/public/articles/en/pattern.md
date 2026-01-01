@@ -46,5 +46,6 @@ A strong sleep routine isn’t about perfection — it’s about **consistency**
 ---
 
 ### Further reading
-- [National Sleep Foundation: Setting a Regular Sleep Schedule](https://www.thensf.org/setting-a-regular-sleep-schedule/)  
-- [Sleep Foundatioin: How much sleep do we really need?](https://www.sleepfoundation.org/how-sleep-works/how-much-sleep-do-we-really-need) 
+- [Harvard Medical School: The importance of a regular sleep schedule](https://health.harvard.edu/staying-healthy/regular-sleep-wake-rhythm-and-health)  
+- [National Sleep Foundation: How much sleep do we really need?](https://www.sleepfoundation.org/how-sleep-works/how-much-sleep-do-we-really-need)  
+- [NHS: Tips for better sleep](https://www.nhs.uk/every-mind-matters/coronavirus/tips-better-sleep/)

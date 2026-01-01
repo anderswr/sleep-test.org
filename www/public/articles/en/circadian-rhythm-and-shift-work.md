@@ -67,7 +67,7 @@ Understanding your circadian clock can help you choose strategies that work *wit
 
 ---
 
-### Further reading
-- [CDC: Shift work and health](https://www.cdc.gov/niosh/work-hour-training-for-nurses/longhours/mod1/01.html)  
+### Kilder og videre lesning
+- [CDC: Shift work and health](https://www.cdc.gov/niosh/topics/shiftwork/)  
 - [National Sleep Foundation: Circadian rhythm](https://www.sleepfoundation.org/circadian-rhythm)  
-- [American Academy of Sleep Medicine: Circadian rhythm](https://sleepeducation.org/patients/bright-light-therapy)
+- [American Academy of Sleep Medicine: Circadian rhythm](https://aasm.org/resources/factsheets/circadianrhythm.pdf)
