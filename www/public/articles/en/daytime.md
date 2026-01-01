@@ -54,5 +54,5 @@ With steady sleep routines, light exposure, and small lifestyle adjustments, mos
 
 ### Further reading
 - [CDC: Sleep and Sleep Disorders](https://www.cdc.gov/sleep/about/index.html)  
-- [Sleep Foundation: Excessive daytime sleepiness](https://www.sleepfoundation.org/excessive-daytime-sleepiness)  
+- [Sleep Foundation: Excessive daytime sleepiness](https://www.sleepfoundation.org/excessive-sleepiness)  
 - [NHS: Narcolepsy and sleep problems](https://www.nhs.uk/conditions/narcolepsy/)
