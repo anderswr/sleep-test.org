@@ -53,5 +53,4 @@ By aligning your habits with your body’s natural rhythms, you make it easier t
 
 ### Further reading
 - [Sleep Foundation: Sleep hygiene basics](https://www.sleepfoundation.org/sleep-hygiene)  
-- [NHS: How to get to sleep](https://www.nhs.uk/every-mind-matters/mental-health-issues/sleep/)  
-- [Standford Health Care](https://stanfordhealthcare.org/medical-treatments/c/cognitive-behavioral-therapy-insomnia/procedures.html)
+- [The Sleep Charity](https://thesleepcharity.org.uk/information-support/adults/sleep-environment/)
