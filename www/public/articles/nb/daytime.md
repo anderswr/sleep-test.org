@@ -6,8 +6,8 @@ Søvnighet på dagtid kan gjøre det vanskelig å fungere som du vil. Mange merk
 
 ## Hvor vanlig er dagtretthet?
 
-Ifølge Folkehelseinstituttet rapporterer opptil 20–25 % av voksne at de ofte er søvnige på dagtid.  
-([fhi.no](https://www.fhi.no/nettpub/hin/psykiskhelse/sovn/?utm_source=chatgpt.com))
+Ifølge helsemyndigheter rapporterer opptil 20–25 % av voksne at de ofte er søvnige på dagtid.  
+([CDC](https://www.cdc.gov/sleep/about/index.html))
 
 Å være trøtt av og til er normalt, men **vedvarende søvnighet** kan være et tegn på underliggende søvnproblemer eller helseplager.
 
@@ -46,14 +46,13 @@ Fastlegen kan bestille søvnutredning eller henvise videre.
 
 ## Hva forskningen sier
 
-- **Morgendagslys** er en av de sterkeste «signalene» for å stille døgnrytmen.  
-  ([sleepfoundation.org](https://www.sleepfoundation.org/circadian-rhythm/morning-light?utm_source=chatgpt.com))  
+- **Vedvarende dagtrøtthet** henger ofte sammen med søvnforstyrrelser og livsstilsfaktorer, og bør tas på alvor hvis det påvirker hverdagen.  
+  ([Sleep Foundation: Excessive daytime sleepiness](https://www.sleepfoundation.org/excessive-daytime-sleepiness))  
 
 - **Kort søvn på dagen** kan gi økt våkenhet, men lange lurer forstyrrer natten.  
-  ([mayoclinic.org](https://www.mayoclinic.org/healthy-lifestyle/adult-health/in-depth/napping/art-20048319?utm_source=chatgpt.com))  
 
-- **Søvnapné** er en av de vanligste medisinske årsakene til dagtrøtthet, og behandling kan gi betydelig bedre livskvalitet.  
-  ([nhs.uk](https://www.nhs.uk/conditions/obstructive-sleep-apnoea/?utm_source=chatgpt.com))
+- **Narkolepsi** kan gi ekstrem søvnighet på dagtid og bør vurderes ved vedvarende symptomer.  
+  ([NHS: Narcolepsy and sleep problems](https://www.nhs.uk/conditions/narcolepsy/))
 
 ---
 
@@ -67,9 +66,8 @@ Fastlegen kan bestille søvnutredning eller henvise videre.
 
 ## Kilder og videre lesning
 
-- FHI: *Søvn og søvnproblemer* ([fhi.no](https://www.fhi.no/nettpub/hin/psykiskhelse/sovn/?utm_source=chatgpt.com))  
-- Sleep Foundation: *Morning Light and Sleep* ([sleepfoundation.org](https://www.sleepfoundation.org/circadian-rhythm/morning-light?utm_source=chatgpt.com))  
-- Mayo Clinic: *Napping: Do's and don'ts* ([mayoclinic.org](https://www.mayoclinic.org/healthy-lifestyle/adult-health/in-depth/napping/art-20048319?utm_source=chatgpt.com))  
-- NHS: *Obstructive Sleep Apnea* ([nhs.uk](https://www.nhs.uk/conditions/obstructive-sleep-apnoea/?utm_source=chatgpt.com))
+- [CDC: Sleep and Sleep Disorders](https://www.cdc.gov/sleep/about/index.html)  
+- [Sleep Foundation: Excessive daytime sleepiness](https://www.sleepfoundation.org/excessive-daytime-sleepiness)  
+- [NHS: Narcolepsy and sleep problems](https://www.nhs.uk/conditions/narcolepsy/)
 
 ---

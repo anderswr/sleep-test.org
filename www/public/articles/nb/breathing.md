@@ -10,7 +10,7 @@ Mange snorker, men hos noen kan snorking og pustestopp være tegn på en søvnfo
 - **Søvnapné** er når luftveiene blokkeres helt i korte perioder, slik at pusten stopper i noen sekunder. Dette kan skje mange ganger per natt.  
 
 Konsekvensene kan være dagtrøtthet, hodepine, konsentrasjonsvansker og økt risiko for høyt blodtrykk og hjerte-/karsykdom.  
-([helsenorge.no](https://www.helsenorge.no/sykdom/luftveiene/sovnsykdommer/sovn-apne/?utm_source=chatgpt.com))
+([American Academy of Sleep Medicine](https://aasm.org/))
 
 ---
 
@@ -42,17 +42,17 @@ Konsekvensene kan være dagtrøtthet, hodepine, konsentrasjonsvansker og økt ri
 - Ved høyt blodtrykk eller hjerte-/karsykdom kombinert med snorking.  
 
 Fastlegen kan henvise til søvnregistrering eller søvnlaboratorium. Behandling kan være pustemaske (CPAP), spesialtilpasset bittskinne eller i enkelte tilfeller kirurgi.  
-([lhl.no](https://www.lhl.no/sovn/sovnsykdommer/sovn-apne/?utm_source=chatgpt.com))
+([NHS](https://www.nhs.uk/conditions/sleep-apnoea/))
 
 ---
 
 ## Hva forskningen viser
 
 - Ubehandlet søvnapné øker risikoen for hjerte- og karsykdom.  
-  ([ncbi.nlm.nih.gov](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4998242/?utm_source=chatgpt.com))  
+  ([American Academy of Sleep Medicine](https://aasm.org/))  
 
 - CPAP-behandling gir bedre søvn, mer energi og reduserer blodtrykk.  
-  ([sleepfoundation.org](https://www.sleepfoundation.org/sleep-apnea/cpap-for-sleep-apnea?utm_source=chatgpt.com))  
+  ([Sleep Foundation](https://www.sleepfoundation.org/sleep-apnea))  
 
 ---
 
@@ -66,9 +66,8 @@ Fastlegen kan henvise til søvnregistrering eller søvnlaboratorium. Behandling 
 
 ## Kilder og videre lesning
 
-- Helsenorge: *Søvnapné* ([helsenorge.no](https://www.helsenorge.no/sykdom/luftveiene/sovnsykdommer/sovn-apne/?utm_source=chatgpt.com))  
-- LHL: *Søvnapné* ([lhl.no](https://www.lhl.no/sovn/sovnsykdommer/sovn-apne/?utm_source=chatgpt.com))  
-- Sleep Foundation: *CPAP for Sleep Apnea* ([sleepfoundation.org](https://www.sleepfoundation.org/sleep-apnea/cpap-for-sleep-apnea?utm_source=chatgpt.com))  
-- NCBI: *Obstructive Sleep Apnea and Cardiovascular Disease* ([ncbi.nlm.nih.gov](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4998242/?utm_source=chatgpt.com))  
+- [American Academy of Sleep Medicine](https://aasm.org/)  
+- [NHS: Sleep apnea](https://www.nhs.uk/conditions/sleep-apnoea/)  
+- [Sleep Foundation: Sleep apnea guide](https://www.sleepfoundation.org/sleep-apnea)  
 
 ---
