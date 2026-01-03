@@ -109,6 +109,12 @@
       "green": "Grün",
       "yellow": "Gelb",
       "red": "Rot"
+    },
+    "ad": {
+      "card": {
+        "title": "Ein einfacher, anonymer Schlaftest — in mehreren Sprachen",
+        "text": "Beantworte ein paar kurze Fragen und erhalte einen klaren, personalisierten Schlafbericht mit praktischen Tipps, die du sofort anwenden kannst. Keine Anmeldung, E-Mail oder Name erforderlich. Du erhältst eine eindeutige ID zum Speichern und späteren Vergleichen — teile deine Ergebnisse in den sozialen Medien, um Veränderungen im Laufe der Zeit zu verfolgen."
+      }
     }
   },
   "about": {

@@ -109,6 +109,12 @@
       "green": "Verde",
       "yellow": "Amarelo",
       "red": "Vermelho"
+    },
+    "ad": {
+      "card": {
+        "title": "Um teste de sono simples e anônimo — em vários idiomas",
+        "text": "Responda a algumas perguntas rápidas e receba um relatório de sono claro e personalizado com dicas práticas que você pode usar imediatamente. Não é necessário cadastro, e-mail ou nome. Você recebe um ID exclusivo para salvar e comparar depois — compartilhe seus resultados nas redes sociais para acompanhar as mudanças ao longo do tempo."
+      }
     }
   },
   "about": {

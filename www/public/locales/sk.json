@@ -109,6 +109,12 @@
       "green": "Zelená",
       "yellow": "Žltá",
       "red": "Červená"
+    },
+    "ad": {
+      "card": {
+        "title": "Jednoduchý, anonymný test spánku — vo viacerých jazykoch",
+        "text": "Odpovedzte na pár rýchlych otázok a získajte jasnú, personalizovanú správu o spánku s praktickými tipmi, ktoré môžete hneď použiť. Nie je potrebná registrácia, e-mail ani meno. Dostanete jedinečné ID na uloženie a neskoršie porovnanie — zdieľajte svoje výsledky na sociálnych sieťach, aby ste sledovali zmeny v čase."
+      }
     }
   },
   "about": {

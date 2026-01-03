@@ -109,6 +109,12 @@
       "green": "Vert",
       "yellow": "Jaune",
       "red": "Rouge"
+    },
+    "ad": {
+      "card": {
+        "title": "Un test de sommeil simple et anonyme — en plusieurs langues",
+        "text": "Répondez à quelques questions rapides et obtenez un rapport de sommeil clair et personnalisé avec des conseils pratiques utilisables immédiatement. Aucune inscription, e-mail ou nom requis. Vous recevez un identifiant unique à conserver et à comparer plus tard — partagez vos résultats sur les réseaux sociaux pour suivre les changements au fil du temps."
+      }
     }
   },
   "about": {

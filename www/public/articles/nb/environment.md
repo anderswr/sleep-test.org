@@ -9,7 +9,7 @@ Et godt søvnmiljø er mer enn en seng – det er **lys, lyd, temperatur og komf
 Hjernen vår er følsom for sanseinntrykk også når vi sover. Støy, lys eller ubehagelig temperatur kan forstyrre søvnen uten at vi alltid merker det. Dårlig madrass eller pute kan gi smerter som reduserer søvnkvaliteten.  
 
 Studier viser at små endringer i soveromsmiljøet kan gi **kortere innsovningstid og færre oppvåkninger**.  
-([ncbi.nlm.nih.gov](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5449130/?utm_source=chatgpt.com))
+([National Sleep Foundation](https://www.sleepfoundation.org/bedroom-environment))
 
 ---
 
@@ -43,14 +43,11 @@ Dersom du fremdeles har dårlig søvn til tross for godt søvnmiljø, kan årsak
 
 ## Hva forskningen sier
 
-- **Mørke rom** gir mer melatonin og dypere søvn.  
-  ([sleepfoundation.org](https://www.sleepfoundation.org/bedroom-environment/light-and-sleep?utm_source=chatgpt.com))  
+- **Søvnmiljøet** spiller en stor rolle for innsovning og søvnkvalitet.  
+  ([National Sleep Foundation: Bedroom environment](https://www.sleepfoundation.org/bedroom-environment))  
 
-- **Støy** – selv lav bakgrunnsstøy kan forstyrre søvnen og øke stressnivå.  
-  ([who.int](https://www.who.int/europe/news-room/fact-sheets/item/environmental-noise?utm_source=chatgpt.com))  
-
-- **Temperatur** – å senke romtemperaturen kan redusere innsovningstid.  
-  ([sleepfoundation.org](https://www.sleepfoundation.org/bedroom-environment/bedroom-temperature?utm_source=chatgpt.com))  
+- **Gode søvnrutiner** og en rolig kveld kan gjøre det lettere å sovne.  
+  ([NHS: 10 tips to beat insomnia](https://www.nhs.uk/live-well/sleep-and-tiredness/how-to-get-to-sleep/))  
 
 ---
 
@@ -64,9 +61,8 @@ Dersom du fremdeles har dårlig søvn til tross for godt søvnmiljø, kan årsak
 
 ## Kilder og videre lesning
 
-- Sleep Foundation: *Light and Sleep* ([sleepfoundation.org](https://www.sleepfoundation.org/bedroom-environment/light-and-sleep?utm_source=chatgpt.com))  
-- Sleep Foundation: *Bedroom Temperature* ([sleepfoundation.org](https://www.sleepfoundation.org/bedroom-environment/bedroom-temperature?utm_source=chatgpt.com))  
-- WHO: *Environmental Noise Guidelines* ([who.int](https://www.who.int/europe/news-room/fact-sheets/item/environmental-noise?utm_source=chatgpt.com))  
-- NCBI: *Bedroom environment and sleep quality* ([ncbi.nlm.nih.gov](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5449130/?utm_source=chatgpt.com))  
+- [National Sleep Foundation: Bedroom environment](https://www.sleepfoundation.org/bedroom-environment)  
+- [Sleep Foundation: Bedroom tips](https://www.sleepfoundation.org/bedroom-environment)  
+- [NHS: 10 tips to beat insomnia](https://www.nhs.uk/live-well/sleep-and-tiredness/how-to-get-to-sleep/)  
 
 ---
