@@ -123,6 +123,12 @@
       "green": "Green",
       "yellow": "Yellow",
       "red": "Red"
+    },
+    "ad": {
+      "card": {
+        "title": "A simple, anonymous sleep test — in multiple languages",
+        "text": "Answer a few quick questions and get a clear, personalized sleep report with practical tips you can use right away. No sign-up, mail or name required. You receive a unique ID to save, compare later — share your results on social media to track changes over time."
+      }
     }
   },
   "about": {

@@ -109,6 +109,12 @@
       "green": "Verde",
       "yellow": "Amarillo",
       "red": "Rojo"
+    },
+    "ad": {
+      "card": {
+        "title": "Un test de sueño simple y anónimo — en varios idiomas",
+        "text": "Responde a unas pocas preguntas rápidas y obtén un informe de sueño claro y personalizado con consejos prácticos que puedes usar de inmediato. No se requiere registro, correo ni nombre. Recibes un ID único para guardar y comparar más adelante — comparte tus resultados en redes sociales para seguir los cambios a lo largo del tiempo."
+      }
     }
   },
   "about": {

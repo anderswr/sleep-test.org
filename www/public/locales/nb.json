@@ -99,6 +99,12 @@
       "green": "Grønn",
       "yellow": "Gul",
       "red": "Rød"
+    },
+    "ad": {
+      "card": {
+        "title": "En enkel, anonym søvntest — på flere språk",
+        "text": "Svar på noen få raske spørsmål og få en tydelig, personlig søvnrapport med praktiske tips du kan bruke med en gang. Ingen registrering, e-post eller navn kreves. Du får en unik ID du kan lagre og sammenligne senere — del resultatene dine på sosiale medier for å følge endringer over tid."
+      }
     }
   },
   "about": {
