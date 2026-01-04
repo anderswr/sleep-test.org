@@ -4,12 +4,17 @@ import { I18nProvider } from "./providers/I18nProvider";
 import { Analytics } from "@vercel/analytics/react";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import type { Metadata } from "next";
+import { SEGMENT_TO_LANG } from "@/lib/lang";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://sleep-test.org"),
   title: "Sleep Test – Free - No login 5-Minute Sleep Quality Report",
   description:
     "Take a free sleep test in 5–10 minutes. Answer 30 simple questions and get an instant report with sleep score, patterns, and practical tips.",
+  icons: {
+    icon: "/favicon.ico",
+    apple: "/favicon.ico",
+  },
   robots: {
     index: true,
     follow: true,
@@ -34,6 +39,10 @@ export const metadata: Metadata = {
 const bootScript = `
 (function () {
   try {
+    var localeMap = ${JSON.stringify(SEGMENT_TO_LANG)};
+    var pathSeg = (window.location.pathname.split("/")[1] || "").toLowerCase();
+    var langFromPath = localeMap[pathSeg] || null;
+
     // ---------- THEME ----------
     // User override: localStorage.theme in {"light","dark","system"}
     var pref = localStorage.getItem("theme");
@@ -58,7 +67,7 @@ const bootScript = `
     // any Norwegian variant? (nb, no, nn)
     var wantsNb = navLangs.some(function (l) { l = l.toLowerCase(); return l === "nb" || l.startsWith("nb-") || l === "no" || l.startsWith("no-") || l === "nn" || l.startsWith("nn-"); });
 
-    var lang = savedLang || (wantsNb ? "nb" : "en");
+    var lang = langFromPath || savedLang || (wantsNb ? "nb" : "en");
     document.documentElement.lang = lang;
     document.documentElement.setAttribute("data-lang", lang);
   } catch (e) {}

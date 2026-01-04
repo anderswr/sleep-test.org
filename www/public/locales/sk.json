@@ -13,7 +13,11 @@
       "cta": "Začať test",
       "example": "Zobraziť ukážkový report",
       "tests_count_title": "Dokončené testy spánku",
-      "tests_count_caption": "ľudí už otestovalo svoj spánok pomocou tohto bezplatného anonymného nástroja."
+      "tests_count_caption": "ľudí už otestovalo svoj spánok pomocou tohto bezplatného anonymného nástroja.",
+      "seo_paragraphs": [
+        "Sleep Test je bezplatný a anonymný spánkový test, ktorý trvá približne 5 minút. Nie je potrebné prihlásenie, e‑mail ani meno. Po 37 krátkych otázkach dostanete personalizovanú správu o kvalite spánku so skóre, vzorcami a konkrétnymi tipmi.",
+        "Správu využite na pochopenie spánkových návykov, sledovanie zmien v čase a zdieľanie výsledkov, ak chcete. Test je jednoduchý a vedecky podložený, takže sa môžete neskôr porovnať s rovnakým jedinečným ID. Ak vás zaujíma spánková hygiena, nespavosť, denná ospalosť alebo práca na zmeny, Sleep Test vám pomôže s ďalšími krokmi."
+      ]
     },
     "privacy": {
       "card": {
@@ -115,6 +119,9 @@
         "title": "Jednoduchý, anonymný test spánku — vo viacerých jazykoch",
         "text": "Odpovedzte na pár rýchlych otázok a získajte jasnú, personalizovanú správu o spánku s praktickými tipmi, ktoré môžete hneď použiť. Nie je potrebná registrácia, e-mail ani meno. Dostanete jedinečné ID na uloženie a neskoršie porovnanie — zdieľajte svoje výsledky na sociálnych sieťach, aby ste sledovali zmeny v čase."
       }
+    },
+    "brand": {
+      "logo_alt": "Logo Sleep Test"
     }
   },
   "about": {
@@ -325,6 +332,12 @@
       "shift_gradual": "Posúvajte čas spánku/vstávania o 15 min každé 2–3 dni.",
       "morning_light": "Ranné svetlo 10–30 minút.",
       "maintain": "Udržujte stabilné spánkové okno, keď je to možné."
+    }
+  },
+  "seo": {
+    "home": {
+      "title": "Sleep Test – bezplatná 5‑minútová správa o kvalite spánku bez prihlásenia",
+      "description": "Urobte si bezplatný Sleep Test za 5–10 minút. Odpovedzte na 37 rýchlych otázok a získajte personalizovanú správu o kvalite spánku s praktickými tipmi."
     }
   }
 }

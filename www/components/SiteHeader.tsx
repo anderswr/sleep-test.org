@@ -3,9 +3,10 @@
 
 import Link from "next/link";
 import Image from "next/image";
-import { usePathname } from "next/navigation";
+import { usePathname, useRouter } from "next/navigation";
 import { useI18n } from "@/app/providers/I18nProvider";
 import { t } from "@/lib/i18n";
+import { Lang, isLocaleHomePath, langToHomePath } from "@/lib/lang";
 import * as React from "react";
 
 const LANGS = [
@@ -47,7 +48,8 @@ function setTheme(next: Theme) {
 
 export default function SiteHeader() {
   const { dict, lang, setLang } = useI18n();
-  const pathname = usePathname();
+  const pathname = usePathname() || "/";
+  const router = useRouter();
 
   const [menuOpen, setMenuOpen] = React.useState(false);
   const [theme, setThemeState] = React.useState<Theme>(() =>
@@ -78,6 +80,13 @@ export default function SiteHeader() {
   }, []);
 
   const current = LANGS.find((l) => l.code === lang) ?? LANGS[0];
+  const homeHref = langToHomePath(lang as Lang);
+  const onSelectLanguage = (nextLang: Lang) => {
+    setLang(nextLang);
+    if (isLocaleHomePath(pathname)) {
+      router.push(langToHomePath(nextLang));
+    }
+  };
 
   const NavItem = ({ href, k }: { href: string; k: string }) => (
     <Link
@@ -99,12 +108,18 @@ export default function SiteHeader() {
       {/* Left: logo + nav */}
       <div className="row" style={{ gap: 24 }}>
         <Link
-          href="/"
+          href={homeHref}
           className="row"
           style={{ gap: 8, alignItems: "center" }}
           aria-label={t(dict, "ui.home.title", "Sleep Test")}
         >
-          <Image src="/favicon.ico" alt="" width={28} height={28} style={{ borderRadius: 6 }} />
+          <Image
+            src="/favicon.ico"
+            alt={t(dict, "ui.brand.logo_alt", "Sleep Test logo")}
+            width={28}
+            height={28}
+            style={{ borderRadius: 6 }}
+          />
         </Link>
 
         <nav className="nav">
@@ -163,7 +178,10 @@ export default function SiteHeader() {
                   role="menuitemradio"
                   aria-checked={lang === l.code}
                   className={`lang-item ${lang === l.code ? "active" : ""}`}
-                  onClick={() => { setLang(l.code as any); setMenuOpen(false); }}
+                  onClick={() => {
+                    onSelectLanguage(l.code as Lang);
+                    setMenuOpen(false);
+                  }}
                 >
                   <span className="flag" aria-hidden>{l.flag}</span>
                   <span className="lang-label">{l.label}</span>

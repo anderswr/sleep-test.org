@@ -13,7 +13,11 @@
       "cta": "Comenzar la prueba",
       "example": "Ver informe de ejemplo",
       "tests_count_title": "Pruebas de sueño completadas",
-      "tests_count_caption": "personas ya han evaluado su sueño con esta herramienta gratuita y anónima."
+      "tests_count_caption": "personas ya han evaluado su sueño con esta herramienta gratuita y anónima.",
+      "seo_paragraphs": [
+        "Sleep Test es una prueba de sueño gratuita y anónima que tarda unos 5 minutos. No requiere inicio de sesión, correo ni nombre. Después de 37 preguntas rápidas recibes un informe personalizado de calidad del sueño con puntuación, patrones y consejos prácticos.",
+        "Usa el informe para comprender hábitos de sueño, seguir cambios con el tiempo y compartir resultados si lo deseas. La prueba está diseñada para ser simple y basada en la evidencia, para que puedas comparar más adelante con el mismo ID único. Si te interesa la higiene del sueño, el insomnio, la somnolencia diurna o el trabajo por turnos, Sleep Test te ayuda a avanzar."
+      ]
     },
     "privacy": {
       "card": {
@@ -115,6 +119,9 @@
         "title": "Un test de sueño simple y anónimo — en varios idiomas",
         "text": "Responde a unas pocas preguntas rápidas y obtén un informe de sueño claro y personalizado con consejos prácticos que puedes usar de inmediato. No se requiere registro, correo ni nombre. Recibes un ID único para guardar y comparar más adelante — comparte tus resultados en redes sociales para seguir los cambios a lo largo del tiempo."
       }
+    },
+    "brand": {
+      "logo_alt": "Logotipo de Sleep Test"
     }
   },
   "about": {
@@ -325,6 +332,12 @@
       "shift_gradual": "Mueve la hora de dormir/levantarte gradualmente 15 min cada 2–3 días.",
       "morning_light": "Luz matutina durante 10–30 minutos.",
       "maintain": "Mantén una ventana de sueño estable cuando sea posible."
+    }
+  },
+  "seo": {
+    "home": {
+      "title": "Sleep Test: informe de calidad del sueño gratis, sin inicio de sesión, en 5 minutos",
+      "description": "Realiza el Sleep Test gratis en 5–10 minutos. Responde 37 preguntas rápidas y obtén un informe personalizado de calidad del sueño con consejos prácticos."
     }
   }
 }

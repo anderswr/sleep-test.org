@@ -13,7 +13,11 @@
       "cta": "Iniciar o teste",
       "example": "Ver exemplo de relatório",
       "tests_count_title": "Testes de sono concluídos",
-      "tests_count_caption": "pessoas já testaram seu sono com esta ferramenta gratuita e anônima."
+      "tests_count_caption": "pessoas já testaram seu sono com esta ferramenta gratuita e anônima.",
+      "seo_paragraphs": [
+        "O Sleep Test é um teste de sono gratuito e anônimo que leva cerca de 5 minutos. Não exige login, e‑mail ou nome. Após 37 perguntas rápidas, você recebe um relatório personalizado de qualidade do sono com pontuação, padrões e dicas práticas.",
+        "Use o relatório para entender hábitos de sono, acompanhar mudanças ao longo do tempo e compartilhar resultados se quiser. O teste é simples e baseado em evidências, para que você possa comparar depois com o mesmo ID único. Se você se interessa por higiene do sono, insônia, sonolência diurna ou trabalho em turnos, o Sleep Test ajuda a dar o próximo passo."
+      ]
     },
     "privacy": {
       "card": {
@@ -115,6 +119,9 @@
         "title": "Um teste de sono simples e anônimo — em vários idiomas",
         "text": "Responda a algumas perguntas rápidas e receba um relatório de sono claro e personalizado com dicas práticas que você pode usar imediatamente. Não é necessário cadastro, e-mail ou nome. Você recebe um ID exclusivo para salvar e comparar depois — compartilhe seus resultados nas redes sociais para acompanhar as mudanças ao longo do tempo."
       }
+    },
+    "brand": {
+      "logo_alt": "Logo do Sleep Test"
     }
   },
   "about": {
@@ -325,6 +332,12 @@
       "shift_gradual": "Mova a hora de dormir/acordar gradualmente 15 min a cada 2–3 dias.",
       "morning_light": "Luz da manhã por 10–30 minutos.",
       "maintain": "Mantenha uma janela de sono estável quando possível."
+    }
+  },
+  "seo": {
+    "home": {
+      "title": "Sleep Test – relatório gratuito de qualidade do sono em 5 minutos, sem login",
+      "description": "Faça o Sleep Test grátis em 5–10 minutos. Responda 37 perguntas rápidas e receba um relatório personalizado de qualidade do sono com dicas práticas."
     }
   }
 }

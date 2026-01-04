@@ -13,7 +13,11 @@
       "cta": "Start test",
       "example": "Se eksempel på rapport",
       "tests_count_title": "Fullførte søvntester",
-      "tests_count_caption": "personer har allerede testet søvnen sin med dette gratis, anonyme verktøyet."
+      "tests_count_caption": "personer har allerede testet søvnen sin med dette gratis, anonyme verktøyet.",
+      "seo_paragraphs": [
+        "Sleep Test er en gratis og anonym søvntest som tar omtrent 5 minutter. Ingen innlogging, e‑post eller navn kreves. Etter 37 korte spørsmål får du en personlig søvnkvalitetsrapport med søvnscore, mønstre og konkrete råd.",
+        "Bruk rapporten til å forstå søvnvaner, følge endringer over tid og dele resultatene hvis du vil. Testen er laget for å være enkel og vitenskapelig, slik at du kan sammenligne senere med samme unike ID. Hvis du er nysgjerrig på søvnhygiene, insomni, søvnighet på dagtid eller skiftarbeid, kan Sleep Test hjelpe deg videre."
+      ]
     },
     "privacy": {
       "card": {
@@ -105,6 +109,9 @@
         "title": "En enkel, anonym søvntest — på flere språk",
         "text": "Svar på noen få raske spørsmål og få en tydelig, personlig søvnrapport med praktiske tips du kan bruke med en gang. Ingen registrering, e-post eller navn kreves. Du får en unik ID du kan lagre og sammenligne senere — del resultatene dine på sosiale medier for å følge endringer over tid."
       }
+    },
+    "brand": {
+      "logo_alt": "Sleep Test-logo"
     }
   },
   "about": {
@@ -315,6 +322,12 @@
       "shift_gradual": "Gradvis flytt leggetid/oppvåkning 15 min hver 2–3 dag.",
       "morning_light": "Morgenlys 10–30 min.",
       "maintain": "Vedlikehold så stabilt søvnvindu som mulig."
+    }
+  },
+  "seo": {
+    "home": {
+      "title": "Sleep Test – gratis, uten innlogging 5‑minutters søvnkvalitetsrapport",
+      "description": "Ta en gratis Sleep Test på 5–10 minutter. Svar på 37 korte spørsmål og få en personlig søvnkvalitetsrapport med praktiske tips."
     }
   }
 }
