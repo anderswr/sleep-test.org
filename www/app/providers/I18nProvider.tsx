@@ -40,17 +40,17 @@ function detectLangFromNavigator(): Lang {
 }
 
 function getInitialLang(): Lang {
-  // 1) Persisted user choice
-  try {
-    const saved = localStorage.getItem("lang");
-    if (isLang(saved)) return saved;
-  } catch {}
-  // 2) From <html data-lang|lang>
+  // 1) From <html data-lang|lang> (URL locale should win)
   if (typeof document !== "undefined") {
     const el = document.documentElement;
     const fromAttr = el.getAttribute("data-lang") || el.lang;
     if (isLang(fromAttr)) return fromAttr;
   }
+  // 2) Persisted user choice
+  try {
+    const saved = localStorage.getItem("lang");
+    if (isLang(saved)) return saved;
+  } catch {}
   // 3) Browser
   return detectLangFromNavigator();
 }
