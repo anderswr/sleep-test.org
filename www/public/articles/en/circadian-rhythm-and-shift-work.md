@@ -25,7 +25,7 @@ Trying to sleep earlier than the body is ready for can lead to:
 - Feeling unrefreshed in the morning  
 
 These patterns often reflect **chronotype differences**, not poor sleep discipline  
-([National Sleep Foundation](https://www.thensf.org/what-is-circadian-rhythm/)).
+([National Sleep Foundation](https://www.sleepfoundation.org/circadian-rhythm)).
 
 ---
 
@@ -69,5 +69,5 @@ Understanding your circadian clock can help you choose strategies that work *wit
 
 ### Kilder og videre lesning
 - [CDC: Shift work and health](https://www.cdc.gov/niosh/topics/shiftwork/)  
-- [National Sleep Foundation: Circadian rhythm](https://www.thensf.org/what-is-circadian-rhythm/)  
+- [National Sleep Foundation: Circadian rhythm](https://www.sleepfoundation.org/circadian-rhythm)  
 - [American Academy of Sleep Medicine: Circadian rhythm](https://aasm.org/resources/factsheets/circadianrhythm.pdf)

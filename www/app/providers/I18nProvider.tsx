@@ -1,22 +1,7 @@
 // app/providers/I18nProvider.tsx
 "use client";
 import React, { createContext, useContext, useEffect, useMemo, useState } from "react";
-
-// Supported languages
-export type Lang =
-  | "ar"
-  | "de"
-  | "en"
-  | "es"
-  | "fr"
-  | "hi"
-  | "ja"
-  | "ko"
-  | "nb"
-  | "pt-BR"
-  | "ru"
-  | "sk"
-  | "zh";
+import { DEFAULT_LANG, Lang, SUPPORTED_LANGS, isLang } from "@/lib/lang";
 
 interface I18nContextShape {
   lang: Lang;
@@ -29,27 +14,6 @@ const I18nCtx = createContext<I18nContextShape>({
   dict: {},
   setLang: () => {},
 });
-
-// Språk som støttes
-const SUPPORTED: Lang[] = [
-  "ar",
-  "de",
-  "en",
-  "es",
-  "fr",
-  "hi",
-  "ja",
-  "ko",
-  "nb",
-  "pt-BR",
-  "ru",
-  "sk",
-  "zh",
-];
-
-function isLang(x: unknown): x is Lang {
-  return typeof x === "string" && SUPPORTED.includes(x as Lang);
-}
 
 function isRTL(lang: Lang): boolean {
   return lang === "ar"; // utvid hvis du legger til hebraisk, persisk osv.
@@ -69,24 +33,24 @@ function detectLangFromNavigator(): Lang {
     return "pt-BR";
   }
   for (const cand of langs) {
-    const code = SUPPORTED.find((s) => cand.startsWith(s.toLowerCase()));
+    const code = SUPPORTED_LANGS.find((s) => cand.startsWith(s.toLowerCase()));
     if (code) return code;
   }
-  return "en";
+  return DEFAULT_LANG;
 }
 
 function getInitialLang(): Lang {
-  // 1) Persisted user choice
-  try {
-    const saved = localStorage.getItem("lang");
-    if (isLang(saved)) return saved;
-  } catch {}
-  // 2) From <html data-lang|lang>
+  // 1) From <html data-lang|lang> (URL locale should win)
   if (typeof document !== "undefined") {
     const el = document.documentElement;
     const fromAttr = el.getAttribute("data-lang") || el.lang;
     if (isLang(fromAttr)) return fromAttr;
   }
+  // 2) Persisted user choice
+  try {
+    const saved = localStorage.getItem("lang");
+    if (isLang(saved)) return saved;
+  } catch {}
   // 3) Browser
   return detectLangFromNavigator();
 }
@@ -99,7 +63,7 @@ async function fetchDict(lang: Lang) {
 
 export function I18nProvider({ children }: { children: React.ReactNode }) {
   const [lang, setLangState] = useState<Lang>(() => {
-    if (typeof window === "undefined") return "en"; // SSR fallback
+    if (typeof window === "undefined") return DEFAULT_LANG; // SSR fallback
     return getInitialLang();
   });
   const [dict, setDict] = useState<any>({});
