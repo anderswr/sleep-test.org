@@ -13,7 +13,11 @@
       "cta": "Commencer le test",
       "example": "Voir un exemple de rapport",
       "tests_count_title": "Tests de sommeil complétés",
-      "tests_count_caption": "personnes ont déjà testé leur sommeil avec cet outil gratuit et anonyme."
+      "tests_count_caption": "personnes ont déjà testé leur sommeil avec cet outil gratuit et anonyme.",
+      "seo_paragraphs": [
+        "Sleep Test est un test de sommeil gratuit et anonyme qui prend environ 5 minutes. Aucune connexion, e‑mail ou nom requis. Après 37 questions rapides, vous recevez un rapport personnalisé de qualité du sommeil avec score, tendances et conseils concrets.",
+        "Utilisez le rapport pour comprendre vos habitudes de sommeil, suivre les changements dans le temps et partager les résultats si vous le souhaitez. Le test est simple et fondé sur la science, afin que vous puissiez comparer plus tard avec le même identifiant unique. Si vous vous intéressez à l’hygiène du sommeil, à l’insomnie, à la somnolence diurne ou au travail en horaires décalés, Sleep Test peut vous guider."
+      ]
     },
     "privacy": {
       "card": {
@@ -109,6 +113,15 @@
       "green": "Vert",
       "yellow": "Jaune",
       "red": "Rouge"
+    },
+    "ad": {
+      "card": {
+        "title": "Un test de sommeil simple et anonyme — en plusieurs langues",
+        "text": "Répondez à quelques questions rapides et obtenez un rapport de sommeil clair et personnalisé avec des conseils pratiques utilisables immédiatement. Aucune inscription, e-mail ou nom requis. Vous recevez un identifiant unique à conserver et à comparer plus tard — partagez vos résultats sur les réseaux sociaux pour suivre les changements au fil du temps."
+      }
+    },
+    "brand": {
+      "logo_alt": "Logo Sleep Test"
     }
   },
   "about": {
@@ -319,6 +332,12 @@
       "shift_gradual": "Décalez l’heure du coucher/réveil de 15 min tous les 2–3 jours.",
       "morning_light": "Lumière matinale pendant 10–30 minutes.",
       "maintain": "Maintenez une fenêtre de sommeil stable si possible."
+    }
+  },
+  "seo": {
+    "home": {
+      "title": "Sleep Test – rapport de qualité du sommeil gratuit en 5 minutes, sans connexion",
+      "description": "Faites le Sleep Test gratuitement en 5–10 minutes. Répondez à 37 questions rapides et obtenez un rapport personnalisé de qualité du sommeil avec des conseils pratiques."
     }
   }
 }

@@ -13,7 +13,11 @@
       "cta": "Start the test",
       "example": "View example report",
       "tests_count_title": "Completed sleep tests",
-      "tests_count_caption": "people have already tested their sleep with this free, anonymous tool."
+      "tests_count_caption": "people have already tested their sleep with this free, anonymous tool.",
+      "seo_paragraphs": [
+        "Sleep Test is a free, anonymous sleep test that takes about 5 minutes. There is no login, email, or name required. After 37 quick questions you receive a personalized sleep quality report with your sleep score, key patterns, and practical tips you can use right away.",
+        "Use the report to understand sleep habits, track changes over time, and share results if you want. The test is simple and science‑based, so you can compare later with the same unique ID. If you are curious about sleep hygiene, insomnia, daytime sleepiness, or shift work, Sleep Test helps you find next steps."
+      ]
     },
     "privacy": {
       "card": {
@@ -123,6 +127,15 @@
       "green": "Green",
       "yellow": "Yellow",
       "red": "Red"
+    },
+    "ad": {
+      "card": {
+        "title": "A simple, anonymous sleep test — in multiple languages",
+        "text": "Answer a few quick questions and get a clear, personalized sleep report with practical tips you can use right away. No sign-up, mail or name required. You receive a unique ID to save, compare later — share your results on social media to track changes over time."
+      }
+    },
+    "brand": {
+      "logo_alt": "Sleep Test logo"
     }
   },
   "about": {
@@ -333,6 +346,12 @@
       "shift_gradual": "Shift bedtime/wake time gradually by 15 min every 2–3 days.",
       "morning_light": "Get morning light for 10–30 minutes.",
       "maintain": "Maintain a stable sleep window when possible."
+    }
+  },
+  "seo": {
+    "home": {
+      "title": "Sleep Test – Free, no-login 5-minute sleep quality report",
+      "description": "Take a free Sleep Test in 5–10 minutes. Answer 37 quick questions and get a personalized sleep quality report with practical tips."
     }
   }
 }

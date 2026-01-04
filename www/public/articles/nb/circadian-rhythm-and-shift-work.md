@@ -25,7 +25,7 @@ Noen er naturlig mer våkne om kvelden og senere på natten.
 - Følelse av å ikke være uthvilt om morgenen  
 
 Dette handler ofte om **kronotypeforskjeller**, ikke dårlig søvndisiplin  
-([National Sleep Foundation](https://www.thensf.org/what-is-circadian-rhythm/)).
+([National Sleep Foundation](https://www.sleepfoundation.org/circadian-rhythm)).
 
 ---
 
@@ -69,5 +69,5 @@ Når du forstår døgnklokken din, kan du velge strategier som jobber *med* biol
 
 ### Kilder og videre lesning
 - [CDC: Shift work and health](https://www.cdc.gov/niosh/topics/shiftwork/)  
-- [National Sleep Foundation: Circadian rhythm](https://www.thensf.org/what-is-circadian-rhythm/)  
+- [National Sleep Foundation: Circadian rhythm](https://www.sleepfoundation.org/circadian-rhythm)  
 - [American Academy of Sleep Medicine: Circadian rhythm](https://aasm.org/resources/factsheets/circadianrhythm.pdf)

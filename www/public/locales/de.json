@@ -13,7 +13,11 @@
       "cta": "Test starten",
       "example": "Beispielbericht anzeigen",
       "tests_count_title": "Abgeschlossene Schlaftests",
-      "tests_count_caption": "Menschen haben bereits ihren Schlaf mit diesem kostenlosen, anonymen Tool getestet."
+      "tests_count_caption": "Menschen haben bereits ihren Schlaf mit diesem kostenlosen, anonymen Tool getestet.",
+      "seo_paragraphs": [
+        "Der Sleep Test ist ein kostenloser und anonymer Schlaftest, der etwa 5 Minuten dauert. Kein Login, keine E‑Mail und kein Name erforderlich. Nach 37 kurzen Fragen erhalten Sie einen persönlichen Schlafqualitätsbericht mit Schlafscore, Mustern und konkreten Tipps.",
+        "Nutzen Sie den Bericht, um Schlafgewohnheiten zu verstehen, Veränderungen im Zeitverlauf zu verfolgen und Ergebnisse bei Bedarf zu teilen. Der Test ist einfach und wissenschaftlich aufgebaut, sodass Sie später mit derselben eindeutigen ID vergleichen können. Wenn Sie sich für Schlafhygiene, Insomnie, Tagesmüdigkeit oder Schichtarbeit interessieren, hilft Ihnen der Sleep Test bei den nächsten Schritten."
+      ]
     },
     "privacy": {
       "card": {
@@ -109,6 +113,15 @@
       "green": "Grün",
       "yellow": "Gelb",
       "red": "Rot"
+    },
+    "ad": {
+      "card": {
+        "title": "Ein einfacher, anonymer Schlaftest — in mehreren Sprachen",
+        "text": "Beantworte ein paar kurze Fragen und erhalte einen klaren, personalisierten Schlafbericht mit praktischen Tipps, die du sofort anwenden kannst. Keine Anmeldung, E-Mail oder Name erforderlich. Du erhältst eine eindeutige ID zum Speichern und späteren Vergleichen — teile deine Ergebnisse in den sozialen Medien, um Veränderungen im Laufe der Zeit zu verfolgen."
+      }
+    },
+    "brand": {
+      "logo_alt": "Sleep Test-Logo"
     }
   },
   "about": {
@@ -319,6 +332,12 @@
       "shift_gradual": "Schlafenszeit/Aufstehzeit schrittweise um 15 Min alle 2–3 Tage verschieben.",
       "morning_light": "Morgenlicht 10–30 Minuten.",
       "maintain": "Wenn möglich ein stabiles Schlaffenster beibehalten."
+    }
+  },
+  "seo": {
+    "home": {
+      "title": "Sleep Test – kostenloser 5‑Minuten‑Schlafqualitätsbericht ohne Login",
+      "description": "Machen Sie den kostenlosen Sleep Test in 5–10 Minuten. Beantworten Sie 37 kurze Fragen und erhalten Sie einen persönlichen Schlafqualitätsbericht mit praktischen Tipps."
     }
   }
 }

@@ -9,7 +9,7 @@
 Hjernen vår styres av en biologisk klokke (døgnrytmen). Den påvirkes av lys, aktivitet, mat og vaner. Ustabile rutiner kan forskyve denne klokken – og gjøre det vanskeligere å sovne eller våkne uthvilt.  
 
 Forskning viser at personer med gode søvnrutiner **sjelden utvikler langvarige søvnproblemer**.  
-([sleepfoundation.org](https://www.sleepfoundation.org/sleep-hygiene?utm_source=chatgpt.com))
+([Sleep Foundation](https://www.sleepfoundation.org/sleep-hygiene))
 
 ---
 
@@ -44,13 +44,13 @@ Hvis du **alltid strever med søvnen** selv om du har gode vaner, kan det være 
 ## Hva forskningen sier
 
 - **Skjermbruk om kvelden** gir kortere og dårligere søvn, spesielt hos unge.  
-  ([sciencedirect.com](https://www.sciencedirect.com/science/article/abs/pii/S2352721821000037?utm_source=chatgpt.com))  
+  ([Sleep Foundation: Sleep hygiene basics](https://www.sleepfoundation.org/sleep-hygiene))  
 
 - **Koffein** selv seks timer før leggetid reduserer søvnlengde og søvnkvalitet.  
-  ([jcsm.aasm.org](https://jcsm.aasm.org/doi/10.5664/jcsm.3170?utm_source=chatgpt.com))  
+  ([American Academy of Sleep Medicine](https://aasm.org/))  
 
 - **Alkohol** gir mer oppstykket søvn og øker risiko for snorking/pustestopp.  
-  ([sleepfoundation.org](https://www.sleepfoundation.org/nutrition/alcohol-and-sleep?utm_source=chatgpt.com))
+  ([NHS: How to get to sleep](https://www.nhs.uk/every-mind-matters/mental-health-issues/sleep/))
 
 ---
 
@@ -64,9 +64,10 @@ Hvis du **alltid strever med søvnen** selv om du har gode vaner, kan det være 
 
 ## Kilder og videre lesning
 
-- Sleep Foundation: *Sleep Hygiene* ([sleepfoundation.org](https://www.sleepfoundation.org/sleep-hygiene?utm_source=chatgpt.com))  
-- American Academy of Sleep Medicine: *Caffeine Effects on Sleep* ([jcsm.aasm.org](https://jcsm.aasm.org/doi/10.5664/jcsm.3170?utm_source=chatgpt.com))  
-- Sleep Foundation: *Alcohol and Sleep* ([sleepfoundation.org](https://www.sleepfoundation.org/nutrition/alcohol-and-sleep?utm_source=chatgpt.com))  
-- ScienceDirect: *Evening screen use and sleep* ([sciencedirect.com](https://www.sciencedirect.com/science/article/abs/pii/S2352721821000037?utm_source=chatgpt.com))
+- [Sleep Foundation](https://www.sleepfoundation.org/sleep-hygiene)  
+- [American Academy of Sleep Medicine](https://aasm.org/)  
+- [Sleep Foundation: Sleep hygiene basics](https://www.sleepfoundation.org/sleep-hygiene)  
+- [NHS: How to get to sleep](https://www.nhs.uk/every-mind-matters/mental-health-issues/sleep/)  
+- [American Academy of Sleep Medicine: CBT-I](https://aasm.org/resources/factsheets/cbtinsomnia.pdf)
 
 ---
