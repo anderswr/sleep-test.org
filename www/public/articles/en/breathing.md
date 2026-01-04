@@ -51,7 +51,7 @@ These repeated interruptions fragment sleep, lower oxygen levels, and can strain
 If your partner notices **breathing pauses**, or if you’re very tired despite long nights in bed, talk to your doctor.  
 Sleep apnea is treatable, often with CPAP therapy (a device that keeps airways open) or dental devices.
 
-([Sleep Foundation](https://www.sleepfoundation.org/sleep-apnea))
+([Cleveland Clinic](https://my.clevelandclinic.org/health/treatments/22043-cpap-machine))
 
 ---
 
@@ -64,6 +64,6 @@ Getting it checked could improve not only your sleep, but also your long-term he
 ---
 
 ### Further reading
-- [American Academy of Sleep Medicine](https://aasm.org/)  
+- [WebMD: Breathing Techniques for Sleep](https://www.webmd.com/sleep-disorders/breathing-techniques-sleep)  
 - [NHS: Sleep apnea](https://www.nhs.uk/conditions/sleep-apnoea/)  
 - [Sleep Foundation: Sleep apnea guide](https://www.sleepfoundation.org/sleep-apnea)  

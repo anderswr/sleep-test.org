@@ -10,7 +10,7 @@ A stable routine helps your body clock (circadian rhythm) know when to be alert 
 Your brain and body thrive on rhythm. Going to bed and waking up at roughly the same time every day anchors your biological clock.  
 Irregular schedules, especially “social jet lag” (staying up late and sleeping in on weekends), can make Mondays harder, reduce alertness, and even impact long-term health.
 
-> Research shows that irregular sleep patterns are linked to higher risk of obesity, diabetes, and mood problems ([Harvard Medical School](https://health.harvard.edu/staying-healthy/regular-sleep-wake-rhythm-and-health)).
+> Research shows that irregular sleep patterns are linked to higher risk of obesity, diabetes, and mood problems ([NHLBI](https://www.nhlbi.nih.gov/news/2019/irregular-sleep-patterns-linked-higher-risk-metabolic-disorders)).
 
 ---
 
