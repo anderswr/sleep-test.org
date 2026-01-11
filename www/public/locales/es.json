@@ -9,13 +9,13 @@
     },
     "home": {
       "title": "Prueba de sueño gratuita — obtén tu informe personalizado (beta)",
-      "pitch": "Responde 37 preguntas rápidas en 5–10 minutos. Sin costo, sin registro. Obtén un informe claro, basado en la ciencia, con explicaciones y consejos prácticos.",
+      "pitch": "Responde 39 preguntas rápidas en 5–10 minutos. Sin costo, sin registro. Obtén un informe claro, basado en la ciencia, con explicaciones y consejos prácticos.",
       "cta": "Comenzar la prueba",
       "example": "Ver informe de ejemplo",
       "tests_count_title": "Pruebas de sueño completadas",
       "tests_count_caption": "personas ya han evaluado su sueño con esta herramienta gratuita y anónima.",
       "seo_paragraphs": [
-        "Sleep Test es una prueba de sueño gratuita y anónima que tarda unos 5 minutos. No requiere inicio de sesión, correo ni nombre. Después de 37 preguntas rápidas recibes un informe personalizado de calidad del sueño con puntuación, patrones y consejos prácticos.",
+        "Sleep Test es una prueba de sueño gratuita y anónima que tarda unos 5 minutos. No requiere inicio de sesión, correo ni nombre. Después de 39 preguntas rápidas recibes un informe personalizado de calidad del sueño con puntuación, patrones y consejos prácticos.",
         "Usa el informe para comprender hábitos de sueño, seguir cambios con el tiempo y compartir resultados si lo deseas. La prueba está diseñada para ser simple y basada en la evidencia, para que puedas comparar más adelante con el mismo ID único. Si te interesa la higiene del sueño, el insomnio, la somnolencia diurna o el trabajo por turnos, Sleep Test te ayuda a avanzar."
       ]
     },
@@ -172,7 +172,7 @@
       "desc": "Duración y regularidad."
     },
     "insomnia": {
-      "name": "Conciliar el sueño & noche",
+      "name": "Conciliar el sueño por la noche",
       "desc": "Inicio del sueño, despertares, madrugada."
     },
     "quality": {
@@ -192,7 +192,7 @@
       "desc": "Luz, ruido, temperatura, cama."
     },
     "breathing": {
-      "name": "Ronquidos & señales respiratorias",
+      "name": "Ronquidos y señales respiratorias",
       "desc": "Posibles signos de apnea del sueño."
     },
     "bloodpressure": {
@@ -236,7 +236,9 @@
       "late_caffeine": "Tomo café/bebidas energéticas tarde en el día.",
       "alcohol_near_bed": "Bebo alcohol cerca de la hora de dormir.",
       "big_meal_late": "Ceno comidas pesadas tarde en la noche.",
-      "hard_exercise_late": "Hago ejercicio intenso justo antes de dormir."
+      "hard_exercise_late": "Hago ejercicio intenso justo antes de dormir.",
+      "energy_drink_freq": "¿Con qué frecuencia tomas bebidas energéticas (por ejemplo Monster, Red Bull o similares) para estar despierto o pasar el día?",
+      "energy_drink_time": "¿Con qué frecuencia tomas bebidas energéticas por la tarde o noche (después de las 15–16 h)?"
     },
     "environment": {
       "too_light_noise_temp": "El dormitorio suele ser demasiado luminoso, ruidoso o con mala temperatura.",
@@ -303,7 +305,12 @@
       "screens_off_60": "Reduce o evita pantallas durante los últimos 60 minutos antes de acostarte.",
       "limit_caffeine": "Evita cafeína después de ~14–16 h (6–8 horas antes de dormir).",
       "no_alcohol_late": "Evita alcohol cerca de la hora de dormir — fragmenta el sueño.",
-      "no_big_meals_late": "Evita comidas grandes y pesadas justo antes de dormir; elige un snack ligero si lo necesitas."
+      "no_big_meals_late": "Evita comidas grandes y pesadas justo antes de dormir; elige un snack ligero si lo necesitas.",
+      "energy_cutoff": "Establece un límite de cafeína: evita las energéticas después de primera hora de la tarde (p. ej., 14–15 h). La cafeína puede durar 6–8 horas.",
+      "energy_swap": "Sustituye, no solo elimines: cambia una energética diaria por una opción con menos cafeína (té, agua con gas o agua + comida).",
+      "energy_booster": "Usa activadores sin cafeína: algo de luz natural, una caminata de 5–10 min o estiramientos breves.",
+      "energy_keep_timing": "Mantén tu consumo temprano de cafeína para proteger el sueño.",
+      "energy_hidden_caffeine": "Atención a la cafeína oculta en refrescos, pre‑entrenos y cafés fríos."
     },
     "environment": {
       "keep_cool_dark": "Mantén el dormitorio fresco, oscuro y ordenado – haz de la cama una señal de sueño.",
@@ -337,7 +344,7 @@
   "seo": {
     "home": {
       "title": "Sleep Test: informe de calidad del sueño gratis, sin inicio de sesión, en 5 minutos",
-      "description": "Realiza el Sleep Test gratis en 5–10 minutos. Responde 37 preguntas rápidas y obtén un informe personalizado de calidad del sueño con consejos prácticos."
+      "description": "Realiza el Sleep Test gratis en 5–10 minutos. Responde 39 preguntas rápidas y obtén un informe personalizado de calidad del sueño con consejos prácticos."
     }
   }
 }
