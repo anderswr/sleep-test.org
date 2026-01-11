@@ -53,7 +53,9 @@
       "lookup_hint": "Po dokončení testu dostanete ID. Je anonymné a svoj report si môžete otvoriť kedykoľvek. Vložte svoje ID na zobrazenie reportu.",
       "id_placeholder": "Vaše ID",
       "disclaimer2": "Problémy so spánkom sa môžu líšiť aj podľa trvania. Krátkodobé ťažkosti so spánkom často súvisia so stresom, rutinami alebo dočasnými zmenami, zatiaľ čo dlhodobejšie problémy so spánkom môžu mať úžitok zo štruktúrovanej podpory. Ak problémy so spánkom pretrvávajú v čase, zvážte vyhľadanie usmernenia u kvalifikovaného zdravotníckeho odborníka.",
-      "not_answered": "Nezodpovedané"
+      "not_answered": "Nezodpovedané",
+      "sharebar": "Zdieľať výsledky",
+      "sharebartxt": "Zdieľajte ich so sebou, aby ste ľahšie našli predchádzajúce výsledky a porovnali ich. Výsledky môžete tiež zdieľať a porovnať s niekým, koho poznáte."
     },
     "articles": {
       "minutes": {
