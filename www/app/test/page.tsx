@@ -129,11 +129,11 @@ export default function TestPage() {
                       value={(answers[q.id] as LikertValue) ?? null}
                       onChange={setLikert}
                       labels={{
-                        1: t(dict, "likert.1", "Aldri / Ikke i det hele tatt"),
-                        2: t(dict, "likert.2", "Sjelden"),
-                        3: t(dict, "likert.3", "Av og til"),
-                        4: t(dict, "likert.4", "Ofte"),
-                        5: t(dict, "likert.5", "Svært ofte"),
+                        1: t(dict, "likert.1", "Never"),
+                        2: t(dict, "likert.2", "Rarely"),
+                        3: t(dict, "likert.3", "Sometimes"),
+                        4: t(dict, "likert.4", "Often"),
+                        5: t(dict, "likert.5", "Very often"),
                       }}
                     />
                   </>
@@ -146,13 +146,13 @@ export default function TestPage() {
             {/* Navigasjon */}
             <div className="stage-controls" aria-busy={submitting}>
               <button className="btn" onClick={prev} disabled={isFirst || submitting}>
-                {t(dict, "ui.common.back", "Tilbake")}
+                {t(dict, "ui.common.back", "Back")}
               </button>
 
               {/* “Neste” er tilgjengelig for de som vil trykke; auto-next skjer uansett ved valg */}
               {!isLast ? (
                 <button className="btn primary" onClick={next} disabled={!isAnswered || submitting}>
-                  {t(dict, "ui.common.next", "Neste")}
+                  {t(dict, "ui.common.next", "Next")}
                 </button>
               ) : (
                 <button
@@ -160,7 +160,7 @@ export default function TestPage() {
                   onClick={submit}
                   disabled={!isAnswered || submitting}
                 >
-                  {submitting ? t(dict, "ui.common.sending", "Sender…") : t(dict, "test.submit", "Send inn")}
+                  {submitting ? t(dict, "ui.common.sending", "Sending…") : t(dict, "test.submit", "Submit")}
                 </button>
               )}
             </div>

@@ -9,13 +9,13 @@
     },
     "home": {
       "title": "Kostenloser Schlaftest — erhalten Sie Ihren persönlichen Bericht (Beta)",
-      "pitch": "Beantworten Sie 37 kurze Fragen in 5–10 Minuten. Keine Kosten, keine Registrierung. Erhalten Sie einen klaren, wissenschaftlich fundierten Bericht mit Erklärungen und praktischen Tipps.",
+      "pitch": "Beantworten Sie 39 kurze Fragen in 5–10 Minuten. Keine Kosten, keine Registrierung. Erhalten Sie einen klaren, wissenschaftlich fundierten Bericht mit Erklärungen und praktischen Tipps.",
       "cta": "Test starten",
       "example": "Beispielbericht anzeigen",
       "tests_count_title": "Abgeschlossene Schlaftests",
       "tests_count_caption": "Menschen haben bereits ihren Schlaf mit diesem kostenlosen, anonymen Tool getestet.",
       "seo_paragraphs": [
-        "Der Sleep Test ist ein kostenloser und anonymer Schlaftest, der etwa 5 Minuten dauert. Kein Login, keine E‑Mail und kein Name erforderlich. Nach 37 kurzen Fragen erhalten Sie einen persönlichen Schlafqualitätsbericht mit Schlafscore, Mustern und konkreten Tipps.",
+        "Der Sleep Test ist ein kostenloser und anonymer Schlaftest, der etwa 5 Minuten dauert. Kein Login, keine E‑Mail und kein Name erforderlich. Nach 39 kurzen Fragen erhalten Sie einen persönlichen Schlafqualitätsbericht mit Schlafscore, Mustern und konkreten Tipps.",
         "Nutzen Sie den Bericht, um Schlafgewohnheiten zu verstehen, Veränderungen im Zeitverlauf zu verfolgen und Ergebnisse bei Bedarf zu teilen. Der Test ist einfach und wissenschaftlich aufgebaut, sodass Sie später mit derselben eindeutigen ID vergleichen können. Wenn Sie sich für Schlafhygiene, Insomnie, Tagesmüdigkeit oder Schichtarbeit interessieren, hilft Ihnen der Sleep Test bei den nächsten Schritten."
       ]
     },
@@ -84,7 +84,7 @@
           "teaser": "Was „Qualität“ wirklich bedeutet, häufige Störfaktoren und wie man sie stetig verbessert."
         },
         "daytime": {
-          "title": "Tag & Schläfrigkeit: mehr wache Stunden",
+          "title": "Tagesschläfrigkeit: mehr wache Stunden",
           "teaser": "Morgenlicht, kurze Bewegungsunterbrechungen und besseres Timing für weniger Dösen und mehr Fokus."
         },
         "hygiene": {
@@ -172,7 +172,7 @@
       "desc": "Länge und Regelmäßigkeit."
     },
     "insomnia": {
-      "name": "Einschlafen & Nacht",
+      "name": "Einschlafen in der Nacht",
       "desc": "Schlafbeginn, Aufwachen, früher Morgen."
     },
     "quality": {
@@ -180,7 +180,7 @@
       "desc": "Wahrgenommene Qualität und Zufriedenheit."
     },
     "daytime": {
-      "name": "Tag & Schläfrigkeit",
+      "name": "Tagesschläfrigkeit",
       "desc": "Schläfrigkeit und Tagesfunktion."
     },
     "hygiene": {
@@ -236,7 +236,9 @@
       "late_caffeine": "Ich trinke spät am Tag Kaffee/Energy-Drinks.",
       "alcohol_near_bed": "Ich trinke Alkohol kurz vor dem Schlafengehen.",
       "big_meal_late": "Ich esse große Mahlzeiten spät am Abend.",
-      "hard_exercise_late": "Ich mache intensive Übungen direkt vor dem Schlafengehen."
+      "hard_exercise_late": "Ich mache intensive Übungen direkt vor dem Schlafengehen.",
+      "energy_drink_freq": "Wie oft trinkst du Energydrinks (z. B. Monster, Red Bull oder Ähnliches), um wach zu bleiben oder durch den Tag zu kommen?",
+      "energy_drink_time": "Wie oft trinkst du Energydrinks am Nachmittag oder Abend (nach ca. 15–16 Uhr)?"
     },
     "environment": {
       "too_light_noise_temp": "Das Schlafzimmer ist oft zu hell, zu laut oder hat die falsche Temperatur.",
@@ -303,7 +305,12 @@
       "screens_off_60": "Vermeiden Sie Bildschirme in den letzten 60 Min. vor dem Schlafengehen.",
       "limit_caffeine": "Vermeiden Sie Koffein nach ca. 14–16 Uhr (6–8 Stunden vor dem Schlafengehen).",
       "no_alcohol_late": "Verzichten Sie auf Alkohol kurz vor dem Schlafengehen – er fragmentiert den Schlaf.",
-      "no_big_meals_late": "Vermeiden Sie große, schwere Mahlzeiten direkt vor dem Schlafengehen; wählen Sie ggf. einen leichten Snack."
+      "no_big_meals_late": "Vermeiden Sie große, schwere Mahlzeiten direkt vor dem Schlafengehen; wählen Sie ggf. einen leichten Snack.",
+      "energy_cutoff": "Setze eine Koffein‑Abschaltzeit: keine Energydrinks mehr nach dem frühen Nachmittag (z. B. 14–15 Uhr). Koffein wirkt 6–8 Stunden.",
+      "energy_swap": "Ersetzen statt streichen: Tausche einen täglichen Energydrink gegen eine koffeinärmere Option (Tee, Sprudelwasser oder Wasser + Essen).",
+      "energy_booster": "Nutze koffeinfreie Wachmacher: kurzes Tageslicht, ein 5–10‑Minuten‑Spaziergang oder leichtes Dehnen.",
+      "energy_keep_timing": "Behalte dein frühes Koffein‑Timing bei, um den Schlaf zu schützen.",
+      "energy_hidden_caffeine": "Achte auf verstecktes Koffein in Limonaden, Pre‑Workout‑Drinks und Eiskaffee."
     },
     "environment": {
       "keep_cool_dark": "Halten Sie das Schlafzimmer kühl, dunkel und aufgeräumt – machen Sie das Bett zu einem Schlafsignal.",
@@ -337,7 +344,7 @@
   "seo": {
     "home": {
       "title": "Sleep Test – kostenloser 5‑Minuten‑Schlafqualitätsbericht ohne Login",
-      "description": "Machen Sie den kostenlosen Sleep Test in 5–10 Minuten. Beantworten Sie 37 kurze Fragen und erhalten Sie einen persönlichen Schlafqualitätsbericht mit praktischen Tipps."
+      "description": "Machen Sie den kostenlosen Sleep Test in 5–10 Minuten. Beantworten Sie 39 kurze Fragen und erhalten Sie einen persönlichen Schlafqualitätsbericht mit praktischen Tipps."
     }
   }
 }

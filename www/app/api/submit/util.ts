@@ -18,7 +18,7 @@ const BY_CAT: Record<CategoryId, string[]> = {
   [CategoryId.Insomnia]:      ["q4", "q5", "q6", "q7", "q8"],
   [CategoryId.Quality]:       ["q9", "q10", "q11"],
   [CategoryId.Daytime]:       ["q12", "q13", "q14"],
-  [CategoryId.Hygiene]:       ["q15", "q16", "q17", "q18", "q19"],
+  [CategoryId.Hygiene]:       ["q15", "q16", "q17", "q18", "q19", "q38", "q39"],
   [CategoryId.Environment]:   ["q20", "q21", "q22"],
   [CategoryId.Breathing]:     ["q23", "q24", "q25"],
   // NEW: Blood pressure lifestyle risk (Likert-only)

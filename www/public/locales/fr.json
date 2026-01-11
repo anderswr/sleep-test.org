@@ -9,13 +9,13 @@
     },
     "home": {
       "title": "Test de sommeil gratuit — obtenez votre rapport personnalisé (bêta)",
-      "pitch": "Répondez à 37 questions rapides en 5 à 10 minutes. Sans coût, sans inscription. Obtenez un rapport clair, basé sur la science, avec des explications et des conseils pratiques.",
+      "pitch": "Répondez à 39 questions rapides en 5 à 10 minutes. Sans coût, sans inscription. Obtenez un rapport clair, basé sur la science, avec des explications et des conseils pratiques.",
       "cta": "Commencer le test",
       "example": "Voir un exemple de rapport",
       "tests_count_title": "Tests de sommeil complétés",
       "tests_count_caption": "personnes ont déjà testé leur sommeil avec cet outil gratuit et anonyme.",
       "seo_paragraphs": [
-        "Sleep Test est un test de sommeil gratuit et anonyme qui prend environ 5 minutes. Aucune connexion, e‑mail ou nom requis. Après 37 questions rapides, vous recevez un rapport personnalisé de qualité du sommeil avec score, tendances et conseils concrets.",
+        "Sleep Test est un test de sommeil gratuit et anonyme qui prend environ 5 minutes. Aucune connexion, e‑mail ou nom requis. Après 39 questions rapides, vous recevez un rapport personnalisé de qualité du sommeil avec score, tendances et conseils concrets.",
         "Utilisez le rapport pour comprendre vos habitudes de sommeil, suivre les changements dans le temps et partager les résultats si vous le souhaitez. Le test est simple et fondé sur la science, afin que vous puissiez comparer plus tard avec le même identifiant unique. Si vous vous intéressez à l’hygiène du sommeil, à l’insomnie, à la somnolence diurne ou au travail en horaires décalés, Sleep Test peut vous guider."
       ]
     },
@@ -96,7 +96,7 @@
           "teaser": "Astuces peu coûteuses pour des nuits plus calmes — obscurité, son et un oreiller vraiment adapté."
         },
         "breathing": {
-          "title": "Ronflements & signaux respiratoires : quand vérifier",
+          "title": "Ronflements et signaux respiratoires : quand vérifier",
           "teaser": "Quand le ronflement est inoffensif, quand il peut s'agir d'apnée du sommeil, et que faire ensuite."
         }
       }
@@ -172,7 +172,7 @@
       "desc": "Durée et régularité."
     },
     "insomnia": {
-      "name": "Endormissement & nuit",
+      "name": "Endormissement la nuit",
       "desc": "Début du sommeil, réveils, matinée précoce."
     },
     "quality": {
@@ -192,7 +192,7 @@
       "desc": "Lumière, bruit, température, lit."
     },
     "breathing": {
-      "name": "Ronflements & signaux respiratoires",
+      "name": "Ronflements et signaux respiratoires",
       "desc": "Signes possibles d'apnée du sommeil."
     },
     "bloodpressure": {
@@ -236,7 +236,9 @@
       "late_caffeine": "Je bois du café/boissons énergétiques tard dans la journée.",
       "alcohol_near_bed": "Je bois de l'alcool près de l'heure du coucher.",
       "big_meal_late": "Je mange de gros repas tard le soir.",
-      "hard_exercise_late": "Je fais de l'exercice intense juste avant de me coucher."
+      "hard_exercise_late": "Je fais de l'exercice intense juste avant de me coucher.",
+      "energy_drink_freq": "À quelle fréquence bois-tu des boissons énergétiques (par ex. Monster, Red Bull ou similaires) pour rester éveillé ou tenir la journée ?",
+      "energy_drink_time": "À quelle fréquence bois-tu des boissons énergétiques l’après‑midi ou le soir (après ~15–16 h) ?"
     },
     "environment": {
       "too_light_noise_temp": "La chambre est souvent trop lumineuse, bruyante ou à une mauvaise température.",
@@ -303,7 +305,12 @@
       "screens_off_60": "Réduisez ou évitez les écrans pendant les 60 dernières minutes avant le coucher.",
       "limit_caffeine": "Évitez la caféine après ~14–16 h (6–8 heures avant le coucher).",
       "no_alcohol_late": "Évitez l'alcool près de l'heure du coucher — il fragmente le sommeil.",
-      "no_big_meals_late": "Évitez les gros repas tard le soir ; préférez une collation légère si nécessaire."
+      "no_big_meals_late": "Évitez les gros repas tard le soir ; préférez une collation légère si nécessaire.",
+      "energy_cutoff": "Fixe une heure limite de caféine : évite les énergétiques après le début d’après‑midi (p. ex. 14–15 h). La caféine peut durer 6–8 h.",
+      "energy_swap": "Remplace plutôt que supprimer : échange une boisson énergétique quotidienne contre une option moins caféinée (thé, eau pétillante, ou eau + nourriture).",
+      "energy_booster": "Utilise des boosts sans caféine : lumière du jour, marche de 5–10 min ou étirements légers.",
+      "energy_keep_timing": "Garde une consommation de caféine tôt dans la journée pour protéger le sommeil.",
+      "energy_hidden_caffeine": "Attention à la caféine cachée dans sodas, pré‑entraînement et cafés glacés."
     },
     "environment": {
       "keep_cool_dark": "Gardez la chambre fraîche, sombre et ordonnée — faites du lit un signal de sommeil.",
@@ -337,7 +344,7 @@
   "seo": {
     "home": {
       "title": "Sleep Test – rapport de qualité du sommeil gratuit en 5 minutes, sans connexion",
-      "description": "Faites le Sleep Test gratuitement en 5–10 minutes. Répondez à 37 questions rapides et obtenez un rapport personnalisé de qualité du sommeil avec des conseils pratiques."
+      "description": "Faites le Sleep Test gratuitement en 5–10 minutes. Répondez à 39 questions rapides et obtenez un rapport personnalisé de qualité du sommeil avec des conseils pratiques."
     }
   }
 }
