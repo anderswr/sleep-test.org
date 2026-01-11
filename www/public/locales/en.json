@@ -9,13 +9,13 @@
     },
     "home": {
       "title": "Free Sleep Test — get your personalized report (beta)",
-      "pitch": "Answer 37 quick questions in 5–10 minutes. No cost, no registration. Get a clear, science-based report with explanations and practical tips.",
+      "pitch": "Answer 39 quick questions in 5–10 minutes. No cost, no registration. Get a clear, science-based report with explanations and practical tips.",
       "cta": "Start the test",
       "example": "View example report",
       "tests_count_title": "Completed sleep tests",
       "tests_count_caption": "people have already tested their sleep with this free, anonymous tool.",
       "seo_paragraphs": [
-        "Sleep Test is a free, anonymous sleep test that takes about 5 minutes. There is no login, email, or name required. After 37 quick questions you receive a personalized sleep quality report with your sleep score, key patterns, and practical tips you can use right away.",
+        "Sleep Test is a free, anonymous sleep test that takes about 5 minutes. There is no login, email, or name required. After 39 quick questions you receive a personalized sleep quality report with your sleep score, key patterns, and practical tips you can use right away.",
         "Use the report to understand sleep habits, track changes over time, and share results if you want. The test is simple and science‑based, so you can compare later with the same unique ID. If you are curious about sleep hygiene, insomnia, daytime sleepiness, or shift work, Sleep Test helps you find next steps."
       ]
     },
@@ -250,7 +250,9 @@
       "late_caffeine": "I drink coffee/energy drinks late in the day.",
       "alcohol_near_bed": "I drink alcohol near bedtime.",
       "big_meal_late": "I eat large meals late in the evening.",
-      "hard_exercise_late": "I exercise hard right before bedtime."
+      "hard_exercise_late": "I exercise hard right before bedtime.",
+      "energy_drink_freq": "How often do you drink energy drinks (for example Monster, Red Bull, or similar) to feel awake or get through the day?",
+      "energy_drink_time": "How often do you drink energy drinks in the afternoon or evening (after about 3–4 PM)?"
     },
     "environment": {
       "too_light_noise_temp": "The bedroom is often too bright, noisy or the wrong temperature.",
@@ -317,7 +319,12 @@
       "screens_off_60": "Go screen-light or screen-free for the last 60 minutes before bed.",
       "limit_caffeine": "Avoid caffeine after ~2–4 pm (6–8 hours before bedtime).",
       "no_alcohol_late": "Skip alcohol close to bedtime – it fragments sleep.",
-      "no_big_meals_late": "Avoid large, heavy meals right before bed; choose a light snack if needed."
+      "no_big_meals_late": "Avoid large, heavy meals right before bed; choose a light snack if needed.",
+      "energy_cutoff": "Set a caffeine cut-off time: stop energy drinks after early afternoon (e.g. 2–3 PM). Caffeine can stay in the body for 6–8 hours.",
+      "energy_swap": "Replace, don’t just remove: switch one daily energy drink to a lower-caffeine option (tea, sparkling water, or water + food).",
+      "energy_booster": "Use non-caffeine boosters: short daylight exposure, a 5–10 minute walk, or a brief stretch can improve alertness.",
+      "energy_keep_timing": "Keep your current caffeine timing to protect sleep quality.",
+      "energy_hidden_caffeine": "Watch for hidden caffeine in sodas, pre-workout drinks, and iced coffees."
     },
     "environment": {
       "keep_cool_dark": "Keep the bedroom cool, dark, and uncluttered – make the bed a sleep cue.",
@@ -351,7 +358,7 @@
   "seo": {
     "home": {
       "title": "Sleep Test – Free, no-login 5-minute sleep quality report",
-      "description": "Take a free Sleep Test in 5–10 minutes. Answer 37 quick questions and get a personalized sleep quality report with practical tips."
+      "description": "Take a free Sleep Test in 5–10 minutes. Answer 39 quick questions and get a personalized sleep quality report with practical tips."
     }
   }
 }

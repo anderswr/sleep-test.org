@@ -40,6 +40,8 @@ export const QUESTION_BANK: Question[] = [
   { id: "q17", kind: "likert", category: CategoryId.Hygiene,   textKey: "q.hygiene.alcohol_near_bed" },
   { id: "q18", kind: "likert", category: CategoryId.Hygiene,   textKey: "q.hygiene.big_meal_late" },
   { id: "q19", kind: "likert", category: CategoryId.Hygiene,   textKey: "q.hygiene.hard_exercise_late" },
+  { id: "q38", kind: "likert", category: CategoryId.Hygiene,   textKey: "q.hygiene.energy_drink_freq" },
+  { id: "q39", kind: "likert", category: CategoryId.Hygiene,   textKey: "q.hygiene.energy_drink_time" },
 
   // 6) Søvnmiljø (Environment)
   { id: "q20", kind: "likert", category: CategoryId.Environment, textKey: "q.environment.too_light_noise_temp" },

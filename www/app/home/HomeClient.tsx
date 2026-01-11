@@ -141,7 +141,7 @@ export default function Home() {
             {t(
               dict,
               "ui.home.pitch",
-              "Answer 37 questions in 5–10 minutes — get a free, practical sleep report."
+              "Answer 39 questions in 5–10 minutes — get a free, practical sleep report."
             )}
           </p>
           <div
