@@ -151,7 +151,10 @@ export default function Home() {
             <Link href="/test" className="btn primary">
               {t(dict, "ui.home.cta", "Start the test")}
             </Link>
-            <Link href="https://sleep-test.org/result/sgBetFGTxra" className="btn">
+            <Link
+              href={t(dict, "ui.home.example_link", "https://sleep-test.org/result/sgBetFGTxra")}
+              className="btn"
+            >
               {t(dict, "ui.home.example", "See sample report")}
             </Link>
           </div>
