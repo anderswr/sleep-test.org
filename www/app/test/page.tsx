@@ -55,7 +55,7 @@ export default function TestPage() {
       const json = (await res.json()) as { id: string };
       window.location.assign(`/result/${json.id}`);
     } catch {
-      setError(t(dict, "ui.common.error_submit", "Kunne ikke sende inn. Prøv igjen."));
+      setError(t(dict, "common.error_submit", "Could not submit. Please try again."));
       submittedRef.current = false;
     } finally {
       setSubmitting(false);
@@ -146,13 +146,13 @@ export default function TestPage() {
             {/* Navigasjon */}
             <div className="stage-controls" aria-busy={submitting}>
               <button className="btn" onClick={prev} disabled={isFirst || submitting}>
-                {t(dict, "ui.common.back", "Back")}
+                {t(dict, "common.back", "Back")}
               </button>
 
               {/* “Neste” er tilgjengelig for de som vil trykke; auto-next skjer uansett ved valg */}
               {!isLast ? (
                 <button className="btn primary" onClick={next} disabled={!isAnswered || submitting}>
-                  {t(dict, "ui.common.next", "Next")}
+                  {t(dict, "common.next", "Next")}
                 </button>
               ) : (
                 <button
@@ -160,7 +160,7 @@ export default function TestPage() {
                   onClick={submit}
                   disabled={!isAnswered || submitting}
                 >
-                  {submitting ? t(dict, "ui.common.sending", "Sending…") : t(dict, "test.submit", "Submit")}
+                  {submitting ? t(dict, "common.sending", "Sending…") : t(dict, "test.submit", "Submit")}
                 </button>
               )}
             </div>

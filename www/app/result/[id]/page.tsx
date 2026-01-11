@@ -297,8 +297,8 @@ export default function ResultPage({ params }: { params: { id: string } }) {
                       {showArticleIcon && (
                         <a
                           href={`/articles/${articleSlug}`}
-                          aria-label={t(dict, "ui.common.read", "Read")}
-                          title={t(dict, "ui.common.read", "Read")}
+                          aria-label={t(dict, "common.read", "Read")}
+                          title={t(dict, "common.read", "Read")}
                           className="cat-card__link"
                           style={{ display: "inline-flex", alignItems: "center" }}
                         >
