@@ -101,7 +101,7 @@ export default function ComparePage() {
               aria-label={t(dict, "ui.compare.id_b", "ID B")}
             />
             <button className="btn primary" onClick={run} disabled={!a || !b || loading}>
-              {loading ? t(dict, "ui.common.sending", "Sender…") : t(dict, "ui.nav.compare", "Compare")}
+              {loading ? t(dict, "common.sending", "Sending…") : t(dict, "ui.nav.compare", "Compare")}
             </button>
           </div>
           {err && <p style={{ color: "var(--bad)", marginTop: 8 }}>{err}</p>}

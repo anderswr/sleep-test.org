@@ -38,7 +38,7 @@ export default function ResultIndex() {
               className="btn primary"
               onClick={() => id && router.push(`/result/${id}`)}
             >
-              {t(dict, "ui.common.read", "Read")}
+              {t(dict, "common.read", "Read")}
             </button>
           </div>
         </section>

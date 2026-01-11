@@ -58,9 +58,14 @@ function pickTipKeys(cat: CategoryId, color: "green" | "orange" | "red"): string
     return ["tips.daytime.morning_light", "tips.daytime.activity_breaks", "tips.daytime.consider_medical"];
   }
   if (cat === CategoryId.Hygiene) {
-    if (color === "green") return ["tips.hygiene.keep_it_up"];
-    if (color === "orange") return ["tips.hygiene.screens_off_60", "tips.hygiene.limit_caffeine"];
-    return ["tips.hygiene.screens_off_60", "tips.hygiene.limit_caffeine", "tips.hygiene.no_alcohol_late"];
+    if (color === "green") return ["tips.hygiene.keep_it_up", "tips.hygiene.energy_keep_timing"];
+    if (color === "orange") return ["tips.hygiene.screens_off_60", "tips.hygiene.limit_caffeine", "tips.hygiene.energy_cutoff"];
+    return [
+      "tips.hygiene.limit_caffeine",
+      "tips.hygiene.energy_cutoff",
+      "tips.hygiene.energy_swap",
+      "tips.hygiene.energy_booster",
+    ];
   }
   if (cat === CategoryId.Environment) {
     if (color === "green") return ["tips.environment.keep_cool_dark"];
@@ -292,8 +297,8 @@ export default function ResultPage({ params }: { params: { id: string } }) {
                       {showArticleIcon && (
                         <a
                           href={`/articles/${articleSlug}`}
-                          aria-label={t(dict, "ui.common.read", "Read")}
-                          title={t(dict, "ui.common.read", "Read")}
+                          aria-label={t(dict, "common.read", "Read")}
+                          title={t(dict, "common.read", "Read")}
                           className="cat-card__link"
                           style={{ display: "inline-flex", alignItems: "center" }}
                         >

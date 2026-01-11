@@ -46,12 +46,11 @@ const bootScript = `
     // ---------- THEME ----------
     // User override: localStorage.theme in {"light","dark","system"}
     var pref = localStorage.getItem("theme");
-    var systemDark = window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches;
     var theme =
       pref === "light" ? "light" :
       pref === "dark"  ? "dark"  :
-      // default to system
-      (systemDark ? "dark" : "light");
+      // default to dark
+      "dark";
 
     // Our CSS defaults to dark unless data-theme="light" is set.
     if (theme === "light") {
