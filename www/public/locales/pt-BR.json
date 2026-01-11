@@ -9,15 +9,16 @@
     },
     "home": {
       "title": "Teste de Sono Gratuito — receba seu relatório personalizado (beta)",
-      "pitch": "Responda 37 perguntas rápidas em 5–10 minutos. Sem custo, sem registro. Receba um relatório claro, baseado em ciência, com explicações e dicas práticas.",
+      "pitch": "Responda 39 perguntas rápidas em 5–10 minutos. Sem custo, sem registro. Receba um relatório claro, baseado em ciência, com explicações e dicas práticas.",
       "cta": "Iniciar o teste",
       "example": "Ver exemplo de relatório",
       "tests_count_title": "Testes de sono concluídos",
       "tests_count_caption": "pessoas já testaram seu sono com esta ferramenta gratuita e anônima.",
       "seo_paragraphs": [
-        "O Sleep Test é um teste de sono gratuito e anônimo que leva cerca de 5 minutos. Não exige login, e‑mail ou nome. Após 37 perguntas rápidas, você recebe um relatório personalizado de qualidade do sono com pontuação, padrões e dicas práticas.",
+        "O Sleep Test é um teste de sono gratuito e anônimo que leva cerca de 5 minutos. Não exige login, e‑mail ou nome. Após 39 perguntas rápidas, você recebe um relatório personalizado de qualidade do sono com pontuação, padrões e dicas práticas.",
         "Use o relatório para entender hábitos de sono, acompanhar mudanças ao longo do tempo e compartilhar resultados se quiser. O teste é simples e baseado em evidências, para que você possa comparar depois com o mesmo ID único. Se você se interessa por higiene do sono, insônia, sonolência diurna ou trabalho em turnos, o Sleep Test ajuda a dar o próximo passo."
-      ]
+      ],
+      "example_link": "https://sleep-test.org/result/sgBetFGTxra"
     },
     "privacy": {
       "card": {
@@ -84,7 +85,7 @@
           "teaser": "O que 'qualidade' realmente significa, fatores que a atrapalham e como melhorá-la de forma consistente."
         },
         "daytime": {
-          "title": "Dia & sonolência: mais horas de alerta",
+          "title": "Sonolência diurna: mais horas de alerta",
           "teaser": "Luz da manhã, pausas com micro-movimentos e melhor programação para menos cochilos e mais foco."
         },
         "hygiene": {
@@ -96,7 +97,7 @@
           "teaser": "Ajustes de baixo custo para noites mais tranquilas — cortinas blackout, controle de som e um travesseiro que realmente funcione."
         },
         "breathing": {
-          "title": "Ronco & sinais respiratórios: quando verificar",
+          "title": "Ronco e sinais respiratórios: quando verificar",
           "teaser": "Quando o ronco é inofensivo, quando pode ser apneia do sono e o que fazer a seguir."
         }
       }
@@ -172,7 +173,7 @@
       "desc": "Duração e regularidade."
     },
     "insomnia": {
-      "name": "Adormecer & noite",
+      "name": "Adormecer à noite",
       "desc": "Início do sono, despertares, manhã precoce."
     },
     "quality": {
@@ -180,7 +181,7 @@
       "desc": "Qualidade percebida e satisfação."
     },
     "daytime": {
-      "name": "Dia & sonolência",
+      "name": "Sonolência diurna",
       "desc": "Sonolência e funcionamento diurno."
     },
     "hygiene": {
@@ -192,7 +193,7 @@
       "desc": "Luz, ruído, temperatura, cama."
     },
     "breathing": {
-      "name": "Ronco & sinais respiratórios",
+      "name": "Ronco e sinais respiratórios",
       "desc": "Possíveis sinais de apneia do sono."
     },
     "bloodpressure": {
@@ -236,7 +237,9 @@
       "late_caffeine": "Bebo café/bebidas energéticas tarde do dia.",
       "alcohol_near_bed": "Bebo álcool perto da hora de dormir.",
       "big_meal_late": "Faço refeições grandes tarde da noite.",
-      "hard_exercise_late": "Faço exercícios intensos logo antes de dormir."
+      "hard_exercise_late": "Faço exercícios intensos logo antes de dormir.",
+      "energy_drink_freq": "Com que frequência você toma bebidas energéticas (como Monster ou Red Bull) para ficar acordado ou aguentar o dia?",
+      "energy_drink_time": "Com que frequência você toma bebidas energéticas à tarde ou à noite (depois de cerca de 15–16 h)?"
     },
     "environment": {
       "too_light_noise_temp": "O quarto é frequentemente muito claro, barulhento ou com temperatura inadequada.",
@@ -303,7 +306,12 @@
       "screens_off_60": "Evite ou reduza telas nos 60 minutos antes de dormir.",
       "limit_caffeine": "Evite cafeína após ~14–16h (6–8h antes de dormir).",
       "no_alcohol_late": "Evite álcool perto da hora de dormir – ele fragmenta o sono.",
-      "no_big_meals_late": "Evite refeições pesadas logo antes de dormir; escolha um lanche leve se necessário."
+      "no_big_meals_late": "Evite refeições pesadas logo antes de dormir; escolha um lanche leve se necessário.",
+      "energy_cutoff": "Defina um horário limite para cafeína: pare com energéticos após o início da tarde (ex.: 14–15 h). A cafeína pode durar 6–8 horas.",
+      "energy_swap": "Troque, não só elimine: substitua uma energética diária por uma opção com menos cafeína (chá, água com gás ou água + comida).",
+      "energy_booster": "Use estimulantes sem cafeína: luz do dia, caminhada de 5–10 min ou alongamento leve.",
+      "energy_keep_timing": "Mantenha a cafeína mais cedo no dia para proteger o sono.",
+      "energy_hidden_caffeine": "Fique atento à cafeína escondida em refrigerantes, pré‑treinos e cafés gelados."
     },
     "environment": {
       "keep_cool_dark": "Mantenha o quarto fresco, escuro e organizado – faça da cama um sinal de sono.",
@@ -337,7 +345,7 @@
   "seo": {
     "home": {
       "title": "Sleep Test – relatório gratuito de qualidade do sono em 5 minutos, sem login",
-      "description": "Faça o Sleep Test grátis em 5–10 minutos. Responda 37 perguntas rápidas e receba um relatório personalizado de qualidade do sono com dicas práticas."
+      "description": "Faça o Sleep Test grátis em 5–10 minutos. Responda 39 perguntas rápidas e receba um relatório personalizado de qualidade do sono com dicas práticas."
     }
   }
 }
