@@ -162,7 +162,7 @@
       "desc": "Lengde og regelmessighet."
     },
     "insomnia": {
-      "name": "Innsovning & natt",
+      "name": "Innsovning om natten",
       "desc": "Sovning, oppvåkninger, tidlig oppvåkning."
     },
     "quality": {
@@ -170,7 +170,7 @@
       "desc": "Opplevd kvalitet og fornøydhet."
     },
     "daytime": {
-      "name": "Dagtid & søvnighet",
+      "name": "Søvnighet på dagtid",
       "desc": "Døsighet og funksjon på dagtid."
     },
     "hygiene": {
@@ -182,7 +182,7 @@
       "desc": "Lys, støy, temperatur, seng."
     },
     "breathing": {
-      "name": "Snorking & pustesignal",
+      "name": "Snorking & pustesignaler",
       "desc": "Mulige tegn på søvnapné."
     },
     "bloodpressure": {

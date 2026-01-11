@@ -84,7 +84,7 @@
           "teaser": "O que 'qualidade' realmente significa, fatores que a atrapalham e como melhorá-la de forma consistente."
         },
         "daytime": {
-          "title": "Dia & sonolência: mais horas de alerta",
+          "title": "Sonolência diurna: mais horas de alerta",
           "teaser": "Luz da manhã, pausas com micro-movimentos e melhor programação para menos cochilos e mais foco."
         },
         "hygiene": {
@@ -96,7 +96,7 @@
           "teaser": "Ajustes de baixo custo para noites mais tranquilas — cortinas blackout, controle de som e um travesseiro que realmente funcione."
         },
         "breathing": {
-          "title": "Ronco & sinais respiratórios: quando verificar",
+          "title": "Ronco e sinais respiratórios: quando verificar",
           "teaser": "Quando o ronco é inofensivo, quando pode ser apneia do sono e o que fazer a seguir."
         }
       }
@@ -172,7 +172,7 @@
       "desc": "Duração e regularidade."
     },
     "insomnia": {
-      "name": "Adormecer & noite",
+      "name": "Adormecer à noite",
       "desc": "Início do sono, despertares, manhã precoce."
     },
     "quality": {
@@ -180,7 +180,7 @@
       "desc": "Qualidade percebida e satisfação."
     },
     "daytime": {
-      "name": "Dia & sonolência",
+      "name": "Sonolência diurna",
       "desc": "Sonolência e funcionamento diurno."
     },
     "hygiene": {
@@ -192,7 +192,7 @@
       "desc": "Luz, ruído, temperatura, cama."
     },
     "breathing": {
-      "name": "Ronco & sinais respiratórios",
+      "name": "Ronco e sinais respiratórios",
       "desc": "Possíveis sinais de apneia do sono."
     },
     "bloodpressure": {

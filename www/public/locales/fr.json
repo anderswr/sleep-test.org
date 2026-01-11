@@ -96,7 +96,7 @@
           "teaser": "Astuces peu coûteuses pour des nuits plus calmes — obscurité, son et un oreiller vraiment adapté."
         },
         "breathing": {
-          "title": "Ronflements & signaux respiratoires : quand vérifier",
+          "title": "Ronflements et signaux respiratoires : quand vérifier",
           "teaser": "Quand le ronflement est inoffensif, quand il peut s'agir d'apnée du sommeil, et que faire ensuite."
         }
       }
@@ -172,7 +172,7 @@
       "desc": "Durée et régularité."
     },
     "insomnia": {
-      "name": "Endormissement & nuit",
+      "name": "Endormissement la nuit",
       "desc": "Début du sommeil, réveils, matinée précoce."
     },
     "quality": {
@@ -192,7 +192,7 @@
       "desc": "Lumière, bruit, température, lit."
     },
     "breathing": {
-      "name": "Ronflements & signaux respiratoires",
+      "name": "Ronflements et signaux respiratoires",
       "desc": "Signes possibles d'apnée du sommeil."
     },
     "bloodpressure": {

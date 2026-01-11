@@ -172,7 +172,7 @@
       "desc": "Duración y regularidad."
     },
     "insomnia": {
-      "name": "Conciliar el sueño & noche",
+      "name": "Conciliar el sueño por la noche",
       "desc": "Inicio del sueño, despertares, madrugada."
     },
     "quality": {
@@ -192,7 +192,7 @@
       "desc": "Luz, ruido, temperatura, cama."
     },
     "breathing": {
-      "name": "Ronquidos & señales respiratorias",
+      "name": "Ronquidos y señales respiratorias",
       "desc": "Posibles signos de apnea del sueño."
     },
     "bloodpressure": {

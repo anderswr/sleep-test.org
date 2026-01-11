@@ -86,7 +86,7 @@
           "teaser": "What “quality” really means, common drags on it, and how to nudge it upward steadily."
         },
         "daytime": {
-          "title": "Daytime & sleepiness: more alert hours",
+          "title": "Daytime sleepiness: more alert hours",
           "teaser": "Morning light, micro-movement breaks, and better timing for less dozing and more focus."
         },
         "hygiene": {
@@ -186,7 +186,7 @@
       "desc": "Length and regularity."
     },
     "insomnia": {
-      "name": "Falling asleep & night",
+      "name": "Falling asleep at night",
       "desc": "Sleep onset, awakenings, early morning."
     },
     "quality": {
@@ -194,7 +194,7 @@
       "desc": "Perceived quality and satisfaction."
     },
     "daytime": {
-      "name": "Daytime & sleepiness",
+      "name": "Daytime sleepiness",
       "desc": "Sleepiness and daytime function."
     },
     "hygiene": {

@@ -84,7 +84,7 @@
           "teaser": "Čo „kvalita“ v skutočnosti znamená, čo ju znižuje a ako ju postupne zlepšovať."
         },
         "daytime": {
-          "title": "Deň a ospalosť: viac bdelých hodín",
+          "title": "Denná ospalosť: viac bdelých hodín",
           "teaser": "Ranné svetlo, mikro-prestávky na pohyb a lepšie načasovanie pre viac sústredenia a menej driemania."
         },
         "hygiene": {
@@ -96,7 +96,7 @@
           "teaser": "Nízkonákladové úpravy pre pokojnejšie noci — zatemnenie, zvuk a skutočne vhodný vankúš."
         },
         "breathing": {
-          "title": "Chrápanie a dýchanie: kedy to skontrolovať",
+          "title": "Chrápanie a dychové signály: kedy to skontrolovať",
           "teaser": "Kedy je chrápanie neškodné, kedy to môže byť spánkové apnoe a čo robiť ďalej."
         }
       }
@@ -172,7 +172,7 @@
       "desc": "Dĺžka a pravidelnosť."
     },
     "insomnia": {
-      "name": "Zaspávanie a noc",
+      "name": "Zaspávanie v noci",
       "desc": "Zaspanie, prebúdzanie, skoré ráno."
     },
     "quality": {
@@ -180,7 +180,7 @@
       "desc": "Vnímaná kvalita a spokojnosť."
     },
     "daytime": {
-      "name": "Deň a ospalosť",
+      "name": "Denná ospalosť",
       "desc": "Ospalosť a denná funkčnosť."
     },
     "hygiene": {
@@ -192,7 +192,7 @@
       "desc": "Svetlo, hluk, teplota, posteľ."
     },
     "breathing": {
-      "name": "Chrápanie a dýchanie",
+      "name": "Chrápanie a dychové signály",
       "desc": "Možné príznaky spánkového apnoe."
     },
     "bloodpressure": {

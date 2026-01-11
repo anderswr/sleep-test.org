@@ -84,7 +84,7 @@
           "teaser": "Was „Qualität“ wirklich bedeutet, häufige Störfaktoren und wie man sie stetig verbessert."
         },
         "daytime": {
-          "title": "Tag & Schläfrigkeit: mehr wache Stunden",
+          "title": "Tagesschläfrigkeit: mehr wache Stunden",
           "teaser": "Morgenlicht, kurze Bewegungsunterbrechungen und besseres Timing für weniger Dösen und mehr Fokus."
         },
         "hygiene": {
@@ -172,7 +172,7 @@
       "desc": "Länge und Regelmäßigkeit."
     },
     "insomnia": {
-      "name": "Einschlafen & Nacht",
+      "name": "Einschlafen in der Nacht",
       "desc": "Schlafbeginn, Aufwachen, früher Morgen."
     },
     "quality": {
@@ -180,7 +180,7 @@
       "desc": "Wahrgenommene Qualität und Zufriedenheit."
     },
     "daytime": {
-      "name": "Tag & Schläfrigkeit",
+      "name": "Tagesschläfrigkeit",
       "desc": "Schläfrigkeit und Tagesfunktion."
     },
     "hygiene": {
