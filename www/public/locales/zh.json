@@ -237,7 +237,7 @@
       "alcohol_near_bed": "我在临近睡前饮酒。",
       "big_meal_late": "我在晚上很晚吃大量食物。",
       "hard_exercise_late": "我在临近睡前进行剧烈运动。",
-      "energy_drink_freq": "你为了保持清醒或撑过一天，会多常喝能量饮料（例如 Monster、Red Bull 或类似饮品）？",
+      "energy_drink_freq": "你为了保持清醒或撑过一天，会多常喝能量饮料（如 Monster 或 Red Bull）？",
       "energy_drink_time": "你在下午或晚上（大约下午3–4点之后）多常喝能量饮料？"
     },
     "environment": {
