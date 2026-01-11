@@ -39,7 +39,7 @@ function getCurrentTheme(): Theme {
   if (typeof window !== "undefined" && window.matchMedia) {
     return window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
   }
-  return "light";
+  return "dark";
 }
 function setTheme(next: Theme) {
   document.documentElement.setAttribute("data-theme", next);
