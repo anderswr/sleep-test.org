@@ -53,7 +53,9 @@
       "lookup_hint": "Wenn Sie einen Test abschließen, erhalten Sie eine ID. Sie ist anonym, und Sie können Ihren Bericht jederzeit öffnen. Fügen Sie Ihre ID ein, um den Bericht anzuzeigen.",
       "id_placeholder": "Ihre ID",
       "disclaimer2": "Schlafprobleme können sich auch in ihrer Dauer unterscheiden. Kurzfristige Schlafschwierigkeiten hängen oft mit Stress, Routinen oder vorübergehenden Veränderungen zusammen, während länger anhaltende Schlafprobleme von einer strukturierten Unterstützung profitieren können. Wenn Schlafprobleme über längere Zeit bestehen, ziehen Sie in Betracht, sich von einer qualifizierten medizinischen Fachkraft beraten zu lassen.",
-      "not_answered": "Nicht beantwortet"
+      "not_answered": "Nicht beantwortet",
+      "sharebar": "Ergebnisse teilen",
+      "sharebartxt": "Teile sie mit dir selbst, damit du frühere Ergebnisse leichter findest und vergleichen kannst. Du kannst die Ergebnisse auch mit jemandem teilen und vergleichen, den du kennst."
     },
     "articles": {
       "minutes": {
