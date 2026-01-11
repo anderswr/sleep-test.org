@@ -237,7 +237,7 @@
       "alcohol_near_bed": "나는 잠자리에 들기 전 술을 마신다.",
       "big_meal_late": "나는 늦은 저녁에 많은 음식을 먹는다.",
       "hard_exercise_late": "나는 잠자리에 들기 직전에 강도 높은 운동을 한다.",
-      "energy_drink_freq": "깨어 있기 위해 또는 하루를 버티기 위해 에너지드링크(예: Monster, Red Bull 등)를 얼마나 자주 마시나요?",
+      "energy_drink_freq": "깨어 있기 위해 또는 하루를 버티기 위해 에너지드링크(예: Monster 또는 Red Bull)를 얼마나 자주 마시나요?",
       "energy_drink_time": "오후나 저녁(대략 오후 3–4시 이후)에 에너지드링크를 얼마나 자주 마시나요?"
     },
     "environment": {

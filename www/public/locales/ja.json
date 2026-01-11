@@ -237,7 +237,7 @@
       "alcohol_near_bed": "寝る前にアルコールを飲みます。",
       "big_meal_late": "夜遅くに大量の食事をとります。",
       "hard_exercise_late": "寝る直前に激しい運動をします。",
-      "energy_drink_freq": "目を覚ますためや1日を乗り切るために、エナジードリンク（例：Monster、Red Bull など）をどのくらい飲みますか？",
+      "energy_drink_freq": "目を覚ますためや1日を乗り切るために、エナジードリンク（MonsterやRed Bullなど）をどのくらい飲みますか？",
       "energy_drink_time": "午後や夕方（おおよそ15〜16時以降）にエナジードリンクをどのくらい飲みますか？"
     },
     "environment": {
