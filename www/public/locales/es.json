@@ -9,13 +9,13 @@
     },
     "home": {
       "title": "Prueba de sueño gratuita — obtén tu informe personalizado (beta)",
-      "pitch": "Responde 39 preguntas rápidas en 5–10 minutos. Sin costo, sin registro. Obtén un informe claro, basado en la ciencia, con explicaciones y consejos prácticos.",
+      "pitch": "Responde 39–42 preguntas rápidas en 5–10 minutos. Sin costo, sin registro. Obtén un informe claro, basado en la ciencia, con explicaciones y consejos prácticos.",
       "cta": "Comenzar la prueba",
       "example": "Ver informe de ejemplo",
       "tests_count_title": "Pruebas de sueño completadas",
       "tests_count_caption": "personas ya han evaluado su sueño con esta herramienta gratuita y anónima.",
       "seo_paragraphs": [
-        "Sleep Test es una prueba de sueño gratuita y anónima que tarda unos 5 minutos. No requiere inicio de sesión, correo ni nombre. Después de 39 preguntas rápidas recibes un informe personalizado de calidad del sueño con puntuación, patrones y consejos prácticos.",
+        "Sleep Test es una prueba de sueño gratuita y anónima que tarda unos 5 minutos. No requiere inicio de sesión, correo ni nombre. Después de 39–42 preguntas rápidas recibes un informe personalizado de calidad del sueño con puntuación, patrones y consejos prácticos.",
         "Usa el informe para comprender hábitos de sueño, seguir cambios con el tiempo y compartir resultados si lo deseas. La prueba está diseñada para ser simple y basada en la evidencia, para que puedas comparar más adelante con el mismo ID único. Si te interesa la higiene del sueño, el insomnio, la somnolencia diurna o el trabajo por turnos, Sleep Test te ayuda a avanzar."
       ]
     },
@@ -49,6 +49,16 @@
         "green": "Lo estás haciendo bien en ",
         "orange": "Tienes margen de mejora en ",
         "red": "Deberías cambiar tus hábitos en "
+      },
+      "hormone": {
+        "title": "Hormonas y sueño",
+        "lead_high": "El sueño puede variar durante las fases hormonales. Tus respuestas sugieren que esto puede afectar tus noches.",
+        "lead_good": "Parece que manejas bien el sueño a lo largo de las fases hormonales.",
+        "tip_variability": "Registrar patrones a lo largo del tiempo puede ayudarte a ver qué afecta más tu sueño.",
+        "tip_night_sweats": "El calor nocturno puede fragmentar el sueño. Pequeños ajustes en la rutina y la ropa de cama pueden ayudar.",
+        "tip_restless_legs": "La inquietud en las piernas al acostarse puede dificultar el sueño. Si es frecuente, considera consultarlo con personal sanitario.",
+        "tip_help": "Si los problemas de sueño persisten o empeoran, considera buscar ayuda.",
+        "tip_keep": "Las rutinas constantes y escuchar las señales del cuerpo ayudan a mantener el sueño estable."
       },
       "lookup_hint": "Cuando completes una prueba recibirás un ID. Es anónimo y puedes abrir tu informe en cualquier momento. Pega tu ID para ver el informe.",
       "id_placeholder": "Tu ID",
@@ -152,7 +162,14 @@
   "test": {
     "title": "Prueba de sueño",
     "submit": "Enviar",
-    "progress": "Progreso"
+    "progress": "Progreso",
+    "gender": {
+      "title": "Sexo",
+      "help": "Lo preguntamos para ofrecer consejos de sueño más relevantes ligados a fases hormonales.",
+      "female": "Mujer",
+      "male": "Hombre",
+      "na": "Prefiero no decirlo"
+    }
   },
   "common": {
     "sending": "Enviando…",
@@ -208,6 +225,10 @@
     "chronotype": {
       "name": "Ritmo circadiano y turnos",
       "desc": "Preferencia vespertina y desajuste del horario de sueño."
+    },
+    "hormone": {
+      "name": "Hormonas y sueño",
+      "desc": "Fases hormonales y variación del sueño."
     }
   },
   "q": {
@@ -264,6 +285,11 @@
       "worry_at_bed": "Las preocupaciones o darle demasiadas vueltas me impiden conciliar el sueño.",
       "stress_affects_sleep": "El estrés en mi vida diaria afecta claramente mi sueño.",
       "hyperarousal": "Me siento tenso, inquieto o “en alerta” cuando intento dormir."
+    },
+    "hormone": {
+      "variability": "Mi sueño varía claramente en distintas fases hormonales.",
+      "night_sweats": "A menudo me despierto por la noche con demasiado calor o sudor.",
+      "restless_legs": "Cuando intento dormir, siento molestia o una fuerte necesidad de mover las piernas."
     },
     "chrono": {
       "evening_type": "Naturalmente me siento más alerta por la noche que por la mañana.",
@@ -346,7 +372,7 @@
   "seo": {
     "home": {
       "title": "Sleep Test: informe de calidad del sueño gratis, sin inicio de sesión, en 5 minutos",
-      "description": "Realiza el Sleep Test gratis en 5–10 minutos. Responde 39 preguntas rápidas y obtén un informe personalizado de calidad del sueño con consejos prácticos."
+      "description": "Realiza el Sleep Test gratis en 5–10 minutos. Responde 39–42 preguntas rápidas y obtén un informe personalizado de calidad del sueño con consejos prácticos."
     }
   }
 }

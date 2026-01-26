@@ -45,7 +45,7 @@ function getHomeCopy(lang: Lang) {
   const fallbackTitle =
     "Sleep Test – Free - No login 5-Minute Sleep Quality Report";
   const fallbackDescription =
-    "Take a free sleep test in 5–10 minutes. Answer 30 simple questions and get an instant report with sleep score, patterns, and practical tips.";
+    "Take a free sleep test in 5–10 minutes. Answer 39–42 simple questions and get an instant report with sleep score, patterns, and practical tips.";
 
   return {
     title: t(dict, "seo.home.title", fallbackTitle) as string,

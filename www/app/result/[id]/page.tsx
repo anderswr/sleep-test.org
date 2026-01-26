@@ -6,8 +6,8 @@ import SiteHeader from "@/components/SiteHeader";
 import SiteFooter from "@/components/SiteFooter";
 import { useI18n } from "@/app/providers/I18nProvider";
 import { t } from "@/lib/i18n";
-import { bucketColor } from "@/lib/scoring";
-import { CategoryId } from "@/lib/types";
+import { bucketColor, severityFromScore } from "@/lib/scoring";
+import { CategoryId, GenderSelection, HormoneResult } from "@/lib/types";
 import { buildCategoryEntries } from "@/lib/result";
 
 type ResultDoc = {
@@ -17,6 +17,8 @@ type ResultDoc = {
   categoryScores: Record<string, number>;      // 0–100 (høyere = verre)
   flags?: { osaSignal?: boolean; excessiveSleepiness?: boolean; highBpRisk?: boolean };
   suggestedTips?: Record<string, string[]>;
+  gender?: GenderSelection | null;
+  hormone?: HormoneResult | null;
 };
 
 function decapitalize(s: string) {
@@ -168,6 +170,21 @@ export default function ResultPage({ params }: { params: { id: string } }) {
 
   const shareTargets = buildShareTargets(shareUrl, shareText);
 
+  const hormoneTips = data?.hormone?.signals
+    ? [
+        data.hormone.signals.variability ? "ui.result.hormone.tip_variability" : null,
+        data.hormone.signals.nightSweats ? "ui.result.hormone.tip_night_sweats" : null,
+        data.hormone.signals.restlessLegs ? "ui.result.hormone.tip_restless_legs" : null,
+        "ui.result.hormone.tip_help",
+      ].filter((key): key is string => Boolean(key))
+    : [];
+  const hormoneTipKeys =
+    data?.hormone?.status === "high"
+      ? hormoneTips
+      : data?.hormone?.status === "low"
+        ? ["ui.result.hormone.tip_keep"]
+        : [];
+
   // Fallback action for IG/TikTok (and a general "copy" if you want to add later)
   async function shareOrCopy(kind: "instagram" | "tiktok" | "copy") {
     try {
@@ -277,7 +294,9 @@ export default function ResultPage({ params }: { params: { id: string } }) {
 
             {/* Kategorier */}
             <section className="grid-cards mt-6">
-              {entries.map(({ id: cat, raw, display, hasAnswer }) => {
+              {entries
+                .filter(({ id }) => (id === CategoryId.Hormone ? data?.gender === "female" : true))
+                .map(({ id: cat, raw, display, hasAnswer }) => {
                 const color =
                   typeof raw === "number"
                     ? (bucketColor(raw).replace("yellow", "orange") as "green" | "orange" | "red")
@@ -292,9 +311,11 @@ export default function ResultPage({ params }: { params: { id: string } }) {
                       : t(dict, `category.${cat}.name`, "");
                 const fallbackTips = pickTipKeys(cat, color as "green" | "orange" | "red");
                 const tipKeys =
-                  data?.suggestedTips?.[cat]?.length
-                    ? data.suggestedTips[cat]
-                    : fallbackTips;
+                  cat === CategoryId.Hormone
+                    ? hormoneTipKeys
+                    : data?.suggestedTips?.[cat]?.length
+                      ? data.suggestedTips[cat]
+                      : fallbackTips;
                 const filteredTipKeys = tipKeys.filter((k) => t(dict, k, "") !== "");
                 const articleSlug = ARTICLE_SLUG_BY_CAT[cat];
                 const showArticleIcon = !!articleSlug;

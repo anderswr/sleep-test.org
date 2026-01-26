@@ -9,13 +9,13 @@
     },
     "home": {
       "title": "Test de sommeil gratuit — obtenez votre rapport personnalisé (bêta)",
-      "pitch": "Répondez à 39 questions rapides en 5 à 10 minutes. Sans coût, sans inscription. Obtenez un rapport clair, basé sur la science, avec des explications et des conseils pratiques.",
+      "pitch": "Répondez à 39–42 questions rapides en 5 à 10 minutes. Sans coût, sans inscription. Obtenez un rapport clair, basé sur la science, avec des explications et des conseils pratiques.",
       "cta": "Commencer le test",
       "example": "Voir un exemple de rapport",
       "tests_count_title": "Tests de sommeil complétés",
       "tests_count_caption": "personnes ont déjà testé leur sommeil avec cet outil gratuit et anonyme.",
       "seo_paragraphs": [
-        "Sleep Test est un test de sommeil gratuit et anonyme qui prend environ 5 minutes. Aucune connexion, e‑mail ou nom requis. Après 39 questions rapides, vous recevez un rapport personnalisé de qualité du sommeil avec score, tendances et conseils concrets.",
+        "Sleep Test est un test de sommeil gratuit et anonyme qui prend environ 5 minutes. Aucune connexion, e‑mail ou nom requis. Après 39–42 questions rapides, vous recevez un rapport personnalisé de qualité du sommeil avec score, tendances et conseils concrets.",
         "Utilisez le rapport pour comprendre vos habitudes de sommeil, suivre les changements dans le temps et partager les résultats si vous le souhaitez. Le test est simple et fondé sur la science, afin que vous puissiez comparer plus tard avec le même identifiant unique. Si vous vous intéressez à l’hygiène du sommeil, à l’insomnie, à la somnolence diurne ou au travail en horaires décalés, Sleep Test peut vous guider."
       ]
     },
@@ -49,6 +49,16 @@
         "green": "Vous vous en sortez bien pour ",
         "orange": "Vous avez une marge d'amélioration pour ",
         "red": "Vous devriez changer vos habitudes pour "
+      },
+      "hormone": {
+        "title": "Hormones et sommeil",
+        "lead_high": "Le sommeil peut varier pendant les phases hormonales. Vos réponses suggèrent que cela peut affecter vos nuits.",
+        "lead_good": "Vous semblez bien gérer votre sommeil au fil des phases hormonales.",
+        "tip_variability": "Suivre les schémas dans le temps peut aider à comprendre ce qui influence le plus votre sommeil.",
+        "tip_night_sweats": "La chaleur nocturne peut fragmenter le sommeil. De petits ajustements de routine et de literie peuvent aider.",
+        "tip_restless_legs": "L’inconfort des jambes au coucher peut rendre l’endormissement difficile. Si cela revient souvent, parlez-en à un professionnel de santé.",
+        "tip_help": "Si les troubles du sommeil persistent ou s’aggravent, envisagez de demander de l’aide.",
+        "tip_keep": "Des routines régulières et l’écoute des signaux du corps aident à garder un sommeil stable."
       },
       "lookup_hint": "Lorsque vous terminez un test, vous recevez un ID. Il est anonyme et vous pouvez ouvrir votre rapport à tout moment. Collez votre ID pour voir le rapport.",
       "id_placeholder": "Votre ID",
@@ -152,7 +162,14 @@
   "test": {
     "title": "Test de sommeil",
     "submit": "Envoyer",
-    "progress": "Progression"
+    "progress": "Progression",
+    "gender": {
+      "title": "Sexe",
+      "help": "Nous demandons cela pour donner des conseils de sommeil plus pertinents liés aux phases hormonales.",
+      "female": "Femme",
+      "male": "Homme",
+      "na": "Préfère ne pas répondre"
+    }
   },
   "common": {
     "sending": "Envoi…",
@@ -208,6 +225,10 @@
     "chronotype": {
       "name": "Rythme circadien et travail posté",
       "desc": "Préférence du soir et décalage de l'horaire de sommeil."
+    },
+    "hormone": {
+      "name": "Hormones et sommeil",
+      "desc": "Phases hormonales et variabilité du sommeil."
     }
   },
   "q": {
@@ -264,6 +285,11 @@
       "worry_at_bed": "Les inquiétudes ou le fait de trop penser m'empêchent de m'endormir.",
       "stress_affects_sleep": "Le stress de ma vie quotidienne affecte clairement mon sommeil.",
       "hyperarousal": "Je me sens tendu, agité ou « sur le qui-vive » quand j'essaie de dormir."
+    },
+    "hormone": {
+      "variability": "Mon sommeil varie clairement selon les phases hormonales.",
+      "night_sweats": "Je me réveille souvent trop chaude ou en sueur la nuit.",
+      "restless_legs": "Quand j’essaie de dormir, j’ai un inconfort ou un fort besoin de bouger les jambes."
     },
     "chrono": {
       "evening_type": "Je me sens naturellement plus alerte le soir que le matin.",
@@ -346,7 +372,7 @@
   "seo": {
     "home": {
       "title": "Sleep Test – rapport de qualité du sommeil gratuit en 5 minutes, sans connexion",
-      "description": "Faites le Sleep Test gratuitement en 5–10 minutes. Répondez à 39 questions rapides et obtenez un rapport personnalisé de qualité du sommeil avec des conseils pratiques."
+      "description": "Faites le Sleep Test gratuitement en 5–10 minutes. Répondez à 39–42 questions rapides et obtenez un rapport personnalisé de qualité du sommeil avec des conseils pratiques."
     }
   }
 }

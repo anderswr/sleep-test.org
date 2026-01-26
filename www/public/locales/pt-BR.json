@@ -9,13 +9,13 @@
     },
     "home": {
       "title": "Teste de Sono Gratuito — receba seu relatório personalizado (beta)",
-      "pitch": "Responda 39 perguntas rápidas em 5–10 minutos. Sem custo, sem registro. Receba um relatório claro, baseado em ciência, com explicações e dicas práticas.",
+      "pitch": "Responda 39–42 perguntas rápidas em 5–10 minutos. Sem custo, sem registro. Receba um relatório claro, baseado em ciência, com explicações e dicas práticas.",
       "cta": "Iniciar o teste",
       "example": "Ver exemplo de relatório",
       "tests_count_title": "Testes de sono concluídos",
       "tests_count_caption": "pessoas já testaram seu sono com esta ferramenta gratuita e anônima.",
       "seo_paragraphs": [
-        "O Sleep Test é um teste de sono gratuito e anônimo que leva cerca de 5 minutos. Não exige login, e‑mail ou nome. Após 39 perguntas rápidas, você recebe um relatório personalizado de qualidade do sono com pontuação, padrões e dicas práticas.",
+        "O Sleep Test é um teste de sono gratuito e anônimo que leva cerca de 5 minutos. Não exige login, e‑mail ou nome. Após 39–42 perguntas rápidas, você recebe um relatório personalizado de qualidade do sono com pontuação, padrões e dicas práticas.",
         "Use o relatório para entender hábitos de sono, acompanhar mudanças ao longo do tempo e compartilhar resultados se quiser. O teste é simples e baseado em evidências, para que você possa comparar depois com o mesmo ID único. Se você se interessa por higiene do sono, insônia, sonolência diurna ou trabalho em turnos, o Sleep Test ajuda a dar o próximo passo."
       ]
     },
@@ -49,6 +49,16 @@
         "green": "Você está indo bem em ",
         "orange": "Você tem espaço para melhorar em ",
         "red": "Você deve mudar seus hábitos em "
+      },
+      "hormone": {
+        "title": "Hormônios e sono",
+        "lead_high": "O sono pode variar durante as fases hormonais. Suas respostas sugerem que isso pode afetar suas noites.",
+        "lead_good": "Você parece lidar bem com o sono ao longo das fases hormonais.",
+        "tip_variability": "Acompanhar padrões ao longo do tempo pode ajudar a ver o que mais afeta seu sono.",
+        "tip_night_sweats": "Calor noturno pode fragmentar o sono. Pequenos ajustes na rotina e na roupa de cama podem ajudar.",
+        "tip_restless_legs": "Inquietação nas pernas ao deitar pode dificultar o sono. Se for frequente, considere conversar com um profissional de saúde.",
+        "tip_help": "Se os problemas de sono persistirem ou piorarem, considere buscar ajuda profissional.",
+        "tip_keep": "Rotinas consistentes e atenção aos sinais do corpo ajudam a manter o sono estável."
       },
       "lookup_hint": "Quando você conclui um teste, recebe um ID. Ele é anônimo e você pode abrir seu relatório a qualquer momento. Cole seu ID para visualizar o relatório.",
       "id_placeholder": "Seu ID",
@@ -152,7 +162,14 @@
   "test": {
     "title": "Teste de sono",
     "submit": "Enviar",
-    "progress": "Progresso"
+    "progress": "Progresso",
+    "gender": {
+      "title": "Sexo",
+      "help": "Perguntamos para oferecer dicas de sono mais relevantes ligadas às fases hormonais.",
+      "female": "Mulher",
+      "male": "Homem",
+      "na": "Prefiro não informar"
+    }
   },
   "common": {
     "sending": "Enviando…",
@@ -208,6 +225,10 @@
     "chronotype": {
       "name": "Ritmo circadiano e turnos",
       "desc": "Preferência noturna e desalinhamento do horário de sono."
+    },
+    "hormone": {
+      "name": "Hormônios e sono",
+      "desc": "Fases hormonais e variação do sono."
     }
   },
   "q": {
@@ -264,6 +285,11 @@
       "worry_at_bed": "Preocupações ou excesso de pensamentos me impedem de pegar no sono.",
       "stress_affects_sleep": "O estresse do dia a dia afeta claramente meu sono.",
       "hyperarousal": "Sinto-me tenso, inquieto ou “em alerta” quando tento dormir."
+    },
+    "hormone": {
+      "variability": "Meu sono varia claramente em diferentes fases hormonais.",
+      "night_sweats": "Costumo acordar com muito calor ou suando à noite.",
+      "restless_legs": "Ao tentar dormir, sinto desconforto ou uma forte vontade de mexer as pernas."
     },
     "chrono": {
       "evening_type": "Naturalmente me sinto mais alerta à noite do que de manhã.",
@@ -346,7 +372,7 @@
   "seo": {
     "home": {
       "title": "Sleep Test – relatório gratuito de qualidade do sono em 5 minutos, sem login",
-      "description": "Faça o Sleep Test grátis em 5–10 minutos. Responda 39 perguntas rápidas e receba um relatório personalizado de qualidade do sono com dicas práticas."
+      "description": "Faça o Sleep Test grátis em 5–10 minutos. Responda 39–42 perguntas rápidas e receba um relatório personalizado de qualidade do sono com dicas práticas."
     }
   }
 }
