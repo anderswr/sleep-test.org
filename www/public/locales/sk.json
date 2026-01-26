@@ -225,6 +225,10 @@
     "chronotype": {
       "name": "Cirkadiánny rytmus a smeny",
       "desc": "Večerný typ a nesúlad času spánku."
+    },
+    "hormone": {
+      "name": "Hormóny a spánok",
+      "desc": "Hormonálne fázy a variabilita spánku."
     }
   },
   "q": {

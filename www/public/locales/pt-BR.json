@@ -225,6 +225,10 @@
     "chronotype": {
       "name": "Ritmo circadiano e turnos",
       "desc": "Preferência noturna e desalinhamento do horário de sono."
+    },
+    "hormone": {
+      "name": "Hormônios e sono",
+      "desc": "Fases hormonais e variação do sono."
     }
   },
   "q": {

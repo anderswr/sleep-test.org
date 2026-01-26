@@ -215,6 +215,10 @@
     "chronotype": {
       "name": "Døgnrytme & skift",
       "desc": "Kveldstype og mismatch med søvnvindu."
+    },
+    "hormone": {
+      "name": "Hormoner og søvn",
+      "desc": "Hormonfaser og variasjon i søvn."
     }
   },
   "q": {

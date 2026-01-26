@@ -170,16 +170,6 @@ export default function ResultPage({ params }: { params: { id: string } }) {
 
   const shareTargets = buildShareTargets(shareUrl, shareText);
 
-  const sleepSeverity = data ? severityFromScore(Number(data.sleepScore)) : "green";
-  const showHormoneHigh =
-    data?.gender === "female" &&
-    data?.hormone?.status === "high" &&
-    sleepSeverity !== "green";
-  const showHormoneGood =
-    data?.gender === "female" &&
-    data?.hormone?.status === "low" &&
-    sleepSeverity === "green";
-
   const hormoneTips = data?.hormone?.signals
     ? [
         data.hormone.signals.variability ? "ui.result.hormone.tip_variability" : null,
@@ -188,7 +178,12 @@ export default function ResultPage({ params }: { params: { id: string } }) {
         "ui.result.hormone.tip_help",
       ].filter((key): key is string => Boolean(key))
     : [];
-  const filteredHormoneTips = hormoneTips.filter((key) => t(dict, key, "") !== "");
+  const hormoneTipKeys =
+    data?.hormone?.status === "high"
+      ? hormoneTips
+      : data?.hormone?.status === "low"
+        ? ["ui.result.hormone.tip_keep"]
+        : [];
 
   // Fallback action for IG/TikTok (and a general "copy" if you want to add later)
   async function shareOrCopy(kind: "instagram" | "tiktok" | "copy") {
@@ -297,36 +292,11 @@ export default function ResultPage({ params }: { params: { id: string } }) {
               </div>
             </article>
 
-            {(showHormoneHigh || showHormoneGood) && (
-              <article className="card mt-6" style={{ padding: 24 }}>
-                <h2 style={{ marginTop: 0 }}>
-                  {t(dict, "ui.result.hormone.title", "Hormoner & søvn")}
-                </h2>
-                {showHormoneHigh ? (
-                  <>
-                    <p>{t(dict, "ui.result.hormone.lead_high", "")}</p>
-                    <ul className="tips-list">
-                      {filteredHormoneTips.map((key) => (
-                        <li key={key}>
-                          <span className="star">*</span> {t(dict, key, key)}
-                        </li>
-                      ))}
-                    </ul>
-                  </>
-                ) : (
-                  <>
-                    <p>{t(dict, "ui.result.hormone.lead_good", "")}</p>
-                    <p className="muted" style={{ marginBottom: 0 }}>
-                      {t(dict, "ui.result.hormone.tip_keep", "")}
-                    </p>
-                  </>
-                )}
-              </article>
-            )}
-
             {/* Kategorier */}
             <section className="grid-cards mt-6">
-              {entries.map(({ id: cat, raw, display, hasAnswer }) => {
+              {entries
+                .filter(({ id }) => (id === CategoryId.Hormone ? data?.gender === "female" : true))
+                .map(({ id: cat, raw, display, hasAnswer }) => {
                 const color =
                   typeof raw === "number"
                     ? (bucketColor(raw).replace("yellow", "orange") as "green" | "orange" | "red")
@@ -341,9 +311,11 @@ export default function ResultPage({ params }: { params: { id: string } }) {
                       : t(dict, `category.${cat}.name`, "");
                 const fallbackTips = pickTipKeys(cat, color as "green" | "orange" | "red");
                 const tipKeys =
-                  data?.suggestedTips?.[cat]?.length
-                    ? data.suggestedTips[cat]
-                    : fallbackTips;
+                  cat === CategoryId.Hormone
+                    ? hormoneTipKeys
+                    : data?.suggestedTips?.[cat]?.length
+                      ? data.suggestedTips[cat]
+                      : fallbackTips;
                 const filteredTipKeys = tipKeys.filter((k) => t(dict, k, "") !== "");
                 const articleSlug = ARTICLE_SLUG_BY_CAT[cat];
                 const showArticleIcon = !!articleSlug;

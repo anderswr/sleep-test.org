@@ -225,6 +225,10 @@
     "chronotype": {
       "name": "Ritmo circadiano y turnos",
       "desc": "Preferencia vespertina y desajuste del horario de sueño."
+    },
+    "hormone": {
+      "name": "Hormonas y sueño",
+      "desc": "Fases hormonales y variación del sueño."
     }
   },
   "q": {

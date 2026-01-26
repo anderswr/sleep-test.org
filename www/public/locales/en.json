@@ -239,6 +239,10 @@
     "chronotype": {
       "name": "Circadian rhythm & shift work",
       "desc": "Evening preference and sleep timing mismatch."
+    },
+    "hormone": {
+      "name": "Hormones & sleep",
+      "desc": "Hormonal phases and sleep variability."
     }
   },
   "q": {

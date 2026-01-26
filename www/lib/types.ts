@@ -25,6 +25,7 @@ export const ALL_CATEGORIES: CategoryId[] = [
   CategoryId.Environment,
   CategoryId.Breathing,
   CategoryId.BloodPressure,
+  CategoryId.Hormone,
   CategoryId.Mental,
   CategoryId.Chronotype,
 ];

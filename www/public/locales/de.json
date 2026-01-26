@@ -225,6 +225,10 @@
     "chronotype": {
       "name": "Zirkadianer Rhythmus & Schichtarbeit",
       "desc": "Abendtyp und Schlafzeit-Mismatch."
+    },
+    "hormone": {
+      "name": "Hormone & Schlaf",
+      "desc": "Hormonphasen und Schlafvariabilität."
     }
   },
   "q": {

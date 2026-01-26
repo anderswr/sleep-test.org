@@ -225,6 +225,10 @@
     "chronotype": {
       "name": "Rythme circadien et travail posté",
       "desc": "Préférence du soir et décalage de l'horaire de sommeil."
+    },
+    "hormone": {
+      "name": "Hormones et sommeil",
+      "desc": "Phases hormonales et variabilité du sommeil."
     }
   },
   "q": {
