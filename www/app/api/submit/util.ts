@@ -122,7 +122,7 @@ export function computeHormoneResult(
   const nightSweats = typeof answers.q41 === "number" && answers.q41 >= 4;
   const restlessLegs = typeof answers.q42 === "number" && answers.q42 >= 4;
   const values = [answers.q40, answers.q41, answers.q42].filter(
-    (v): v is number => typeof v === "number"
+    (v): v is LikertValue => typeof v === "number"
   );
 
   if (!values.length) {
