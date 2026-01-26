@@ -7,6 +7,7 @@ import {
   BANK_VERSION,
   GenderSelection,
   HormoneResult,
+  LikertValue,
 } from "@/lib/types";
 import { computeCategoryScores, computeTotalRaw } from "@/lib/scoring";
 import { computeFlags } from "@/lib/flags";
