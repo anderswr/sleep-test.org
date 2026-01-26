@@ -10,7 +10,7 @@ export const metadata: Metadata = {
   metadataBase: new URL("https://sleep-test.org"),
   title: "Sleep Test – Free - No login 5-Minute Sleep Quality Report",
   description:
-    "Take a free sleep test in 5–10 minutes. Answer 30 simple questions and get an instant report with sleep score, patterns, and practical tips.",
+    "Take a free sleep test in 5–10 minutes. Answer 39–42 simple questions and get an instant report with sleep score, patterns, and practical tips.",
   icons: {
     icon: "/favicon.ico",
     apple: "/favicon.ico",
@@ -22,7 +22,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Sleep Test – Free 5-Minute Sleep Quality Report",
     description:
-      "Take a free sleep test in 5–10 minutes. Answer 30 simple questions and get an instant report with sleep score, patterns, and practical tips.",
+      "Take a free sleep test in 5–10 minutes. Answer 39–42 simple questions and get an instant report with sleep score, patterns, and practical tips.",
     url: "https://sleep-test.org/",
     siteName: "Sleep Test",
     type: "website",
@@ -31,7 +31,7 @@ export const metadata: Metadata = {
     card: "summary",
     title: "Sleep Test – Free 5-Minute Sleep Quality Report",
     description:
-      "Take a free sleep test in 5–10 minutes. Answer 30 simple questions and get an instant report with sleep score, patterns, and practical tips.",
+      "Take a free sleep test in 5–10 minutes. Answer 39–42 simple questions and get an instant report with sleep score, patterns, and practical tips.",
   },
 };
 

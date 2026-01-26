@@ -553,3 +553,51 @@ p { line-height: 1.6; }
   max-width: 760px;
   margin: 0 auto;
 }
+
+/* Gender selection step */
+.gender-step {
+  text-align: left;
+}
+
+.gender-grid {
+  display: grid;
+  gap: 12px;
+}
+
+@media (min-width: 540px) {
+  .gender-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+.gender-option {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 14px;
+  border-radius: 12px;
+  border: 1px solid var(--border, #e5e7eb);
+  background: var(--panel, #fff);
+  color: var(--text, #111);
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.06s ease, border-color 0.2s ease, background 0.2s ease;
+}
+
+.gender-option:hover,
+.gender-option:focus-visible {
+  border-color: var(--accent, #60a5fa);
+  transform: translateY(-1px);
+}
+
+.gender-icon {
+  width: 36px;
+  height: 36px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 999px;
+  border: 1px solid var(--border, #e5e7eb);
+  background: var(--card, #f9fafb);
+  font-size: 1.2rem;
+}

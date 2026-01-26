@@ -9,13 +9,13 @@
     },
     "home": {
       "title": "Kostenloser Schlaftest — erhalten Sie Ihren persönlichen Bericht (Beta)",
-      "pitch": "Beantworten Sie 39 kurze Fragen in 5–10 Minuten. Keine Kosten, keine Registrierung. Erhalten Sie einen klaren, wissenschaftlich fundierten Bericht mit Erklärungen und praktischen Tipps.",
+      "pitch": "Beantworten Sie 39–42 kurze Fragen in 5–10 Minuten. Keine Kosten, keine Registrierung. Erhalten Sie einen klaren, wissenschaftlich fundierten Bericht mit Erklärungen und praktischen Tipps.",
       "cta": "Test starten",
       "example": "Beispielbericht anzeigen",
       "tests_count_title": "Abgeschlossene Schlaftests",
       "tests_count_caption": "Menschen haben bereits ihren Schlaf mit diesem kostenlosen, anonymen Tool getestet.",
       "seo_paragraphs": [
-        "Der Sleep Test ist ein kostenloser und anonymer Schlaftest, der etwa 5 Minuten dauert. Kein Login, keine E‑Mail und kein Name erforderlich. Nach 39 kurzen Fragen erhalten Sie einen persönlichen Schlafqualitätsbericht mit Schlafscore, Mustern und konkreten Tipps.",
+        "Der Sleep Test ist ein kostenloser und anonymer Schlaftest, der etwa 5 Minuten dauert. Kein Login, keine E‑Mail und kein Name erforderlich. Nach 39–42 kurzen Fragen erhalten Sie einen persönlichen Schlafqualitätsbericht mit Schlafscore, Mustern und konkreten Tipps.",
         "Nutzen Sie den Bericht, um Schlafgewohnheiten zu verstehen, Veränderungen im Zeitverlauf zu verfolgen und Ergebnisse bei Bedarf zu teilen. Der Test ist einfach und wissenschaftlich aufgebaut, sodass Sie später mit derselben eindeutigen ID vergleichen können. Wenn Sie sich für Schlafhygiene, Insomnie, Tagesmüdigkeit oder Schichtarbeit interessieren, hilft Ihnen der Sleep Test bei den nächsten Schritten."
       ]
     },
@@ -49,6 +49,16 @@
         "green": "Sie machen es gut bei ",
         "orange": "Sie haben Verbesserungsmöglichkeiten bei ",
         "red": "Sie sollten Ihre Gewohnheiten ändern bei "
+      },
+      "hormone": {
+        "title": "Hormone & Schlaf",
+        "lead_high": "Schlaf kann sich in hormonellen Phasen verändern. Ihre Antworten deuten darauf hin, dass dies Ihre Nächte beeinflusst.",
+        "lead_good": "Sie scheinen den Schlaf auch über hormonelle Phasen hinweg gut zu bewältigen.",
+        "tip_variability": "Das Verfolgen von Mustern über die Zeit kann helfen zu erkennen, was Ihren Schlaf am stärksten beeinflusst.",
+        "tip_night_sweats": "Nächtliche Hitze kann den Schlaf unterbrechen. Kleine Anpassungen der Routine und Bettwäsche können helfen.",
+        "tip_restless_legs": "Unruhe in den Beinen beim Zubettgehen kann das Einschlafen erschweren. Bei häufigen Beschwerden kann ein Gespräch mit medizinischem Fachpersonal hilfreich sein.",
+        "tip_help": "Wenn Schlafprobleme anhalten oder sich verschlimmern, ziehen Sie professionelle Unterstützung in Betracht.",
+        "tip_keep": "Stetige Routinen und das Achten auf Körpersignale helfen, den Schlaf stabil zu halten."
       },
       "lookup_hint": "Wenn Sie einen Test abschließen, erhalten Sie eine ID. Sie ist anonym, und Sie können Ihren Bericht jederzeit öffnen. Fügen Sie Ihre ID ein, um den Bericht anzuzeigen.",
       "id_placeholder": "Ihre ID",
@@ -152,7 +162,14 @@
   "test": {
     "title": "Schlaftest",
     "submit": "Absenden",
-    "progress": "Fortschritt"
+    "progress": "Fortschritt",
+    "gender": {
+      "title": "Geschlecht",
+      "help": "Wir fragen, um relevantere Schlaftipps zu hormonellen Phasen zu geben.",
+      "female": "Frau",
+      "male": "Mann",
+      "na": "Möchte ich nicht angeben"
+    }
   },
   "common": {
     "sending": "Senden…",
@@ -265,6 +282,11 @@
       "stress_affects_sleep": "Stress im Alltag beeinflusst meinen Schlaf deutlich.",
       "hyperarousal": "Ich fühle mich angespannt, unruhig oder „auf Alarm“, wenn ich schlafen will."
     },
+    "hormone": {
+      "variability": "Mein Schlaf variiert deutlich in verschiedenen hormonellen Phasen.",
+      "night_sweats": "Ich wache nachts oft zu warm oder verschwitzt auf.",
+      "restless_legs": "Wenn ich einschlafen will, habe ich Unbehagen oder einen starken Drang, die Beine zu bewegen."
+    },
     "chrono": {
       "evening_type": "Ich fühle mich abends natürlich wacher als morgens.",
       "shift_work": "Ich arbeite häufig Nachtschichten oder wechselnde Schichten.",
@@ -346,7 +368,7 @@
   "seo": {
     "home": {
       "title": "Sleep Test – kostenloser 5‑Minuten‑Schlafqualitätsbericht ohne Login",
-      "description": "Machen Sie den kostenlosen Sleep Test in 5–10 Minuten. Beantworten Sie 39 kurze Fragen und erhalten Sie einen persönlichen Schlafqualitätsbericht mit praktischen Tipps."
+      "description": "Machen Sie den kostenlosen Sleep Test in 5–10 Minuten. Beantworten Sie 39–42 kurze Fragen und erhalten Sie einen persönlichen Schlafqualitätsbericht mit praktischen Tipps."
     }
   }
 }

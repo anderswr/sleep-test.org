@@ -6,8 +6,8 @@ import SiteHeader from "@/components/SiteHeader";
 import SiteFooter from "@/components/SiteFooter";
 import { useI18n } from "@/app/providers/I18nProvider";
 import { t } from "@/lib/i18n";
-import { bucketColor } from "@/lib/scoring";
-import { CategoryId } from "@/lib/types";
+import { bucketColor, severityFromScore } from "@/lib/scoring";
+import { CategoryId, GenderSelection, HormoneResult } from "@/lib/types";
 import { buildCategoryEntries } from "@/lib/result";
 
 type ResultDoc = {
@@ -17,6 +17,8 @@ type ResultDoc = {
   categoryScores: Record<string, number>;      // 0–100 (høyere = verre)
   flags?: { osaSignal?: boolean; excessiveSleepiness?: boolean; highBpRisk?: boolean };
   suggestedTips?: Record<string, string[]>;
+  gender?: GenderSelection | null;
+  hormone?: HormoneResult | null;
 };
 
 function decapitalize(s: string) {
@@ -168,6 +170,26 @@ export default function ResultPage({ params }: { params: { id: string } }) {
 
   const shareTargets = buildShareTargets(shareUrl, shareText);
 
+  const sleepSeverity = data ? severityFromScore(Number(data.sleepScore)) : "green";
+  const showHormoneHigh =
+    data?.gender === "female" &&
+    data?.hormone?.status === "high" &&
+    sleepSeverity !== "green";
+  const showHormoneGood =
+    data?.gender === "female" &&
+    data?.hormone?.status === "low" &&
+    sleepSeverity === "green";
+
+  const hormoneTips = data?.hormone?.signals
+    ? [
+        data.hormone.signals.variability ? "ui.result.hormone.tip_variability" : null,
+        data.hormone.signals.nightSweats ? "ui.result.hormone.tip_night_sweats" : null,
+        data.hormone.signals.restlessLegs ? "ui.result.hormone.tip_restless_legs" : null,
+        "ui.result.hormone.tip_help",
+      ].filter((key): key is string => Boolean(key))
+    : [];
+  const filteredHormoneTips = hormoneTips.filter((key) => t(dict, key, "") !== "");
+
   // Fallback action for IG/TikTok (and a general "copy" if you want to add later)
   async function shareOrCopy(kind: "instagram" | "tiktok" | "copy") {
     try {
@@ -274,6 +296,33 @@ export default function ResultPage({ params }: { params: { id: string } }) {
                 </div>
               </div>
             </article>
+
+            {(showHormoneHigh || showHormoneGood) && (
+              <article className="card mt-6" style={{ padding: 24 }}>
+                <h2 style={{ marginTop: 0 }}>
+                  {t(dict, "ui.result.hormone.title", "Hormoner & søvn")}
+                </h2>
+                {showHormoneHigh ? (
+                  <>
+                    <p>{t(dict, "ui.result.hormone.lead_high", "")}</p>
+                    <ul className="tips-list">
+                      {filteredHormoneTips.map((key) => (
+                        <li key={key}>
+                          <span className="star">*</span> {t(dict, key, key)}
+                        </li>
+                      ))}
+                    </ul>
+                  </>
+                ) : (
+                  <>
+                    <p>{t(dict, "ui.result.hormone.lead_good", "")}</p>
+                    <p className="muted" style={{ marginBottom: 0 }}>
+                      {t(dict, "ui.result.hormone.tip_keep", "")}
+                    </p>
+                  </>
+                )}
+              </article>
+            )}
 
             {/* Kategorier */}
             <section className="grid-cards mt-6">

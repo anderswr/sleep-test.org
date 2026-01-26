@@ -9,13 +9,13 @@
     },
     "home": {
       "title": "Gratis søvntest — få en personlig rapport (beta)",
-      "pitch": "Svar på 39 kjappe spørsmål på 5–10 minutter. Ingen kostnad, ingen registrering. Få en tydelig, kunnskapsbasert rapport med forklaringer og konkrete tips.",
+      "pitch": "Svar på 39–42 kjappe spørsmål på 5–10 minutter. Ingen kostnad, ingen registrering. Få en tydelig, kunnskapsbasert rapport med forklaringer og konkrete tips.",
       "cta": "Start test",
       "example": "Se eksempel på rapport",
       "tests_count_title": "Fullførte søvntester",
       "tests_count_caption": "personer har allerede testet søvnen sin med dette gratis, anonyme verktøyet.",
       "seo_paragraphs": [
-        "Sleep Test er en gratis og anonym søvntest som tar omtrent 5 minutter. Ingen innlogging, e‑post eller navn kreves. Etter 39 korte spørsmål får du en personlig søvnkvalitetsrapport med søvnscore, mønstre og konkrete råd.",
+        "Sleep Test er en gratis og anonym søvntest som tar omtrent 5 minutter. Ingen innlogging, e‑post eller navn kreves. Etter 39–42 korte spørsmål får du en personlig søvnkvalitetsrapport med søvnscore, mønstre og konkrete råd.",
         "Bruk rapporten til å forstå søvnvaner, følge endringer over tid og dele resultatene hvis du vil. Testen er laget for å være enkel og vitenskapelig, slik at du kan sammenligne senere med samme unike ID. Hvis du er nysgjerrig på søvnhygiene, insomni, søvnighet på dagtid eller skiftarbeid, kan Sleep Test hjelpe deg videre."
       ]
     },
@@ -49,6 +49,16 @@
         "green": "Du svarer godt på ",
         "orange": "Du har forbedringspotensial for ",
         "red": "Du bør endre vanene dine for "
+      },
+      "hormone": {
+        "title": "Hormoner og søvn",
+        "lead_high": "Søvn kan variere i hormonelle faser. Svarene dine tyder på at dette kan påvirke nettene dine.",
+        "lead_good": "Du ser ut til å håndtere søvn godt også gjennom hormonelle faser.",
+        "tip_variability": "Å følge med på mønstre over tid kan gjøre det lettere å se hva som påvirker søvnen mest.",
+        "tip_night_sweats": "Varmeepisoder om natten kan gi flere oppvåkninger. Små justeringer i rutiner og sengetøy kan hjelpe.",
+        "tip_restless_legs": "Uro i bena ved leggetid kan gjøre det vanskelig å sovne. Ved hyppige plager kan det være nyttig å vurdere dette med helsepersonell.",
+        "tip_help": "Hvis søvnplagene er vedvarende eller forverres, kan det være lurt å søke hjelp.",
+        "tip_keep": "Jevne rutiner og oppmerksomhet på kroppens signaler kan bidra til å holde søvnen stabil."
       },
       "lookup_hint": "Når du har gjennomført en test får du en ID. Den er anonym, og du kan åpne rapporten når du vil. Lim inn ID-en for å åpne rapporten.",
       "id_placeholder": "Din ID",
@@ -142,7 +152,14 @@
   "test": {
     "title": "Søvntest",
     "submit": "Send inn",
-    "progress": "Fremdrift"
+    "progress": "Fremdrift",
+    "gender": {
+      "title": "Kjønn",
+      "help": "Vi spør for å gi mer presise søvntips knyttet til hormonelle faser.",
+      "female": "Kvinne",
+      "male": "Mann",
+      "na": "Ønsker ikke å oppgi"
+    }
   },
   "common": {
     "sending": "Sender…",
@@ -255,6 +272,11 @@
       "stress_affects_sleep": "Stress i hverdagen påvirker søvnen min tydelig.",
       "hyperarousal": "Jeg føler meg spent, rastløs eller «på alerten» når jeg prøver å sove."
     },
+    "hormone": {
+      "variability": "Søvnen min varierer tydelig i ulike hormonelle faser.",
+      "night_sweats": "Jeg våkner ofte varm eller svett om natten.",
+      "restless_legs": "Når jeg skal sove, får jeg ubehag eller sterk trang til å bevege bena."
+    },
     "chrono": {
       "evening_type": "Jeg føler meg naturlig mer våken om kvelden enn om morgenen.",
       "shift_work": "Jeg jobber ofte nattskift eller roterende skift.",
@@ -336,7 +358,7 @@
   "seo": {
     "home": {
       "title": "Sleep Test – gratis, uten innlogging 5‑minutters søvnkvalitetsrapport",
-      "description": "Ta en gratis Sleep Test på 5–10 minutter. Svar på 39 korte spørsmål og få en personlig søvnkvalitetsrapport med praktiske tips."
+      "description": "Ta en gratis Sleep Test på 5–10 minutter. Svar på 39–42 korte spørsmål og få en personlig søvnkvalitetsrapport med praktiske tips."
     }
   }
 }

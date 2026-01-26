@@ -69,5 +69,10 @@ export const QUESTION_BANK: Question[] = [
   // 10) Døgnrytme & skift (Chronotype)
   { id: "q35", kind: "likert", category: CategoryId.Chronotype, textKey: "q.chrono.evening_type" },
   { id: "q36", kind: "likert", category: CategoryId.Chronotype, textKey: "q.chrono.shift_work" },
-  { id: "q37", kind: "likert", category: CategoryId.Chronotype, textKey: "q.chrono.sleep_window_mismatch" }
+  { id: "q37", kind: "likert", category: CategoryId.Chronotype, textKey: "q.chrono.sleep_window_mismatch" },
+
+  // 11) Kvinnelige hormonfaser (Hormone) — kun ved kvinnelig valg
+  { id: "q40", kind: "likert", category: CategoryId.Hormone, textKey: "q.hormone.variability", femaleOnly: true },
+  { id: "q41", kind: "likert", category: CategoryId.Hormone, textKey: "q.hormone.night_sweats", femaleOnly: true },
+  { id: "q42", kind: "likert", category: CategoryId.Hormone, textKey: "q.hormone.restless_legs", femaleOnly: true }
 ];

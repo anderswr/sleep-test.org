@@ -2,7 +2,7 @@
 import { NextRequest, NextResponse } from "next/server";
 import { getCollection } from "@/lib/db";
 import { computeAllServer } from "../../submit/util"; // samme util som ved submit
-import { AnswerMap } from "@/lib/types";
+import { AnswerMap, GenderSelection } from "@/lib/types";
 
 export const runtime = "nodejs";
 
@@ -31,6 +31,8 @@ export async function GET(_req: NextRequest, { params }: { params: { id: string 
           categoryScores: doc.categoryScores,
           flags: doc.flags ?? { osaSignal: false, excessiveSleepiness: false },
           suggestedTips: doc.suggestedTips ?? {},
+          gender: doc.gender ?? null,
+          hormone: doc.hormone ?? null,
         },
         { status: 200 }
       );
@@ -39,7 +41,8 @@ export async function GET(_req: NextRequest, { params }: { params: { id: string 
     // Eldre/ufullstendige dokumenter: forsøk å recomputere fra answers
     if (doc.answers && typeof doc.answers === "object") {
       const answers = doc.answers as AnswerMap;
-      const computed = await computeAllServer(answers);
+      const gender = (doc.gender ?? null) as GenderSelection | null;
+      const computed = await computeAllServer(answers, gender);
 
       // Valgfritt: oppdatér dokumentet i databasen slik at det er “fremtidssikkert”
       await col.updateOne(
@@ -51,6 +54,8 @@ export async function GET(_req: NextRequest, { params }: { params: { id: string 
             categoryScores: computed.categoryScores,
             flags: computed.flags,
             suggestedTips: computed.suggestedTips,
+            gender: computed.gender ?? gender,
+            hormone: computed.hormone ?? null,
           },
         }
       );
@@ -63,6 +68,8 @@ export async function GET(_req: NextRequest, { params }: { params: { id: string 
           categoryScores: computed.categoryScores,
           flags: computed.flags,
           suggestedTips: computed.suggestedTips,
+          gender: computed.gender ?? gender,
+          hormone: computed.hormone ?? null,
         },
         { status: 200 }
       );
