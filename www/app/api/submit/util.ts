@@ -5,6 +5,9 @@ import {
   CategoryScores,
   ComputedResult,
   BANK_VERSION,
+  GenderSelection,
+  HormoneResult,
+  LikertValue,
 } from "@/lib/types";
 import { computeCategoryScores, computeTotalRaw } from "@/lib/scoring";
 import { computeFlags } from "@/lib/flags";
@@ -23,6 +26,7 @@ const BY_CAT: Record<CategoryId, string[]> = {
   [CategoryId.Breathing]:     ["q23", "q24", "q25"],
   // NEW: Blood pressure lifestyle risk (Likert-only)
   [CategoryId.BloodPressure]: ["q26", "q27", "q28", "q29", "q30"],
+  [CategoryId.Hormone]:       ["q40", "q41", "q42"],
   [CategoryId.Mental]:        ["q31", "q32", "q33", "q34"],
   [CategoryId.Chronotype]:    ["q35", "q36", "q37"],
 };
@@ -34,7 +38,10 @@ const hasAnyAnswer = (answers: AnswerMap, ids: string[]) =>
  * Compute the full result doc from answers.
  * Fields are no longer part of the pipeline.
  */
-export async function computeAllServer(answers: AnswerMap): Promise<ComputedResult> {
+export async function computeAllServer(
+  answers: AnswerMap,
+  gender: GenderSelection | null
+): Promise<ComputedResult> {
   const categoryScores: CategoryScores = computeCategoryScores(answers, BY_CAT);
 
   const includeMental = hasAnyAnswer(answers, BY_CAT[CategoryId.Mental]);
@@ -92,6 +99,8 @@ export async function computeAllServer(answers: AnswerMap): Promise<ComputedResu
     }
   }
 
+  const hormone = computeHormoneResult(answers, gender);
+
   return {
     version: BANK_VERSION,
     categoryScores,
@@ -99,5 +108,39 @@ export async function computeAllServer(answers: AnswerMap): Promise<ComputedResu
     sleepScore,
     flags,
     suggestedTips,
+    gender: gender ?? undefined,
+    hormone,
+  };
+}
+
+export function computeHormoneResult(
+  answers: AnswerMap,
+  gender: GenderSelection | null
+): HormoneResult | null {
+  if (gender !== "female") return null;
+
+  const variability = typeof answers.q40 === "number" && answers.q40 >= 4;
+  const nightSweats = typeof answers.q41 === "number" && answers.q41 >= 4;
+  const restlessLegs = typeof answers.q42 === "number" && answers.q42 >= 4;
+  const values = [answers.q40, answers.q41, answers.q42].filter(
+    (v): v is LikertValue => typeof v === "number"
+  );
+
+  if (!values.length) {
+    return {
+      status: "mid",
+      trigger: false,
+      signals: { variability: false, nightSweats: false, restlessLegs: false },
+    };
+  }
+
+  const trigger = variability || nightSweats || restlessLegs;
+  const allLow = values.every((v) => v <= 2);
+  const status: HormoneResult["status"] = trigger ? "high" : allLow ? "low" : "mid";
+
+  return {
+    status,
+    trigger,
+    signals: { variability, nightSweats, restlessLegs },
   };
 }
