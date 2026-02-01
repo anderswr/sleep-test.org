@@ -8,7 +8,7 @@
       "about": "关于"
     },
     "home": {
-      "title": "免费睡眠测试 — 获取您的个性化报告（测试版）",
+      "title": "免费睡眠测试 — 获取你的个性化报告",
       "pitch": "在 5–10 分钟内回答 39–42 个简短问题。无需费用，无需注册。获取一份清晰、基于科学的报告，包括解释和实用建议。",
       "cta": "开始测试",
       "example": "查看示例报告",
@@ -138,11 +138,10 @@
   },
   "about": {
     "title": "由 DMZ DATA AS 创建",
-    "intro": "几乎毫不费力地在波什格伦完成，结合健康科技/睡眠科技与人工智能。",
+    "intro": "在挪威波尔斯格伦制作。",
     "contact": {
       "title": "联系方式",
       "p1": "www.sleep-test.org 的负责人是 DMZ DATA AS。隐私和一般问题的联络点：kontor@dmz.no。",
-      "p2": "探索 DMZ DATA 的成果 <a href='https://www.dmz.no' target='_blank' rel='noopener'>www.dmz.no</a>，一款学习 Google 搜索的应用 (<a href='https://apps.apple.com/no/app/toiletlearn-web-search/id6748481089' target='_blank' rel='noopener'>链接</a>)，一款学习 ChatGPT 的应用 (<a href='https://apps.apple.com/us/app/toiletlearn-web-search/id6748926636?platform=iphone' target='_blank' rel='noopener'>链接</a>)，以及一个让你的 Homey 智能家居更有趣的 DadJokes 插件 (<a href='https://homey.app/no-no/app/com.dmz.dadjokesplus/DadJokes-Plus/test/' target='_blank' rel='noopener'>链接</a>)。",
       "p3": "Sleep-test.org 是一款关于睡眠习惯和睡眠相关挑战的自我报告工具。问题与建议参考了成熟的睡眠研究、临床指南以及公开可获取的睡眠医学和公共卫生资料。本服务旨在提供指引并支持对睡眠的反思，非诊断工具。",
       "p4": "参考资料与灵感包括美国睡眠医学学会（AASM）、美国国立卫生研究院（NIH）、美国疾病控制与预防中心（CDC）、英国国家医疗服务体系（NHS）等，以及关于睡眠卫生、昼夜节律和失眠的研究。更详细的专业背景与来源请参阅网站文章。"
     }
@@ -287,7 +286,7 @@
       "hyperarousal": "入睡时我感到紧张、不安或“高度警觉”。"
     },
     "hormone": {
-      "variability": "我的睡眠在不同激素阶段会明显变化。",
+      "variability": "你是否注意到在月经来临前或不再来月经后，睡眠模式发生变化？",
       "night_sweats": "夜里我经常觉得太热或出汗而醒来。",
       "restless_legs": "准备入睡时，我的腿会不舒服或有强烈想动的冲动。"
     },

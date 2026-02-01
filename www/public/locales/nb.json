@@ -8,7 +8,7 @@
       "about": "Om"
     },
     "home": {
-      "title": "Gratis søvntest — få en personlig rapport (beta)",
+      "title": "Gratis søvntest — få din personlige rapport",
       "pitch": "Svar på 39–42 kjappe spørsmål på 5–10 minutter. Ingen kostnad, ingen registrering. Få en tydelig, kunnskapsbasert rapport med forklaringer og konkrete tips.",
       "cta": "Start test",
       "example": "Se eksempel på rapport",
@@ -128,11 +128,10 @@
   },
   "about": {
     "title": "Laget av DMZ DATA AS",
-    "intro": "Laget på dugnad i Porsgrunn, helsetech/søvntech og AI.",
+    "intro": "Bygget i Porsgrunn, Norge.",
     "contact": {
       "title": "Kontakt",
       "p1": "Ansvarlig for www.sleep-test.org er DMZ DATA AS. Kontaktpunkt for personvern og generelle henvendelser: kontor@dmz.no.",
-      "p2": "Utforsk DMZ DATA-underverker på <a href='https://www.dmz.no' target='_blank' rel='noopener'>www.dmz.no</a>, App for å lære Google web search (<a href='https://apps.apple.com/no/app/toiletlearn-web-search/id6748481089' target='_blank' rel='noopener'>LINK</a>), App for å lære ChatGPT (<a href='https://apps.apple.com/us/app/toiletlearn-web-search/id6748926636?platform=iphone' target='_blank' rel='noopener'>LINK</a>) og gjør Homey smarthuset ditt litt mer gøy med DadJokes (<a href='https://homey.app/no-no/app/com.dmz.dadjokesplus/DadJokes-Plus/test/' target='_blank' rel='noopener'>LINK</a>).",
       "p3": "Sleep-test.org er et selvrapporteringsverktøy for søvnvaner og søvnrelaterte utfordringer. Spørsmålene og anbefalingene er inspirert av etablert søvnforskning, kliniske retningslinjer og offentlig tilgjengelige helsekilder innen søvnmedisin og folkehelse. Tjenesten er ment som veiledning og støtte til refleksjon rundt søvn, og er ikke et diagnostisk verktøy.",
       "p4": "Bakgrunnsmateriale og inspirasjon inkluderer blant annet American Academy of Sleep Medicine (AASM), National Institutes of Health (NIH), Centers for Disease Control and Prevention (CDC), National Health Service (NHS) samt forskning på søvnhygiene, døgnrytme og insomni. For mer detaljert faglig bakgrunn og kilder, se artiklene på nettstedet."
     }
@@ -277,7 +276,7 @@
       "hyperarousal": "Jeg føler meg spent, rastløs eller «på alerten» når jeg prøver å sove."
     },
     "hormone": {
-      "variability": "Søvnen min varierer tydelig i ulike hormonelle faser.",
+      "variability": "Legger du merke til endringer i søvnmønsteret før menstruasjon eller som følge av at du ikke har menstruasjon lenger?",
       "night_sweats": "Jeg våkner ofte varm eller svett om natten.",
       "restless_legs": "Når jeg skal sove, får jeg ubehag eller sterk trang til å bevege bena."
     },
