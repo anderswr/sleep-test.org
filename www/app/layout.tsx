@@ -4,6 +4,7 @@ import { I18nProvider } from "./providers/I18nProvider";
 import { Analytics } from "@vercel/analytics/react";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import type { Metadata } from "next";
+import Script from "next/script";
 import { SEGMENT_TO_LANG } from "@/lib/lang";
 
 export const metadata: Metadata = {
@@ -80,6 +81,18 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <meta name="color-scheme" content="dark light" />
         {/* Set theme & lang before paint */}
         <script dangerouslySetInnerHTML={{ __html: bootScript }} />
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=G-4D4N3LYB13"
+          strategy="afterInteractive"
+        />
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-4D4N3LYB13');
+          `}
+        </Script>
       </head>
       <body className="app-shell">
         <I18nProvider>{children}</I18nProvider>
