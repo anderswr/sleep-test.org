@@ -137,26 +137,26 @@
     }
   },
   "about": {
-    "title": "DMZ DATA AS द्वारा निर्मित",
-    "intro": "नॉर्वे के पोरसग्रुन में बनाया गया।",
+    "title": "About Sleep Test",
+    "intro": "Sleep Test is developed and operated in Norway.",
     "contact": {
       "title": "संपर्क करें",
-      "p1": "www.sleep-test.org के लिए जिम्मेदार DMZ DATA AS है। गोपनीयता और सामान्य प्रश्नों के लिए संपर्क बिंदु: kontor@dmz.no।",
+      "p1": "DMZ DATA AS is the data controller for www.sleep-test.org. Privacy and general inquiries: kontor@dmz.no.",
       "p3": "Sleep-test.org नींद की आदतों और नींद से जुड़ी चुनौतियों के बारे में स्व-रिपोर्टिंग टूल है। प्रश्न और सुझाव स्थापित स्लीप रिसर्च, क्लिनिकल दिशानिर्देशों और स्लीप मेडिसिन व सार्वजनिक स्वास्थ्य के खुले स्रोतों से प्रेरित हैं। यह सेवा नींद पर विचार करने में मार्गदर्शन और सहायता के लिए है, और यह निदान उपकरण नहीं है।",
       "p4": "पृष्ठभूमि सामग्री और प्रेरणा में American Academy of Sleep Medicine (AASM), National Institutes of Health (NIH), Centers for Disease Control and Prevention (CDC), National Health Service (NHS) सहित नींद स्वच्छता, सर्कैडियन रिद्म और अनिद्रा पर शोध शामिल हैं। अधिक विस्तृत पेशेवर पृष्ठभूमि और स्रोतों के लिए वेबसाइट पर लेख देखें।"
     }
   },
   "privacy": {
     "title": "गोपनीयता नीति",
-    "p1": "हम गोपनीयता को गंभीरता से लेते हैं। यह नीति बताती है कि जब आप www.sleep-test.org का उपयोग करते हैं तो हम जानकारी को कैसे संभालते हैं। साइट का उपयोग करके, आप पुष्टि करते हैं कि आपने इन शर्तों को पढ़ा और स्वीकार किया है। साइट को इस तरह डिज़ाइन किया गया है कि स्कूल इसे किसी भी व्यक्तिगत जानकारी प्रदान किए बिना उपयोग कर सकें।",
-    "li1": "हम कौन सा डेटा संसाधित करते हैं: हम नाम, ईमेल पते, या अन्य सीधे पहचान योग्य जानकारी एकत्र नहीं करते हैं। परिणाम प्रदर्शित करने और याद रखने के लिए, केवल एक सिस्टम-जनरेटेड आईडी को उत्तरों के सारांश के साथ संग्रहीत किया जाता है। हम मार्केटिंग कुकीज़, तृतीय-पक्ष ट्रैकिंग स्क्रिप्ट्स, या प्रोफाइलिंग का उपयोग नहीं करते।",
-    "li2": "उद्देश्य और कानूनी आधार: उद्देश्य सेवा प्रदान करना और इसकी गुणवत्ता में सुधार करना है। कानूनी आधार वैध हित (GDPR अनुच्छेद 6(1)(f)) है, जो व्यक्तिगत डेटा को संसाधित किए बिना एक सुरक्षित और कार्यात्मक समाधान संचालित करने में है। तकनीकी लॉग्स को समस्या निवारण और सुरक्षा के लिए संसाधित किया जा सकता है।",
-    "li3": "भंडारण और विलोपन: तकनीकी आईडी और परिणाम सारांश केवल आवश्यक अवधि तक संग्रहीत किए जाते हैं। यदि आपको लगता है कि सामग्री को हटाया जाना चाहिए, तो आप हमसे kontor@dmz.no पर संपर्क कर सकते हैं।",
-    "li4": "साझाकरण और स्थानांतरण: हम डेटा को तीसरे पक्ष के साथ साझा नहीं करते। यदि हम संचालन के लिए उप-ठेकेदारों (डेटा प्रोसेसर) का उपयोग करते हैं, तो वे अनुबंध द्वारा डेटा की रक्षा करने और इसे अपने उद्देश्यों के लिए उपयोग न करने के लिए बाध्य होंगे।",
-    "li5": "स्कूल उपयोग और बच्चे: इस सेवा का उपयोग स्कूलों में छात्र डेटा प्रदान किए बिना किया जा सकता है। शिक्षक और छात्र बिना पंजीकरण के साइट का उपयोग कर सकते हैं। तकनीकी संचालन के लिए सख्ती से आवश्यक से परे कोई व्यक्तिगत डेटा संसाधित नहीं किया जाता।",
-    "li6": "कुकीज़: हम अनावश्यक कुकीज़ का उपयोग नहीं करते। यदि भविष्य में हम कार्यात्मक कुकीज़ (जैसे भाषा प्राथमिकता के लिए) पेश करते हैं, तो हम इस नीति को अपडेट करेंगे और आवश्यक होने पर सहमति का अनुरोध करेंगे।",
-    "li7": "आपके अधिकार और संपर्क: यदि आपके प्रश्न हैं, तकनीकी जानकारी तक पहुंच चाहते हैं, या विलोपन का अनुरोध करना चाहते हैं, तो kontor@dmz.no पर हमसे संपर्क करें। आप नॉर्वेजियन डेटा संरक्षण प्राधिकरण (Datatilsynet) के पास शिकायत भी दर्ज कर सकते हैं।",
-    "li8": "परिवर्तन: हम आवश्यकता पड़ने पर इस नीति को अपडेट कर सकते हैं। महत्वपूर्ण बदलाव यहां प्रकाशित किए जाएंगे।"
+    "p1": "We take privacy seriously. This policy explains how information is processed when you use www.sleep-test.org, what choices you have, and your rights under the GDPR and Norwegian privacy law.",
+    "li1": "What data we process: When you complete the test, we store a system-generated ID with a summary of answers so results can be reopened later. We do not ask for your name or email. IP address and technical events may be processed in security logs for operations and abuse prevention.",
+    "li2": "Purpose and legal basis: (a) Provide and secure the service (GDPR Art. 6(1)(f), legitimate interests). (b) Measurement/analytics and advertising technologies are used only on the basis of valid consent (GDPR Art. 6(1)(a), and the Norwegian Electronic Communications Act § 3-15 for storage/access on user devices).",
+    "li3": "Storage and deletion: Test IDs and result summaries are stored only as long as needed for the purpose, or until deletion is requested. Technical logs are retained for a limited period for security and troubleshooting.",
+    "li4": "Recipients and transfers: We use processors for hosting and operations. If you consent to analytics/advertising, Google may receive data as an independent or joint controller depending on service configuration. Data may be processed outside the EEA using relevant transfer mechanisms (for example SCCs).",
+    "li5": "School use and children: The service can be used without registration. Please do not enter names or other directly identifying data in free-text fields (if such fields are introduced later).",
+    "li6": "Cookies and consent: Necessary technologies are used so the service can function. Analytics and advertising technologies are activated only after valid consent in the consent solution. You can withdraw consent at any time by changing your consent choices.",
+    "li7": "Your rights: You can request access, rectification, deletion, restriction, data portability, and object where applicable. Contact us at kontor@dmz.no. You may also lodge a complaint with Datatilsynet.",
+    "li8": "Changes: We may update this policy when needed. Material changes will be published here with an updated date."
   },
   "test": {
     "title": "नींद परीक्षण",

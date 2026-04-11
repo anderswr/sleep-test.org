@@ -99,6 +99,31 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           `}
         </Script>
         <Script
+          async
+          src="https://fundingchoicesmessages.google.com/i/pub-2004312209927228?ers=1"
+          strategy="beforeInteractive"
+        />
+        <Script id="google-funding-choices-presence" strategy="beforeInteractive">
+          {`
+            (function () {
+              function signalGooglefcPresent() {
+                if (!window.frames["googlefcPresent"]) {
+                  if (document.body) {
+                    var iframe = document.createElement("iframe");
+                    iframe.style.cssText =
+                      "width:0;height:0;border:none;z-index:-1000;left:-1000px;top:-1000px;display:none;";
+                    iframe.name = "googlefcPresent";
+                    document.body.appendChild(iframe);
+                  } else {
+                    setTimeout(signalGooglefcPresent, 0);
+                  }
+                }
+              }
+              signalGooglefcPresent();
+            })();
+          `}
+        </Script>
+        <Script
           src="https://www.googletagmanager.com/gtag/js?id=G-4D4N3LYB13"
           strategy="afterInteractive"
         />

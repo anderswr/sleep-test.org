@@ -137,26 +137,26 @@
     }
   },
   "about": {
-    "title": "تم إنشاؤه بواسطة DMZ DATA AS",
-    "intro": "تم الإنشاء في بورسكرون، النرويج.",
+    "title": "About Sleep Test",
+    "intro": "Sleep Test is developed and operated in Norway.",
     "contact": {
       "title": "اتصال",
-      "p1": "المسؤول عن www.sleep-test.org هو DMZ DATA AS. نقطة الاتصال لأسئلة الخصوصية والأسئلة العامة: kontor@dmz.no.",
+      "p1": "DMZ DATA AS is the data controller for www.sleep-test.org. Privacy and general inquiries: kontor@dmz.no.",
       "p3": "Sleep-test.org أداة للتقرير الذاتي عن عادات النوم والتحديات المرتبطة بالنوم. تستند الأسئلة والتوصيات إلى أبحاث النوم الراسخة، والإرشادات السريرية، والمصادر الصحية المتاحة للعامة في طب النوم والصحة العامة. تهدف الخدمة إلى الإرشاد ودعم التأمل في النوم، وليست أداة تشخيصية.",
       "p4": "تشمل المواد والخلفيات المرجعية على سبيل المثال American Academy of Sleep Medicine (AASM) وNational Institutes of Health (NIH) وCenters for Disease Control and Prevention (CDC) وNational Health Service (NHS)، بالإضافة إلى أبحاث حول نظافة النوم والإيقاع اليومي والأرق. لمزيد من الخلفية المهنية والمصادر، راجع مقالات الموقع."
     }
   },
   "privacy": {
     "title": "سياسة الخصوصية",
-    "p1": "نحن نأخذ الخصوصية بجدية. تشرح هذه السياسة كيف نتعامل مع المعلومات عند استخدامك www.sleep-test.org. باستخدام الموقع، فإنك تؤكد أنك قرأت ووافقت على هذه الشروط. تم تصميم الموقع بحيث يمكن للمدارس استخدامه دون تقديم أي معلومات شخصية.",
-    "li1": "ما البيانات التي نعالجها: نحن لا نجمع الأسماء أو عناوين البريد الإلكتروني أو أي معلومات أخرى يمكن تحديدها مباشرة. لعرض وتذكر النتائج، يتم تخزين معرّف تم إنشاؤه بواسطة النظام مع ملخص للإجابات فقط. لا نستخدم ملفات تعريف الارتباط التسويقية أو نصوص التتبع الخاصة بأطراف ثالثة أو إنشاء ملفات تعريفية.",
-    "li2": "الغرض والأساس القانوني: الغرض هو توفير الخدمة وتحسين جودتها. الأساس القانوني هو المصلحة المشروعة (GDPR المادة 6(1)(f)) في تشغيل حل آمن وفعال دون معالجة بيانات شخصية. قد تتم معالجة السجلات التقنية لاستكشاف الأخطاء وإصلاحها والأمان.",
-    "li3": "التخزين والحذف: يتم تخزين المعرّفات التقنية وملخصات النتائج فقط طالما كان ذلك ضرورياً للغرض المحدد. إذا كنت تعتقد أن المحتوى يجب حذفه، يمكنك الاتصال بنا على kontor@dmz.no.",
-    "li4": "المشاركة والنقل: نحن لا نشارك البيانات مع أطراف ثالثة. إذا استخدمنا مقاولين فرعيين (معالجي بيانات) للتشغيل، فسوف يكونون ملزمين تعاقدياً بحماية البيانات وعدم استخدامها لأغراضهم الخاصة.",
-    "li5": "استخدام المدارس والأطفال: يمكن استخدام الخدمة في المدارس دون تقديم بيانات الطلاب. يمكن للمعلمين والطلاب قراءة الموقع واستخدامه دون تسجيل. لا تتم معالجة أي بيانات شخصية تتجاوز ما هو ضروري تماماً للتشغيل التقني.",
-    "li6": "ملفات تعريف الارتباط: نحن لا نستخدم ملفات تعريف الارتباط غير الضرورية. إذا أدخلنا في المستقبل ملفات تعريف ارتباط وظيفية (مثل تفضيل اللغة)، فسنحدّث هذه السياسة ونطلب الموافقة عند الضرورة.",
-    "li7": "حقوقك والاتصال: إذا كانت لديك أسئلة، أو ترغب في الوصول إلى معلومات تقنية، أو طلب الحذف، فاتصل بنا على kontor@dmz.no. يمكنك أيضاً تقديم شكوى إلى هيئة حماية البيانات النرويجية (Datatilsynet).",
-    "li8": "التغييرات: قد نقوم بتحديث هذه السياسة عند الحاجة. سيتم نشر التغييرات الهامة هنا."
+    "p1": "We take privacy seriously. This policy explains how information is processed when you use www.sleep-test.org, what choices you have, and your rights under the GDPR and Norwegian privacy law.",
+    "li1": "What data we process: When you complete the test, we store a system-generated ID with a summary of answers so results can be reopened later. We do not ask for your name or email. IP address and technical events may be processed in security logs for operations and abuse prevention.",
+    "li2": "Purpose and legal basis: (a) Provide and secure the service (GDPR Art. 6(1)(f), legitimate interests). (b) Measurement/analytics and advertising technologies are used only on the basis of valid consent (GDPR Art. 6(1)(a), and the Norwegian Electronic Communications Act § 3-15 for storage/access on user devices).",
+    "li3": "Storage and deletion: Test IDs and result summaries are stored only as long as needed for the purpose, or until deletion is requested. Technical logs are retained for a limited period for security and troubleshooting.",
+    "li4": "Recipients and transfers: We use processors for hosting and operations. If you consent to analytics/advertising, Google may receive data as an independent or joint controller depending on service configuration. Data may be processed outside the EEA using relevant transfer mechanisms (for example SCCs).",
+    "li5": "School use and children: The service can be used without registration. Please do not enter names or other directly identifying data in free-text fields (if such fields are introduced later).",
+    "li6": "Cookies and consent: Necessary technologies are used so the service can function. Analytics and advertising technologies are activated only after valid consent in the consent solution. You can withdraw consent at any time by changing your consent choices.",
+    "li7": "Your rights: You can request access, rectification, deletion, restriction, data portability, and object where applicable. Contact us at kontor@dmz.no. You may also lodge a complaint with Datatilsynet.",
+    "li8": "Changes: We may update this policy when needed. Material changes will be published here with an updated date."
   },
   "test": {
     "title": "اختبار النوم",
