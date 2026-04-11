@@ -1,13 +1,22 @@
 // app/api/compare/route.ts
+import { validateId } from "@/lib/validate-id";
 import { NextRequest, NextResponse } from "next/server";
 import { getCollection } from "@/lib/db";
 
 export const runtime = "nodejs";
 
 export async function POST(req: NextRequest) {
-  const { idA, idB } = await req.json();
-  if (!idA || !idB) return NextResponse.json({ error: "missing_ids" }, { status: 400 });
+  const body = await request.json();
+  const idA = validateId(body.idA);
+  const idB = validateId(body.idB);
 
+  if (!idA || !idB) {
+    return NextResponse.json(
+      { error: "Invalid result IDs. Must be 11-24 alphanumeric characters." },
+      { status: 400 }
+    );
+  };
+ // usikker på om det skal avsluttes med en ; i linje 18
   const col = await getCollection("results");
   const [a, b] = await Promise.all([
     col.findOne({ id: idA }, { projection: { _id: 0 } }),
