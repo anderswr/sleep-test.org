@@ -137,26 +137,26 @@
     }
   },
   "about": {
-    "title": "Créé par DMZ DATA AS",
-    "intro": "Créé à Porsgrunn, en Norvège.",
+    "title": "About Sleep Test",
+    "intro": "Sleep Test is developed and operated in Norway.",
     "contact": {
       "title": "Contact",
-      "p1": "Le responsable de www.sleep-test.org est DMZ DATA AS. Point de contact pour les questions de confidentialité et générales : kontor@dmz.no.",
+      "p1": "DMZ DATA AS is the data controller for www.sleep-test.org. Privacy and general inquiries: kontor@dmz.no.",
       "p3": "Sleep-test.org est un outil d’auto-évaluation des habitudes de sommeil et des difficultés liées au sommeil. Les questions et recommandations s’inspirent de la recherche sur le sommeil, de recommandations cliniques et de sources de santé publique accessibles. Le service vise à guider la réflexion sur le sommeil et n’est pas un outil de diagnostic.",
       "p4": "Les sources et inspirations incluent notamment l’American Academy of Sleep Medicine (AASM), les National Institutes of Health (NIH), les Centers for Disease Control and Prevention (CDC), le National Health Service (NHS), ainsi que des recherches sur l’hygiène du sommeil, le rythme circadien et l’insomnie. Pour davantage de références et de sources, voir les articles du site."
     }
   },
   "privacy": {
     "title": "Politique de confidentialité",
-    "p1": "Nous prenons la confidentialité au sérieux. Cette politique explique comment nous gérons les informations lorsque vous utilisez www.sleep-test.org. En utilisant le site, vous confirmez avoir lu et accepté ces conditions. Le site est conçu pour que les écoles puissent l'utiliser sans fournir d'informations personnelles.",
-    "li1": "Données que nous traitons : Nous ne collectons pas de noms, adresses e-mail ou autres informations directement identifiables. Pour afficher et mémoriser les résultats, seul un ID généré par le système est stocké avec un résumé des réponses. Nous n'utilisons pas de cookies marketing, de scripts de suivi tiers ni de profilage.",
-    "li2": "But et base légale : Le but est de fournir le service et d'en améliorer la qualité. La base légale est l'intérêt légitime (RGPD art. 6(1)(f)) d'exploiter une solution sécurisée et fonctionnelle sans traiter de données personnelles. Les journaux techniques peuvent être traités pour le dépannage et la sécurité.",
-    "li3": "Stockage et suppression : Les IDs techniques et résumés de résultats sont stockés uniquement aussi longtemps que nécessaire pour l'objectif indiqué. Si vous estimez qu'un contenu doit être supprimé, vous pouvez nous contacter à kontor@dmz.no.",
-    "li4": "Partage et transfert : Nous ne partageons pas de données avec des tiers. Si nous utilisons des sous-traitants (processeurs de données) pour les opérations, ils seront contractuellement tenus de protéger les données et de ne pas les utiliser à leurs propres fins.",
-    "li5": "Utilisation scolaire et enfants : Le service peut être utilisé dans les écoles sans fournir de données d'élèves. Les enseignants et les élèves peuvent lire et utiliser le site sans inscription. Aucune donnée personnelle n'est traitée au-delà de ce qui est strictement nécessaire pour le fonctionnement technique.",
-    "li6": "Cookies : Nous n'utilisons pas de cookies inutiles. Si nous introduisons à l'avenir des cookies fonctionnels (par ex. pour la préférence de langue), nous mettrons à jour cette politique et demanderons un consentement lorsque requis.",
-    "li7": "Vos droits et contact : Si vous avez des questions, souhaitez accéder à des informations techniques ou demander une suppression, contactez-nous à kontor@dmz.no. Vous pouvez également déposer une plainte auprès de l'Autorité norvégienne de protection des données (Datatilsynet).",
-    "li8": "Modifications : Nous pouvons mettre à jour cette politique en cas de besoin. Les changements importants seront publiés ici."
+    "p1": "We take privacy seriously. This policy explains how information is processed when you use www.sleep-test.org, what choices you have, and your rights under the GDPR and Norwegian privacy law.",
+    "li1": "What data we process: When you complete the test, we store a system-generated ID with a summary of answers so results can be reopened later. We do not ask for your name or email. IP address and technical events may be processed in security logs for operations and abuse prevention.",
+    "li2": "Purpose and legal basis: (a) Provide and secure the service (GDPR Art. 6(1)(f), legitimate interests). (b) Measurement/analytics and advertising technologies are used only on the basis of valid consent (GDPR Art. 6(1)(a), and the Norwegian Electronic Communications Act § 3-15 for storage/access on user devices).",
+    "li3": "Storage and deletion: Test IDs and result summaries are stored only as long as needed for the purpose, or until deletion is requested. Technical logs are retained for a limited period for security and troubleshooting.",
+    "li4": "Recipients and transfers: We use processors for hosting and operations. If you consent to analytics/advertising, Google may receive data as an independent or joint controller depending on service configuration. Data may be processed outside the EEA using relevant transfer mechanisms (for example SCCs).",
+    "li5": "School use and children: The service can be used without registration. Please do not enter names or other directly identifying data in free-text fields (if such fields are introduced later).",
+    "li6": "Cookies and consent: Necessary technologies are used so the service can function. Analytics and advertising technologies are activated only after valid consent in the consent solution. You can withdraw consent at any time by changing your consent choices.",
+    "li7": "Your rights: You can request access, rectification, deletion, restriction, data portability, and object where applicable. Contact us at kontor@dmz.no. You may also lodge a complaint with Datatilsynet.",
+    "li8": "Changes: We may update this policy when needed. Material changes will be published here with an updated date."
   },
   "test": {
     "title": "Test de sommeil",

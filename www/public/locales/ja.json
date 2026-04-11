@@ -137,26 +137,26 @@
     }
   },
   "about": {
-    "title": "DMZ DATA AS によって作成",
-    "intro": "ノルウェーのポースグルンで制作。",
+    "title": "About Sleep Test",
+    "intro": "Sleep Test is developed and operated in Norway.",
     "contact": {
       "title": "連絡先",
-      "p1": "www.sleep-test.org の責任者は DMZ DATA AS です。プライバシー関連のお問い合わせや一般的な質問の窓口: kontor@dmz.no。",
+      "p1": "DMZ DATA AS is the data controller for www.sleep-test.org. Privacy and general inquiries: kontor@dmz.no.",
       "p3": "Sleep-test.org は、睡眠習慣や睡眠に関する課題についての自己申告ツールです。質問と提案は、確立された睡眠研究、臨床ガイドライン、公的に利用可能な睡眠医学・公衆衛生の情報源に基づいています。このサービスは睡眠について考えるための指針とサポートを目的としており、診断ツールではありません。",
       "p4": "参考資料・インスピレーションとして、American Academy of Sleep Medicine (AASM)、National Institutes of Health (NIH)、Centers for Disease Control and Prevention (CDC)、National Health Service (NHS) などのほか、睡眠衛生、概日リズム、不眠に関する研究を含みます。詳細な専門的背景や出典については、サイト内の記事をご覧ください。"
     }
   },
   "privacy": {
     "title": "プライバシーポリシー",
-    "p1": "私たちはプライバシーを真剣に考えています。このポリシーは、www.sleep-test.org を利用する際にどのように情報を扱うかを説明します。本サイトを利用することで、あなたはこれらの条件を読んで同意したとみなされます。本サイトは、学校が個人情報を提供せずに利用できるように設計されています。",
-    "li1": "処理するデータ: 名前、メールアドレス、その他の直接識別可能な情報は収集しません。結果を表示・保存するために、システム生成のIDのみを回答の要約とともに保存します。マーケティング用クッキー、サードパーティのトラッキングスクリプト、プロファイリングは使用しません。",
-    "li2": "目的と法的根拠: サービスの提供と品質改善が目的です。法的根拠は、個人データを処理せずに安全で機能的なソリューションを運営する正当な利益（GDPR第6条1項f）です。技術的なログは、トラブルシューティングやセキュリティのために処理されることがあります。",
-    "li3": "保存と削除: 技術的IDと結果の要約は、必要な目的に限り保存されます。削除が必要だと考える場合は、kontor@dmz.no までご連絡ください。",
-    "li4": "共有と転送: データを第三者と共有しません。運営のために下請け業者（データ処理者）を利用する場合、契約によりデータ保護と第三者利用禁止を義務付けます。",
-    "li5": "学校利用と子供: 本サービスは、生徒データを提供せずに学校で利用できます。教師や生徒は登録不要で利用可能です。技術的運営に厳密に必要な範囲を超える個人データは処理しません。",
-    "li6": "クッキー: 不要なクッキーは使用しません。将来、機能的クッキー（例: 言語設定）を導入する場合、本ポリシーを更新し、必要に応じて同意を求めます。",
-    "li7": "あなたの権利と連絡先: 質問がある場合、技術情報へのアクセスや削除を希望する場合は kontor@dmz.no にご連絡ください。また、ノルウェーのデータ保護機関（Datatilsynet）に苦情を申し立てることもできます。",
-    "li8": "変更: 必要に応じて本ポリシーを更新することがあります。重要な変更はここに掲載されます。"
+    "p1": "We take privacy seriously. This policy explains how information is processed when you use www.sleep-test.org, what choices you have, and your rights under the GDPR and Norwegian privacy law.",
+    "li1": "What data we process: When you complete the test, we store a system-generated ID with a summary of answers so results can be reopened later. We do not ask for your name or email. IP address and technical events may be processed in security logs for operations and abuse prevention.",
+    "li2": "Purpose and legal basis: (a) Provide and secure the service (GDPR Art. 6(1)(f), legitimate interests). (b) Measurement/analytics and advertising technologies are used only on the basis of valid consent (GDPR Art. 6(1)(a), and the Norwegian Electronic Communications Act § 3-15 for storage/access on user devices).",
+    "li3": "Storage and deletion: Test IDs and result summaries are stored only as long as needed for the purpose, or until deletion is requested. Technical logs are retained for a limited period for security and troubleshooting.",
+    "li4": "Recipients and transfers: We use processors for hosting and operations. If you consent to analytics/advertising, Google may receive data as an independent or joint controller depending on service configuration. Data may be processed outside the EEA using relevant transfer mechanisms (for example SCCs).",
+    "li5": "School use and children: The service can be used without registration. Please do not enter names or other directly identifying data in free-text fields (if such fields are introduced later).",
+    "li6": "Cookies and consent: Necessary technologies are used so the service can function. Analytics and advertising technologies are activated only after valid consent in the consent solution. You can withdraw consent at any time by changing your consent choices.",
+    "li7": "Your rights: You can request access, rectification, deletion, restriction, data portability, and object where applicable. Contact us at kontor@dmz.no. You may also lodge a complaint with Datatilsynet.",
+    "li8": "Changes: We may update this policy when needed. Material changes will be published here with an updated date."
   },
   "test": {
     "title": "睡眠テスト",

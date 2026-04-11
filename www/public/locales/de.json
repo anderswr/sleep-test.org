@@ -137,26 +137,26 @@
     }
   },
   "about": {
-    "title": "Erstellt von DMZ DATA AS",
-    "intro": "Entwickelt in Porsgrunn, Norwegen.",
+    "title": "About Sleep Test",
+    "intro": "Sleep Test is developed and operated in Norway.",
     "contact": {
       "title": "Kontakt",
-      "p1": "Verantwortlich für www.sleep-test.org ist DMZ DATA AS. Kontaktstelle für Datenschutzanfragen und allgemeine Fragen: kontor@dmz.no.",
+      "p1": "DMZ DATA AS is the data controller for www.sleep-test.org. Privacy and general inquiries: kontor@dmz.no.",
       "p3": "Sleep-test.org ist ein Selbstauskunfts-Tool zu Schlafgewohnheiten und schlafbezogenen Herausforderungen. Die Fragen und Empfehlungen sind inspiriert von etablierter Schlafforschung, klinischen Leitlinien und öffentlich zugänglichen Gesundheitsquellen aus Schlafmedizin und Public Health. Der Dienst dient der Orientierung und Unterstützung bei der Reflexion über Schlaf und ist kein diagnostisches Werkzeug.",
       "p4": "Hintergrundmaterial und Inspiration umfassen unter anderem die American Academy of Sleep Medicine (AASM), die National Institutes of Health (NIH), die Centers for Disease Control and Prevention (CDC), den National Health Service (NHS) sowie Forschung zu Schlafhygiene, zirkadianem Rhythmus und Insomnie. Für ausführlichere fachliche Hintergründe und Quellen siehe die Artikel auf der Website."
     }
   },
   "privacy": {
     "title": "Datenschutzrichtlinie",
-    "p1": "Wir nehmen Datenschutz ernst. Diese Richtlinie erklärt, wie wir mit Informationen umgehen, wenn Sie www.sleep-test.org nutzen. Durch die Nutzung der Seite bestätigen Sie, dass Sie diese Bedingungen gelesen und akzeptiert haben. Die Seite ist so gestaltet, dass Schulen sie nutzen können, ohne persönliche Daten anzugeben.",
-    "li1": "Welche Daten wir verarbeiten: Wir erfassen keine Namen, E-Mail-Adressen oder andere direkt identifizierbare Informationen. Um Ergebnisse anzuzeigen und zu speichern, wird nur eine systemgenerierte ID zusammen mit einer Zusammenfassung der Antworten gespeichert. Wir verwenden keine Marketing-Cookies, keine Tracking-Skripte von Drittanbietern und kein Profiling.",
-    "li2": "Zweck und Rechtsgrundlage: Der Zweck besteht darin, den Service bereitzustellen und seine Qualität zu verbessern. Die Rechtsgrundlage ist das berechtigte Interesse (DSGVO Art. 6(1)(f)) an einem sicheren und funktionalen Betrieb ohne Verarbeitung personenbezogener Daten. Technische Protokolle können zur Fehlerbehebung und Sicherheit verarbeitet werden.",
-    "li3": "Speicherung und Löschung: Technische IDs und Ergebniszusammenfassungen werden nur so lange gespeichert, wie es für den angegebenen Zweck erforderlich ist. Wenn Sie glauben, dass Inhalte gelöscht werden sollten, können Sie uns unter kontor@dmz.no kontaktieren.",
-    "li4": "Weitergabe und Übertragung: Wir geben keine Daten an Dritte weiter. Wenn wir Subunternehmer (Datenverarbeiter) für den Betrieb einsetzen, sind sie vertraglich verpflichtet, Daten zu schützen und nicht für eigene Zwecke zu verwenden.",
-    "li5": "Schulnutzung und Kinder: Der Dienst kann in Schulen genutzt werden, ohne dass Schülerdaten angegeben werden müssen. Lehrer und Schüler können die Seite ohne Registrierung lesen und nutzen. Es werden keine personenbezogenen Daten verarbeitet, die über das technisch notwendige Maß hinausgehen.",
-    "li6": "Cookies: Wir verwenden keine unnötigen Cookies. Falls wir in Zukunft funktionale Cookies einführen (z. B. für Spracheinstellungen), werden wir diese Richtlinie aktualisieren und ggf. eine Zustimmung einholen.",
-    "li7": "Ihre Rechte und Kontakt: Wenn Sie Fragen haben, technische Informationen einsehen oder die Löschung beantragen möchten, kontaktieren Sie uns unter kontor@dmz.no. Sie können auch eine Beschwerde bei der norwegischen Datenschutzbehörde (Datatilsynet) einreichen.",
-    "li8": "Änderungen: Wir können diese Richtlinie bei Bedarf aktualisieren. Wesentliche Änderungen werden hier veröffentlicht."
+    "p1": "We take privacy seriously. This policy explains how information is processed when you use www.sleep-test.org, what choices you have, and your rights under the GDPR and Norwegian privacy law.",
+    "li1": "What data we process: When you complete the test, we store a system-generated ID with a summary of answers so results can be reopened later. We do not ask for your name or email. IP address and technical events may be processed in security logs for operations and abuse prevention.",
+    "li2": "Purpose and legal basis: (a) Provide and secure the service (GDPR Art. 6(1)(f), legitimate interests). (b) Measurement/analytics and advertising technologies are used only on the basis of valid consent (GDPR Art. 6(1)(a), and the Norwegian Electronic Communications Act § 3-15 for storage/access on user devices).",
+    "li3": "Storage and deletion: Test IDs and result summaries are stored only as long as needed for the purpose, or until deletion is requested. Technical logs are retained for a limited period for security and troubleshooting.",
+    "li4": "Recipients and transfers: We use processors for hosting and operations. If you consent to analytics/advertising, Google may receive data as an independent or joint controller depending on service configuration. Data may be processed outside the EEA using relevant transfer mechanisms (for example SCCs).",
+    "li5": "School use and children: The service can be used without registration. Please do not enter names or other directly identifying data in free-text fields (if such fields are introduced later).",
+    "li6": "Cookies and consent: Necessary technologies are used so the service can function. Analytics and advertising technologies are activated only after valid consent in the consent solution. You can withdraw consent at any time by changing your consent choices.",
+    "li7": "Your rights: You can request access, rectification, deletion, restriction, data portability, and object where applicable. Contact us at kontor@dmz.no. You may also lodge a complaint with Datatilsynet.",
+    "li8": "Changes: We may update this policy when needed. Material changes will be published here with an updated date."
   },
   "test": {
     "title": "Schlaftest",

@@ -137,26 +137,26 @@
     }
   },
   "about": {
-    "title": "Vytvorené spoločnosťou DMZ DATA AS",
-    "intro": "Vytvorené v Porsgrunne v Nórsku.",
+    "title": "About Sleep Test",
+    "intro": "Sleep Test is developed and operated in Norway.",
     "contact": {
       "title": "Kontakt",
-      "p1": "Za www.sleep-test.org je zodpovedná spoločnosť DMZ DATA AS. Kontakt pre otázky týkajúce sa ochrany osobných údajov a všeobecných otázok: kontor@dmz.no.",
+      "p1": "DMZ DATA AS is the data controller for www.sleep-test.org. Privacy and general inquiries: kontor@dmz.no.",
       "p3": "Sleep-test.org je nástroj na sebahodnotenie spánkových návykov a problémov súvisiacich so spánkom. Otázky a odporúčania sú inšpirované zavedeným výskumom spánku, klinickými usmerneniami a verejne dostupnými zdrojmi v spánkovej medicíne a verejnom zdraví. Služba má slúžiť ako usmernenie a podpora pri uvažovaní o spánku a nie je diagnostickým nástrojom.",
       "p4": "Podkladové materiály a inšpirácia zahŕňajú okrem iného American Academy of Sleep Medicine (AASM), National Institutes of Health (NIH), Centers for Disease Control and Prevention (CDC), National Health Service (NHS) a tiež výskum spánkovej hygieny, cirkadiánneho rytmu a insomnie. Podrobnejšie odborné pozadie a zdroje nájdete v článkoch na stránke."
     }
   },
   "privacy": {
     "title": "Zásady ochrany osobných údajov",
-    "p1": "Ochranu súkromia berieme vážne. Tieto zásady vysvetľujú, ako narábame s informáciami pri používaní www.sleep-test.org. Používaním stránky potvrdzujete, že ste si tieto podmienky prečítali a prijali. Stránka je navrhnutá tak, aby ju mohli používať školy bez poskytovania osobných údajov.",
-    "li1": "Aké údaje spracúvame: Nezbierame mená, e-mailové adresy ani iné priamo identifikovateľné informácie. Na zobrazenie a zapamätanie výsledkov sa ukladá iba systémom generované ID spolu so súhrnom odpovedí. Nepoužívame marketingové cookies, skripty tretích strán ani profilovanie.",
-    "li2": "Účel a právny základ: Účelom je poskytovať službu a zlepšovať jej kvalitu. Právnym základom je oprávnený záujem (GDPR čl. 6(1)(f)) na prevádzkovanie bezpečného a funkčného riešenia bez spracúvania osobných údajov. Technické logy môžu byť spracúvané na riešenie problémov a bezpečnosť.",
-    "li3": "Ukladanie a vymazanie: Technické ID a súhrny výsledkov sa uchovávajú iba tak dlho, ako je to potrebné na stanovený účel. Ak sa domnievate, že obsah má byť vymazaný, kontaktujte nás na kontor@dmz.no.",
-    "li4": "Zdieľanie a prenos: Údaje nezdieľame s tretími stranami. Ak používame subdodávateľov (spracovateľov údajov) na prevádzku, budú zmluvne viazaní chrániť údaje a nepoužívať ich na vlastné účely.",
-    "li5": "Používanie v školách a deťmi: Služba môže byť používaná v školách bez poskytovania údajov študentov. Učitelia a študenti môžu čítať a používať stránku bez registrácie. Osobné údaje sa nespracúvajú nad rámec toho, čo je striktne potrebné na technickú prevádzku.",
-    "li6": "Cookies: Nepoužívame zbytočné cookies. Ak v budúcnosti zavedeme funkčné cookies (napr. na jazykové preferencie), tieto zásady aktualizujeme a vyžiadame si súhlas, ak to bude potrebné.",
-    "li7": "Vaše práva a kontakt: Ak máte otázky, chcete získať prístup k technickým informáciám alebo požadujete vymazanie, kontaktujte nás na kontor@dmz.no. Môžete tiež podať sťažnosť na Nórsky úrad na ochranu osobných údajov (Datatilsynet).",
-    "li8": "Zmeny: Tieto zásady môžeme podľa potreby aktualizovať. Významné zmeny budú zverejnené tu."
+    "p1": "We take privacy seriously. This policy explains how information is processed when you use www.sleep-test.org, what choices you have, and your rights under the GDPR and Norwegian privacy law.",
+    "li1": "What data we process: When you complete the test, we store a system-generated ID with a summary of answers so results can be reopened later. We do not ask for your name or email. IP address and technical events may be processed in security logs for operations and abuse prevention.",
+    "li2": "Purpose and legal basis: (a) Provide and secure the service (GDPR Art. 6(1)(f), legitimate interests). (b) Measurement/analytics and advertising technologies are used only on the basis of valid consent (GDPR Art. 6(1)(a), and the Norwegian Electronic Communications Act § 3-15 for storage/access on user devices).",
+    "li3": "Storage and deletion: Test IDs and result summaries are stored only as long as needed for the purpose, or until deletion is requested. Technical logs are retained for a limited period for security and troubleshooting.",
+    "li4": "Recipients and transfers: We use processors for hosting and operations. If you consent to analytics/advertising, Google may receive data as an independent or joint controller depending on service configuration. Data may be processed outside the EEA using relevant transfer mechanisms (for example SCCs).",
+    "li5": "School use and children: The service can be used without registration. Please do not enter names or other directly identifying data in free-text fields (if such fields are introduced later).",
+    "li6": "Cookies and consent: Necessary technologies are used so the service can function. Analytics and advertising technologies are activated only after valid consent in the consent solution. You can withdraw consent at any time by changing your consent choices.",
+    "li7": "Your rights: You can request access, rectification, deletion, restriction, data portability, and object where applicable. Contact us at kontor@dmz.no. You may also lodge a complaint with Datatilsynet.",
+    "li8": "Changes: We may update this policy when needed. Material changes will be published here with an updated date."
   },
   "test": {
     "title": "Test spánku",

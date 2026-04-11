@@ -127,26 +127,26 @@
     }
   },
   "about": {
-    "title": "Laget av DMZ DATA AS",
-    "intro": "Bygget i Porsgrunn, Norge.",
+    "title": "Om Sleep Test",
+    "intro": "Sleep Test er utviklet og driftes i Norge.",
     "contact": {
       "title": "Kontakt",
-      "p1": "Ansvarlig for www.sleep-test.org er DMZ DATA AS. Kontaktpunkt for personvern og generelle henvendelser: kontor@dmz.no.",
+      "p1": "Behandlingsansvarlig for www.sleep-test.org er DMZ DATA AS. Kontakt for personvern og generelle henvendelser: kontor@dmz.no.",
       "p3": "Sleep-test.org er et selvrapporteringsverktøy for søvnvaner og søvnrelaterte utfordringer. Spørsmålene og anbefalingene er inspirert av etablert søvnforskning, kliniske retningslinjer og offentlig tilgjengelige helsekilder innen søvnmedisin og folkehelse. Tjenesten er ment som veiledning og støtte til refleksjon rundt søvn, og er ikke et diagnostisk verktøy.",
       "p4": "Bakgrunnsmateriale og inspirasjon inkluderer blant annet American Academy of Sleep Medicine (AASM), National Institutes of Health (NIH), Centers for Disease Control and Prevention (CDC), National Health Service (NHS) samt forskning på søvnhygiene, døgnrytme og insomni. For mer detaljert faglig bakgrunn og kilder, se artiklene på nettstedet."
     }
   },
   "privacy": {
     "title": "Personvernerklæring",
-    "p1": "Vi tar personvern på alvor. Denne erklæringen forklarer hvordan vi behandler opplysninger når du bruker www.sleep-test.org. Ved å bruke nettstedet bekrefter du at du har lest og akseptert disse vilkårene. Nettstedet er designet slik at skoler kan bruke tjenesten uten å oppgi personopplysninger.",
-    "li1": "Hvilke data vi behandler: Vi samler ikke inn navn, e-postadresse eller annen direkte identifiserbar informasjon. For å vise og huske resultater brukes kun en teknisk generert ID lagret sammen med en oppsummering av svarene. Vi bruker ingen markedsførings-cookies, tredjeparts sporingsskript eller profilering.",
-    "li2": "Formål og behandlingsgrunnlag: Formålet er å levere tjenesten og forbedre kvaliteten. Behandlingsgrunnlaget er berettiget interesse (GDPR art. 6(1)(f)) i å drive en sikker og velfungerende løsning uten behandling av personopplysninger. Eventuelle tekniske logger kan behandles for feilsøking og sikkerhet.",
-    "li3": "Lagring og sletting: Tekniske ID-er og resultatoppsummeringer lagres bare så lenge det er nødvendig for formålet. Dersom du mener innhold bør slettes, kan du kontakte oss på kontor@dmz.no.",
-    "li4": "Deling og overføring: Vi deler ikke data med tredjeparter. Dersom vi bruker underleverandører (databehandlere) for drift, vil de være kontraktsmessig forpliktet til å beskytte data og ikke bruke dem til egne formål.",
-    "li5": "Skolebruk og barn: Tjenesten kan brukes i skole uten å oppgi elevdata. Lærere og elever kan lese og bruke nettstedet uten registrering. Det behandles ikke personopplysninger utover det som er strengt nødvendig for teknisk drift.",
-    "li6": "Informasjonskapsler (cookies): Vi bruker ingen unødvendige cookies. Dersom vi i fremtiden innfører funksjonelle cookies (f.eks. for språkvalg), vil vi oppdatere denne erklæringen og be om samtykke der det kreves.",
-    "li7": "Dine rettigheter og kontakt: Har du spørsmål, ønsker innsyn i tekniske opplysninger, eller vil be om sletting, kontakt oss på kontor@dmz.no. Du kan også klage til Datatilsynet.",
-    "li8": "Endringer: Vi kan oppdatere denne erklæringen ved behov. Vesentlige endringer publiseres her."
+    "p1": "Vi tar personvern på alvor. Denne erklæringen forklarer hvordan opplysninger behandles når du bruker www.sleep-test.org, hvilke valg du har, og hvilke rettigheter du har etter GDPR og norsk personopplysningslovgivning.",
+    "li1": "Hvilke data vi behandler: Når du tar testen lagres en teknisk generert ID sammen med svaroppsummering for å kunne vise resultatet senere. Vi ber ikke om navn eller e-post. IP-adresse og tekniske hendelser kan behandles i sikkerhetslogger for drift og misbruksbeskyttelse.",
+    "li2": "Formål og behandlingsgrunnlag: (a) Levere og sikre tjenesten (GDPR art. 6(1)(f) berettiget interesse). (b) Måling/analyse og annonsering via Google-teknologi skjer kun basert på gyldig samtykke (GDPR art. 6(1)(a), samt ekomloven § 3-15 for lagring/tilgang på brukerutstyr).",
+    "li3": "Lagring og sletting: Test-ID og resultatsammendrag lagres så lenge det er nødvendig for formålet eller til du ber om sletting. Tekniske logger lagres i begrenset periode for sikkerhet og feilsøking.",
+    "li4": "Mottakere og overføringer: Vi bruker databehandlere for drift. Ved samtykke til analyse/annonser kan Google motta data som selvstendig eller felles behandlingsansvarlig avhengig av tjenesteoppsett. Data kan behandles utenfor EØS med relevante overføringsgrunnlag (for eksempel SCC).",
+    "li5": "Skolebruk og barn: Tjenesten kan brukes uten registrering. Vi ber om at det ikke legges inn navn eller andre direkte identifiserende opplysninger i fritekstfelt (dersom slike felter senere innføres).",
+    "li6": "Informasjonskapsler og samtykke: Nødvendige teknologier brukes for at tjenesten skal fungere. Analyse- og annonseteknologier aktiveres først etter gyldig samtykke i samtykkeløsningen. Du kan når som helst trekke samtykke tilbake ved å endre samtykkevalget ditt.",
+    "li7": "Dine rettigheter: Du kan be om innsyn, retting, sletting, begrensning, dataportabilitet og protest der vilkårene er oppfylt. Kontakt oss på kontor@dmz.no. Du kan også klage til Datatilsynet.",
+    "li8": "Endringer: Vi kan oppdatere erklæringen ved behov. Ved vesentlige endringer publiserer vi oppdatert versjon her med ny dato."
   },
   "test": {
     "title": "Søvntest",
